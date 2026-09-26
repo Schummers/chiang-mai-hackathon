@@ -1,6 +1,6 @@
 # Moves, tickets
 
-Pitch: **"Don't just order. Make the vendor smile."** The app stops explaining things to the Visitor and starts giving them something to say. Six vertical slices, each demoable on the Vercel URL on a phone. Demo: 2026-09-27 after lunch.
+Pitch: **TBD** (idea: "Don't just order. Make the vendor smile."). Home screen copy: "Say it however it comes." / "We make it clear Thai, and teach you a few words to say yourself." The app stops explaining things to the Visitor and starts giving them something to say. Six vertical slices, each demoable on the Vercel URL on a phone. Demo: 2026-09-27 after lunch.
 
 Shared context for every ticket:
 

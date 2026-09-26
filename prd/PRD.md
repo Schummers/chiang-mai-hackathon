@@ -3,7 +3,9 @@
 **Owner**: jonathan. **Status**: draft v0.3, 2026-09-27 (Moves: cards that give you something to say). **Challenge**: 02, Navigate Chiang Mai's cultural layers ([brief](hackathon-brief.md)).
 **Working name**: TBD (branding workstream).
 
-> **Don't just order. Make the vendor smile.**
+> **Pitch: TBD** (idea, not decided: "Don't just order. Make the vendor smile.")
+> **Home screen copy (decided)**: "Say it however it comes." / "We make it clear Thai, and teach you a few words to say yourself."
+>
 > Say what's on your mind, in your language, messy and all: the app turns it into clear Thai. Then, at the right moment, it hands you the few words to say yourself, in the vendor's own Northern Thai, that turn a transaction into a real exchange.
 > Tagline for the jury: *ChatGPT speaks for you. We make you speak their language.*
 
@@ -145,7 +147,7 @@ Every message has a 🔊 button outside the bubble, on its inner side. Rule: **b
 |---|---|
 | Day-one impact (x2) | The jury opens it from a QR code and uses it in the room, no install, no account. |
 | Product | Ramble into one button; one tap on a card and you say it yourself. |
-| Idea | Don't just order, make the vendor smile: the app makes you speak their language. |
+| Idea | Pitch TBD. The app makes you speak their language (idea: "Don't just order. Make the vendor smile."). |
 | Demo | Open on a real verbatim, then a live market scene, then the QR code. |
 
 ## Demo script (4 to 6 min)

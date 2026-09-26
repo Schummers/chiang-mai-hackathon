@@ -4,6 +4,7 @@ import { ArrowLeft, ArrowRight, Camera, Languages, Mic, ScanSearch, Square } fro
 import type { ConversationState } from "@/lib/engine/engine";
 import type { Speaker, UserLanguage } from "@/lib/engine/types";
 import { findLanguage } from "@/lib/language";
+import { LookingStatus } from "./PhotoAsk";
 import { Wave } from "./Wave";
 import d from "./Dock.module.css";
 
@@ -28,9 +29,9 @@ export function Dock({ state, onTap, language, playingId, getLevel, offline = fa
   const last = messages[messages.length - 1];
 
   // Hand-off: after your Thai has played (or right away if audio is blocked), and after the vendor's reply.
-  // Not after a photo: nothing was said to the vendor.
+  // Not after a photo or a question about it: nothing was said to the vendor.
   const handoff =
-    phase.kind === "idle" && last && !last.photo && !(last.speaker === "you" && playingId === last.id) ? phase.nextTurn : null;
+    phase.kind === "idle" && last && !last.photo && !last.about && !(last.speaker === "you" && playingId === last.id) ? phase.nextTurn : null;
 
   const mic = (speaker: Speaker) => {
     const recording = phase.kind === "listening" && phase.speaker === speaker;
@@ -62,11 +63,7 @@ export function Dock({ state, onTap, language, playingId, getLevel, offline = fa
       </span>
     );
   } else if (phase.kind === "processing") {
-    middle = (
-      <span className={d.state}>
-        <Languages size={18} strokeWidth={2.1} /> Translating…
-      </span>
-    );
+    middle = <span className={d.state}>{phase.about ? <LookingStatus /> : <><Languages size={18} strokeWidth={2.1} /> Translating…</>}</span>;
   } else if (phase.kind === "reading") {
     middle = (
       <span className={d.state}>

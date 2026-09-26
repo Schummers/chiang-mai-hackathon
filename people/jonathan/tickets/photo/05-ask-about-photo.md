@@ -9,12 +9,12 @@
 
 **Blocked by:** 02, 03, 04.
 
-**Status:** ready-for-agent
+**Status:** done (real iPhone mic not checked)
 
-- [ ] Tool, Listening card and dock states match screen 4 of `explorations/photo-flow-v2.html`
-- [ ] Nothing listens or animates inside the photo itself
-- [ ] Answer card is woven, in the visitor's language, cites the photo it is about
-- [ ] Stop / cancel / empty recording behave like Speak (same errors, same retry)
-- [ ] Engine tests cover a photo question: success, empty recording, failure + retry
-- [ ] `docs/` updated for the new Turn kind in the same commit
-- [ ] `npm test` and `npm run build` green
+- [x] Tool, Listening card and dock states match screen 4 of `explorations/photo-flow-v2.html`
+- [x] Nothing listens or animates inside the photo itself
+- [x] Answer card is woven, in the visitor's language, cites the photo it is about
+- [x] Stop / cancel / empty recording behave like Speak (same errors, same retry)
+- [x] Engine tests cover a photo question: success, empty recording, failure + retry
+- [x] `docs/` updated for the new Turn kind in the same commit
+- [x] `npm test` and `npm run build` green

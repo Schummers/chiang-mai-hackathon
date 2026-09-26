@@ -9,6 +9,7 @@ interface TurnService {
   transcribe(audio: Blob, language: string): Promise<string>; // "th" for the Vendor, the Visitor's language otherwise
   translate(input: TranslateInput): Promise<TranslateResult>;
   readPhoto?(image: Blob, input: ReadPhotoInput): Promise<PhotoCard>; // photo Turn; missing = the read fails as a network error
+  askPhoto?(image: Blob, input: AskPhotoInput): Promise<string>;       // question about a photo -> the app's answer
   reset?(): void;                                              // new conversation
 }
 ```
@@ -23,6 +24,7 @@ Picked once by `NEXT_PUBLIC_TURN_SERVICE` in [`turnService.ts`](../lib/engine/tu
 |---|---|---|---|
 | `POST /api/transcribe` | FormData: `audio` (webm or mp4 blob, max 4 MB), `language` | `{ raw: string }`. Missing or empty audio returns `{ raw: "" }` with 200, same as no speech. The engine also drops sound tags (`<noise>`, `[Music]`, `(silence)`…) and treats what is left empty as no speech | 413 too large, 502 provider failed **or `GEMINI_API_KEY` missing** |
 | `POST /api/photo` | FormData: `image` (JPEG, the UI downscales to 1280px, max 4 MB), `language`, `myInfo` (JSON) | JSON `PhotoCard`. A malformed or empty model answer still returns 200 with a Sign card "Couldn't read this photo" | 400 no image, 413 too large, 502 provider failed **or `GEMINI_API_KEY` missing** |
+| `POST /api/photo/ask` | FormData: `image`, `question`, `card` (the `PhotoCard` JSON), `language`, `myInfo` (JSON) | `{ answer: string }`, one or two lines in the Visitor's language | 400 no image, no question or bad card, 413 too large, 502 provider failed, key missing or empty answer |
 | `POST /api/translate` | JSON `TranslateInput` (`raw` cut to 2000 chars) | JSON `TranslateResult` | 400 empty raw, 502 provider failed or key missing, 500 on a malformed JSON body |
 
 `TranslateInput`: `{ raw, speaker: "you" | "vendor", userLanguage, myInfo, history: Message[] }`. The route keeps the last 6 Turns of history for the prompt.
@@ -49,6 +51,10 @@ Picked once by `NEXT_PUBLIC_TURN_SERVICE` in [`turnService.ts`](../lib/engine/tu
 - Failed or timed-out read: `{ kind: "error", speaker: "you", reason: "network", photo }`. `retry()` reads the same image again. Dismissing it, tapping a mic or taking another photo drops that photo and revokes its URL.
 - New conversation revokes every photo URL. A late read from an old conversation is ignored.
 - `onMessage` is not called for a photo (nothing to read aloud).
+
+## Ask about this photo
+
+`engine.askAboutPhoto(photoId)` is `micTap("you")` with `about: photoId`: same Listening card, same Stop, same auto-stop, same errors. `about` rides on `listening`, `processing` and a network `error` (so `retry()` asks again from the kept transcript). On stop the engine transcribes in the Visitor's language, then calls `askPhoto(image, { question, card, userLanguage, myInfo })` instead of `translate`. Result: a message `{ speaker: "you", translation: [], original: [question], card: null, about, answer }`, next Turn `you`, no hand-off, `onMessage` not called (no Thai auto-play). Tapping Speak is still a normal Turn for the vendor.
 
 Menu `items[].note` is a short pill label ("Mild ok", "Local"), not a sentence. A pill turns into a conflict only when `warning` names something in My info (the UI checks, see `lib/photoCard.ts`). A card with no title and no description, or a menu with no items, is shown as a Sign card "Couldn't read this photo".
 

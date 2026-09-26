@@ -80,7 +80,8 @@ export function Conversation() {
     await engine.stop(speaker, audio);
   };
 
-  const onTap = (speaker: Speaker) => {
+  /** Speak, or "Ask about this photo" (`about`): one logic, the same Listening card, the same Stop. */
+  const listen = (speaker: Speaker, about?: string) => {
     const { phase } = engine.getState();
     if (phase.kind === "listening" && phase.speaker === speaker) return void finish(speaker);
 
@@ -88,7 +89,8 @@ export function Conversation() {
     stopSpeech();
     unlockSpeech();
     setInfoCardClosed(true);
-    engine.micTap(speaker);
+    if (about) engine.askAboutPhoto(about);
+    else engine.micTap(speaker);
     const now = engine.getState().phase;
     if (now.kind !== "listening" || now.speaker !== speaker) return;
     recorder.start({ onAutoStop: () => void finish(speaker) }).catch(() => {
@@ -96,6 +98,8 @@ export function Conversation() {
       engine.fail(speaker, "mic-denied");
     });
   };
+
+  const onTap = (speaker: Speaker) => listen(speaker);
 
   const onPhoto = async (file: File) => {
     stopSpeech();
@@ -120,6 +124,7 @@ export function Conversation() {
       <ListeningCard
         speaker={phase.speaker}
         startedAt={phase.startedAt}
+        about={phase.about ? state.messages.find((m) => m.id === phase.about)?.photo?.url : undefined}
         getLevel={getLevel}
         label={phase.speaker === "vendor" ? "กำลังฟัง" : "Listening"}
       />
@@ -149,6 +154,7 @@ export function Conversation() {
         onSpeak={toggleSpeech}
         onRetry={() => void engine.retry()}
         onDismissError={() => engine.dismissError()}
+        onAsk={(photoId) => listen("you", photoId)}
         intro={
           !infoCardClosed && (
             <MyInfoCard

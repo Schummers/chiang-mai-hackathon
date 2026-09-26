@@ -35,6 +35,13 @@ Dock photo button (<input capture>, phone camera)
           api: POST /api/photo -> Gemini vision, JSON schema PHOTO_SCHEMA (lib/context/photo.ts)
                -> toPhotoCard: validated, dishes anchored in the Context Pack (allergen flags from the overlay)
   <- photo message (image + PhotoCard) added to the thread
+
+"Ask about this photo" (on the photo card)
+  -> ConversationEngine.askAboutPhoto(id)            same states as Speak, with `about`
+     -> TurnService.transcribe(audio, visitor language)
+     -> TurnService.askPhoto(image, { question, card, userLanguage, myInfo })
+          api: POST /api/photo/ask -> Gemini with the image, the card and the question
+  <- question card (your side, "About this photo") + woven answer card. Nothing for the vendor, nothing read aloud.
 ```
 
 Key idea: **the model only says what it recognised** (`mention`: a dish id, a word, a produce id). The card content itself (meat, spice, allergy flag, local detail) is built deterministically from the Context Pack and the overlay, so it cannot be hallucinated. See [context-pack.md](context-pack.md).
@@ -53,6 +60,7 @@ Key idea: **the model only says what it recognised** (`mention`: a dish id, a wo
 | `app/page.tsx` | Renders `<Conversation />`, nothing else. Touch it as little as possible. |
 | `app/api/transcribe/route.ts` | Audio -> raw text via Gemini flash-lite. Removes the spaces flash-lite puts between Thai words. |
 | `app/api/photo/route.ts` | Image -> `PhotoCard` via Gemini. The image is sent to Gemini only: never stored, never logged. |
+| `app/api/photo/ask/route.ts` | Question about a photo -> `{ answer }` via Gemini, same limits as `/api/photo`. |
 | `app/api/translate/route.ts` | Raw text + context -> `TranslateResult`: the Allergy Flag card when there is one, else a Move. Date is Chiang Mai time (UTC+7). |
 | `app/globals.css` | Design tokens (Kratip). |
 | `components/Conversation.tsx` | The one screen: wires engine, My info, language, thread and dock. |
@@ -65,6 +73,7 @@ Key idea: **the model only says what it recognised** (`mention`: a dish id, a wo
 | `components/MyInfo.tsx` | Compact My info card and page (allergies, spice, diet). |
 | `components/ErrorState.tsx` | Retry, mic denied, too short, offline. Vendor-side texts in Thai. |
 | `components/PhotoCard.tsx` | Woven card that answers a photo: menu, dish (reuses `ContextCard`), fruit / ingredient, sign. "Ask about this photo" at the bottom. |
+| `components/PhotoAsk.tsx` | "About this photo" line, your question card, the woven answer card, "Looking at the photo…". |
 | `components/PhotoShot.tsx` | Your photo in the thread: full while reading, 70px strip once read. |
 | `components/PlayTool.tsx` | Play icon at the bottom of a message. |
 | `components/Logo.tsx` | Header logo (placeholder mark). |

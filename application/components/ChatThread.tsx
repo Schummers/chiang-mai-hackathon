@@ -7,6 +7,7 @@ import type { Message } from "@/lib/engine/types";
 import { Bubble, Row } from "./Bubble";
 import { ErrorState } from "./ErrorState";
 import { LogoMark } from "./Logo";
+import { AboutLine, LookingStatus, PhotoAnswer, PhotoQuestion } from "./PhotoAsk";
 import { PhotoCard } from "./PhotoCard";
 import { PhotoShot } from "./PhotoShot";
 import s from "./Chat.module.css";
@@ -22,12 +23,16 @@ type Props = {
   onSpeak: (message: Message) => void;
   onRetry: () => void;
   onDismissError: () => void;
+  /** "Ask about this photo" on a photo card. */
+  onAsk?: (photoId: string) => void;
 };
 
-export function ChatThread({ state, intro, live, playingId, onSpeak, onRetry, onDismissError }: Props) {
+export function ChatThread({ state, intro, live, playingId, onSpeak, onRetry, onDismissError, onAsk }: Props) {
   const { phase, messages } = state;
   const ref = useRef<HTMLElement>(null);
   const empty = messages.length === 0 && phase.kind === "idle";
+  const photoOf = (id?: string) => (id ? messages.find((m) => m.id === id)?.photo : undefined);
+  const asking = phase.kind === "processing" ? photoOf(phase.about) : undefined;
 
   // Follow the latest content; the user can still scroll up to re-read.
   useEffect(() => {
@@ -53,7 +58,12 @@ export function ChatThread({ state, intro, live, playingId, onSpeak, onRetry, on
         m.photo ? (
           <Fragment key={m.id}>
             <PhotoShot url={m.photo.url} read />
-            <PhotoCard card={m.photo.card} />
+            <PhotoCard card={m.photo.card} onAsk={onAsk && (() => onAsk(m.id))} />
+          </Fragment>
+        ) : m.about ? (
+          <Fragment key={m.id}>
+            <PhotoQuestion question={m.original[0]} url={photoOf(m.about)?.url ?? ""} />
+            {m.answer && photoOf(m.about) && <PhotoAnswer answer={m.answer} card={photoOf(m.about)!.card} url={photoOf(m.about)!.url} />}
           </Fragment>
         ) : (
           <Bubble key={m.id} message={m} playing={playingId === m.id} onSpeak={() => onSpeak(m)} latest={i === messages.length - 1} />
@@ -69,11 +79,18 @@ export function ChatThread({ state, intro, live, playingId, onSpeak, onRetry, on
         <Row speaker={phase.speaker}>
           <div className={s.proc}>
             <div>
+              {asking && <AboutLine url={asking.url} />}
               <p className={s.raw}>{phase.raw ?? (phase.speaker === "you" ? "Transcribing…" : "กำลังถอดเสียง…")}</p>
               {phase.raw && (
                 <p className={s.status} lang={phase.speaker === "vendor" ? "th" : undefined}>
-                  <Languages size={14} strokeWidth={2.1} />
-                  {phase.speaker === "you" ? "Cleaning up and translating…" : "กำลังแปล…"}
+                  {asking ? (
+                    <LookingStatus />
+                  ) : (
+                    <>
+                      <Languages size={14} strokeWidth={2.1} />
+                      {phase.speaker === "you" ? "Cleaning up and translating…" : "กำลังแปล…"}
+                    </>
+                  )}
                 </p>
               )}
             </div>

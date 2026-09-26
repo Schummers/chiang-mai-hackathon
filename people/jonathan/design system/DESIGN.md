@@ -1,202 +1,155 @@
 # DESIGN.md — อู้เมือง (U Mueang)
 
-Source of truth for the look of the app. Agents building `prototype/`: read this before writing any UI.
-Logo: `WhatsApp Image 2026-09-26 at 22.03.43.jpeg` (same folder). Light mode only for the demo.
+**Direction validated**: "Two Voices, One Paper" (proposal 1, 2026-09-26).
+Visual reference: [`v2/proposal-1.html`](v2/proposal-1.html). Logo: `WhatsApp Image 2026-09-26 at 22.03.43.jpeg`.
+Agents building `prototype/`: read this before writing any UI. Light mode only.
 
 ## Name
 
 - **อู้เมือง** (Kham Mueang, "to speak the local tongue"). Latin: **U Mueang**.
-- The current logo render shows a garbled Latin line ("Uู Muang"): fix it to `U Mueang` before the demo.
+- The logo render shows a garbled Latin line ("Uู Muang"): fix to `U Mueang` before the demo.
 
-## Concept
+## Core principle
 
-The logo is a **ก๋วย** (woven bamboo basket from Lanna market stalls) shaped into a speech bubble with an open tail.
+**Color means one thing only: who is speaking.**
 
-| Element | Meaning | UI translation |
-|---|---|---|
-| Basket | Everyday commerce, the market stall | The app lives at the stall, not in a classroom |
-| Weave | Shared conversation builds connection | Two voices interleaved: visitor (indigo) and vendor (clay) turns alternate |
-| Open tail | Local knowledge opening up beyond the market walls | Explanations (dish cards) always point back to the conversation |
+- Indigo = you (the visitor). Clay = them (the vendor).
+- Identity lives in the **background wash** of a card or bubble, not in the text.
+- Text is always ink, for both voices, at full contrast in market sunlight.
+- States (safe, spicy, allergy) never get their own color. No green, no red, no yellow.
 
-Palette logic: natural, functional tones, **no gold**. Mor Hom indigo (artisans' blue-dyed cotton shirts) + clay red (Lanna terracotta) on Sa paper.
-
-## 1. Color palette (light mode)
-
-Brand values sampled from the logo (`indigo-700` and `clay-500`).
-
-### Scales
-
-| Step | Indigo (Mor Hom) | Clay (terracotta) | Paper (Sa) |
-|---|---|---|---|
-| 50 | `#F0F1F6` | `#FBF1ED` | `#FDFCF8` |
-| 100 | `#E1E3EE` | `#F5E4DD` | `#FAF8F2` |
-| 200 | `#C3C7DC` | `#EBC6B8` | `#F4F0E6` |
-| 300 | `#9CA2C3` | `#DDA08B` | `#EAE4D5` |
-| 400 | `#6F77A0` | `#CB7A60` | `#D9D1BE` |
-| 500 | `#4E5684` | **`#AA523A`** | `#B8AE97` |
-| 600 | `#3A4172` | `#8F4330` | `#8C836E` |
-| 700 | **`#2B3263`** | `#733627` | `#5F5849` |
-| 800 | `#1F2549` | `#57291E` | `#3D392F` |
-| 900 | `#141833` | `#3B1C14` | `#22201A` |
-
-### Semantic tokens
+## 1. Palette (7 colors, that is all)
 
 ```css
 :root {
-  /* Backgrounds */
-  --bg-app: #FAF8F2;         /* paper-100, the page */
-  --bg-sunken: #F4F0E6;      /* paper-200, input fields, wells */
-  --bg-surface: #FDFCF8;     /* paper-50, cards level 1 */
-  --bg-raised: #FFFFFF;      /* cards level 2 and sheets only */
-  --bg-show: #FDFCF8;        /* full-screen show mode */
-  --bg-visitor: #E1E3EE;     /* indigo-100, your bubbles */
-  --bg-vendor: #F5E4DD;      /* clay-100, vendor bubbles, Thai output */
-  --bg-overlay: rgb(20 24 51 / 0.40); /* indigo-900 scrim behind sheets */
+  --paper:     #FAF9F6; /* L0 ground, app background */
+  --white:     #FFFFFF; /* raised surfaces: dish cards, sheets */
+  --ink:       #1E2238; /* all text, both voices, allergy stamp */
+  --you:       #2B3263; /* Mor Hom indigo: visitor label, mic, primary action */
+  --you-wash:  #ECEEF5; /* everything the visitor says */
+  --them:      #8A5A44; /* muted clay, leans brown: vendor label, vendor mic */
+  --them-wash: #F3ECE6; /* everything the vendor says or can tap */
 
-  /* Text */
-  --text-primary: #2B3263;   /* indigo-700, body is indigo, never black */
-  --text-secondary: #4E5684; /* indigo-500 */
-  --text-muted: #6F77A0;     /* indigo-400, meta and romanization, ≥ 16px only */
-  --text-on-accent: #FFFFFF;
-  --text-thai: #733627;      /* clay-700, Thai output on vendor bubbles */
-
-  /* Actions */
-  --accent: #AA523A;         /* clay-500, primary button, mic */
-  --accent-hover: #8F4330;   /* clay-600 */
-  --accent-pressed: #733627; /* clay-700 */
-  --accent-soft: #F5E4DD;    /* clay-100 */
-  --secondary: #2B3263;      /* indigo-700, secondary buttons, outlines */
-  --focus-ring: #6F77A0;     /* indigo-400, 2px outline, 2px offset */
-
-  /* Lines */
-  --border: #EAE4D5;         /* paper-300, hairlines */
-  --border-strong: #D9D1BE;  /* paper-400, card outlines */
-  --border-brand: #2B3263;   /* indigo-700, logo-style 2px frame */
-
-  /* Status */
-  --spicy: #AA523A;          /* chili dots */
-  --danger: #B3261E;         /* allergy only, never decorative */
-  --danger-soft: #FBE9E7;
-  --success: #3F6B4E;        /* "safe for you" */
-  --success-soft: #E6EFE8;
-  --warning: #9A6B12;        /* "ask to confirm" */
-  --warning-soft: #F8EFD9;
+  /* derived by alpha, not new colors */
+  --ink-2:  rgb(30 34 56 / .70); /* secondary text */
+  --line:   rgb(30 34 56 / .10); /* hairlines */
+  --line-2: rgb(30 34 56 / .18); /* stronger lines, inactive marks */
 }
 ```
 
-Contrast on `--bg-app`: indigo-700 ≈ 12:1, indigo-500 ≈ 7:1, clay-500 ≈ 5:1, white on clay-500 ≈ 5:1. All AA.
+| Rule | Detail |
+|---|---|
+| You = indigo | Wash for what you said. Solid indigo only for what you tap: mic, "Show vendor". |
+| Them = clay | Wash for what the vendor said or can tap. Solid clay only for the vendor's mic in show mode. |
+| Text is always ink | Primary = `--ink`, secondary = `--ink-2`. Never indigo or clay text on a wash, except the small speaker label. |
+| Clay is earth, not alarm | Hue pushed toward brown, low chroma. Never use the logo's brighter `#AA523A` in UI. |
+| No new colors | Need a variant? Use ink alpha. Adding an 8th color needs the owner's OK. |
 
-**Rules**
-- Indigo = the visitor (you). Clay = the vendor and everything Thai. Keep this mapping everywhere, it is the weave.
-- One clay primary button per screen (usually the mic).
-- Never pure black text, never pure white page background.
+## 2. Typography
 
-## 2. Backgrounds
-
-| Layer | Token | Use |
+| Script | Font | Weights |
 |---|---|---|
-| App | `--bg-app` + optional Sa grain | Every screen |
-| Sunken | `--bg-sunken` | Text inputs, the transcript well while recording |
-| Show mode | `--bg-show`, no texture | Vendor view: maximum legibility |
-| Accent band | `--accent` full bleed | Splash / onboarding only |
+| Thai | **Noto Sans Thai Looped** (fallback Noto Sans Thai, Thonburi) | 400 to 700 |
+| Latin | **Atkinson Hyperlegible Next** (fallback system-ui) | 400 to 800 |
 
-- **Sa paper grain**: SVG noise, opacity ≤ 4%, on `--bg-app` only. Never behind Thai text in show mode.
-- **Weave pattern**: the diagonal basket weave from the logo, clay-300 on paper. Accent only: splash, empty states, listening ring around the mic. Never full-screen behind content.
-
-## 3. Elevation (card levels)
-
-Flat and paper-like: elevation comes from tone + border first, shadow second.
-
-| Level | Name | Background | Border | Shadow | Use |
-|---|---|---|---|---|---|
-| 0 | Flat | `--bg-app` | none | none | Page, lists, chat stream |
-| 1 | Card | `--bg-surface` | `1px solid var(--border)` | `0 1px 2px rgb(43 50 99 / 0.06)` | Dish card, preference chips group, history items |
-| 2 | Raised | `--bg-raised` | `1px solid var(--border-strong)` | `0 4px 12px rgb(43 50 99 / 0.10)` | Active/selected card, floating mic bar |
-| 3 | Sheet | `--bg-raised` | none | `0 -8px 24px rgb(43 50 99 / 0.14)` | Bottom sheets, show-mode reply panel, over `--bg-overlay` |
-| Brand | Bubble frame | `--bg-show` | `2px solid var(--border-brand)` + tail bottom-left | none | Show mode frame only (echo of the logo) |
-
-Radius: `8px` chips and inputs, `12px` cards, `20px` chat bubbles and sheets (top corners), `999px` pills and mic.
-
-## 4. Typography
-
-| Script | Font | Load |
-|---|---|---|
-| Thai | **Anuphan** (400, 500, 600), fallback `'Noto Sans Thai', sans-serif` | Google Fonts |
-| Latin | **Inter** (400, 500, 600), fallback `system-ui` | Google Fonts |
-
-```css
---font-thai: 'Anuphan', 'Noto Sans Thai', sans-serif;
---font-latin: 'Inter', system-ui, sans-serif;
+```html
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:wght@400;500;700;800&family=Noto+Sans+Thai+Looped:wght@400;500;600;700&display=swap" rel="stylesheet">
 ```
 
-### Text styles (mobile first)
+```css
+--f-lat: 'Atkinson Hyperlegible Next', system-ui, sans-serif;
+--f-th:  'Noto Sans Thai Looped', 'Noto Sans Thai', 'Thonburi', sans-serif;
+```
 
-| Style | Size / line-height | Weight | Font | Use |
-|---|---|---|---|---|
-| `display-show` | 36 / 52 | 600 | Thai | Thai message in show mode (read at arm's length) |
-| `title-lg` | 24 / 32 | 600 | Latin | Screen titles |
-| `thai-lg` | 24 / 38 | 500 | Thai | Thai output in the conversation |
-| `title-md` | 18 / 26 | 600 | Latin | Card titles, dish names |
-| `body-lg` | 17 / 26 | 400 | Latin | Cleaned request, translated reply |
-| `body` | 15 / 22 | 400 | Latin | Card descriptions |
-| `thai-body` | 17 / 28 | 400 | Thai | Thai inside cards |
-| `button` | 16 / 20 | 600 | Latin | Buttons |
-| `reply-pill` | 22 / 32 | 500 | Thai | Vendor suggested replies |
-| `label` | 13 / 18 | 500, +0.2px tracking | Latin | Meta, tags, romanization |
+Why: looped Thai is familiar from signage and school print (older vendors); Atkinson is built for low vision and glare.
+Thai is always set one step larger than the Latin next to it.
 
-Thai line-height always ≥ 1.5 (tone marks and vowels above/below).
+| Style | Font / weight | Size / line-height | Use |
+|---|---|---|---|
+| Show XL | Thai 700 | 27 / 39 | Question in show mode |
+| Reply pill | Thai 600 | 20 / 27 | Vendor quick replies |
+| Thai in chat | Thai 600 | 19 / 28 | Thai output in your bubble |
+| Dish name | Latin 800 | 17 / 22 | Dish card title (Thai name 15px, ink-2, after it) |
+| Translation | Latin 500 | 16 / 24 | Translated vendor reply |
+| Body | Latin 400 | 16 / 25 | Default |
+| Secondary | Latin 400 | 14 / 20, ink-2 | Descriptions, source text |
+| Speaker label | Latin 800 | 11, +0.09em, uppercase | "YOU" / "VENDOR", in identity color with a 7px dot |
 
-## 5. Icons
+## 3. Icons
 
-- **Library**: [Phosphor Icons](https://phosphoricons.com), `npm i @phosphor-icons/react`. Rounded, hand-made feel that fits bamboo weave better than geometric sets.
-- **Weight**: `regular` by default, `fill` for the active state, `duotone` for empty states only (duotone color = clay-300).
-- **Sizes**: 20px inline, 24px in buttons and nav, 40px in the mic button.
-- **Color**: inherits text color (`currentColor`). White on the clay mic.
+- **Lucide**, pinned `0.460.0`. In React: `npm i lucide-react`. Stroke width **2.1** (holds up on a dim screen outdoors).
+- Color: ink, or the speaker's color. Never a state color. No emoji as icons.
+- Sizes: 16 inline, 20 in buttons and headers, 26 in the mic.
 
-| Action | Phosphor icon |
+| Action | Lucide |
 |---|---|
-| Speak / record | `Microphone` (listening: `MicrophoneStage`) |
-| Play Thai audio | `SpeakerHigh` |
-| Show to vendor | `HandTap` or `ArrowsOut` |
-| Photo of menu / stall | `Camera` |
-| Dish card | `BowlFood` |
-| Spicy | `Pepper` (1 to 3) |
-| Allergy | `WarningCircle` (in `--danger`) |
-| Safe for you | `CheckCircle` (in `--success`) |
-| Meat / no pork | `Cow`, `Fish`, `Egg`, `Leaf` (veg) |
-| Follow-up question | `ChatCircleDots` |
-| Preferences | `SlidersHorizontal` |
-| Back / close | `CaretLeft`, `X` |
+| Speak | `mic` |
+| Play aloud | `volume-2` |
+| Show vendor | `hand-helping` |
+| Hand back | `arrow-left-right` |
+| Read a menu | `camera` |
+| Dish | `soup` |
+| Spice | `flame` (or the 3-bar heat meter) |
+| Allergy stop | `octagon-x` |
+| Fits you | `check` |
+| Ask next | `message-circle-question` |
+| My needs | `sliders-horizontal` |
+| Meat | `drumstick` |
 
-No emoji as UI icons.
+## 4. Backgrounds and card levels
 
-## 6. Spacing and touch
+Only two backgrounds exist under content: paper (page) and white (lifted). Washes sit flat on paper: they carry identity, not depth. Depth is reserved for information you act on.
 
-- Spacing scale: 4, 8, 12, 16, 24, 32, 48. Screen gutter 16px.
-- Touch targets ≥ 48px. Vendor reply pills ≥ 56px tall, full width.
-- Mic button: 88px, fixed bottom center, 24px above safe area.
+| Level | Name | Background | Shadow | Radius | Use |
+|---|---|---|---|---|---|
+| L0 | Ground | `--paper` | none | none | Screen, dock |
+| L1 | Voice | `--you-wash` or `--them-wash` | none | 18, tail corner 6 | Messages (you right, them left) |
+| L2 | Info card | `--white` | `--sh-2` | 14 | Dish cards |
+| L3 | Sheet | `--white` or `--them-wash` | `--sh-3` | 22 top | Reply sheet, settings |
 
-## 7. Key components (mapped to the PRD flow)
+```css
+--sh-2: 0 1px 2px rgb(30 34 56 / .06), 0 6px 16px -6px rgb(30 34 56 / .14);
+--sh-3: 0 -10px 30px -8px rgb(30 34 56 / .20);
+--r: 14px;
+```
+
+## 5. Components
 
 | Component | Spec |
 |---|---|
-| **Mic button** | 88px `--accent` circle, white `Microphone` 40px. Listening: clay-300 weave ring pulses around it |
-| **Cleaned request** | `--bg-visitor` bubble, right-aligned, `body-lg`, indigo text |
-| **Thai output** | `--bg-vendor` bubble, `thai-lg` in `--text-thai`, `SpeakerHigh` button (clay outline 1.5px) |
-| **Show mode** | Brand frame (2px indigo, tail bottom-left), Thai in `display-show`, replies as level-3 sheet of `reply-pill` buttons (clay-50 bg, clay-500 1.5px border), mic fallback |
-| **Vendor reply** | `--bg-vendor` bubble left-aligned, Thai original `thai-body`, translation under it in `body-lg` indigo |
-| **Dish card** | Level 1 card: `BowlFood` + name (Thai `thai-body` + Latin `title-md`), what it is (`body`), meat icon, 1–3 `Pepper` in clay, allergy badge `--danger-soft` bg + `--danger` text when it matches your preferences |
-| **Follow-up suggestion** | Pill, 1.5px dashed indigo-400 border, `ChatCircleDots`: "Ask: How long have you run this stall?" |
-| **Primary button** | `--accent` bg, white `button` text, 48px, radius 999px |
-| **Secondary button** | Transparent, 1.5px `--secondary` border, indigo text |
+| **Your message** | L1 you-wash, right-aligned, max 90%. Source text (14, ink-2), hairline, Thai (19/600), then actions: "Play" ghost + "Show vendor" solid indigo |
+| **Vendor message** | L1 them-wash, left-aligned. Thai original (17/500, ink-2), hairline, translation (16/500, ink) |
+| **Dish card** | L2 white. Latin name 17/800 + Thai name 15/500 ink-2, one-line description 14 ink-2, facts row 13/700 with icons |
+| **Heat meter** | 3 bars 7x12, radius 2. On = ink, off = `--line-2`. Label: Mild / Medium / Hot |
+| **Allergy / conflict** | **Inversion, not red**: solid ink stamp on top of the card (`octagon-x` + "Contains pork" / "You avoid pork", white text 14/800), card gets a 2px ink ring, dish name struck through. The darkest thing on screen. |
+| **Fits you** | Just `check` + "Fits you" in the facts row. No green. |
+| **Follow-up suggestion** | Transparent, 1.5px dashed indigo border, radius 14, `message-circle-question` in indigo, English line + Thai line (13, ink-2) |
+| **Buttons** | Height 38 to 48, radius 12, 700 14px. Solid = indigo bg, white text. Ghost = white bg, indigo text, inset 1.5px `--line-2` |
+| **Mic** | 60x60, radius 20 (squircle, not a circle), white icon 26. Indigo for you, clay for the vendor in show mode |
+| **Dock** | Paper, top hairline. Field (white, inset hairline, "Type or read a menu", `camera`) + mic |
+| **Header** | Logo mark 34px, context title 16/800 ("Kad Luang market"), preferences line 12 ink-2 with `sliders-horizontal` |
+
+### Show mode (vendor holds the phone)
+
+- Screen background white. Top bar: "Hand back" ghost button, language tag `ไทย · English`.
+- **Top: your question** in a you-wash block (radius 22, tail corner 6): label `ลูกค้าถามว่า`, Thai at Show XL, English gloss 13 ink-2, "ฟังอีกครั้ง" play button.
+- **Bottom: the vendor's side**, an L3 sheet in them-wash: label `แตะเพื่อตอบ` / `หรือกดไมค์แล้วพูด` in clay, clay mic, then full-width white reply pills (min 47px tall, Thai 20/600, `chevron-right` in clay).
+- The logic: indigo = what you asked, clay = everything the vendor can touch.
+
+## 6. Spacing and touch
+
+- Spacing: 4, 6, 8, 10, 12, 14, 16, 24. Screen gutter 14 to 16px, stream gap 12px.
+- Touch targets ≥ 44px, reply pills ≥ 47px, mic 60px.
+- Focus: `outline: 3px solid var(--you); outline-offset: 2px`.
 
 ## Voice
 
-- Warm, curious, market-level. "Ask the vendor", not "Submit query".
-- Thai first on anything the vendor sees. Show mode has no English except a small "translated by อู้เมือง" label.
+- Warm, curious, market-level. "Show vendor", "Hand back", "Ask: how long have you run this stall?".
+- Thai first on everything the vendor sees.
 
 ## Don't
 
-- No gold, no temple clichés, no elephants.
-- No purple/blue gradients (the Vite default accent `#aa3bff` in `prototype/src/index.css` must go).
-- No emoji as UI icons, no pure black, no pure white page.
+- No red, green or yellow status colors. No gold, no temple clichés.
+- No colored text on washes (except speaker labels).
+- No shadows on messages. No emoji icons.
+- Remove the Vite defaults in `prototype/src/index.css` (purple `#aa3bff`, dark mode).

@@ -38,7 +38,7 @@ Agents building `application/`: read this before writing any UI. Light mode only
   --you:       #2B3263; /* Mor Hom indigo: visitor label, mic, primary action */
   --you-wash:  #ECEEF5; /* everything the visitor says */
   --them:      #8A5A44; /* muted clay, leans brown: vendor label, vendor mic */
-  --them-wash: #F3ECE6; /* everything the vendor says or can tap */
+  --them-wash: #F3ECE6; /* vendor's small controls (play tool idle) */
 
   /* derived by alpha, not new colors */
   --ink-2:  rgb(30 34 56 / .70); /* secondary text */
@@ -126,7 +126,7 @@ Only two backgrounds exist under content: paper (page) and white (lifted). Washe
 --sh-dock: 0 10px 30px -10px rgb(30 34 56 / .30), 0 0 0 1px var(--line);
 ```
 
-Washes (`--you-wash`, `--them-wash`) are no longer message backgrounds: they go grey on the weave. They remain for small controls (play tool idle, vendor mic idle).
+Washes (`--you-wash`, `--them-wash`) are no longer message backgrounds: they go grey on the weave. They remain for small controls (play tool idle, the future photo button). Both dock mics are solid since 2026-09-27.
 
 ```css
 --sh-2: 0 1px 2px rgb(30 34 56 / .06), 0 6px 16px -6px rgb(30 34 56 / .14);

@@ -4,6 +4,8 @@ One line each, newest first. Status: **done** (settled) or **open** (to confirm,
 
 | Date | Decision | Why | Status |
 |---|---|---|---|
+| 2026-09-27 | Photo, post-demo: read at once into a card (menu, dish, fruit, sign), "Ask about this photo" behaves like Speak and the app answers. Tickets: `people/jonathan/tickets/photo/` | A photo without a question still helps in 5 s; one interaction logic for the whole screen | open (jonathan): the photo card is informative, which the "Move cards replace informative cards" line retired; decide after the demo whether it ends on a Move |
+| 2026-09-27 | Dock: both mics solid in their voice color, recording = darker shade of the same voice, disabled = flat muted square (no opacity) | The vendor, handed an unknown phone, needs their button as visible as yours; ink broke the color code; opacity glitched on iOS | done |
 | 2026-09-27 | Pitch: "Don't just order. Make the vendor smile." Jury tagline: "ChatGPT speaks for you. We make you speak their language." | Grill: "a translator that explains" is what ChatGPT already does | done |
 | 2026-09-27 | Informative Dish, Word and Moment cards retired; Move cards (Say it, Ask, Echo) replace them. The Allergy Flag stays informative | Informative cards do not create an exchange; giving the Visitor something to say does | done, replaces the "Card kinds" line |
 | 2026-09-27 | Moves are a hand-written, sourced, native-reviewed data layer (`people/jonathan/moves/moves.json`) next to the Context Pack; the model returns a Stage, code picks the Move and fills its Slot from the pack | The pack holds nouns, Moves hold what to do with them; 45 lines can be reviewed by a native in 15 min, 300 pack entries cannot | done, see [moves.md](moves.md) |

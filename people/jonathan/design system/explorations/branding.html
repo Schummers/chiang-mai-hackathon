@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Branding Explorations</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:wght@400;500;700;800&family=Noto+Sans+Thai+Looped:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/lucide@0.460.0/dist/umd/lucide.min.js"></script>
+<style>
+  :root {
+    color-scheme: light;
+    --paper:#FAF9F6; --white:#FFFFFF; --ink:#1E2238;
+    --you:#2B3263; --you-wash:#ECEEF5; --them:#8A5A44; --them-wash:#F3ECE6;
+    --ink-2:rgb(30 34 56 / .70); --line:rgb(30 34 56 / .10); --line-2:rgb(30 34 56 / .18);
+    --f-lat:'Atkinson Hyperlegible Next', system-ui, sans-serif;
+    --f-th:'Noto Sans Thai Looped','Noto Sans Thai','Thonburi',sans-serif;
+    --sh-2:0 1px 2px rgb(30 34 56 / .06), 0 6px 16px -6px rgb(30 34 56 / .14);
+  }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body { background:#EFEDE7; color:var(--ink); font:16px/1.5 var(--f-lat); padding:40px 16px 96px; }
+  .th { font-family:var(--f-th); }
+  svg.lucide { stroke-width:2.1; width:1em; height:1em; flex:none; }
+  .page { max-width:1200px; margin:0 auto; }
+  .eyebrow { font-size:12px; font-weight:800; letter-spacing:.09em; text-transform:uppercase; color:var(--ink-2); }
+  header h1 { font-size:clamp(32px,5vw,56px); font-weight:800; letter-spacing:-.02em; line-height:1.02; margin-top:6px; }
+  header p { color:var(--ink-2); max-width:72ch; margin-top:12px; font-size:17px; }
+
+  /* logo lockup showcase */
+  .marks { display:flex; flex-wrap:wrap; gap:16px; margin-top:32px; }
+  .markcard { flex:1 1 220px; border-radius:20px; padding:24px; display:flex; align-items:center; gap:14px; min-height:120px; }
+  .wm { line-height:1.05; }
+  .wm b { font-family:var(--f-th); font-weight:700; font-size:30px; display:block; }
+  .wm span { font-size:13px; font-weight:800; letter-spacing:.14em; text-transform:uppercase; }
+
+  .grid { display:flex; flex-wrap:wrap; gap:48px 40px; margin-top:48px; }
+  .col { width:350px; max-width:100%; }
+  .col h2 { font-size:24px; font-weight:800; letter-spacing:-.01em; margin:4px 0 14px; }
+  .sw { display:flex; gap:6px; margin-bottom:14px; }
+  .sw i { width:34px; height:34px; border-radius:10px; box-shadow:inset 0 0 0 1px var(--line); }
+  .why { margin-top:18px; font-size:14.5px; }
+  .why p { margin-bottom:8px; }
+  .why ul { padding-left:18px; } .why li { margin-bottom:4px; }
+
+  .phone { position:relative; width:350px; max-width:100%; height:740px; border-radius:46px; box-shadow:0 0 0 10px #111, 0 30px 60px -20px rgb(30 34 56 / .45); overflow:hidden; display:flex; flex-direction:column; }
+  .status { height:44px; flex:none; }
+  .stream { flex:1; overflow:hidden; padding:8px 14px 96px; display:flex; flex-direction:column; justify-content:flex-end; gap:12px; }
+  .lbl { font-size:11px; font-weight:800; letter-spacing:.09em; text-transform:uppercase; display:flex; gap:6px; align-items:center; margin-bottom:4px; }
+  .heat { display:inline-flex; gap:2px; align-items:flex-end; }
+  .heat b { width:6px; height:11px; border-radius:2px; background:currentColor; opacity:.25; }
+  .heat b.on { opacity:1; }
+  .facts { display:flex; flex-wrap:wrap; gap:6px 12px; font-size:13px; font-weight:700; margin-top:8px; }
+  .facts span { display:inline-flex; gap:5px; align-items:center; }
+
+  /* compact floating dock, shared: 60px mics, no language label */
+  .dock { position:absolute; left:12px; right:12px; bottom:18px; height:72px; border-radius:26px; display:flex; align-items:center; justify-content:space-between; padding:0 6px; }
+  .mic { width:60px; height:60px; border-radius:20px; display:grid; place-items:center; font-size:26px; position:relative; }
+  .mid { flex:1; text-align:center; font-size:13px; font-weight:700; line-height:1.25; }
+  .mid .th { font-size:15px; display:block; }
+  .pulse { animation:pulse 1.6s ease-out infinite; }
+  @keyframes pulse { 0% { box-shadow:0 0 0 0 var(--pc); } 100% { box-shadow:0 0 0 16px transparent; } }
+
+  /* ================= A · KRATIP (woven, light) ================= */
+  .A { background:var(--paper); }
+  .A::before { content:""; position:absolute; inset:0; pointer-events:none; opacity:.05;
+    background:
+      repeating-linear-gradient(45deg, var(--them) 0 6px, transparent 6px 12px),
+      repeating-linear-gradient(-45deg, var(--you) 0 6px, transparent 6px 12px); }
+  .A .hd { position:relative; display:flex; align-items:center; gap:10px; padding:0 16px 12px; }
+  .A .hd .wm b { font-size:22px; color:var(--you); } .A .hd .wm span { font-size:10px; color:var(--them); }
+  .A .hd .sp { flex:1; }
+  .A .ib { width:38px; height:38px; border-radius:12px; display:grid; place-items:center; font-size:19px; background:var(--white); box-shadow:var(--sh-2); }
+  .A .stream { position:relative; }
+  .A .me { align-self:flex-end; max-width:80%; background:var(--you-wash); border-radius:18px 18px 6px 18px; padding:9px 13px; font-size:14px; color:var(--ink-2); }
+  .A .them { align-self:flex-start; max-width:88%; background:var(--white); border-radius:18px 18px 18px 6px; padding:12px 14px; box-shadow:inset 3px 0 0 var(--them), var(--sh-2); }
+  .A .them .tr { font-size:18px; font-weight:700; line-height:1.3; }
+  .A .them .og { font-size:14px; color:var(--ink-2); margin-top:6px; }
+  .A .lbl.t { color:var(--them); }
+  .A .card { border-radius:16px; padding:3px; background:repeating-linear-gradient(45deg, var(--them) 0 5px, var(--paper) 5px 7px, var(--you) 7px 12px, var(--paper) 12px 14px); }
+  .A .card > div { background:var(--white); border-radius:13px; padding:12px 14px; }
+  .A .card h3 { font-size:17px; font-weight:800; } .A .card h3 .th { font-weight:500; font-size:15px; color:var(--ink-2); }
+  .A .card p { font-size:14px; color:var(--ink-2); line-height:20px; }
+  .A .dock { background:var(--white); box-shadow:0 10px 30px -10px rgb(30 34 56 / .3), 0 0 0 1px var(--line); }
+  .A .mic.t { background:var(--them-wash); color:var(--them); }
+  .A .mic.y { background:var(--you); color:#fff; --pc:rgb(43 50 99 / .45); }
+  .A .mid { color:var(--you); }
+
+  /* ================= B · INDIGO NIGHT (dark chrome, lit paper) ================= */
+  .B { background:#161A33; }
+  .B .hd { display:flex; align-items:center; gap:10px; padding:0 16px 14px; color:#fff; }
+  .B .hd .wm b { font-size:22px; color:#fff; } .B .hd .wm span { font-size:10px; color:#E9B04A; }
+  .B .hd .sp { flex:1; }
+  .B .ib { width:38px; height:38px; border-radius:12px; display:grid; place-items:center; font-size:19px; background:rgb(255 255 255 / .08); color:#fff; }
+  .B .sheet { flex:1; background:var(--paper); border-radius:30px 30px 0 0; display:flex; flex-direction:column; overflow:hidden; position:relative; }
+  .B .sheet .stream { padding-top:14px; }
+  .B .me { align-self:flex-end; max-width:80%; background:var(--you); color:#fff; opacity:.5; border-radius:18px 18px 6px 18px; padding:9px 13px; font-size:14px; }
+  .B .them { align-self:flex-start; max-width:88%; background:var(--them-wash); border-radius:18px 18px 18px 6px; padding:12px 14px; }
+  .B .them .tr { font-size:18px; font-weight:700; line-height:1.3; }
+  .B .them .og { font-size:14px; color:var(--ink-2); margin-top:6px; }
+  .B .lbl.t { color:var(--them); }
+  .B .card { background:var(--white); border-radius:16px; padding:0; box-shadow:var(--sh-2); overflow:hidden; }
+  .B .card .band { background:#E9B04A; color:#161A33; font-size:11px; font-weight:800; letter-spacing:.09em; text-transform:uppercase; padding:6px 14px; display:flex; gap:6px; align-items:center; }
+  .B .card .in { padding:10px 14px 12px; }
+  .B .card h3 { font-size:17px; font-weight:800; } .B .card h3 .th { font-weight:500; font-size:15px; color:var(--ink-2); }
+  .B .card p { font-size:14px; color:var(--ink-2); line-height:20px; }
+  .B .dock { background:#161A33; }
+  .B .mic.t { background:rgb(255 255 255 / .1); color:#fff; }
+  .B .mic.y { background:#E9B04A; color:#161A33; --pc:rgb(233 176 74 / .55); }
+  .B .mid { color:#fff; } .B .mid .th { color:rgb(255 255 255 / .6); font-size:13px; }
+
+  /* ================= C · KHAO SOI (warm ground, solid voices) ================= */
+  .C { background:#F5ECDD; }
+  .C .hd { display:flex; align-items:center; gap:10px; padding:0 16px 12px; }
+  .C .hd .wm b { font-size:22px; color:var(--you); } .C .hd .wm span { font-size:10px; color:var(--them); }
+  .C .hd .sp { flex:1; }
+  .C .ib { width:38px; height:38px; border-radius:12px; display:grid; place-items:center; font-size:19px; background:rgb(30 34 56 / .06); }
+  .C .me { align-self:flex-end; max-width:80%; background:var(--you); color:#fff; border-radius:20px 20px 6px 20px; padding:9px 13px; font-size:14px; opacity:.55; }
+  .C .them { align-self:flex-start; max-width:90%; background:var(--them); color:#fff; border-radius:20px 20px 20px 6px; padding:14px 16px; }
+  .C .them .tr { font-size:21px; font-weight:800; line-height:1.25; letter-spacing:-.01em; }
+  .C .them .og { font-size:14px; color:rgb(255 255 255 / .8); margin-top:8px; padding-top:8px; border-top:1px solid rgb(255 255 255 / .2); }
+  .C .lbl.t { color:rgb(255 255 255 / .8); }
+  .C .card { background:var(--white); border-radius:20px; padding:14px 16px; box-shadow:0 1px 0 rgb(138 90 68 / .2); }
+  .C .card h3 { font-family:var(--f-th); font-size:26px; font-weight:700; line-height:1.2; }
+  .C .card .lat { font-size:16px; font-weight:800; }
+  .C .card p { font-size:14px; color:var(--ink-2); line-height:20px; margin-top:2px; }
+  .C .dock { background:var(--ink); }
+  .C .mic.t { background:var(--them); color:#fff; }
+  .C .mic.y { background:#fff; color:var(--you); --pc:rgb(255 255 255 / .5); }
+  .C .mid { color:#fff; }
+
+  .reco { margin-top:64px; max-width:900px; border-top:2px solid var(--ink); padding-top:16px; }
+  .reco h2 { font-size:24px; font-weight:800; }
+  .reco table { width:100%; border-collapse:collapse; margin-top:12px; font-size:15px; }
+  .reco th, .reco td { text-align:left; padding:8px 10px 8px 0; border-bottom:1px solid var(--line); vertical-align:top; }
+  .reco th { font-size:12px; letter-spacing:.08em; text-transform:uppercase; color:var(--ink-2); }
+  @media (prefers-reduced-motion: reduce) { * { animation:none !important; } }
+</style>
+</head>
+<body>
+
+<!-- Logo mark, redrawn in SVG from the WhatsApp render: woven bubble + อู้ -->
+<svg width="0" height="0" style="position:absolute">
+  <defs>
+    <pattern id="weave" width="12" height="12" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <rect width="12" height="12" fill="#fff"/>
+      <rect x="0" y="1" width="10" height="4" rx="1" fill="var(--weave, #8A5A44)"/>
+      <rect x="1" y="7" width="4" height="10" rx="1" fill="var(--weave, #8A5A44)"/>
+      <rect x="7" y="6" width="4" height="10" rx="1" fill="var(--weave, #8A5A44)" transform="translate(0 -12)"/>
+    </pattern>
+    <symbol id="mark" viewBox="0 0 64 64">
+      <path d="M12 4h40a8 8 0 0 1 8 8v32a8 8 0 0 1-8 8H26l-12 10v-10h-2a8 8 0 0 1-8-8V12a8 8 0 0 1 8-8z" fill="url(#weave)" stroke="var(--rim, #2B3263)" stroke-width="3.5" stroke-linejoin="round"/>
+      <path d="M32 10 L50 28 L32 46 L14 28 Z" fill="#fff"/>
+      <text x="32" y="36" text-anchor="middle" font-family="Noto Sans Thai Looped, Noto Sans Thai, Thonburi, sans-serif" font-weight="700" font-size="21" fill="var(--rim, #2B3263)">อู้</text>
+    </symbol>
+  </defs>
+</svg>
+
+<div class="page">
+<header>
+  <div class="eyebrow">อู้เมือง · Branding</div>
+  <h1>Three brands, one market.</h1>
+  <p>Same screen (vendor reply + context), with the logo in, a compact floating dock (same 60px mics, 72px bar instead of ~110, no "English" label), and a real chat ground color. Each direction takes one bet.</p>
+</header>
+
+<div class="marks">
+  <div class="markcard" style="background:var(--paper);box-shadow:inset 0 0 0 1px var(--line)"><svg width="56" height="56"><use href="#mark"/></svg><div class="wm"><b style="color:var(--you)">อู้เมือง</b><span style="color:var(--them)">U Mueang</span></div></div>
+  <div class="markcard" style="background:#161A33;--rim:#E9B04A;--weave:#8A5A44"><svg width="56" height="56"><use href="#mark"/></svg><div class="wm"><b style="color:#fff">อู้เมือง</b><span style="color:#E9B04A">U Mueang</span></div></div>
+  <div class="markcard" style="background:#F5ECDD"><svg width="56" height="56"><use href="#mark"/></svg><div class="wm"><b style="color:var(--you)">อู้เมือง</b><span style="color:var(--them)">U Mueang</span></div></div>
+</div>
+
+<div class="grid">
+
+  <!-- A -->
+  <div class="col">
+    <div class="eyebrow">Direction A · stays in DESIGN.md</div>
+    <h2>Kratip</h2>
+    <div class="sw"><i style="background:#FAF9F6"></i><i style="background:#fff"></i><i style="background:#2B3263"></i><i style="background:#8A5A44"></i><i style="background:#1E2238"></i></div>
+    <div class="phone A">
+      <div class="status"></div>
+      <div class="hd"><svg width="34" height="34"><use href="#mark"/></svg><div class="wm"><b>อู้เมือง</b><span>Kad Luang market</span></div><div class="sp"></div><div class="ib"><i data-lucide="user-round"></i></div><div class="ib"><i data-lucide="plus"></i></div></div>
+      <div class="stream">
+        <div class="me th">จานนี้คืออะไรครับ เผ็ดไหม…</div>
+        <div class="them">
+          <div class="lbl t">● Vendor</div>
+          <div class="tr">Chicken khao soi. A little spicy. No peanuts.</div>
+          <div class="og th">ข้าวซอยไก่ครับ เผ็ดนิดหน่อย ไม่มีถั่วลิสงครับ</div>
+        </div>
+        <div class="card"><div>
+          <h3>Khao soi <span class="th">ข้าวซอย</span></h3>
+          <p>Coconut curry noodle soup, crispy noodles on top.</p>
+          <div class="facts"><span><i data-lucide="drumstick"></i>Chicken</span><span><span class="heat"><b class="on"></b><b></b><b></b></span>Mild</span><span><i data-lucide="check"></i>Vendor: no peanuts</span></div>
+        </div></div>
+      </div>
+      <div class="dock"><div class="mic t"><i data-lucide="mic"></i></div><div class="mid">Your turn</div><div class="mic y pulse"><i data-lucide="mic"></i></div></div>
+    </div>
+    <div class="why">
+      <p><b>Bet:</b> the logo's basket weave becomes the texture of the whole app (5% on the ground), and frames the context card, the one thing that belongs to both people.</p>
+      <ul><li>Zero new color. Safest for legibility.</li><li>Wow: moderate. Refined, calm, "crafted".</li></ul>
+    </div>
+  </div>
+
+  <!-- B -->
+  <div class="col">
+    <div class="eyebrow">Direction B · adds 1 color</div>
+    <h2>Indigo night</h2>
+    <div class="sw"><i style="background:#161A33"></i><i style="background:#FAF9F6"></i><i style="background:#E9B04A"></i><i style="background:#8A5A44"></i><i style="background:#2B3263"></i></div>
+    <div class="phone B">
+      <div class="status"></div>
+      <div class="hd"><svg width="34" height="34" style="--rim:#E9B04A"><use href="#mark"/></svg><div class="wm"><b>อู้เมือง</b><span>Kad Luang market</span></div><div class="sp"></div><div class="ib"><i data-lucide="user-round"></i></div><div class="ib"><i data-lucide="plus"></i></div></div>
+      <div class="sheet">
+        <div class="stream">
+          <div class="me th">จานนี้คืออะไรครับ เผ็ดไหม…</div>
+          <div class="them">
+            <div class="lbl t">● Vendor</div>
+            <div class="tr">Chicken khao soi. A little spicy. No peanuts.</div>
+            <div class="og th">ข้าวซอยไก่ครับ เผ็ดนิดหน่อย ไม่มีถั่วลิสงครับ</div>
+          </div>
+          <div class="card">
+            <div class="band"><i data-lucide="soup"></i>What it is · based on your info</div>
+            <div class="in">
+              <h3>Khao soi <span class="th">ข้าวซอย</span></h3>
+              <p>Coconut curry noodle soup, crispy noodles on top.</p>
+              <div class="facts"><span><i data-lucide="drumstick"></i>Chicken</span><span><span class="heat"><b class="on"></b><b></b><b></b></span>Mild</span><span><i data-lucide="check"></i>Vendor: no peanuts</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="dock"><div class="mic t"><i data-lucide="mic"></i></div><div class="mid">Your turn<span class="th">ถึงตาลูกค้า</span></div><div class="mic y pulse"><i data-lucide="mic"></i></div></div>
+      </div>
+    </div>
+    <div class="why">
+      <p><b>Bet:</b> the Chiang Mai night market. Deep indigo chrome (a darker <i>mor hom</i>), the chat is a lit paper sheet, and one marigold accent (lanterns, khao soi broth) marks only "your turn" and "what it is".</p>
+      <ul><li>Wow: the strongest on a projector. Instantly recognisable.</li><li>Chat stays light: sunlight legibility preserved.</li><li>Needs your OK for an 8th color (marigold #E9B04A).</li></ul>
+    </div>
+  </div>
+
+  <!-- C -->
+  <div class="col">
+    <div class="eyebrow">Direction C · breaks 1 rule</div>
+    <h2>Khao soi</h2>
+    <div class="sw"><i style="background:#F5ECDD"></i><i style="background:#fff"></i><i style="background:#8A5A44"></i><i style="background:#2B3263"></i><i style="background:#1E2238"></i></div>
+    <div class="phone C">
+      <div class="status"></div>
+      <div class="hd"><svg width="34" height="34"><use href="#mark"/></svg><div class="wm"><b>อู้เมือง</b><span>Kad Luang market</span></div><div class="sp"></div><div class="ib"><i data-lucide="user-round"></i></div><div class="ib"><i data-lucide="plus"></i></div></div>
+      <div class="stream">
+        <div class="me th">จานนี้คืออะไรครับ เผ็ดไหม…</div>
+        <div class="them">
+          <div class="lbl t">● Vendor</div>
+          <div class="tr">Chicken khao soi. A little spicy. No peanuts.</div>
+          <div class="og th">ข้าวซอยไก่ครับ เผ็ดนิดหน่อย ไม่มีถั่วลิสงครับ</div>
+        </div>
+        <div class="card">
+          <h3>ข้าวซอยไก่</h3>
+          <div class="lat">Khao soi, chicken</div>
+          <p>Coconut curry noodle soup, crispy noodles on top.</p>
+          <div class="facts"><span><i data-lucide="drumstick"></i>Chicken</span><span><span class="heat"><b class="on"></b><b></b><b></b></span>Mild</span><span><i data-lucide="check"></i>Vendor: no peanuts</span></div>
+        </div>
+      </div>
+      <div class="dock"><div class="mic t"><i data-lucide="mic"></i></div><div class="mid">Your turn</div><div class="mic y pulse"><i data-lucide="mic"></i></div></div>
+    </div>
+    <div class="why">
+      <p><b>Bet:</b> warm curry-cream ground, and voices in <b>solid</b> color with white text (indigo you, clay them). Breaks "text is always ink", but white on #8A5A44 still passes AA (5.6:1).</p>
+      <ul><li>Wow: bold, warm, very "food". Bubbles read from 2 metres.</li><li>Risk: looks closer to a regular messenger.</li></ul>
+    </div>
+  </div>
+</div>
+
+<div class="reco">
+  <h2>Across all three</h2>
+  <table>
+    <tr><th>Change</th><th>Why</th></tr>
+    <tr><td><b>Floating dock, 72px</b></td><td>Same 60px mics, bar ~35% shorter, the chat breathes behind it.</td></tr>
+    <tr><td><b>No "English" under the mic</b></td><td>The language moves to My info (set once). The middle of the dock says whose turn it is instead: more useful.</td></tr>
+    <tr><td><b>Logo in the header</b></td><td>Mark 34px + <span class="th">อู้เมือง</span> + context line. Redrawn in SVG (sharp, recolourable), fixes the "Uู Muang" typo.</td></tr>
+    <tr><td><b>My pick: B</b></td><td>It's a hackathon on a projector: B is the only one you recognise from the back of the room, and the chat stays light for real use.</td></tr>
+  </table>
+</div>
+</div>
+<script>lucide.createIcons();</script>
+</body>
+</html>

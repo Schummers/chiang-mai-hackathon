@@ -24,7 +24,10 @@ The model returns one `mention` per Turn. Precedence: a dish that conflicts with
 | `offguide` | Dish card flagged `offGuide` | model text, **only shown if it carries an allergy or diet warning** |
 | `word` | Word card ("say it back") | glossary + false friends |
 | `produce` | Card with Northern name and season | pack |
+| nothing, Vendor Turn with a false friend | Word card (code backstop, `falseFriendCard`; เจ้า and ส้ม ignored) | false friends |
 | nothing, first Turn | Moment card (season, weather, next festival) | pack months + festivals, Chiang Mai date |
+
+Card text is English whatever the Visitor's language: the pack is English. The bubbles are translated into the Visitor's language.
 
 Allergy and diet flags: first the overlay's allergens and a keyword check on ingredients (deterministic), then the model's reading. Always phrased as a risk to check with the Vendor.
 

@@ -106,11 +106,12 @@ Every message has a 🔊 button outside the bubble, on its inner side. Rule: **b
 ## Constraints
 
 - Web app for the hackathon, mobile first (`prototype/`, Vite + React + TypeScript).
-- API models for the demo, chosen to be cheap enough for a free app. Model choices per step: models workstream.
-- Speech-to-text: hosted (e.g. OpenAI `gpt-4o-transcribe`, Thai supported). Claude does not take audio, and the browser's own speech recognition is unreliable on iPhone.
+- API models for the demo, chosen to be cheap enough for a free app: Gemini, our key server-side (decided 2026-09-27, see `application/docs/decisions.md`).
+- Speech-to-text: Gemini flash-lite (~1.6 s, Thai supported), a separate call before the Turn so the raw transcript shows first. The browser's own speech recognition is unreliable on iPhone.
+- Turn: Gemini flash with the Context Pack catalog in the prompt; the model names what it recognised, the card is filled from the pack (`application/docs/context-pack.md`).
 - Text-to-speech: browser speech synthesis (iOS has a Thai voice; Android depends on the phone). iOS blocks sound without a tap: auto-play relies on unlocking audio on the mic tap, to test on an iPhone.
 - One structured model response per message: translation items, original items, optional context card.
-- Public repo: API keys only in `prototype/.env.local`, never committed.
+- Public repo: API keys only in `application/.env.local` and Vercel env vars, never committed.
 
 ## Major risks
 

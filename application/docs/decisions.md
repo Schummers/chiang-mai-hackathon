@@ -4,6 +4,10 @@ One line each, newest first. Status: **done** (settled) or **open** (to confirm,
 
 | Date | Decision | Why | Status |
 |---|---|---|---|
+| 2026-09-27 | Cards, back-end and value added reopened for a grill | Jonathan not convinced yet; see `people/jonathan/handoff-cards-grill.md` | open, jonathan |
+| 2026-09-27 | Two Gemini calls (transcribe, then Turn), not one audio-to-JSON call | Keeps the raw transcript first (D4), keeps a path to on-device models, no contract change; costs ~1 s | done |
+| 2026-09-27 | Our Gemini key server-side, not bring-your-own-key | "Usable right now" means scan the QR and it works | done |
+| 2026-09-27 | Card order: model's Mention, then a false friend the Vendor said (code backstop, except เจ้า and ส้ม), then the Moment card on the first Turn | The model sometimes misses ยินดี, the demo's key word | done |
 | 2026-09-27 | Back-end on Gemini (flash-lite to transcribe, 3.6-flash for the Turn), REST without SDK | Measured ~1.5 s and ~2 s per call; cheap enough to be free | done (was "OpenAI + Claude, TBD" in #12) |
 | 2026-09-27 | The model names what it recognised (`mention`), the card is built from the pack | Cards cannot be hallucinated; allergy flags stay deterministic | done |
 | 2026-09-27 | Card kinds: dish, word, moment. Off-guide dishes shown only with a warning | Silence beats a generic card | done |

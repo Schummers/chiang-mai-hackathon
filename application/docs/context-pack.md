@@ -16,7 +16,7 @@ Current pack: 35 dishes, 51 produce, 182 Kham Mueang words, 6 false friends, 12 
 
 ## How a card is chosen
 
-The model returns one `mention` per Turn. Precedence: a dish that conflicts with My info, then any dish, then a Kham Mueang word the Vendor used, then an in-season product. `none` is better than a generic card.
+The model returns one `mention` per Turn. Precedence (asked in the prompt, `prompt.ts`, not enforced by code): a dish that conflicts with My info, then any dish, then a Kham Mueang word the Vendor used, then an in-season product. `none` is better than a generic card.
 
 | mention.kind | Card | Built from |
 |---|---|---|
@@ -29,11 +29,12 @@ The model returns one `mention` per Turn. Precedence: a dish that conflicts with
 
 Card text is English whatever the Visitor's language: the pack is English. The bubbles are translated into the Visitor's language.
 
-Allergy and diet flags: first the overlay's allergens and a keyword check on ingredients (deterministic), then the model's reading. Always phrased as a risk to check with the Vendor.
+Allergy and diet flags: first the overlay's allergens and a keyword check on ingredients (deterministic, `cards.ts` and `lib/cardFlag.ts`), then the model's reading. Always phrased as a risk to check with the Vendor.
 
 ## Changing it
 
 - Luke updates his JSON -> run `node scripts/build-pack.mjs` in `application/`, commit `pack.json`.
 - A demo dish needs a better card -> edit `overlay.ts` (keyed by pack id).
-- Prompt rules -> `prompt.ts`. The system part is stable per month so it can be cached; the per-Turn part is in `turnPrompt`.
-- Tests: `lib/context/cards.test.ts`.
+- Prompt rules -> `prompt.ts`. The system part is stable per month so it could be cached (no cache configured yet in `gemini.ts`); the per-Turn part is in `turnPrompt`.
+- Tests: `lib/context/cards.test.ts`, `lib/cardFlag.test.ts`.
+- `build-pack.mjs` does not validate Luke's JSON: a missing field ends up as `null` or crashes the script. Check `git diff lib/context/pack.json` after a rebuild.

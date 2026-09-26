@@ -44,10 +44,13 @@ Key idea: **the model only says what it recognised** (`mention`: a dish id, a wo
 | `components/MyInfo.tsx` | Compact My info card and page (allergies, spice, diet). |
 | `components/ErrorState.tsx` | Retry, mic denied, too short, offline. Vendor-side texts in Thai. |
 | `components/PlayTool.tsx` | Play icon at the bottom of a message. |
+| `components/Logo.tsx` | Header logo (placeholder mark). |
 | `lib/engine/` | `types.ts` (contract), `engine.ts` (state machine), `turnService.ts` (mock or api picker), `mockTurnService.ts`. |
 | `lib/server/gemini.ts` | Gemini REST client, model names, fallback on 429/503. Server only. |
 | `lib/context/` | Context Pack (`pack.json`, `pack.ts`), hand-written `overlay.ts`, `cards.ts`, `prompt.ts`. |
 | `lib/recorder.ts` | Mic capture, silence detection. |
+| `lib/cardFlag.ts` | Deterministic allergy keyword check on a card ("May contain peanuts"), and allergens the Vendor ruled out. |
+| `lib/useOnline.ts` | Online/offline status for the offline banner. |
 | `lib/speech.ts` | Browser text-to-speech (free, Thai voice built into iOS). |
 | `lib/language.ts`, `useLanguage.ts` | Visitor language list and saved choice. |
 | `lib/myInfo.ts`, `useMyInfo.ts` | My info model and saved value. |
@@ -59,7 +62,7 @@ Key idea: **the model only says what it recognised** (`mention`: a dish id, a wo
 
 ```bash
 npm run dev      # http://localhost:3000 (mic on a phone needs HTTPS: use the Vercel URL)
-npm test         # Vitest: engine, cards, My info, language
+npm test         # Vitest: engine, cards, card flags, My info, language
 npm run build    # must pass before any push
 node scripts/build-pack.mjs   # after Luke changes his data
 ```

@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Wireframes v1</title>
+<style>
+  :root { --bg:#e9e9e9; --phone:#fff; --ink:#111; --mid:#666; --soft:#bbb; --fill:#f1f1f1; --fill2:#dcdcdc; }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body { background:var(--bg); color:var(--ink); font:14px/1.4 -apple-system, system-ui, sans-serif; padding:24px 16px 64px; }
+  h1 { font-size:20px; margin-bottom:4px; }
+  .lede { color:var(--mid); max-width:760px; margin-bottom:24px; }
+  .row { display:flex; flex-wrap:wrap; gap:28px; }
+  .col { width:320px; max-width:100%; }
+  .label { font-weight:700; margin-bottom:8px; }
+  .label span { color:var(--mid); font-weight:400; }
+  .phone { width:320px; max-width:100%; height:660px; background:var(--phone); border:2px solid var(--ink); border-radius:36px; overflow:hidden; display:flex; flex-direction:column; position:relative; }
+  .top { display:flex; align-items:center; justify-content:space-between; padding:18px 16px 10px; border-bottom:1px solid var(--fill2); }
+  .ico { width:34px; height:34px; border-radius:50%; background:var(--fill); display:grid; place-items:center; font-size:15px; color:var(--mid); }
+  .lang { background:var(--fill); border-radius:20px; padding:6px 12px; font-weight:600; font-size:13px; }
+  .body { flex:1; overflow:hidden; padding:14px; display:flex; flex-direction:column; gap:10px; }
+  .empty { flex:1; display:grid; place-items:center; text-align:center; color:var(--mid); }
+  .bottom { padding:12px 16px 22px; border-top:1px solid var(--fill2); display:flex; flex-direction:column; align-items:center; gap:10px; }
+  .mic { width:96px; height:96px; border-radius:50%; background:var(--ink); color:#fff; display:grid; place-items:center; font-size:32px; }
+  .mic.rec { outline:10px solid var(--fill2); }
+  .prefs { font-size:12px; color:var(--mid); border:1px dashed var(--soft); border-radius:14px; padding:4px 10px; }
+  .me { align-self:flex-end; max-width:88%; background:var(--fill2); border-radius:16px 16px 4px 16px; padding:10px 12px; }
+  .them { align-self:flex-start; max-width:88%; background:var(--fill); border:1px solid var(--fill2); border-radius:16px 16px 16px 4px; padding:10px 12px; }
+  .th { font-size:15px; font-weight:600; margin-top:6px; padding-top:6px; border-top:1px solid var(--soft); }
+  .small { font-size:11px; color:var(--mid); }
+  .btn { background:var(--ink); color:#fff; border-radius:14px; padding:14px; text-align:center; font-weight:700; width:100%; }
+  .btn.ghost { background:var(--fill); color:var(--ink); font-weight:600; }
+  .card { border:2px solid var(--ink); border-radius:14px; padding:10px 12px; display:flex; flex-direction:column; gap:4px; }
+  .warn { border:1px dashed var(--ink); border-radius:10px; padding:6px 8px; font-size:12px; }
+  .chips { display:flex; flex-wrap:wrap; gap:6px; }
+  .chip { border:1px solid var(--soft); border-radius:18px; padding:6px 10px; font-size:13px; }
+  .chip.on { background:var(--ink); color:#fff; border-color:var(--ink); }
+  .big { font-size:30px; line-height:1.25; font-weight:700; }
+  .reply { border:2px solid var(--ink); border-radius:14px; padding:12px; font-size:20px; font-weight:700; text-align:center; flex:1; }
+  .reply.on { background:var(--ink); color:#fff; }
+  .grp { font-size:13px; color:var(--mid); margin-top:6px; }
+  .wave { display:flex; gap:4px; align-items:center; height:60px; justify-content:center; }
+  .wave i { width:6px; background:var(--ink); border-radius:3px; }
+  .sheet { position:absolute; left:0; right:0; bottom:0; background:#fff; border-top:2px solid var(--ink); border-radius:22px 22px 0 0; padding:16px; display:flex; flex-direction:column; gap:10px; }
+  .dim { position:absolute; inset:0; background:rgba(0,0,0,.35); }
+  .notes { margin-top:10px; font-size:12.5px; color:#333; padding-left:16px; }
+  .notes li { margin-bottom:4px; }
+  .q { background:#fff; border:1px solid var(--soft); border-radius:12px; padding:14px 16px; margin-top:32px; max-width:980px; }
+  .q h2 { font-size:15px; margin-bottom:6px; }
+  .q li { margin:4px 0 4px 18px; }
+</style>
+</head>
+<body>
+<h1>Wireframes v1 (niveaux de gris)</h1>
+<p class="lede">Scénario de démo : un stand de Khao Soi, l'utilisateur est allergique aux cacahuètes. Un seul flow : un aller-retour vocal en ping-pong, affiché comme un fil de messagerie. Les numéros (N1, N4…) renvoient aux questions de la session de design.</p>
+
+<div class="row">
+
+  <!-- 1 -->
+  <div class="col">
+    <div class="label">1. Ouverture <span>= nouvelle conversation</span></div>
+    <div class="phone">
+      <div class="top"><div class="ico">☰</div><div class="lang">Français ⇄ ไทย</div><div class="ico">＋</div></div>
+      <div class="body"><div class="empty">Parle comme tu penses.<br>Hésitations comprises.</div></div>
+      <div class="bottom"><div class="mic">🎙</div><div class="prefs">Allergies · épice · régime ▾</div></div>
+    </div>
+    <ul class="notes">
+      <li>Taper l'icône de l'app ouvre directement une conversation vide. Pas d'écran d'accueil, pas d'onboarding.</li>
+      <li>Seule la langue de base se choisit (FR, EN…). La cible est fixée au thaï.</li>
+      <li>☰ ouvre les anciennes conversations (hors démo). ＋ démarre une nouvelle conversation.</li>
+      <li>Les préférences sont repliées, on les ouvre si on veut (N4).</li>
+    </ul>
+  </div>
+
+  <!-- 2 -->
+  <div class="col">
+    <div class="label">2. Enregistrement <span>taper, parler, taper</span></div>
+    <div class="phone">
+      <div class="top"><div class="ico">☰</div><div class="lang">Français ⇄ ไทย</div><div class="ico">＋</div></div>
+      <div class="body"><div class="empty">
+        <div>
+          <div class="wave"><i style="height:20px"></i><i style="height:44px"></i><i style="height:30px"></i><i style="height:56px"></i><i style="height:26px"></i><i style="height:40px"></i><i style="height:16px"></i></div>
+          <div style="font-size:22px;font-weight:700;margin-top:8px">0:12</div>
+          <div>Je t'écoute…</div>
+        </div>
+      </div></div>
+      <div class="bottom"><div class="mic rec">■</div><div class="small">Taper pour envoyer · arrêt auto après un silence</div></div>
+    </div>
+    <ul class="notes">
+      <li>Pas de transcription en direct : on transcrit une fois l'enregistrement fini (N8, N9).</li>
+      <li>Après l'arrêt : un état d'attente dans le fil, pas d'écran bloquant (R3 latence).</li>
+    </ul>
+  </div>
+
+  <!-- 3 -->
+  <div class="col">
+    <div class="label">3. Message prêt <span>dans le fil</span></div>
+    <div class="phone">
+      <div class="top"><div class="ico">☰</div><div class="lang">Français ⇄ ไทย</div><div class="ico">＋</div></div>
+      <div class="body">
+        <div style="flex:1"></div>
+        <div class="me">
+          <div class="small">Ce que j'ai compris</div>
+          C'est quoi ce plat dans le bol jaune ? C'est épicé ? Je suis allergique aux cacahuètes.
+          <div class="th">จานนี้คืออะไรครับ เผ็ดไหมครับ ผมแพ้ถั่วลิสงครับ</div>
+        </div>
+        <div class="small" style="align-self:flex-end">Faux ? Réenregistre 🎙</div>
+      </div>
+      <div class="bottom"><div class="btn">Montrer au vendeur 🔊</div></div>
+    </div>
+    <ul class="notes">
+      <li>En haut, la version nettoyée dans ta langue. En dessous, le thaï. Pas de validation bloquante (Q4).</li>
+      <li>L'allergie est ajoutée au thaï même si l'utilisateur ne l'a pas redite (Q6).</li>
+      <li>Le tap sur « Montrer » passe en plein écran ET lance la voix : iOS exige un tap (N7).</li>
+    </ul>
+  </div>
+
+  <!-- 4 -->
+  <div class="col">
+    <div class="label">4. Mode Montrer <span>côté vendeur, tout en thaï</span></div>
+    <div class="phone">
+      <div class="top"><div class="ico">✕</div><div class="small">🔊 ฟังอีกครั้ง</div><div class="ico" style="visibility:hidden"></div></div>
+      <div class="body" style="gap:8px">
+        <div class="big">จานนี้คืออะไรครับ เผ็ดไหมครับ ผมแพ้ถั่วลิสงครับ</div>
+        <div class="grp">เผ็ดไหม</div>
+        <div class="chips" style="gap:6px;flex-wrap:nowrap"><div class="reply">ไม่เผ็ด</div><div class="reply on">นิดหน่อย</div><div class="reply">มาก</div></div>
+        <div class="grp">มีถั่วลิสงไหม</div>
+        <div class="chips" style="gap:6px;flex-wrap:nowrap"><div class="reply">มี</div><div class="reply on">ไม่มี</div><div class="reply">ไม่แน่ใจ</div></div>
+      </div>
+      <div class="bottom" style="flex-direction:row;gap:10px">
+        <div class="btn ghost" style="flex:1">🎙 พูด</div>
+        <div class="btn" style="flex:1">ส่ง ✓</div>
+      </div>
+    </div>
+    <ul class="notes">
+      <li>Le texte thaï en très gros. Les réponses proposées sont regroupées par question, le vendeur en tape une par groupe.</li>
+      <li>Le micro 🎙 พูด (« parler ») sert pour ce que les boutons ne couvrent pas, ici le nom du plat.</li>
+      <li>ส่ง (« envoyer ») ramène l'écran à l'utilisateur. ✕ = retour sans réponse.</li>
+      <li>Aucun mot de français sur cet écran.</li>
+    </ul>
+  </div>
+
+  <!-- 5 -->
+  <div class="col">
+    <div class="label">5. Réponse + fiche plat</div>
+    <div class="phone">
+      <div class="top"><div class="ico">☰</div><div class="lang">Français ⇄ ไทย</div><div class="ico">＋</div></div>
+      <div class="body">
+        <div class="me" style="opacity:.55">C'est quoi ce plat ? C'est épicé ? Allergique aux cacahuètes.</div>
+        <div class="them">
+          Khao soi au poulet. Un peu épicé. Pas de cacahuètes.
+          <div class="th" style="font-weight:400;font-size:13px">ข้าวซอยไก่ครับ · นิดหน่อย · ไม่มี</div>
+        </div>
+        <div class="card">
+          <div style="font-weight:700">Khao Soi · ข้าวซอย</div>
+          <div class="small">Soupe de nouilles au curry coco, spécialité de Chiang Mai</div>
+          <div>Viande : poulet · Épice : ●●○○○</div>
+          <div class="warn">⚠ Cacahuètes : le vendeur dit non. Certains stands mettent des arachides en garniture. <b>Redemander ?</b></div>
+        </div>
+        <div class="chip" style="align-self:flex-start">💬 Relancer : « Vous tenez ce stand depuis longtemps ? »</div>
+      </div>
+      <div class="bottom"><div class="mic" style="width:64px;height:64px;font-size:22px">🎙</div></div>
+    </div>
+    <ul class="notes">
+      <li>La fiche plat apparaît dès qu'un plat ou un ingrédient est nommé (Q3).</li>
+      <li>L'allergie est signalée comme un risque, jamais garantie, avec la question de vérification en un tap (N5).</li>
+      <li>La question de relance transforme la transaction en échange. Le micro revient, le ping-pong continue.</li>
+    </ul>
+  </div>
+
+  <!-- 6 -->
+  <div class="col">
+    <div class="label">6. Préférences <span>volet, jamais imposé</span></div>
+    <div class="phone">
+      <div class="top"><div class="ico">☰</div><div class="lang">Français ⇄ ไทย</div><div class="ico">＋</div></div>
+      <div class="body"><div class="empty">…</div></div>
+      <div class="dim"></div>
+      <div class="sheet">
+        <div style="font-weight:700">Ma langue</div>
+        <div class="chips"><div class="chip on">Français</div><div class="chip">English</div><div class="chip">Deutsch</div><div class="chip">…</div></div>
+        <div style="font-weight:700">Allergies</div>
+        <div class="chips"><div class="chip on">Cacahuètes</div><div class="chip">Fruits de mer</div><div class="chip">Gluten</div><div class="chip">+ Autre</div></div>
+        <div style="font-weight:700">Épice</div>
+        <div class="chips"><div class="chip">Pas du tout</div><div class="chip on">Un peu</div><div class="chip">Thaï</div></div>
+        <div style="font-weight:700">Régime</div>
+        <div class="chips"><div class="chip">Sans porc</div><div class="chip">Végétarien</div><div class="chip">Halal</div></div>
+        <div class="btn">OK</div>
+      </div>
+    </div>
+    <ul class="notes">
+      <li>Ouvert depuis « Allergies · épice · régime » ou le sélecteur de langue.</li>
+      <li>Rempli aussi automatiquement : dire « je suis allergique aux cacahuètes » coche la puce (N4 c).</li>
+      <li>Stocké sur le téléphone, sans compte.</li>
+    </ul>
+  </div>
+
+</div>
+
+<div class="q">
+  <h2>Ce que ces wireframes font émerger</h2>
+  <ul>
+    <li><b>Une question, plusieurs réponses.</b> Un brain dump contient souvent 2 ou 3 questions. Les réponses proposées sont donc regroupées par question (écran 4), c'est plus lourd qu'une simple rangée de boutons. L'autre option : l'app découpe et pose une question à la fois.</li>
+    <li><b>Le nom du plat ne tient pas dans un bouton.</b> Le vendeur doit parler ou montrer. D'où le micro, obligatoire sur l'écran 4.</li>
+    <li><b>Pas de photo dans ce flow</b> (N2). À réintégrer seulement si on la garde.</li>
+  </ul>
+</div>
+</body>
+</html>

@@ -2,7 +2,7 @@
 
 // Browser text-to-speech. Free, Thai voice built into iOS; on Android it depends on the phone.
 
-const LOCALES: Record<string, string> = { th: "th-TH", en: "en-US", fr: "fr-FR", de: "de-DE", es: "es-ES", it: "it-IT" };
+const LOCALES: Record<string, string> = { th: "th-TH", en: "en-US", fr: "fr-FR", de: "de-DE", es: "es-ES", it: "it-IT", zh: "zh-CN" };
 
 export const toLocale = (language: string) => LOCALES[language] ?? language;
 

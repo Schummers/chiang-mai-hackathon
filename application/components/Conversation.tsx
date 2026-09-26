@@ -7,6 +7,7 @@ import { mergeMyInfo } from "@/lib/myInfo";
 import { Recorder } from "@/lib/recorder";
 import { speak, stopSpeech, unlockSpeech } from "@/lib/speech";
 import { useConversation } from "@/lib/useConversation";
+import { languageStore, useLanguage } from "@/lib/useLanguage";
 import { myInfoStore, useMyInfo } from "@/lib/useMyInfo";
 import { ActionBar } from "./ActionBar";
 import { ChatThread } from "./ChatThread";
@@ -31,7 +32,7 @@ export function Conversation() {
     toastTimer.current = setTimeout(() => setToast(null), 2500);
   };
 
-  const userLanguage = "en";
+  const language = useLanguage();
   const [playingId, setPlayingId] = useState<string | null>(null);
   const playingRef = useRef<string | null>(null);
 
@@ -44,7 +45,7 @@ export function Conversation() {
     playingRef.current = message.id;
     setPlayingId(message.id);
     // Your messages are read in Thai for the vendor, the vendor's in your language.
-    speak(message.translation.join(" "), message.speaker === "you" ? "th" : userLanguage, () => {
+    speak(message.translation.join(" "), message.speaker === "you" ? "th" : languageStore.get(), () => {
       if (playingRef.current !== message.id) return;
       playingRef.current = null;
       setPlayingId(null);
@@ -53,7 +54,7 @@ export function Conversation() {
 
   const { engine, state } = useConversation({
     getMyInfo: myInfoStore.get,
-    getUserLanguage: () => userLanguage,
+    getUserLanguage: languageStore.get,
     onDetectedInfo,
     // Auto-play your Thai message so you only have to turn the phone.
     onMessage: (m) => m.speaker === "you" && toggleSpeech(m),
@@ -129,7 +130,7 @@ export function Conversation() {
         }
       />
 
-      <ActionBar state={state} onTap={onTap} yourVerb="Speak" yourStop="Stop" yourLanguage="English" />
+      <ActionBar state={state} onTap={onTap} language={language} onLanguage={languageStore.set} />
 
       {infoOpen && <MyInfoPage info={myInfo} onChange={myInfoStore.set} onDone={() => setInfoOpen(false)} />}
       {toast && <Toast text={toast} />}

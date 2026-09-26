@@ -1,26 +1,47 @@
 "use client";
 
-import { Mic, Square } from "lucide-react";
+import { ChevronDown, Mic, Square } from "lucide-react";
 import type { ConversationState } from "@/lib/engine/engine";
-import type { Speaker } from "@/lib/engine/types";
+import type { Speaker, UserLanguage } from "@/lib/engine/types";
+import { findLanguage, LANGUAGES } from "@/lib/language";
 import a from "./ActionBar.module.css";
 
 type Props = {
   state: ConversationState;
   onTap: (speaker: Speaker) => void;
-  /** Label under your mic, e.g. "English". */
-  yourLanguage: React.ReactNode;
-  /** Verb inside your mic, e.g. "Speak", "Parler". */
-  yourVerb: string;
-  yourStop: string;
+  language: UserLanguage;
+  onLanguage: (code: UserLanguage) => void;
+  /** Offline: both mics are disabled. */
+  offline?: boolean;
 };
 
-export function ActionBar({ state, onTap, yourLanguage, yourVerb, yourStop }: Props) {
+export function ActionBar({ state, onTap, language, onLanguage, offline = false }: Props) {
   const { phase, messages } = state;
+  const { name, verb: yourVerb, stop: yourStop } = findLanguage(language);
+  const busy = phase.kind === "listening" || phase.kind === "processing";
+
+  // A native select laid over the label: the phone's own picker, nothing to build.
+  const yourLanguage = (
+    <label className={a.picker}>
+      {name} <ChevronDown size={14} strokeWidth={2.4} />
+      <select
+        value={language}
+        disabled={busy}
+        onChange={(e) => onLanguage(e.target.value)}
+        aria-label="Your language"
+      >
+        {LANGUAGES.map((l) => (
+          <option key={l.code} value={l.code}>
+            {l.name}
+          </option>
+        ))}
+      </select>
+    </label>
+  );
 
   const mic = (speaker: Speaker) => {
     const recording = phase.kind === "listening" && phase.speaker === speaker;
-    const disabled = phase.kind === "processing" || (phase.kind === "listening" && !recording);
+    const disabled = offline || phase.kind === "processing" || (phase.kind === "listening" && !recording);
     const pulse = phase.kind === "idle" && phase.nextTurn === speaker && messages.length > 0;
     const vendor = speaker === "vendor";
     return (
@@ -33,7 +54,7 @@ export function ActionBar({ state, onTap, yourLanguage, yourVerb, yourStop }: Pr
           lang={vendor ? "th" : undefined}
         >
           {recording ? <Square size={22} strokeWidth={2.1} fill="currentColor" /> : <Mic size={26} strokeWidth={2.1} />}
-          <span className={a.verb}>{recording ? (vendor ? "หยุด" : yourStop) : vendor ? "พูด" : yourVerb}</span>
+          <span className={a.verb} lang={vendor ? "th" : language}>{recording ? (vendor ? "หยุด" : yourStop) : vendor ? "พูด" : yourVerb}</span>
         </button>
         <div className={a.lang}>{vendor ? "ไทย" : yourLanguage}</div>
       </div>

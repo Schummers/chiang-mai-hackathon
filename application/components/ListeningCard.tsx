@@ -1,5 +1,6 @@
 "use client";
 
+import { Mic } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import type { Speaker } from "@/lib/engine/types";
 import { Row } from "./Bubble";
@@ -47,7 +48,9 @@ export function ListeningCard({ speaker, startedAt, getLevel, label }: Props) {
   return (
     <Row speaker={speaker}>
       <div className={`${s.card} ${speaker === "you" ? s.you : s.them}`} lang={speaker === "vendor" ? "th" : undefined}>
-        <span className={s.dot} />
+        <span className={s.dot}>
+          <Mic size={18} strokeWidth={2.1} />
+        </span>
         <span className={s.label}>{label}</span>
         <span className={s.wave} aria-hidden>
           {Array.from({ length: BARS }, (_, i) => (

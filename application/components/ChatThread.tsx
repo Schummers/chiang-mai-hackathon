@@ -1,5 +1,6 @@
 "use client";
 
+import { Languages } from "lucide-react";
 import { useEffect, useRef } from "react";
 import type { ConversationState } from "@/lib/engine/engine";
 import type { Message } from "@/lib/engine/types";
@@ -48,20 +49,19 @@ export function ChatThread({ state, intro, live, playingId, onSpeak, onRetry, on
       {live}
 
       {phase.kind === "processing" && (
-        <>
-          <Row speaker={phase.speaker}>
-            <div className={s.proc}>
-              <div>
-                <p className={s.raw}>{phase.raw ?? (phase.speaker === "you" ? "Transcribing…" : "กำลังถอดเสียง…")}</p>
-              </div>
+        <Row speaker={phase.speaker}>
+          <div className={s.proc}>
+            <div>
+              <p className={s.raw}>{phase.raw ?? (phase.speaker === "you" ? "Transcribing…" : "กำลังถอดเสียง…")}</p>
+              {phase.raw && (
+                <p className={s.status} lang={phase.speaker === "vendor" ? "th" : undefined}>
+                  <Languages size={14} strokeWidth={2.1} />
+                  {phase.speaker === "you" ? "Cleaning up and translating…" : "กำลังแปล…"}
+                </p>
+              )}
             </div>
-          </Row>
-          {phase.raw && (
-            <p className={s.status} style={{ alignSelf: phase.speaker === "you" ? "flex-end" : "flex-start" }}>
-              {phase.speaker === "you" ? "Cleaning up and translating…" : "กำลังแปล…"}
-            </p>
-          )}
-        </>
+          </div>
+        </Row>
       )}
 
       {phase.kind === "error" && <ErrorState phase={phase} onRetry={onRetry} onDismiss={onDismissError} />}

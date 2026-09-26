@@ -1,71 +1,164 @@
 .row {
   display: flex;
-  align-items: center;
-  gap: 8px;
   max-width: 100%;
 }
 
 .you {
   align-self: flex-end;
-  flex-direction: row-reverse;
+  justify-content: flex-end;
 }
 
 .them {
   align-self: flex-start;
 }
 
+/* L1 voice (M2): white card, 3px spine on the speaker's side, 1.5px contour in the speaker's color. No label. */
 .bubble {
-  max-width: min(86%, 380px);
+  --accent: var(--you);
+  --wash: var(--you-wash);
+  position: relative;
+  max-width: 92%;
   min-width: min(62%, 240px);
-  padding: 12px 14px;
+  padding: 14px 16px 12px;
   border-radius: 18px;
   background: var(--white);
-  box-shadow: var(--sh-2);
+  cursor: pointer;
+  -webkit-user-select: none;
+  user-select: none;
 }
 
 .you .bubble {
   border-bottom-right-radius: 6px;
+  box-shadow: inset -3px 0 0 var(--you), 0 0 0 1.5px rgb(43 50 99 / 0.28), var(--sh-2);
 }
 
 .them .bubble {
+  --accent: var(--them);
+  --wash: var(--them-wash);
   border-bottom-left-radius: 6px;
+  box-shadow: inset 3px 0 0 var(--them), 0 0 0 1.5px rgb(138 90 68 / 0.32), var(--sh-2);
 }
 
 .big {
-  font-size: 18px;
-  line-height: 25px;
-  font-weight: 600;
+  font-size: 17px;
+  line-height: 1.35;
+  font-weight: 700;
   color: var(--ink);
 }
 
 .big.thai {
   font-family: var(--f-th);
-  font-size: 20px;
-  line-height: 30px;
+  font-size: 19px;
+  line-height: 1.45;
+  font-weight: 600;
 }
 
 .small {
   margin-top: 8px;
   padding-top: 8px;
-  border-top: 1px solid var(--line-2);
+  border-top: 1px solid var(--line);
   font-size: 14px;
-  line-height: 20px;
+  line-height: 1.45;
   color: var(--ink-2);
 }
 
 .small.thai {
   font-family: var(--f-th);
   font-size: 15px;
-  line-height: 22px;
 }
 
-.big:is(ul),
-.small:is(ul) {
-  padding-left: 20px;
+/* Same list in both halves: one grid, so Thai and Latin markers sit on the same column. */
+.list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 14px 1fr;
+  column-gap: 6px;
+  row-gap: 2px;
 }
 
-.big li + li {
-  margin-top: 4px;
+.list li {
+  display: contents;
+}
+
+.list li::before {
+  content: "•";
+  font-weight: 800;
+  color: var(--line-2);
+}
+
+.big.list li::before {
+  color: var(--accent);
+}
+
+/* Play tool (P1): wash when idle, solid speaker color while playing. */
+.tool {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  height: 34px;
+  margin-top: 10px;
+  padding: 0 12px;
+  border-radius: 10px;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--accent);
+  background: var(--wash);
+}
+
+.tool.playing {
+  color: var(--white);
+  background: var(--accent);
+}
+
+/* The two arcs of volume-2 light up one after the other. */
+.arcs path:nth-of-type(2),
+.arcs path:nth-of-type(3) {
+  animation: arc 0.8s ease-in-out infinite;
+}
+
+.arcs path:nth-of-type(3) {
+  animation-delay: 0.2s;
+}
+
+@keyframes arc {
+  0%,
+  100% {
+    opacity: 0.25;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+/* A soft ring breathing around the card while it plays. */
+.bubble.playing::before {
+  content: "";
+  position: absolute;
+  inset: -3px;
+  border-radius: 21px;
+  border: 2px solid var(--accent);
+  opacity: 0;
+  pointer-events: none;
+  animation: ring 1.4s ease-out infinite;
+}
+
+.you .bubble.playing::before {
+  border-bottom-right-radius: 9px;
+}
+
+.them .bubble.playing::before {
+  border-bottom-left-radius: 9px;
+}
+
+@keyframes ring {
+  0% {
+    opacity: 0.6;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.04);
+  }
 }
 
 .enter {
@@ -84,96 +177,18 @@
   }
 }
 
-/* Raw transcript while the turn is processed (#6 adds the running light). */
-.raw {
-  color: var(--ink-2);
-  font-style: italic;
-  font-size: 15px;
-  line-height: 22px;
-}
-
-.status {
-  font-size: 13px;
-  color: var(--ink-2);
-}
-
-.you + .status {
-  align-self: flex-end;
-}
-
-.note {
-  align-self: center;
-  text-align: center;
-  font-size: 14px;
-  color: var(--ink-2);
-  max-width: 300px;
-}
-
-/* Speaker button: outside the bubble, on its inner side. */
-.speaker {
-  flex: none;
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  display: grid;
-  place-items: center;
-  background: var(--white);
-  color: var(--ink);
-  box-shadow: inset 0 0 0 1.5px var(--line-2);
-}
-
-.speaker.playing {
-  background: var(--ink);
-  color: var(--white);
-  box-shadow: none;
-}
-
-.eq {
-  display: inline-flex;
-  gap: 3px;
-  align-items: flex-end;
-  height: 16px;
-}
-
-.eq b {
-  width: 3px;
-  background: currentColor;
-  border-radius: 1px;
-  animation: eq 0.8s ease-in-out infinite;
-}
-
-.eq b:nth-child(2) {
-  animation-delay: 0.2s;
-}
-
-.eq b:nth-child(3) {
-  animation-delay: 0.4s;
-}
-
-@keyframes eq {
-  0%,
-  100% {
-    height: 4px;
-  }
-  50% {
-    height: 16px;
-  }
-}
-
-/* Processing: a light running around the raw transcript (wireframe v5, screen 3). */
+/* Working: your raw transcript, an indigo light running around the card's edge. */
 .proc {
   position: relative;
   overflow: hidden;
-  max-width: min(86%, 380px);
+  max-width: 92%;
   padding: 2.5px;
   border-radius: 18px;
   --accent: var(--you);
-  --wash: var(--you-wash);
 }
 
 .them .proc {
   --accent: var(--them);
-  --wash: var(--them-wash);
 }
 
 .you .proc {
@@ -194,9 +209,10 @@
 
 .proc > div {
   position: relative;
-  background: var(--wash);
+  background: var(--white);
   border-radius: 15.5px;
-  padding: 10px 12px;
+  padding: 12px 14px 10px;
+  box-shadow: 0 0 0 1px var(--line);
 }
 
 .you .proc > div {
@@ -211,4 +227,21 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.raw {
+  color: var(--ink-2);
+  font-style: italic;
+  font-size: 15px;
+  line-height: 22px;
+}
+
+.status {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 6px;
+  font-size: 12px;
+  line-height: 16px;
+  color: var(--ink-2);
 }

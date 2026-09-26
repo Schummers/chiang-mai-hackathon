@@ -1,0 +1,290 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Wireframes v3</title>
+<style>
+  :root {
+    --bg:#e9e9e9; --ink:#111; --mid:#666; --soft:#bbb; --fill:#f3f3f3; --line:#dcdcdc;
+    --me:#111; --me-ink:#fff;          /* you: right side */
+    --them:#cfcfcf; --them-ink:#111;   /* vendor: left side */
+    --card:#fff; --card-edge:#111;     /* context card: full width, neither side */
+  }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body { background:var(--bg); color:var(--ink); font:14px/1.4 -apple-system, system-ui, sans-serif; padding:24px 16px 64px; }
+  h1 { font-size:20px; margin-bottom:4px; }
+  h2 { font-size:17px; margin:36px 0 4px; }
+  .lede { color:var(--mid); max-width:860px; margin-bottom:8px; }
+  .row { display:flex; flex-wrap:wrap; gap:28px; margin-top:14px; }
+  .col { width:320px; max-width:100%; }
+  .label { font-weight:700; margin-bottom:8px; }
+  .label span { color:var(--mid); font-weight:400; }
+  .phone { width:320px; max-width:100%; height:680px; background:#fff; border:2px solid var(--ink); border-radius:36px; overflow:hidden; display:flex; flex-direction:column; position:relative; }
+  .top { display:flex; align-items:center; justify-content:space-between; padding:18px 14px 10px; border-bottom:1px solid var(--line); }
+  .ico { width:34px; height:34px; border-radius:50%; background:var(--fill); display:grid; place-items:center; font-size:15px; color:var(--mid); }
+  .pair { background:var(--fill); border-radius:20px; padding:6px 12px; font-weight:600; font-size:13px; }
+  .pair small { color:var(--mid); font-weight:400; }
+  .body { flex:1; overflow:hidden; padding:12px; display:flex; flex-direction:column; gap:10px; justify-content:flex-end; }
+  .bar { padding:12px 16px 22px; display:flex; align-items:flex-end; justify-content:space-between; }
+  .mic { display:flex; flex-direction:column; align-items:center; gap:6px; font-size:12px; font-weight:600; }
+  .mic i { width:72px; height:72px; border-radius:50%; display:grid; place-items:center; font-size:26px; font-style:normal; }
+  .mic.me i { background:var(--me); color:var(--me-ink); }
+  .mic.them i { background:var(--them); color:var(--them-ink); }
+  .mic.off { opacity:.35; }
+  .pulse i { animation:pulse 1.4s ease-out infinite; }
+  @keyframes pulse { 0% { box-shadow:0 0 0 0 rgba(0,0,0,.45); } 100% { box-shadow:0 0 0 22px rgba(0,0,0,0); } }
+
+  .b { max-width:88%; padding:10px 13px; }
+  .b.me { align-self:flex-end; background:var(--me); color:var(--me-ink); border-radius:20px 20px 4px 20px; }
+  .b.them { align-self:flex-start; background:var(--them); color:var(--them-ink); border-radius:20px 20px 20px 4px; }
+  .tr { font-size:19px; font-weight:700; line-height:1.3; }
+  .tr ul, .og ul { padding-left:18px; }
+  .og { font-size:12.5px; opacity:.72; margin-top:6px; padding-top:6px; border-top:1px solid currentColor; }
+  .play { display:inline-flex; align-items:center; gap:6px; font-size:12px; margin-top:6px; opacity:.85; }
+  .eq { display:inline-flex; gap:2px; align-items:flex-end; height:12px; }
+  .eq b { width:3px; background:currentColor; animation:eq .8s ease-in-out infinite; }
+  .eq b:nth-child(2){animation-delay:.2s} .eq b:nth-child(3){animation-delay:.4s}
+  @keyframes eq { 0%,100% { height:3px; } 50% { height:12px; } }
+
+  .card { align-self:stretch; background:var(--card); border:2px solid var(--card-edge); border-radius:14px; padding:10px 12px; font-size:13px; }
+  .card .k { font-size:11px; text-transform:uppercase; letter-spacing:.04em; color:var(--mid); }
+  .warn { border:1px dashed var(--ink); border-radius:8px; padding:5px 7px; margin-top:6px; }
+  .slide { animation:slide .5s ease-out both; }
+  @keyframes slide { from { opacity:0; transform:translateY(10px); } to { opacity:1; transform:none; } }
+
+  /* processing: a light running around the bubble */
+  .proc { align-self:flex-end; max-width:88%; position:relative; overflow:hidden; border-radius:20px 20px 4px 20px; padding:3px; }
+  .proc::before { content:""; position:absolute; inset:-60%; background:conic-gradient(var(--ink) 0 25%, transparent 25% 100%); animation:spin 1.4s linear infinite; }
+  .proc > div { position:relative; background:#fff; border-radius:17px 17px 3px 17px; padding:10px 13px; color:var(--mid); font-style:italic; }
+  @keyframes spin { to { transform:rotate(360deg); } }
+  .dots::after { content:"…"; animation:dots 1.2s steps(4) infinite; display:inline-block; width:1em; overflow:hidden; vertical-align:bottom; }
+  @keyframes dots { from { width:0; } to { width:1em; } }
+
+  /* full-screen recording */
+  .rec { flex:1; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:16px; }
+  .rec.me { background:var(--me); color:var(--me-ink); }
+  .rec.them { background:var(--them); color:var(--them-ink); }
+  .wave { display:flex; gap:5px; align-items:center; height:90px; }
+  .wave b { width:7px; border-radius:4px; background:currentColor; animation:wave 1s ease-in-out infinite; }
+  .wave b:nth-child(2n){animation-delay:.15s} .wave b:nth-child(3n){animation-delay:.3s} .wave b:nth-child(5n){animation-delay:.45s}
+  @keyframes wave { 0%,100% { height:12px; } 50% { height:80px; } }
+  .stop { width:76px; height:76px; border-radius:50%; border:3px solid currentColor; display:grid; place-items:center; font-size:24px; }
+  .big { font-size:24px; font-weight:700; }
+
+  .empty { flex:1; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; gap:12px; padding:0 18px; color:var(--mid); }
+  .empty b { color:var(--ink); font-size:19px; }
+  .pill { border:1.5px solid var(--ink); border-radius:22px; padding:8px 14px; font-weight:600; font-size:13px; color:var(--ink); background:#fff; }
+  .setup { width:100%; border:2px solid var(--ink); border-radius:16px; padding:12px; text-align:left; color:var(--ink); display:flex; flex-direction:column; gap:8px; }
+  .setup .ln { display:flex; justify-content:space-between; align-items:center; font-size:14px; }
+  .setup .ln span { color:var(--mid); font-size:12px; }
+  .ghost { align-self:flex-end; border:2px dashed var(--soft); border-radius:20px 20px 4px 20px; padding:10px 14px; color:var(--ink); font-weight:600; }
+  .ghost.l { align-self:flex-start; border-radius:20px 20px 20px 4px; }
+
+  .page { flex:1; padding:14px; display:flex; flex-direction:column; gap:12px; overflow:hidden; }
+  .chips { display:flex; flex-wrap:wrap; gap:6px; }
+  .chip { border:1px solid var(--soft); border-radius:18px; padding:6px 10px; font-size:13px; }
+  .chip.on { background:var(--ink); color:#fff; border-color:var(--ink); }
+  .h { font-weight:700; }
+
+  .notes { margin-top:10px; font-size:12.5px; color:#333; padding-left:16px; }
+  .notes li { margin-bottom:4px; }
+  .box { background:#fff; border:1px solid var(--soft); border-radius:12px; padding:14px 16px; margin-top:32px; max-width:980px; }
+  .box h3 { font-size:15px; margin-bottom:6px; }
+  .box li { margin:4px 0 4px 18px; }
+  table { border-collapse:collapse; margin-top:6px; font-size:13px; width:100%; }
+  td, th { border:1px solid var(--line); padding:6px 8px; text-align:left; vertical-align:top; }
+  @media (prefers-reduced-motion: reduce) { *, *::before { animation:none !important; } }
+</style>
+</head>
+<body>
+<h1>Wireframes v3 : step-by-step flow and animations</h1>
+<p class="lede">Direction A (messaging). You on the right in black, the vendor on the left in grey, context cards full width in a third style. Big bold = translation, small = original. Dictation only: no typing, no photo, no suggestions in V1. Scenario: Khao Soi stall, peanut allergy. The animations on this page actually play.</p>
+
+<h2>0. Home: 3 variants <span style="font-weight:400;color:var(--mid)">(language + My info reachable at the bottom)</span></h2>
+<div class="row">
+  <div class="col">
+    <div class="label">H1. Pills above the mics</div>
+    <div class="phone">
+      <div class="top"><div class="ico">☰</div><div></div><div class="ico">＋</div></div>
+      <div class="empty"><b>Say what's on your mind.</b>We'll turn it into clear Thai.<br>Add context: where you are, what you see.</div>
+      <div style="display:flex;gap:8px;justify-content:center;padding:0 12px"><div class="pill">🌐 English → ไทย</div><div class="pill">👤 My info</div></div>
+      <div class="bar"><div class="mic them off"><i>🎙</i>ไทย</div><div class="mic me"><i>🎙</i>Speak</div></div>
+    </div>
+    <ul class="notes"><li>The simplest option. The two pills sit under the thumb.</li><li>After the first message, the language moves up into the top bar and the pills disappear.</li></ul>
+  </div>
+
+  <div class="col">
+    <div class="label">H2. Setup card in the middle</div>
+    <div class="phone">
+      <div class="top"><div class="ico">☰</div><div></div><div class="ico">＋</div></div>
+      <div class="empty">
+        <b>Say what's on your mind.</b>
+        <div class="setup">
+          <div class="ln"><div>🌐 I speak <b>English ▾</b></div><span>→ Thai</span></div>
+          <div class="ln"><div>👤 Peanut allergy · Mild spice</div><span>Edit ›</span></div>
+        </div>
+        <div style="font-size:12px">Everything you say is translated with this in mind.</div>
+      </div>
+      <div class="bar"><div class="mic them off"><i>🎙</i>ไทย</div><div class="mic me"><i>🎙</i>Speak</div></div>
+    </div>
+    <ul class="notes"><li>The card shows <b>why</b> My info exists: the allergy shows up in every Thai message.</li><li>On the first tap on the mic, the card shrinks and slides up into the top bar (animation 1).</li></ul>
+  </div>
+
+  <div class="col">
+    <div class="label">H3. Ghost bubbles (Apple style)</div>
+    <div class="phone">
+      <div class="top"><div class="ico">☰</div><div></div><div class="ico">👤</div></div>
+      <div class="body">
+        <div class="empty" style="flex:0 0 auto;margin-bottom:auto;margin-top:40px"><b>Say what's on your mind.</b>We'll turn it into clear Thai.</div>
+        <div class="ghost l">ภาษาไทย</div>
+        <div class="ghost">English ▾</div>
+      </div>
+      <div class="bar"><div class="mic them off"><i>🎙</i>ไทย</div><div class="mic me"><i>🎙</i>Speak</div></div>
+    </div>
+    <ul class="notes"><li>Each side "owns" its language, right above its own mic.</li><li>My info moves to 👤 at the top right, the least visible spot.</li></ul>
+  </div>
+</div>
+
+<h2>1 → 6. One exchange, step by step</h2>
+<div class="row">
+  <div class="col">
+    <div class="label">1. You speak <span>full screen</span></div>
+    <div class="phone">
+      <div class="rec me">
+        <div style="opacity:.7">Listening</div>
+        <div class="wave"><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b></div>
+        <div class="big">0:09</div>
+        <div class="stop">■</div>
+        <div style="opacity:.7;font-size:12px">Tap to finish · stops by itself after a pause</div>
+      </div>
+    </div>
+    <ul class="notes"><li>The whole screen switches to your color: impossible to miss that it's recording.</li><li>The wave follows your voice volume.</li></ul>
+  </div>
+
+  <div class="col">
+    <div class="label">2. Working on it <span>raw transcript</span></div>
+    <div class="phone">
+      <div class="top"><div class="ico">☰</div><div class="pair">English → ไทย</div><div class="ico">＋</div></div>
+      <div class="body">
+        <div class="proc"><div>uh so this one, the yellow soup in the big bowl, what is it… is it like spicy? oh and I'm allergic to peanuts so…</div></div>
+        <div style="align-self:flex-end;font-size:12px;color:var(--mid)" class="dots">Cleaning up and translating</div>
+      </div>
+      <div class="bar"><div class="mic them off"><i>🎙</i>ไทย</div><div class="mic me off"><i>🎙</i>Speak</div></div>
+    </div>
+    <ul class="notes"><li>Your raw words show up first, so you know you were heard.</li><li>A light runs around the bubble while the model works (R3 latency: the wait is visible and alive).</li></ul>
+  </div>
+
+  <div class="col">
+    <div class="label">3. Ready + played aloud</div>
+    <div class="phone">
+      <div class="top"><div class="ico">☰</div><div class="pair">English → ไทย</div><div class="ico">＋</div></div>
+      <div class="body">
+        <div class="b me slide">
+          <div class="tr"><ul><li>จานนี้คืออะไรครับ</li><li>เผ็ดไหมครับ</li><li>ผมแพ้ถั่วลิสง มีถั่วลิสงไหมครับ</li></ul></div>
+          <div class="og"><ul><li>What is this dish?</li><li>Is it spicy?</li><li>I'm allergic to peanuts: is there any in it?</li></ul></div>
+          <div class="play"><span class="eq"><b></b><b></b><b></b></span> Playing in Thai</div>
+        </div>
+      </div>
+      <div class="bar"><div class="mic them pulse"><i>🎙</i>กดแล้วพูด</div><div class="mic me"><i>🎙</i>Speak</div></div>
+    </div>
+    <ul class="notes"><li>The bubble morphs from the raw transcript into the final version: Thai big, English small, split into bullets (one per question).</li><li>The Thai plays automatically. Then the vendor's mic starts pulsing: "tap here" (กดแล้วพูด = press and speak).</li></ul>
+  </div>
+
+  <div class="col">
+    <div class="label">4. The vendor speaks <span>full screen, in Thai</span></div>
+    <div class="phone">
+      <div class="rec them">
+        <div style="opacity:.7">กำลังฟัง</div>
+        <div class="wave"><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b></div>
+        <div class="big">0:04</div>
+        <div class="stop">■</div>
+        <div style="opacity:.7;font-size:12px">แตะเพื่อจบ</div>
+      </div>
+    </div>
+    <ul class="notes"><li>Same screen as step 1, in the vendor's color and entirely in Thai (กำลังฟัง = listening, แตะเพื่อจบ = tap to finish).</li></ul>
+  </div>
+
+  <div class="col">
+    <div class="label">5. Reply + context card</div>
+    <div class="phone">
+      <div class="top"><div class="ico">☰</div><div class="pair">English → ไทย</div><div class="ico">＋</div></div>
+      <div class="body">
+        <div class="b me" style="opacity:.45"><div class="tr" style="font-size:14px">จานนี้คืออะไรครับ…</div></div>
+        <div class="b them slide">
+          <div class="tr"><ul><li>Chicken khao soi</li><li>A little spicy</li><li>No peanuts</li></ul></div>
+          <div class="og">ข้าวซอยไก่ครับ เผ็ดนิดหน่อย ไม่มีถั่วลิสงครับ</div>
+          <div class="play">▶ Listen</div>
+        </div>
+        <div class="card slide" style="animation-delay:.4s">
+          <div class="k">Context · based on your info</div>
+          <div style="font-weight:700;font-size:15px">Khao Soi · ข้าวซอย</div>
+          <div>Curry noodle soup with coconut milk, a Chiang Mai signature. Crispy noodles on top.</div>
+          <div>Chicken · Spice ●●○○○</div>
+          <div class="warn">⚠ Vendor says no peanuts. Toppings vary between stalls: double-check the chili paste.</div>
+        </div>
+      </div>
+      <div class="bar"><div class="mic them"><i>🎙</i>กดแล้วพูด</div><div class="mic me pulse"><i>🎙</i>Speak</div></div>
+    </div>
+    <ul class="notes"><li>English big (translation), Thai small (original). ▶ on every message.</li><li>The card takes the full width and a third style: it belongs to neither side. It slides in just after the reply.</li><li>Now your mic pulses: it's your turn.</li></ul>
+  </div>
+
+  <div class="col">
+    <div class="label">6. The conversation goes on</div>
+    <div class="phone">
+      <div class="top"><div class="ico">☰</div><div class="pair">English → ไทย</div><div class="ico">＋</div></div>
+      <div class="body">
+        <div class="card" style="opacity:.5"><b>Khao Soi</b> · Chicken · ●●○○○</div>
+        <div class="b me"><div class="tr">ขายที่นี่มานานไหมครับ</div><div class="og">Have you had this stall for long?</div><div class="play">▶</div></div>
+        <div class="b them"><div class="tr">20 years. It was my mother's stall.</div><div class="og">20 ปีแล้วครับ เป็นร้านของแม่</div><div class="play">▶</div></div>
+      </div>
+      <div class="bar"><div class="mic them"><i>🎙</i>กดแล้วพูด</div><div class="mic me pulse"><i>🎙</i>Speak</div></div>
+    </div>
+    <ul class="notes"><li>You scroll like a normal chat. ＋ starts a new conversation, ☰ lists the old ones (out of the demo).</li></ul>
+  </div>
+
+  <div class="col">
+    <div class="label">7. My info <span>full page</span></div>
+    <div class="phone">
+      <div class="top"><div class="ico">‹</div><div class="h">My info</div><div class="ico" style="visibility:hidden"></div></div>
+      <div class="page">
+        <div class="h">I speak</div>
+        <div class="chips"><div class="chip on">English</div><div class="chip">Français</div><div class="chip">Deutsch</div><div class="chip">…</div></div>
+        <div class="h">Allergies</div>
+        <div class="chips"><div class="chip on">Peanuts</div><div class="chip">Shellfish</div><div class="chip">Gluten</div><div class="chip">+ Other</div></div>
+        <div class="h">Spice</div>
+        <div class="chips"><div class="chip">None</div><div class="chip on">Mild</div><div class="chip">Thai hot</div></div>
+        <div class="h">Diet</div>
+        <div class="chips"><div class="chip">No pork</div><div class="chip">Vegetarian</div><div class="chip">Halal</div></div>
+        <div style="font-size:12px;color:var(--mid);margin-top:auto">Also filled from what you say: "I'm allergic to peanuts" ticks Peanuts. Stored on this phone only.</div>
+      </div>
+    </div>
+    <ul class="notes"><li>A full page, as you asked. On home, only a one-line preview (H2).</li></ul>
+  </div>
+</div>
+
+<div class="box">
+  <h3>Animations</h3>
+  <table>
+    <tr><th>#</th><th>When</th><th>What</th><th>Why</th></tr>
+    <tr><td>1</td><td>First tap on the mic</td><td>The language / info setup slides up into the top bar</td><td>The setup has done its job, the screen belongs to the conversation</td></tr>
+    <tr><td>2</td><td>Recording (steps 1, 4)</td><td>Full screen in the speaker's color, a wave that follows the voice, a timer</td><td>"I'm listening", impossible to miss, even for the vendor</td></tr>
+    <tr><td>3</td><td>Processing (step 2)</td><td>A light runs around the raw-transcript bubble, with "…"</td><td>Makes the 2 to 5 s wait feel alive (R3)</td></tr>
+    <tr><td>4</td><td>Result (step 3)</td><td>The bubble morphs from raw to final: Thai big, English small, bullets</td><td>You see the rephrasing happen: that's the product's value</td></tr>
+    <tr><td>5</td><td>Audio playing</td><td>Small equalizer in the bubble</td><td>Tells both people the phone is speaking</td></tr>
+    <tr><td>6</td><td>Whose turn</td><td>The mic of whoever should speak next pulses</td><td>Solves "the vendor doesn't know where to tap" (R2)</td></tr>
+    <tr><td>7</td><td>Context card</td><td>Slides in 0.4 s after the reply</td><td>Reads as an extra, not part of what the vendor said</td></tr>
+  </table>
+</div>
+
+<div class="box">
+  <h3>For the tech check</h3>
+  <ul>
+    <li><b>Auto-play the Thai (step 3):</b> iOS blocks sound without a tap. The mic tap can unlock audio for the session. To test on an iPhone. Without it, step 3 needs a ▶ tap.</li>
+    <li><b>Morph raw → final (animation 4):</b> needs the raw transcript first, then the model output. Two steps on the server, not one call.</li>
+    <li><b>Bullets:</b> the model returns structured output (a list of items per language), not free text.</li>
+    <li><b>Context card:</b> in the same model response (a field "card" that is empty when no dish or ingredient is named), so no extra wait.</li>
+  </ul>
+</div>
+</body>
+</html>

@@ -28,6 +28,15 @@ describe("moves data", () => {
     expect(MOVES.find((m) => m.id === "ask-farang-spicy")?.tone).toBe("playful");
   });
 
+  it("fills only dish or produce Slots, and every Echo says its word and reply as data", () => {
+    for (const m of MOVES) expect(["none", "dish", "produce"]).toContain(m.slot);
+    for (const m of MOVES.filter((x) => x.type === "echo")) {
+      expect(m.echo?.word).toBeTruthy();
+      expect(m.echo?.reply).toBeTruthy();
+    }
+    expect(MOVES.find((m) => m.id === "echo-sao")?.echo).toEqual({ word: "ซาว", meaning: "20", reply: "Twenty baht!" });
+  });
+
   it("nothing is reviewed yet", () => {
     expect(MOVES.every((m) => !m.reviewed)).toBe(true);
   });
@@ -161,7 +170,7 @@ describe("pickMove, Echo hears whole words only", () => {
   });
 
   it("shows the trigger that matched, not the surrounding word", () => {
-    expect(echo("ซาวบาท")).toMatchObject({ heard: "ซาว", heardMeaning: "20" });
+    expect(echo("ซาวบาท")).toMatchObject({ heard: "ซาว", heardMeaning: "20", english: "Twenty baht!" });
   });
 });
 
@@ -186,6 +195,24 @@ describe("pickMove, Slot", () => {
       romanised: { central: "khao soi kin yang-ngai khrap", khamMueang: null },
       english: "How do you eat khao soi?",
     });
+  });
+
+  it("names the dish the Northern way on the Kham Mueang line, the Central way on the Central line", () => {
+    const move: Move = {
+      id: "t",
+      type: "ask",
+      stage: "explore",
+      slot: "dish",
+      english: "Is {dish} spicy?",
+      centralThai: { m: "{dish} เผ็ดไหมครับ", f: "{dish} เผ็ดไหมคะ" },
+      khamMueang: { m: "{dish} เผ็ดก่อคับ", f: "{dish} เผ็ดก่อเจ้า" },
+      romanised: { central: { m: "{dish} phet mai", f: "{dish} phet mai" }, khamMueang: { m: "{dish} phet ko", f: "{dish} phet ko" } },
+      confidence: "high",
+      reviewed: true,
+    };
+    const card = pickMove("explore", { kind: "dish", id: "kaeng-hang-le" }, oneTurn, { moves: [move] });
+    expect(card?.centralThai).toBe("แกงฮังเล เผ็ดไหมครับ");
+    expect(card?.khamMueang).toBe("แก๋งฮังเล เผ็ดก่อคับ");
   });
 
   it("fills {produce} from a produce Mention", () => {

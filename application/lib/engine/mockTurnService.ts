@@ -118,7 +118,7 @@ export const KHAO_SOI_SCRIPT: ScriptTurn[] = [
         id: "echo-sao",
         type: "echo",
         stage: "vendor-used-northern-word",
-        english: "Vendor says a price with 'ซาว' (= 20) -> repeat it: 'Twenty baht!'",
+        english: "Twenty baht!",
         centralThai: "ยี่สิบบาทครับ",
         khamMueang: "ซาวบาทคับ",
         romanised: { central: "yee-sip baat khrap", khamMueang: "sao baat khap" },

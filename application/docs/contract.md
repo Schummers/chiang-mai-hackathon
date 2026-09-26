@@ -33,7 +33,7 @@ Picked once by `NEXT_PUBLIC_TURN_SERVICE` in [`turnService.ts`](../lib/engine/tu
 - `card` is only sent when it carries an allergy or diet warning (the Allergy Flag); informative cards are retired.
 - `move?: MoveCard | null`: at most one Move, picked by `pickMove` in [`lib/context/moves.ts`](../lib/context/moves.ts) and filled from the Context Pack, never written by the model. Null when the card carries an allergy or diet flag. The engine keeps it on the `Message`, so a Move is never offered twice in a conversation.
 
-`MoveCard`: `id`, `type` (`say` | `ask` | `echo`), `stage`, `english`, `centralThai`, `khamMueang` (null when the Move has none), `romanised: { central, khamMueang }`, `tone?: "playful"`, `heard?` (Echo: the Northern word the Vendor said), `heardMeaning?` (Echo: what it means, e.g. "20"). The particle variant is already picked.
+`MoveCard`: `id`, `type` (`say` | `ask` | `echo`), `stage`, `english` (Echo: only the reply), `centralThai`, `khamMueang` (null when the Move has none), `romanised: { central, khamMueang }`, `tone?: "playful"`, `heard?` (Echo: the Northern word the Vendor said), `heardMeaning?` (Echo: what it means, e.g. "20"). The particle variant is already picked.
 
 `ContextCard`: `kind` (`dish` | `word` | `moment`, missing = dish), `offGuide`, `name`, `nameThai`, `description`, `meat`, `spice` (0 to 3), `localDetail`, `warning`. A warning is a risk to check, never a guarantee.
 

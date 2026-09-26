@@ -12,12 +12,14 @@ export type Move = {
   id: string;
   type: MoveType;
   stage: Stage;
-  slot: "none" | "dish" | "produce" | "word";
+  slot: "none" | "dish" | "produce";
   english: string;
   centralThai: Variant;
   khamMueang: Variant | null;
   romanised: { central: Variant; khamMueang: Variant | null };
   trigger?: string[];
+  /** Echo only: the word the card explains (ซาว), what it means (20; else the pack glossary), the reply in English. */
+  echo?: { word: string; meaning?: string; reply: string };
   tone?: string;
   confidence: "high" | "medium" | "low";
   reviewed: boolean;
@@ -39,16 +41,22 @@ export function stageFor(modelStage: string | undefined, history: Message[]): St
   return (STAGES as readonly string[]).includes(modelStage ?? "") ? (modelStage as Stage) : "explore";
 }
 
-type SlotValue = { thai: string; roman: string };
+/** Central and Northern Thai names of the pack entry, each falling back on the other, and its romanised name. */
+type SlotValue = { central: string; northern: string; roman: string };
+type FilledSlot = "dish" | "produce";
 
-function slotValue(slot: Move["slot"], mention: Mention, pack: Pack): SlotValue | null {
+/** A Move that needs a pack entry to fill `{dish}` or `{produce}`. */
+const hasSlot = (m: Move): m is Move & { slot: FilledSlot } => m.slot === "dish" || m.slot === "produce";
+
+function slotValue(slot: FilledSlot, mention: Mention, pack: Pack): SlotValue | null {
   if (!mention.id || mention.kind !== slot) return null;
   const entry = slot === "dish" ? pack.dishes.find((d) => d.id === mention.id) : pack.produce.find((p) => p.id === mention.id);
-  const thai = entry?.thai ?? entry?.thaiNorthern;
-  return entry && thai ? { thai, roman: entry.name } : null;
+  const central = entry?.thai ?? entry?.thaiNorthern;
+  const northern = entry?.thaiNorthern ?? entry?.thai;
+  return entry && central && northern ? { central, northern, roman: entry.name } : null;
 }
 
-const fill = (text: string, slot: Move["slot"], value: SlotValue | null, key: "thai" | "roman") =>
+const fill = (text: string, slot: Move["slot"], value: SlotValue | null, key: keyof SlotValue) =>
   value ? text.replaceAll(`{${slot}}`, value[key]) : text;
 
 /**
@@ -108,29 +116,25 @@ export function hearsWord(raw: string, trigger: string, triggers: string[] = [tr
   return false;
 }
 
-/** The word the Move's note is about: 'ซาว' in "Vendor says a price with 'ซาว' (= 20)". */
-const quotedWord = (move: Move) => move.english.match(/'([^']+)'/)?.[1].replace(/\?$/, "");
-
 /**
- * The longest trigger heard as a whole word. Shown as the trigger itself, and as the Move's quoted word when the
- * trigger only adds to it (ซาวบาท -> ซาว, so the card reads "ซาว = 20").
+ * The longest trigger heard as a whole word. Shown as the trigger itself, and as the Echo's word when the trigger only
+ * adds to it (ซาวบาท -> ซาว, so the card reads "ซาว = 20").
  */
 function heardTrigger(move: Move, raw: string, pack: Pack): string | null {
   const triggers = move.trigger ?? [];
   const hit = triggers.filter((t) => hearsWord(raw, t, triggers, pack)).sort((a, b) => b.length - a.length)[0];
   if (!hit) return null;
-  const quoted = quotedWord(move);
-  return quoted && hit !== quoted && hit.startsWith(quoted) ? quoted : hit;
+  const word = move.echo?.word;
+  return word && hit !== word && hit.startsWith(word) ? word : hit;
 }
 
 /**
- * What the heard word means. The Move's own note ("... 'ซาว' (= 20) -> ...") when the Vendor said at least the quoted word,
- * then the pack's glossary (ลำ alone is "delicious", not the note's "is it good?" written for ลำก่อ).
+ * What the heard word means. The Echo's own `meaning` when the Vendor said at least its word,
+ * then the pack's glossary (ลำ alone is "delicious", not the "is it good?" written for ลำก่อ).
  */
 function meaningOf(move: Move, heard: string, pack: Pack): string | undefined {
-  const quoted = quotedWord(move);
-  const note = move.english.match(/\(([^)]+)\)/)?.[1].replace(/^=\s*/, "").trim();
-  if (note && quoted && heard.includes(quoted)) return note;
+  const echo = move.echo;
+  if (echo?.meaning && heard.includes(echo.word)) return echo.meaning;
   const word = pack.words.find((w) => w.thai === heard);
   if (word) return word.english;
   return pack.falseFriends.find((f) => heard.startsWith(f.thai.split(" ")[0]))?.meaningHere;
@@ -144,9 +148,11 @@ function toCard(move: Move, particle: Particle, value: SlotValue | null, heard?:
     id: move.id,
     type: move.type,
     stage: move.stage,
-    english: fill(move.english, move.slot, value, "roman"),
-    centralThai: fill(move.centralThai[particle], move.slot, value, "thai"),
-    khamMueang: km && fill(km, move.slot, value, "thai"),
+    // An Echo's English is only the reply ("Twenty baht!"): the card's heard line says what the Vendor meant.
+    english: move.echo?.reply ?? fill(move.english, move.slot, value, "roman"),
+    centralThai: fill(move.centralThai[particle], move.slot, value, "central"),
+    // The Kham Mueang line names the dish the Northern way when the pack has it (แก๋งฮังเล, not แกงฮังเล).
+    khamMueang: km && fill(km, move.slot, value, "northern"),
     romanised: {
       central: fill(move.romanised.central[particle], move.slot, value, "roman"),
       khamMueang: kmRoman && fill(kmRoman, move.slot, value, "roman"),
@@ -189,9 +195,9 @@ export function pickMove(stage: Stage, mention: Mention, history: Message[], opt
   const askFirst = stage !== "start" && stage !== "leave";
   const candidates = onStage
     .filter((m) => m.stage === stage && m.type !== "echo")
-    .map((m) => ({ m, value: m.slot === "dish" || m.slot === "produce" ? slotValue(m.slot, mention, pack) : null }))
+    .map((m) => ({ m, value: hasSlot(m) ? slotValue(m.slot, mention, pack) : null }))
     // A Move with a Slot is skipped when the Mention has no matching pack entry.
-    .filter(({ m, value }) => !(m.slot === "dish" || m.slot === "produce") || value)
+    .filter(({ m, value }) => !hasSlot(m) || value)
     .map((x, i) => ({ ...x, rank: (askFirst && x.m.type === "ask" ? 0 : 2) + (x.value ? 0 : 1) + i / 1000 }))
     .sort((a, b) => a.rank - b.rank);
   const best = candidates[0];

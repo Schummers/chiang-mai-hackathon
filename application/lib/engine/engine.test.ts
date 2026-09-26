@@ -403,6 +403,12 @@ describe("mock turn service (Khao Soi scenario)", () => {
     }
   });
 
+  it("never offers the same Move twice in the mock script", () => {
+    const ids = KHAO_SOI_SCRIPT.map((t) => t.result.move?.id).filter(Boolean);
+    expect(ids.length).toBeGreaterThan(1);
+    expect(new Set(ids).size).toBe(ids.length);
+  });
+
   it("replays the scenario from the start after a new conversation", async () => {
     const engine = new ConversationEngine({ service: createMockTurnService({ transcribeMs: 0, translateMs: 0 }) });
     engine.micTap("you");

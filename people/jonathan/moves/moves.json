@@ -1278,7 +1278,12 @@
     "trigger": [
       "ลำก่อ",
       "ลำ"
-    ]
+    ],
+    "echo": {
+      "word": "ลำก่อ",
+      "meaning": "is it good?",
+      "reply": "Very delicious!"
+    }
   },
   {
     "id": "echo-sao",
@@ -1325,7 +1330,12 @@
     "trigger": [
       "ซาว",
       "ซาวบาท"
-    ]
+    ],
+    "echo": {
+      "word": "ซาว",
+      "meaning": "20",
+      "reply": "Twenty baht!"
+    }
   },
   {
     "id": "echo-yindee",
@@ -1368,7 +1378,11 @@
       "ยินดี",
       "ยินดีเจ้า",
       "ยินดีจ๊าดนัก"
-    ]
+    ],
+    "echo": {
+      "word": "ยินดีเจ้า",
+      "reply": "Thank you!"
+    }
   },
   {
     "id": "echo-kin-khao",
@@ -1408,7 +1422,12 @@
     "trigger": [
       "กิ๋นข้าวแล้วกา",
       "กิ๋นข้าวแล้วกา๋"
-    ]
+    ],
+    "echo": {
+      "word": "กิ๋นข้าวแล้วกา",
+      "meaning": "have you eaten?",
+      "reply": "Yes, I have"
+    }
   },
   {
     "id": "echo-sabai-di-bo",
@@ -1448,7 +1467,12 @@
     "trigger": [
       "สบายดีบ๋อ",
       "สบายดีก่อ"
-    ]
+    ],
+    "echo": {
+      "word": "สบายดีบ๋อ",
+      "meaning": "how are you?",
+      "reply": "I'm fine"
+    }
   },
   {
     "id": "echo-khao-nueng",
@@ -1488,7 +1512,12 @@
     "reviewerNote": "A one-word echo is enough to make the point.",
     "trigger": [
       "ข้าวนึ่ง"
-    ]
+    ],
+    "echo": {
+      "word": "ข้าวนึ่ง",
+      "meaning": "sticky rice",
+      "reply": "Sticky rice"
+    }
   },
   {
     "id": "echo-ma-aeo",
@@ -1530,7 +1559,12 @@
     "trigger": [
       "แอ่ว",
       "มาแอ่ว"
-    ]
+    ],
+    "echo": {
+      "word": "แอ่ว",
+      "meaning": "to visit / travel",
+      "reply": "Yes, visiting"
+    }
   },
   {
     "id": "echo-muan",
@@ -1572,7 +1606,12 @@
     "trigger": [
       "ม่วน",
       "ม่วนก่อ"
-    ]
+    ],
+    "echo": {
+      "word": "ม่วนก่อ",
+      "meaning": "having fun?",
+      "reply": "Yes, fun!"
+    }
   },
   {
     "id": "echo-bo-phet",
@@ -1613,7 +1652,11 @@
     "trigger": [
       "เผ็ดก่อ",
       "บ่เผ็ด"
-    ]
+    ],
+    "echo": {
+      "word": "เผ็ดก่อ",
+      "reply": "Not spicy, please"
+    }
   },
   {
     "id": "echo-jao-yes",
@@ -1650,7 +1693,12 @@
     "trigger": [
       "เจ้า",
       "จ้าว"
-    ]
+    ],
+    "echo": {
+      "word": "เจ้า",
+      "meaning": "yes, politely",
+      "reply": "Yes"
+    }
   },
   {
     "id": "echo-kad-luang",
@@ -1691,6 +1739,11 @@
     "trigger": [
       "กาด",
       "กาดหลวง"
-    ]
+    ],
+    "echo": {
+      "word": "กาดหลวง",
+      "meaning": "Warorot market",
+      "reply": "Warorot market"
+    }
   }
 ]

@@ -17,14 +17,6 @@ export type MoveLines = {
   speak: string;
 };
 
-/** Echo English reads "Vendor says ... -> repeat it: 'Twenty baht!'": the Visitor only needs the reply. */
-function echoReply(english: string): string {
-  const after = english.split("->")[1]?.trim();
-  if (!after) return english;
-  const reply = after.match(/'(.*)'/)?.[1] ?? after;
-  return reply.charAt(0).toUpperCase() + reply.slice(1);
-}
-
 /** What a Move card shows, line by line. The component only lays these out. */
 export function moveLines(card: MoveCard): MoveLines {
   const km = card.khamMueang;
@@ -35,7 +27,7 @@ export function moveLines(card: MoveCard): MoveLines {
     big: km ?? card.centralThai,
     small: km ? card.centralThai : null,
     roman: (km && card.romanised.khamMueang) || card.romanised.central,
-    english: echo ? echoReply(card.english) : card.english,
+    english: card.english,
     speak: km ?? card.centralThai,
   };
 }

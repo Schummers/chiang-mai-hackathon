@@ -39,7 +39,7 @@ describe("moveLines", () => {
       ...base,
       id: "echo-sao",
       type: "echo",
-      english: "Vendor says a price with 'ซาว' (= 20) -> repeat it: 'Twenty baht!'",
+      english: "Twenty baht!",
       centralThai: "ยี่สิบบาทครับ",
       khamMueang: "ซาวบาทคับ",
       heard: "ซาว",
@@ -48,13 +48,9 @@ describe("moveLines", () => {
     expect(moveLines(echo)).toMatchObject({ heard: "ซาว = 20", english: "Twenty baht!", big: "ซาวบาทคับ" });
   });
 
-  it("Echo: keeps apostrophes inside the quoted reply, and plain replies as they are", () => {
-    const e = { ...base, type: "echo" as const, heard: "สบายดีบ๋อ" };
-    expect(moveLines({ ...e, english: "Vendor asks 'สบายดีบ๋อ' (how are you?) -> 'I'm fine'" }).english).toBe("I'm fine");
-    expect(moveLines({ ...e, english: "Vendor thanks you with 'ยินดีเจ้า' -> thank them back the Northern way" }).english).toBe(
-      "Thank them back the Northern way",
-    );
-    // No meaning known: the heard word alone.
+  it("Echo: shows the heard word alone when no meaning is known", () => {
+    const e = { ...base, type: "echo" as const, heard: "สบายดีบ๋อ", english: "I'm fine" };
+    expect(moveLines(e).english).toBe("I'm fine");
     expect(moveLines(e).heard).toBe("สบายดีบ๋อ");
   });
 

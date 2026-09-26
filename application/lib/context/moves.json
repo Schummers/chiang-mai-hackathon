@@ -806,7 +806,7 @@
   "id": "echo-lam",
   "type": "echo",
   "stage": "vendor-used-northern-word",
-  "slot": "word",
+  "slot": "none",
   "english": "Vendor asks 'ลำก่อ?' (is it good?) -> say: 'Very delicious!'",
   "centralThai": {
    "m": "อร่อยมากครับ",
@@ -830,6 +830,11 @@
    "ลำก่อ",
    "ลำ"
   ],
+  "echo": {
+   "word": "ลำก่อ",
+   "meaning": "is it good?",
+   "reply": "Very delicious!"
+  },
   "confidence": "high",
   "reviewed": false
  },
@@ -837,7 +842,7 @@
   "id": "echo-sao",
   "type": "echo",
   "stage": "vendor-used-northern-word",
-  "slot": "word",
+  "slot": "none",
   "english": "Vendor says a price with 'ซาว' (= 20) -> repeat it: 'Twenty baht!'",
   "centralThai": {
    "m": "ยี่สิบบาทครับ",
@@ -861,6 +866,11 @@
    "ซาว",
    "ซาวบาท"
   ],
+  "echo": {
+   "word": "ซาว",
+   "meaning": "20",
+   "reply": "Twenty baht!"
+  },
   "confidence": "high",
   "reviewed": false
  },
@@ -868,7 +878,7 @@
   "id": "echo-yindee",
   "type": "echo",
   "stage": "vendor-used-northern-word",
-  "slot": "word",
+  "slot": "none",
   "english": "Vendor thanks you with 'ยินดีเจ้า' -> thank them back the Northern way",
   "centralThai": {
    "m": "ขอบคุณครับ",
@@ -893,6 +903,10 @@
    "ยินดีเจ้า",
    "ยินดีจ๊าดนัก"
   ],
+  "echo": {
+   "word": "ยินดีเจ้า",
+   "reply": "Thank you!"
+  },
   "confidence": "high",
   "reviewed": false
  },
@@ -900,7 +914,7 @@
   "id": "echo-kin-khao",
   "type": "echo",
   "stage": "vendor-used-northern-word",
-  "slot": "word",
+  "slot": "none",
   "english": "Vendor asks 'กิ๋นข้าวแล้วกา' (have you eaten?) -> 'Yes, I have'",
   "centralThai": {
    "m": "กินแล้วครับ",
@@ -924,6 +938,11 @@
    "กิ๋นข้าวแล้วกา",
    "กิ๋นข้าวแล้วกา๋"
   ],
+  "echo": {
+   "word": "กิ๋นข้าวแล้วกา",
+   "meaning": "have you eaten?",
+   "reply": "Yes, I have"
+  },
   "confidence": "high",
   "reviewed": false
  },
@@ -931,7 +950,7 @@
   "id": "echo-sabai-di-bo",
   "type": "echo",
   "stage": "vendor-used-northern-word",
-  "slot": "word",
+  "slot": "none",
   "english": "Vendor asks 'สบายดีบ๋อ' (how are you?) -> 'I'm fine'",
   "centralThai": {
    "m": "สบายดีครับ",
@@ -955,6 +974,11 @@
    "สบายดีบ๋อ",
    "สบายดีก่อ"
   ],
+  "echo": {
+   "word": "สบายดีบ๋อ",
+   "meaning": "how are you?",
+   "reply": "I'm fine"
+  },
   "confidence": "high",
   "reviewed": false
  },
@@ -962,7 +986,7 @@
   "id": "echo-khao-nueng",
   "type": "echo",
   "stage": "vendor-used-northern-word",
-  "slot": "word",
+  "slot": "none",
   "english": "Vendor says 'ข้าวนึ่ง' (sticky rice) -> use the Northern word back",
   "centralThai": {
    "m": "ข้าวเหนียวครับ",
@@ -985,6 +1009,11 @@
   "trigger": [
    "ข้าวนึ่ง"
   ],
+  "echo": {
+   "word": "ข้าวนึ่ง",
+   "meaning": "sticky rice",
+   "reply": "Sticky rice"
+  },
   "confidence": "high",
   "reviewed": false
  },
@@ -992,7 +1021,7 @@
   "id": "echo-ma-aeo",
   "type": "echo",
   "stage": "vendor-used-northern-word",
-  "slot": "word",
+  "slot": "none",
   "english": "Vendor asks if you came 'แอ่ว' (to visit / travel) -> 'Yes, visiting'",
   "centralThai": {
    "m": "มาเที่ยวครับ",
@@ -1016,6 +1045,11 @@
    "แอ่ว",
    "มาแอ่ว"
   ],
+  "echo": {
+   "word": "แอ่ว",
+   "meaning": "to visit / travel",
+   "reply": "Yes, visiting"
+  },
   "confidence": "medium",
   "reviewed": false
  },
@@ -1023,7 +1057,7 @@
   "id": "echo-muan",
   "type": "echo",
   "stage": "vendor-used-northern-word",
-  "slot": "word",
+  "slot": "none",
   "english": "Vendor asks 'ม่วนก่อ?' (having fun?) -> 'Yes, fun!'",
   "centralThai": {
    "m": "สนุกครับ",
@@ -1047,6 +1081,11 @@
    "ม่วน",
    "ม่วนก่อ"
   ],
+  "echo": {
+   "word": "ม่วนก่อ",
+   "meaning": "having fun?",
+   "reply": "Yes, fun!"
+  },
   "confidence": "medium",
   "reviewed": false
  },
@@ -1054,7 +1093,7 @@
   "id": "echo-bo-phet",
   "type": "echo",
   "stage": "vendor-used-northern-word",
-  "slot": "word",
+  "slot": "none",
   "english": "Vendor asks 'เผ็ดก่อ?' / offers chilli -> 'Not spicy, please'",
   "centralThai": {
    "m": "ไม่เผ็ดครับ",
@@ -1078,6 +1117,10 @@
    "เผ็ดก่อ",
    "บ่เผ็ด"
   ],
+  "echo": {
+   "word": "เผ็ดก่อ",
+   "reply": "Not spicy, please"
+  },
   "confidence": "medium",
   "reviewed": false
  },
@@ -1085,7 +1128,7 @@
   "id": "echo-jao-yes",
   "type": "echo",
   "stage": "vendor-used-northern-word",
-  "slot": "word",
+  "slot": "none",
   "english": "Vendor answers just 'เจ้า' (= yes, politely) -> answer 'yes' the same way",
   "centralThai": {
    "m": "ครับ",
@@ -1109,6 +1152,11 @@
    "เจ้า",
    "จ้าว"
   ],
+  "echo": {
+   "word": "เจ้า",
+   "meaning": "yes, politely",
+   "reply": "Yes"
+  },
   "confidence": "medium",
   "reviewed": false
  },
@@ -1116,7 +1164,7 @@
   "id": "echo-kad-luang",
   "type": "echo",
   "stage": "vendor-used-northern-word",
-  "slot": "word",
+  "slot": "none",
   "english": "Vendor says 'กาดหลวง' (Warorot market) -> use the local name back",
   "centralThai": {
    "m": "ตลาดวโรรสครับ",
@@ -1140,6 +1188,11 @@
    "กาด",
    "กาดหลวง"
   ],
+  "echo": {
+   "word": "กาดหลวง",
+   "meaning": "Warorot market",
+   "reply": "Warorot market"
+  },
   "confidence": "high",
   "reviewed": false
  }

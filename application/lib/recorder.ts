@@ -26,9 +26,13 @@ export class Recorder {
   private recorder?: MediaRecorder;
   private chunks: Blob[] = [];
   private ctx?: AudioContext;
+  private source?: MediaStreamAudioSourceNode;
+  private analyser?: AnalyserNode;
   private timer?: ReturnType<typeof setInterval>;
   private starting?: Promise<void>;
   private stopping?: Promise<Blob>;
+  /** Bumped by start, stop and cancel: a start still waiting on the permission prompt then knows it was dropped. */
+  private session = 0;
 
   /** Call synchronously inside the tap handler: iOS only allows audio from a user gesture. */
   unlockAudio() {
@@ -40,20 +44,28 @@ export class Recorder {
   }
 
   start(opts: StartOptions): Promise<void> {
+    this.release();
     this.stopping = undefined;
-    this.starting = this.doStart(opts);
+    this.starting = this.doStart(opts, ++this.session);
     return this.starting;
   }
 
-  private async doStart({ onAutoStop }: StartOptions) {
+  private async doStart({ onAutoStop }: StartOptions, session: number) {
     if (!navigator.mediaDevices?.getUserMedia) throw new MicDeniedError("no mediaDevices (needs HTTPS)");
+    let stream: MediaStream;
     try {
-      this.stream = await navigator.mediaDevices.getUserMedia({
+      stream = await navigator.mediaDevices.getUserMedia({
         audio: { echoCancellation: true, noiseSuppression: true, autoGainControl: true },
       });
     } catch (e) {
       throw new MicDeniedError(String(e));
     }
+    // Stopped or cancelled while the permission prompt was open: close the mic we just got, keep nothing.
+    if (session !== this.session) {
+      stream.getTracks().forEach((t) => t.stop());
+      return;
+    }
+    this.stream = stream;
 
     const mimeType = pickMimeType();
     this.chunks = [];
@@ -65,11 +77,18 @@ export class Recorder {
   }
 
   private watchLevel(onAutoStop: () => void) {
-    if (!this.ctx || !this.stream) return;
-    const analyser = this.ctx.createAnalyser();
-    analyser.fftSize = 1024;
-    this.ctx.createMediaStreamSource(this.stream).connect(analyser);
-    const buf = new Float32Array(analyser.fftSize);
+    const ctx = this.ctx;
+    const stream = this.stream;
+    if (!stream) return;
+    // No Web Audio at all: no level, no silence detection, only the hard cap.
+    const analyser = ctx?.createAnalyser();
+    if (ctx && analyser) {
+      analyser.fftSize = 1024;
+      this.source = ctx.createMediaStreamSource(stream);
+      this.source.connect(analyser);
+      this.analyser = analyser;
+    }
+    const buf = new Float32Array(analyser?.fftSize ?? 0);
 
     const startedAt = performance.now();
     let heardVoice = false;
@@ -77,15 +96,20 @@ export class Recorder {
     let stopped = false;
 
     const tick = () => {
-      analyser.getFloatTimeDomainData(buf);
-      let sum = 0;
-      for (const v of buf) sum += v * v;
-      const rms = Math.sqrt(sum / buf.length);
-      this.level = Math.min(1, rms * 6);
-
       const now = performance.now();
-      if (this.level > VOICE_LEVEL) {
-        heardVoice = true;
+      // A suspended context (iOS before the unlock lands) reads 0: don't mistake that for silence.
+      const listening = ctx?.state === "running" && analyser;
+      if (listening) {
+        analyser.getFloatTimeDomainData(buf);
+        let sum = 0;
+        for (const v of buf) sum += v * v;
+        const rms = Math.sqrt(sum / buf.length);
+        this.level = Math.min(1, rms * 6);
+        if (this.level > VOICE_LEVEL) {
+          heardVoice = true;
+          lastVoiceAt = now;
+        }
+      } else {
         lastVoiceAt = now;
       }
       const quiet = now - lastVoiceAt;
@@ -108,6 +132,8 @@ export class Recorder {
   }
 
   private async doStop(): Promise<Blob> {
+    // A start still waiting on the permission prompt is dropped: the answer comes back as an empty blob.
+    if (!this.recorder) this.session++;
     await this.starting?.catch(() => {});
     const recorder = this.recorder;
     if (!recorder || recorder.state === "inactive") {
@@ -124,12 +150,17 @@ export class Recorder {
 
   /** Drops the recording (new conversation mid-recording). */
   cancel() {
+    this.session++;
     if (this.recorder && this.recorder.state !== "inactive") this.recorder.stop();
     this.release();
   }
 
   private release() {
     clearInterval(this.timer);
+    this.source?.disconnect();
+    this.analyser?.disconnect();
+    this.source = undefined;
+    this.analyser = undefined;
     this.stream?.getTracks().forEach((t) => t.stop());
     this.stream = undefined;
     this.recorder = undefined;

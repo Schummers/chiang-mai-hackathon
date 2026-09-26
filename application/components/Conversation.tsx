@@ -71,6 +71,8 @@ export function Conversation() {
     const { phase } = engine.getState();
     if (phase.kind !== "listening" || phase.speaker !== speaker) return;
     const audio = await recorder.stop();
+    // Stopped before the mic was even granted: nothing to send, give the turn back quietly.
+    if (audio.size === 0) return engine.cancel();
     // A tap-tap by mistake: drop it with a hint instead of sending noise.
     if (Date.now() - phase.startedAt < MIN_RECORDING_MS) return engine.fail(speaker, "empty");
     await engine.stop(speaker, audio);

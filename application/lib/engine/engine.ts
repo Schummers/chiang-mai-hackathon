@@ -130,6 +130,7 @@ export class ConversationEngine {
   }
 
   fail(speaker: Speaker, reason: ErrorReason) {
+    this.turn++;
     this.dispatch({ type: "FAILED", speaker, reason });
   }
 
@@ -138,6 +139,7 @@ export class ConversationEngine {
   }
 
   newConversation() {
+    this.turn++;
     this.opts.service.reset?.();
     this.dispatch({ type: "NEW_CONVERSATION" });
   }
@@ -148,7 +150,7 @@ export class ConversationEngine {
     if (phase.kind !== "listening" || phase.speaker !== speaker) return;
     this.dispatch({ type: "STOP", speaker });
     this.lastAudio = audio;
-    await this.runTurn(speaker, audio);
+    await this.runTurn(++this.turn, speaker, audio);
   }
 
   /** After a network error: same turn again, from the raw text if transcription had worked. */
@@ -156,10 +158,12 @@ export class ConversationEngine {
     const { phase } = this.state;
     if (phase.kind !== "error" || phase.reason !== "network" || !this.lastAudio) return;
     this.dispatch({ type: "RETRY" });
-    await this.runTurn(phase.speaker, this.lastAudio, phase.raw);
+    await this.runTurn(++this.turn, phase.speaker, this.lastAudio, phase.raw);
   }
 
   private lastAudio?: Blob;
+  /** Bumped whenever a turn starts, fails or the conversation restarts: an answer for an older turn is dropped. */
+  private turn = 0;
 
   private withTimeout<T>(promise: Promise<T>): Promise<T> {
     const ms = this.opts.timeoutMs ?? 15000;
@@ -172,9 +176,9 @@ export class ConversationEngine {
     });
   }
 
-  private async runTurn(speaker: Speaker, audio: Blob, knownRaw?: string) {
+  private async runTurn(turn: number, speaker: Speaker, audio: Blob, knownRaw?: string) {
     const conversation = this.state.conversationId;
-    const stale = () => this.state.conversationId !== conversation;
+    const stale = () => this.state.conversationId !== conversation || this.turn !== turn;
     const userLanguage = this.opts.getUserLanguage?.() ?? "en";
     let raw = knownRaw;
 

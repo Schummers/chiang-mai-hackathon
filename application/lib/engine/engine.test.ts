@@ -275,6 +275,33 @@ describe("conversation engine", () => {
     expect(engine.getState().messages).toEqual([]);
   });
 
+  it("ignores a late answer from a turn that failed meanwhile, even in the same conversation", async () => {
+    const fake = controllableService();
+    const engine = new ConversationEngine({ service: fake.service });
+    engine.micTap("you");
+    const first = engine.stop("you", audio);
+    await flush();
+
+    // The mic prompt was refused after the stop: the UI reports it while the first turn is still in flight.
+    engine.fail("you", "mic-denied");
+    engine.dismissError();
+    engine.micTap("you");
+    const second = engine.stop("you", audio);
+    await flush();
+
+    fake.transcribes[0].resolve("old words");
+    await first;
+    expect(engine.getState().phase).toEqual({ kind: "processing", speaker: "you" });
+    expect(fake.translates).toHaveLength(0);
+
+    fake.transcribes[1].resolve("new words");
+    await flush();
+    fake.translates[0].resolve(reply());
+    await second;
+    expect(engine.getState().messages).toHaveLength(1);
+    expect(fake.translates[0].input.raw).toBe("new words");
+  });
+
   it("notifies subscribers on every change", () => {
     const engine = new ConversationEngine({ service: controllableService().service });
     const listener = vi.fn();

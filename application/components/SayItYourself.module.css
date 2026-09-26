@@ -137,6 +137,15 @@
   cursor: pointer;
 }
 
+/* A mic is listening: the voice would be recorded as the Turn. Same flat muted look as a disabled mic, no opacity. */
+.listen:disabled,
+.ghost:disabled {
+  background: var(--paper);
+  color: var(--line-2);
+  box-shadow: inset 0 0 0 1.5px var(--line);
+  cursor: default;
+}
+
 .ghost {
   background: var(--white);
   color: var(--you);

@@ -49,7 +49,7 @@ export function ChatThread({ state, intro, live, playingId, onSpeak, onRetry, on
       {empty && intro}
 
       {messages.map((m, i) => (
-        <Bubble key={m.id} message={m} playing={playingId === m.id} onSpeak={() => onSpeak(m)} latest={i === messages.length - 1} />
+        <Bubble key={m.id} message={m} playing={playingId === m.id} onSpeak={() => onSpeak(m)} latest={i === messages.length - 1} recording={phase.kind === "listening"} />
       ))}
 
       {live}

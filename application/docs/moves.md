@@ -31,7 +31,7 @@ The model never writes card text. It only reports the Stage and the Mention, as 
 - The card slot shows the Allergy Flag **or** a Move, never both. Dish, Word and Moment cards are retired: `/api/translate` only sends a card when it carries an allergy or diet warning (`flagCard` in `lib/context/cards.ts`).
 - The mock turn service (demo backup) carries Moves: Say it (hello), the Allergy Flag, Ask (how do you eat khao soi?), Say it (delicious), Say it (how much), then an Echo on ซาว. The mock always uses the `m` particle.
 - The "thank you" Move at Stage leave also opens the **Postcard** (ticket 05).
-- **Say it yourself** is separate: a control on any Visitor bubble that teaches that sentence (phonetics, listen, slowly), ticket 04.
+- **Say it yourself** is separate: a control on any Visitor bubble that teaches that sentence (phonetics, listen, slowly), ticket 04. One row per Thai item; an item the model gave no phonetics for shows none (never merged). Listen and Slowly are disabled while a mic is listening, so the voice is not recorded as the Turn.
 
 ## Status
 

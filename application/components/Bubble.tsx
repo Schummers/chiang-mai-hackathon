@@ -26,8 +26,20 @@ export function Row({ speaker, children }: { speaker: Speaker; children: React.R
 }
 
 /** L1 voice card. Big = translation (what the reader of this card reads), small = original. Tap anywhere to play. */
-/** `latest`: the last Turn of the thread; an older Turn's Move card collapses to one line. */
-export function Bubble({ message, playing, onSpeak, latest = true }: { message: Message; playing: boolean; onSpeak: () => void; latest?: boolean }) {
+/** `latest`: the last Turn of the thread; an older Turn's Move card collapses to one line. `recording`: a mic is listening. */
+export function Bubble({
+  message,
+  playing,
+  onSpeak,
+  latest = true,
+  recording = false,
+}: {
+  message: Message;
+  playing: boolean;
+  onSpeak: () => void;
+  latest?: boolean;
+  recording?: boolean;
+}) {
   const yours = message.speaker === "you";
   return (
     <>
@@ -50,7 +62,7 @@ export function Bubble({ message, playing, onSpeak, latest = true }: { message: 
           {yours ? (
             <div className={s.tools}>
               <PlayTool playing={playing} again />
-              <SayItTool message={message} />
+              <SayItTool message={message} recording={recording} />
             </div>
           ) : (
             <PlayTool playing={playing} again={false} />

@@ -43,7 +43,7 @@ Key idea: **the model only says what it recognised** (`mention`: a dish id, a wo
 | `components/Conversation.tsx` | The one screen: wires engine, My info, language, thread and dock. |
 | `components/ChatThread.tsx`, `Bubble.tsx` | Messages: translation big, original small, bullets when several items, tap the card to play. |
 | `components/ContextCard.tsx` | Allergy Flag card (dish card with spice meter and flag row). |
-| `components/SayItYourself.tsx` | "Say it yourself" on a Visitor bubble: phonetics per item, listen, slowly. |
+| `components/SayItYourself.tsx` | "Say it yourself" on a Visitor bubble: one row per Thai item (`lib/sayIt.ts`), listen, slowly; the voice is off while a mic is listening. |
 | `components/MoveCard.tsx` | Move card (Say it / Ask / Echo): tap to hear the Thai, "Show the vendor" full screen, collapses after the next Turn. Lines from `lib/moveCard.ts`. |
 | `components/Overlay.tsx` | Full-screen layer in a portal (Show the vendor, Say it yourself sheet): tap or Escape closes, events never reach the card underneath. |
 | `components/Dock.tsx` | Bottom bar with the two mics (Vendor left, Visitor right) and the language picker. |
@@ -63,6 +63,7 @@ Key idea: **the model only says what it recognised** (`mention`: a dish id, a wo
 | `lib/pitch.ts` | The pitch line, shared by the home screen and the page metadata. |
 | `lib/useOnline.ts` | Online/offline status for the offline banner. |
 | `lib/speech.ts` | Browser text-to-speech (free, Thai voice built into iOS). |
+| `lib/sayIt.ts` | `sayItRows()`: Thai, phonetics and meaning per item, aligned by index; a missing phonetic gives no line, never a merge. |
 | `lib/usePlayToggle.ts` | Play / stop toggle on the browser voice, shared by the Move card and Say it yourself. |
 | `lib/language.ts`, `useLanguage.ts` | Visitor language list and saved choice. |
 | `lib/myInfo.ts`, `useMyInfo.ts` | My info model and saved value. |

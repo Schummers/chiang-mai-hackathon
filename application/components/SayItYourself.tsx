@@ -3,6 +3,7 @@
 import { Snail, Speech, Volume2, X } from "lucide-react";
 import { useRef, useState } from "react";
 import type { Message } from "@/lib/engine/types";
+import { sayItRows } from "@/lib/sayIt";
 import { usePlayToggle } from "@/lib/usePlayToggle";
 import chat from "./Chat.module.css";
 import { Overlay } from "./Overlay";
@@ -12,8 +13,11 @@ const SLOW_RATE = 0.6;
 /** A downward swipe longer than this closes the sheet. */
 const SWIPE_CLOSE_PX = 70;
 
-/** "Say it yourself" tool, right of Play on the Visitor's bubble. Opens the sheet without playing the bubble. */
-export function SayItTool({ message }: { message: Message }) {
+/**
+ * "Say it yourself" tool, right of Play on the Visitor's bubble. Opens the sheet without playing the bubble.
+ * `recording`: a mic is listening, so the sheet's voice stays off (it would be recorded as the Turn).
+ */
+export function SayItTool({ message, recording = false }: { message: Message; recording?: boolean }) {
   const [open, setOpen] = useState(false);
   return (
     <>
@@ -29,7 +33,7 @@ export function SayItTool({ message }: { message: Message }) {
         <Speech size={16} strokeWidth={2.1} aria-hidden />
         Say it yourself
       </button>
-      {open && <SayItSheet message={message} onClose={() => setOpen(false)} />}
+      {open && <SayItSheet message={message} recording={recording} onClose={() => setOpen(false)} />}
     </>
   );
 }
@@ -37,19 +41,13 @@ export function SayItTool({ message }: { message: Message }) {
 type Rate = "normal" | "slow";
 
 /** Teaches the Visitor to say their Thai: Thai big, syllable phonetics, meaning, normal and slow audio. No scoring (V2). */
-export function SayItSheet({ message, onClose }: { message: Message; onClose: () => void }) {
+export function SayItSheet({ message, recording = false, onClose }: { message: Message; recording?: boolean; onClose: () => void }) {
   const { playing, toggle } = usePlayToggle<Rate>();
   const startY = useRef<number | null>(null);
   const [drag, setDrag] = useState(0);
 
   const thai = message.translation;
-  const roman = message.romanised ?? [];
-  const meaning = message.original;
-  // One row per item when the three lists line up, otherwise one block each.
-  const aligned = roman.length === thai.length && meaning.length === thai.length;
-  const rows = aligned
-    ? thai.map((t, i) => ({ thai: t, roman: roman[i], meaning: meaning[i] }))
-    : [{ thai: thai.join(" "), roman: roman.join(" "), meaning: meaning.join(" ") }];
+  const rows = sayItRows(message);
 
   // Closing unmounts the sheet, and the voice stops with it.
   const close = onClose;
@@ -99,11 +97,11 @@ export function SayItSheet({ message, onClose }: { message: Message; onClose: ()
         </ol>
 
         <div className={s.actions}>
-          <button type="button" className={`${s.listen} ${playing === "normal" ? s.on : ""}`} aria-pressed={playing === "normal"} onClick={() => play("normal")}>
+          <button type="button" className={`${s.listen} ${playing === "normal" ? s.on : ""}`} aria-pressed={playing === "normal"} disabled={recording} onClick={() => play("normal")}>
             <Volume2 size={18} strokeWidth={2.1} aria-hidden />
             {playing === "normal" ? "Playing" : "Listen"}
           </button>
-          <button type="button" className={`${s.listen} ${s.ghost} ${playing === "slow" ? s.on : ""}`} aria-pressed={playing === "slow"} onClick={() => play("slow")}>
+          <button type="button" className={`${s.listen} ${s.ghost} ${playing === "slow" ? s.on : ""}`} aria-pressed={playing === "slow"} disabled={recording} onClick={() => play("slow")}>
             <Snail size={18} strokeWidth={2.1} aria-hidden />
             {playing === "slow" ? "Playing" : "Slowly"}
           </button>

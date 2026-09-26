@@ -11,6 +11,8 @@ npm test         # Vitest, must pass before any push
 npm run build    # must pass before any push
 ```
 
+**Docs: start with [`docs/README.md`](docs/README.md)** (architecture, contract, Context Pack, decisions, status).
+
 ## Rules
 
 - The UI only talks to the conversation engine (`lib/engine/`). Never call a provider from a component.
@@ -19,3 +21,4 @@ npm run build    # must pass before any push
 - Keep each feature in its own component file under `components/`; touch `app/page.tsx` as little as possible.
 - Mobile first. The mic needs HTTPS: test on the Vercel URL, not on a LAN IP.
 - Secrets in `.env.local` only (gitignored) and in Vercel env vars. Never hardcode a key: the repo is public.
+- A change to the contract, the Turn flow or a decision updates the matching file in `docs/` in the same commit.

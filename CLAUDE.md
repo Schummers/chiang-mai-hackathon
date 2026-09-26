@@ -20,6 +20,8 @@ Narrow problem, precise user, a tool that works in 30 seconds beats an ambitious
 | `people/<name>/` | Personal research, notes, collected data, experiments | Only that person |
 | `prd/` | `PRD.md`, the single shared product doc | Only the PRD owner (see `prd/CLAUDE.md`) |
 | `application/` | The web app (Next.js App Router + TypeScript, on Vercel) | Anyone, carefully (see `application/CLAUDE.md`) |
+
+**Before touching or asking about the app, read [`application/docs/README.md`](application/docs/README.md)**: how it works, the UI/back-end contract, decisions, status, and where each piece of information lives.
 | `prototype/` | Old Vite prototype, frozen (fate TBD by the tech lead) | Nobody, do not build on it |
 
 Team folders: `jonathan`, `max`, `benji`, `sunny`, `luke`.

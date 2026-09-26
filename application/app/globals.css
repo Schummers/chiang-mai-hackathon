@@ -16,6 +16,12 @@
   --sh-3: 0 -10px 30px -8px rgb(30 34 56 / 0.2);
   --r: 14px;
 
+  /* Kratip: the logo's basket weave. The ground uses it at 5%, only context cards use it at full strength. */
+  --weave-bg: repeating-linear-gradient(45deg, var(--them) 0 6px, transparent 6px 12px),
+    repeating-linear-gradient(-45deg, var(--you) 0 6px, transparent 6px 12px);
+  --weave-frame: repeating-linear-gradient(45deg, var(--them) 0 5px, var(--paper) 5px 7px, var(--you) 7px 12px, var(--paper) 12px 14px);
+  --sh-dock: 0 10px 30px -10px rgb(30 34 56 / 0.3), 0 0 0 1px var(--line);
+
   --f-lat: var(--font-atkinson), system-ui, sans-serif;
   --f-th: var(--font-thai), "Noto Sans Thai", "Thonburi", sans-serif;
 

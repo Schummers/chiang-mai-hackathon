@@ -19,15 +19,15 @@
   min-width: min(62%, 240px);
   padding: 12px 14px;
   border-radius: 18px;
+  background: var(--white);
+  box-shadow: var(--sh-2);
 }
 
 .you .bubble {
-  background: var(--you-wash);
   border-bottom-right-radius: 6px;
 }
 
 .them .bubble {
-  background: var(--them-wash);
   border-bottom-left-radius: 6px;
 }
 

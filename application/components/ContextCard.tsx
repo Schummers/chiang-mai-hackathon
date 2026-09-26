@@ -8,7 +8,7 @@ const SPICE_LABELS = ["Not spicy", "Mild", "Medium", "Hot"];
 export function ContextCard({ card }: { card: Card }) {
   return (
     <article className={s.card}>
-      <p className={s.kicker}>Context{card.warning ? " · based on your info" : ""}</p>
+      <p className={s.kicker}>Context · based on your info</p>
       <h3 className={s.name}>
         {card.name} {card.nameThai && <span className={s.thai}>{card.nameThai}</span>}
       </h3>

@@ -42,7 +42,10 @@ export function ActionBar({ state, onTap, language, onLanguage, offline = false 
   const mic = (speaker: Speaker) => {
     const recording = phase.kind === "listening" && phase.speaker === speaker;
     const disabled = offline || phase.kind === "processing" || (phase.kind === "listening" && !recording);
-    const pulse = phase.kind === "idle" && phase.nextTurn === speaker && messages.length > 0;
+    // The hint of whose turn it is: after a message, and after "didn't catch that" for the one who has to speak again.
+    const pulse =
+      (phase.kind === "idle" && phase.nextTurn === speaker && messages.length > 0) ||
+      (phase.kind === "error" && phase.reason === "empty" && phase.speaker === speaker);
     const vendor = speaker === "vendor";
     return (
       <div className={`${a.act} ${vendor ? a.them : a.you} ${pulse ? a.pulse : ""}`}>

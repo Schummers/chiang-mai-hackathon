@@ -19,7 +19,7 @@ export const KHAO_SOI_SCRIPT: ScriptTurn[] = [
     raw: "ข้าวซอยไก่ครับ เผ็ดนิดหน่อย ไม่มีถั่วลิสงครับ",
     result: {
       translation: ["Chicken khao soi", "A little spicy", "No peanuts"],
-      original: ["ข้าวซอยไก่ครับ", "เผ็ดนิดหน่อย", "ไม่มีถั่วลิสงครับ"],
+      original: ["ข้าวซอยไก่ครับ เผ็ดนิดหน่อย ไม่มีถั่วลิสงครับ"],
       card: {
         name: "Khao Soi",
         nameThai: "ข้าวซอย",

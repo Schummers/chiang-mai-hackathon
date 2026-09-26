@@ -56,9 +56,11 @@ export function ChatThread({ state, intro, live, playingId, onSpeak, onRetry, on
               </div>
             </div>
           </Row>
-          <p className={s.status} style={{ alignSelf: phase.speaker === "you" ? "flex-end" : "flex-start" }}>
-            {phase.speaker === "you" ? "Cleaning up and translating…" : "กำลังแปล…"}
-          </p>
+          {phase.raw && (
+            <p className={s.status} style={{ alignSelf: phase.speaker === "you" ? "flex-end" : "flex-start" }}>
+              {phase.speaker === "you" ? "Cleaning up and translating…" : "กำลังแปล…"}
+            </p>
+          )}
         </>
       )}
 

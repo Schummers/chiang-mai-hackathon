@@ -1,6 +1,6 @@
 "use client";
 
-import { BookOpen, Check, Drumstick, MapPin, OctagonX, Soup } from "lucide-react";
+import { Check, Drumstick, MapPin, OctagonX, Soup } from "lucide-react";
 import { cardFlags } from "@/lib/cardFlag";
 import type { ContextCard as Card } from "@/lib/engine/types";
 import { useMyInfo } from "@/lib/useMyInfo";
@@ -8,19 +8,8 @@ import s from "./ContextCard.module.css";
 
 const SPICE_LABELS = ["Not spicy", "Mild", "Medium", "Hot"];
 
+/** Only the Allergy Flag reaches the thread (`flagCard`), always a dish: Word and Moment cards are retired. */
 function Label({ card }: { card: Card }) {
-  if (card.kind === "word")
-    return (
-      <>
-        <BookOpen size={14} strokeWidth={2.1} /> Local word
-      </>
-    );
-  if (card.kind === "moment")
-    return (
-      <>
-        <MapPin size={14} strokeWidth={2.1} /> Today in Chiang Mai
-      </>
-    );
   return (
     <>
       <Soup size={14} strokeWidth={2.1} /> {card.offGuide ? "Dish · not in our guide" : "Special dish"}

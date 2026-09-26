@@ -5,6 +5,7 @@
   max-width: 520px;
   margin: 0 auto;
   background: var(--paper);
+  position: relative;
   isolation: isolate;
 }
 
@@ -58,7 +59,8 @@
   flex: 1;
   overflow-y: auto;
   overscroll-behavior: contain;
-  padding: 16px 14px;
+  /* Room for the floating dock: 80 tall + 18 from the bottom + 12 of air. */
+  padding: 16px 14px calc(env(safe-area-inset-bottom) + 110px);
   display: flex;
   flex-direction: column;
   gap: 12px;

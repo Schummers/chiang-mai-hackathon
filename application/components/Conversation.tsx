@@ -10,8 +10,8 @@ import { useConversation } from "@/lib/useConversation";
 import { languageStore, useLanguage } from "@/lib/useLanguage";
 import { useOnline } from "@/lib/useOnline";
 import { myInfoStore, useMyInfo } from "@/lib/useMyInfo";
-import { ActionBar } from "./ActionBar";
 import { ChatThread } from "./ChatThread";
+import { Dock } from "./Dock";
 import { OfflineBanner } from "./ErrorState";
 import { ListeningCard } from "./ListeningCard";
 import { MyInfoCard, MyInfoPage, Toast } from "./MyInfo";
@@ -142,7 +142,7 @@ export function Conversation() {
         }
       />
 
-      <ActionBar state={state} onTap={onTap} language={language} onLanguage={languageStore.set} offline={!online} />
+      <Dock state={state} onTap={onTap} language={language} playingId={playingId} getLevel={getLevel} offline={!online} />
 
       {infoOpen && <MyInfoPage info={myInfo} onChange={myInfoStore.set} onDone={() => setInfoOpen(false)} />}
       {toast && <Toast text={toast} />}

@@ -1,50 +1,74 @@
-.bar {
+/* L3 dock (K1): floating white bar, the chat scrolls behind it. */
+.dock {
+  position: absolute;
+  z-index: 10;
+  left: 12px;
+  right: 12px;
+  bottom: calc(env(safe-area-inset-bottom) + 18px);
+  height: 80px;
+  padding: 0 8px;
+  border-radius: 26px;
+  background: var(--white);
+  box-shadow: var(--sh-dock);
   display: flex;
-  justify-content: space-between;
-  gap: 12px;
-  padding: 12px 16px calc(env(safe-area-inset-bottom) + 14px);
-  border-top: 1px solid var(--line);
-  background: var(--paper);
-}
-
-.act {
-  flex: 1;
-  max-width: 170px;
-  display: flex;
-  flex-direction: column;
   align-items: center;
-  gap: 4px;
+  gap: 8px;
 }
 
 .mic {
-  width: 100%;
-  height: 60px;
-  border-radius: 20px;
+  flex: none;
+  width: 64px;
+  height: 64px;
+  border-radius: 18px;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 8px;
-  color: var(--white);
-  font-weight: 700;
-  font-size: 18px;
+  gap: 2px;
   transition: opacity 0.2s, transform 0.1s;
 }
 
 .mic:active {
-  transform: scale(0.97);
+  transform: scale(0.96);
 }
 
-.you .mic {
+.you {
   background: var(--you);
+  color: var(--white);
+  --pc: rgb(43 50 99 / 0.45);
 }
 
-.them .mic {
+.them {
+  background: var(--them-wash);
+  color: var(--them);
+  --pc: rgb(138 90 68 / 0.45);
+}
+
+/* Tapped: that button becomes Stop. */
+.you.stop {
+  background: var(--ink);
+}
+
+.them.stop {
   background: var(--them);
+  color: var(--white);
+}
+
+.verb {
+  font-size: 11px;
+  line-height: 14px;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
 }
 
 .them .verb {
   font-family: var(--f-th);
-  font-size: 19px;
+  font-size: 13px;
+  line-height: 16px;
+  font-weight: 600;
+  letter-spacing: 0;
+  text-transform: none;
 }
 
 .mic:disabled {
@@ -52,63 +76,77 @@
   cursor: default;
 }
 
-.lang {
-  font-size: 13px;
-  line-height: 18px;
-  color: var(--ink-2);
-  min-height: 30px;
-  display: flex;
-  align-items: center;
-  gap: 2px;
+/* Whose turn it is. */
+.pulse {
+  animation: pulse 1.6s ease-out infinite;
 }
 
-.them .lang {
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 var(--pc);
+  }
+  100% {
+    box-shadow: 0 0 0 14px transparent;
+  }
+}
+
+/* The middle narrates: nothing at rest, listening, translating, hand-off. Never a logo. */
+.middle {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.state {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--ink-2);
+  white-space: nowrap;
+  animation: fade 0.2s ease-out both;
+}
+
+.youText {
+  color: var(--you);
+}
+
+.themText {
+  color: var(--them);
+}
+
+.handoff {
+  font-size: 15px;
+}
+
+.handoff[lang="th"] {
   font-family: var(--f-th);
 }
 
-.pulse .mic {
-  animation: pulse-you 1.4s ease-out infinite;
-}
-
-.them.pulse .mic {
-  animation-name: pulse-them;
-}
-
-@keyframes pulse-you {
-  0% {
-    box-shadow: 0 0 0 0 color-mix(in srgb, var(--you) 50%, transparent);
-  }
-  100% {
-    box-shadow: 0 0 0 16px color-mix(in srgb, var(--you) 0%, transparent);
-  }
-}
-
-@keyframes pulse-them {
-  0% {
-    box-shadow: 0 0 0 0 color-mix(in srgb, var(--them) 55%, transparent);
-  }
-  100% {
-    box-shadow: 0 0 0 16px color-mix(in srgb, var(--them) 0%, transparent);
-  }
-}
-
-.picker {
-  position: relative;
-  display: inline-flex;
+.wave {
+  display: flex;
   align-items: center;
   gap: 3px;
-  min-height: 30px;
-  padding: 0 8px;
-  font-weight: 700;
-  color: var(--ink);
+  height: 22px;
 }
 
-.picker select {
-  /* The label stays 30px tall, the tappable select around it is 44px (DESIGN.md, touch targets). */
-  position: absolute;
-  inset: -7px 0;
-  height: 44px;
-  opacity: 0;
-  width: 100%;
-  font-size: 16px; /* avoids the iOS zoom on focus */
+.wave b {
+  width: 4px;
+  height: 4px;
+  border-radius: 2px;
+  background: currentColor;
+  transition: height 60ms linear;
+}
+
+.time {
+  font-variant-numeric: tabular-nums;
+  min-width: 30px;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
 }

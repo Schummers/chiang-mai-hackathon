@@ -2,7 +2,7 @@ import { afterEach, describe, expect, it, vi } from "vitest";
 import { ConversationEngine } from "./engine";
 import { createMockTurnService, KHAO_SOI_SCRIPT } from "./mockTurnService";
 import { createTurnService } from "./turnService";
-import type { MoveCard, MyInfo, TranslateInput, TranslateResult, TurnService } from "./types";
+import type { MoveCard, MyInfo, PhotoCard, ReadPhotoInput, TranslateInput, TranslateResult, TurnService } from "./types";
 
 // A turn service whose calls resolve only when the test says so.
 function controllableService() {
@@ -395,5 +395,141 @@ describe("mock turn service (Khao Soi scenario)", () => {
   it("is the default turn service", () => {
     expect(createTurnService(undefined).kind).toBe("mock");
     expect(createTurnService("api").kind).toBe("api");
+  });
+});
+
+// A turn service that reads photos only when the test says so, with fake object URLs.
+function photoService() {
+  const reads: { image: Blob; input: ReadPhotoInput; resolve: (c: PhotoCard) => void; reject: (e: Error) => void }[] = [];
+  const service: TurnService = {
+    ...controllableService().service,
+    readPhoto: (image, input) => new Promise((resolve, reject) => reads.push({ image, input, resolve, reject })),
+  };
+  let n = 0;
+  const revoked: string[] = [];
+  const objectUrls = { create: () => `blob:photo-${++n}`, revoke: (url: string) => void revoked.push(url) };
+  return { service, reads, objectUrls, revoked };
+}
+
+const image = new Blob(["jpeg"], { type: "image/jpeg" });
+const menuCard: PhotoCard = {
+  kind: "menu",
+  title: "Noodle stall menu",
+  description: "Four northern dishes.",
+  items: [{ name: "Gaeng Hang Lay", warning: "Often cooked with peanuts: ask." }],
+};
+
+describe("photo turn", () => {
+  it("goes idle -> reading -> idle and adds the photo with its card", async () => {
+    const fake = photoService();
+    const peanuts: MyInfo = { allergies: ["peanuts"], spice: null, diet: [] };
+    const engine = new ConversationEngine({
+      service: fake.service,
+      objectUrls: fake.objectUrls,
+      now: () => 500,
+      getMyInfo: () => peanuts,
+      getUserLanguage: () => "fr",
+    });
+    const done = engine.photo(image);
+    expect(engine.getState().phase).toMatchObject({ kind: "reading", startedAt: 500, photo: { url: "blob:photo-1" } });
+    expect(fake.reads[0].image).toBe(image);
+    expect(fake.reads[0].input).toEqual({ userLanguage: "fr", myInfo: peanuts });
+
+    fake.reads[0].resolve(menuCard);
+    await done;
+    expect(engine.getState().phase).toEqual({ kind: "idle", nextTurn: "you" });
+    expect(engine.getState().messages).toMatchObject([{ speaker: "you", card: null, photo: { url: "blob:photo-1", card: menuCard } }]);
+  });
+
+  it("ignores a photo while someone is recording or translating", () => {
+    const fake = photoService();
+    const engine = new ConversationEngine({ service: fake.service, objectUrls: fake.objectUrls });
+    engine.micTap("you");
+    engine.photo(image);
+    expect(engine.getState().phase).toMatchObject({ kind: "listening" });
+    expect(fake.reads).toHaveLength(0);
+  });
+
+  it("a failed read keeps the photo, and retry reads the same image again", async () => {
+    const fake = photoService();
+    const engine = new ConversationEngine({ service: fake.service, objectUrls: fake.objectUrls });
+    const first = engine.photo(image);
+    fake.reads[0].reject(new Error("502"));
+    await first;
+    expect(engine.getState().phase).toMatchObject({ kind: "error", speaker: "you", reason: "network", photo: { url: "blob:photo-1" } });
+
+    const again = engine.retry();
+    expect(engine.getState().phase).toMatchObject({ kind: "reading", photo: { url: "blob:photo-1" } });
+    expect(fake.reads[1].image).toBe(image);
+    fake.reads[1].resolve(menuCard);
+    await again;
+    expect(engine.getState().messages).toHaveLength(1);
+    expect(fake.revoked).toEqual([]);
+  });
+
+  it("gives up on a read that takes too long", async () => {
+    vi.useFakeTimers();
+    const fake = photoService();
+    const engine = new ConversationEngine({ service: fake.service, objectUrls: fake.objectUrls, timeoutMs: 1000 });
+    const done = engine.photo(image);
+    await vi.advanceTimersByTimeAsync(1000);
+    await done;
+    expect(engine.getState().phase).toMatchObject({ kind: "error", reason: "network", photo: { url: "blob:photo-1" } });
+  });
+
+  it("fails as a network error when the service cannot read photos", async () => {
+    const engine = new ConversationEngine({ service: controllableService().service, objectUrls: photoService().objectUrls });
+    await engine.photo(image);
+    expect(engine.getState().phase).toMatchObject({ kind: "error", reason: "network" });
+  });
+
+  it("dismissing a failed read drops the photo and frees its URL", async () => {
+    const fake = photoService();
+    const engine = new ConversationEngine({ service: fake.service, objectUrls: fake.objectUrls });
+    const done = engine.photo(image);
+    fake.reads[0].reject(new Error("502"));
+    await done;
+    engine.dismissError();
+    expect(engine.getState().phase).toEqual({ kind: "idle", nextTurn: "you" });
+    expect(engine.getState().messages).toEqual([]);
+    expect(fake.revoked).toEqual(["blob:photo-1"]);
+  });
+
+  it("a new conversation drops photos, frees their URLs and ignores a late read", async () => {
+    const fake = photoService();
+    const engine = new ConversationEngine({ service: fake.service, objectUrls: fake.objectUrls });
+    const first = engine.photo(image);
+    fake.reads[0].resolve(menuCard);
+    await first;
+    const late = engine.photo(image);
+
+    engine.newConversation();
+    expect(engine.getState().messages).toEqual([]);
+    expect(fake.revoked.sort()).toEqual(["blob:photo-1", "blob:photo-2"]);
+
+    fake.reads[1].resolve(menuCard);
+    await late;
+    expect(engine.getState().messages).toEqual([]);
+    expect(engine.getState().phase).toEqual({ kind: "idle", nextTurn: "you" });
+  });
+});
+
+describe("mock photo reading", () => {
+  it("returns a menu card with an item flagged for a peanut allergy", async () => {
+    vi.useFakeTimers();
+    const service = createMockTurnService({ readPhotoMs: 10 });
+    const read = service.readPhoto!(image, { userLanguage: "en", myInfo: { allergies: ["peanuts"], spice: null, diet: [] } });
+    await vi.advanceTimersByTimeAsync(10);
+    const card = await read;
+    expect(card.kind).toBe("menu");
+    expect(card.items!.some((i) => /peanut/i.test(i.warning ?? ""))).toBe(true);
+  });
+
+  it("flags nothing when About you is empty", async () => {
+    vi.useFakeTimers();
+    const service = createMockTurnService({ readPhotoMs: 10 });
+    const read = service.readPhoto!(image, { userLanguage: "en", myInfo: { allergies: [], spice: null, diet: [] } });
+    await vi.advanceTimersByTimeAsync(10);
+    expect((await read).items!.every((i) => !i.warning)).toBe(true);
   });
 });

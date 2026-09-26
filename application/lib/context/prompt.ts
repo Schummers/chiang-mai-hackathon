@@ -51,6 +51,8 @@ ${falseFriends}
 
 "detectedInfo": only what the Visitor says about themselves in this Turn (allergies: peanuts, shellfish, gluten, other; spice: none, mild, thai-hot; diet: no-pork, vegetarian, halal). Empty otherwise.
 
+"stage": where the conversation is after this Turn. One of: start (greetings, nothing chosen yet), explore (looking, asking what things are), decide (choosing, ordering, spice level), receive (the food is handed over or being eaten), pay (price, money, change), leave (thanks, goodbye), vendor-used-northern-word (the Vendor just used a Kham Mueang word from WORDS or FALSE FRIENDS, or a Northern price like ซาว). The first Turn of a conversation is always start.
+
 Never name or guess anyone's ethnicity. Avoid politics, the monarchy and income in anything you add.
 
 DISHES (id | Thai / Northern | name | English | ingredients):
@@ -134,6 +136,7 @@ export const TURN_SCHEMA = {
         diet: { type: "ARRAY", items: { type: "STRING", enum: ["no-pork", "vegetarian", "halal"] } },
       },
     },
+    stage: { type: "STRING", enum: ["start", "explore", "decide", "receive", "pay", "leave", "vendor-used-northern-word"] },
   },
-  required: ["original", "translation", "mention"],
+  required: ["original", "translation", "mention", "stage"],
 } as const;

@@ -1,4 +1,5 @@
 import { cardFor, falseFriendCard, momentCard, type Mention } from "@/lib/context/cards";
+import { pickMove, stageFor } from "@/lib/context/moves";
 import { systemPrompt, TURN_SCHEMA, turnPrompt } from "@/lib/context/prompt";
 import { romanisedItems } from "@/lib/context/romanised";
 import type { MyInfo, TranslateInput, TranslateResult } from "@/lib/engine/types";
@@ -11,6 +12,7 @@ type ModelTurn = {
   translation?: string[];
   romanised?: unknown;
   mention?: Mention;
+  stage?: string;
   detectedInfo?: Partial<MyInfo>;
 };
 
@@ -28,6 +30,7 @@ export async function POST(req: Request) {
     allergies: input.myInfo?.allergies ?? [],
     spice: input.myInfo?.spice ?? null,
     diet: input.myInfo?.diet ?? [],
+    speaker: input.myInfo?.speaker === "f" ? "f" : "m",
   };
   const history = Array.isArray(input.history) ? input.history : [];
   const date = today();
@@ -46,11 +49,16 @@ export async function POST(req: Request) {
 
   const original = turn.original?.filter(Boolean) ?? [];
   const translation = turn.translation?.filter(Boolean) ?? [];
+  const mention: Mention = turn.mention ?? { kind: "none" };
   // Then a false friend the Vendor said, then the Moment card to open a conversation that names nothing.
   const card =
-    cardFor(turn.mention ?? { kind: "none" }, myInfo) ??
+    cardFor(mention, myInfo) ??
     (input.speaker === "vendor" ? falseFriendCard(raw) : null) ??
     (history.length === 0 ? momentCard(date) : null);
+
+  // The model gives the Stage, code picks the Move. An allergy or diet flag on the card wins over any Move.
+  const stage = stageFor(turn.stage, history);
+  const move = pickMove(stage, mention, history, { raw, speaker: input.speaker, particle: myInfo.speaker, card });
 
   const detected = turn.detectedInfo ?? {};
   const detectedInfo: Partial<MyInfo> = {
@@ -65,6 +73,8 @@ export async function POST(req: Request) {
     card,
     // Undefined for the Vendor, dropped by JSON.
     romanised: translation.length ? romanisedItems(turn.romanised, input.speaker) : undefined,
+    stage,
+    move,
     ...(Object.keys(detectedInfo).length && { detectedInfo }),
   };
   return Response.json(result);

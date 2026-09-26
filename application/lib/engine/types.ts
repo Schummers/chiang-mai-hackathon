@@ -45,6 +45,33 @@ export type Message = {
   card: ContextCard | null;
   /** Visitor's messages only: syllable phonetics of each Thai item, for Say it yourself. */
   romanised?: string[];
+  /** The Move offered under this Turn, if any. Kept so a Move is never offered twice. */
+  move?: MoveCard | null;
+};
+
+/** Where the conversation is, detected by the model on each Turn. */
+export type Stage = "start" | "explore" | "decide" | "receive" | "pay" | "leave" | "vendor-used-northern-word";
+
+/** Polite particle variant of a Move: "m" ends with ครับ/คับ, "f" with ค่ะ/เจ้า. */
+export type Particle = "m" | "f";
+
+export type MoveType = "say" | "ask" | "echo";
+
+/** One Move, ready to show: the particle variant is picked and the Slot is filled. */
+export type MoveCard = {
+  id: string;
+  type: MoveType;
+  stage: Stage;
+  /** English meaning, Slot filled. */
+  english: string;
+  /** Central Thai, always there: the fallback for vendors who don't speak Kham Mueang. */
+  centralThai: string;
+  /** Kham Mueang when the Move has it. */
+  khamMueang: string | null;
+  romanised: { central: string; khamMueang: string | null };
+  tone?: "playful";
+  /** Echo only: the Northern word the Vendor said. */
+  heard?: string;
 };
 
 export type Allergy = "peanuts" | "shellfish" | "gluten" | "other";
@@ -55,6 +82,8 @@ export type MyInfo = {
   allergies: Allergy[];
   spice: Spice | null;
   diet: Diet[];
+  /** Particle the Visitor speaks with in Moves. Missing means "m". */
+  speaker?: Particle;
 };
 
 export const EMPTY_MY_INFO: MyInfo = { allergies: [], spice: null, diet: [] };
@@ -78,6 +107,10 @@ export type TranslateResult = {
   romanised?: string[];
   /** Info the visitor said aloud ("I'm allergic to peanuts"), to pre-tick My info. */
   detectedInfo?: Partial<MyInfo>;
+  /** Where the conversation is after this Turn (api mode). */
+  stage?: Stage;
+  /** At most one Move for this Turn, picked and filled by code, never written by the model. */
+  move?: MoveCard | null;
 };
 
 export interface TurnService {

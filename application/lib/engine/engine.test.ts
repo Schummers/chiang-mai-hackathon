@@ -2,7 +2,7 @@ import { afterEach, describe, expect, it, vi } from "vitest";
 import { ConversationEngine } from "./engine";
 import { createMockTurnService, KHAO_SOI_SCRIPT } from "./mockTurnService";
 import { createTurnService } from "./turnService";
-import type { MyInfo, TranslateInput, TranslateResult, TurnService } from "./types";
+import type { MoveCard, MyInfo, TranslateInput, TranslateResult, TurnService } from "./types";
 
 // A turn service whose calls resolve only when the test says so.
 function controllableService() {
@@ -79,6 +79,24 @@ describe("conversation engine", () => {
     expect(engine.getState().messages).toMatchObject([
       { speaker: "you", translation: ["จานนี้คืออะไรครับ"], original: ["What is this dish?"], card: null },
     ]);
+  });
+
+  it("keeps the Move on the message, so the next Turn's history knows it was shown", async () => {
+    const fake = controllableService();
+    const engine = new ConversationEngine({ service: fake.service });
+    const move: MoveCard = {
+      id: "say-hello",
+      type: "say",
+      stage: "start",
+      english: "Hello",
+      centralThai: "สวัสดีครับ",
+      khamMueang: "สะหวัดดีคับ",
+      romanised: { central: "sa-wat-dee khrap", khamMueang: "sa-wat-dee khap" },
+    };
+    await fullTurn(engine, fake, "you", reply({ move }));
+    expect(engine.getState().messages[0].move).toEqual(move);
+    await fullTurn(engine, fake, "vendor", reply());
+    expect(fake.translates[1].input.history[0].move?.id).toBe("say-hello");
   });
 
   it("hands the turn to the other side after each message", async () => {

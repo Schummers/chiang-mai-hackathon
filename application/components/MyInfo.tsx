@@ -3,7 +3,7 @@
 import { Check, ChevronDown, Flame, Languages, OctagonX, Plus, UserRound, X } from "lucide-react";
 import type { MyInfo, UserLanguage } from "@/lib/engine/types";
 import { findLanguage, LANGUAGES } from "@/lib/language";
-import { ALLERGIES, DIETS, SPICES } from "@/lib/myInfo";
+import { ALLERGIES, DIETS, PARTICLES, particleOf, SPICES } from "@/lib/myInfo";
 import s from "./MyInfo.module.css";
 
 type LanguageProps = { language: UserLanguage; onLanguage: (code: UserLanguage) => void };
@@ -98,6 +98,15 @@ export function MyInfoPage({
           <div className={s.chips}>
             {LANGUAGES.map((l) => (
               <Chip key={l.code} label={l.name} on={l.code === language} onClick={() => onLanguage(l.code)} />
+            ))}
+          </div>
+        </section>
+
+        <section className={s.group}>
+          <h3>You speak as</h3>
+          <div className={s.chips}>
+            {PARTICLES.map((p) => (
+              <Chip key={p.value} label={p.label} on={particleOf(info) === p.value} onClick={() => onChange({ ...info, speaker: p.value })} />
             ))}
           </div>
         </section>

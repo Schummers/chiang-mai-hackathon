@@ -1,0 +1,1146 @@
+[
+ {
+  "id": "say-hello",
+  "type": "say",
+  "stage": "start",
+  "slot": "none",
+  "english": "Hello",
+  "centralThai": {
+   "m": "สวัสดีครับ",
+   "f": "สวัสดีค่ะ"
+  },
+  "khamMueang": {
+   "m": "สะหวัดดีคับ",
+   "f": "สะหวัดดีเจ้า"
+  },
+  "romanised": {
+   "central": {
+    "m": "sa-wat-dee khrap",
+    "f": "sa-wat-dee kha"
+   },
+   "khamMueang": {
+    "m": "sa-wat-dee khap",
+    "f": "sa-wat-dee jao"
+   }
+  },
+  "confidence": "high",
+  "reviewed": false
+ },
+ {
+  "id": "say-how-are-you",
+  "type": "say",
+  "stage": "start",
+  "slot": "none",
+  "english": "How are you? (to a vendor you already know)",
+  "centralThai": {
+   "m": "สบายดีไหมครับ",
+   "f": "สบายดีไหมคะ"
+  },
+  "khamMueang": {
+   "m": "สบายดีบ๋อ",
+   "f": "สบายดีบ๋อ"
+  },
+  "romanised": {
+   "central": {
+    "m": "sa-bai dee mai khrap",
+    "f": "sa-bai dee mai kha"
+   },
+   "khamMueang": {
+    "m": "sa-bai dee bor",
+    "f": "sa-bai dee bor"
+   }
+  },
+  "confidence": "high",
+  "reviewed": false
+ },
+ {
+  "id": "say-sorry",
+  "type": "say",
+  "stage": "start",
+  "slot": "none",
+  "english": "Excuse me / sorry",
+  "centralThai": {
+   "m": "ขอโทษครับ",
+   "f": "ขอโทษค่ะ"
+  },
+  "khamMueang": {
+   "m": "สูมาเต๊อะคับ",
+   "f": "สูมาเต๊อะเจ้า"
+  },
+  "romanised": {
+   "central": {
+    "m": "kho thot khrap",
+    "f": "kho thot kha"
+   },
+   "khamMueang": {
+    "m": "soo-ma ter khap",
+    "f": "soo-ma ter jao"
+   }
+  },
+  "confidence": "medium",
+  "reviewed": false
+ },
+ {
+  "id": "say-little-northern",
+  "type": "say",
+  "stage": "start",
+  "slot": "none",
+  "english": "I only speak a little Northern Thai",
+  "centralThai": {
+   "m": "พูดภาษาเหนือได้นิดหน่อยครับ",
+   "f": "พูดภาษาเหนือได้นิดหน่อยค่ะ"
+  },
+  "khamMueang": null,
+  "romanised": {
+   "central": {
+    "m": "phuut phaa-saa nuea dai nit noi khrap",
+    "f": "phuut phaa-saa nuea dai nit noi kha"
+   },
+   "khamMueang": null
+  },
+  "confidence": "medium",
+  "reviewed": false
+ },
+ {
+  "id": "say-this-one",
+  "type": "say",
+  "stage": "decide",
+  "slot": "none",
+  "english": "This one, please (dish or product)",
+  "centralThai": {
+   "m": "เอาอันนี้ครับ",
+   "f": "เอาอันนี้ค่ะ"
+  },
+  "khamMueang": null,
+  "romanised": {
+   "central": {
+    "m": "ao an-nee khrap",
+    "f": "ao an-nee kha"
+   },
+   "khamMueang": null
+  },
+  "confidence": "high",
+  "reviewed": false
+ },
+ {
+  "id": "say-not-too-spicy",
+  "type": "say",
+  "stage": "decide",
+  "slot": "none",
+  "english": "Not too spicy, please",
+  "centralThai": {
+   "m": "ไม่เผ็ดมากนะครับ",
+   "f": "ไม่เผ็ดมากนะคะ"
+  },
+  "khamMueang": null,
+  "romanised": {
+   "central": {
+    "m": "mai phet mak na khrap",
+    "f": "mai phet mak na kha"
+   },
+   "khamMueang": null
+  },
+  "confidence": "high",
+  "reviewed": false
+ },
+ {
+  "id": "say-no-rush",
+  "type": "say",
+  "stage": "decide",
+  "slot": "none",
+  "english": "No rush, take your time",
+  "centralThai": {
+   "m": "ไม่ต้องรีบครับ",
+   "f": "ไม่ต้องรีบค่ะ"
+  },
+  "khamMueang": {
+   "m": "บ่าดีฟั่งคับ",
+   "f": "บ่าดีฟั่งเจ้า"
+  },
+  "romanised": {
+   "central": {
+    "m": "mai tong reep khrap",
+    "f": "mai tong reep kha"
+   },
+   "khamMueang": {
+    "m": "baa dee fang khap",
+    "f": "baa dee fang jao"
+   }
+  },
+  "confidence": "medium",
+  "reviewed": false
+ },
+ {
+  "id": "say-more-sticky-rice",
+  "type": "say",
+  "stage": "receive",
+  "slot": "none",
+  "english": "More sticky rice, please",
+  "centralThai": {
+   "m": "ขอข้าวเหนียวเพิ่มครับ",
+   "f": "ขอข้าวเหนียวเพิ่มค่ะ"
+  },
+  "khamMueang": null,
+  "romanised": {
+   "central": {
+    "m": "kho khao niao perm khrap",
+    "f": "kho khao niao perm kha"
+   },
+   "khamMueang": null
+  },
+  "confidence": "medium",
+  "reviewed": false
+ },
+ {
+  "id": "say-delicious",
+  "type": "say",
+  "stage": "receive",
+  "slot": "none",
+  "english": "Delicious!",
+  "centralThai": {
+   "m": "อร่อยครับ",
+   "f": "อร่อยค่ะ"
+  },
+  "khamMueang": {
+   "m": "ลำคับ",
+   "f": "ลำเจ้า"
+  },
+  "romanised": {
+   "central": {
+    "m": "a-roi khrap",
+    "f": "a-roi kha"
+   },
+   "khamMueang": {
+    "m": "lam khap",
+    "f": "lam jao"
+   }
+  },
+  "confidence": "high",
+  "reviewed": false
+ },
+ {
+  "id": "say-very-delicious",
+  "type": "say",
+  "stage": "receive",
+  "slot": "none",
+  "english": "Very delicious!",
+  "centralThai": {
+   "m": "อร่อยมากครับ",
+   "f": "อร่อยมากค่ะ"
+  },
+  "khamMueang": {
+   "m": "ลำขนาดคับ",
+   "f": "ลำขนาดเจ้า"
+  },
+  "romanised": {
+   "central": {
+    "m": "a-roi mak khrap",
+    "f": "a-roi mak kha"
+   },
+   "khamMueang": {
+    "m": "lam kha-nat khap",
+    "f": "lam kha-nat jao"
+   }
+  },
+  "confidence": "high",
+  "reviewed": false
+ },
+ {
+  "id": "say-so-beautiful",
+  "type": "say",
+  "stage": "explore",
+  "slot": "none",
+  "english": "So beautiful! (sweets, produce, display)",
+  "centralThai": {
+   "m": "สวยมากครับ",
+   "f": "สวยมากค่ะ"
+  },
+  "khamMueang": {
+   "m": "งามขนาด",
+   "f": "งามขนาด"
+  },
+  "romanised": {
+   "central": {
+    "m": "suay mak khrap",
+    "f": "suay mak kha"
+   },
+   "khamMueang": {
+    "m": "ngaam kha-nat",
+    "f": "ngaam kha-nat"
+   }
+  },
+  "confidence": "high",
+  "reviewed": false
+ },
+ {
+  "id": "say-how-much-this",
+  "type": "say",
+  "stage": "explore",
+  "slot": "none",
+  "english": "How much is this?",
+  "centralThai": {
+   "m": "อันนี้เท่าไหร่ครับ",
+   "f": "อันนี้เท่าไหร่คะ"
+  },
+  "khamMueang": {
+   "m": "อันนี้เต้าใดคับ",
+   "f": "อันนี้เต้าใดเจ้า"
+  },
+  "romanised": {
+   "central": {
+    "m": "an-nee thao-rai khrap",
+    "f": "an-nee thao-rai kha"
+   },
+   "khamMueang": {
+    "m": "an-nee tao dai khap",
+    "f": "an-nee tao dai jao"
+   }
+  },
+  "confidence": "medium",
+  "reviewed": false
+ },
+ {
+  "id": "say-how-much-all",
+  "type": "say",
+  "stage": "pay",
+  "slot": "none",
+  "english": "How much for everything?",
+  "centralThai": {
+   "m": "ทั้งหมดเท่าไหร่ครับ",
+   "f": "ทั้งหมดเท่าไหร่คะ"
+  },
+  "khamMueang": {
+   "m": "ตึงหมดนี่เต่าใดคับ",
+   "f": "ตึงหมดนี่เต่าใดจ้าว"
+  },
+  "romanised": {
+   "central": {
+    "m": "thang mot thao-rai khrap",
+    "f": "thang mot thao-rai kha"
+   },
+   "khamMueang": {
+    "m": "tueng mot nee tao dai khap",
+    "f": "tueng mot nee tao dai jao"
+   }
+  },
+  "confidence": "high",
+  "reviewed": false
+ },
+ {
+  "id": "say-thank-you",
+  "type": "say",
+  "stage": "pay",
+  "slot": "none",
+  "english": "Thank you",
+  "centralThai": {
+   "m": "ขอบคุณครับ",
+   "f": "ขอบคุณค่ะ"
+  },
+  "khamMueang": {
+   "m": "ยินดีคับ",
+   "f": "ยินดีเจ้า"
+  },
+  "romanised": {
+   "central": {
+    "m": "khop khun khrap",
+    "f": "khop khun kha"
+   },
+   "khamMueang": {
+    "m": "yin-dee khap",
+    "f": "yin-dee jao"
+   }
+  },
+  "confidence": "high",
+  "reviewed": false
+ },
+ {
+  "id": "say-thank-you-very-much",
+  "type": "say",
+  "stage": "leave",
+  "slot": "none",
+  "english": "Thank you very much",
+  "centralThai": {
+   "m": "ขอบคุณมากครับ",
+   "f": "ขอบคุณมากค่ะ"
+  },
+  "khamMueang": {
+   "m": "ยินดีจ๊าดนักคับ",
+   "f": "ยินดีจ๊าดนักเจ้า"
+  },
+  "romanised": {
+   "central": {
+    "m": "khop khun mak khrap",
+    "f": "khop khun mak kha"
+   },
+   "khamMueang": {
+    "m": "yin-dee jaat nak khap",
+    "f": "yin-dee jaat nak jao"
+   }
+  },
+  "confidence": "high",
+  "reviewed": false
+ },
+ {
+  "id": "say-see-you-again",
+  "type": "say",
+  "stage": "leave",
+  "slot": "none",
+  "english": "See you again",
+  "centralThai": {
+   "m": "แล้วเจอกันใหม่ครับ",
+   "f": "แล้วเจอกันใหม่ค่ะ"
+  },
+  "khamMueang": {
+   "m": "แล้วปะกั๋นใหม่เน้อ",
+   "f": "แล้วปะกั๋นใหม่เน้อ"
+  },
+  "romanised": {
+   "central": {
+    "m": "laew jer kan mai khrap",
+    "f": "laew jer kan mai kha"
+   },
+   "khamMueang": {
+    "m": "laew pa kan mai noe",
+    "f": "laew pa kan mai noe"
+   }
+  },
+  "confidence": "medium",
+  "reviewed": false
+ },
+ {
+  "id": "say-come-back",
+  "type": "say",
+  "stage": "leave",
+  "slot": "none",
+  "english": "I'll come back again",
+  "centralThai": {
+   "m": "จะมาอีกนะครับ",
+   "f": "จะมาอีกนะคะ"
+  },
+  "khamMueang": null,
+  "romanised": {
+   "central": {
+    "m": "ja ma eek na khrap",
+    "f": "ja ma eek na kha"
+   },
+   "khamMueang": null
+  },
+  "confidence": "high",
+  "reviewed": false
+ },
+ {
+  "id": "say-good-sales",
+  "type": "say",
+  "stage": "leave",
+  "slot": "none",
+  "english": "Hope you sell out today!",
+  "centralThai": {
+   "m": "ขอให้ขายดีนะครับ",
+   "f": "ขอให้ขายดีนะคะ"
+  },
+  "khamMueang": null,
+  "romanised": {
+   "central": {
+    "m": "kho hai khaai dee na khrap",
+    "f": "kho hai khaai dee na kha"
+   },
+   "khamMueang": null
+  },
+  "confidence": "medium",
+  "reviewed": false
+ },
+ {
+  "id": "ask-what-is-this",
+  "type": "ask",
+  "stage": "explore",
+  "slot": "none",
+  "english": "What is this?",
+  "centralThai": {
+   "m": "อันนี้คืออะไรครับ",
+   "f": "อันนี้คืออะไรคะ"
+  },
+  "khamMueang": {
+   "m": "อันนี้อะหยังคับ",
+   "f": "อันนี้อะหยังเจ้า"
+  },
+  "romanised": {
+   "central": {
+    "m": "an-nee khue a-rai khrap",
+    "f": "an-nee khue a-rai kha"
+   },
+   "khamMueang": {
+    "m": "an-nee a-yang khap",
+    "f": "an-nee a-yang jao"
+   }
+  },
+  "confidence": "medium",
+  "reviewed": false
+ },
+ {
+  "id": "ask-northern-name",
+  "type": "ask",
+  "stage": "explore",
+  "slot": "produce",
+  "english": "What do you call {produce} here in the North?",
+  "centralThai": {
+   "m": "{produce} ภาษาเหนือเรียกว่าอะไรครับ",
+   "f": "{produce} ภาษาเหนือเรียกว่าอะไรคะ"
+  },
+  "khamMueang": null,
+  "romanised": {
+   "central": {
+    "m": "{produce} phaa-saa nuea riak waa a-rai khrap",
+    "f": "{produce} phaa-saa nuea riak waa a-rai kha"
+   },
+   "khamMueang": null
+  },
+  "confidence": "high",
+  "reviewed": false
+ },
+ {
+  "id": "ask-how-to-eat",
+  "type": "ask",
+  "stage": "explore",
+  "slot": "dish",
+  "english": "How do you eat {dish}?",
+  "centralThai": {
+   "m": "{dish} กินยังไงครับ",
+   "f": "{dish} กินยังไงคะ"
+  },
+  "khamMueang": null,
+  "romanised": {
+   "central": {
+    "m": "{dish} kin yang-ngai khrap",
+    "f": "{dish} kin yang-ngai kha"
+   },
+   "khamMueang": null
+  },
+  "confidence": "high",
+  "reviewed": false
+ },
+ {
+  "id": "ask-made-yourself",
+  "type": "ask",
+  "stage": "explore",
+  "slot": "none",
+  "english": "Did you make this yourself?",
+  "centralThai": {
+   "m": "ทำเองเหรอครับ",
+   "f": "ทำเองเหรอคะ"
+  },
+  "khamMueang": null,
+  "romanised": {
+   "central": {
+    "m": "tham eng rer khrap",
+    "f": "tham eng rer kha"
+   },
+   "khamMueang": null
+  },
+  "confidence": "high",
+  "reviewed": false
+ },
+ {
+  "id": "ask-family-recipe",
+  "type": "ask",
+  "stage": "receive",
+  "slot": "none",
+  "english": "Is this your family recipe?",
+  "centralThai": {
+   "m": "สูตรของที่บ้านเหรอครับ",
+   "f": "สูตรของที่บ้านเหรอคะ"
+  },
+  "khamMueang": null,
+  "romanised": {
+   "central": {
+    "m": "suut khong thee baan rer khrap",
+    "f": "suut khong thee baan rer kha"
+   },
+   "khamMueang": null
+  },
+  "confidence": "medium",
+  "reviewed": false
+ },
+ {
+  "id": "ask-in-season",
+  "type": "ask",
+  "stage": "explore",
+  "slot": "none",
+  "english": "What's in season right now?",
+  "centralThai": {
+   "m": "ช่วงนี้มีผักผลไม้อะไรตามฤดูบ้างครับ",
+   "f": "ช่วงนี้มีผักผลไม้อะไรตามฤดูบ้างคะ"
+  },
+  "khamMueang": null,
+  "romanised": {
+   "central": {
+    "m": "chuang nee mee phak phon-la-mai a-rai taam rue-duu baang khrap",
+    "f": "chuang nee mee phak phon-la-mai a-rai taam rue-duu baang kha"
+   },
+   "khamMueang": null
+  },
+  "confidence": "medium",
+  "reviewed": false
+ },
+ {
+  "id": "ask-favourite",
+  "type": "ask",
+  "stage": "decide",
+  "slot": "none",
+  "english": "Which one do you like best?",
+  "centralThai": {
+   "m": "ชอบอันไหนที่สุดครับ",
+   "f": "ชอบอันไหนที่สุดคะ"
+  },
+  "khamMueang": null,
+  "romanised": {
+   "central": {
+    "m": "chop an nai thee-sut khrap",
+    "f": "chop an nai thee-sut kha"
+   },
+   "khamMueang": null
+  },
+  "confidence": "high",
+  "reviewed": false
+ },
+ {
+  "id": "ask-is-it-spicy",
+  "type": "ask",
+  "stage": "decide",
+  "slot": "dish",
+  "english": "Is {dish} spicy?",
+  "centralThai": {
+   "m": "{dish} เผ็ดไหมครับ",
+   "f": "{dish} เผ็ดไหมคะ"
+  },
+  "khamMueang": null,
+  "romanised": {
+   "central": {
+    "m": "{dish} phet mai khrap",
+    "f": "{dish} phet mai kha"
+   },
+   "khamMueang": null
+  },
+  "confidence": "high",
+  "reviewed": false
+ },
+ {
+  "id": "ask-where-from",
+  "type": "ask",
+  "stage": "explore",
+  "slot": "produce",
+  "english": "Where does {produce} come from?",
+  "centralThai": {
+   "m": "{produce} มาจากไหนครับ",
+   "f": "{produce} มาจากไหนคะ"
+  },
+  "khamMueang": null,
+  "romanised": {
+   "central": {
+    "m": "{produce} maa jaak nai khrap",
+    "f": "{produce} maa jaak nai kha"
+   },
+   "khamMueang": null
+  },
+  "confidence": "high",
+  "reviewed": false
+ },
+ {
+  "id": "ask-how-long-selling",
+  "type": "ask",
+  "stage": "pay",
+  "slot": "none",
+  "english": "Have you been selling here a long time?",
+  "centralThai": {
+   "m": "ขายที่นี่มานานแล้วเหรอครับ",
+   "f": "ขายที่นี่มานานแล้วเหรอคะ"
+  },
+  "khamMueang": null,
+  "romanised": {
+   "central": {
+    "m": "khaai thee-nee maa naan laew rer khrap",
+    "f": "khaai thee-nee maa naan laew rer kha"
+   },
+   "khamMueang": null
+  },
+  "confidence": "medium",
+  "reviewed": false
+ },
+ {
+  "id": "ask-have-you-eaten",
+  "type": "ask",
+  "stage": "leave",
+  "slot": "none",
+  "english": "Have you eaten yet? (friendly Northern greeting)",
+  "centralThai": {
+   "m": "กินข้าวหรือยังครับ",
+   "f": "กินข้าวหรือยังคะ"
+  },
+  "khamMueang": {
+   "m": "กิ๋นข้าวแล้วกา",
+   "f": "กิ๋นข้าวแล้วกา"
+  },
+  "romanised": {
+   "central": {
+    "m": "kin khao rue yang khrap",
+    "f": "kin khao rue yang kha"
+   },
+   "khamMueang": {
+    "m": "kin khao laew ka",
+    "f": "kin khao laew ka"
+   }
+  },
+  "confidence": "medium",
+  "reviewed": false
+ },
+ {
+  "id": "ask-secret-ingredient",
+  "type": "ask",
+  "stage": "receive",
+  "slot": "none",
+  "english": "What's the secret ingredient? I won't tell anyone!",
+  "centralThai": {
+   "m": "เคล็ดลับคืออะไรครับ ไม่บอกใครหรอก",
+   "f": "เคล็ดลับคืออะไรคะ ไม่บอกใครหรอก"
+  },
+  "khamMueang": null,
+  "romanised": {
+   "central": {
+    "m": "khlet-lap khue a-rai khrap, mai bok khrai rok",
+    "f": "khlet-lap khue a-rai kha, mai bok khrai rok"
+   },
+   "khamMueang": null
+  },
+  "tone": "playful",
+  "confidence": "medium",
+  "reviewed": false
+ },
+ {
+  "id": "ask-farang-spicy",
+  "type": "ask",
+  "stage": "explore",
+  "slot": "dish",
+  "english": "Can a farang handle {dish}? (spice joke about yourself)",
+  "centralThai": {
+   "m": "{dish} ฝรั่งกินได้ไหมครับ",
+   "f": "{dish} ฝรั่งกินได้ไหมคะ"
+  },
+  "khamMueang": null,
+  "romanised": {
+   "central": {
+    "m": "{dish} farang kin dai mai khrap",
+    "f": "{dish} farang kin dai mai kha"
+   },
+   "khamMueang": null
+  },
+  "tone": "playful",
+  "confidence": "medium",
+  "reviewed": false
+ },
+ {
+  "id": "ask-become-local",
+  "type": "ask",
+  "stage": "receive",
+  "slot": "none",
+  "english": "If I eat this every day, will I become a Northerner?",
+  "centralThai": {
+   "m": "ถ้ากินทุกวัน จะเป็นคนเมืองไหมครับ",
+   "f": "ถ้ากินทุกวัน จะเป็นคนเมืองไหมคะ"
+  },
+  "khamMueang": null,
+  "romanised": {
+   "central": {
+    "m": "thaa kin thuk wan, ja pen khon mueang mai khrap",
+    "f": "thaa kin thuk wan, ja pen khon mueang mai kha"
+   },
+   "khamMueang": null
+  },
+  "tone": "playful",
+  "confidence": "medium",
+  "reviewed": false
+ },
+ {
+  "id": "ask-what-family-eats",
+  "type": "ask",
+  "stage": "explore",
+  "slot": "none",
+  "english": "Which one does your family eat at home?",
+  "centralThai": {
+   "m": "อันไหนที่บ้านชอบกินที่สุดครับ",
+   "f": "อันไหนที่บ้านชอบกินที่สุดคะ"
+  },
+  "khamMueang": null,
+  "romanised": {
+   "central": {
+    "m": "an nai thee baan chop kin thee-sut khrap",
+    "f": "an nai thee baan chop kin thee-sut kha"
+   },
+   "khamMueang": null
+  },
+  "tone": "playful",
+  "confidence": "high",
+  "reviewed": false
+ },
+ {
+  "id": "ask-teach-me",
+  "type": "ask",
+  "stage": "receive",
+  "slot": "dish",
+  "english": "Could you teach me to make {dish}?",
+  "centralThai": {
+   "m": "สอนทำ{dish}ได้ไหมครับ",
+   "f": "สอนทำ{dish}ได้ไหมคะ"
+  },
+  "khamMueang": null,
+  "romanised": {
+   "central": {
+    "m": "son tham {dish} dai mai khrap",
+    "f": "son tham {dish} dai mai kha"
+   },
+   "khamMueang": null
+  },
+  "tone": "playful",
+  "confidence": "medium",
+  "reviewed": false
+ },
+ {
+  "id": "echo-lam",
+  "type": "echo",
+  "stage": "vendor-used-northern-word",
+  "slot": "word",
+  "english": "Vendor asks 'ลำก่อ?' (is it good?) -> say: 'Very delicious!'",
+  "centralThai": {
+   "m": "อร่อยมากครับ",
+   "f": "อร่อยมากค่ะ"
+  },
+  "khamMueang": {
+   "m": "ลำขนาดคับ",
+   "f": "ลำขนาดเจ้า"
+  },
+  "romanised": {
+   "central": {
+    "m": "a-roi mak khrap",
+    "f": "a-roi mak kha"
+   },
+   "khamMueang": {
+    "m": "lam kha-nat khap",
+    "f": "lam kha-nat jao"
+   }
+  },
+  "trigger": [
+   "ลำก่อ",
+   "ลำ"
+  ],
+  "confidence": "high",
+  "reviewed": false
+ },
+ {
+  "id": "echo-sao",
+  "type": "echo",
+  "stage": "vendor-used-northern-word",
+  "slot": "word",
+  "english": "Vendor says a price with 'ซาว' (= 20) -> repeat it: 'Twenty baht!'",
+  "centralThai": {
+   "m": "ยี่สิบบาทครับ",
+   "f": "ยี่สิบบาทค่ะ"
+  },
+  "khamMueang": {
+   "m": "ซาวบาทคับ",
+   "f": "ซาวบาทเจ้า"
+  },
+  "romanised": {
+   "central": {
+    "m": "yee-sip baat khrap",
+    "f": "yee-sip baat kha"
+   },
+   "khamMueang": {
+    "m": "sao baat khap",
+    "f": "sao baat jao"
+   }
+  },
+  "trigger": [
+   "ซาว",
+   "ซาวบาท"
+  ],
+  "confidence": "high",
+  "reviewed": false
+ },
+ {
+  "id": "echo-yindee",
+  "type": "echo",
+  "stage": "vendor-used-northern-word",
+  "slot": "word",
+  "english": "Vendor thanks you with 'ยินดีเจ้า' -> thank them back the Northern way",
+  "centralThai": {
+   "m": "ขอบคุณครับ",
+   "f": "ขอบคุณค่ะ"
+  },
+  "khamMueang": {
+   "m": "ยินดีคับ",
+   "f": "ยินดีเจ้า"
+  },
+  "romanised": {
+   "central": {
+    "m": "khop khun khrap",
+    "f": "khop khun kha"
+   },
+   "khamMueang": {
+    "m": "yin-dee khap",
+    "f": "yin-dee jao"
+   }
+  },
+  "trigger": [
+   "ยินดี",
+   "ยินดีเจ้า",
+   "ยินดีจ๊าดนัก"
+  ],
+  "confidence": "high",
+  "reviewed": false
+ },
+ {
+  "id": "echo-kin-khao",
+  "type": "echo",
+  "stage": "vendor-used-northern-word",
+  "slot": "word",
+  "english": "Vendor asks 'กิ๋นข้าวแล้วกา' (have you eaten?) -> 'Yes, I have'",
+  "centralThai": {
+   "m": "กินแล้วครับ",
+   "f": "กินแล้วค่ะ"
+  },
+  "khamMueang": {
+   "m": "กิ๋นแล้วคับ",
+   "f": "กิ๋นแล้วจ้าว"
+  },
+  "romanised": {
+   "central": {
+    "m": "kin laew khrap",
+    "f": "kin laew kha"
+   },
+   "khamMueang": {
+    "m": "kin laew khap",
+    "f": "kin laew jao"
+   }
+  },
+  "trigger": [
+   "กิ๋นข้าวแล้วกา",
+   "กิ๋นข้าวแล้วกา๋"
+  ],
+  "confidence": "high",
+  "reviewed": false
+ },
+ {
+  "id": "echo-sabai-di-bo",
+  "type": "echo",
+  "stage": "vendor-used-northern-word",
+  "slot": "word",
+  "english": "Vendor asks 'สบายดีบ๋อ' (how are you?) -> 'I'm fine'",
+  "centralThai": {
+   "m": "สบายดีครับ",
+   "f": "สบายดีค่ะ"
+  },
+  "khamMueang": {
+   "m": "สบายดีคับ",
+   "f": "สบายดีเจ้า"
+  },
+  "romanised": {
+   "central": {
+    "m": "sa-bai dee khrap",
+    "f": "sa-bai dee kha"
+   },
+   "khamMueang": {
+    "m": "sa-bai dee khap",
+    "f": "sa-bai dee jao"
+   }
+  },
+  "trigger": [
+   "สบายดีบ๋อ",
+   "สบายดีก่อ"
+  ],
+  "confidence": "high",
+  "reviewed": false
+ },
+ {
+  "id": "echo-khao-nueng",
+  "type": "echo",
+  "stage": "vendor-used-northern-word",
+  "slot": "word",
+  "english": "Vendor says 'ข้าวนึ่ง' (sticky rice) -> use the Northern word back",
+  "centralThai": {
+   "m": "ข้าวเหนียวครับ",
+   "f": "ข้าวเหนียวค่ะ"
+  },
+  "khamMueang": {
+   "m": "ข้าวนึ่งคับ",
+   "f": "ข้าวนึ่งเจ้า"
+  },
+  "romanised": {
+   "central": {
+    "m": "khao niao khrap",
+    "f": "khao niao kha"
+   },
+   "khamMueang": {
+    "m": "khao nueng khap",
+    "f": "khao nueng jao"
+   }
+  },
+  "trigger": [
+   "ข้าวนึ่ง"
+  ],
+  "confidence": "high",
+  "reviewed": false
+ },
+ {
+  "id": "echo-ma-aeo",
+  "type": "echo",
+  "stage": "vendor-used-northern-word",
+  "slot": "word",
+  "english": "Vendor asks if you came 'แอ่ว' (to visit / travel) -> 'Yes, visiting'",
+  "centralThai": {
+   "m": "มาเที่ยวครับ",
+   "f": "มาเที่ยวค่ะ"
+  },
+  "khamMueang": {
+   "m": "มาแอ่วคับ",
+   "f": "มาแอ่วเจ้า"
+  },
+  "romanised": {
+   "central": {
+    "m": "maa thiao khrap",
+    "f": "maa thiao kha"
+   },
+   "khamMueang": {
+    "m": "maa aeo khap",
+    "f": "maa aeo jao"
+   }
+  },
+  "trigger": [
+   "แอ่ว",
+   "มาแอ่ว"
+  ],
+  "confidence": "medium",
+  "reviewed": false
+ },
+ {
+  "id": "echo-muan",
+  "type": "echo",
+  "stage": "vendor-used-northern-word",
+  "slot": "word",
+  "english": "Vendor asks 'ม่วนก่อ?' (having fun?) -> 'Yes, fun!'",
+  "centralThai": {
+   "m": "สนุกครับ",
+   "f": "สนุกค่ะ"
+  },
+  "khamMueang": {
+   "m": "ม่วนคับ",
+   "f": "ม่วนเจ้า"
+  },
+  "romanised": {
+   "central": {
+    "m": "sa-nuk khrap",
+    "f": "sa-nuk kha"
+   },
+   "khamMueang": {
+    "m": "muan khap",
+    "f": "muan jao"
+   }
+  },
+  "trigger": [
+   "ม่วน",
+   "ม่วนก่อ"
+  ],
+  "confidence": "medium",
+  "reviewed": false
+ },
+ {
+  "id": "echo-bo-phet",
+  "type": "echo",
+  "stage": "vendor-used-northern-word",
+  "slot": "word",
+  "english": "Vendor asks 'เผ็ดก่อ?' / offers chilli -> 'Not spicy, please'",
+  "centralThai": {
+   "m": "ไม่เผ็ดครับ",
+   "f": "ไม่เผ็ดค่ะ"
+  },
+  "khamMueang": {
+   "m": "บ่เผ็ดคับ",
+   "f": "บ่เผ็ดเจ้า"
+  },
+  "romanised": {
+   "central": {
+    "m": "mai phet khrap",
+    "f": "mai phet kha"
+   },
+   "khamMueang": {
+    "m": "bor phet khap",
+    "f": "bor phet jao"
+   }
+  },
+  "trigger": [
+   "เผ็ดก่อ",
+   "บ่เผ็ด"
+  ],
+  "confidence": "medium",
+  "reviewed": false
+ },
+ {
+  "id": "echo-jao-yes",
+  "type": "echo",
+  "stage": "vendor-used-northern-word",
+  "slot": "word",
+  "english": "Vendor answers just 'เจ้า' (= yes, politely) -> answer 'yes' the same way",
+  "centralThai": {
+   "m": "ครับ",
+   "f": "ค่ะ"
+  },
+  "khamMueang": {
+   "m": "คับ",
+   "f": "เจ้า"
+  },
+  "romanised": {
+   "central": {
+    "m": "khrap",
+    "f": "kha"
+   },
+   "khamMueang": {
+    "m": "khap",
+    "f": "jao"
+   }
+  },
+  "trigger": [
+   "เจ้า",
+   "จ้าว"
+  ],
+  "confidence": "medium",
+  "reviewed": false
+ },
+ {
+  "id": "echo-kad-luang",
+  "type": "echo",
+  "stage": "vendor-used-northern-word",
+  "slot": "word",
+  "english": "Vendor says 'กาดหลวง' (Warorot market) -> use the local name back",
+  "centralThai": {
+   "m": "ตลาดวโรรสครับ",
+   "f": "ตลาดวโรรสค่ะ"
+  },
+  "khamMueang": {
+   "m": "กาดหลวง",
+   "f": "กาดหลวง"
+  },
+  "romanised": {
+   "central": {
+    "m": "ta-laat wa-ro-rot khrap",
+    "f": "ta-laat wa-ro-rot kha"
+   },
+   "khamMueang": {
+    "m": "kaat luang",
+    "f": "kaat luang"
+   }
+  },
+  "trigger": [
+   "กาด",
+   "กาดหลวง"
+  ],
+  "confidence": "high",
+  "reviewed": false
+ }
+]

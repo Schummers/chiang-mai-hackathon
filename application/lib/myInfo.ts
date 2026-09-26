@@ -1,4 +1,4 @@
-import { EMPTY_MY_INFO, type Allergy, type Diet, type MyInfo, type Spice } from "./engine/types";
+import { EMPTY_MY_INFO, type Allergy, type Diet, type MyInfo, type Particle, type Spice } from "./engine/types";
 import { browserStorage } from "./storage";
 
 const KEY = "u-mueang:my-info";
@@ -22,6 +22,14 @@ export const DIETS: { value: Diet; label: string }[] = [
   { value: "halal", label: "Halal" },
 ];
 
+/** How the Visitor ends a polite sentence in Moves: ครับ/คับ or ค่ะ/เจ้า. */
+export const PARTICLES: { value: Particle; label: string }[] = [
+  { value: "m", label: "Man (khrap)" },
+  { value: "f", label: "Woman (kha)" },
+];
+
+export const particleOf = (info: MyInfo): Particle => (info.speaker === "f" ? "f" : "m");
+
 /** Stored on the phone only. Any storage problem means "no info", never a crash. */
 export function loadMyInfo(storage = browserStorage()): MyInfo {
   try {
@@ -32,6 +40,7 @@ export function loadMyInfo(storage = browserStorage()): MyInfo {
       allergies: Array.isArray(parsed.allergies) ? parsed.allergies : [],
       spice: parsed.spice ?? null,
       diet: Array.isArray(parsed.diet) ? parsed.diet : [],
+      ...(parsed.speaker === "f" && { speaker: "f" as const }),
     };
   } catch {
     return EMPTY_MY_INFO;
@@ -54,6 +63,7 @@ export function mergeMyInfo(current: MyInfo, detected: Partial<MyInfo>): { info:
     allergies: union(current.allergies, detected.allergies),
     spice: detected.spice ?? current.spice,
     diet: union(current.diet, detected.diet),
+    ...(current.speaker && { speaker: current.speaker }),
   };
   return { info, changed: JSON.stringify(info) !== JSON.stringify(current) };
 }

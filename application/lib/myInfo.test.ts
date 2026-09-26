@@ -1,5 +1,5 @@
 import { beforeEach, describe, expect, it } from "vitest";
-import { chipLabels, loadMyInfo, mergeMyInfo, saveMyInfo } from "./myInfo";
+import { chipLabels, loadMyInfo, mergeMyInfo, particleOf, saveMyInfo } from "./myInfo";
 import { EMPTY_MY_INFO, type MyInfo } from "./engine/types";
 
 function fakeStorage(): Storage {
@@ -56,6 +56,16 @@ describe("my info", () => {
   it("reports no change when the info was already known", () => {
     const current: MyInfo = { allergies: ["peanuts"], spice: null, diet: [] };
     expect(mergeMyInfo(current, { allergies: ["peanuts"] }).changed).toBe(false);
+  });
+
+  it("keeps the particle through save, load and merge; m by default", () => {
+    expect(particleOf(EMPTY_MY_INFO)).toBe("m");
+    const info: MyInfo = { ...EMPTY_MY_INFO, speaker: "f" };
+    saveMyInfo(info, storage);
+    expect(loadMyInfo(storage).speaker).toBe("f");
+    expect(mergeMyInfo(info, { allergies: ["peanuts"] }).info.speaker).toBe("f");
+    storage.setItem("u-mueang:my-info", JSON.stringify({ speaker: "x" }));
+    expect(particleOf(loadMyInfo(storage))).toBe("m");
   });
 
   it("lists only the selected chips", () => {

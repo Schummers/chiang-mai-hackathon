@@ -31,10 +31,22 @@ Card text is English whatever the Visitor's language: the pack is English. The b
 
 Allergy and diet flags: first the overlay's allergens and a keyword check on ingredients (deterministic, `cards.ts` and `lib/cardFlag.ts`), then the model's reading. Always phrased as a risk to check with the Vendor.
 
+## How a Move is chosen
+
+Moves (`people/jonathan/moves/moves.json`, copied to `lib/context/moves.json` by `scripts/build-moves.mjs`, `moment` renamed `stage`) are phrases the Visitor says themselves. The model only returns `stage`; `pickMove` in `lib/context/moves.ts` does the rest:
+
+1. The card carries an allergy or diet flag: no Move.
+2. Vendor Turn whose raw transcript contains a Move's `trigger` word: that Echo (longest trigger wins; a trigger inside a dish or produce name, like ลำ in ลำไย, does not count).
+3. Otherwise a Move of that Stage: Ask before Say it from explore to pay (at leave, Say it first so the thank you comes before any question), a Move whose Slot fills before one without, then file order. A Move with a `{dish}` or `{produce}` Slot is skipped when the Mention has no pack entry.
+4. A Move already shown in the conversation (`Message.move`) never comes back. Nothing fits: null.
+
+Only `reviewed` Moves go on stage, or `confidence: "high"` ones while no review is in: switch `USE_REVIEW` in `moves.ts` once `REVIEW.md` is back. The particle variant (`m`/`f`) comes from My info's `speaker`.
+
 ## Changing it
 
 - Luke updates his JSON -> run `node scripts/build-pack.mjs` in `application/`, commit `pack.json`.
 - A demo dish needs a better card -> edit `overlay.ts` (keyed by pack id).
 - Prompt rules -> `prompt.ts`. The system part is stable per month so it could be cached (no cache configured yet in `gemini.ts`); the per-Turn part is in `turnPrompt`.
-- Tests: `lib/context/cards.test.ts`, `lib/cardFlag.test.ts`.
+- Moves change -> edit `people/jonathan/moves/moves.json` (set `"reviewed": true` per Move after review), run `node scripts/build-moves.mjs`, commit `moves.json`.
+- Tests: `lib/context/cards.test.ts`, `lib/context/moves.test.ts`, `lib/cardFlag.test.ts`.
 - `build-pack.mjs` does not validate Luke's JSON: a missing field ends up as `null` or crashes the script. Check `git diff lib/context/pack.json` after a rebuild.

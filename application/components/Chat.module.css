@@ -1,0 +1,108 @@
+.row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  max-width: 100%;
+}
+
+.you {
+  align-self: flex-end;
+  flex-direction: row-reverse;
+}
+
+.them {
+  align-self: flex-start;
+}
+
+.bubble {
+  max-width: min(86%, 380px);
+  padding: 12px 14px;
+  border-radius: 18px;
+}
+
+.you .bubble {
+  background: var(--you-wash);
+  border-bottom-right-radius: 6px;
+}
+
+.them .bubble {
+  background: var(--them-wash);
+  border-bottom-left-radius: 6px;
+}
+
+.big {
+  font-size: 18px;
+  line-height: 25px;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.big.thai {
+  font-family: var(--f-th);
+  font-size: 20px;
+  line-height: 30px;
+}
+
+.small {
+  margin-top: 8px;
+  padding-top: 8px;
+  border-top: 1px solid var(--line-2);
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--ink-2);
+}
+
+.small.thai {
+  font-family: var(--f-th);
+  font-size: 15px;
+  line-height: 22px;
+}
+
+.big:is(ul),
+.small:is(ul) {
+  padding-left: 20px;
+}
+
+.big li + li {
+  margin-top: 4px;
+}
+
+.enter {
+  animation: enter 0.35s ease-out both;
+}
+
+@keyframes enter {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* Raw transcript while the turn is processed (#6 adds the running light). */
+.raw {
+  color: var(--ink-2);
+  font-style: italic;
+  font-size: 15px;
+  line-height: 22px;
+}
+
+.status {
+  font-size: 13px;
+  color: var(--ink-2);
+}
+
+.you + .status {
+  align-self: flex-end;
+}
+
+.note {
+  align-self: center;
+  text-align: center;
+  font-size: 14px;
+  color: var(--ink-2);
+  max-width: 300px;
+}

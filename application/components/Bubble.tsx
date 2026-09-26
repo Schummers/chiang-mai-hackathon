@@ -47,7 +47,7 @@ export function Bubble({ message, playing, onSpeak }: { message: Message; playin
           <PlayTool playing={playing} again={yours} />
         </div>
       </Row>
-      {message.card && <ContextCard card={message.card} />}
+      {message.card && <ContextCard card={message.card} vendorSaid={message.speaker === "vendor" ? message.translation : []} />}
     </>
   );
 }

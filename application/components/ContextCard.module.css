@@ -1,16 +1,30 @@
-.card {
+/* L2w: white inside a 3px woven frame. The only woven thing on screen (DESIGN.md §4). */
+.frame {
   align-self: stretch;
-  background: var(--white);
-  box-shadow: var(--sh-2);
-  border-radius: var(--r);
-  padding: 12px 14px 14px;
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
+  padding: 3px;
+  border-radius: 16px;
+  background: var(--weave-frame);
   animation: slide 0.4s ease-out 0.35s both;
 }
 
+.card {
+  background: var(--white);
+  border-radius: 13px;
+  padding: 14px 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Conflict with About you: a 2px ink ring inside the weave. Never red, name never struck through. */
+.card.conflict {
+  box-shadow: inset 0 0 0 2px var(--ink);
+}
+
 .kicker {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 6px;
   font-size: 11px;
   line-height: 14px;
   font-weight: 800;
@@ -20,39 +34,42 @@
 }
 
 .name {
-  font-size: 18px;
-  line-height: 23px;
+  font-size: 17px;
+  line-height: 22px;
   font-weight: 800;
 }
 
 .thai {
   font-family: var(--f-th);
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 500;
   color: var(--ink-2);
 }
 
 .desc {
-  font-size: 15px;
-  line-height: 21px;
+  margin-top: 4px;
+  font-size: 14px;
+  line-height: 20px;
   color: var(--ink-2);
 }
 
 .facts {
   display: flex;
   flex-wrap: wrap;
-  gap: 6px 16px;
-  font-size: 14px;
+  gap: 6px 12px;
+  margin-top: 10px;
+  font-size: 13px;
+  line-height: 18px;
   font-weight: 700;
-  margin-top: 2px;
 }
 
 .facts > span {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
+  gap: 5px;
 }
 
+/* Heat meter: 3 bars 6x11, on = ink, off = line-2. */
 .heat {
   display: inline-flex;
   gap: 2px;
@@ -60,8 +77,8 @@
 }
 
 .heat b {
-  width: 7px;
-  height: 12px;
+  width: 6px;
+  height: 11px;
   border-radius: 2px;
   background: var(--line-2);
 }
@@ -73,27 +90,33 @@
 .local {
   display: flex;
   gap: 6px;
-  font-size: 14px;
-  line-height: 20px;
+  margin-top: 8px;
+  font-size: 13px;
+  line-height: 18px;
+  color: var(--ink-2);
 }
 
-.local svg,
-.warning svg {
+.local svg {
   flex: none;
   margin-top: 2px;
 }
 
-/* Allergy flag: a risk to check, in ink. No red, no green (DESIGN.md). */
-.warning {
+.flag {
   display: flex;
+  align-items: center;
   gap: 8px;
-  margin-top: 4px;
-  padding: 10px 12px;
+  margin-top: 10px;
+  padding: 8px 12px;
   border-radius: 10px;
-  box-shadow: inset 0 0 0 2px var(--ink);
-  font-size: 15px;
-  line-height: 21px;
-  font-weight: 700;
+  background: var(--ink);
+  color: var(--white);
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 800;
+}
+
+.flag svg {
+  flex: none;
 }
 
 @keyframes slide {

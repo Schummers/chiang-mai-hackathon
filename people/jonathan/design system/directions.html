@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>U Mueang Directions</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Anuphan:wght@400;500;600&family=Inter:wght@400;500;600&family=IBM+Plex+Sans+Thai:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&family=Mitr:wght@400;500;600&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/fill/style.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/bold/style.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.19.0/dist/tabler-icons.min.css">
+<style>
+  * { box-sizing: border-box; margin: 0; }
+  body { background: #ECE9E1; color: #22201A; font: 15px/1.5 Inter, system-ui, sans-serif; padding: 32px 16px 80px; }
+  .page { max-width: 1240px; margin: 0 auto; }
+  h1 { font-size: 28px; margin-bottom: 4px; }
+  .intro { color: #5F5849; max-width: 720px; margin-bottom: 32px; }
+  .intro img { width: 120px; float: right; margin-left: 16px; border-radius: 8px; }
+  nav { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 32px; }
+  nav a { padding: 8px 14px; border-radius: 999px; background: #fff; color: #22201A; text-decoration: none; font-weight: 600; font-size: 14px; }
+
+  section.dir { background: #fff; border-radius: 20px; padding: 28px; margin-bottom: 40px; }
+  .dir-head { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; margin-bottom: 20px; }
+  .dir-head h2 { font-size: 22px; }
+  .dir-head p { color: #5F5849; max-width: 620px; }
+  .tag { font-size: 12px; font-weight: 600; letter-spacing: .3px; text-transform: uppercase; color: #8C836E; }
+  .grid { display: grid; grid-template-columns: 1fr 340px 340px; gap: 28px; align-items: start; }
+  @media (max-width: 1100px) { .grid { grid-template-columns: 1fr; } .phones { justify-content: flex-start; } }
+  .spec h3 { font-size: 13px; text-transform: uppercase; letter-spacing: .4px; color: #8C836E; margin: 18px 0 8px; }
+  .spec h3:first-child { margin-top: 0; }
+  .swatches { display: grid; grid-template-columns: repeat(auto-fill, minmax(92px, 1fr)); gap: 8px; }
+  .sw { border-radius: 10px; overflow: hidden; border: 1px solid #0001; font-size: 11px; }
+  .sw div { height: 44px; }
+  .sw span { display: block; padding: 4px 6px; background: #fff; line-height: 1.3; }
+  .sw b { display: block; font-weight: 600; }
+  .icons { display: flex; flex-wrap: wrap; gap: 6px; }
+  .icons i { font-size: 24px; width: 44px; height: 44px; display: grid; place-items: center; border-radius: 10px; }
+  .levels { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; padding: 14px; border-radius: 12px; }
+  .levels div { height: 64px; display: grid; place-items: center; font-size: 12px; font-weight: 600; }
+  .typo p { margin-bottom: 4px; }
+
+  /* ---------- phone, themed by variables ---------- */
+  .phone { width: 340px; height: 700px; border-radius: 40px; border: 10px solid #1d1d1f; overflow: hidden; position: relative;
+    background: var(--bg-app); color: var(--text); font-family: var(--f-latin); font-size: 15px; line-height: 1.45; display: flex; flex-direction: column; }
+  .th { font-family: var(--f-thai); line-height: 1.6; }
+  .ph-top { padding: 14px 16px 10px; display: flex; align-items: center; gap: 10px; background: var(--header-bg); color: var(--header-fg); }
+  .ph-top .mark { width: 32px; height: 32px; border-radius: 8px; background: var(--accent); display: grid; place-items: center; color: #fff; font-family: var(--f-thai); font-weight: 600; }
+  .ph-top .t { font-weight: 600; font-size: 16px; line-height: 1.2; }
+  .ph-top .s { font-size: 12px; opacity: .75; }
+  .ph-top .right { margin-left: auto; font-size: 22px; }
+  .stream { flex: 1; overflow-y: auto; padding-bottom: 12px; padding: 12px 14px 0; display: flex; flex-direction: column; gap: 10px; }
+  .b { max-width: 88%; padding: 10px 13px; border-radius: var(--r-bubble); }
+  .b.me { align-self: flex-end; background: var(--bg-visitor); color: var(--visitor-fg); border: var(--bubble-border); }
+  .b.thai { align-self: flex-end; background: var(--bg-vendor); border: var(--bubble-border); }
+  .b.thai .th { font-size: 19px; color: var(--thai-fg); font-weight: 500; }
+  .b.them { align-self: flex-start; background: var(--bg-vendor); border: var(--bubble-border); }
+  .b.them .th { font-size: 16px; color: var(--thai-fg); }
+  .b .tr { font-size: 14px; color: var(--text); margin-top: 4px; }
+  .meta { font-size: 11px; color: var(--muted); font-weight: 500; letter-spacing: .2px; margin-bottom: 2px; }
+  .row { display: flex; gap: 6px; margin-top: 8px; }
+  .btn { display: inline-flex; align-items: center; gap: 6px; padding: 7px 12px; border-radius: 999px; font-weight: 600; font-size: 13px; font-family: var(--f-latin); }
+  .btn i { font-size: 16px; }
+  .btn.pri { background: var(--accent); color: #fff; }
+  .btn.sec { border: 1.5px solid var(--accent); color: var(--accent); background: transparent; }
+  .card { background: var(--l1-bg); border: var(--l1-border); box-shadow: var(--l1-shadow); border-radius: var(--r-card); padding: 11px 12px; }
+  .card .hd { display: flex; align-items: center; gap: 8px; }
+  .card .hd i { font-size: 22px; color: var(--accent); }
+  .card .nm { font-weight: 600; font-size: 15px; line-height: 1.2; }
+  .card .nm .th { font-weight: 500; font-size: 14px; color: var(--muted); display: block; line-height: 1.4; }
+  .card p { font-size: 13px; margin: 6px 0 8px; color: var(--text-2); }
+  .chips { display: flex; gap: 6px; flex-wrap: wrap; align-items: center; }
+  .chip { display: inline-flex; align-items: center; gap: 4px; font-size: 12px; font-weight: 600; padding: 3px 8px; border-radius: 999px; background: var(--bg-sunken); color: var(--text-2); }
+  .chip i { font-size: 14px; }
+  .chip.ok { background: var(--ok-bg); color: var(--ok); }
+  .chip.bad { background: var(--bad-bg); color: var(--bad); }
+  .chip.spice { color: var(--accent); background: var(--accent-soft); }
+  .follow { align-self: flex-start; border: 1.5px dashed var(--follow); color: var(--text); border-radius: 999px; padding: 7px 12px; font-size: 13px; display: flex; gap: 6px; align-items: center; }
+  .follow i { font-size: 17px; color: var(--follow); }
+  .dock { padding: 12px 16px 22px; display: flex; align-items: center; justify-content: space-between; background: var(--dock-bg); border-top: var(--dock-border); }
+  .dock .side { width: 44px; height: 44px; border-radius: 999px; display: grid; place-items: center; font-size: 22px; color: var(--text-2); background: var(--bg-sunken); }
+  .mic { width: 72px; height: 72px; border-radius: 999px; background: var(--accent); color: #fff; display: grid; place-items: center; font-size: 32px; box-shadow: var(--mic-shadow); outline: var(--mic-ring); outline-offset: 4px; }
+
+  /* show mode */
+  .show { background: var(--bg-show); }
+  .show .frame { margin: 18px 16px 0; border: var(--frame); border-radius: 24px; padding: 22px 18px; position: relative; background: var(--frame-bg); }
+  .show .frame::after { content: ""; position: absolute; left: 28px; bottom: -16px; width: 22px; height: 22px; background: var(--frame-bg);
+    border-left: var(--frame); border-bottom: var(--frame); transform: skewY(-35deg); }
+  .show .big { font-size: 26px; font-weight: 600; line-height: 1.5; color: var(--show-fg); }
+  .show .hint { font-size: 13px; color: var(--muted); margin-top: 10px; }
+  .show .play { margin-top: 14px; }
+  .sheet { margin-top: auto; padding-top: 22px; background: var(--l3-bg); box-shadow: var(--l3-shadow); border-radius: 22px 22px 0 0; padding: 16px 14px 22px; }
+  .sheet .lbl { font-size: 13px; color: var(--muted); margin-bottom: 10px; font-family: var(--f-thai); }
+  .pill { display: block; width: 100%; text-align: left; padding: 9px 16px; border-radius: var(--r-pill); border: var(--pill-border); background: var(--pill-bg); color: var(--pill-fg); font-family: var(--f-thai); font-size: 18px; font-weight: 500; margin-bottom: 7px; line-height: 1.4; }
+  .sheet .foot { display: flex; align-items: center; justify-content: space-between; margin-top: 6px; }
+  .sheet .foot .mic { width: 56px; height: 56px; font-size: 26px; }
+  .sheet .credit { font-size: 11px; color: var(--muted); }
+  .phones { display: contents; }
+  .cap { font-size: 12px; color: #8C836E; text-align: center; margin-top: 8px; }
+
+  /* ---------- Direction A: Sa Paper ---------- */
+  .A { --bg-app:#FAF8F2; --bg-sunken:#F1EDE2; --bg-show:#FDFCF8; --header-bg:transparent; --header-fg:#2B3263;
+    --text:#2B3263; --text-2:#4E5684; --muted:#6F77A0; --accent:#AA523A; --accent-soft:#F5E4DD;
+    --bg-visitor:#E1E3EE; --visitor-fg:#2B3263; --bg-vendor:#F5E4DD; --thai-fg:#733627; --bubble-border:none;
+    --l1-bg:#FDFCF8; --l1-border:1px solid #EAE4D5; --l1-shadow:0 1px 2px rgb(43 50 99 / .06);
+    --l3-bg:#fff; --l3-shadow:0 -8px 24px rgb(43 50 99 / .14);
+    --ok:#3F6B4E; --ok-bg:#E6EFE8; --bad:#B3261E; --bad-bg:#FBE9E7; --follow:#6F77A0;
+    --dock-bg:#FAF8F2; --dock-border:1px solid #EAE4D5; --mic-shadow:0 4px 12px rgb(170 82 58 / .35); --mic-ring:3px solid #EBC6B8;
+    --frame:2px solid #2B3263; --frame-bg:#FDFCF8; --show-fg:#2B3263;
+    --pill-border:1.5px solid #AA523A; --pill-bg:#FBF1ED; --pill-fg:#733627;
+    --r-bubble:20px; --r-card:12px; --r-pill:999px;
+    --f-thai:'Anuphan','Noto Sans Thai',sans-serif; --f-latin:'Inter',system-ui,sans-serif; }
+
+  /* ---------- Direction B: Mor Hom ---------- */
+  .B { --bg-app:#F5F6FA; --bg-sunken:#E9EBF3; --bg-show:#FFFFFF; --header-bg:#2B3263; --header-fg:#fff;
+    --text:#141833; --text-2:#3A4172; --muted:#6F77A0; --accent:#AA523A; --accent-soft:#FBF1ED;
+    --bg-visitor:#2B3263; --visitor-fg:#fff; --bg-vendor:#FFFFFF; --thai-fg:#2B3263; --bubble-border:1px solid #DDE0EC;
+    --l1-bg:#FFFFFF; --l1-border:1px solid #DDE0EC; --l1-shadow:0 2px 6px rgb(20 24 51 / .06);
+    --l3-bg:#fff; --l3-shadow:0 -10px 30px rgb(20 24 51 / .18);
+    --ok:#2F6B45; --ok-bg:#E3F0E7; --bad:#B3261E; --bad-bg:#FCE8E6; --follow:#2B3263;
+    --dock-bg:#fff; --dock-border:1px solid #DDE0EC; --mic-shadow:0 6px 16px rgb(170 82 58 / .4); --mic-ring:none;
+    --frame:3px solid #2B3263; --frame-bg:#fff; --show-fg:#141833;
+    --pill-border:none; --pill-bg:#2B3263; --pill-fg:#fff;
+    --r-bubble:16px; --r-card:10px; --r-pill:14px;
+    --f-thai:'IBM Plex Sans Thai',sans-serif; --f-latin:'IBM Plex Sans',system-ui,sans-serif; }
+  .B .b.me .meta { color: #C3C7DC; }
+
+  /* ---------- Direction C: Terracotta Market ---------- */
+  .C { --bg-app:#F4EBDD; --bg-sunken:#EADCC7; --bg-show:#F9F1E4; --header-bg:#AA523A; --header-fg:#fff;
+    --text:#2B3263; --text-2:#3A4172; --muted:#7A6E5C; --accent:#AA523A; --accent-soft:#F5DCD1;
+    --bg-visitor:#FFFFFF; --visitor-fg:#2B3263; --bg-vendor:#F9DCCF; --thai-fg:#57291E; --bubble-border:2px solid #2B3263;
+    --l1-bg:#FFFBF4; --l1-border:2px solid #2B3263; --l1-shadow:3px 3px 0 #2B3263;
+    --l3-bg:#FFFBF4; --l3-shadow:0 -3px 0 #2B3263;
+    --ok:#2F6B45; --ok-bg:#DDEBDD; --bad:#B3261E; --bad-bg:#F8D9D4; --follow:#AA523A;
+    --dock-bg:#F4EBDD; --dock-border:2px solid #2B3263; --mic-shadow:3px 3px 0 #2B3263; --mic-ring:none;
+    --frame:3px solid #2B3263; --frame-bg:#FFFBF4; --show-fg:#2B3263;
+    --pill-border:2px solid #2B3263; --pill-bg:#F9DCCF; --pill-fg:#57291E;
+    --r-bubble:18px; --r-card:14px; --r-pill:16px;
+    --f-thai:'Mitr',sans-serif; --f-latin:'Nunito',system-ui,sans-serif; }
+  .C .mic { border: 2px solid #2B3263; }
+  .C .ph-top .mark { background: #2B3263; }
+  .C .stream { background-image: repeating-linear-gradient(45deg, #AA523A08 0 6px, transparent 6px 12px); }
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="intro">
+    <img src="WhatsApp Image 2026-09-26 at 22.03.43.jpeg" alt="U Mueang logo">
+    <h1>อู้เมือง, 3 visual directions</h1>
+    <p>Same logo, same palette roots (Mor Hom indigo, clay red, Sa paper), three ways of using them. Each direction shows its tokens, icon set, card levels, then the conversation screen and the vendor "show mode". Pick one (or mix: "A with C's cards"), then DESIGN.md gets written from it.</p>
+  </div>
+  <nav><a href="#A">A. Sa Paper</a><a href="#B">B. Mor Hom</a><a href="#C">C. Terracotta Market</a></nav>
+  <div id="root"></div>
+</div>
+
+<script>
+const DIRS = [
+  { id: 'A', name: 'A. Sa Paper', tag: 'Calm, craft, closest to the logo',
+    desc: 'Warm paper background, indigo text, clay reserved for Thai and actions. Soft, flat cards. Anuphan + Inter. Phosphor icons (regular). Feels handmade and quiet; the vendor side reads warm, yours reads cool.',
+    fonts: ['Anuphan (Thai)', 'Inter (Latin)'], iconLib: 'Phosphor, regular / fill', ic: w => `ph${w ? '-' + w : ''} ph-`,
+    icons: ['microphone', 'speaker-high', 'arrows-out', 'camera', 'bowl-food', 'pepper', 'warning-circle', 'check-circle', 'chat-circle-dots', 'sliders-horizontal'],
+    swatches: [['Paper', '#FAF8F2'], ['Paper deep', '#F1EDE2'], ['Indigo 700', '#2B3263'], ['Indigo 100', '#E1E3EE'], ['Clay 500', '#AA523A'], ['Clay 100', '#F5E4DD'], ['Success', '#3F6B4E'], ['Danger', '#B3261E']],
+  },
+  { id: 'B', name: 'B. Mor Hom', tag: 'Crisp, high contrast, utility',
+    desc: 'Indigo header and your bubbles in solid indigo, cool off-white background, clean white cards. Clay only for the mic and primary actions. IBM Plex Sans Thai + Plex Sans. Tabler icons (stroke). Most legible in sunlight, least "crafty".',
+    fonts: ['IBM Plex Sans Thai', 'IBM Plex Sans'], iconLib: 'Tabler, outline 1.5', ic: () => 'ti ti-',
+    icons: ['microphone', 'volume', 'arrows-maximize', 'camera', 'bowl', 'pepper', 'alert-circle', 'circle-check', 'message-circle', 'adjustments-horizontal'],
+    swatches: [['Mist', '#F5F6FA'], ['White', '#FFFFFF'], ['Indigo 700', '#2B3263'], ['Indigo 900', '#141833'], ['Clay 500', '#AA523A'], ['Line', '#DDE0EC'], ['Success', '#2F6B45'], ['Danger', '#B3261E']],
+  },
+  { id: 'C', name: 'C. Terracotta Market', tag: 'Bold, playful, memorable on stage',
+    desc: 'Clay header, sand background with a faint weave, 2px indigo outlines and hard offset shadows echoing the logo\'s basket rim. Mitr (rounded Thai) + Nunito. Phosphor bold icons. Most personality for the demo, busiest on screen.',
+    fonts: ['Mitr (Thai)', 'Nunito (Latin)'], iconLib: 'Phosphor, bold', ic: () => 'ph-bold ph-',
+    icons: ['microphone', 'speaker-high', 'arrows-out', 'camera', 'bowl-food', 'pepper', 'warning-circle', 'check-circle', 'chat-circle-dots', 'sliders-horizontal'],
+    swatches: [['Sand', '#F4EBDD'], ['Cream', '#FFFBF4'], ['Indigo 700', '#2B3263'], ['Clay 500', '#AA523A'], ['Clay 100', '#F9DCCF'], ['Clay 800', '#57291E'], ['Success', '#2F6B45'], ['Danger', '#B3261E']],
+  },
+];
+
+const I = (d, n, alt) => `<i class="${d.ic()}${alt && d.id !== 'B' ? alt : n}"></i>`;
+const map = { speaker: ['speaker-high', 'volume'], show: ['arrows-out', 'arrows-maximize'], bowl: ['bowl-food', 'bowl'], pepper: ['pepper', 'pepper'],
+  warn: ['warning-circle', 'alert-circle'], ok: ['check-circle', 'circle-check'], chat: ['chat-circle-dots', 'message-circle'], mic: ['microphone', 'microphone'],
+  cam: ['camera', 'camera'], prefs: ['sliders-horizontal', 'adjustments-horizontal'], back: ['caret-left', 'chevron-left'], chicken: ['bird', 'feather'], pig: ['warning', 'alert-triangle'] };
+const ic = (d, k) => `<i class="${d.ic()}${map[k][d.id === 'B' ? 1 : 0]}"></i>`;
+
+function chat(d) {
+  return `<div class="phone ${d.id}">
+    <div class="ph-top"><div class="mark">อู้</div><div><div class="t">Kad Luang market</div><div class="s">No pork · peanut allergy</div></div><div class="right">${ic(d, 'prefs')}</div></div>
+    <div class="stream">
+      <div class="b me"><div class="meta">YOU</div>Which of these curries is the least spicy? No pork, and I'm allergic to peanuts.</div>
+      <div class="b thai"><div class="th">แกงไหนเผ็ดน้อยที่สุดครับ ไม่กินหมู แพ้ถั่วลิสงครับ</div>
+        <div class="row"><span class="btn sec">${ic(d, 'speaker')} Play</span><span class="btn pri">${ic(d, 'show')} Show vendor</span></div></div>
+      <div class="b them"><div class="meta">VENDOR</div><div class="th">ฮังเลไม่เผ็ด แต่มีหมูนะ ลองแกงแคไก่ดีกว่า</div>
+        <div class="tr">Hang lay isn't spicy, but it has pork. Try gaeng khae with chicken instead.</div></div>
+      <div class="card"><div class="hd">${ic(d, 'bowl')}<div class="nm">Gaeng khae gai<span class="th">แกงแคไก่</span></div></div>
+        <p>Northern jungle curry, chicken and local greens, no coconut milk.</p>
+        <div class="chips"><span class="chip spice">${ic(d, 'pepper')}${ic(d, 'pepper')} Medium</span><span class="chip ok">${ic(d, 'ok')} No pork, no peanuts</span></div></div>
+      <div class="card"><div class="hd">${ic(d, 'bowl')}<div class="nm">Gaeng hang lay<span class="th">แกงฮังเล</span></div></div>
+        <div class="chips" style="margin-top:8px"><span class="chip spice">${ic(d, 'pepper')} Mild</span><span class="chip bad">${ic(d, 'warn')} Contains pork</span></div></div>
+      <div class="follow">${ic(d, 'chat')} Ask: how long have you run this stall?</div>
+    </div>
+    <div class="dock"><span class="side">${ic(d, 'cam')}</span><span class="mic">${ic(d, 'mic')}</span><span class="side">${ic(d, 'chat')}</span></div>
+  </div><div class="cap">Conversation</div>`;
+}
+
+function show(d) {
+  return `<div class="phone show ${d.id}">
+    <div class="ph-top" style="background:transparent;color:var(--text)"><span style="font-size:22px">${ic(d, 'back')}</span><div class="s th" style="opacity:1;color:var(--muted)">ลูกค้าถามว่า...</div></div>
+    <div class="frame"><div class="big th">แกงไหนเผ็ดน้อยที่สุดครับ ไม่กินหมู แพ้ถั่วลิสงครับ</div>
+      <div class="hint th">กดตอบด้านล่าง หรือกดไมค์แล้วพูดได้เลย</div>
+      <div class="play"><span class="btn sec">${ic(d, 'speaker')} <span class="th">ฟังอีกครั้ง</span></span></div></div>
+    <div class="sheet"><div class="lbl">ตอบเร็ว</div>
+      <span class="pill">อันนี้ไม่เผ็ด</span><span class="pill">เผ็ดนิดหน่อย</span><span class="pill">อันนี้มีหมู</span><span class="pill">แนะนำอันนี้</span>
+      <div class="foot"><span class="credit th">แปลโดย อู้เมือง</span><span class="mic">${ic(d, 'mic')}</span></div></div>
+  </div><div class="cap">Show mode (vendor)</div>`;
+}
+
+function spec(d) {
+  const lv = `<div class="levels ${d.id}" style="background:var(--bg-app)">
+    <div style="background:var(--bg-app);border:1px dashed var(--muted);border-radius:var(--r-card);color:var(--muted)">L0 flat</div>
+    <div class="card" style="padding:0">L1 card</div>
+    <div style="background:var(--l3-bg);border:var(--l1-border);border-radius:var(--r-card);box-shadow:0 4px 12px rgb(43 50 99/.12)">L2 raised</div>
+    <div style="background:var(--l3-bg);border-radius:var(--r-card) var(--r-card) 0 0;box-shadow:var(--l3-shadow)">L3 sheet</div></div>`;
+  return `<div class="spec">
+    <h3>Palette</h3><div class="swatches">${d.swatches.map(([n, c]) => `<div class="sw"><div style="background:${c}"></div><span><b>${n}</b>${c}</span></div>`).join('')}</div>
+    <h3>Type · ${d.fonts.join(' + ')}</h3>
+    <div class="typo ${d.id}" style="font-family:var(--f-latin);color:var(--text)">
+      <p class="th" style="font-size:30px;font-weight:600">แกงแคไก่ ไม่เผ็ด</p>
+      <p style="font-size:22px;font-weight:600">Gaeng khae gai</p>
+      <p style="font-size:15px;color:var(--text-2)">Northern jungle curry, chicken and local greens.</p>
+      <p style="font-size:12px;font-weight:600;letter-spacing:.3px;color:var(--muted)">LABEL · ROMANIZATION</p></div>
+    <h3>Icons · ${d.iconLib}</h3>
+    <div class="icons ${d.id}">${d.icons.map(n => `<i class="${d.ic()}${n}" style="background:var(--bg-sunken);color:var(--text)"></i>`).join('')}</div>
+    <h3>Card levels</h3>${lv}</div>`;
+}
+
+document.getElementById('root').innerHTML = DIRS.map(d => `
+  <section class="dir" id="${d.id}">
+    <div class="dir-head"><div><div class="tag">${d.tag}</div><h2>${d.name}</h2></div><p>${d.desc}</p></div>
+    <div class="grid">${spec(d)}<div>${chat(d)}</div><div>${show(d)}</div></div>
+  </section>`).join('');
+</script>
+</body>
+</html>

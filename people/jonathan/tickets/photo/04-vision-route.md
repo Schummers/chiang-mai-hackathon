@@ -8,12 +8,14 @@
 
 **Blocked by:** 01.
 
-**Status:** in progress: real dish and sign photos, and the production check, still missing
+**Status:** in progress: a real sign photo and the production check still missing
 
 Real photos checked locally (2026-09-27, About you = peanuts + shellfish, `gemini-3.6-flash`):
 - Menu (real Chiang Mai appetizers menu): 11 dishes, Thai names and prices, the 5 shellfish dishes flagged. 7.3 s: over the 6 s target, long menus are slow.
 - Fruit (dragon fruit at a market): Produce card "Dragon fruit / แก้วมังกร", how to eat it. 2.5 s.
-- Sign: only a generated Thai image so far ("Please remove shoes", 2.1 s). Dish: not tested yet.
+- Menu, handwritten Thai-only chalkboard (som tam stall): 6 dishes out of ~35, Thai names right, shellfish, peanut and pork (no-pork diet) flags right, one weak romanisation ("Plat Thot"). 6.2 s.
+- Dish (pork and offal clear soup): Dish card, meat Pork, spice 0, diet conflict flagged. 2.5 s.
+- Sign: only a generated Thai image so far ("Please remove shoes", 2.1 s).
 
 - [ ] Route returns a valid `PhotoCard` for a menu, a dish, a fruit and a sign (4 real test photos, not committed if they show people)
 - [x] 413 over 4 MB, 502 on provider failure or missing key, same as the other routes

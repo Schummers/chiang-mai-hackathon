@@ -15,7 +15,8 @@ Dock (mic tap)
                -> systemPrompt + turnPrompt (lib/context/prompt.ts)
                -> Gemini, JSON schema TURN_SCHEMA
                -> model returns items + a "mention"
-               -> cardFor(mention) builds the card from the pack (lib/context/cards.ts)
+               -> flagCard(mention) builds the Allergy Flag card from the pack, only when it flags (lib/context/cards.ts)
+               -> pickMove(stage, mention) picks at most one Move (lib/context/moves.ts)
   <- Message added to the thread, Thai played aloud (lib/speech.ts), the other mic pulses
 ```
 
@@ -34,11 +35,12 @@ Key idea: **the model only says what it recognised** (`mention`: a dish id, a wo
 |---|---|
 | `app/page.tsx` | Renders `<Conversation />`, nothing else. Touch it as little as possible. |
 | `app/api/transcribe/route.ts` | Audio -> raw text via Gemini flash-lite. Removes the spaces flash-lite puts between Thai words. |
-| `app/api/translate/route.ts` | Raw text + context -> `TranslateResult`. Adds the Moment card on the first Turn when nothing is mentioned. Date is Chiang Mai time (UTC+7). |
+| `app/api/translate/route.ts` | Raw text + context -> `TranslateResult`: the Allergy Flag card when there is one, else a Move. Date is Chiang Mai time (UTC+7). |
 | `app/globals.css` | Design tokens (Kratip). |
 | `components/Conversation.tsx` | The one screen: wires engine, My info, language, thread and dock. |
 | `components/ChatThread.tsx`, `Bubble.tsx` | Messages: translation big, original small, bullets when several items, tap the card to play. |
-| `components/ContextCard.tsx` | Dish / word / moment card, spice meter, allergy flag. |
+| `components/ContextCard.tsx` | Allergy Flag card (dish card with spice meter and flag row). |
+| `components/MoveCard.tsx` | Move card (Say it / Ask / Echo): tap to hear the Thai, "Show the vendor" full screen, collapses after the next Turn. Lines from `lib/moveCard.ts`. |
 | `components/Dock.tsx` | Bottom bar with the two mics (Vendor left, Visitor right) and the language picker. |
 | `components/ListeningCard.tsx`, `Wave.tsx` | Live recording card and wave. |
 | `components/MyInfo.tsx` | Compact My info card and page (allergies, spice, diet). |

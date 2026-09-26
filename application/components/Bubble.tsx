@@ -1,5 +1,6 @@
 import type { Message, Speaker } from "@/lib/engine/types";
 import { ContextCard } from "./ContextCard";
+import { MoveCard } from "./MoveCard";
 import { PlayTool } from "./PlayTool";
 import { SayItTool } from "./SayItYourself";
 import s from "./Chat.module.css";
@@ -26,7 +27,8 @@ export function Row({ speaker, children }: { speaker: Speaker; children: React.R
 }
 
 /** L1 voice card. Big = translation (what the reader of this card reads), small = original. Tap anywhere to play. */
-export function Bubble({ message, playing, onSpeak }: { message: Message; playing: boolean; onSpeak: () => void }) {
+/** `latest`: the last Turn of the thread; an older Turn's Move card collapses to one line. */
+export function Bubble({ message, playing, onSpeak, latest = true }: { message: Message; playing: boolean; onSpeak: () => void; latest?: boolean }) {
   const yours = message.speaker === "you";
   return (
     <>
@@ -57,6 +59,8 @@ export function Bubble({ message, playing, onSpeak }: { message: Message; playin
         </div>
       </Row>
       {message.card && <ContextCard card={message.card} vendorSaid={message.speaker === "vendor" ? message.translation : []} />}
+      {/* The Allergy Flag wins: a Turn shows the flag or a Move, never both. */}
+      {!message.card && message.move && <MoveCard card={message.move} collapsed={!latest} />}
     </>
   );
 }

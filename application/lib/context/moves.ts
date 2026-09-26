@@ -63,9 +63,23 @@ function heardTrigger(move: Move, raw: string, pack: Pack): string | null {
   return hits.sort((a, b) => b.length - a.length)[0] ?? null;
 }
 
-function toCard(move: Move, particle: Particle, value: SlotValue | null, heard?: string): MoveCard {
+/**
+ * What the heard word means. The Move's own note ("... 'ซาว' (= 20) -> ...") when the Vendor said at least the quoted word,
+ * then the pack's glossary (ลำ alone is "delicious", not the note's "is it good?" written for ลำก่อ).
+ */
+function meaningOf(move: Move, heard: string, pack: Pack): string | undefined {
+  const quoted = move.english.match(/'([^']+)'/)?.[1].replace(/\?$/, "");
+  const note = move.english.match(/\(([^)]+)\)/)?.[1].replace(/^=\s*/, "").trim();
+  if (note && quoted && heard.includes(quoted)) return note;
+  const word = pack.words.find((w) => w.thai === heard);
+  if (word) return word.english;
+  return pack.falseFriends.find((f) => heard.startsWith(f.thai.split(" ")[0]))?.meaningHere;
+}
+
+function toCard(move: Move, particle: Particle, value: SlotValue | null, heard?: string, pack: Pack = PACK): MoveCard {
   const km = move.khamMueang?.[particle] ?? null;
   const kmRoman = move.romanised.khamMueang?.[particle] ?? null;
+  const heardMeaning = heard ? meaningOf(move, heard, pack) : undefined;
   return {
     id: move.id,
     type: move.type,
@@ -79,6 +93,7 @@ function toCard(move: Move, particle: Particle, value: SlotValue | null, heard?:
     },
     ...(move.tone === "playful" && { tone: "playful" as const }),
     ...(heard && { heard }),
+    ...(heardMeaning && { heardMeaning }),
   };
 }
 
@@ -107,7 +122,7 @@ export function pickMove(stage: Stage, mention: Mention, history: Message[], opt
       .map((m) => ({ m, heard: heardTrigger(m, opts.raw!, pack) }))
       .filter((x): x is { m: Move; heard: string } => x.heard !== null)
       .sort((a, b) => b.heard.length - a.heard.length);
-    if (echoes.length) return toCard(echoes[0].m, particle, null, echoes[0].heard);
+    if (echoes.length) return toCard(echoes[0].m, particle, null, echoes[0].heard, pack);
   }
 
   // Say it first at start, and at leave: the thank you comes before any question (the Postcard hangs on it).

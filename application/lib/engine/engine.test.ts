@@ -2,7 +2,19 @@ import { afterEach, describe, expect, it, vi } from "vitest";
 import { ConversationEngine } from "./engine";
 import { createMockTurnService, KHAO_SOI_SCRIPT } from "./mockTurnService";
 import { createTurnService } from "./turnService";
-import type { MoveCard, MyInfo, TranslateInput, TranslateResult, TurnService } from "./types";
+import { pickMove } from "@/lib/context/moves";
+import type { Mention } from "@/lib/context/cards";
+import type { Message, MoveCard, MyInfo, Stage, TranslateInput, TranslateResult, TurnService } from "./types";
+
+/** What the model would report on each scripted Turn of the mock: the Moves in the script must match. */
+const MOCK_PICK: { stage: Stage; mention: Mention }[] = [
+  { stage: "start", mention: { kind: "none" } },
+  { stage: "explore", mention: { kind: "dish", id: "khao-soi" } },
+  { stage: "explore", mention: { kind: "dish", id: "khao-soi" } },
+  { stage: "receive", mention: { kind: "none" } },
+  { stage: "pay", mention: { kind: "none" } },
+  { stage: "pay", mention: { kind: "none" } },
+];
 
 // A turn service whose calls resolve only when the test says so.
 function controllableService() {
@@ -366,6 +378,29 @@ describe("mock turn service (Khao Soi scenario)", () => {
     expect(messages.filter((m) => m.card)).toHaveLength(1);
     expect(onDetectedInfo).toHaveBeenCalledWith({ allergies: ["peanuts"] });
     expect(engine.getState().phase).toEqual({ kind: "idle", nextTurn: "you" });
+  });
+
+  it("carries Move cards without the API: Say it, Ask, then an Echo on ซาว, never next to the Allergy Flag", async () => {
+    const engine = new ConversationEngine({ service: createMockTurnService({ transcribeMs: 0, translateMs: 0 }) });
+    for (const speaker of ["you", "vendor", "you", "vendor", "you", "vendor"] as const) {
+      engine.micTap(speaker);
+      await engine.stop(speaker, audio);
+    }
+    const moves = engine.getState().messages.map((m) => m.move?.type ?? null);
+    expect(moves).toEqual(["say", null, "ask", "say", "say", "echo"]);
+    const echo = engine.getState().messages[5].move;
+    expect(echo).toMatchObject({ heard: "ซาว", heardMeaning: "20" });
+    expect(engine.getState().messages[1].card?.warning).toBeTruthy();
+  });
+
+  it("scripts the same Moves pickMove would give, so the mock never drifts from moves.json", () => {
+    const history: Message[] = [];
+    for (const turn of KHAO_SOI_SCRIPT) {
+      const { stage, mention } = MOCK_PICK[history.length];
+      const picked = pickMove(stage, mention, history, { raw: turn.raw, speaker: turn.speaker, card: turn.result.card });
+      expect(turn.result.move ?? null).toEqual(picked);
+      history.push({ id: String(history.length), speaker: turn.speaker, translation: [], original: [], card: null, move: picked });
+    }
   });
 
   it("replays the scenario from the start after a new conversation", async () => {

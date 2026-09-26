@@ -89,6 +89,18 @@ describe("pickMove, Echo", () => {
     expect(move).toMatchObject({ id: "echo-sao", type: "echo", heard: "ซาวบาท", khamMueang: "ซาวบาทคับ" });
   });
 
+  it("says what the Vendor's word meant, from the Move's own note first", () => {
+    expect(pickMove("pay", none, oneTurn, { raw: "ซาวบาทเจ้า", speaker: "vendor" })?.heardMeaning).toBe("20");
+    expect(pickMove("pay", none, oneTurn, { raw: "สบายดีบ๋อ", speaker: "vendor" })?.heardMeaning).toBe("how are you?");
+  });
+
+  it("falls back to the pack for the meaning when the Move has no note", () => {
+    // echo-yindee's English has no "(...)": the false friend ยินดี gives "thank you".
+    expect(pickMove("pay", none, oneTurn, { raw: "ยินดีเจ้า", speaker: "vendor" })?.heardMeaning).toBe("thank you");
+    // The note of echo-lam is about ลำก่อ ("is it good?"); ลำ alone means delicious.
+    expect(pickMove("pay", none, oneTurn, { raw: "ลำขนาดเจ้า", speaker: "vendor" })?.heardMeaning).toBe("delicious");
+  });
+
   it("never echoes the Visitor", () => {
     expect(pickMove("pay", none, oneTurn, { raw: "ซาวบาท", speaker: "you" })?.type).not.toBe("echo");
   });

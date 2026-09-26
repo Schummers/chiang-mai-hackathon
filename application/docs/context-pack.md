@@ -18,14 +18,13 @@ Current pack: 35 dishes, 51 produce, 182 Kham Mueang words, 6 false friends, 12 
 
 The model returns one `mention` per Turn. Precedence (asked in the prompt, `prompt.ts`, not enforced by code): a dish that conflicts with My info, then any dish, then a Kham Mueang word the Vendor used, then an in-season product. `none` is better than a generic card.
 
+Since Moves ticket 02, **the only card left on the thread is the Allergy Flag** (`flagCard`): a card is sent only when it carries an allergy or diet warning. Word, produce and Moment cards are retired (the Mention still fills Move Slots, and Echo Moves cover the Vendor's Northern words).
+
 | mention.kind | Card | Built from |
 |---|---|---|
-| `dish` (id in pack) | Dish card | pack + overlay; model's meat/spice only as fallback |
-| `offguide` | Dish card flagged `offGuide` | model text, **only shown if it carries an allergy or diet warning** |
-| `word` | Word card ("say it back") | glossary + false friends |
-| `produce` | Card with Northern name and season | pack |
-| nothing, Vendor Turn with a false friend | Word card (code backstop, `falseFriendCard`; เจ้า and ส้ม ignored) | false friends |
-| nothing, first Turn | Moment card (season, weather, next festival) | pack months + festivals, Chiang Mai date |
+| `dish` (id in pack) | Dish card, **only when it carries a flag** | pack + overlay; model's meat/spice only as fallback |
+| `offguide` | Dish card flagged `offGuide`, **only when it carries a flag** | model text |
+| `word`, `produce`, nothing | no card | |
 
 Card text is English whatever the Visitor's language: the pack is English. The bubbles are translated into the Visitor's language.
 

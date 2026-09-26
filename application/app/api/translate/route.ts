@@ -1,4 +1,4 @@
-import { cardFor, falseFriendCard, momentCard, type Mention } from "@/lib/context/cards";
+import { flagCard, type Mention } from "@/lib/context/cards";
 import { pickMove, stageFor } from "@/lib/context/moves";
 import { systemPrompt, TURN_SCHEMA, turnPrompt } from "@/lib/context/prompt";
 import { romanisedItems } from "@/lib/context/romanised";
@@ -50,11 +50,8 @@ export async function POST(req: Request) {
   const original = turn.original?.filter(Boolean) ?? [];
   const translation = turn.translation?.filter(Boolean) ?? [];
   const mention: Mention = turn.mention ?? { kind: "none" };
-  // Then a false friend the Vendor said, then the Moment card to open a conversation that names nothing.
-  const card =
-    cardFor(mention, myInfo) ??
-    (input.speaker === "vendor" ? falseFriendCard(raw) : null) ??
-    (history.length === 0 ? momentCard(date) : null);
+  // Informative cards are retired (Dish, Word, Moment): only the Allergy Flag stays, Moves do the rest.
+  const card = flagCard(mention, myInfo);
 
   // The model gives the Stage, code picks the Move. An allergy or diet flag on the card wins over any Move.
   const stage = stageFor(turn.stage, history);

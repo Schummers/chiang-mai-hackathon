@@ -72,6 +72,8 @@ export type MoveCard = {
   tone?: "playful";
   /** Echo only: the Northern word the Vendor said. */
   heard?: string;
+  /** Echo only: what that word means, e.g. "20" for ซาว. From the Move's note, else the pack. */
+  heardMeaning?: string;
 };
 
 export type Allergy = "peanuts" | "shellfish" | "gluten" | "other";

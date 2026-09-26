@@ -60,12 +60,20 @@ describe("my info", () => {
 
   it("keeps the particle through save, load and merge; m by default", () => {
     expect(particleOf(EMPTY_MY_INFO)).toBe("m");
-    const info: MyInfo = { ...EMPTY_MY_INFO, speaker: "f" };
+    const info: MyInfo = { ...EMPTY_MY_INFO, particle: "f" };
     saveMyInfo(info, storage);
-    expect(loadMyInfo(storage).speaker).toBe("f");
-    expect(mergeMyInfo(info, { allergies: ["peanuts"] }).info.speaker).toBe("f");
-    storage.setItem("u-mueang:my-info", JSON.stringify({ speaker: "x" }));
+    expect(loadMyInfo(storage).particle).toBe("f");
+    expect(mergeMyInfo(info, { allergies: ["peanuts"] }).info.particle).toBe("f");
+    storage.setItem("u-mueang:my-info", JSON.stringify({ particle: "x" }));
     expect(particleOf(loadMyInfo(storage))).toBe("m");
+  });
+
+  it("still reads the particle saved under its old key, speaker", () => {
+    storage.setItem("u-mueang:my-info", JSON.stringify({ allergies: [], speaker: "f" }));
+    expect(loadMyInfo(storage)).toMatchObject({ particle: "f" });
+    expect(loadMyInfo(storage)).not.toHaveProperty("speaker");
+    expect(particleOf({ speaker: "f" })).toBe("f");
+    expect(particleOf(undefined)).toBe("m");
   });
 
   it("lists only the selected chips", () => {

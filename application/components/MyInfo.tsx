@@ -106,7 +106,7 @@ export function MyInfoPage({
           <h3>You speak as</h3>
           <div className={s.chips}>
             {PARTICLES.map((p) => (
-              <Chip key={p.value} label={p.label} on={particleOf(info) === p.value} onClick={() => onChange({ ...info, speaker: p.value })} />
+              <Chip key={p.value} label={p.label} on={particleOf(info) === p.value} onClick={() => onChange({ ...info, particle: p.value })} />
             ))}
           </div>
         </section>

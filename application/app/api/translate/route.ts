@@ -3,6 +3,7 @@ import { pickMove, stageFor } from "@/lib/context/moves";
 import { systemPrompt, TURN_SCHEMA, turnPrompt } from "@/lib/context/prompt";
 import { romanisedItems } from "@/lib/context/romanised";
 import type { MyInfo, TranslateInput, TranslateResult } from "@/lib/engine/types";
+import { particleOf } from "@/lib/myInfo";
 import { generate, TURN_MODEL } from "@/lib/server/gemini";
 
 export const maxDuration = 30;
@@ -30,7 +31,7 @@ export async function POST(req: Request) {
     allergies: input.myInfo?.allergies ?? [],
     spice: input.myInfo?.spice ?? null,
     diet: input.myInfo?.diet ?? [],
-    speaker: input.myInfo?.speaker === "f" ? "f" : "m",
+    particle: particleOf(input.myInfo),
   };
   const history = Array.isArray(input.history) ? input.history : [];
   const date = today();
@@ -55,7 +56,7 @@ export async function POST(req: Request) {
 
   // The model gives the Stage, code picks the Move. An allergy or diet flag on the card wins over any Move.
   const stage = stageFor(turn.stage, history);
-  const move = pickMove(stage, mention, history, { raw, speaker: input.speaker, particle: myInfo.speaker, card });
+  const move = pickMove(stage, mention, history, { raw, speaker: input.speaker, particle: myInfo.particle, card });
 
   const detected = turn.detectedInfo ?? {};
   const detectedInfo: Partial<MyInfo> = {

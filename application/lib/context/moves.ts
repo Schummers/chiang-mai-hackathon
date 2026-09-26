@@ -1,4 +1,4 @@
-import type { ContextCard, Message, MoveCard, MoveType, Particle, Speaker, Stage } from "@/lib/engine/types";
+import { STAGES, type ContextCard, type Message, type MoveCard, type MoveType, type Particle, type Speaker, type Stage } from "@/lib/engine/types";
 import type { Mention } from "./cards";
 import movesJson from "./moves.json";
 import { PACK, type Pack } from "./pack";
@@ -31,12 +31,12 @@ export const MOVES = movesJson as Move[];
  */
 export const USE_REVIEW = false;
 
-export const STAGES: Stage[] = ["start", "explore", "decide", "receive", "pay", "leave", "vendor-used-northern-word"];
+export { STAGES };
 
 /** The first Turn of a conversation is always start; an unknown Stage reads as explore. */
 export function stageFor(modelStage: string | undefined, history: Message[]): Stage {
   if (history.length === 0) return "start";
-  return STAGES.includes(modelStage as Stage) ? (modelStage as Stage) : "explore";
+  return (STAGES as readonly string[]).includes(modelStage ?? "") ? (modelStage as Stage) : "explore";
 }
 
 type SlotValue = { thai: string; roman: string };

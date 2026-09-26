@@ -39,7 +39,7 @@ Moves (`people/jonathan/moves/moves.json`, copied to `lib/context/moves.json` by
 3. Otherwise a Move of that Stage: Ask before Say it from explore to pay (at leave, Say it first so the thank you comes before any question), a Move whose Slot fills before one without, then file order. A Move with a `{dish}` or `{produce}` Slot is skipped when the Mention has no pack entry.
 4. A Move already shown in the conversation (`Message.move`) never comes back. Nothing fits: null.
 
-Only `reviewed` Moves go on stage, or `confidence: "high"` ones while no review is in: switch `USE_REVIEW` in `moves.ts` once `REVIEW.md` is back. The particle variant (`m`/`f`) comes from My info's `speaker`.
+Only `reviewed` Moves go on stage, or `confidence: "high"` ones while no review is in: switch `USE_REVIEW` in `moves.ts` once `REVIEW.md` is back. The particle variant (`m`/`f`) comes from My info's `particle` (`particleOf` in `lib/myInfo.ts`).
 
 ## Changing it
 

@@ -37,7 +37,7 @@ Picked once by `NEXT_PUBLIC_TURN_SERVICE` in [`turnService.ts`](../lib/engine/tu
 
 `ContextCard`: `kind` (`dish` | `word` | `moment`, missing = dish), `offGuide`, `name`, `nameThai`, `description`, `meat`, `spice` (0 to 3), `localDetail`, `warning`. A warning is a risk to check, never a guarantee.
 
-`MyInfo`: `allergies` (peanuts, shellfish, gluten, other), `spice` (none, mild, thai-hot), `diet` (no-pork, vegetarian, halal), `speaker?` (`m` | `f`, the particle used in Moves, missing = `m`).
+`MyInfo`: `allergies` (peanuts, shellfish, gluten, other), `spice` (none, mild, thai-hot), `diet` (no-pork, vegetarian, halal), `particle?` (`m` | `f`, the particle used in Moves, missing = `m`; `particleOf` normalises it and still reads the old key `speaker`).
 
 ## Timeouts and limits
 

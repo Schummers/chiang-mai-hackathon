@@ -1,0 +1,1986 @@
+{
+ "province_th": "เชียงใหม่",
+ "province_en": "Chiang Mai",
+ "province_slug": "chiang-mai",
+ "overview_th": "เชียงใหม่ (เวียงนพบุรีศรีนครพิงค์) สร้างเมื่อ พ.ศ. 1839 เป็นศูนย์กลางล้านนาตะวันตก ผู้คนหลากหลาย: คนเมือง (ไทยวน) ไทขึนที่นันทารามและต้นเปา ช่างเงินวัวลาย จีนมุสลิมยูนนานที่บ้านฮ่อ ไต (ไทใหญ่) ที่วัดป่าเป้าและเวียงหวาย ไตลื้อที่ดอยสะเก็ด และชุมชนบนที่สูง เช่น ม้ง ปกาเกอะญอ ละเวือะ ดาราอั้ง ผู้คนจำนวนมากเป็นลูกหลานของผู้ที่ถูกกวาดต้อนหรืออพยพเข้ามาในยุคพระเจ้ากาวิละ ('เก็บผักใส่ซ้า เก็บข้าใส่เมือง') จึงมีความหลากหลายของสำเนียง ความเชื่อ และหัตถกรรมในแต่ละย่าน",
+ "overview_en": "Chiang Mai, founded 1296 CE (พ.ศ. 1839), is the heart of Western Lanna. Its old-city neighbourhoods and districts preserve many origin communities: Khon Mueang (Tai Yuan) majority; Tai Khuen lacquer makers at Nantaram and paper makers at Ton Pao; Wua Lai silversmiths; Yunnanese Chinese Muslims at Ban Ho; Tai (Shan) at Wat Pa Pao and Wiang Wai (Fang); Tai Lue at Doi Saket; and highland Hmong, Pgaz K'nyau, Lavu'a (Lua) and Dara-ang communities. Many lowland neighbourhoods descend from Kawila-era resettlement campaigns (late 18th-early 19th c.), which explains the patchwork of accents, spirit cults and crafts.",
+ "language": {
+  "varieties": [
+   "Kham Mueang (Northern Thai), Chiang Mai city accent",
+   "Kham Mueang southern-route accent (San Pa Tong, Chom Thong, Doi Tao; Hot, Mae Chaem similar per mae-chaem.com)",
+   "Kham Mueang northern-route accent (Mae Ai, Chiang Dao, Phrao)",
+   "Tai Khuen (Nantaram, Ton Pao)",
+   "Tai Lue (Doi Saket)",
+   "Tai/Shan - กวามไต (Pa Pao, Fang)",
+   "Yunnanese Chinese (Ban Ho)",
+   "Hmong",
+   "Pgaz K'nyau",
+   "Lavu'a (Lua)",
+   "Dara-ang",
+   "Central Thai (school/official)"
+  ],
+  "dialect_group": "Lanna West (Western Lanna / Kham Mueang Chiang Mai)",
+  "pronunciation_features": [
+   {
+    "feature_th": "ร → ฮ",
+    "feature_en": "Central r becomes h",
+    "example_local": "เฮา, ฮู้, เฮือน",
+    "example_central": "เรา, รู้, เรือน",
+    "source": "https://culture.lpru.ac.th/WebCulture2553/CultureKnowledge/file/05-03.pdf",
+    "confidence": "high"
+   },
+   {
+    "feature_th": "ช → จ",
+    "feature_en": "Central ch (aspirated, low class) becomes unaspirated ch (จ)",
+    "example_local": "จ๊อน, เจียงใหม่",
+    "example_central": "ช้อน, เชียงใหม่",
+    "source": "https://culture.lpru.ac.th/WebCulture2553/CultureKnowledge/file/05-03.pdf",
+    "confidence": "high"
+   },
+   {
+    "feature_th": "ท → ต",
+    "feature_en": "Central th becomes unaspirated t",
+    "example_local": "ตาง",
+    "example_central": "ทาง",
+    "source": "https://culture.lpru.ac.th/WebCulture2553/CultureKnowledge/file/05-03.pdf",
+    "confidence": "high"
+   },
+   {
+    "feature_th": "พ → ป",
+    "feature_en": "Central ph becomes unaspirated p",
+    "example_local": "แปง, ป้อ",
+    "example_central": "แพง, พ่อ",
+    "source": "https://culture.lpru.ac.th/WebCulture2553/CultureKnowledge/file/05-03.pdf",
+    "confidence": "high"
+   },
+   {
+    "feature_th": "ค → ก",
+    "feature_en": "Central kh becomes unaspirated k",
+    "example_local": "กำเมือง",
+    "example_central": "คำเมือง",
+    "source": "https://culture.lpru.ac.th/WebCulture2553/CultureKnowledge/file/05-03.pdf",
+    "confidence": "high"
+   },
+   {
+    "feature_th": "เชียงใหม่ (ล้านนาตะวันตก) คงเสียง เอือ",
+    "feature_en": "Western Lanna (Chiang Mai) keeps the vowel เอือ, whereas Eastern Lanna (Nan, etc.) turns it into เอีย",
+    "example_local": "เฮือน",
+    "example_central": "เรือน",
+    "source": "https://culture.lpru.ac.th/WebCulture2553/CultureKnowledge/file/05-03.pdf",
+    "confidence": "high"
+   },
+   {
+    "feature_th": "สำเนียงเชียงใหม่อ่อนช้อย เนิบ ช้า; สายเหนือ (แม่อาย เชียงดาว พร้าว) ห้วนกว่า; สายใต้ (สันป่าตอง จอมทอง ดอยเต่า) ขึ้นจมูก",
+    "feature_en": "City accent soft/slow; northern-route districts clipped; southern-route districts nasal",
+    "example_local": "เจียงหม๋าย (สายใต้)",
+    "example_central": "เชียงใหม่",
+    "source": "https://www.chiangmainews.co.th/page/archives/1867329",
+    "confidence": "medium"
+   },
+   {
+    "feature_th": "แม่แจ่ม: สระ ไอ ออกเสียงคล้าย ออย",
+    "feature_en": "Mae Chaem: ai vowel may sound like oy",
+    "example_local": "บ้านห้วยไห → ฟังคล้าย ห้วยหอย",
+    "example_central": "บ้านห้วยไห",
+    "source": "https://www.mae-chaem.com/view.php?id=139",
+    "confidence": "high"
+   }
+  ],
+  "tone_notes_en": "LPRU's Northern Thai guide states the Chiang Mai accent has 6 tones, named by Thai tone names: จัตวา, เอก, โทพิเศษ, สามัญ, โท, ตรี. Mapped (derived, low confidence) to this project's labels: จัตวา≈low-rising 24, เอก≈low-falling 21, โทพิเศษ≈high-level-glottal 44ʔ, สามัญ≈mid 33, โท≈high-falling 42, ตรี≈high-rising 45. Northerners spelling Kham Mueang in Thai script add ๋ or ๊ (กิ๋น, จ๋าน, ป๊าดโท๊ะ) so that a Central-Thai reader produces the Northern tone; per-word tones in the vocabulary list are derived from these spellings and are NOT acoustically verified.",
+  "script_notes": "Traditional script is Tai Tham (ตั๋วเมือง) used in temple manuscripts and increasingly on bilingual signage (municipal and temple signs in the old city). Tai (Shan) communities also use ลิ่กไต script (Wat Pa Pao runs a Tai-language school). Kham Mueang in social media and signage is typically written in Thai script with extra tone marks. Lavu'a has no traditional script (mae-chaem.com). Signage claims about Tai Tham extent are from general knowledge - needs verification.",
+  "code_switching_and_generations_en": "Sources repeatedly note shift toward Central Thai: Hmong youth at Doi Pui use more Central Thai; Mae Umphai and Mae Chaem sources describe young Karen/Lua losing their languages; Nantaram Tai Khuen assimilated in language and dress from พ.ศ. 2450-2463. Among lowland Chiang Mai people, Kham Mueang is still the everyday home/market language, while Central Thai dominates school, officialdom and dealings with outsiders; many will switch to Central Thai automatically with a foreigner, so asking to hear Kham Mueang is appreciated."
+ },
+ "vocabulary": [
+  {
+   "local_th": "เปิ้น",
+   "roman": "poen",
+   "pronunciation": "poen (ป+ ้: falling-type tone 42 by spelling; derived from Northern Thai-script spelling (tone mark read by Central-Thai convention, mapped to the 6-tone Chiang Mai inventory listed by LPRU); not acoustically verified)",
+   "central_th": "ฉัน / เขา (สุภาพ)",
+   "en": "I (polite); also 'he/she/they' in context",
+   "category": "pronoun",
+   "example_sentence_local": "เปิ้นฮักตั๋ว",
+   "example_sentence_en": "I love you",
+   "source": "https://www.wongnai.com/articles/northern-language",
+   "confidence": "high",
+   "note_en": "Wongnai and SSRU both list เปิ้น as polite 'I'. In everyday Chiang Mai speech เปิ้น also often means 'other people / they' - context decides."
+  },
+  {
+   "local_th": "ตั๋ว",
+   "roman": "tua",
+   "pronunciation": "tua (ต+๋: rising 24; derived from Northern Thai-script spelling (tone mark read by Central-Thai convention, mapped to the 6-tone Chiang Mai inventory listed by LPRU); not acoustically verified)",
+   "central_th": "เธอ / คุณ",
+   "en": "you (polite, peer)",
+   "category": "pronoun",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": "https://www.wongnai.com/articles/northern-language",
+   "confidence": "high"
+  },
+  {
+   "local_th": "ฮา",
+   "roman": "ha",
+   "pronunciation": "ha (mid 33, derived)",
+   "central_th": "ฉัน (ไม่เป็นทางการ)",
+   "en": "I (informal, among close friends)",
+   "category": "pronoun",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": "https://skm.ssru.ac.th/news/view/1392241",
+   "confidence": "medium",
+   "note_en": "Informal; use only with close friends."
+  },
+  {
+   "local_th": "คิง",
+   "roman": "khing",
+   "pronunciation": "khing",
+   "central_th": "เธอ/มึง (ไม่เป็นทางการ)",
+   "en": "you (informal; rude outside close friends)",
+   "category": "pronoun",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": "https://skm.ssru.ac.th/news/view/1392241",
+   "confidence": "medium",
+   "note_en": "Pairs with ฮา. Avoid as a visitor."
+  },
+  {
+   "local_th": "ป้อ",
+   "roman": "po",
+   "pronunciation": "po (ป+ ้; derived from Northern Thai-script spelling (tone mark read by Central-Thai convention, mapped to the 6-tone Chiang Mai inventory listed by LPRU); not acoustically verified)",
+   "central_th": "พ่อ",
+   "en": "father; also respectful address for older men (ป้ออุ๊ย etc.)",
+   "category": "family",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": "https://www.wongnai.com/articles/northern-language",
+   "confidence": "high",
+   "note_en": "Shows the Northern พ→ป shift described by LPRU."
+  },
+  {
+   "local_th": "อ้าย",
+   "roman": "ai",
+   "pronunciation": "ai",
+   "central_th": "พี่ชาย",
+   "en": "older brother; polite address to a slightly older man",
+   "category": "family",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": "https://www.wongnai.com/articles/northern-language",
+   "confidence": "high"
+  },
+  {
+   "local_th": "ปี้",
+   "roman": "pi",
+   "pronunciation": "pi (ป+ ้; derived from Northern Thai-script spelling (tone mark read by Central-Thai convention, mapped to the 6-tone Chiang Mai inventory listed by LPRU); not acoustically verified)",
+   "central_th": "พี่",
+   "en": "older sibling; polite address",
+   "category": "family",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": "https://www.gotoknow.org/posts/248586",
+   "confidence": "high"
+  },
+  {
+   "local_th": "ป้อจาย",
+   "roman": "po chai",
+   "pronunciation": "po-chai",
+   "central_th": "ผู้ชาย",
+   "en": "man",
+   "category": "people",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": "https://skm.ssru.ac.th/news/view/1392241",
+   "confidence": "high"
+  },
+  {
+   "local_th": "แม่ญิง",
+   "roman": "mae ying",
+   "pronunciation": "mae-ying",
+   "central_th": "ผู้หญิง",
+   "en": "woman",
+   "category": "people",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": "https://skm.ssru.ac.th/news/view/1392241",
+   "confidence": "high"
+  },
+  {
+   "local_th": "กิ๋น",
+   "roman": "kin",
+   "pronunciation": "kin (ก+๋: rising 24; derived from Northern Thai-script spelling (tone mark read by Central-Thai convention, mapped to the 6-tone Chiang Mai inventory listed by LPRU); not acoustically verified)",
+   "central_th": "กิน",
+   "en": "eat",
+   "category": "verb",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": "https://www.wongnai.com/articles/northern-language",
+   "confidence": "high",
+   "note_en": "Classic example: Central mid-class 'kin' is written with ๋ in Kham Mueang spelling to show the Northern rising tone."
+  },
+  {
+   "local_th": "อู้",
+   "roman": "u",
+   "pronunciation": "u",
+   "central_th": "พูด",
+   "en": "speak, talk",
+   "category": "verb",
+   "example_sentence_local": "อู้กำเมือง",
+   "example_sentence_en": "speak Northern Thai (Kham Mueang)",
+   "source": "https://www.wongnai.com/articles/northern-language",
+   "confidence": "high"
+  },
+  {
+   "local_th": "ฮู้",
+   "roman": "hu",
+   "pronunciation": "hu (ฮ+ ้; derived from Northern Thai-script spelling (tone mark read by Central-Thai convention, mapped to the 6-tone Chiang Mai inventory listed by LPRU); not acoustically verified)",
+   "central_th": "รู้",
+   "en": "know",
+   "category": "verb",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": "https://www.wongnai.com/articles/northern-language",
+   "confidence": "high",
+   "note_en": "ร→ฮ shift (LPRU)."
+  },
+  {
+   "local_th": "ฮัก",
+   "roman": "hak",
+   "pronunciation": "hak",
+   "central_th": "รัก",
+   "en": "love",
+   "category": "verb",
+   "example_sentence_local": "เปิ้นฮักตั๋ว",
+   "example_sentence_en": "I love you",
+   "source": "https://skm.ssru.ac.th/news/view/1392241",
+   "confidence": "high"
+  },
+  {
+   "local_th": "ยะ",
+   "roman": "ya",
+   "pronunciation": "ya",
+   "central_th": "ทำ",
+   "en": "do, make",
+   "category": "verb",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": "https://skm.ssru.ac.th/news/view/1392241",
+   "confidence": "high"
+  },
+  {
+   "local_th": "ยะหยัง",
+   "roman": "ya yang",
+   "pronunciation": "ya-yang",
+   "central_th": "ทำอะไร",
+   "en": "doing what?",
+   "category": "question",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": "https://www.wongnai.com/articles/northern-language",
+   "confidence": "high"
+  },
+  {
+   "local_th": "ผ่อ",
+   "roman": "pho",
+   "pronunciation": "pho (ผ+ ่: low-falling 21; derived from Northern Thai-script spelling (tone mark read by Central-Thai convention, mapped to the 6-tone Chiang Mai inventory listed by LPRU); not acoustically verified)",
+   "central_th": "ดู",
+   "en": "look, watch",
+   "category": "verb",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": "https://skm.ssru.ac.th/news/view/1392241",
+   "confidence": "high"
+  },
+  {
+   "local_th": "หื้อ",
+   "roman": "hue",
+   "pronunciation": "hue",
+   "central_th": "ให้",
+   "en": "give; let/make (causative)",
+   "category": "verb",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": "https://skm.ssru.ac.th/news/view/1392241",
+   "confidence": "high"
+  },
+  {
+   "local_th": "หัน",
+   "roman": "han",
+   "pronunciation": "han (rising, derived)",
+   "central_th": "เห็น",
+   "en": "see",
+   "category": "verb",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": "https://www.gotoknow.org/posts/248586",
+   "confidence": "high"
+  },
+  {
+   "local_th": "กึ๊ด",
+   "roman": "kuet",
+   "pronunciation": "kuet (ก+๊: high 45; derived from Northern Thai-script spelling (tone mark read by Central-Thai convention, mapped to the 6-tone Chiang Mai inventory listed by LPRU); not acoustically verified)",
+   "central_th": "คิด",
+   "en": "think",
+   "category": "verb",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": "https://www.wongnai.com/articles/northern-language",
+   "confidence": "high"
+  },
+  {
+   "local_th": "กึ๊ดเติงหา",
+   "roman": "kuet toeng ha",
+   "pronunciation": "kuet-toeng-ha",
+   "central_th": "คิดถึง",
+   "en": "miss (someone)",
+   "category": "verb",
+   "example_sentence_local": "กึ๊ดเติงหาตั๋วขนาด",
+   "example_sentence_en": "I miss you so much",
+   "source": "https://www.mangozero.com/10-senteces-about-klinkasalong/",
+   "confidence": "high"
+  },
+  {
+   "local_th": "แอ่ว",
+   "roman": "aeo",
+   "pronunciation": "aeo (low-falling 21 by spelling, derived)",
+   "central_th": "เที่ยว",
+   "en": "go out, visit, travel for fun",
+   "category": "verb",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": "https://www.gotoknow.org/posts/248586",
+   "confidence": "high",
+   "note_en": "Very useful for nomads: 'ไปแอ่วไหน' ~ where are you off to (for fun)?"
+  },
+  {
+   "local_th": "ตวย",
+   "roman": "tuai",
+   "pronunciation": "tuai",
+   "central_th": "ตาม",
+   "en": "follow, go along with",
+   "category": "verb",
+   "example_sentence_local": "ตวยมาเน้อ",
+   "example_sentence_en": "come along with me / follow me",
+   "source": "https://www.mangozero.com/10-senteces-about-klinkasalong/",
+   "confidence": "high"
+  },
+  {
+   "local_th": "โขด",
+   "roman": "khot",
+   "pronunciation": "khot",
+   "central_th": "โกรธ",
+   "en": "angry",
+   "category": "verb/adj",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": "https://www.wongnai.com/articles/northern-language",
+   "confidence": "high"
+  },
+  {
+   "local_th": "ลำ",
+   "roman": "lam",
+   "pronunciation": "lam",
+   "central_th": "อร่อย",
+   "en": "delicious",
+   "category": "adjective",
+   "example_sentence_local": "ลำขนาด",
+   "example_sentence_en": "really delicious",
+   "source": "https://adahouse-cnx.com/th/blog/kham-mueang-northern-thai",
+   "confidence": "high"
+  },
+  {
+   "local_th": "ขนาด",
+   "roman": "kha-nat",
+   "pronunciation": "kha-nat",
+   "central_th": "มาก",
+   "en": "very (intensifier after an adjective)",
+   "category": "adverb",
+   "example_sentence_local": "ลำขนาด",
+   "example_sentence_en": "very delicious",
+   "source": "https://adahouse-cnx.com/th/blog/kham-mueang-northern-thai",
+   "confidence": "high"
+  },
+  {
+   "local_th": "ม่วน",
+   "roman": "muan",
+   "pronunciation": "muan (low-falling 21 by spelling, derived)",
+   "central_th": "สนุก / ไพเราะ",
+   "en": "fun, enjoyable; (music) pleasant",
+   "category": "adjective",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": "https://www.gotoknow.org/posts/248586",
+   "confidence": "high"
+  },
+  {
+   "local_th": "งาม",
+   "roman": "ngam",
+   "pronunciation": "ngam",
+   "central_th": "สวย",
+   "en": "beautiful",
+   "category": "adjective",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": "https://www.gotoknow.org/posts/248586",
+   "confidence": "high"
+  },
+  {
+   "local_th": "อิด",
+   "roman": "it",
+   "pronunciation": "it",
+   "central_th": "เหนื่อย",
+   "en": "tired",
+   "category": "adjective",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": "https://skm.ssru.ac.th/news/view/1392241",
+   "confidence": "high"
+  },
+  {
+   "local_th": "ฮ้อน",
+   "roman": "hon",
+   "pronunciation": "hon",
+   "central_th": "ร้อน",
+   "en": "hot (weather/temperature)",
+   "category": "adjective",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": "https://www.gotoknow.org/posts/248586",
+   "confidence": "high"
+  },
+  {
+   "local_th": "ง่าว",
+   "roman": "ngao",
+   "pronunciation": "ngao",
+   "central_th": "โง่",
+   "en": "foolish, stupid",
+   "category": "adjective",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": "https://skm.ssru.ac.th/news/view/1392241",
+   "confidence": "high",
+   "note_en": "Teasing/impolite; do not use toward strangers (MangoZero)."
+  },
+  {
+   "local_th": "เมิน",
+   "roman": "moen",
+   "pronunciation": "moen",
+   "central_th": "นาน",
+   "en": "(for) a long time",
+   "category": "adverb",
+   "example_sentence_local": "มาเมินแล้วกา",
+   "example_sentence_en": "Have you been here long? / long time no see",
+   "source": "https://www.gotoknow.org/posts/248586",
+   "confidence": "high"
+  },
+  {
+   "local_th": "โวยๆ",
+   "roman": "woi woi",
+   "pronunciation": "woi-woi",
+   "central_th": "เร็วๆ",
+   "en": "quickly, hurry",
+   "category": "adverb",
+   "example_sentence_local": "ยกมาโวยๆ",
+   "example_sentence_en": "bring it quickly",
+   "source": "https://www.mangozero.com/10-senteces-about-klinkasalong/",
+   "confidence": "high"
+  },
+  {
+   "local_th": "แหม",
+   "roman": "mae",
+   "pronunciation": "mae (rising by spelling)",
+   "central_th": "อีก",
+   "en": "again, more",
+   "category": "adverb",
+   "example_sentence_local": "ปิกมาแหมแล้ว",
+   "example_sentence_en": "came back again",
+   "source": "https://www.mangozero.com/10-senteces-about-klinkasalong/",
+   "confidence": "high",
+   "note_en": "MangoZero warns it must not be confused with แม๋/แม่."
+  },
+  {
+   "local_th": "ปะเลอะปะเต๋อ",
+   "roman": "pa-loe pa-toe",
+   "pronunciation": "pa-loe-pa-toe",
+   "central_th": "มากมายก่ายกอง",
+   "en": "loads, heaps, all over the place",
+   "category": "adverb",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": "https://sistacafe.com/summaries/66250",
+   "confidence": "medium"
+  },
+  {
+   "local_th": "บ่",
+   "roman": "bo",
+   "pronunciation": "bo (low-falling 21 by spelling, derived)",
+   "central_th": "ไม่",
+   "en": "not",
+   "category": "particle",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": "https://www.gotoknow.org/posts/248586",
+   "confidence": "high"
+  },
+  {
+   "local_th": "จะไป",
+   "roman": "cha pai",
+   "pronunciation": "cha-pai",
+   "central_th": "อย่า (ในบริบทห้าม)",
+   "en": "don't! (prohibitive, in context)",
+   "category": "particle",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": "https://sistacafe.com/summaries/66250",
+   "confidence": "medium",
+   "note_en": "In Northern usage 'จะไป + verb' can mean 'don't ...' (e.g. จะไปย่ะ = don't do it). Easy source of misunderstanding for Central speakers."
+  },
+  {
+   "local_th": "เจ้า",
+   "roman": "chao",
+   "pronunciation": "chao",
+   "central_th": "ค่ะ / ครับ (สุภาพ)",
+   "en": "polite particle/‘yes’ (most associated with women, warm)",
+   "category": "particle",
+   "example_sentence_local": "ไปตังใดมาเจ้า",
+   "example_sentence_en": "Where have you been? (polite)",
+   "source": "https://adahouse-cnx.com/th/blog/kham-mueang-northern-thai",
+   "confidence": "high"
+  },
+  {
+   "local_th": "คั่บ",
+   "roman": "khap",
+   "pronunciation": "khap",
+   "central_th": "ครับ",
+   "en": "polite particle (men)",
+   "category": "particle",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": "https://www.gotoknow.org/posts/248586",
+   "confidence": "high"
+  },
+  {
+   "local_th": "เน้อ",
+   "roman": "noe",
+   "pronunciation": "noe",
+   "central_th": "นะ",
+   "en": "softening particle ('ok?', 'you know')",
+   "category": "particle",
+   "example_sentence_local": "ยินดีเน้อเจ้า",
+   "example_sentence_en": "thank you (kindly)",
+   "source": "https://www.mangozero.com/10-senteces-about-klinkasalong/",
+   "confidence": "high"
+  },
+  {
+   "local_th": "แอ่",
+   "roman": "ae",
+   "pronunciation": "ae",
+   "central_th": "(คำลงท้ายเฉพาะแม่แจ่ม)",
+   "en": "sentence-final particle characteristic of Mae Chaem",
+   "category": "particle",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": "https://www.mae-chaem.com/view.php?id=139",
+   "confidence": "high",
+   "note_en": "Mae Chaem identity marker, compared by the source to Lampang's หนา."
+  },
+  {
+   "local_th": "แด้",
+   "roman": "dae",
+   "pronunciation": "dae",
+   "central_th": "(คำลงท้ายสำเนียงไทขึน)",
+   "en": "sentence-final particle associated with Tai Khuen speakers of Nantaram",
+   "category": "particle",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": "https://wikicommunity.sac.or.th/community/1116",
+   "confidence": "medium"
+  },
+  {
+   "local_th": "ยินดี",
+   "roman": "yin di",
+   "pronunciation": "yin-di",
+   "central_th": "ขอบคุณ",
+   "en": "thank you (Northern usage)",
+   "category": "phrase",
+   "example_sentence_local": "ยินดีเน้อเจ้า",
+   "example_sentence_en": "thank you",
+   "source": "https://www.mangozero.com/10-senteces-about-klinkasalong/",
+   "confidence": "high",
+   "note_en": "Central Thai ยินดี = 'pleased'; in Kham Mueang it is the everyday 'thank you'."
+  },
+  {
+   "local_th": "อะหยัง",
+   "roman": "a-yang",
+   "pronunciation": "a-yang",
+   "central_th": "อะไร",
+   "en": "what",
+   "category": "question",
+   "example_sentence_local": "อะหยังละ",
+   "example_sentence_en": "What's up? / why?",
+   "source": "https://www.wongnai.com/articles/northern-language",
+   "confidence": "high"
+  },
+  {
+   "local_th": "สบายดีบ๋อ",
+   "roman": "sabai di bo",
+   "pronunciation": "sa-bai-di-bo (บ+๋: rising 24; derived from Northern Thai-script spelling (tone mark read by Central-Thai convention, mapped to the 6-tone Chiang Mai inventory listed by LPRU); not acoustically verified)",
+   "central_th": "สบายดีไหม",
+   "en": "how are you?",
+   "category": "greeting",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": "https://www.wongnai.com/articles/northern-language",
+   "confidence": "high"
+  },
+  {
+   "local_th": "เต่าใด",
+   "roman": "tao dai",
+   "pronunciation": "tao-dai",
+   "central_th": "เท่าไร",
+   "en": "how much",
+   "category": "question",
+   "example_sentence_local": "ตึงหมดนี่เต่าใดจ้าว",
+   "example_sentence_en": "How much is all of this?",
+   "source": "https://www.fixconcern.com/order-food-in-northern-languages/",
+   "confidence": "medium",
+   "note_en": "Source text describes Chiang Rai speech; widely understood in Chiang Mai."
+  },
+  {
+   "local_th": "ตังใด",
+   "roman": "tang dai",
+   "pronunciation": "tang-dai",
+   "central_th": "ที่ไหน",
+   "en": "where",
+   "category": "question",
+   "example_sentence_local": "ไปตังใดมาเจ้า",
+   "example_sentence_en": "Where have you been?",
+   "source": "https://culture.lpru.ac.th/WebCulture2553/CultureKnowledge/file/05-03.pdf",
+   "confidence": "high"
+  },
+  {
+   "local_th": "เฮือน",
+   "roman": "huean",
+   "pronunciation": "huean",
+   "central_th": "เรือน / บ้าน",
+   "en": "house, home",
+   "category": "noun",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": "https://skm.ssru.ac.th/news/view/1392241",
+   "confidence": "high"
+  },
+  {
+   "local_th": "โฮงเฮียน",
+   "roman": "hong hian",
+   "pronunciation": "hong-hian",
+   "central_th": "โรงเรียน",
+   "en": "school",
+   "category": "noun",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": "https://skm.ssru.ac.th/news/view/1392241",
+   "confidence": "high"
+  },
+  {
+   "local_th": "จ้อง",
+   "roman": "chong",
+   "pronunciation": "chong",
+   "central_th": "ร่ม",
+   "en": "umbrella (sun or rain)",
+   "category": "noun",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": "https://skm.ssru.ac.th/news/view/1392241",
+   "confidence": "high",
+   "note_en": "Links to Bo Sang umbrella culture (ร่มบ่อสร้าง)."
+  },
+  {
+   "local_th": "กาด",
+   "roman": "kat",
+   "pronunciation": "kat",
+   "central_th": "ตลาด",
+   "en": "market",
+   "category": "noun",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": "https://www.gotoknow.org/posts/248586",
+   "confidence": "medium",
+   "note_en": "Widely used (กาดหลวง, กาดบ้านฮ่อ); the specific word list page mentions market context via place names - flagged medium."
+  },
+  {
+   "local_th": "เจียงใหม่",
+   "roman": "chiang mai (chiang with จ)",
+   "pronunciation": "jiang-mai",
+   "central_th": "เชียงใหม่",
+   "en": "Chiang Mai (local pronunciation)",
+   "category": "place",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": "https://www.gotoknow.org/posts/248586",
+   "confidence": "high",
+   "note_en": "ช→จ shift. Chiang Mai News notes southern-route speakers may say เจียงหม๋าย."
+  },
+  {
+   "local_th": "ข้าวนึ่ง",
+   "roman": "khao nueng",
+   "pronunciation": "khao-nueng",
+   "central_th": "ข้าวเหนียว",
+   "en": "sticky rice (lit. steamed rice)",
+   "category": "food",
+   "example_sentence_local": "เอาข้าวนึ่งแหมคนจานเจ้า",
+   "example_sentence_en": "One more serving of sticky rice each, please",
+   "source": "https://www.maenoicurry.com/en/article/10/%E0%B8%A0%E0%B8%B2%E0%B8%A9%E0%B8%B2%E0%B8%84%E0%B8%A3%E0%B8%B1%E0%B8%A7%E0%B8%A5%E0%B9%89%E0%B8%B2%E0%B8%99%E0%B8%99%E0%B8%B2",
+   "confidence": "high"
+  },
+  {
+   "local_th": "เข้างาย",
+   "roman": "khao ngai",
+   "pronunciation": "khao-ngai",
+   "central_th": "ข้าวเช้า",
+   "en": "breakfast",
+   "category": "food",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": "https://www.gotoknow.org/posts/248586",
+   "confidence": "high"
+  },
+  {
+   "local_th": "เข้าตอน",
+   "roman": "khao ton",
+   "pronunciation": "khao-ton",
+   "central_th": "ข้าวเที่ยง",
+   "en": "lunch",
+   "category": "food",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": "https://www.gotoknow.org/posts/248586",
+   "confidence": "high"
+  },
+  {
+   "local_th": "เข้าแลง",
+   "roman": "khao laeng",
+   "pronunciation": "khao-laeng",
+   "central_th": "ข้าวเย็น",
+   "en": "dinner",
+   "category": "food",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": "https://www.gotoknow.org/posts/248586",
+   "confidence": "high"
+  },
+  {
+   "local_th": "จิ้น",
+   "roman": "chin",
+   "pronunciation": "chin",
+   "central_th": "เนื้อสัตว์",
+   "en": "meat",
+   "category": "food",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": "https://www.maenoicurry.com/en/article/10/%E0%B8%A0%E0%B8%B2%E0%B8%A9%E0%B8%B2%E0%B8%84%E0%B8%A3%E0%B8%B1%E0%B8%A7%E0%B8%A5%E0%B9%89%E0%B8%B2%E0%B8%99%E0%B8%99%E0%B8%B2",
+   "confidence": "high"
+  },
+  {
+   "local_th": "จ้อน / จ๊อน",
+   "roman": "chon",
+   "pronunciation": "chon",
+   "central_th": "ช้อน",
+   "en": "spoon",
+   "category": "kitchen",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": "https://www.maenoicurry.com/en/article/10/%E0%B8%A0%E0%B8%B2%E0%B8%A9%E0%B8%B2%E0%B8%84%E0%B8%A3%E0%B8%B1%E0%B8%A7%E0%B8%A5%E0%B9%89%E0%B8%B2%E0%B8%99%E0%B8%99%E0%B8%B2",
+   "confidence": "high",
+   "note_en": "Maenoi spells จ้อน; LPRU gives จ๊อน as the ช→จ example. Spelling varies."
+  },
+  {
+   "local_th": "ป๊าก",
+   "roman": "pak",
+   "pronunciation": "pak (ป+๊: high 45; derived from Northern Thai-script spelling (tone mark read by Central-Thai convention, mapped to the 6-tone Chiang Mai inventory listed by LPRU); not acoustically verified)",
+   "central_th": "ทัพพี",
+   "en": "ladle",
+   "category": "kitchen",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": "https://www.maenoicurry.com/en/article/10/%E0%B8%A0%E0%B8%B2%E0%B8%A9%E0%B8%B2%E0%B8%84%E0%B8%A3%E0%B8%B1%E0%B8%A7%E0%B8%A5%E0%B9%89%E0%B8%B2%E0%B8%99%E0%B8%99%E0%B8%B2",
+   "confidence": "medium"
+  },
+  {
+   "local_th": "คัวไฟ",
+   "roman": "khua fai",
+   "pronunciation": "khua-fai",
+   "central_th": "ห้องครัว",
+   "en": "kitchen",
+   "category": "kitchen",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": "https://www.maenoicurry.com/en/article/10/%E0%B8%A0%E0%B8%B2%E0%B8%A9%E0%B8%B2%E0%B8%84%E0%B8%A3%E0%B8%B1%E0%B8%A7%E0%B8%A5%E0%B9%89%E0%B8%B2%E0%B8%99%E0%B8%99%E0%B8%B2",
+   "confidence": "medium"
+  },
+  {
+   "local_th": "หลัว",
+   "roman": "lua",
+   "pronunciation": "lua",
+   "central_th": "ฟืน",
+   "en": "firewood",
+   "category": "kitchen",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": "https://www.maenoicurry.com/en/article/10/%E0%B8%A0%E0%B8%B2%E0%B8%A9%E0%B8%B2%E0%B8%84%E0%B8%A3%E0%B8%B1%E0%B8%A7%E0%B8%A5%E0%B9%89%E0%B8%B2%E0%B8%99%E0%B8%99%E0%B8%B2",
+   "confidence": "medium"
+  },
+  {
+   "local_th": "จ๋าน",
+   "roman": "chan",
+   "pronunciation": "chan (จ+๋: rising 24; derived from Northern Thai-script spelling (tone mark read by Central-Thai convention, mapped to the 6-tone Chiang Mai inventory listed by LPRU); not acoustically verified)",
+   "central_th": "จาน",
+   "en": "plate",
+   "category": "kitchen",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": "https://www.gotoknow.org/posts/248586",
+   "confidence": "high"
+  },
+  {
+   "local_th": "หอมป้อม",
+   "roman": "hom pom",
+   "pronunciation": "hom-pom",
+   "central_th": "ผักชี",
+   "en": "coriander/cilantro",
+   "category": "food",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": "https://culture.lpru.ac.th/WebCulture2553/CultureKnowledge/file/05-03.pdf",
+   "confidence": "high"
+  },
+  {
+   "local_th": "บ่าก้วย / ก้วย",
+   "roman": "ba kuai",
+   "pronunciation": "ba-kuai",
+   "central_th": "กล้วย",
+   "en": "banana",
+   "category": "food",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": "https://culture.lpru.ac.th/WebCulture2553/CultureKnowledge/file/05-03.pdf",
+   "confidence": "medium",
+   "note_en": "LPRU PDF lists 'บะก้วย' from หมากกล้วย. Fetched summary confused this with ฝรั่ง (guava); the etymology points to banana. needs_expert_review."
+  },
+  {
+   "local_th": "ต๋ำบ่าก้วยเต๋ด",
+   "roman": "tam ba kuai tet",
+   "pronunciation": "tam-ba-kuai-tet",
+   "central_th": "ตำมะละกอ (แบบเหนือ)",
+   "en": "Northern-style papaya pound salad",
+   "category": "food",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": "https://www.fixconcern.com/order-food-in-northern-languages/",
+   "confidence": "medium",
+   "note_en": "บ่าก้วยเต๊ด = papaya in Kham Mueang; spelling as in source."
+  },
+  {
+   "local_th": "น้ำบ่าดาย",
+   "roman": "nam ba dai",
+   "pronunciation": "nam-ba-dai",
+   "central_th": "น้ำเปล่า",
+   "en": "plain water",
+   "category": "food",
+   "example_sentence_local": "เอาน้ำบ่าดายบ่าใส่น้ำแข็งเน้อจ้าว",
+   "example_sentence_en": "Plain water with no ice, please",
+   "source": "https://www.fixconcern.com/order-food-in-northern-languages/",
+   "confidence": "medium"
+  },
+  {
+   "local_th": "นึ่ง",
+   "roman": "nueng",
+   "pronunciation": "nueng",
+   "central_th": "หนึ่ง",
+   "en": "one",
+   "category": "number",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": "https://www.wongnai.com/articles/northern-language",
+   "confidence": "high"
+  },
+  {
+   "local_th": "ซิบ",
+   "roman": "sip",
+   "pronunciation": "sip",
+   "central_th": "สิบ",
+   "en": "ten",
+   "category": "number",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": "https://www.wongnai.com/articles/northern-language",
+   "confidence": "high"
+  },
+  {
+   "local_th": "ซาว",
+   "roman": "sao",
+   "pronunciation": "sao",
+   "central_th": "ยี่สิบ",
+   "en": "twenty",
+   "category": "number",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": "https://adahouse-cnx.com/th/blog/kham-mueang-northern-thai",
+   "confidence": "high"
+  },
+  {
+   "local_th": "ปัน",
+   "roman": "pan",
+   "pronunciation": "pan",
+   "central_th": "พัน",
+   "en": "thousand",
+   "category": "number",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": "https://www.wongnai.com/articles/northern-language",
+   "confidence": "high"
+  },
+  {
+   "local_th": "ป๊าดโท๊ะ",
+   "roman": "pat tho",
+   "pronunciation": "pat-tho (both ๊: high 45; derived from Northern Thai-script spelling (tone mark read by Central-Thai convention, mapped to the 6-tone Chiang Mai inventory listed by LPRU); not acoustically verified)",
+   "central_th": "(คำอุทาน) โอ้โห",
+   "en": "wow! (amazement)",
+   "category": "exclamation",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": "https://sistacafe.com/summaries/66250",
+   "confidence": "high"
+  },
+  {
+   "local_th": "อะล๊ะ",
+   "roman": "a-la",
+   "pronunciation": "a-la",
+   "central_th": "โอ๊ย",
+   "en": "ouch/oh no!",
+   "category": "exclamation",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": "https://sistacafe.com/summaries/66250",
+   "confidence": "medium"
+  },
+  {
+   "local_th": "จ๊างมันเต๊อะ",
+   "roman": "chang man toe",
+   "pronunciation": "chang-man-toe",
+   "central_th": "ช่างมันเถอะ",
+   "en": "never mind, let it go",
+   "category": "phrase",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": "https://sistacafe.com/summaries/66250",
+   "confidence": "high"
+  },
+  {
+   "local_th": "ขี้จุ๊",
+   "roman": "khi chu",
+   "pronunciation": "khi-chu",
+   "central_th": "โกหก / ขี้โกหก",
+   "en": "lie; liar",
+   "category": "verb/adj",
+   "example_sentence_local": "ทำไมขี้จุ๊จะอี้",
+   "example_sentence_en": "Why lie like this?",
+   "source": "https://www.mangozero.com/10-senteces-about-klinkasalong/",
+   "confidence": "high"
+  },
+  {
+   "local_th": "ไค่ฮาก",
+   "roman": "khai hak",
+   "pronunciation": "khai-hak",
+   "central_th": "อยากอาเจียน",
+   "en": "nauseous, want to throw up",
+   "category": "health",
+   "example_sentence_local": "ข้าเจ้าเมาหัวไค่ฮาก",
+   "example_sentence_en": "I'm dizzy and nauseous",
+   "source": "https://www.mangozero.com/10-senteces-about-klinkasalong/",
+   "confidence": "high"
+  },
+  {
+   "local_th": "ปุ๊ดซีแลน",
+   "roman": "put si laen",
+   "pronunciation": "put-si-laen",
+   "central_th": "คนไม่เอาไหน / ทำตัวไม่เหมาะ",
+   "en": "good-for-nothing, silly person",
+   "category": "insult",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": "https://www.mangozero.com/10-senteces-about-klinkasalong/",
+   "confidence": "medium",
+   "note_en": "Insult - recognise, do not use."
+  },
+  {
+   "local_th": "เจ๊บ",
+   "roman": "chep",
+   "pronunciation": "chep",
+   "central_th": "เจ็บ",
+   "en": "hurt, sore",
+   "category": "health",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": "https://www.wongnai.com/articles/northern-language",
+   "confidence": "high"
+  }
+ ],
+ "phrases": [
+  {
+   "local_th": "สวัสดีเจ้า / สะหวัดดีจ้าว",
+   "roman": "sawatdi chao",
+   "central_th": "สวัสดีค่ะ/ครับ",
+   "en": "Hello (polite)",
+   "situation": "greeting anyone; เจ้า/จ้าว adds warmth",
+   "source": "https://www.fixconcern.com/order-food-in-northern-languages/"
+  },
+  {
+   "local_th": "สบายดีบ๋อ",
+   "roman": "sabai di bo",
+   "central_th": "สบายดีไหม",
+   "en": "How are you?",
+   "situation": "greeting",
+   "source": "https://www.wongnai.com/articles/northern-language"
+  },
+  {
+   "local_th": "มาเมินแล้วกา",
+   "roman": "ma moen laeo ka",
+   "central_th": "มานานแล้วเหรอ",
+   "en": "Been here long? / long time no see",
+   "situation": "meeting someone again",
+   "source": "https://www.wongnai.com/articles/northern-language"
+  },
+  {
+   "local_th": "ไปตังใดมาเจ้า",
+   "roman": "pai tang dai ma chao",
+   "central_th": "ไปไหนมาคะ",
+   "en": "Where have you been? (friendly greeting)",
+   "situation": "small talk; not a real question about your whereabouts",
+   "source": "https://culture.lpru.ac.th/WebCulture2553/CultureKnowledge/file/05-03.pdf"
+  },
+  {
+   "local_th": "ยะหยังอยู่",
+   "roman": "ya yang yu",
+   "central_th": "ทำอะไรอยู่",
+   "en": "What are you doing?",
+   "situation": "casual",
+   "source": "https://www.wongnai.com/articles/northern-language"
+  },
+  {
+   "local_th": "อู้กำเมืองได้ก่อ / อู้กำเมืองบ่เป็น",
+   "roman": "u kham mueang dai ko / u kham mueang bo pen",
+   "central_th": "พูดภาษาเหนือได้ไหม / พูดภาษาเหนือไม่เป็น",
+   "en": "Can you speak Kham Mueang? / I can't speak Kham Mueang",
+   "situation": "language icebreaker (built from sourced words อู้, กำเมือง, บ่; ก่อ question particle - flagged medium)",
+   "source": "https://adahouse-cnx.com/th/blog/kham-mueang-northern-thai"
+  },
+  {
+   "local_th": "ลำขนาด",
+   "roman": "lam khanat",
+   "central_th": "อร่อยมาก",
+   "en": "Really delicious!",
+   "situation": "complimenting food - reliably makes vendors smile",
+   "source": "https://adahouse-cnx.com/th/blog/kham-mueang-northern-thai"
+  },
+  {
+   "local_th": "จะฮับอะหยังดีจ้าว",
+   "roman": "cha hap a-yang di chao",
+   "central_th": "จะรับอะไรดีคะ",
+   "en": "What would you like? (vendor to you)",
+   "situation": "restaurant/market - recognise it",
+   "source": "https://www.fixconcern.com/order-food-in-northern-languages/"
+  },
+  {
+   "local_th": "เอาข้าวนึ่งแหมคนจานเจ้า",
+   "roman": "ao khao nueng mae khon chan chao",
+   "central_th": "เอาข้าวเหนียวเพิ่มคนละจาน",
+   "en": "One more sticky rice each, please",
+   "situation": "ordering",
+   "source": "https://www.fixconcern.com/order-food-in-northern-languages/"
+  },
+  {
+   "local_th": "เอาน้ำบ่าดายบ่าใส่น้ำแข็งเน้อจ้าว",
+   "roman": "ao nam ba dai bo sai nam khaeng noe chao",
+   "central_th": "เอาน้ำเปล่าไม่ใส่น้ำแข็งนะคะ",
+   "en": "Plain water, no ice please",
+   "situation": "ordering",
+   "source": "https://www.fixconcern.com/order-food-in-northern-languages/"
+  },
+  {
+   "local_th": "น้องจ้าว เก็บตังค์ตวยเจ้า",
+   "roman": "nong chao kep tang tuai chao",
+   "central_th": "น้องคะ เก็บเงินด้วยค่ะ",
+   "en": "Excuse me, the bill please",
+   "situation": "paying",
+   "source": "https://www.fixconcern.com/order-food-in-northern-languages/"
+  },
+  {
+   "local_th": "ตึงหมดนี่เต่าใดจ้าว",
+   "roman": "tueng mot ni tao dai chao",
+   "central_th": "ทั้งหมดนี่เท่าไรคะ",
+   "en": "How much for all of this?",
+   "situation": "market",
+   "source": "https://www.fixconcern.com/order-food-in-northern-languages/"
+  },
+  {
+   "local_th": "ยินดีเน้อเจ้า",
+   "roman": "yin di noe chao",
+   "central_th": "ขอบคุณนะคะ",
+   "en": "Thank you (kindly)",
+   "situation": "any time",
+   "source": "https://www.mangozero.com/10-senteces-about-klinkasalong/"
+  },
+  {
+   "local_th": "ตวยมาเน้อ",
+   "roman": "tuai ma noe",
+   "central_th": "ตามมานะ",
+   "en": "Follow me / come along",
+   "situation": "guiding someone",
+   "source": "https://www.mangozero.com/10-senteces-about-klinkasalong/"
+  },
+  {
+   "local_th": "จ๊างมันเต๊อะ",
+   "roman": "chang man toe",
+   "central_th": "ช่างมันเถอะ",
+   "en": "Never mind / let it go",
+   "situation": "defusing small mishaps",
+   "source": "https://sistacafe.com/summaries/66250"
+  },
+  {
+   "local_th": "กึ๊ดเติงหาตั๋วขนาด",
+   "roman": "kuet toeng ha tua khanat",
+   "central_th": "คิดถึงเธอมาก",
+   "en": "I miss you a lot",
+   "situation": "close friends/family",
+   "source": "https://www.mangozero.com/10-senteces-about-klinkasalong/"
+  },
+  {
+   "local_th": "สวัสดี๋คั๋บ ป้อแม่ปี้น้องทั้งหลาย",
+   "roman": "sawatdi khap po mae pi nong thang lai",
+   "central_th": "สวัสดีครับ พี่น้องทุกท่าน",
+   "en": "Hello, everyone (lit. fathers, mothers, elder and younger siblings)",
+   "situation": "addressing a group, speeches, community events",
+   "source": "https://www.wongnai.com/articles/northern-language"
+  }
+ ],
+ "proverbs_sayings": [
+  {
+   "local_th": "กันเข้าวัดหื้ออู้กำผาชญ์ กันเข้ากาดหื้อเป๋นป้อก๊า",
+   "roman": "kan khao wat hue u kham phat, kan khao kat hue pen po ka",
+   "meaning_th": "เข้าวัดให้พูดจาอย่างผู้รู้ เข้าตลาดให้เป็นพ่อค้า — ปรับตัวตามสถานที่",
+   "meaning_en": "At the temple speak like a sage; at the market be a trader - adapt your behaviour to the setting.",
+   "source": "https://northnfe.blogspot.com/2018/06/blog-post.html"
+  },
+  {
+   "local_th": "กิ๋นหื้อปอต๊อง หย้องหื้อปอตั๋ว",
+   "roman": "kin hue po tong, yong hue po tua",
+   "meaning_th": "กินให้พอท้อง แต่งตัวให้พอตัว — รู้จักประมาณตน",
+   "meaning_en": "Eat enough for your stomach, dress to suit yourself - live within your means.",
+   "source": "https://northnfe.blogspot.com/2018/06/blog-post.html"
+  },
+  {
+   "local_th": "กิ๋นหื้อปอคาบ หาบหื้อปอแฮง แป๋งหื้อปอใจ๋ ไข้หื้อปอนอน",
+   "roman": "kin hue po khap, hap hue po haeng, paeng hue po chai, khai hue po non",
+   "meaning_th": "ทำทุกอย่างให้พอดีกับกำลัง",
+   "meaning_en": "Eat to the meal, carry to your strength, make to your heart's content, when sick rest enough - measure everything by capacity.",
+   "source": "https://northnfe.blogspot.com/2018/06/blog-post.html"
+  },
+  {
+   "local_th": "กำจ่มกำด่ามีก้าเสี้ยงตี้",
+   "roman": "kham chom kham da mi ka siang ti",
+   "meaning_th": "คำบ่นคำด่า (ของพ่อแม่/ผู้ใหญ่) มีคุณค่า",
+   "meaning_en": "Scoldings and grumbles (from elders) are worth something.",
+   "source": "https://northnfe.blogspot.com/2018/06/blog-post.html"
+  },
+  {
+   "local_th": "เก็บผักหื้อเอาตึงเครือ เก็บบ่าเขือหื้อเอาตึงขวั้น",
+   "roman": "kep phak hue ao tueng khruea, kep ba khuea hue ao tueng khwan",
+   "meaning_th": "เก็บผักให้เอาทั้งเถา เก็บมะเขือให้เอาทั้งขั้ว — รักใครให้รักทั้งครอบครัวเขา",
+   "meaning_en": "Pick the vegetable with its vine, the eggplant with its stalk - love a person together with their family.",
+   "source": "https://northnfe.blogspot.com/2018/06/blog-post.html"
+  },
+  {
+   "local_th": "ของจักเสียหื้อรีบไจ๊ ของจักได้หื้อรีบเอา",
+   "roman": "khong chak sia hue rip chai, khong chak dai hue rip ao",
+   "meaning_th": "ของจะเสียให้รีบใช้ ของจะได้ให้รีบเอา",
+   "meaning_en": "Use what will spoil quickly; grab what you can get - seize the moment.",
+   "source": "https://northnfe.blogspot.com/2018/06/blog-post.html"
+  },
+  {
+   "local_th": "คนตกต่ำต่าวนอนหงาย บ่ดีก๋ายเหยียบข้าม",
+   "roman": "khon tok tam tao non ngai, bo di kai yiap kham",
+   "meaning_th": "คนที่ตกต่ำล้มลงแล้ว ไม่ควรเหยียบซ้ำ",
+   "meaning_en": "Don't step over someone who has already fallen.",
+   "source": "https://northnfe.blogspot.com/2018/06/blog-post.html"
+  },
+  {
+   "local_th": "จะไปหล็วกก่อนหมอ จะไปซอก่อนปี่",
+   "roman": "cha pai luak kon mo, cha pai so kon pi",
+   "meaning_th": "อย่าฉลาดกว่าครู อย่าร้องซอก่อนปี่เป่า",
+   "meaning_en": "Don't be cleverer than the expert; don't start singing (ซอ) before the pipe (ปี่) - wait for proper cue. Note จะไป = 'don't'.",
+   "source": "https://northnfe.blogspot.com/2018/06/blog-post.html"
+  },
+  {
+   "local_th": "ไต่ขัวบ่ป๊น จะไปฟั่งห่มก้นโยนฮาว",
+   "roman": "tai khua bo pon, cha pai fang hom kon yon hao",
+   "meaning_th": "ยังข้ามสะพานไม่พ้น อย่าเพิ่งดีใจ",
+   "meaning_en": "Don't celebrate before you have crossed the bridge.",
+   "source": "https://northnfe.blogspot.com/2018/06/blog-post.html"
+  },
+  {
+   "local_th": "ปี้น้องผิดกั๋น เหมือนพร้าฟันน้ำ",
+   "roman": "pi nong phit kan muean pha fan nam",
+   "meaning_th": "พี่น้องทะเลาะกันเหมือนเอามีดฟันน้ำ ไม่ขาดจากกัน",
+   "meaning_en": "Siblings quarrelling is like a machete cutting water - the bond doesn't break.",
+   "source": "https://northnfe.blogspot.com/2018/06/blog-post.html"
+  },
+  {
+   "local_th": "สอนเปิ้นไต่ขัว ตั๋วกลั๋วตกน้ำ",
+   "roman": "son poen tai khua, tua klua tok nam",
+   "meaning_th": "สอนคนอื่นข้ามสะพาน ตัวเองกลัวตกน้ำ (สอนคนอื่นแต่ตัวเองทำไม่ได้)",
+   "meaning_en": "Teaching others to cross the bridge while afraid of falling in yourself (preaching what you don't practise). Meaning given here is the reviewer's reading - needs_expert_review.",
+   "source": "https://www.chiangrai108.com/artsculture/4958/"
+  },
+  {
+   "local_th": "กิ๋นส้มบ่ดีฮาน กิ๋นหวานบ่ดีป้ำ",
+   "roman": "kin som bo di han, kin wan bo di pam",
+   "meaning_th": "(ความหมายในแหล่งต่างกัน — ต้องตรวจสอบ)",
+   "meaning_en": "Two opened sources gave different glosses (moderation vs. not betraying benefactors); needs_expert_review before use.",
+   "source": "https://northnfe.blogspot.com/2018/06/blog-post.html"
+  },
+  {
+   "local_th": "คนฉลาดอย่าปะหมาดคนง่าว",
+   "roman": "khon chalat ya pamat khon ngao",
+   "meaning_th": "คนฉลาดอย่าดูถูกคนโง่",
+   "meaning_en": "The clever should not look down on the simple.",
+   "source": "https://www.chiangrai108.com/artsculture/4958/"
+  }
+ ],
+ "folk_song_forms": [
+  {
+   "name_th": "ซอ",
+   "name_en": "So / Saw (sung repartee)",
+   "description_en": "Northern folk singing, typically male-female call-and-response by professional singers (ช่างซอ) who must improvise quickly; Chiang Mai-style so is accompanied by ปี่ (pi jum, bamboo free-reed pipes) while Nan-style (ซอล่องน่าน) uses สะล้อ and ซึง. Performed at temple fairs and ordinations.",
+   "source": [
+    "https://www.gotoknow.org/posts/560739",
+    "https://lannamusic.org/?p=2241"
+   ],
+   "confidence": "medium"
+  },
+  {
+   "name_th": "จ๊อย",
+   "name_en": "Choi (solo recitative song)",
+   "description_en": "Solo, free-rhythm drawn-out vocal style, used for courting and expressing feeling; lyrics are often in ค่าว verse form.",
+   "source": [
+    "https://lannamusic.org/?p=2241",
+    "https://www.gotoknow.org/posts/560739"
+   ],
+   "confidence": "medium"
+  },
+  {
+   "name_th": "ค่าว",
+   "name_en": "Khao (Lanna verse form)",
+   "description_en": "Lanna poetic form used for narrative poems (ค่าวซอ) and letters; read or chanted (ฮ่ำ).",
+   "source": [
+    "https://lannamusic.org/?p=2241"
+   ],
+   "confidence": "medium"
+  },
+  {
+   "name_th": "ฮ่ำ",
+   "name_en": "Ham (recitation)",
+   "description_en": "Chanted/recited narration of events and stories.",
+   "source": [
+    "https://lannamusic.org/?p=2241"
+   ],
+   "confidence": "medium"
+  },
+  {
+   "name_th": "อื่อ",
+   "name_en": "Ue (lullaby)",
+   "description_en": "Lullabies sung to children; Lanna Music lists three melodic variants.",
+   "source": [
+    "https://lannamusic.org/?p=2241"
+   ],
+   "confidence": "medium"
+  }
+ ],
+ "ethnic_communities": [
+  {
+   "group": "Khon Mueang / Tai Yuan",
+   "self_designation": "คนเมือง (ไทยวน)",
+   "where": "Throughout lowland Chiang Mai; majority population",
+   "language": "Kham Mueang (คำเมือง, Northern Thai), Western Lanna variety",
+   "notes_en": "Majority lowland population; speak Kham Mueang with Chiang Mai (Western Lanna) accent. Chiang Mai News notes a northern-route accent (Mae Ai, Chiang Dao, Phrao - clipped) vs southern-route (San Pa Tong, Chom Thong, Doi Tao - nasal).",
+   "source": [
+    "https://www.chiangmainews.co.th/page/archives/1867329",
+    "https://culture.lpru.ac.th/WebCulture2553/CultureKnowledge/file/05-03.pdf"
+   ]
+  },
+  {
+   "group": "Tai Khuen",
+   "self_designation": "ไทขึน (outsiders often write ไทเขิน)",
+   "where": "Nantaram / Wua Lai area (ต.หายยา, อ.เมือง); Ban Ton Pao (อ.สันกำแพง)",
+   "language": "Tai Khuen (own spoken language and script tradition); code-switch with Kham Mueang/Central Thai",
+   "notes_en": "From Chiang Tung (Kengtung), moved in the Kawila-era resettlements ('เก็บผักใส่ซ้า เก็บข้าใส่เมือง'). The name ขึน comes from the Khuen river; เขิน became associated with lacquerware (เครื่องเขิน). Ban Ton Pao residents speak with a Tai Khuen accent (Muang Boran).",
+   "source": [
+    "https://ethnicity.sac.or.th/database-ethnic/175/",
+    "https://wikicommunity.sac.or.th/community/1116",
+    "https://www.muangboranjournal.com/post/saa-paper-tonpao"
+   ]
+  },
+  {
+   "group": "Wua Lai silversmith community",
+   "self_designation": "ชาววัวลาย (คนบ้านวัวลาย)",
+   "where": "Wua Lai road / Wat Sri Suphan, ต.หายยา อ.เมือง",
+   "language": "Kham Mueang and Central Thai",
+   "notes_en": "Ancestors moved from Ban Ngua Lai in the Mueang Pan area west of the Salween in Kawila's time (SAC). SAC describes them as descendants of craft lineages; Thai PBS cites Chiang Tung/Sipsongpanna artisans. Ethnic label varies between sources - needs_expert_review.",
+   "source": [
+    "https://wikicommunity.sac.or.th/community/1175",
+    "https://www.thaipbs.or.th/news/content/321482"
+   ]
+  },
+  {
+   "group": "Yunnanese Chinese Muslims",
+   "self_designation": "จีนมุสลิมยูนนาน (locally called จีนฮ่อ)",
+   "where": "Ban Ho, near Night Bazaar (อ.เมือง)",
+   "language": "Local Yunnanese Chinese and Central/Northern Thai; Thai script for writing",
+   "notes_en": "'ฮ่อ' historically referred to Yunnanese caravan traders. Settled clearly from ~พ.ศ. 2440; first mosque 2460 (wooden), rebuilt 2509. Friday market (กาดบ้านฮ่อ). Khao soi is an identity food for the community.",
+   "source": [
+    "https://wikicommunity.sac.or.th/community/1080"
+   ]
+  },
+  {
+   "group": "Tai (Shan)",
+   "self_designation": "ไต (Thai term: ไทใหญ่)",
+   "where": "Wat Pa Pao and Ku Tao Phatthana (อ.เมือง); Wiang Wai (อ.ฝาง, 88% Tai)",
+   "language": "กวามไต (spoken), ลิ่กไต (script); 5 tones (SAC Wiang Wai)",
+   "notes_en": "Wat Pa Pao built 2426 by a Tai consort (หม่อมบัวไหล) and Tai migrants; hosts Poy Sang Long each April. The older Lanna exonym เงี้ยว (e.g. in 'พิพิธภัณฑ์ชาวเงี้ยว' in the DASTA text) is considered derogatory by many Tai - use ไต/ไทใหญ่.",
+   "source": [
+    "https://cbtthailand.dasta.or.th/webapp/relattraction/content/3220/",
+    "https://so02.tci-thaijo.org/index.php/JBS/article/view/238296",
+    "https://wikicommunity.sac.or.th/community/964"
+   ]
+  },
+  {
+   "group": "Tai Lue",
+   "self_designation": "ไตลื้อ / ไทลื้อ",
+   "where": "Ban Luang Nuea, อ.ดอยสะเก็ด",
+   "language": "Tai Lue spoken; Kham Mueang for wider communication",
+   "notes_en": "Village marker records founding 'เสาร์ 3 เมษา 1932'; SAC/DASTA say migrants from Sipsongpanna with Phaya Saen Mueang Ma. Greeting 'อยู่ดี กินหวาน'. Foods: ข้าวแคบ, ขนมวง, โสะบะก้วยเต้ด.",
+   "source": [
+    "https://wikicommunity.sac.or.th/community/1498",
+    "https://www.dasta.or.th/th/article/271"
+   ]
+  },
+  {
+   "group": "Hmong",
+   "self_designation": "ม้ง",
+   "where": "Doi Pui (อ.เมือง, in Doi Suthep-Pui NP); Khun Chang Khian (ต.ช้างเผือก)",
+   "language": "Hmong; Kham Mueang; Central Thai",
+   "notes_en": "Doi Pui: mostly Hmong Njua (ม้งลาย/ม้งเขียว), 4 main clans (ว่าง, ลี, ย่าง). Khun Chang Khian: White Hmong from Doi Pui, settled 2509. The exonym แม้ว is widely regarded as derogatory - avoid (editorial note; not from an opened source).",
+   "source": [
+    "https://wikicommunity.sac.or.th/community/21",
+    "https://wikicommunity.sac.or.th/community/400"
+   ]
+  },
+  {
+   "group": "Pgaz K'nyau (Karen)",
+   "self_designation": "ปกาเกอะญอ",
+   "where": "Mae Klang Luang (อ.จอมทอง, Doi Inthanon); Mae Khapu (อ.สะเมิง); many villages in อมก๋อย, แม่แจ่ม",
+   "language": "Pgaz K'nyau (own script mixing Burmese-derived and Latin letters per SAC); Thai learned at school",
+   "notes_en": "Rotational farming (ไร่หมุนเวียน) historically central to ritual life; rice-soul calling (เรียกขวัญข้าว) and new-rice merit Nov-Dec. 'กะเหรี่ยง' is the common Thai term; self-designation preferred.",
+   "source": [
+    "https://wikicommunity.sac.or.th/community/845",
+    "https://wikicommunity.sac.or.th/community/1333",
+    "https://www.cmdiocese.org/web/8986/"
+   ]
+  },
+  {
+   "group": "Lua / Lawa",
+   "self_designation": "ละเวือะ (Thai: ลัวะ; older ละว้า)",
+   "where": "Ban Bo Luang (อ.ฮอด); Mae Khapu (อ.สะเมิง); Mae Chaem",
+   "language": "Lavu'a - Austroasiatic (Mon-Khmer), no traditional script; village dialects differ",
+   "notes_en": "Regarded as early inhabitants of the region; Bo Luang historically known for iron smelting. Rituals: โนกละมาง (ancestor offering), honouring ขุนหลวงวิลังคะ. Young people are losing the language.",
+   "source": [
+    "https://wikicommunity.sac.or.th/community/249",
+    "https://www.mae-chaem.com/view.php?id=141",
+    "https://wikicommunity.sac.or.th/community/1333"
+   ]
+  },
+  {
+   "group": "Dara-ang (Palaung)",
+   "self_designation": "ดาราอั้ง (Thai: ปะหล่อง)",
+   "where": "Ban Pang Daeng Nai, อ.เชียงดาว",
+   "language": "Dara-ang (Austroasiatic)",
+   "notes_en": "Moved from Myanmar in 2528 (1985) per source; community forest; upstream spirit-feeding ritual in March. Chiang Dao trekking links Akha, Lisu, Lahu, Karen and Dara-ang villages.",
+   "source": [
+    "https://www.doichiangdaobiosphere.com/destinations/%E0%B8%8A%E0%B8%B8%E0%B8%A1%E0%B8%8A%E0%B8%99%E0%B8%9A%E0%B9%89%E0%B8%B2%E0%B8%99%E0%B8%9B%E0%B8%B2%E0%B8%87%E0%B9%81%E0%B8%94%E0%B8%87%E0%B9%83%E0%B8%99"
+   ]
+  }
+ ],
+ "beliefs_rituals": [
+  {
+   "name_th": "ผีปู่ย่า",
+   "name_en": "Phi Pu Ya (lineage ancestor spirits)",
+   "description_th": "ผีบรรพบุรุษประจำตระกูล สถิตในหอผีของครอบครัว คุ้มครองลูกหลาน เลี้ยงผีช่วงเดือน 7-9 เหนือ ด้วยเนื้อ ขนม เหล้า ดอกไม้ ธูป น้ำขมิ้นส้มป่อย",
+   "description_en": "Ancestral spirits of a family line, housed in a small family spirit shrine (หอผี). Offerings (meat, sweets, liquor, flowers, incense, turmeric water) are commonly made in Northern months 7-9. The Fine Arts Dept. classifies spirits into ผี (lineage founders), สาง (restless dead), เทวดา (beneficent rulers), เปรต (wrongdoers).",
+   "when": "Northern lunar months 7-9 (approx. Apr-Jun)",
+   "where": "household/lineage shrines across Chiang Mai",
+   "visitor_guidance_en": "Don't touch, photograph up close, or place things on a spirit shrine without asking. If invited, sit lower than the shrine and follow the family's lead.",
+   "source": [
+    "https://www.finearts.go.th/chiangmaimuseum/view/46034-%E0%B8%9C%E0%B8%B5%E0%B8%9B%E0%B8%B9%E0%B9%88%E0%B8%A2%E0%B9%88%E0%B8%B2",
+    "https://he02.tci-thaijo.org/index.php/Veridian-E-Journal/article/download/8547/7297"
+   ],
+   "confidence": "high"
+  },
+  {
+   "name_th": "ผีเสื้อบ้าน ผีเสื้อเมือง ผีเสื้อวัด",
+   "name_en": "Guardian spirits of village, city and temple",
+   "description_th": "ผีอารักษ์ประจำหมู่บ้าน เมือง และวัด (มีคำเรียก ผีเสื้อนา ผีเสื้อห้วย ผีเสื้อดง ด้วย) ผีเสื้อเมืองมาจากเจ้าผู้ครองนครที่ล่วงลับ",
+   "description_en": "Guardian spirits of the village (เสื้อบ้าน), city (เสื้อเมือง - often deceased rulers), temple, rice field, stream and forest. Research on Northern spirit vocabulary lists 43 spirit terms and notes their social-control role (e.g. forest spirits discourage logging).",
+   "when": "annual offerings vary by village",
+   "where": "village shrines (หอเสื้อบ้าน), city shrines",
+   "visitor_guidance_en": "Treat village shrines like altars; don't lean on or climb them; ask before entering a shrine compound.",
+   "source": [
+    "https://he02.tci-thaijo.org/index.php/Veridian-E-Journal/article/download/8547/7297",
+    "https://ethnicity.sac.or.th/database-ethnic/175/"
+   ],
+   "confidence": "high"
+  },
+  {
+   "name_th": "เสาอินทขิล และประเพณีใส่ขันดอก",
+   "name_en": "Inthakhin city pillar and Sai Khan Dok flower offering",
+   "description_th": "เสาหลักเมืองเชียงใหม่ที่วัดเจดีย์หลวง ถือเป็นหลักค้ำจิตใจของเมือง ชาวเมืองนำดอกไม้ ธูปเทียน และน้ำขมิ้นส้มป่อยมาใส่ขันดอก (2568 จัด 23-29 พ.ค.) มีข้อห้ามสตรีขึ้นไปในวิหารเสาอินทขิล",
+   "description_en": "The city pillar at Wat Chedi Luang is seen as the spiritual mainstay of Chiang Mai. During the annual 'เข้าอินทขิล' period (2025: 23-29 May) people line up to put flowers, incense, candles and turmeric-som poi water into offering bowls. Women are traditionally not permitted inside the pillar shrine, a rule rooted in menstruation beliefs; this rule is contested by some today.",
+   "when": "late May-early June (Northern month 8 waning to month 9 waxing)",
+   "where": "Wat Chedi Luang, old city",
+   "visitor_guidance_en": "Bring small flowers; queue patiently; respect the gender restriction signage even if you disagree; dress modestly.",
+   "source": [
+    "https://chiangmai.prd.go.th/th/content/category/detail/id/9/iid/391809"
+   ],
+   "confidence": "high"
+  },
+  {
+   "name_th": "เลี้ยงดง บวงสรวงปู่แสะย่าแสะ",
+   "name_en": "Liang Dong - feeding the guardian spirits Pu Sae & Ya Sae",
+   "description_th": "พิธีประจำปีเซ่นผีปู่แสะย่าแสะ ยักษ์ผู้รักษาดอยสุเทพ ตามตำนานพระพุทธเจ้าทรงโปรดยักษ์ให้เลิกกินคน แลกกับการได้ควายปีละตัว มีม้าขี่ (ร่างทรง) รับประทานเลือดและเนื้อดิบ จัดที่เชิงดอยคำ",
+   "description_en": "Annual rite for Pu Sae and Ya Sae, giant guardian spirits of the Doi Suthep forest. Legend: the Buddha converted the man-eating giants, who agreed to protect Buddhism in exchange for a buffalo each year. A spirit medium (ม้าขี่) is possessed and consumes blood/raw meat. Silpa-Mag frames it as a Lua-rooted ritual that also promotes forest and water-source protection.",
+   "when": "14th waning day, Northern month 9 (around late May-June)",
+   "where": "foot of Doi Kham, ต.แม่เหียะ area",
+   "visitor_guidance_en": "Graphic animal sacrifice; observe from a distance, no flash, no drones; ask organisers before photographing the medium.",
+   "source": [
+    "https://www.silpa-mag.com/culture/article_154100"
+   ],
+   "confidence": "medium"
+  },
+  {
+   "name_th": "เจ้าหลวงคำแดง ดอยหลวงเชียงดาว",
+   "name_en": "Chao Luang Kham Daeng, great guardian of Doi Luang Chiang Dao",
+   "description_th": "ผีอารักษ์ใหญ่ของล้านนา สถิต ณ ดอยหลวงเชียงดาว นักวิชาการตั้งข้อสังเกตว่าอาจถูกใช้เป็นศูนย์รวมความเชื่อของผู้คนหลากชาติพันธุ์ในยุคพระเจ้ากาวิละ",
+   "description_en": "Regarded as the chief guardian spirit of Lanna, residing at Doi Luang Chiang Dao. Matichon Weekly discusses a scholarly view that Kawila-era rulers elevated him as a unifying cult for resettled Tai Lue, Tai Yai and Tai Khuen populations.",
+   "when": "various",
+   "where": "Chiang Dao (mountain and cave area)",
+   "visitor_guidance_en": "Locals may make offerings before climbing Doi Luang; follow park and community rules.",
+   "source": [
+    "https://www.matichon.co.th/weekly/featured/article_361384"
+   ],
+   "confidence": "medium"
+  },
+  {
+   "name_th": "พระธาตุประจำปีเกิด",
+   "name_en": "Birth-year relic stupas (Phra That Pracham Pi Koet)",
+   "description_th": "คติล้านนาให้ไหว้พระธาตุตามปีนักษัตร: ชวด-พระธาตุศรีจอมทอง(บางแหล่งว่าพระธาตุจอมกิตติ) ฉลู-ลำปางหลวง ขาล-ช่อแฮ เถาะ-แช่แห้ง มะโรง-วัดพระสิงห์ มะเส็ง-วัดเจ็ดยอด มะเมีย-ชเวดากอง มะแม-ดอยสุเทพ วอก-พระธาตุพนม ระกา-หริภุญชัย จอ-พระธาตุอินทร์แขวน(หรือพระเกศแก้วจุฬามณี วัดเกตการาม) กุน-ดอยตุง",
+   "description_en": "Lanna custom of visiting the relic stupa associated with one's zodiac year. Chiang Mai hosts four: Rat = Phra That Si Chom Thong (some sources give Chom Kitti, Chiang Rai), Dragon = Wat Phra Singh, Snake = Wat Chet Yot, Goat = Doi Suthep; Dog alternative = Wat Ket Karam. Great conversation topic ('ปีเกิดอะหยัง?').",
+   "when": "any time; especially birthdays/new year",
+   "where": "Chiang Mai: Wat Phra That Si Chom Thong, Wat Phra Singh, Wat Chet Yot, Wat Phra That Doi Suthep, Wat Ket Karam",
+   "visitor_guidance_en": "Dress modestly (shoulders/knees covered), remove shoes where required, walk clockwise around stupas.",
+   "source": [
+    "https://travel.kapook.com/view9181.html"
+   ],
+   "confidence": "medium"
+  },
+  {
+   "name_th": "พระธาตุศรีจอมทอง สรงน้ำพระบรมสารีริกธาตุ",
+   "name_en": "Si Chom Thong relic bathing",
+   "description_th": "ประดิษฐานพระทักษิณโมลีธาตุ (พระธาตุส่วนพระเศียรเบื้องขวา) ต่างจากที่อื่นที่สามารถอัญเชิญออกมาสรงน้ำได้ จัดปีละ 2 ครั้ง (ขึ้น 15 ค่ำ เดือน 9 เหนือ ช่วงวิสาขบูชา และขึ้น 15 ค่ำ เดือน 5 เหนือ)",
+   "description_en": "Houses a relic said to be from the right side of the Buddha's head; unusually, it is brought out for public bathing twice a year (full moon of Northern month 9 around Visakha Bucha, and full moon of Northern month 5).",
+   "when": "twice yearly (Northern months 5 and 9, full moon)",
+   "where": "Wat Phra That Si Chom Thong Worawihan, อ.จอมทอง",
+   "visitor_guidance_en": "Expect crowds; bring flowers and scented water (น้ำขมิ้นส้มป่อย) if joining.",
+   "source": [
+    "https://www.silpa-mag.com/history/article_42740"
+   ],
+   "confidence": "high"
+  },
+  {
+   "name_th": "ขึด",
+   "name_en": "Khued (Lanna taboos)",
+   "description_th": "ข้อห้ามที่เชื่อว่าหากละเมิดจะเกิดอัปมงคล เช่น ขึดหลวง 7 ประการ: ถมสมุทร (ถมแหล่งน้ำ ทางน้ำ) ขุดกระแส (เปลี่ยนทางน้ำเพื่อตน) แหม่รูทวาร (ย้าย/ขยายประตูเมือง ประตูบ้าน) รานสะหรี (ตัดต้นไม้ศรีเมือง ต้นโพธิ์) ฯลฯ ใช้พูดว่า 'จะไปยะ มันขึด' (อย่าทำ มันขึด)",
+   "description_en": "Taboos believed to bring misfortune: e.g. the 7 great khued - filling ponds/waterways, diverting water for oneself, moving or widening gates/doors, cutting a city's sacred trees or ordained bodhi trees, etc. CMU has classified khued into 11 categories (city, temples, public space, farming, plants/animals, household, funerals, personal conduct, omens...). Everyday use: 'จะไปยะ มันขึด!' - Don't do that, it's khued!",
+   "when": "everyday",
+   "where": "Lanna-wide",
+   "visitor_guidance_en": "If a local says something is ขึด (e.g. how you're arranging furniture or cutting a tree), take it seriously and ask what would be appropriate.",
+   "source": [
+    "https://www.gotoknow.org/posts/201024"
+   ],
+   "confidence": "medium"
+  },
+  {
+   "name_th": "ประตูสวนปรุง ประตูนำศพออก และทักษาเมือง",
+   "name_en": "Suan Prung gate (funeral gate) and city geomancy",
+   "description_th": "ประตูเมืองวางตามคติทักษา ประตูสวนปรุง (ทิศตะวันตกเฉียงใต้) ถือเป็นทิศกาลกิณี ใช้นำศพออกนอกเมือง ทุกประตูและแจ่งมีพิธีสืบชะตาเมืองประจำปี",
+   "description_en": "Chiang Mai's gates follow Taksa astrology; Suan Prung (south-west) corresponds to กาลกิณี (misfortune) and was the gate for taking corpses out of the city. Each gate/corner has guardian spirits; the annual Sueb Chata Mueang (city life-extension) is held at the 5 gates, 4 corners (แจ่งศรีภูมิ แจ่งขะต๊ำ แจ่งกู่เฮือง แจ่งหัวลิน) and the city centre (2025: 19 June).",
+   "when": "Sueb Chata Mueang annually (2025: 19 June)",
+   "where": "old city gates and corners",
+   "visitor_guidance_en": "Funeral processions may still pass Suan Prung; step aside quietly. Some older residents avoid starting auspicious events via that gate.",
+   "source": [
+    "https://www.chiangmainews.co.th/knowledge/1607235/",
+    "https://chiangmai.prd.go.th/th/content/category/detail/id/9/iid/399027"
+   ],
+   "confidence": "medium"
+  },
+  {
+   "name_th": "ความเชื่อม้ง: หิ้งผีบ้านที่เสาเอก และเครื่องรางเงิน",
+   "name_en": "Hmong household spirit altar and silver neck-rings",
+   "description_th": "จุดธูปไหว้บนหิ้งบูชาที่เสาเอกบ้านเพื่อรายงานต่อผีบ้าน มีพิธีตัวเน้ง/อั๊วเน้งติดต่อกับผี เด็กเล็กใส่สร้อยเงินที่ผ่านการปลุกเสก",
+   "description_en": "At Khun Chang Khian, households report important events to the house spirit at the altar by the main post; shamanic rites (ตัวเน้ง / อั๊วเน้ง); young children wear blessed silver necklaces for protection. Religion mixes spirit belief, Buddhism and some Christianity.",
+   "when": "life events",
+   "where": "Hmong villages, e.g. Khun Chang Khian",
+   "visitor_guidance_en": "Don't enter a Hmong house uninvited; if a sign/leaf marker is at the door it may indicate a ritual - do not enter.",
+   "source": [
+    "https://wikicommunity.sac.or.th/community/400"
+   ],
+   "confidence": "medium"
+  },
+  {
+   "name_th": "อุโบสถเงิน วัดศรีสุพรรณ",
+   "name_en": "Silver ubosot of Wat Sri Suphan",
+   "description_th": "วัดสร้างสมัยพระเมืองแก้ว พ.ศ. 2043 ช่างเงินวัวลายร่วมกันสร้างอุโบสถเงิน เป็นสัญลักษณ์ความสามัคคี",
+   "description_en": "Temple founded 1500 CE (พ.ศ. 2043) under King Mueang Kaeo; Wua Lai silversmiths jointly built the silver-clad ordination hall as a symbol of unity. Traditionally women are not allowed inside this ubosot (widely posted on site; not stated in the opened SAC page).",
+   "when": "daily; Saturday walking street nearby",
+   "where": "Wat Sri Suphan, Wua Lai road",
+   "visitor_guidance_en": "Follow the posted rule about entry to the ubosot; women can view from outside and visit the rest of the temple.",
+   "source": [
+    "https://wikicommunity.sac.or.th/community/1175"
+   ],
+   "confidence": "medium"
+  },
+  {
+   "name_th": "ตำนานเมืองฮอด",
+   "name_en": "Legend of Mueang Hot and Queen Chamadevi",
+   "description_th": "เล่ากันว่าพระนางจามเทวีเดินทางจากลพบุรีขึ้นมาหริภุญชัยตามลำน้ำปิง ผู้ติดตามล้มตายระหว่างทาง เมื่อถึงที่นี่จึงเรียกว่าฮอด (ถึง) และตั้งเมือง สร้างพระเจ้าโต้",
+   "description_en": "Local legend says Queen Chamadevi's retinue, exhausted by the Ping river journey, finally 'arrived' (ฮอด = reach in Northern Thai) here; she founded a garrison town and the Phra Chao To image. Old Hot was heavily affected by the Bhumibol Dam reservoir.",
+   "when": "-",
+   "where": "อ.ฮอด",
+   "visitor_guidance_en": "-",
+   "source": [
+    "https://prachatai.com/journal/2012/03/39793"
+   ],
+   "confidence": "medium"
+  },
+  {
+   "name_th": "ความเชื่อปกาเกอะญอกับไร่หมุนเวียน",
+   "name_en": "Pgaz K'nyau rotational-farming rituals",
+   "description_th": "ความสัมพันธ์สามมิติ คน-ธรรมชาติ คน-คน คน-สิ่งศักดิ์สิทธิ์ ขออนุญาตเจ้าของธรรมชาติก่อนทำไร่ มีพิธีเรียกลมขณะเผาไร่ พิธีเรียกขวัญข้าว",
+   "description_en": "Rituals tie farming to the spirit world: asking permission of the supreme owner of nature before clearing, 'calling the wind' while burning swiddens, rice-soul calling and new-rice merit making (Nov-Dec). Shift to cash monocrops is eroding these rites.",
+   "when": "farming cycle; Nov-Dec harvest rites",
+   "where": "Mae Klang Luang, Mae Khapu, Omkoi and Mae Chaem Pgaz K'nyau villages",
+   "visitor_guidance_en": "Ask before entering fields or ritual forest; don't pick plants in sacred groves.",
+   "source": [
+    "https://www.cmdiocese.org/web/8986/",
+    "https://wikicommunity.sac.or.th/community/845"
+   ],
+   "confidence": "medium"
+  }
+ ],
+ "way_of_life": [
+  {
+   "topic": "housing - เรือนกาแล",
+   "description_th": "เรือนไม้ใต้ถุนสูง หลังคาจั่ว ปลูกคู่อย่างน้อย 2 หลัง ยอดจั่วมีกาแล (ไม้แกะสลักไขว้) มีเติ๋น (พื้นที่โล่งรับแขก/นอน) ชาน ห้องนอนด้านหลังพร้อมหำยนต์เหนือประตู ครัวแยกหลัง",
+   "description_en": "Kalae house: raised timber house with gable roof, often twin-roofed, crowned by crossed carved boards (กาแล). Spaces: เติ๋น (open living/reception platform), ชาน (lower open deck), bedroom at back with a carved หำยนต์ lintel above the door (protective), separate kitchen.",
+   "source": [
+    "https://www.openbase.in.th/node/7077"
+   ]
+  },
+  {
+   "topic": "crafts - silver (Wua Lai)",
+   "description_th": "ดุนโลหะ (ต้องลาย) ทำขันเงิน สลุง ปัจจุบันใช้อะลูมิเนียมด้วย ช่างดุนเหลือน้อย",
+   "description_en": "Repoussé silverwork (การดุนโลหะ/ต้องลาย): bowls, trays, now also aluminium pieces. Thai PBS quotes a master saying only about 5 skilled chasers remain; Wua Lai pieces were chosen as APEC souvenirs.",
+   "source": [
+    "https://wikicommunity.sac.or.th/community/1175",
+    "https://www.thaipbs.or.th/news/content/321482"
+   ]
+  },
+  {
+   "topic": "crafts - lacquerware (Nantaram)",
+   "description_th": "เครื่องเขิน โครงไม้ไผ่สาน ทายางรักซ้ำจนเงา ลายรดน้ำปิดทอง ลายขูด ลายเปลือกไข่ ทำหลังฤดูฝนเพราะยางรักแห้งดี เหลือเพียงราว 3 ครอบครัวที่ทำ",
+   "description_en": "Lacquerware: woven bamboo base coated repeatedly with black lac resin, decorated with gilt, scratched or eggshell patterns; made after the rains when lac dries well. SAC reports only ~3 families still produce out of ~500.",
+   "source": [
+    "https://wikicommunity.sac.or.th/community/1116"
+   ]
+  },
+  {
+   "topic": "crafts - Bo Sang umbrellas & Ton Pao saa paper",
+   "description_th": "ร่มบ่อสร้างใช้โครงไม้ไผ่ หุ้มกระดาษสา/ผ้า ใช้กาวข้าวเหนียวผสมน้ำมันยางกันน้ำ แต่ละหมู่บ้านทำชิ้นส่วนต่างกัน บ้านต้นเปาทำกระดาษสาจากเปลือกปอสา ต้มขี้เถ้า ทุบด้วยค้อนไม้ ช้อน/แตะแผ่น",
+   "description_en": "Umbrella making is a multi-village chain (heads, ribs, handles, assembly in Bo Sang); sticky-rice paste + wood oil makes them weatherproof. Neighbouring Ban Ton Pao makes saa (mulberry) paper by boiling bark with ash, hand-beating and scooping/pouring sheets - originally a dry-season side job to supply Bo Sang.",
+   "source": [
+    "https://www.chiangmainews.co.th/100lanna/3305801/",
+    "https://www.muangboranjournal.com/post/saa-paper-tonpao"
+   ]
+  },
+  {
+   "topic": "crafts - Mae Chaem tin chok",
+   "description_th": "ผ้าซิ่นตีนจกแม่แจ่ม ลายจกมากกว่า 16 ลายหลัก ผู้หญิงทอเก็บไว้ใส่ตอนตาย ถวายวัด และเป็นมรดก",
+   "description_en": "Mae Chaem tin chok (supplementary-weft hem) skirts: 16 registered classic motifs; traditionally a woman would weave at least three - one to be cremated in, one to offer, one as heirloom.",
+   "source": [
+    "https://www.chiangmainews.co.th/100lanna/3301588/"
+   ]
+  },
+  {
+   "topic": "farming & highland livelihoods",
+   "description_th": "ชุมชนบนดอยปลูกลิ้นจี่ กาแฟอราบิก้า สตรอว์เบอร์รี่ ไม้ผลเมืองหนาว นาขั้นบันได",
+   "description_en": "Highland villages grow lychee, Arabica coffee (opium-substitution), strawberries and temperate fruit (Samoeng), terraced rice (Mae Klang Luang).",
+   "source": [
+    "https://wikicommunity.sac.or.th/community/400",
+    "https://wikicommunity.sac.or.th/community/845",
+    "https://wikicommunity.sac.or.th/community/1333"
+   ]
+  },
+  {
+   "topic": "markets & urban trade",
+   "description_th": "ย่านช้างม่อย-ราชวงศ์ ใกล้กาดหลวง เป็นแหล่งการค้าเก่า ตึกแถวอายุกว่า 50 ปี ปัจจุบันเป็นย่านสร้างสรรค์",
+   "description_en": "Chang Moi-Ratchawong, beside Warorot (Kad Luang), is the old merchant district of shophouses/warehouses, now mixing old wholesalers with cafés and design spaces.",
+   "source": [
+    "https://urbancreature.co/changmoi-ratchawong/"
+   ]
+  },
+  {
+   "topic": "eating together - ขันโตก",
+   "description_th": "ขันโตก = ภาชนะ/โต๊ะเตี้ยใส่สำรับ นั่งล้อมวงกินร่วมกัน ใช้ในงานบวช งานแต่ง งานบุญ",
+   "description_en": "Khantok: a low pedestal tray holding shared dishes; diners sit around it on the floor. Used at ordinations, weddings and merit events; symbol of community.",
+   "source": [
+    "https://www.chiangmainews.co.th/100lanna/3511658/"
+   ]
+  },
+  {
+   "topic": "community/ritual cycle",
+   "description_th": "วิถีชุมชนผูกกับวัด ผีบ้านผีเมือง และปฏิทินจันทรคติล้านนา (เดือนเหนือเร็วกว่าเดือนไทยกลาง 2 เดือน)",
+   "description_en": "Community life centres on the temple, guardian spirits and the Lanna lunar calendar (Northern month numbers run 2 ahead of Central Thai, e.g. เดือนยี่เป็ง = Central month 12 full moon).",
+   "source": [
+    "https://lannainfo.library.cmu.ac.th/lannatradition/yeepeng.php",
+    "https://www.finearts.go.th/chiangmaimuseum/view/46034-%E0%B8%9C%E0%B8%B5%E0%B8%9B%E0%B8%B9%E0%B9%88%E0%B8%A2%E0%B9%88%E0%B8%B2"
+   ]
+  }
+ ],
+ "festivals": [
+  {
+   "name_th": "ป๋าเวณีปี๋ใหม่เมือง (สงกรานต์ล้านนา)",
+   "name_en": "Pi Mai Mueang (Lanna New Year)",
+   "lunar_or_date": "April; 2019-2042 runs 14-16 April per astronomical calculation",
+   "what_happens_en": "Day 1 สังขานต์ล่อง: firecrackers drive out bad luck, house cleaning. Day 2 วันเน่า/วันเนา: avoid quarrelling or harsh words; carry sand to temples to build sand stupas decorated with flags (ตุง). Day 3 วันพญาวัน: merit making, water pouring, ดำหัว (asking elders' forgiveness), propping bodhi trees with ไม้ค้ำสะหรี. Water fights across the moat in the city.",
+   "source": "https://www.bangkokbiznews.com/lifestyle/art-living/1122353"
+  },
+  {
+   "name_th": "ยี่เป็ง",
+   "name_en": "Yi Peng",
+   "lunar_or_date": "full moon of Northern month 2 (= Central month 12, usually Nov)",
+   "what_happens_en": "ยี่ = 2nd month, เป็ง = full moon. Homes and temples lit with ผางประทีป clay lamps; temple sermons (ตั้งธัมม์หลวง), decorated forest-gate arches (ประตูป่า), fire/sky lanterns released by temples, firecrackers.",
+   "source": "https://lannainfo.library.cmu.ac.th/lannatradition/yeepeng.php"
+  },
+  {
+   "name_th": "ใส่ขันดอกบูชาเสาอินทขิล",
+   "name_en": "Inthakhin festival",
+   "lunar_or_date": "late May-early June (2025: 23-29 May; 2026 listings 13-19 May)",
+   "what_happens_en": "Flower/candle offerings for the city pillar at Wat Chedi Luang; processions of Phra Chao Fon Saen Ha.",
+   "source": "https://chiangmai.prd.go.th/th/content/category/detail/id/9/iid/391809"
+  },
+  {
+   "name_th": "ปอยส่างลอง",
+   "name_en": "Poy Sang Long (Tai novice ordination)",
+   "lunar_or_date": "April",
+   "what_happens_en": "Boys (ส่างลอง) are dressed as princes and carried in procession before ordination as novices; Tai community of Wat Pa Pao and Ku Tao Phatthana. A 2020 study lists challenges: short preparation time, too few monk teachers, cramped venues.",
+   "source": "https://so02.tci-thaijo.org/index.php/JBS/article/view/238296"
+  },
+  {
+   "name_th": "เลี้ยงดง ปู่แสะย่าแสะ",
+   "name_en": "Liang Dong",
+   "lunar_or_date": "14th waning, Northern month 9",
+   "what_happens_en": "Buffalo offering to the Doi Suthep guardian spirits with spirit medium.",
+   "source": "https://www.silpa-mag.com/culture/article_154100"
+  },
+  {
+   "name_th": "สืบชะตาเมืองเชียงใหม่",
+   "name_en": "Sueb Chata Mueang (city life-extension)",
+   "lunar_or_date": "annually (2025: 19 June)",
+   "what_happens_en": "Monks chant at 10 sites: 5 gates, 4 corner bastions, and the Three Kings Monument, to extend the city's life and well-being.",
+   "source": "https://chiangmai.prd.go.th/th/content/category/detail/id/9/iid/399027"
+  },
+  {
+   "name_th": "สรงน้ำพระบรมธาตุศรีจอมทอง",
+   "name_en": "Si Chom Thong relic bathing",
+   "lunar_or_date": "full moon, Northern months 5 and 9",
+   "what_happens_en": "Relic brought out for public bathing.",
+   "source": "https://www.silpa-mag.com/history/article_42740"
+  },
+  {
+   "name_th": "เทศกาลร่มบ่อสร้างและหัตถกรรมสันกำแพง",
+   "name_en": "Bo Sang Umbrella & San Kamphaeng Handicraft Festival",
+   "lunar_or_date": "annual (commonly January; date not verified from an opened page)",
+   "what_happens_en": "Umbrella painting, parades of women cycling holding umbrellas (per event listings), craft fairs. Low confidence on specifics - the Ministry of Culture calendar page failed to load.",
+   "source": "https://www.chiangmainews.co.th/100lanna/3305801/"
+  }
+ ],
+ "food_specialties": [
+  {
+   "name_th": "ข้าวซอย",
+   "name_en": "Khao soi",
+   "description_en": "Curry-coconut noodle soup topped with crisp noodles, served with pickled mustard greens, shallots and lime; Michelin notes Chinese-Muslim origins, and SAC calls it an identity food of the Ban Ho Yunnanese Muslim community (beef/chicken, halal).",
+   "where_to_eat_or_buy": "Ban Ho / Charoen Prathet halal area; everywhere in Mueang",
+   "source": [
+    "https://guide.michelin.com/th/th/article/features/chiang-mai-a-gastronomy-journey-of-thailand-ep-1-kong-kin-kon-mueang",
+    "https://wikicommunity.sac.or.th/community/1080"
+   ]
+  },
+  {
+   "name_th": "น้ำพริกหนุ่ม / น้ำพริกอ่อง",
+   "name_en": "Nam prik num / nam prik ong",
+   "description_en": "Roasted green chilli-shallot-garlic dip (num) and milder tomato-minced pork dip (ong), eaten with vegetables, pork crackling and sticky rice.",
+   "where_to_eat_or_buy": "Kad Luang (Warorot) for take-home packs",
+   "source": [
+    "https://guide.michelin.com/th/th/article/features/chiang-mai-a-gastronomy-journey-of-thailand-ep-1-kong-kin-kon-mueang"
+   ]
+  },
+  {
+   "name_th": "ข้าวนึ่ง",
+   "name_en": "Sticky rice",
+   "description_en": "Staple; eaten by hand, rolled into a small ball to scoop dips.",
+   "where_to_eat_or_buy": "everywhere",
+   "source": [
+    "https://guide.michelin.com/th/th/article/features/chiang-mai-a-gastronomy-journey-of-thailand-ep-1-kong-kin-kon-mueang",
+    "https://www.maenoicurry.com/en/article/10/%E0%B8%A0%E0%B8%B2%E0%B8%A9%E0%B8%B2%E0%B8%84%E0%B8%A3%E0%B8%B1%E0%B8%A7%E0%B8%A5%E0%B9%89%E0%B8%B2%E0%B8%99%E0%B8%99%E0%B8%B2"
+   ]
+  },
+  {
+   "name_th": "แก๋งฮังเล (แก๋งอังเล)",
+   "name_en": "Kaeng hang le",
+   "description_en": "Burmese/Shan-influenced pork curry; appears in the ordering dialogue ('เอาแก๋งอังเล...').",
+   "where_to_eat_or_buy": "khantok dinners, local khao kaeng shops",
+   "source": [
+    "https://www.fixconcern.com/order-food-in-northern-languages/"
+   ]
+  },
+  {
+   "name_th": "จิ้นส้มหมก",
+   "name_en": "Chin som mok (leaf-wrapped grilled sour pork)",
+   "description_en": "Fermented pork wrapped in banana leaf and grilled.",
+   "where_to_eat_or_buy": "markets",
+   "source": [
+    "https://www.fixconcern.com/order-food-in-northern-languages/"
+   ]
+  },
+  {
+   "name_th": "ต๋ำบ่าก้วยเต๊ด",
+   "name_en": "Northern papaya salad",
+   "description_en": "Pounded papaya salad, Northern naming.",
+   "where_to_eat_or_buy": "markets",
+   "source": [
+    "https://www.fixconcern.com/order-food-in-northern-languages/"
+   ]
+  },
+  {
+   "name_th": "ข้าวแคบ",
+   "name_en": "Khao khaep (rice crackers) - Tai Lue",
+   "description_en": "Thin sun-dried rice sheets, staple and snack of Tai Lue in Ban Luang Nuea.",
+   "where_to_eat_or_buy": "Ban Luang Nuea, Doi Saket",
+   "source": [
+    "https://wikicommunity.sac.or.th/community/1498",
+    "https://www.dasta.or.th/th/article/271"
+   ]
+  },
+  {
+   "name_th": "ถั่วเน่า / ไก่อุ๊บ",
+   "name_en": "Thua nao (fermented soybean) and kai up - Tai (Shan)",
+   "description_en": "Fermented soybean seasoning is the key Tai flavour; kai up is a Tai chicken dish (SAC Wiang Wai).",
+   "where_to_eat_or_buy": "Wiang Wai (Fang); Tai stalls around Wat Pa Pao",
+   "source": [
+    "https://wikicommunity.sac.or.th/community/964"
+   ]
+  },
+  {
+   "name_th": "แกงข้าวเบือ / ขนมเขาควาย / ขนมปาด",
+   "name_en": "Lua foods of Bo Luang",
+   "description_en": "Rice-thickened curry and local sweets listed for Lua community of Bo Luang, Hot.",
+   "where_to_eat_or_buy": "Ban Bo Luang, Hot",
+   "source": [
+    "https://wikicommunity.sac.or.th/community/249"
+   ]
+  }
+ ],
+ "markets_and_places": [
+  {
+   "name_th": "กาดหลวง (ตลาดวโรรส) และย่านช้างม่อย-ราชวงศ์",
+   "name_en": "Kad Luang (Warorot) & Chang Moi-Ratchawong",
+   "why_relevant_en": "Old trading heart; Kham Mueang, Chinese-Thai and hill-tribe traders mix; great place to practise market phrases.",
+   "source": "https://urbancreature.co/changmoi-ratchawong/"
+  },
+  {
+   "name_th": "กาดบ้านฮ่อ (ตลาดนัดวันศุกร์)",
+   "name_en": "Ban Ho Friday market",
+   "why_relevant_en": "Yunnanese Muslim community market held every Friday; halal food.",
+   "source": "https://wikicommunity.sac.or.th/community/1080"
+  },
+  {
+   "name_th": "วัดศรีสุพรรณ และถนนวัวลาย",
+   "name_en": "Wat Sri Suphan & Wua Lai",
+   "why_relevant_en": "Silver temple and silversmith workshops; Saturday walking street area.",
+   "source": "https://wikicommunity.sac.or.th/community/1175"
+  },
+  {
+   "name_th": "วัดนันทาราม และพิพิธภัณฑ์เครื่องเขิน",
+   "name_en": "Wat Nantaram lacquerware museum",
+   "why_relevant_en": "Tai Khuen lacquer heritage (museum since 2545); City heritage centre runs 'Talk & Tour' walks.",
+   "source": "https://wikicommunity.sac.or.th/community/1116"
+  },
+  {
+   "name_th": "วัดป่าเป้า",
+   "name_en": "Wat Pa Pao",
+   "why_relevant_en": "Tai (Shan) temple with Shan-style stupa and Tai-language school; Poy Sang Long in April.",
+   "source": "https://cbtthailand.dasta.or.th/webapp/relattraction/content/3220/"
+  },
+  {
+   "name_th": "วัดเจดีย์หลวง (เสาอินทขิล)",
+   "name_en": "Wat Chedi Luang (city pillar)",
+   "why_relevant_en": "Spiritual centre of the city; Inthakhin festival.",
+   "source": "https://chiangmai.prd.go.th/th/content/category/detail/id/9/iid/391809"
+  },
+  {
+   "name_th": "ถนนต้นยางนา สารภี",
+   "name_en": "Saraphi yang-na tree avenue",
+   "why_relevant_en": "Giant dipterocarp trees planted c. พ.ศ. 2445 under Chao Phraya Surasi; Saraphi was once called อำเภอยางเนิ้ง ('leaning yang trees'). ~886 trees remain (2560).",
+   "source": "https://www.silpa-mag.com/history/article_156779"
+  },
+  {
+   "name_th": "บ้านลวงเหนือ ดอยสะเก็ด",
+   "name_en": "Ban Luang Nuea Tai Lue village",
+   "why_relevant_en": "Community-based tourism with Tai Lue weaving (ลายพญาลวง), Wat Si Mung, homestay.",
+   "source": "https://www.dasta.or.th/th/article/271"
+  },
+  {
+   "name_th": "บ้านม้งดอยปุย",
+   "name_en": "Doi Pui Hmong village",
+   "why_relevant_en": "Hmong culture museum, gardens; tourism-based livelihoods.",
+   "source": "https://wikicommunity.sac.or.th/community/21"
+  },
+  {
+   "name_th": "บ้านแม่กลางหลวง",
+   "name_en": "Ban Mae Klang Luang",
+   "why_relevant_en": "Pgaz K'nyau terraced rice and coffee on Doi Inthanon; homestay since 2542.",
+   "source": "https://wikicommunity.sac.or.th/community/845"
+  }
+ ],
+ "etiquette_local_en": [
+  "Greet with a wai and add the soft particle เจ้า (women and increasingly anyone) or คั่บ (men); even one word of Kham Mueang ('ลำขนาด', 'ยินดีเน้อเจ้า') is warmly received. [Ada House, Wongnai, MangoZero]",
+  "'ไปตังใดมา' (where have you been?) is a greeting, not an interrogation - answer lightly. [LPRU]",
+  "Northern speech is described as soft and slow (อ่อนช้อย เนิบ ช้า); raising your voice reads as aggressive. [Chiang Mai News accent article]",
+  "Don't touch or place items on spirit shrines (หอผี, หอเสื้อบ้าน); ask before photographing rituals, especially possession rites (ม้าขี่). [Fine Arts Dept; Silpa-Mag]",
+  "Temple gender rules exist at the Inthakhin shrine and the Wat Sri Suphan silver ubosot - follow posted signage. [Chiang Mai PRD]",
+  "Use self-designations: ปกาเกอะญอ, ละเวือะ, ม้ง, ไต, ไทขึน, ไตลื้อ, ดาราอั้ง. Avoid แม้ว and เงี้ยว, which many consider derogatory.",
+  "If someone says 'มันขึด' about something you're doing, stop and ask - it signals a taboo. [GotoKnow khued article]",
+  "Khantok/sticky rice: roll sticky rice with your right hand into a small ball to scoop dips; share dishes from the centre. [Chiang Mai News khantok; Michelin]",
+  "Don't use informal pronouns ฮา/คิง or teasing words like ง่าว with strangers even if you hear them among friends. [SSRU; MangoZero]"
+ ],
+ "conversation_starters": [
+  {
+   "local_th": "ปีเกิดอะหยังเจ้า",
+   "roman": "pi koet a-yang chao",
+   "en": "What's your birth year (zodiac)?",
+   "why_works_en": "Leads naturally to birth-year relic stupas (พระธาตุประจำปีเกิด) - a Lanna custom people enjoy explaining."
+  },
+  {
+   "local_th": "อันนี้ลำขนาดเลย กิ๋นจะใดเจ้า",
+   "roman": "an ni lam khanat loei, kin cha dai chao",
+   "en": "This is really delicious - how do you eat it?",
+   "why_works_en": "Compliments food and invites the local to teach eating customs (sticky rice balls, dips)."
+  },
+  {
+   "local_th": "อู้กำเมืองหื้อฟังแหมก่อ",
+   "roman": "u kham mueang hue fang mae ko",
+   "en": "Could you say that again in Kham Mueang?",
+   "why_works_en": "Shows respect for the language; many Northerners love teaching words."
+  },
+  {
+   "local_th": "ไปแอ่วไหนดีเจ้า",
+   "roman": "pai aeo nai di chao",
+   "en": "Where's good to go out/visit?",
+   "why_works_en": "แอ่ว is a friendly Northern verb; locals will share favourite spots."
+  }
+ ],
+ "confidence": "medium",
+ "needs_expert_review": [
+  "Per-word tones (derived from spelling only).",
+  "Proverb glosses, especially กิ๋นส้มบ่ดีฮาน กิ๋นหวานบ่ดีป้ำ and สอนเปิ้นไต่ขัว.",
+  "Wua Lai ethnic origin (SAC: Ban Ngua Lai, Mueang Pan; Thai PBS: Chiang Tung/Sipsongpanna artisans, Mangrai era).",
+  "บ่าก้วย gloss (banana vs guava confusion in fetched summary).",
+  "Birth-year relic for ปีชวด (Si Chom Thong vs Chom Kitti).",
+  "Wat Pa Pao tambon (DASTA: ช้างม่อย; other listings: ศรีภูมิ).",
+  "Conversation starters that combine sourced words into new sentences (ก่อ question particle, จะใด)."
+ ],
+ "sources": [
+  "https://adahouse-cnx.com/th/blog/kham-mueang-northern-thai",
+  "https://cbtthailand.dasta.or.th/webapp/relattraction/content/3220/",
+  "https://chiangmai.prd.go.th/th/content/category/detail/id/9/iid/391809",
+  "https://chiangmai.prd.go.th/th/content/category/detail/id/9/iid/399027",
+  "https://chomthong.cdd.go.th/th/content/page/index/id/16",
+  "https://culture.lpru.ac.th/WebCulture2553/CultureKnowledge/file/05-03.pdf",
+  "https://en.wikipedia.org/wiki/Omkoi_district",
+  "https://ethnicity.sac.or.th/database-ethnic/175/",
+  "https://guide.michelin.com/th/th/article/features/chiang-mai-a-gastronomy-journey-of-thailand-ep-1-kong-kin-kon-mueang",
+  "https://he02.tci-thaijo.org/index.php/Veridian-E-Journal/article/download/8547/7297",
+  "https://lannainfo.library.cmu.ac.th/lannatradition/yeepeng.php",
+  "https://lannamusic.org/?p=2241",
+  "https://northnfe.blogspot.com/2018/06/blog-post.html",
+  "https://prachatai.com/journal/2012/03/39793",
+  "https://sistacafe.com/summaries/66250",
+  "https://skm.ssru.ac.th/news/view/1392241",
+  "https://so02.tci-thaijo.org/index.php/JBS/article/view/238296",
+  "https://travel.kapook.com/view9181.html",
+  "https://urbancreature.co/changmoi-ratchawong/",
+  "https://wikicommunity.sac.or.th/community/1080",
+  "https://wikicommunity.sac.or.th/community/1116",
+  "https://wikicommunity.sac.or.th/community/1175",
+  "https://wikicommunity.sac.or.th/community/1333",
+  "https://wikicommunity.sac.or.th/community/1498",
+  "https://wikicommunity.sac.or.th/community/21",
+  "https://wikicommunity.sac.or.th/community/249",
+  "https://wikicommunity.sac.or.th/community/400",
+  "https://wikicommunity.sac.or.th/community/845",
+  "https://wikicommunity.sac.or.th/community/964",
+  "https://www.bangkokbiznews.com/lifestyle/art-living/1122353",
+  "https://www.chiangmainews.co.th/100lanna/3301588/",
+  "https://www.chiangmainews.co.th/100lanna/3305801/",
+  "https://www.chiangmainews.co.th/100lanna/3511658/",
+  "https://www.chiangmainews.co.th/knowledge/1607235/",
+  "https://www.chiangmainews.co.th/page/archives/1867329",
+  "https://www.chiangrai108.com/artsculture/4958/",
+  "https://www.cmdiocese.org/web/8986/",
+  "https://www.dasta.or.th/th/article/271",
+  "https://www.doichiangdaobiosphere.com/destinations/%E0%B8%8A%E0%B8%B8%E0%B8%A1%E0%B8%8A%E0%B8%99%E0%B8%9A%E0%B9%89%E0%B8%B2%E0%B8%99%E0%B8%9B%E0%B8%B2%E0%B8%87%E0%B9%81%E0%B8%94%E0%B8%87%E0%B9%83%E0%B8%99",
+  "https://www.finearts.go.th/chiangmaimuseum/view/46034-%E0%B8%9C%E0%B8%B5%E0%B8%9B%E0%B8%B9%E0%B9%88%E0%B8%A2%E0%B9%88%E0%B8%B2",
+  "https://www.fixconcern.com/order-food-in-northern-languages/",
+  "https://www.gotoknow.org/posts/201024",
+  "https://www.gotoknow.org/posts/248586",
+  "https://www.gotoknow.org/posts/560739",
+  "https://www.mae-chaem.com/view.php?id=139",
+  "https://www.mae-chaem.com/view.php?id=141",
+  "https://www.maenoicurry.com/en/article/10/%E0%B8%A0%E0%B8%B2%E0%B8%A9%E0%B8%B2%E0%B8%84%E0%B8%A3%E0%B8%B1%E0%B8%A7%E0%B8%A5%E0%B9%89%E0%B8%B2%E0%B8%99%E0%B8%99%E0%B8%B2",
+  "https://www.mangozero.com/10-senteces-about-klinkasalong/",
+  "https://www.matichon.co.th/weekly/featured/article_361384",
+  "https://www.muangboranjournal.com/post/saa-paper-tonpao",
+  "https://www.openbase.in.th/node/7077",
+  "https://www.silpa-mag.com/culture/article_154100",
+  "https://www.silpa-mag.com/history/article_156779",
+  "https://www.silpa-mag.com/history/article_42740",
+  "https://www.thaipbs.or.th/news/content/321482",
+  "https://www.wongnai.com/articles/northern-language"
+ ]
+}

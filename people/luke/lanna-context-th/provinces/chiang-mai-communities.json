@@ -1,0 +1,379 @@
+{
+ "province_slug": "chiang-mai",
+ "note_en": "Per-community details for Chiang Mai. Each record cites pages actually opened. 'status: gap' marks communities requested but not verified this round.",
+ "communities": [
+  {
+   "id": "wua-lai",
+   "name_th": "ชุมชนวัวลาย / วัดศรีสุพรรณ",
+   "name_en": "Wua Lai silversmith community",
+   "amphoe": "เมือง",
+   "tambon": "หายยา",
+   "groups": [
+    "ชาววัวลาย (ช่างเงิน)",
+    "คนเมือง"
+   ],
+   "origin_th": "อพยพมาจากบ้านงัวลาย แขวงเมืองปั่น ฝั่งตะวันตกแม่น้ำสาละวิน สมัยพระเจ้ากาวิละ",
+   "origin_en": "Moved from Ban Ngua Lai, Mueang Pan (west of the Salween) in Kawila's time (SAC). Thai PBS instead traces the craft to Chiang Tung/Sipsongpanna artisans from the Mangrai era.",
+   "language": "คำเมือง, ไทยกลาง",
+   "crafts_en": "Repoussé silver (ดุนโลหะ/ต้องลาย), aluminium, lacquer; only ~5 master chasers left (Thai PBS 2022).",
+   "landmarks": [
+    "วัดศรีสุพรรณ (พ.ศ. 2043) อุโบสถเงิน"
+   ],
+   "beliefs_en": "Temple-centred; silver ubosot built collectively by artisans.",
+   "visitor_tips_en": "Visit workshops respectfully; follow ubosot entry rules; buy directly from artisans.",
+   "sources": [
+    "https://wikicommunity.sac.or.th/community/1175",
+    "https://www.thaipbs.or.th/news/content/321482"
+   ],
+   "confidence": "medium"
+  },
+  {
+   "id": "nantaram",
+   "name_th": "ชุมชนนันทาราม (บ้านเขิน)",
+   "name_en": "Nantaram Tai Khuen community",
+   "amphoe": "เมือง",
+   "tambon": "หายยา",
+   "groups": [
+    "ไทขึน (ไทเขิน)"
+   ],
+   "origin_th": "อพยพจากเชียงตุง ราว พ.ศ. 2350 สมัยพระเจ้ากาวิละ",
+   "origin_en": "Tai Khuen from Chiang Tung, from c. 1807 (พ.ศ. 2350) under Kawila; SAC stresses they came as 'outer-city lords' (เจ้านอกเมือง) rather than war captives.",
+   "language": "ไทขึน + ไทย; สำเนียงลงท้าย 'แด้'",
+   "crafts_en": "Lacquerware (เครื่องเขิน); lac work after the rains, leather/shadow-puppet hide work in cool season; only ~3 families still make lacquer.",
+   "landmarks": [
+    "วัดนันทาราม",
+    "พิพิธภัณฑ์เครื่องเขิน (พ.ศ. 2545)"
+   ],
+   "beliefs_en": "Buddhism with เสื้อวัด/เสื้อบ้าน and ผีปู่ย่า (SAC ethnic DB).",
+   "population": "1,518 people, 184 households; ~40-50 Tai Khuen households (SAC)",
+   "visitor_tips_en": "Join the city heritage centre's Talk & Tour; ask elders about Tai Khuen words.",
+   "sources": [
+    "https://wikicommunity.sac.or.th/community/1116",
+    "https://ethnicity.sac.or.th/database-ethnic/175/"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "ban-ho",
+   "name_th": "ชุมชนบ้านฮ่อ",
+   "name_en": "Ban Ho Yunnanese Muslim community",
+   "amphoe": "เมือง",
+   "tambon": "ช้างคลาน (Night Bazaar area)",
+   "groups": [
+    "จีนมุสลิมยูนนาน"
+   ],
+   "origin_th": "พ่อค้าคาราวานจีนมุสลิมยูนนาน ตั้งถิ่นฐานชัดเจน พ.ศ. 2440 เจิ้งชงหลิง ตั้งหลัก พ.ศ. 2453",
+   "origin_en": "Yunnanese Muslim caravan traders; settled from c. 1897; merchant Zheng Chonglin established himself 1910; mosque 1917 (wooden), rebuilt 1966; Islamic study centre now 5 storeys.",
+   "language": "ภาษาจีนถิ่น + ไทย",
+   "food_en": "Khao soi as identity food; halal food street.",
+   "market": "กาดบ้านฮ่อ every Friday",
+   "beliefs_en": "Islam; Mawlid and Ramadan central; congregation up to ~2,000 though only 200-300 live in the area.",
+   "visitor_tips_en": "Dress modestly near the mosque, avoid visiting during Friday prayers unless invited, no pork or alcohol in the community.",
+   "sources": [
+    "https://wikicommunity.sac.or.th/community/1080"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "pa-pao",
+   "name_th": "ชุมชนไต (ไทใหญ่) วัดป่าเป้า",
+   "name_en": "Wat Pa Pao Tai (Shan) community",
+   "amphoe": "เมือง",
+   "tambon": "ช้างม่อย (DASTA) / ศรีภูมิ (other listings)",
+   "groups": [
+    "ไต (ไทใหญ่)"
+   ],
+   "origin_th": "วัดสร้าง พ.ศ. 2426 โดยหม่อมบัวไหล พระสนมเชื้อสายไทใหญ่ สมัยพระเจ้าอินทวิชยานนท์ บนที่คุ้มเก่าพระเจ้ากือนา ชื่อมาจากต้นเป้า",
+   "origin_en": "Temple built 1883 by Mom Bua Lai, a Tai consort of King Inthawichayanon, with Tai migrants; site of an older palace of King Kue Na; named after เป้า trees.",
+   "language": "กวามไต, ลิ่กไต (Tai-language school at the temple)",
+   "festivals_en": "Poy Sang Long every April; Ku Tao Phatthana community also involved.",
+   "visitor_tips_en": "During Poy Sang Long ask before photographing the boys; donations welcome.",
+   "sources": [
+    "https://cbtthailand.dasta.or.th/webapp/relattraction/content/3220/",
+    "https://so02.tci-thaijo.org/index.php/JBS/article/view/238296"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "chang-moi-ratchawong",
+   "name_th": "ย่านช้างม่อย-ราชวงศ์ / กาดหลวง",
+   "name_en": "Chang Moi-Ratchawong & Warorot",
+   "amphoe": "เมือง",
+   "tambon": "ช้างม่อย",
+   "groups": [
+    "คนเมือง",
+    "คนจีน-ไทย พ่อค้า"
+   ],
+   "origin_en": "Old merchant shophouse district (>50-year-old buildings) next to Kad Luang; creative revival since 2019.",
+   "visitor_tips_en": "Practise market phrases; many wholesalers are family businesses.",
+   "sources": [
+    "https://urbancreature.co/changmoi-ratchawong/"
+   ],
+   "confidence": "medium"
+  },
+  {
+   "id": "si-phum",
+   "name_th": "แจ่งศรีภูมิ และเมืองเก่า",
+   "name_en": "Si Phum corner & old-city geomancy",
+   "amphoe": "เมือง",
+   "tambon": "ศรีภูมิ",
+   "groups": [
+    "คนเมือง"
+   ],
+   "origin_en": "Si Phum is the north-east corner bastion; with 3 other corners, 5 gates and the centre it is a site for the annual city life-extension ceremony. Gates were laid out by Taksa astrology (Suan Prung = funeral gate). Detailed Si Phum community history not found this round.",
+   "sources": [
+    "https://chiangmai.prd.go.th/th/content/category/detail/id/9/iid/399027",
+    "https://www.chiangmainews.co.th/knowledge/1607235/"
+   ],
+   "confidence": "medium"
+  },
+  {
+   "id": "pa-phrao",
+   "name_th": "ชุมชนป่าพร้าว (ป่าพร้าวนอก)",
+   "name_en": "Pa Phrao community",
+   "amphoe": "เมือง",
+   "status": "gap",
+   "origin_en": "Riverside community east of the Ping near Nawarat bridge; no opened source with history this round.",
+   "sources": [],
+   "confidence": "low"
+  },
+  {
+   "id": "chang-khoeng",
+   "name_th": "ช่างเคิ่ง",
+   "name_en": "Chang Khoeng",
+   "status": "gap",
+   "origin_en": "Search found Wat Chang Khoeng in Saraphi district and in Mae Chaem (Mae Chaem Art & Culture list), and a Hmong community 'Khun Chang Khian' in Mueang - the requested 'Chang Khoeng' old-city community could not be confirmed. Clarify which is meant.",
+   "sources": [],
+   "confidence": "low"
+  },
+  {
+   "id": "khun-chang-khian",
+   "name_th": "บ้านขุนช่างเคี่ยน",
+   "name_en": "Ban Khun Chang Khian (Hmong)",
+   "amphoe": "เมือง",
+   "tambon": "ช้างเผือก (หมู่ 4, ในอุทยานฯ สุเทพ-ปุย)",
+   "groups": [
+    "ม้งขาว"
+   ],
+   "origin_en": "White Hmong from Doi Pui; consolidated 1966 (~25 houses) by นายจู๋ยี แซ่ลี and นายสายหลือ แซ่ลี; highland agriculture research station from 1973.",
+   "language": "ม้ง, คำเมือง, ไทยกลาง",
+   "crafts_en": "Lychee, wild Himalayan cherry (นางพญาเสือโคร่ง), coffee, strawberries; cafés.",
+   "beliefs_en": "Ancestor/house spirit at main-post altar; shamanic rites; blessed silver necklaces for young children; Buddhism, some Christianity.",
+   "food_en": "Simple food with salt and herbs; black-chicken herbal soup for special meals.",
+   "sources": [
+    "https://wikicommunity.sac.or.th/community/400"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "doi-pui",
+   "name_th": "บ้านม้งดอยปุย",
+   "name_en": "Doi Pui Hmong village",
+   "amphoe": "เมือง",
+   "tambon": "สุเทพ (อุทยานฯ ดอยสุเทพ-ปุย)",
+   "groups": [
+    "ม้ง (ส่วนใหญ่ม้งลาย/ม้งเขียว)"
+   ],
+   "origin_en": "Founded c. 1946-1953 by Hmong fleeing smallpox and drug suppression; 279 households, 1,408 people; no land title in park.",
+   "beliefs_en": "Patrilineal clans (ว่าง บน/ล่าง, ลี, ย่าง); spirit religion, Buddhism, Christianity, Islam present.",
+   "sources": [
+    "https://wikicommunity.sac.or.th/community/21"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "bo-sang-ton-pao",
+   "name_th": "บ่อสร้าง และบ้านต้นเปา",
+   "name_en": "Bo Sang umbrellas & Ban Ton Pao saa paper",
+   "amphoe": "สันกำแพง",
+   "groups": [
+    "คนเมือง",
+    "ไทขึน (ต้นเปา)",
+    "ไทลื้อ (ทางใต้ของสันกำแพง ตามแหล่งข้อมูล)"
+   ],
+   "origin_en": "Ton Pao ancestors likely from Sipsongpanna/Chiang Tung/Chiang Rung in Kawila's era; they speak with a Tai Khuen accent, while southern San Kamphaeng speaks Tai Lue (Muang Boran). Umbrella craft >200 years.",
+   "crafts_en": "Umbrellas (multi-village chain), saa paper (~100 yrs at Ton Pao).",
+   "sources": [
+    "https://www.chiangmainews.co.th/100lanna/3305801/",
+    "https://www.muangboranjournal.com/post/saa-paper-tonpao"
+   ],
+   "confidence": "medium"
+  },
+  {
+   "id": "luang-nuea",
+   "name_th": "บ้านลวงเหนือ",
+   "name_en": "Ban Luang Nuea Tai Lue village",
+   "amphoe": "ดอยสะเก็ด",
+   "tambon": "ลวงเหนือ",
+   "groups": [
+    "ไตลื้อ"
+   ],
+   "origin_en": "From Sipsongpanna; village pillar inscription 'เสาร์ 3 เมษา 1932'.",
+   "language": "Tai Lue + Kham Mueang",
+   "crafts_en": "Cotton bags with ลายพญาลวง; saa paper, wooden dolls.",
+   "food_en": "ข้าวแคบ, ขนมวง, โสะบะก้วยเต้ด, 'Tai Lue pad thai'.",
+   "phrases": [
+    "อยู่ดี กินหวาน (Tai Lue greeting)"
+   ],
+   "sources": [
+    "https://wikicommunity.sac.or.th/community/1498",
+    "https://www.dasta.or.th/th/article/271"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "wiang-wai",
+   "name_th": "บ้านเวียงหวาย",
+   "name_en": "Wiang Wai Tai village",
+   "amphoe": "ฝาง",
+   "groups": [
+    "ไต (88.35%)"
+   ],
+   "origin_en": "Tai migrants from Myanmar ~100+ years ago; 661 households, 2,638 people.",
+   "language": "กวามไต/ลิ่กไต, 5 tones",
+   "festivals_en": "ปอยหลู่ข้าวหย่ากู๊ (red sticky rice offering), new-rice merit, Lent.",
+   "arts_en": "Kinnara bird dance (ฟ้อนนกกิงกะหร่า), sacred tattoos.",
+   "food_en": "ถั่วเน่า, ไก่อุ๊บ.",
+   "sources": [
+    "https://wikicommunity.sac.or.th/community/964"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "pang-daeng-nai",
+   "name_th": "บ้านปางแดงใน",
+   "name_en": "Pang Daeng Nai Dara-ang village",
+   "amphoe": "เชียงดาว",
+   "groups": [
+    "ดาราอั้ง"
+   ],
+   "origin_en": "From Myanmar 1985; community forest; March upstream spirit-feeding rite.",
+   "sources": [
+    "https://www.doichiangdaobiosphere.com/destinations/%E0%B8%8A%E0%B8%B8%E0%B8%A1%E0%B8%8A%E0%B8%99%E0%B8%9A%E0%B9%89%E0%B8%B2%E0%B8%99%E0%B8%9B%E0%B8%B2%E0%B8%87%E0%B9%81%E0%B8%94%E0%B8%87%E0%B9%83%E0%B8%99"
+   ],
+   "confidence": "medium"
+  },
+  {
+   "id": "chiang-dao",
+   "name_th": "ดอยหลวงเชียงดาว",
+   "name_en": "Chiang Dao guardian spirit centre",
+   "amphoe": "เชียงดาว",
+   "origin_en": "Seat of Chao Luang Kham Daeng.",
+   "sources": [
+    "https://www.matichon.co.th/weekly/featured/article_361384"
+   ],
+   "confidence": "medium"
+  },
+  {
+   "id": "mae-klang-luang",
+   "name_th": "บ้านแม่กลางหลวง",
+   "name_en": "Ban Mae Klang Luang",
+   "amphoe": "จอมทอง",
+   "groups": [
+    "ปกาเกอะญอ"
+   ],
+   "origin_en": "~400 people at 1,200 m; terraced rice, Arabica coffee; tourism since 1999.",
+   "sources": [
+    "https://wikicommunity.sac.or.th/community/845"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "chom-thong",
+   "name_th": "จอมทอง",
+   "name_en": "Chom Thong town",
+   "amphoe": "จอมทอง",
+   "origin_en": "Named after Wat Phra That Si Chom Thong; district office est. 1890 at Ban Tha Sala; hub for southern CM and Doi Inthanon. Southern-route nasal accent.",
+   "sources": [
+    "https://chomthong.cdd.go.th/th/content/page/index/id/16",
+    "https://www.silpa-mag.com/history/article_42740",
+    "https://www.chiangmainews.co.th/page/archives/1867329"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "hot-bo-luang",
+   "name_th": "ฮอด และบ้านบ่อหลวง",
+   "name_en": "Hot & Ban Bo Luang (Lavu'a)",
+   "amphoe": "ฮอด",
+   "groups": [
+    "ละเวือะ",
+    "คนเมือง"
+   ],
+   "origin_en": "Old town linked to Queen Chamadevi legend; old Hot flooded by Bhumibol reservoir. Bo Luang: first Lavu'a village, iron smelting; rituals โนกละมาง and honouring ขุนหลวงวิลังคะ.",
+   "sources": [
+    "https://prachatai.com/journal/2012/03/39793",
+    "https://wikicommunity.sac.or.th/community/249"
+   ],
+   "confidence": "medium"
+  },
+  {
+   "id": "mae-chaem",
+   "name_th": "แม่แจ่ม",
+   "name_en": "Mae Chaem",
+   "amphoe": "แม่แจ่ม",
+   "groups": [
+    "คนเมือง",
+    "ปกาเกอะญอ",
+    "ละเวือะ",
+    "ม้ง"
+   ],
+   "origin_en": "Tin chok weaving from Chiang Saen weavers >200 years ago; speech close to southern Chiang Mai with particle แอ่ and ai→oy.",
+   "sources": [
+    "https://www.chiangmainews.co.th/100lanna/3301588/",
+    "https://www.mae-chaem.com/view.php?id=139",
+    "https://www.mae-chaem.com/view.php?id=141"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "saraphi",
+   "name_th": "สารภี",
+   "name_en": "Saraphi",
+   "amphoe": "สารภี",
+   "origin_en": "Formerly อำเภอยางเนิ้ง; yang-na avenue planted c. 1902.",
+   "sources": [
+    "https://www.silpa-mag.com/history/article_156779"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "samoeng-mae-khapu",
+   "name_th": "บ้านแม่ขะปู สะเมิง",
+   "name_en": "Mae Khapu, Samoeng",
+   "amphoe": "สะเมิง",
+   "tambon": "บ่อแก้ว",
+   "groups": [
+    "ละเวือะ",
+    "ปกาเกอะญอ"
+   ],
+   "origin_en": "Name from a fern (กุปูเคาะ → ขะปู); strawberries, temperate fruit; shift from feeding ผีปู่ย่า to Buddhist merit for ancestors.",
+   "sources": [
+    "https://wikicommunity.sac.or.th/community/1333"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "omkoi",
+   "name_th": "อมก๋อย",
+   "name_en": "Omkoi",
+   "amphoe": "อมก๋อย",
+   "status": "partial",
+   "origin_en": "Minor district of Hot from 1929, full district 1958; mountainous SW district; Thai sources on Omkoi ethnography could not be opened this round.",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Omkoi_district"
+   ],
+   "confidence": "low"
+  },
+  {
+   "id": "mae-rim",
+   "name_th": "แม่ริม",
+   "name_en": "Mae Rim",
+   "amphoe": "แม่ริม",
+   "status": "gap",
+   "origin_en": "Pong Yaeng/Mae Sa Hmong communities found in search; pages failed to load.",
+   "sources": [],
+   "confidence": "low"
+  }
+ ]
+}

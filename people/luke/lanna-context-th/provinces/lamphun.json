@@ -1,0 +1,1957 @@
+{
+ "province_th": "ลำพูน",
+ "province_en": "Lamphun",
+ "province_slug": "lamphun",
+ "overview_th": "ลำพูนคือเมืองหริภุญชัย อาณาจักรมอญที่มีพระนางจามเทวีเป็นกษัตรีย์องค์แรก ก่อนพญามังรายผนวกเข้ากับล้านนา ปัจจุบันคนลำพูนส่วนใหญ่ (มีการประมาณว่ากว่า 80%) สืบเชื้อสายจากชาวยองที่ถูกกวาดต้อนมาจากเมืองยองในยุค \"เก็บผักใส่ซ้า เก็บข้าใส่เมือง\" (ราว พ.ศ. 2348) จึงมีสำเนียงยอง ประเพณีสลากย้อม ผ้าทอ และความเชื่อเรื่องเทวบุตรหลวงเป็นเอกลักษณ์ เศรษฐกิจอิงลำไย กระเทียม และแรงงานโรงงานอุตสาหกรรม",
+ "overview_en": "Lamphun is ancient Hariphunchai, the Mon kingdom whose first ruler in the chronicles is Queen Chamadevi, later taken into Lanna by King Mangrai. Most Lamphun people today (sources say over 80%) descend from the Yong, who were resettled from Mueang Yong in Shan State around 1805 during the \"gather vegetables into baskets, gather people into towns\" era. So Lamphun has a Yong accent, the Salak Yom festival, a weaving tradition and the Thewabut Luang guardian cult. The economy rests on longan, garlic and factory work. Lamphun borders Chiang Mai, so it is an easy day trip for nomads.",
+ "language": {
+  "varieties": [
+   "Kham Mueang / Northern Thai (Tai Yuan), western Lanna type (ภาษาไทยถิ่นเหนือ / กำเมือง)",
+   "Yong (ภาษายอง; ISO 639-3 yno): Pa Sang, Mae Tha, Mueang Lamphun, Ban Hong",
+   "Tai Lue (ภาษาไทลื้อ): e.g. Ban Pa Hiang, Ban Thi district",
+   "Standard Central Thai (schools, offices, factories)"
+  ],
+  "dialect_group": "Lanna West (Chiang Mai-Lamphun, long \"drawn-out\" accent) with a strong Yong/Lue-derived layer",
+  "pronunciation_features": [
+   {
+    "feature_th": "สำเนียงยอง: สระประสม อัว เป็น โอ",
+    "feature_en": "Yong accent: diphthong ua becomes o",
+    "example_local": "โสย",
+    "example_central": "สวย",
+    "source": [
+     "https://culture.lpru.ac.th/WebCulture2553/CultureKnowledge/file/05-03.pdf",
+     "https://goal90antique.blogspot.com/2017/10/blog-post_30.html"
+    ],
+    "confidence": "high"
+   },
+   {
+    "feature_th": "สำเนียงยอง: สระ เอีย เป็น เอ",
+    "feature_en": "Yong accent: ia becomes e",
+    "example_local": "หมี่เก๊ว",
+    "example_central": "หมี่เกี๊ยว",
+    "source": [
+     "https://culture.lpru.ac.th/WebCulture2553/CultureKnowledge/file/05-03.pdf"
+    ],
+    "confidence": "high"
+   },
+   {
+    "feature_th": "สำเนียงยอง: สระ เอือ เป็น เออ",
+    "feature_en": "Yong accent: uea becomes oe",
+    "example_local": "เมิง, เก๋อ",
+    "example_central": "เมือง, เกลือ",
+    "source": [
+     "https://culture.lpru.ac.th/WebCulture2553/CultureKnowledge/file/05-03.pdf",
+     "https://goal90antique.blogspot.com/2017/10/blog-post_30.html"
+    ],
+    "confidence": "high"
+   },
+   {
+    "feature_th": "ภาษายองไม่มีเสียงควบกล้ำและสระประสม (ระบบเสียง: พยัญชนะ 21 สระเดี่ยว 18 วรรณยุกต์ 6)",
+    "feature_en": "Yong has no consonant clusters and no diphthongs (21 consonants, 18 monophthongs, 6 tones)",
+    "example_local": "เก๋อ",
+    "example_central": "เกลือ",
+    "source": [
+     "https://digital.car.chula.ac.th/chulaetd/48617/"
+    ],
+    "confidence": "high"
+   },
+   {
+    "feature_th": "ภาษายองแบ่งเป็น 2 ถิ่นย่อย: ตะวันออก (แม่ทา, เมืองลำพูนฝั่งตะวันออก) และตะวันตก (เมืองลำพูนฝั่งตะวันตก, ป่าซาง, บ้านโฮ่ง) ต่างกันที่เสียง /s/, /x/, /j/, /xʷ/",
+    "feature_en": "Yong has two sub-dialects, East (Mae Tha, east Mueang) and West (west Mueang, Pa Sang, Ban Hong), differing in /s/, /x/, /j/, /xʷ/",
+    "example_local": "",
+    "example_central": "",
+    "source": [
+     "https://digital.car.chula.ac.th/chulaetd/48617/"
+    ],
+    "confidence": "medium"
+   },
+   {
+    "feature_th": "คำเมืองทั่วไป: ช เป็น จ, พ เป็น ป, ค เป็น ก, ท เป็น ต, ร เป็น ฮ",
+    "feature_en": "General Kham Mueang: Central ch>j, ph>p, kh>k, th>t, r>h",
+    "example_local": "จ๊อน, แปง, กำ, ตาง, เฮา",
+    "example_central": "ช้อน, แพง, คำ, ทาง, เรา",
+    "source": [
+     "https://culture.lpru.ac.th/WebCulture2553/CultureKnowledge/file/05-03.pdf"
+    ],
+    "confidence": "high"
+   },
+   {
+    "feature_th": "ญ นาสิก (ย ขึ้นจมูก) ในคำอย่าง หญ้า",
+    "feature_en": "Nasal palatal ñ where Central Thai has y",
+    "example_local": "ญ้า",
+    "example_central": "หญ้า",
+    "source": [
+     "https://culture.lpru.ac.th/WebCulture2553/CultureKnowledge/file/05-03.pdf"
+    ],
+    "confidence": "medium"
+   }
+  ],
+  "tone_notes_en": "Kham Mueang in Lamphun follows the western (Chiang Mai-type) six-tone system; the tones listed with words here come from Thai Wiktionary IPA, which is Chiang Mai-based. The Chula thesis on Lamphun Yong also found 6 tones. Wikipedia (citing Ethnologue) says younger Yong speakers are merging the high tone with the high-falling and mid-falling tones because of contact with Northern and Central Thai. Word-by-word Yong tone values were not available.",
+  "script_notes": "Tai Tham (อักษรธรรมล้านนา, locally ตัวเมือง) is the traditional script for Yong and Kham Mueang religious texts; SAC notes Yong use it. Wat Ton Kaeo's Yong folk museum holds manuscripts and scripture chests. In practice modern signage is Central Thai script; bilingual Tai Tham + Thai signs appear at some temples and municipal sites (not verified street by street).",
+  "code_switching_and_generations_en": "Yong speakers are generally trilingual (Yong, Kham Mueang, Central Thai). Tai Lue villagers at Ban Pa Hiang use Central Thai, Tai Lue and Kham Mueang (SAC). Younger people increasingly speak Central-Thai-influenced Kham Mueang. The term แปล๊ด (mixed Northern/Central speech) is recorded by LPRU. Factory work draws people from other regions, and Central Thai probably serves as the workplace lingua franca (inference)."
+ },
+ "vocabulary": [
+  {
+   "local_th": "คนยอง",
+   "roman": "khon yong",
+   "pronunciation": "",
+   "central_th": "ชาวยอง",
+   "en": "Yong person/people (self-designation)",
+   "category": "ethnic identity",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": [
+    "https://ethnicity.sac.or.th/database-ethnic/181",
+    "https://www.matichon.co.th/weekly/column/article_182589"
+   ],
+   "confidence": "high",
+   "notes": "Other self-names recorded by SAC: ชาวยอง, ไทยอง, ขงเมืองยอง. SAC notes the name comes from Mueang Yong in eastern Shan State."
+  },
+  {
+   "local_th": "ไทยอง",
+   "roman": "thai yong",
+   "pronunciation": "",
+   "central_th": "ชาวยอง",
+   "en": "Thai Yong (self-designation, common in Lamphun public usage)",
+   "category": "ethnic identity",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": [
+    "https://ethnicity.sac.or.th/database-ethnic/181",
+    "https://www.matichon.co.th/weekly/column/article_182589"
+   ],
+   "confidence": "high"
+  },
+  {
+   "local_th": "เมิง",
+   "roman": "moeng",
+   "pronunciation": "moeng; tone not given in source (derived: expected mid 33 like Kham Mueang เมือง /mɯaŋ33/, low confidence)",
+   "central_th": "เมือง",
+   "en": "town, city, \"country\" (Yong/Lamphun accent form)",
+   "category": "Yong accent",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": [
+    "https://culture.lpru.ac.th/WebCulture2553/CultureKnowledge/file/05-03.pdf",
+    "https://goal90antique.blogspot.com/2017/10/blog-post_30.html"
+   ],
+   "confidence": "high",
+   "notes": "Example of uea > oe in the Mueang Yong accent. LPRU/Goal90 attribute this accent to Lamphun."
+  },
+  {
+   "local_th": "เก๋อ",
+   "roman": "koe",
+   "pronunciation": "koe; spelled with mai chattawa (๋), which Northern writers use for a low-rising tone (derived 24, medium)",
+   "central_th": "เกลือ",
+   "en": "salt (Yong accent)",
+   "category": "Yong accent/food",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": [
+    "https://culture.lpru.ac.th/WebCulture2553/CultureKnowledge/file/05-03.pdf",
+    "https://goal90antique.blogspot.com/2017/10/blog-post_30.html"
+   ],
+   "confidence": "high",
+   "notes": "No cluster (kl > k) and uea > oe."
+  },
+  {
+   "local_th": "โสย",
+   "roman": "soi",
+   "pronunciation": "soi; tone not given (derived: high-class ส with no mark, expected low-rising 24 as in Kham Mueang; low confidence)",
+   "central_th": "สวย",
+   "en": "beautiful (Yong accent)",
+   "category": "Yong accent",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": [
+    "https://culture.lpru.ac.th/WebCulture2553/CultureKnowledge/file/05-03.pdf"
+   ],
+   "confidence": "high",
+   "notes": "ua > o."
+  },
+  {
+   "local_th": "หมี่เก๊ว",
+   "roman": "mi keo",
+   "pronunciation": "mi . keo; tones not sourced",
+   "central_th": "หมี่เกี๊ยว",
+   "en": "egg noodles with wontons (Yong accent)",
+   "category": "Yong accent/food",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": [
+    "https://culture.lpru.ac.th/WebCulture2553/CultureKnowledge/file/05-03.pdf"
+   ],
+   "confidence": "high",
+   "notes": "ia > e."
+  },
+  {
+   "local_th": "เตวบุตรโหลง",
+   "roman": "teo-a-but long",
+   "pronunciation": "not sourced",
+   "central_th": "เทวบุตรหลวง",
+   "en": "Thewabut Luang, the great guardian deity of the Yong (Yong pronunciation)",
+   "category": "belief",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": [
+    "https://mgronline.com/travel/detail/9540000145872",
+    "https://ethnicity.sac.or.th/database-ethnic/181"
+   ],
+   "confidence": "medium",
+   "notes": "MGR gives the Yong form in brackets; shows ua > o (หลวง > โหลง) and ท > ต."
+  },
+  {
+   "local_th": "ขงเมืองยอง",
+   "roman": "khong mueang yong",
+   "pronunciation": "not sourced",
+   "central_th": "คนเมืองยอง",
+   "en": "people of Mueang Yong (self-designation recorded by SAC)",
+   "category": "ethnic identity",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": [
+    "https://ethnicity.sac.or.th/database-ethnic/181"
+   ],
+   "confidence": "medium"
+  },
+  {
+   "local_th": "ฮ่ำกะโลง",
+   "roman": "ham ka-long",
+   "pronunciation": "not sourced",
+   "central_th": "(ขับทำนองโบราณ)",
+   "en": "old chanted melody used to recite the donor's life story at Salak Yom",
+   "category": "ritual/music",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": [
+    "https://inzpy.com/travel/salakyom-festival-lamphun",
+    "https://www.thaipost.net/main/detail/16607",
+    "https://wikicommunity.sac.or.th/community/300"
+   ],
+   "confidence": "high"
+  },
+  {
+   "local_th": "สลากย้อม",
+   "roman": "salak yom",
+   "pronunciation": "not sourced",
+   "central_th": "สลากย้อม",
+   "en": "tall Salak Yom merit tree offered by a young woman; the festival itself",
+   "category": "festival",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": [
+    "https://lamphun.prd.go.th/th/content/category/detail/id/33/iid/421568",
+    "https://inzpy.com/travel/salakyom-festival-lamphun"
+   ],
+   "confidence": "high"
+  },
+  {
+   "local_th": "ครัวทาน",
+   "roman": "khrua than",
+   "pronunciation": "not sourced",
+   "central_th": "เครื่องไทยทาน",
+   "en": "set of gifts / offerings carried in a merit procession",
+   "category": "ritual",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": [
+    "https://lamphun.prd.go.th/th/content/category/detail/id/33/iid/421568"
+   ],
+   "confidence": "medium"
+  },
+  {
+   "local_th": "เสื้อบ้าน",
+   "roman": "suea ban",
+   "pronunciation": "not sourced",
+   "central_th": "ผีอารักษ์หมู่บ้าน",
+   "en": "guardian spirit of the village",
+   "category": "belief",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": [
+    "https://ethnicity.sac.or.th/database-ethnic/181"
+   ],
+   "confidence": "medium",
+   "notes": "SAC lists it among sacred places/spirits. An automated summary glossed it as \"house clothing\", which is wrong; in Lanna usage เสื้อ here means guardian spirit. Needs expert confirmation."
+  },
+  {
+   "local_th": "เสาใจบ้าน",
+   "roman": "sao chai ban",
+   "pronunciation": "not sourced",
+   "central_th": "เสาหลักกลางหมู่บ้าน",
+   "en": "village heart-post, the spiritual centre of a village, often under a big tree",
+   "category": "belief",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": [
+    "https://ethnicity.sac.or.th/database-ethnic/181"
+   ],
+   "confidence": "high"
+  },
+  {
+   "local_th": "หอผี",
+   "roman": "ho phi",
+   "pronunciation": "not sourced",
+   "central_th": "ศาลผี",
+   "en": "spirit house/shrine (ancestral or guardian)",
+   "category": "belief",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": [
+    "https://ethnicity.sac.or.th/database-ethnic/181"
+   ],
+   "confidence": "high"
+  },
+  {
+   "local_th": "ป่าเฮ่ว",
+   "roman": "pa heo",
+   "pronunciation": "pa [21 low-falling] . heo [42 high-falling]; IPA /paː˨˩.heːw˦˨/ (th.wiktionary via PyThaiNLP)",
+   "central_th": "ป่าช้า",
+   "en": "cemetery forest (sacred; avoid casually)",
+   "category": "belief/place",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": [
+    "https://ethnicity.sac.or.th/database-ethnic/181",
+    "https://huggingface.co/datasets/pythainlp/lanna_dict"
+   ],
+   "confidence": "high",
+   "tai_tham": "ᨸ᩵ᩣᩁᩮ᩠᩵ᩅ"
+  },
+  {
+   "local_th": "แก้ขึด",
+   "roman": "kae khuet",
+   "pronunciation": "not sourced",
+   "central_th": "แก้อัปมงคล",
+   "en": "ritual to undo a taboo breach / bad omen",
+   "category": "belief",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": [
+    "https://ethnicity.sac.or.th/database-ethnic/181"
+   ],
+   "confidence": "high"
+  },
+  {
+   "local_th": "แผ่นดินเฟือน",
+   "roman": "phaen din fuean",
+   "pronunciation": "not sourced",
+   "central_th": "แผ่นดินไหว",
+   "en": "earthquake (treated as an omen)",
+   "category": "nature/belief",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": [
+    "https://ethnicity.sac.or.th/database-ethnic/181"
+   ],
+   "confidence": "medium"
+  },
+  {
+   "local_th": "อยู่เดือน",
+   "roman": "yu duean",
+   "pronunciation": "not sourced",
+   "central_th": "อยู่ไฟ",
+   "en": "post-partum confinement (about 30-45 days)",
+   "category": "family/life-cycle",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": [
+    "https://ethnicity.sac.or.th/database-ethnic/181"
+   ],
+   "confidence": "medium",
+   "notes": "Also ก๋ำเดือน per SAC."
+  },
+  {
+   "local_th": "ก๋ำเดือน",
+   "roman": "kam duean",
+   "pronunciation": "not sourced",
+   "central_th": "อยู่ไฟ",
+   "en": "post-partum confinement (Yong term per SAC)",
+   "category": "family/life-cycle",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": [
+    "https://ethnicity.sac.or.th/database-ethnic/181"
+   ],
+   "confidence": "medium"
+  },
+  {
+   "local_th": "ออกเดือน",
+   "roman": "ok duean",
+   "pronunciation": "not sourced",
+   "central_th": "ออกจากการอยู่ไฟ",
+   "en": "end of confinement; mother and baby come out after a month",
+   "category": "family/life-cycle",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": [
+    "https://ethnicity.sac.or.th/database-ethnic/181"
+   ],
+   "confidence": "medium"
+  },
+  {
+   "local_th": "แฮก",
+   "roman": "haek",
+   "pronunciation": "not sourced",
+   "central_th": "แรก (พิธีแรก)",
+   "en": "first-of-season rite, e.g. first harvest offering",
+   "category": "farming/ritual",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": [
+    "https://ethnicity.sac.or.th/database-ethnic/181"
+   ],
+   "confidence": "medium"
+  },
+  {
+   "local_th": "แฮกนา",
+   "roman": "haek na",
+   "pronunciation": "not sourced",
+   "central_th": "แรกนา",
+   "en": "first-planting rite in the rice field",
+   "category": "farming/ritual",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": [
+    "https://ethnicity.sac.or.th/database-ethnic/181"
+   ],
+   "confidence": "medium"
+  },
+  {
+   "local_th": "เข้าเล้า",
+   "roman": "khao lao",
+   "pronunciation": "not sourced",
+   "central_th": "เก็บข้าวเข้ายุ้ง",
+   "en": "putting the harvested rice into the granary",
+   "category": "farming",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": [
+    "https://ethnicity.sac.or.th/database-ethnic/181"
+   ],
+   "confidence": "medium"
+  },
+  {
+   "local_th": "เล้าเข้า",
+   "roman": "lao khao",
+   "pronunciation": "not sourced",
+   "central_th": "ยุ้งข้าว",
+   "en": "rice granary",
+   "category": "farming/housing",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": [
+    "https://ethnicity.sac.or.th/database-ethnic/181"
+   ],
+   "confidence": "medium"
+  },
+  {
+   "local_th": "เดือนเกี๋ยง",
+   "roman": "duean kiang",
+   "pronunciation": "not sourced",
+   "central_th": "เดือนอ้าย (ตามปฏิทินล้านนา ≈ ต.ค.-พ.ย.)",
+   "en": "first month of the Lanna lunar calendar (around October)",
+   "category": "time",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": [
+    "https://ethnicity.sac.or.th/database-ethnic/181"
+   ],
+   "confidence": "medium"
+  },
+  {
+   "local_th": "ผักปั๋ง",
+   "roman": "phak pang",
+   "pronunciation": "not sourced",
+   "central_th": "ผักปลัง",
+   "en": "Malabar spinach (eaten after childbirth, per SAC)",
+   "category": "food",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": [
+    "https://ethnicity.sac.or.th/database-ethnic/181"
+   ],
+   "confidence": "medium",
+   "notes": "SAC summary did not identify the plant; ผักปลัง identification is the researcher's, low-medium confidence."
+  },
+  {
+   "local_th": "บ่ะแคว้ง",
+   "roman": "ba khaeng",
+   "pronunciation": "not sourced",
+   "central_th": "มะแว้ง (มะเขือพื้นเมืองชนิดหนึ่ง)",
+   "en": "a wild bitter Solanum berry (avoided post-partum per SAC)",
+   "category": "food",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": [
+    "https://ethnicity.sac.or.th/database-ethnic/181"
+   ],
+   "confidence": "low"
+  },
+  {
+   "local_th": "สืบจะต๋า",
+   "roman": "suep cha-ta",
+   "pronunciation": "not sourced",
+   "central_th": "สืบชะตา",
+   "en": "life-extension ceremony",
+   "category": "ritual",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": [
+    "https://mfuir.mfu.ac.th/jspui/bitstream/123456789/1029/1/2025-v14-no1-p.72-97.pdf"
+   ],
+   "confidence": "high",
+   "notes": "Yong spelling from a 2025 MFU journal paper (fieldwork in San Pa Tong, Chiang Mai)."
+  },
+  {
+   "local_th": "ฟ้อนยอง",
+   "roman": "fon yong",
+   "pronunciation": "not sourced",
+   "central_th": "ระบำชาวยอง",
+   "en": "Yong dance",
+   "category": "arts",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": [
+    "https://www.matichon.co.th/weekly/column/article_182589",
+    "https://wikicommunity.sac.or.th/community/300"
+   ],
+   "confidence": "high"
+  },
+  {
+   "local_th": "กลองหลวง",
+   "roman": "klong luang",
+   "pronunciation": "not sourced",
+   "central_th": "กลองใหญ่",
+   "en": "giant Lanna drum; Yong drum-making and contests",
+   "category": "arts",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": [
+    "https://www.matichon.co.th/weekly/column/article_182589",
+    "https://wikicommunity.sac.or.th/community/300"
+   ],
+   "confidence": "high"
+  },
+  {
+   "local_th": "ข้าวแคบ",
+   "roman": "khao khaep",
+   "pronunciation": "not sourced",
+   "central_th": "แผ่นข้าวอบกรอบ",
+   "en": "thin crispy rice sheets (Tai Lue OTOP product at Ban Thi)",
+   "category": "food",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": [
+    "https://wikicommunity.sac.or.th/community/391"
+   ],
+   "confidence": "high"
+  },
+  {
+   "local_th": "น้ำถุ้ง",
+   "roman": "nam thung",
+   "pronunciation": "not sourced",
+   "central_th": "ถังตักน้ำจักสาน",
+   "en": "woven bamboo water bucket (Tai Lue craft, Ban Pa Hiang)",
+   "category": "crafts",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": [
+    "https://wikicommunity.sac.or.th/community/391"
+   ],
+   "confidence": "medium"
+  },
+  {
+   "local_th": "ผีปู่ย่า",
+   "roman": "phi pu ya",
+   "pronunciation": "not sourced",
+   "central_th": "ผีบรรพบุรุษ",
+   "en": "ancestral spirits of the matrilineal family",
+   "category": "belief",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": [
+    "https://ethnicity.sac.or.th/database-ethnic/181",
+    "https://mpp.egat.co.th/hellomaemoh/index.php?option=com_content&view=article&id=981:2023-06-12-08-50-55&catid=43&Itemid=245"
+   ],
+   "confidence": "high"
+  },
+  {
+   "local_th": "กิ๋น",
+   "roman": "kin",
+   "pronunciation": "kin [24 low-rising] ; IPA /kin˨˦/ (th.wiktionary via PyThaiNLP lanna_dict; Chiang Mai-based reference, local realisation may differ)",
+   "central_th": "กิน",
+   "en": "to eat",
+   "category": "verb/food",
+   "example_sentence_local": "กิ๋นข้าวแล้วกา",
+   "example_sentence_en": "Have you eaten yet? (greeting)",
+   "source": [
+    "https://huggingface.co/datasets/pythainlp/lanna_dict",
+    "https://culture.lpru.ac.th/WebCulture2553/CultureKnowledge/file/05-03.pdf"
+   ],
+   "confidence": "high",
+   "tai_tham": "ᨠᩥ᩠ᨶ",
+   "notes": "Yong-accent note: Yong speakers in Lamphun may shift diphthongs (ua>o, ia>e, uea>oe) in words containing them."
+  },
+  {
+   "local_th": "ลำ",
+   "roman": "lam",
+   "pronunciation": "",
+   "central_th": "อร่อย",
+   "en": "delicious",
+   "category": "food/adjective",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": [
+    "https://huggingface.co/datasets/pythainlp/lanna_dict"
+   ],
+   "confidence": "high",
+   "tai_tham": "ᩃᩣᩴ",
+   "notes": "Tone not given in dictionary entry; verify with a speaker. Yong-accent note: Yong speakers in Lamphun may shift diphthongs (ua>o, ia>e, uea>oe) in words containing them."
+  },
+  {
+   "local_th": "แต๊",
+   "roman": "tae",
+   "pronunciation": "tɛː [45 high-rising] ; IPA /tɛː˦˥/ (th.wiktionary via PyThaiNLP lanna_dict; Chiang Mai-based reference, local realisation may differ)",
+   "central_th": "แท้, จริง",
+   "en": "truly, really",
+   "category": "intensifier",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": [
+    "https://huggingface.co/datasets/pythainlp/lanna_dict"
+   ],
+   "confidence": "high",
+   "tai_tham": "ᨴᩯ᩶",
+   "notes": "Yong-accent note: Yong speakers in Lamphun may shift diphthongs (ua>o, ia>e, uea>oe) in words containing them."
+  },
+  {
+   "local_th": "ม่วน",
+   "roman": "muan",
+   "pronunciation": "muan [42 high-falling] ; IPA /muan˦˨/ (th.wiktionary via PyThaiNLP lanna_dict; Chiang Mai-based reference, local realisation may differ)",
+   "central_th": "สนุก, ไพเราะ",
+   "en": "fun; pleasant to hear",
+   "category": "adjective",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": [
+    "https://huggingface.co/datasets/pythainlp/lanna_dict"
+   ],
+   "confidence": "high",
+   "tai_tham": "ᨾ᩠ᩅ᩵ᩁ",
+   "notes": "Yong-accent note: Yong speakers in Lamphun may shift diphthongs (ua>o, ia>e, uea>oe) in words containing them."
+  },
+  {
+   "local_th": "อู้",
+   "roman": "u",
+   "pronunciation": "ʔuːʔ [44ʔ high-level-glottal] ; IPA /ʔuː˦˦ʔ/ (th.wiktionary via PyThaiNLP lanna_dict; Chiang Mai-based reference, local realisation may differ)",
+   "central_th": "พูด, คุย",
+   "en": "to speak, chat",
+   "category": "verb",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": [
+    "https://huggingface.co/datasets/pythainlp/lanna_dict"
+   ],
+   "confidence": "high",
+   "tai_tham": "ᩉᩪ᩶",
+   "notes": "Yong-accent note: Yong speakers in Lamphun may shift diphthongs (ua>o, ia>e, uea>oe) in words containing them."
+  },
+  {
+   "local_th": "บ่",
+   "roman": "bo",
+   "pronunciation": "bɔː [21 low-falling] ; IPA /bɔː˨˩/ (th.wiktionary via PyThaiNLP lanna_dict; Chiang Mai-based reference, local realisation may differ)",
+   "central_th": "ไม่",
+   "en": "not",
+   "category": "grammar",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": [
+    "https://huggingface.co/datasets/pythainlp/lanna_dict",
+    "https://culture.lpru.ac.th/WebCulture2553/CultureKnowledge/file/05-03.pdf"
+   ],
+   "confidence": "high",
+   "tai_tham": "ᨷᩴ᩵",
+   "notes": "LPRU writes it บ่ะ in บ่ะฮู้/บ่ะฮู่ (don't know). Yong-accent note: Yong speakers in Lamphun may shift diphthongs (ua>o, ia>e, uea>oe) in words containing them."
+  },
+  {
+   "local_th": "ป้อ",
+   "roman": "po",
+   "pronunciation": "pɔː [42 high-falling] ; IPA /pɔː˦˨/ (th.wiktionary via PyThaiNLP lanna_dict; Chiang Mai-based reference, local realisation may differ)",
+   "central_th": "พ่อ",
+   "en": "father",
+   "category": "kinship",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": [
+    "https://huggingface.co/datasets/pythainlp/lanna_dict",
+    "https://goal90antique.blogspot.com/2017/10/blog-post_30.html"
+   ],
+   "confidence": "high",
+   "tai_tham": "ᨻᩬᩴ᩵",
+   "notes": "Yong-accent note: Yong speakers in Lamphun may shift diphthongs (ua>o, ia>e, uea>oe) in words containing them."
+  },
+  {
+   "local_th": "อุ้ย",
+   "roman": "ui",
+   "pronunciation": "ʔuj [45 high-rising] ; IPA /ʔuj˦˥/ (th.wiktionary via PyThaiNLP lanna_dict; Chiang Mai-based reference, local realisation may differ)",
+   "central_th": "ปู่ ย่า ตา ยาย",
+   "en": "grandparent / elderly person (term of respect)",
+   "category": "kinship",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": [
+    "https://huggingface.co/datasets/pythainlp/lanna_dict"
+   ],
+   "confidence": "high",
+   "tai_tham": "ᨤᩫ᩠ᨶ",
+   "notes": "Yong-accent note: Yong speakers in Lamphun may shift diphthongs (ua>o, ia>e, uea>oe) in words containing them."
+  },
+  {
+   "local_th": "ปี้",
+   "roman": "pi",
+   "pronunciation": "piː [42 high-falling] ; IPA /piː˦˨/ (th.wiktionary via PyThaiNLP lanna_dict; Chiang Mai-based reference, local realisation may differ)",
+   "central_th": "พี่",
+   "en": "older sibling",
+   "category": "kinship",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": [
+    "https://huggingface.co/datasets/pythainlp/lanna_dict",
+    "https://goal90antique.blogspot.com/2017/10/blog-post_30.html",
+    "https://culture.lpru.ac.th/WebCulture2553/CultureKnowledge/file/05-03.pdf"
+   ],
+   "confidence": "high",
+   "tai_tham": "ᨻᩦ᩵",
+   "notes": "Yong-accent note: Yong speakers in Lamphun may shift diphthongs (ua>o, ia>e, uea>oe) in words containing them."
+  },
+  {
+   "local_th": "อ้าย",
+   "roman": "ai",
+   "pronunciation": "ʔaːjʔ [44ʔ high-level-glottal] ; IPA /ʔaːj˦˦ʔ/ (th.wiktionary via PyThaiNLP lanna_dict; Chiang Mai-based reference, local realisation may differ)",
+   "central_th": "พี่ชาย",
+   "en": "older brother; polite address to a young man",
+   "category": "kinship",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": [
+    "https://huggingface.co/datasets/pythainlp/lanna_dict",
+    "https://culture.lpru.ac.th/WebCulture2553/CultureKnowledge/file/05-03.pdf"
+   ],
+   "confidence": "high",
+   "tai_tham": "ᩋ᩶ᩣ᩠ᨿ",
+   "notes": "Yong-accent note: Yong speakers in Lamphun may shift diphthongs (ua>o, ia>e, uea>oe) in words containing them."
+  },
+  {
+   "local_th": "แม่ญิง",
+   "roman": "mae ying",
+   "pronunciation": "mɛː [42 high-falling] . ɲiŋ [33 mid] ; IPA /mɛː˦˨.ɲiŋ˧˧/ (th.wiktionary via PyThaiNLP lanna_dict; Chiang Mai-based reference, local realisation may differ)",
+   "central_th": "ผู้หญิง",
+   "en": "woman",
+   "category": "people",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": [
+    "https://huggingface.co/datasets/pythainlp/lanna_dict"
+   ],
+   "confidence": "high",
+   "tai_tham": "ᨾᩯ᩵ᨿᩥ᩠ᨦ",
+   "notes": "Yong-accent note: Yong speakers in Lamphun may shift diphthongs (ua>o, ia>e, uea>oe) in words containing them."
+  },
+  {
+   "local_th": "เฮา",
+   "roman": "hao",
+   "pronunciation": "haw [33 mid] ; IPA /haw˧˧/ (th.wiktionary via PyThaiNLP lanna_dict; Chiang Mai-based reference, local realisation may differ)",
+   "central_th": "เรา",
+   "en": "we / I (inclusive)",
+   "category": "pronoun",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": [
+    "https://huggingface.co/datasets/pythainlp/lanna_dict",
+    "https://culture.lpru.ac.th/WebCulture2553/CultureKnowledge/file/05-03.pdf"
+   ],
+   "confidence": "high",
+   "tai_tham": "ᩁᩮᩢᩣ",
+   "notes": "Yong-accent note: Yong speakers in Lamphun may shift diphthongs (ua>o, ia>e, uea>oe) in words containing them."
+  },
+  {
+   "local_th": "เปิ้น",
+   "roman": "poen",
+   "pronunciation": "pɤn [42 high-falling] ; IPA /pɤn˦˨/ (th.wiktionary via PyThaiNLP lanna_dict; Chiang Mai-based reference, local realisation may differ)",
+   "central_th": "เขา / ท่าน / ฉัน (สนิท)",
+   "en": "he/she (polite); also \"I\" among intimates",
+   "category": "pronoun",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": [
+    "https://huggingface.co/datasets/pythainlp/lanna_dict"
+   ],
+   "confidence": "high",
+   "tai_tham": "ᨻᩮᩥ᩠᩵ᨶ",
+   "notes": "Yong-accent note: Yong speakers in Lamphun may shift diphthongs (ua>o, ia>e, uea>oe) in words containing them."
+  },
+  {
+   "local_th": "ตั๋ว",
+   "roman": "tua",
+   "pronunciation": "tua [24 low-rising] ; IPA /tua˨˦/ (th.wiktionary via PyThaiNLP lanna_dict; Chiang Mai-based reference, local realisation may differ)",
+   "central_th": "ตัว, เธอ, คุณ",
+   "en": "you (familiar); body/self",
+   "category": "pronoun",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": [
+    "https://huggingface.co/datasets/pythainlp/lanna_dict"
+   ],
+   "confidence": "high",
+   "tai_tham": "ᨲ᩠ᩅᩫ",
+   "notes": "Yong-accent note: Yong speakers in Lamphun may shift diphthongs (ua>o, ia>e, uea>oe) in words containing them."
+  },
+  {
+   "local_th": "หื้อ",
+   "roman": "hue",
+   "pronunciation": "hɯːʔ [44ʔ high-level-glottal] ; IPA /hɯː˦˦ʔ/ (th.wiktionary via PyThaiNLP lanna_dict; Chiang Mai-based reference, local realisation may differ)",
+   "central_th": "ให้",
+   "en": "to give; to let",
+   "category": "verb",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": [
+    "https://huggingface.co/datasets/pythainlp/lanna_dict"
+   ],
+   "confidence": "high",
+   "tai_tham": "ᩉᩨ᩶",
+   "notes": "Yong-accent note: Yong speakers in Lamphun may shift diphthongs (ua>o, ia>e, uea>oe) in words containing them."
+  },
+  {
+   "local_th": "ฮู้",
+   "roman": "hu",
+   "pronunciation": "huː [45 high-rising] ; IPA /huː˦˥/ (th.wiktionary via PyThaiNLP lanna_dict; Chiang Mai-based reference, local realisation may differ)",
+   "central_th": "รู้",
+   "en": "to know",
+   "category": "verb",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": [
+    "https://huggingface.co/datasets/pythainlp/lanna_dict",
+    "https://culture.lpru.ac.th/WebCulture2553/CultureKnowledge/file/05-03.pdf"
+   ],
+   "confidence": "high",
+   "tai_tham": "ᩁᩪ᩶",
+   "notes": "Yong-accent note: Yong speakers in Lamphun may shift diphthongs (ua>o, ia>e, uea>oe) in words containing them."
+  },
+  {
+   "local_th": "ไค่",
+   "roman": "khai",
+   "pronunciation": "xaj [42 high-falling] ; IPA /xaj˦˨/ (th.wiktionary via PyThaiNLP lanna_dict; Chiang Mai-based reference, local realisation may differ)",
+   "central_th": "อยาก",
+   "en": "to want",
+   "category": "verb",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": [
+    "https://huggingface.co/datasets/pythainlp/lanna_dict"
+   ],
+   "confidence": "high",
+   "tai_tham": "ᨣᩕᩱ᩵",
+   "notes": "Yong-accent note: Yong speakers in Lamphun may shift diphthongs (ua>o, ia>e, uea>oe) in words containing them."
+  },
+  {
+   "local_th": "เยียะ",
+   "roman": "yia",
+   "pronunciation": "ɲiaʔ [45 high-rising] ; IPA /ɲiaʔ˦˥/ (th.wiktionary via PyThaiNLP lanna_dict; Chiang Mai-based reference, local realisation may differ)",
+   "central_th": "ทำ",
+   "en": "to do / make",
+   "category": "verb",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": [
+    "https://huggingface.co/datasets/pythainlp/lanna_dict"
+   ],
+   "confidence": "high",
+   "tai_tham": "ᨿᩮ᩠ᨿᩡ",
+   "notes": "Also written ยะ (LPRU example ยะอะหยั๋งกิ๋นกา). Yong-accent note: Yong speakers in Lamphun may shift diphthongs (ua>o, ia>e, uea>oe) in words containing them."
+  },
+  {
+   "local_th": "อะหยัง",
+   "roman": "a-yang",
+   "pronunciation": "ʔa [tone ?] . ɲaŋ [24 low-rising] ; IPA /ʔa.ɲaŋ˨˦/ (th.wiktionary via PyThaiNLP lanna_dict; Chiang Mai-based reference, local realisation may differ)",
+   "central_th": "อะไร",
+   "en": "what",
+   "category": "question word",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": [
+    "https://huggingface.co/datasets/pythainlp/lanna_dict",
+    "https://culture.lpru.ac.th/WebCulture2553/CultureKnowledge/file/05-03.pdf"
+   ],
+   "confidence": "high",
+   "tai_tham": "ᩉ᩠ᨿᩢᨦ",
+   "notes": "LPRU spells it อะหยั๋ง. Yong-accent note: Yong speakers in Lamphun may shift diphthongs (ua>o, ia>e, uea>oe) in words containing them."
+  },
+  {
+   "local_th": "จิ๊น",
+   "roman": "chin",
+   "pronunciation": "t͡ɕin [45 high-rising] ; IPA /t͡ɕin˦˥/ (th.wiktionary via PyThaiNLP lanna_dict; Chiang Mai-based reference, local realisation may differ)",
+   "central_th": "เนื้อสัตว์",
+   "en": "meat",
+   "category": "food",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": [
+    "https://huggingface.co/datasets/pythainlp/lanna_dict"
+   ],
+   "confidence": "high",
+   "tai_tham": "ᨩᩥ᩠᩶ᨶ",
+   "notes": "Yong-accent note: Yong speakers in Lamphun may shift diphthongs (ua>o, ia>e, uea>oe) in words containing them."
+  },
+  {
+   "local_th": "กาด",
+   "roman": "kat",
+   "pronunciation": "kaːt [21 low-falling] ; IPA /kaːt˨˩/ (th.wiktionary via PyThaiNLP lanna_dict; Chiang Mai-based reference, local realisation may differ)",
+   "central_th": "ตลาด",
+   "en": "market",
+   "category": "place",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": [
+    "https://huggingface.co/datasets/pythainlp/lanna_dict"
+   ],
+   "confidence": "high",
+   "tai_tham": "ᨠᩣ᩠ᨯ",
+   "notes": "Yong-accent note: Yong speakers in Lamphun may shift diphthongs (ua>o, ia>e, uea>oe) in words containing them."
+  },
+  {
+   "local_th": "แอ่ว",
+   "roman": "aeo",
+   "pronunciation": "ʔɛw [21 low-falling] ; IPA /ʔɛw˨˩/ (th.wiktionary via PyThaiNLP lanna_dict; Chiang Mai-based reference, local realisation may differ)",
+   "central_th": "เที่ยว, เยี่ยม",
+   "en": "to go out, visit, travel",
+   "category": "verb",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": [
+    "https://huggingface.co/datasets/pythainlp/lanna_dict"
+   ],
+   "confidence": "high",
+   "tai_tham": "ᩋᩯ᩠᩵ᩅ",
+   "notes": "Yong-accent note: Yong speakers in Lamphun may shift diphthongs (ua>o, ia>e, uea>oe) in words containing them."
+  },
+  {
+   "local_th": "ตาง",
+   "roman": "tang",
+   "pronunciation": "taːŋ [33 mid] ; IPA /taːŋ˧˧/ (th.wiktionary via PyThaiNLP lanna_dict; Chiang Mai-based reference, local realisation may differ)",
+   "central_th": "ทาง",
+   "en": "way, road",
+   "category": "place",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": [
+    "https://huggingface.co/datasets/pythainlp/lanna_dict",
+    "https://culture.lpru.ac.th/WebCulture2553/CultureKnowledge/file/05-03.pdf"
+   ],
+   "confidence": "high",
+   "tai_tham": "ᨴᩤ᩠ᨦ",
+   "notes": "Example of Northern ต for Central ท (LPRU). Yong-accent note: Yong speakers in Lamphun may shift diphthongs (ua>o, ia>e, uea>oe) in words containing them."
+  },
+  {
+   "local_th": "เฮือน",
+   "roman": "huean",
+   "pronunciation": "hɯan [33 mid] ; IPA /hɯan˧˧/ (th.wiktionary via PyThaiNLP lanna_dict; Chiang Mai-based reference, local realisation may differ)",
+   "central_th": "เรือน, บ้าน",
+   "en": "house",
+   "category": "housing",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": [
+    "https://huggingface.co/datasets/pythainlp/lanna_dict"
+   ],
+   "confidence": "high",
+   "tai_tham": "ᩁᩮᩬᩥᩁ",
+   "notes": "Yong-accent note: Yong speakers in Lamphun may shift diphthongs (ua>o, ia>e, uea>oe) in words containing them."
+  },
+  {
+   "local_th": "ข่วง",
+   "roman": "khuang",
+   "pronunciation": "",
+   "central_th": "ลาน",
+   "en": "open ground / courtyard (e.g. temple ground)",
+   "category": "place",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": [
+    "https://huggingface.co/datasets/pythainlp/lanna_dict"
+   ],
+   "confidence": "high",
+   "tai_tham": "ᨡ᩠ᩅ᩵ᨦ",
+   "notes": "Yong-accent note: Yong speakers in Lamphun may shift diphthongs (ua>o, ia>e, uea>oe) in words containing them."
+  },
+  {
+   "local_th": "ขัว",
+   "roman": "khua",
+   "pronunciation": "xua [24 low-rising] ; IPA /xua˨˦/ (th.wiktionary via PyThaiNLP lanna_dict; Chiang Mai-based reference, local realisation may differ)",
+   "central_th": "สะพาน",
+   "en": "bridge",
+   "category": "place",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": [
+    "https://huggingface.co/datasets/pythainlp/lanna_dict"
+   ],
+   "confidence": "high",
+   "tai_tham": "ᨡ᩠ᩅᩫ",
+   "notes": "Yong-accent note: Yong speakers in Lamphun may shift diphthongs (ua>o, ia>e, uea>oe) in words containing them."
+  },
+  {
+   "local_th": "ไฮ่",
+   "roman": "hai",
+   "pronunciation": "haj [42 high-falling] ; IPA /haj˦˨/ (th.wiktionary via PyThaiNLP lanna_dict; Chiang Mai-based reference, local realisation may differ)",
+   "central_th": "ไร่",
+   "en": "upland field",
+   "category": "farming",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": [
+    "https://huggingface.co/datasets/pythainlp/lanna_dict"
+   ],
+   "confidence": "high",
+   "tai_tham": "ᩁᩱ᩵",
+   "notes": "Yong-accent note: Yong speakers in Lamphun may shift diphthongs (ua>o, ia>e, uea>oe) in words containing them."
+  },
+  {
+   "local_th": "ดอย",
+   "roman": "doi",
+   "pronunciation": "dɔːj [33 mid] ; IPA /dɔːj˧˧/ (th.wiktionary via PyThaiNLP lanna_dict; Chiang Mai-based reference, local realisation may differ)",
+   "central_th": "ภูเขา",
+   "en": "mountain",
+   "category": "place",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": [
+    "https://huggingface.co/datasets/pythainlp/lanna_dict"
+   ],
+   "confidence": "high",
+   "tai_tham": "ᨯᩬ᩠ᨿ",
+   "notes": "Yong-accent note: Yong speakers in Lamphun may shift diphthongs (ua>o, ia>e, uea>oe) in words containing them."
+  },
+  {
+   "local_th": "จ๊าง",
+   "roman": "chang",
+   "pronunciation": "t͡ɕaːŋ [45 high-rising] ; IPA /t͡ɕaːŋ˦˥/ (th.wiktionary via PyThaiNLP lanna_dict; Chiang Mai-based reference, local realisation may differ)",
+   "central_th": "ช้าง",
+   "en": "elephant",
+   "category": "animal",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": [
+    "https://huggingface.co/datasets/pythainlp/lanna_dict",
+    "https://goal90antique.blogspot.com/2017/10/blog-post_30.html",
+    "https://culture.lpru.ac.th/WebCulture2553/CultureKnowledge/file/05-03.pdf"
+   ],
+   "confidence": "high",
+   "tai_tham": "ᨩ᩶ᩣ᩠ᨦ",
+   "notes": "Also written จ้าง (LPRU). Yong-accent note: Yong speakers in Lamphun may shift diphthongs (ua>o, ia>e, uea>oe) in words containing them."
+  },
+  {
+   "local_th": "ฮ้อน",
+   "roman": "hon",
+   "pronunciation": "hɔːn [45 high-rising] ; IPA /hɔːn˦˥/ (th.wiktionary via PyThaiNLP lanna_dict; Chiang Mai-based reference, local realisation may differ)",
+   "central_th": "ร้อน",
+   "en": "hot (weather)",
+   "category": "weather",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": [
+    "https://huggingface.co/datasets/pythainlp/lanna_dict"
+   ],
+   "confidence": "high",
+   "tai_tham": "ᩁᩬ᩶ᩁ",
+   "notes": "Yong-accent note: Yong speakers in Lamphun may shift diphthongs (ua>o, ia>e, uea>oe) in words containing them."
+  },
+  {
+   "local_th": "หน้อย",
+   "roman": "noi",
+   "pronunciation": "nɔːjʔ [44ʔ high-level-glottal] ; IPA /nɔːj˦˦ʔ/ (th.wiktionary via PyThaiNLP lanna_dict; Chiang Mai-based reference, local realisation may differ)",
+   "central_th": "น้อย, นิดหน่อย",
+   "en": "a little, small",
+   "category": "quantity",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": [
+    "https://huggingface.co/datasets/pythainlp/lanna_dict"
+   ],
+   "confidence": "high",
+   "tai_tham": "ᩉ᩠ᨶᩬ᩠᩶ᨿ",
+   "notes": "Yong-accent note: Yong speakers in Lamphun may shift diphthongs (ua>o, ia>e, uea>oe) in words containing them."
+  },
+  {
+   "local_th": "หลวง",
+   "roman": "luang",
+   "pronunciation": "",
+   "central_th": "ใหญ่",
+   "en": "big, great, royal",
+   "category": "adjective",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": [
+    "https://huggingface.co/datasets/pythainlp/lanna_dict"
+   ],
+   "confidence": "high",
+   "tai_tham": "ᩉᩖ᩠ᩅᨦ",
+   "notes": "Yong-accent note: Yong speakers in Lamphun may shift diphthongs (ua>o, ia>e, uea>oe) in words containing them."
+  },
+  {
+   "local_th": "นัก",
+   "roman": "nak",
+   "pronunciation": "nak [45 high-rising] ; IPA /nak˦˥/ (th.wiktionary via PyThaiNLP lanna_dict; Chiang Mai-based reference, local realisation may differ)",
+   "central_th": "มาก",
+   "en": "very, a lot",
+   "category": "intensifier",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": [
+    "https://huggingface.co/datasets/pythainlp/lanna_dict"
+   ],
+   "confidence": "high",
+   "tai_tham": "ᨶᩢ᩠ᨠ",
+   "notes": "Yong-accent note: Yong speakers in Lamphun may shift diphthongs (ua>o, ia>e, uea>oe) in words containing them."
+  },
+  {
+   "local_th": "แหม",
+   "roman": "hae",
+   "pronunciation": "hɛm [24 low-rising] ; IPA /hɛm˨˦/ (th.wiktionary via PyThaiNLP lanna_dict; Chiang Mai-based reference, local realisation may differ)",
+   "central_th": "อีก",
+   "en": "again, more",
+   "category": "adverb",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": [
+    "https://huggingface.co/datasets/pythainlp/lanna_dict"
+   ],
+   "confidence": "high",
+   "tai_tham": "ᩉᩯ᩠ᨾ",
+   "notes": "Yong-accent note: Yong speakers in Lamphun may shift diphthongs (ua>o, ia>e, uea>oe) in words containing them."
+  },
+  {
+   "local_th": "หัน",
+   "roman": "han",
+   "pronunciation": "han [24 low-rising] ; IPA /han˨˦/ (th.wiktionary via PyThaiNLP lanna_dict; Chiang Mai-based reference, local realisation may differ)",
+   "central_th": "เห็น",
+   "en": "to see",
+   "category": "verb",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": [
+    "https://huggingface.co/datasets/pythainlp/lanna_dict"
+   ],
+   "confidence": "high",
+   "tai_tham": "ᩉᩢ᩠ᨶ",
+   "notes": "Yong-accent note: Yong speakers in Lamphun may shift diphthongs (ua>o, ia>e, uea>oe) in words containing them."
+  },
+  {
+   "local_th": "ฮัก",
+   "roman": "hak",
+   "pronunciation": "hak [45 high-rising] ; IPA /hak˦˥/ (th.wiktionary via PyThaiNLP lanna_dict; Chiang Mai-based reference, local realisation may differ)",
+   "central_th": "รัก",
+   "en": "to love",
+   "category": "verb",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": [
+    "https://huggingface.co/datasets/pythainlp/lanna_dict"
+   ],
+   "confidence": "high",
+   "tai_tham": "ᩁᩢ᩠ᨠ",
+   "notes": "Yong-accent note: Yong speakers in Lamphun may shift diphthongs (ua>o, ia>e, uea>oe) in words containing them."
+  },
+  {
+   "local_th": "สล่า",
+   "roman": "sala",
+   "pronunciation": "sa [tone ?] . laː [21 low-falling] ; IPA /sa.laː˨˩/ (th.wiktionary via PyThaiNLP lanna_dict; Chiang Mai-based reference, local realisation may differ)",
+   "central_th": "ช่าง",
+   "en": "craftsman, master builder",
+   "category": "work/crafts",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": [
+    "https://huggingface.co/datasets/pythainlp/lanna_dict"
+   ],
+   "confidence": "high",
+   "tai_tham": "ᩈᩖ᩻᩵ᩣ",
+   "notes": "Yong-accent note: Yong speakers in Lamphun may shift diphthongs (ua>o, ia>e, uea>oe) in words containing them."
+  },
+  {
+   "local_th": "ตุง",
+   "roman": "tung",
+   "pronunciation": "tuŋ [33 mid] ; IPA /tuŋ˧˧/ (th.wiktionary via PyThaiNLP lanna_dict; Chiang Mai-based reference, local realisation may differ)",
+   "central_th": "ธง (ตุงล้านนา)",
+   "en": "Lanna ritual banner/flag",
+   "category": "ritual",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": [
+    "https://huggingface.co/datasets/pythainlp/lanna_dict"
+   ],
+   "confidence": "high",
+   "tai_tham": "ᨴᩩᨦ",
+   "notes": "Yong-accent note: Yong speakers in Lamphun may shift diphthongs (ua>o, ia>e, uea>oe) in words containing them."
+  },
+  {
+   "local_th": "ขึด",
+   "roman": "khuet",
+   "pronunciation": "",
+   "central_th": "อัปมงคล, เสนียด",
+   "en": "taboo / inauspicious act that brings misfortune",
+   "category": "belief",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": [
+    "https://huggingface.co/datasets/pythainlp/lanna_dict",
+    "https://ethnicity.sac.or.th/database-ethnic/181"
+   ],
+   "confidence": "high",
+   "tai_tham": "ᨡᩧ᩠ᨯ",
+   "notes": "Yong-accent note: Yong speakers in Lamphun may shift diphthongs (ua>o, ia>e, uea>oe) in words containing them."
+  },
+  {
+   "local_th": "งาย",
+   "roman": "ngai",
+   "pronunciation": "ŋaːj [33 mid] ; IPA /ŋaːj˧˧/ (th.wiktionary via PyThaiNLP lanna_dict; Chiang Mai-based reference, local realisation may differ)",
+   "central_th": "เวลาเช้า",
+   "en": "morning (meal time)",
+   "category": "time",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": [
+    "https://huggingface.co/datasets/pythainlp/lanna_dict"
+   ],
+   "confidence": "high",
+   "tai_tham": "ᨦᩣ᩠ᨿ",
+   "notes": "Yong-accent note: Yong speakers in Lamphun may shift diphthongs (ua>o, ia>e, uea>oe) in words containing them."
+  },
+  {
+   "local_th": "มดส้ม",
+   "roman": "mot som",
+   "pronunciation": "mot [45 high-rising] . somʔ [44ʔ high-level-glottal] ; IPA /mot˦˥.som˦˦ʔ/ (th.wiktionary via PyThaiNLP lanna_dict; Chiang Mai-based reference, local realisation may differ)",
+   "central_th": "มดแดง",
+   "en": "red weaver ant (eggs are eaten)",
+   "category": "food",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": [
+    "https://huggingface.co/datasets/pythainlp/lanna_dict"
+   ],
+   "confidence": "high",
+   "tai_tham": "ᨾᩫ᩠ᨯᩈᩫ᩠᩶ᨾ",
+   "notes": "Yong-accent note: Yong speakers in Lamphun may shift diphthongs (ua>o, ia>e, uea>oe) in words containing them."
+  },
+  {
+   "local_th": "ซอ",
+   "roman": "so",
+   "pronunciation": "sɔː [33 mid] ; IPA /sɔː˧˧/ (th.wiktionary via PyThaiNLP lanna_dict; Chiang Mai-based reference, local realisation may differ)",
+   "central_th": "ขับร้องทำนองล้านนา",
+   "en": "Lanna sung repartee / folk singing",
+   "category": "music",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": [
+    "https://huggingface.co/datasets/pythainlp/lanna_dict"
+   ],
+   "confidence": "high",
+   "tai_tham": "ᨩᩬᩴ",
+   "notes": "Yong-accent note: Yong speakers in Lamphun may shift diphthongs (ua>o, ia>e, uea>oe) in words containing them."
+  },
+  {
+   "local_th": "ฟ้อน",
+   "roman": "fon",
+   "pronunciation": "fɔːn [45 high-rising] ; IPA /fɔːn˦˥/ (th.wiktionary via PyThaiNLP lanna_dict; Chiang Mai-based reference, local realisation may differ)",
+   "central_th": "รำ",
+   "en": "to dance (Lanna dance)",
+   "category": "arts",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": [
+    "https://huggingface.co/datasets/pythainlp/lanna_dict"
+   ],
+   "confidence": "high",
+   "tai_tham": "ᨼᩬ᩶ᩁ",
+   "notes": "Yong-accent note: Yong speakers in Lamphun may shift diphthongs (ua>o, ia>e, uea>oe) in words containing them."
+  },
+  {
+   "local_th": "ยี่เป็ง",
+   "roman": "yi peng",
+   "pronunciation": "ɲiː [42 high-falling] . peŋ [33 mid] ; IPA /ɲiː˦˨.peŋ˧˧/ (th.wiktionary via PyThaiNLP lanna_dict; Chiang Mai-based reference, local realisation may differ)",
+   "central_th": "วันเพ็ญเดือนยี่ (ลอยกระทง)",
+   "en": "full moon of the 2nd Northern month (Loi Krathong season)",
+   "category": "festival",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": [
+    "https://huggingface.co/datasets/pythainlp/lanna_dict"
+   ],
+   "confidence": "high",
+   "tai_tham": "ᨿᩦ᩵ᨻᩮ᩠ᨦ",
+   "notes": "Yong-accent note: Yong speakers in Lamphun may shift diphthongs (ua>o, ia>e, uea>oe) in words containing them."
+  },
+  {
+   "local_th": "ปี๋",
+   "roman": "pi",
+   "pronunciation": "piː [24 low-rising] ; IPA /piː˨˦/ (th.wiktionary via PyThaiNLP lanna_dict; Chiang Mai-based reference, local realisation may differ)",
+   "central_th": "ปี",
+   "en": "year",
+   "category": "time",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": [
+    "https://huggingface.co/datasets/pythainlp/lanna_dict"
+   ],
+   "confidence": "high",
+   "tai_tham": "ᨸᩦ",
+   "notes": "Yong-accent note: Yong speakers in Lamphun may shift diphthongs (ua>o, ia>e, uea>oe) in words containing them."
+  },
+  {
+   "local_th": "ซ้า",
+   "roman": "sa",
+   "pronunciation": "saː [45 high-rising] ; IPA /saː˦˥/ (th.wiktionary via PyThaiNLP lanna_dict; Chiang Mai-based reference, local realisation may differ)",
+   "central_th": "ตะกร้า",
+   "en": "basket",
+   "category": "household",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": [
+    "https://huggingface.co/datasets/pythainlp/lanna_dict",
+    "https://ethnicity.sac.or.th/database-ethnic/181"
+   ],
+   "confidence": "high",
+   "tai_tham": "ᨩ᩶ᩣ",
+   "notes": "Yong-accent note: Yong speakers in Lamphun may shift diphthongs (ua>o, ia>e, uea>oe) in words containing them."
+  }
+ ],
+ "phrases": [
+  {
+   "local_th": "กิ๋นข้าวแล้วกา",
+   "roman": "kin khao laeo ka",
+   "central_th": "กินข้าวแล้วหรือยัง",
+   "en": "Have you eaten yet? (the everyday greeting)",
+   "situation": "Greeting anyone, especially elders",
+   "confidence": "high",
+   "source": "https://culture.lpru.ac.th/WebCulture2553/CultureKnowledge/file/05-03.pdf"
+  },
+  {
+   "local_th": "ไปตังใดมา",
+   "roman": "pai tang dai ma",
+   "central_th": "ไปไหนมา",
+   "en": "Where have you been?",
+   "situation": "Friendly greeting in the village or market",
+   "confidence": "high",
+   "source": "https://culture.lpru.ac.th/WebCulture2553/CultureKnowledge/file/05-03.pdf"
+  },
+  {
+   "local_th": "ยะอะหยั๋งกิ๋นกา",
+   "roman": "ya a-yang kin ka",
+   "central_th": "ทำอะไรกินหรือ",
+   "en": "What are you cooking/eating?",
+   "situation": "Visiting someone at mealtime",
+   "confidence": "high",
+   "source": "https://culture.lpru.ac.th/WebCulture2553/CultureKnowledge/file/05-03.pdf"
+  },
+  {
+   "local_th": "ลำแต๊",
+   "roman": "lam tae",
+   "central_th": "อร่อยจริงๆ",
+   "en": "Really delicious!",
+   "situation": "Praising food at a market or home",
+   "confidence": "medium",
+   "source": "https://huggingface.co/datasets/pythainlp/lanna_dict",
+   "note": "Composed from two sourced words."
+  },
+  {
+   "local_th": "ม่วนแต๊",
+   "roman": "muan tae",
+   "central_th": "สนุกจริงๆ",
+   "en": "So much fun!",
+   "situation": "At a festival such as Salak Yom",
+   "confidence": "medium",
+   "source": "https://huggingface.co/datasets/pythainlp/lanna_dict",
+   "note": "Composed from sourced words."
+  },
+  {
+   "local_th": "บ่ะฮู้",
+   "roman": "ba hu",
+   "central_th": "ไม่รู้",
+   "en": "I don't know",
+   "situation": "Everyday; Chiang Mai/Lamphun long accent",
+   "confidence": "high",
+   "source": "https://culture.lpru.ac.th/WebCulture2553/CultureKnowledge/file/05-03.pdf"
+  },
+  {
+   "local_th": "อู้กำเมืองบ่เป็น",
+   "roman": "u kam mueang bo pen",
+   "central_th": "พูดคำเมืองไม่เป็น",
+   "en": "I can't speak Kham Mueang",
+   "situation": "Polite self-disclosure; locals will switch to Central Thai",
+   "confidence": "medium",
+   "source": "https://huggingface.co/datasets/pythainlp/lanna_dict",
+   "note": "Composed; เป็น = able, same as Central."
+  },
+  {
+   "local_th": "ไปแอ่วกาด",
+   "roman": "pai aeo kat",
+   "central_th": "ไปเที่ยวตลาด",
+   "en": "Going to the market (for a wander)",
+   "situation": "Plans chat",
+   "confidence": "medium",
+   "source": "https://huggingface.co/datasets/pythainlp/lanna_dict",
+   "note": "Composed from sourced words."
+  }
+ ],
+ "proverbs_sayings": [
+  {
+   "local_th": "เก็บผักใส่ซ้า เก็บข้าใส่เมือง",
+   "roman": "kep phak sai sa, kep kha sai mueang",
+   "meaning_th": "คำเรียกยุคฟื้นฟูล้านนาสมัยพระเจ้ากาวิละ (ราว พ.ศ. 2348) ที่กวาดต้อนผู้คนจากเมืองยองและเมืองอื่นมาตั้งถิ่นฐานเพื่อฟื้นเมืองที่ร้าง",
+   "meaning_en": "\"Gather vegetables into the basket, gather people (kha = servants/subjects) into the towns\": the name for the Kawila-era resettlement (c. 1805) that brought the Yong to Lamphun. Say it with care, because it refers to forced migration.",
+   "source": [
+    "https://ethnicity.sac.or.th/database-ethnic/181",
+    "https://www.matichon.co.th/weekly/column/article_182589"
+   ]
+  },
+  {
+   "local_th": "ลัวะปลงไห ไตปลงหม้อนึ่ง ลัวะเฮ็ดไฮ่ ไตเฮ็ดนา",
+   "roman": "lua plong hai, tai plong mo nueng, lua het hai, tai het na",
+   "meaning_th": "คำกล่าวที่ SAC บันทึกไว้ เปรียบวิถีลัวะ (ทำไร่ ใช้ไห) กับวิถีไต (ทำนา ใช้หม้อนึ่ง) สะท้อนการอยู่ร่วมของสองกลุ่ม",
+   "meaning_en": "A saying recorded by SAC that contrasts Lua ways (upland swidden fields, jars) with Tai ways (wet-rice paddies, rice steamers), showing how the two groups lived side by side. It continues \"...อย่าหื้อตายดา ... อย่าหื้อตายเหี่ยว\". The precise meaning of this ending needs a Yong elder.",
+   "source": [
+    "https://ethnicity.sac.or.th/database-ethnic/181"
+   ]
+  },
+  {
+   "local_th": "คำขวัญจังหวัดลำพูน (พระธาตุเด่น พระรอดขลัง ลำไยดัง กระเทียมดี ประเพณีงาม จามเทวีศรีหริภุญชัย)",
+   "roman": "phra that den, phra rot khlang, lamyai dang, krathiam di, prapheni ngam, chamathewi si hariphunchai",
+   "meaning_th": "คำขวัญประจำจังหวัด: พระธาตุหริภุญชัย พระรอด (พระเครื่อง) ลำไย กระเทียม ประเพณี และพระนางจามเทวี",
+   "meaning_en": "Province slogan: the renowned relic stupa, the potent Phra Rot amulets, famous longan, good garlic, beautiful traditions, Chamadevi of Hariphunchai. (The English wording comes from the province website; the Thai wording was recalled by the researcher and needs checking.)",
+   "source": [
+    "https://www.lamphun.go.th/en/information/aboutus/9/history-of-lamphun-province"
+   ]
+  }
+ ],
+ "ethnic_communities": [
+  {
+   "group": "Yong (ยอง)",
+   "self_designation": "คนยอง / ชาวยอง / ไทยอง / ขงเมืองยอง",
+   "where": "Across the province; core areas Pa Sang, Mueang Lamphun (incl. ต.เวียงยอง, บ้านเวียงยอง on the east bank of the Kuang; บ้านล้องเดื่อ ต.ประตูป่า), Mae Tha, Ban Hong",
+   "language": "Yong + Kham Mueang + Central Thai",
+   "notes_en": "Resettled from Mueang Yong (Shan State) c. 1805 under Phraya Kawila; SAC estimate ~350,000 of Yong descent in Lamphun; Theravada Buddhist with ancestral and guardian spirit cults (Thewabut Luang). Noted weavers. Some sources give a different settlement date; the province English page says \"around 1845\", which conflicts with the 1805 given by most sources.",
+   "source": [
+    "https://ethnicity.sac.or.th/database-ethnic/181",
+    "https://www.matichon.co.th/weekly/column/article_182589",
+    "https://wikicommunity.sac.or.th/community/300",
+    "https://en.wikipedia.org/wiki/Yong_language",
+    "https://www.lamphun.go.th/en/information/aboutus/9/history-of-lamphun-province"
+   ]
+  },
+  {
+   "group": "Tai Lue (ไทลื้อ)",
+   "self_designation": "ไทลื้อ / ลื้อ",
+   "where": "บ้านป่าเหียง หมู่ 13 ต.บ้านธิ อ.บ้านธิ (with Yong and Tai Yuan neighbours)",
+   "language": "Tai Lue, Kham Mueang, Central Thai",
+   "notes_en": "Arrived from Sipsongpanna 200+ years ago; Buddhism plus house, lord and guardian spirits; annual เลี้ยงพ่อบ้าน in June; crafts include woven buckets (น้ำถุ้ง), OTOP ข้าวแคบ and น้ำพริกตาแดงลื้อ.",
+   "source": [
+    "https://wikicommunity.sac.or.th/community/391"
+   ]
+  },
+  {
+   "group": "Tai Yuan / Khon Mueang (ไทยวน / คนเมือง)",
+   "self_designation": "คนเมือง",
+   "where": "Throughout",
+   "language": "Kham Mueang",
+   "notes_en": "Majority Northern Thai identity; in Lamphun it overlaps heavily with Yong ancestry.",
+   "source": [
+    "https://wikicommunity.sac.or.th/community/391"
+   ]
+  },
+  {
+   "group": "Mon (historical, Hariphunchai)",
+   "self_designation": "มอญ (ancient; chronicle term เม็งคบุตร)",
+   "where": "Historic Lamphun city",
+   "language": "Old Mon (inscriptions)",
+   "notes_en": "Hariphunchai was a Mon kingdom (7th/8th-13th c.) with Old Mon inscriptions. Mon heritage today is historical and architectural (Chamadevi, Ku Kut chedi) rather than a large Mon-speaking community (not verified).",
+   "source": [
+    "https://en.wikipedia.org/wiki/Hariphunchai",
+    "https://www.lamphun.go.th/en/information/aboutus/9/history-of-lamphun-province"
+   ]
+  },
+  {
+   "group": "Lua / Lawa (ลัวะ)",
+   "self_designation": "ลัวะ (self-names vary, e.g. Lavüa in some communities; not verified for Lamphun)",
+   "where": "Legendary and upland; in the Chamadevi-Khun Luang Wilangkha legend",
+   "language": "Lawa (Austroasiatic)",
+   "notes_en": "Appear in local legend as the people of Khun Luang Wilangkha and in the Lua-Tai saying above. Present-day Lua communities in Lamphun were not verified.",
+   "source": [
+    "https://en.wikipedia.org/wiki/Hariphunchai",
+    "https://ethnicity.sac.or.th/database-ethnic/181"
+   ]
+  }
+ ],
+ "beliefs_rituals": [
+  {
+   "name_th": "เทวบุตรหลวง (เตวบุตรโหลง)",
+   "name_en": "Thewabut Luang, great guardian deity of the Yong",
+   "description_th": "เทพารักษ์ประจำชาวยองที่นำมาจากเมืองยองตั้งแต่ พ.ศ. 2348 มีหอ/ศาลที่วัดหัวขัว บ้านเวียงยอง ฝั่งตะวันออกของแม่น้ำกวง ถือเป็นหลักอัตลักษณ์ของชาวยอง",
+   "description_en": "The guardian deity the Yong brought with them from Mueang Yong in 1805. Its cult site is at Wat Hua Khua, Ban Wiang Yong, on the east bank of the Kuang River. It is a core marker of Yong identity.",
+   "when": "Annual rites (exact month not verified)",
+   "where": "วัดหัวขัว บ้านเวียงยอง อ.เมืองลำพูน",
+   "visitor_guidance_en": "Visit quietly and do not touch offerings. Ask before photographing any rite.",
+   "source": [
+    "https://ethnicity.sac.or.th/database-ethnic/181",
+    "https://mgronline.com/travel/detail/9540000145872"
+   ],
+   "confidence": "medium"
+  },
+  {
+   "name_th": "ผีปู่ย่า / เลี้ยงผีปู่ย่า",
+   "name_en": "Ancestral spirits and the annual ancestor feast",
+   "description_th": "ความเชื่อว่าผีปู่ย่าคุ้มครองลูกหลานในสายตระกูล มีหอผีในบ้าน/สวน และเลี้ยงผีปู่ย่าช่วงเดือน 5-6 เหนือ",
+   "description_en": "A belief that the ancestral spirits of the family line protect the descendants. Families keep a spirit shrine at the house or garden and feed the spirits around the 5th-6th Northern months (the SAC table maps this to about Feb-Mar). Practice varies from family to family.",
+   "when": "Northern months 5-6 (per SAC table)",
+   "where": "Family homes",
+   "visitor_guidance_en": "Treat the family spirit shrine as private. Do not hang laundry near it or touch it. If invited to a spirit feast, follow the hosts.",
+   "source": [
+    "https://ethnicity.sac.or.th/database-ethnic/181"
+   ],
+   "confidence": "medium"
+  },
+  {
+   "name_th": "หอผี เสื้อบ้าน เสาใจบ้าน ศาลพระภูมิ ป่าเฮ่ว เหมืองฝาย",
+   "name_en": "Sacred points of a Yong village",
+   "description_th": "SAC ระบุสถานที่ที่ต้องเคารพ ได้แก่ หิ้งพระ หอผี (ปลายสวนติดรั้ว) ผีเสื้อบ้าน เสาใจบ้าน (ใต้ต้นไม้ใหญ่กลางหมู่บ้าน) ศาลพระภูมิ ป่าเฮ่ว/ป่าช้า และเหมืองฝาย",
+   "description_en": "SAC lists the places that call for respect: the Buddha shelf, the spirit shrine at the edge of the garden, the village guardian spirit, the village heart-post (under a big tree in the village centre), the land-spirit shrine, the cemetery forest, and the irrigation weirs, whose spirits are also honoured.",
+   "when": "Always",
+   "where": "Yong villages",
+   "visitor_guidance_en": "Don't step over or lean on offerings, don't take things from shrines, and don't wander into the cemetery forest. Point with an open hand, not a finger.",
+   "source": [
+    "https://ethnicity.sac.or.th/database-ethnic/181"
+   ],
+   "confidence": "medium"
+  },
+  {
+   "name_th": "ขึด และพิธีแก้ขึด",
+   "name_en": "Khuet (taboo breaches/omens) and remedial rites",
+   "description_th": "เหตุผิดปกติ เช่น ดาวหาง สุริยุปราคา แผ่นดินเฟือน สัตว์หาย การตายผิดธรรมชาติ ยอดเจดีย์หัก ถือเป็นขึดต้องทำพิธีแก้ขึด",
+   "description_en": "Unusual events are read as khuet, a taboo breach or bad omen, and need a remedial rite. Examples are comets, eclipses, earthquakes, livestock going missing, unnatural deaths, a tiger calling near the village, a stupa finial breaking, and crop failures.",
+   "when": "When an omen occurs",
+   "where": "Village/temple",
+   "visitor_guidance_en": "Treat talk of khuet respectfully and do not mock it. Many people take it seriously.",
+   "source": [
+    "https://ethnicity.sac.or.th/database-ethnic/181"
+   ],
+   "confidence": "medium"
+  },
+  {
+   "name_th": "พิธีกรรมการเกิดของชาวยอง (อยู่เดือน ออกเดือน หลอนเดือน ฝังรก)",
+   "name_en": "Yong birth customs",
+   "description_th": "แม่อยู่เดือน 30-45 วัน ห้ามสระผมน้ำเย็น ห้ามกินของแสลง ห้ามไปงานศพ ครบเดือนจึงออกเดือน มีผู้ใหญ่มา \"หลอนเดือน\" (มาเยี่ยมโดยไม่บอกล่วงหน้า) ให้พร ฝังรกใต้บันไดบ้าน ช่วง 7-15 วันถือเป็นช่วง \"ลูกผี ลูกคน\"",
+   "description_en": "The mother stays in confinement for 30-45 days, with no cold-water hair washing, no \"aggravating\" foods and no funerals. At the end of the month she \"comes out\". Respected elders \"drop in unannounced\" (หลอนเดือน) to bless the baby. The placenta is buried under the house steps. Days 7-15 are seen as a threshold time (\"child of spirits, child of humans\") before the family formally claims the child.",
+   "when": "Life-cycle",
+   "where": "Family homes",
+   "visitor_guidance_en": "Do not visit a new mother uninvited unless you are close to the family. Avoid bringing up funerals.",
+   "source": [
+    "https://ethnicity.sac.or.th/database-ethnic/181"
+   ],
+   "confidence": "medium"
+  },
+  {
+   "name_th": "พิธีเรียกขวัญข้าว ไหว้ผีฟ้า แห่นางแมวขอฝน แฮกนา",
+   "name_en": "Rice and rain rites",
+   "description_th": "พิธีเกษตรตามรอบปี: แฮกนา (เดือน 11 เหนือ) เรียกขวัญข้าว ไหว้ผีฟ้าขอฝน แห่นางแมว และพิธีแฮก-เข้าเล้าหลังเกี่ยว",
+   "description_en": "Farming rites through the year: the first-planting rite (Northern month 11), calling the rice soul, rain rites to the sky spirit, the cat procession for rain, and first-harvest and granary rites after the harvest.",
+   "when": "Farming calendar",
+   "where": "Fields and villages",
+   "visitor_guidance_en": "Watch from a distance. You can ask permission to join.",
+   "source": [
+    "https://ethnicity.sac.or.th/database-ethnic/181"
+   ],
+   "confidence": "medium"
+  },
+  {
+   "name_th": "บูชาพระนางจามเทวี",
+   "name_en": "Veneration of Queen Chamadevi",
+   "description_th": "ชาวลำพูนยกย่องพระนางจามเทวีเป็น \"พระแม่เมือง\" มีผู้คนมาถวายเครื่องสักการะที่อนุสาวรีย์ และวัดจามเทวี (กู่กุด) ซึ่งเชื่อว่าบรรจุอัฐิของพระนาง",
+   "description_en": "People honour Chamadevi as \"mother of the city\" (Phra Mae Mueang). They bring offerings to her statue in the southwest of town and to Wat Chamadevi (Ku Kut), which is believed to hold her ashes.",
+   "when": "Daily; larger rites on civic occasions",
+   "where": "Chamadevi monument; Wat Chamadevi",
+   "visitor_guidance_en": "Dress modestly and remove your hat at the monument. You may buy flowers and incense from vendors and join in.",
+   "source": [
+    "https://en.wikipedia.org/wiki/Lamphun",
+    "https://www.lamphun.go.th/en/information/aboutus/9/history-of-lamphun-province"
+   ],
+   "confidence": "high"
+  },
+  {
+   "name_th": "พระธาตุหริภุญชัย (พระธาตุประจำปีเกิดปีระกา)",
+   "name_en": "Phra That Hariphunchai relic (birth-year stupa for the Rooster year)",
+   "description_th": "เจดีย์บรรจุพระเกศาธาตุ (ราว พ.ศ. 1440) ศูนย์กลางจิตวิญญาณของจังหวัด ความเชื่อล้านนาถือเป็นพระธาตุประจำปีเกิดปีระกา",
+   "description_en": "The stupa said to hold a hair relic of the Buddha, enshrined around 897 CE, and the spiritual centre of the province. Lanna belief pairs it with people born in the Rooster year. That birth-year pairing is common knowledge and is not confirmed by the sources fetched.",
+   "when": "Year-round; bathing of the relic in the 8th Northern month (Visakha period)",
+   "where": "วัดพระธาตุหริภุญชัยวรมหาวิหาร",
+   "visitor_guidance_en": "Wear covered shoulders and knees and take off shoes in the viharn. Some Lanna relic enclosures bar women from the inner area, so follow the signs.",
+   "source": [
+    "https://en.wikipedia.org/wiki/Wat_Phra_That_Hariphunchai",
+    "https://www.lamphun.go.th/en/information/aboutus/9/history-of-lamphun-province",
+    "https://ethnicity.sac.or.th/database-ethnic/181"
+   ],
+   "confidence": "low"
+  },
+  {
+   "name_th": "สืบจะต๋า (สืบชะตา)",
+   "name_en": "Life-extension ceremony",
+   "description_th": "พิธีต่ออายุของชาวยองและล้านนา ใช้เครื่องบูชา เช่น ขันแดง ไม้ค้ำ สะตวง สวย และตุง งานวิจัย มฟล. 2568 ศึกษาชาวยองเวียงท่ากาน",
+   "description_en": "A Yong and Lanna ceremony to extend life. It uses a red lacquered tray, forked support sticks, banana-sheath offering platforms (satuang), leaf cones (suay) and banners (tung). The 2025 MFU paper studied Yong at Wiang Tha Kan in Chiang Mai.",
+   "when": "Birthdays, recovery from illness, new year",
+   "where": "Homes, temples, villages",
+   "visitor_guidance_en": "You may be invited to hold the sacred thread. Sit lower than the monks and keep your feet pointed away from them.",
+   "source": [
+    "https://mfuir.mfu.ac.th/jspui/bitstream/123456789/1029/1/2025-v14-no1-p.72-97.pdf"
+   ],
+   "confidence": "medium"
+  }
+ ],
+ "way_of_life": [
+  {
+   "topic": "farming",
+   "description_th": "อาชีพดั้งเดิมคือทำนา พึ่งป่า (ไม้ เห็ด หน่อไม้ ผัก) เลี้ยงสัตว์ ทอผ้า ปัจจุบันปลูกลำไย หอม ยาสูบ และรับจ้างในโรงงาน",
+   "description_en": "Traditional livelihoods were wet-rice farming, gathering from the forest (wood, mushrooms, bamboo shoots, greens), livestock and weaving. Today people grow longan, shallots/onions and tobacco, work in government jobs, and do factory work at the industrial estate. Forest conservation zones have cut back on gathering from the forest.",
+   "source": [
+    "https://ethnicity.sac.or.th/database-ethnic/181"
+   ]
+  },
+  {
+   "topic": "crafts",
+   "description_th": "ผู้หญิงยองขึ้นชื่อเรื่องการทอผ้า ผ้าซิ่นลายดอกพิกุล/ดอกแก้วเป็นเอกลักษณ์เก่าแก่ของลำพูน ป่าซางเป็นแหล่งผ้าทอ",
+   "description_en": "Yong women are known as skilled weavers. The old Lamphun signature is the sarong with a pikul-flower or kaeo-flower pattern, and Pa Sang is the weaving centre. Lamphun brocade silk is famous, but its GI details were not verified in this round.",
+   "source": [
+    "https://mgronline.com/travel/detail/9540000145872",
+    "https://en.wikipedia.org/wiki/Pa_Sang_district"
+   ]
+  },
+  {
+   "topic": "housing",
+   "description_th": "บ้านยองเป็นเรือนไม้ใต้ถุนโล่ง ไม่มีกาแล มักประดับรูปนกยูง (สัตว์สัญลักษณ์)",
+   "description_en": "Yong houses are wooden and raised on posts with an open ground floor. They do not have the Chiang Mai-style crossed kalae gable boards and are often decorated with a peacock, the Yong symbol animal.",
+   "source": [
+    "https://mgronline.com/travel/detail/9540000145872",
+    "https://wikicommunity.sac.or.th/community/300"
+   ]
+  },
+  {
+   "topic": "community",
+   "description_th": "หมู่บ้านมีเสาใจบ้าน หอผี และวัดเป็นศูนย์กลาง วัดต้นแก้วมีพิพิธภัณฑ์พื้นบ้านชาวยอง (ตั้ง พ.ศ. 2530 เก็บของกว่า 1,000 ชิ้น)",
+   "description_en": "Village life centres on the heart-post, the spirit shrine and the temple. Wat Ton Kaeo has a Yong folk museum, founded in 1987, with more than 1,000 objects.",
+   "source": [
+    "https://mgronline.com/travel/detail/9540000145872",
+    "https://ethnicity.sac.or.th/database-ethnic/181"
+   ]
+  },
+  {
+   "topic": "work",
+   "description_th": "คนรุ่นใหม่จำนวนมากรับราชการหรือเป็นแรงงานรับจ้างในโรงงานอุตสาหกรรม",
+   "description_en": "Many younger people now work in government jobs or as wage labour in industrial factories (SAC). That Central Thai is the workplace language is the researcher's inference.",
+   "source": [
+    "https://ethnicity.sac.or.th/database-ethnic/181"
+   ]
+  },
+  {
+   "topic": "family",
+   "description_th": "สายผีปู่ย่าสืบทางฝ่ายหญิง การแต่งงานต้อง \"ผิดผี/เลี้ยงผี\" ตามธรรมเนียม (รายละเอียดแตกต่างกัน)",
+   "description_en": "The ancestral spirit line and its rites pass through the family home. The details vary, and matrilineal transmission is widely described for Lanna but was not stated explicitly for Lamphun in the fetched sources.",
+   "source": [
+    "https://ethnicity.sac.or.th/database-ethnic/181",
+    "https://mpp.egat.co.th/hellomaemoh/index.php?option=com_content&view=article&id=981:2023-06-12-08-50-55&catid=43&Itemid=245"
+   ]
+  }
+ ],
+ "festivals": [
+  {
+   "name_th": "ประเพณีสลากย้อม (หนึ่งเดียวในโลก)",
+   "name_en": "Salak Yom festival",
+   "lunar_or_date": "ขึ้น 15 ค่ำ เดือน 10 (เดือน 12 เหนือ); e.g. 6-7 Sep 2025, 20-26 Sep 2026 (city events)",
+   "what_happens_en": "A young woman (often around 20) sponsors a tall salak tree (up to about 12 m) hung with household goods, as merit said to rival a son's ordination. Her life story is recited in ฮ่ำกะโลง verse. There is a procession along Inthayongyot Road to Wat Phra That Hariphunchai. The festival has Yong roots and is part of the salak phat (tan kuay salak) merit season before the end of Lent.",
+   "source": [
+    "https://lamphun.prd.go.th/th/content/category/detail/id/33/iid/421568",
+    "https://inzpy.com/travel/salakyom-festival-lamphun",
+    "https://www.thaipost.net/main/detail/16607",
+    "https://wikicommunity.sac.or.th/community/300"
+   ]
+  },
+  {
+   "name_th": "งานเทศกาลลำไยลำพูน",
+   "name_en": "Lamphun Longan Festival",
+   "lunar_or_date": "August (annual)",
+   "what_happens_en": "Celebrates the longan harvest with produce stalls and a parade. Longan is the province's signature crop.",
+   "source": [
+    "https://en.wikipedia.org/wiki/Lamphun"
+   ]
+  },
+  {
+   "name_th": "สรงน้ำพระธาตุหริภุญชัย (เดือน 8 เหนือ / วิสาขบูชา)",
+   "name_en": "Bathing of the Hariphunchai relic",
+   "lunar_or_date": "Northern month 8 (≈May), Visakha period",
+   "what_happens_en": "People bathe the relic stupa and make merit. It is one of the biggest temple fairs of the year.",
+   "source": [
+    "https://ethnicity.sac.or.th/database-ethnic/181"
+   ]
+  },
+  {
+   "name_th": "ปี๋ใหม่เมือง (สงกรานต์)",
+   "name_en": "Lanna New Year (Songkran)",
+   "lunar_or_date": "13-15 April (Northern month 7)",
+   "what_happens_en": "Building sand stupas at temples, pouring water over elders' hands (ดำหัว) and water play.",
+   "source": [
+    "https://ethnicity.sac.or.th/database-ethnic/181"
+   ]
+  },
+  {
+   "name_th": "ยี่เป็ง / ลอยกระทง",
+   "name_en": "Yi Peng / Loi Krathong",
+   "lunar_or_date": "Full moon, Northern month 2 (≈Nov)",
+   "what_happens_en": "Floating krathong, lanterns and the end of the kathin robe-offering season.",
+   "source": [
+    "https://ethnicity.sac.or.th/database-ethnic/181"
+   ]
+  },
+  {
+   "name_th": "เลี้ยงพ่อบ้าน (ไทลื้อบ้านป่าเหียง)",
+   "name_en": "Village-father spirit feast (Tai Lue)",
+   "lunar_or_date": "June",
+   "what_happens_en": "Annual offering to the village guardian at Ban Pa Hiang.",
+   "source": [
+    "https://wikicommunity.sac.or.th/community/391"
+   ]
+  }
+ ],
+ "food_specialties": [
+  {
+   "name_th": "ก๋วยเตี๋ยวลำไย",
+   "name_en": "Longan noodle soup",
+   "description_en": "Stewed pork noodle soup sweetened with dried longan; a Lamphun specialty.",
+   "where_to_eat_or_buy": "Lamphun town noodle shops (specific shop not verified)",
+   "source": [
+    "https://en.wikipedia.org/wiki/Lamphun_province"
+   ]
+  },
+  {
+   "name_th": "แกงฮังเลลำไย",
+   "name_en": "Hang le curry with longan",
+   "description_en": "A Lamphun twist on the Burmese-origin hang le pork curry that adds longan. TAT Thai has an article on where to eat it, but that page could not be fetched.",
+   "where_to_eat_or_buy": "See TAT article (unfetched)",
+   "source": [
+    "https://thai.tourismthailand.org/Articles/%E0%B9%84%E0%B8%9B%E0%B8%81%E0%B8%B4%E0%B8%99%E0%B8%AE%E0%B8%B1%E0%B8%87%E0%B9%80%E0%B8%A5%E0%B8%A5%E0%B8%B3%E0%B9%84%E0%B8%A2-%E0%B8%97%E0%B8%B5%E0%B9%88%E0%B9%84%E0%B8%AB%E0%B8%99%E0%B8%94%E0%B8%B5%E0%B9%83%E0%B8%99%E0%B8%88%E0%B8%B1%E0%B8%87%E0%B8%AB%E0%B8%A7%E0%B8%B1%E0%B8%94%E0%B8%A5%E0%B8%B3%E0%B8%9E%E0%B8%B9%E0%B8%99"
+   ]
+  },
+  {
+   "name_th": "แกงแค",
+   "name_en": "Kaeng khae (herb-and-vegetable jungle curry)",
+   "description_en": "Spicy curry of mixed local vegetables with chicken, frog, fish or snails, and no coconut milk.",
+   "where_to_eat_or_buy": "Local khao kaeng stalls, markets",
+   "source": [
+    "https://en.wikipedia.org/wiki/Lamphun_province"
+   ]
+  },
+  {
+   "name_th": "ข้าวแคบ",
+   "name_en": "Crispy rice sheets",
+   "description_en": "Thin rice sheets that are sun-dried, then toasted or fried. An OTOP product of the Tai Lue at Ban Pa Hiang, Ban Thi.",
+   "where_to_eat_or_buy": "Ban Pa Hiang, Ban Thi district",
+   "source": [
+    "https://wikicommunity.sac.or.th/community/391"
+   ]
+  },
+  {
+   "name_th": "น้ำพริกตาแดงลื้อ",
+   "name_en": "Tai Lue red chilli relish",
+   "description_en": "OTOP chilli paste of Ban Pa Hiang. Tai Lue cooking there uses chilli, lemongrass, shallot, garlic and fermented fish.",
+   "where_to_eat_or_buy": "Ban Pa Hiang, Ban Thi",
+   "source": [
+    "https://wikicommunity.sac.or.th/community/391"
+   ]
+  },
+  {
+   "name_th": "แกงหยวก",
+   "name_en": "Banana-stem curry",
+   "description_en": "Yong post-partum food, believed to help (with coconut water) the baby's skin.",
+   "where_to_eat_or_buy": "Home cooking; markets",
+   "source": [
+    "https://ethnicity.sac.or.th/database-ethnic/181"
+   ]
+  },
+  {
+   "name_th": "ลำไย / กระเทียม",
+   "name_en": "Longan / garlic",
+   "description_en": "Signature produce named in the province slogan; dried longan is a popular gift.",
+   "where_to_eat_or_buy": "Roadside stalls, OTOP shops",
+   "source": [
+    "https://www.lamphun.go.th/en/information/aboutus/9/history-of-lamphun-province"
+   ]
+  }
+ ],
+ "markets_and_places": [
+  {
+   "name_th": "วัดพระธาตุหริภุญชัยวรมหาวิหาร",
+   "name_en": "Wat Phra That Hariphunchai",
+   "why_relevant_en": "Spiritual heart of Lamphun and end point of the Salak Yom procession. Has the Suwanna Chedi (on the old 1-satang coin) and a giant bronze gong from 1860.",
+   "source": [
+    "https://en.wikipedia.org/wiki/Wat_Phra_That_Hariphunchai",
+    "https://lamphun.prd.go.th/th/content/category/detail/id/33/iid/421568"
+   ]
+  },
+  {
+   "name_th": "วัดจามเทวี (กู่กุด)",
+   "name_en": "Wat Chamadevi (Ku Kut)",
+   "why_relevant_en": "Believed to hold Queen Chamadevi's ashes; Mon/Hariphunchai architecture.",
+   "source": [
+    "https://en.wikipedia.org/wiki/Lamphun"
+   ]
+  },
+  {
+   "name_th": "อนุสาวรีย์พระนางจามเทวี",
+   "name_en": "Queen Chamadevi monument",
+   "why_relevant_en": "Living shrine where people leave offerings.",
+   "source": [
+    "https://en.wikipedia.org/wiki/Lamphun"
+   ]
+  },
+  {
+   "name_th": "วัดต้นแก้ว (พิพิธภัณฑ์พื้นบ้านชาวยอง)",
+   "name_en": "Wat Ton Kaeo Yong Folk Museum",
+   "why_relevant_en": "More than 1,000 Yong artefacts: textiles, scripture chests, manuscripts.",
+   "source": [
+    "https://mgronline.com/travel/detail/9540000145872",
+    "https://www.matichon.co.th/weekly/column/article_182589"
+   ]
+  },
+  {
+   "name_th": "วัดหัวขัว บ้านเวียงยอง",
+   "name_en": "Wat Hua Khua, Ban Wiang Yong",
+   "why_relevant_en": "First Yong centre and cult site of Thewabut Luang.",
+   "source": [
+    "https://ethnicity.sac.or.th/database-ethnic/181",
+    "https://mgronline.com/travel/detail/9540000145872"
+   ]
+  },
+  {
+   "name_th": "อำเภอป่าซาง",
+   "name_en": "Pa Sang district",
+   "why_relevant_en": "Yong weaving town. Houses a classic Yong wooden house (บ้านมะกอก) and temples such as Wat Inthakhin and Wat Chang Khao Noi Nuea.",
+   "source": [
+    "https://mgronline.com/travel/detail/9540000145872",
+    "https://en.wikipedia.org/wiki/Pa_Sang_district"
+   ]
+  },
+  {
+   "name_th": "บ้านป่าเหียง อ.บ้านธิ",
+   "name_en": "Ban Pa Hiang, Ban Thi",
+   "why_relevant_en": "Tai Lue village; crafts and food products.",
+   "source": [
+    "https://wikicommunity.sac.or.th/community/391"
+   ]
+  },
+  {
+   "name_th": "ถนนอินทยงยศ",
+   "name_en": "Inthayongyot Road",
+   "why_relevant_en": "Main procession route in town (Salak Yom).",
+   "source": [
+    "https://lamphun.prd.go.th/th/content/category/detail/id/33/iid/421568"
+   ]
+  },
+  {
+   "name_th": "ดอยขุนตาล / อุโมงค์ขุนตาน",
+   "name_en": "Khun Tan range and railway tunnel",
+   "why_relevant_en": "Landmark on the Bangkok-Chiang Mai rail line, on the Lamphun-Lampang border.",
+   "source": [
+    "https://en.wikipedia.org/wiki/Lamphun_province"
+   ]
+  }
+ ],
+ "etiquette_local_en": [
+  "Use \"Yong\" or \"Thai Yong\" as a neutral, proud self-designation. The Yong past involves forced resettlement, so talk about \"เก็บผักใส่ซ้า เก็บข้าใส่เมือง\" with care, not as a joke.",
+  "At Wat Phra That Hariphunchai and other relic temples, cover your shoulders and knees, take off your shoes in the viharn, and follow any signs that bar women from inner relic areas.",
+  "Treat house and village spirit shrines (หอผี, เสาใจบ้าน) as private and sacred. Do not touch them, take things from them, or photograph rites without asking.",
+  "At Salak Yom the offering belongs to a named sponsor, who is usually a young woman. Admire it, ask before photographing her, and do not climb on or touch the structure.",
+  "Do not drop in on a new mother unless you are close family. By custom, only elders visit unannounced (หลอนเดือน).",
+  "Greeting elders with \"กิ๋นข้าวแล้วกา\" plus a wai is warmly received. Many older Lamphun people prefer being spoken to in Kham Mueang."
+ ],
+ "conversation_starters": [
+  {
+   "local_th": "กิ๋นข้าวแล้วกา",
+   "roman": "kin khao laeo ka",
+   "en": "Have you eaten yet?",
+   "why_works_en": "It is the standard Northern greeting and shows you are making an effort with the local language."
+  },
+  {
+   "local_th": "ป้ออุ้ยแม่อุ้ยเป็นคนยองก่อ",
+   "roman": "po ui mae ui pen khon yong ko",
+   "en": "Were your grandparents Yong?",
+   "why_works_en": "Most Lamphun families have Yong roots and many are proud of them. Ask gently and accept \"I don't know\" (ก่อ = question particle). This sentence was composed by the researcher and needs checking by a speaker."
+  },
+  {
+   "local_th": "สลากย้อมปี๋นี้ม่วนก่อ",
+   "roman": "salak yom pi ni muan ko",
+   "en": "Was Salak Yom fun this year?",
+   "why_works_en": "A festival unique to Lamphun and a source of civic pride (composed; check with a speaker)."
+  },
+  {
+   "local_th": "ลำไยลำแต๊",
+   "roman": "lamyai lam tae",
+   "en": "The longan is really delicious",
+   "why_works_en": "Longan is Lamphun's signature crop; praising it opens up market chats (composed)."
+  },
+  {
+   "local_th": "อู้ยองได้ก่อ",
+   "roman": "u yong dai ko",
+   "en": "Can you speak Yong?",
+   "why_works_en": "Shows you know Yong is its own language, and invites people to teach you words (composed; check with a speaker)."
+  }
+ ],
+ "needs_expert_review": [
+  "All Yong-specific tone values: no per-word Yong tone data was obtained. Tones shown are Chiang Mai Kham Mueang values from Thai Wiktionary.",
+  "Thai wording of the Lamphun province slogan (recalled; the English version is sourced).",
+  "Meaning of the full saying \"ลัวะปลงไห ไตปลงหม้อนึ่ง ... อย่าหื้อตายดา ... อย่าหื้อตายเหี่ยว\".",
+  "เสื้อบ้าน (guardian spirit) and the identification of the plants ผักปั๋ง and บ่ะแคว้ง.",
+  "Birth-year relic pairing (Hariphunchai = Rooster year) and any gender restrictions at the Hariphunchai relic enclosure.",
+  "Yong settlement date: most sources say 1805 (พ.ศ. 2348); the province English page says about 1845.",
+  "Chula thesis summary compares the East/West Yong tone developments to varieties in Yunnan and Shan State. An automated summary named \"Lisu\", which is almost certainly an error for Lue. Check the thesis abstract.",
+  "Composed phrases and conversation starters (made from sourced words, not quoted from a source)."
+ ],
+ "gaps": [
+  "th.wikipedia.org is blocked by the proxy. So4 thaijo paper on regional Tai Yuan lexical variation (robots-blocked) was not read, so there are no sourced lists of Lamphun-vs-Chiang Mai word differences beyond the Yong vowel shifts.",
+  "rituals.sac.or.th (Salak Yom detail page) is robots-blocked.",
+  "The TAT Thai hang le longan article (URL too long for the fetch proxy) and lamphun.go.th festival pages (404) could not be read.",
+  "No source was found for Lamphun silk GI (ผ้าไหมยกดอกลำพูน) details, Phra Rot amulet lore, or Karen communities in Lamphun (e.g. Li / Thung Hua Chang districts).",
+  "The web search budget for the session ran out mid-task, which limited Thai-language discovery."
+ ],
+ "confidence": "medium",
+ "sources": [
+  "https://culture.lpru.ac.th/WebCulture2553/CultureKnowledge/file/05-03.pdf",
+  "https://digital.car.chula.ac.th/chulaetd/48617/",
+  "https://en.wikipedia.org/wiki/Hariphunchai",
+  "https://en.wikipedia.org/wiki/Lamphun",
+  "https://en.wikipedia.org/wiki/Lamphun_province",
+  "https://en.wikipedia.org/wiki/Pa_Sang_district",
+  "https://en.wikipedia.org/wiki/Wat_Phra_That_Hariphunchai",
+  "https://en.wikipedia.org/wiki/Yong_language",
+  "https://ethnicity.sac.or.th/database-ethnic/181",
+  "https://goal90antique.blogspot.com/2017/10/blog-post_30.html",
+  "https://huggingface.co/datasets/pythainlp/lanna_dict",
+  "https://inzpy.com/travel/salakyom-festival-lamphun",
+  "https://lamphun.prd.go.th/th/content/category/detail/id/33/iid/421568",
+  "https://mfuir.mfu.ac.th/jspui/bitstream/123456789/1029/1/2025-v14-no1-p.72-97.pdf",
+  "https://mgronline.com/travel/detail/9540000145872",
+  "https://mpp.egat.co.th/hellomaemoh/index.php?option=com_content&view=article&id=981:2023-06-12-08-50-55&catid=43&Itemid=245",
+  "https://thai.tourismthailand.org/Articles/%E0%B9%84%E0%B8%9B%E0%B8%81%E0%B8%B4%E0%B8%99%E0%B8%AE%E0%B8%B1%E0%B8%87%E0%B9%80%E0%B8%A5%E0%B8%A5%E0%B8%B3%E0%B9%84%E0%B8%A2-%E0%B8%97%E0%B8%B5%E0%B9%88%E0%B9%84%E0%B8%AB%E0%B8%99%E0%B8%94%E0%B8%B5%E0%B9%83%E0%B8%99%E0%B8%88%E0%B8%B1%E0%B8%87%E0%B8%AB%E0%B8%A7%E0%B8%B1%E0%B8%94%E0%B8%A5%E0%B8%B3%E0%B8%9E%E0%B8%B9%E0%B8%99",
+  "https://wikicommunity.sac.or.th/community/300",
+  "https://wikicommunity.sac.or.th/community/391",
+  "https://www.lamphun.go.th/en/information/aboutus/9/history-of-lamphun-province",
+  "https://www.matichon.co.th/weekly/column/article_182589",
+  "https://www.thaipost.net/main/detail/16607"
+ ]
+}

@@ -1,0 +1,2149 @@
+{
+ "province_th": "ลำปาง",
+ "province_en": "Lampang",
+ "province_slug": "lampang",
+ "overview_th": "ลำปาง (เขลางค์นคร / เวียงละกอน) เป็นเมืองใหญ่ของล้านนาทางตะวันออก สำเนียงคำเมืองสั้นห้วนกว่าเชียงใหม่ ได้ชื่อว่า \"เมืองรถม้า\" (รถม้าเข้ามาราว พ.ศ. 2459 พร้อมทางรถไฟ) เป็นแหล่งเซรามิก \"ชามตราไก่\" ที่เริ่มจากช่างชาวจีนกวางตุ้งที่พบดินขาวที่บ้านปางค่า อ.แจ้ห่ม ยุคสัมปทานไม้สักทำให้มีวัดศิลปะพม่า-ไทใหญ่จำนวนมาก มีวัดพระธาตุลำปางหลวง ศูนย์อนุรักษ์ช้างไทย และความเชื่อเรื่องผีเมือง เจ้าพ่อประตูผา ผีมดผีเม็ง ที่ยังเข้มแข็ง",
+ "overview_en": "Lampang (Khelang Nakhon / Wiang Lakon) is the great eastern Lanna city. Its Kham Mueang is shorter and more clipped than Chiang Mai's. It is \"the horse-carriage city\", with carriages arriving around 1916 along with the railway. It is also the home of the rooster bowl ceramics industry, which grew from Guangdong potters who found kaolin at Ban Pang Kha, Chae Hom. The teak-logging era left many Burmese/Shan-style temples, and Lampang has Wat Phra That Lampang Luang, the National Elephant Institute, and a strong spirit culture (city guardian spirits, Chao Pho Pratu Pha, phi mot / phi meng spirit dances).",
+ "language": {
+  "varieties": [
+   "Kham Mueang / Northern Thai, eastern Lanna type (กำเมือง / กำเมียง)",
+   "Local sub-areas per lampangculture: north (แจ้ห่ม, เมืองปาน, งาว, and one more district rendered ambiguously, probably วังเหนือ), central (เมือง, แม่เมาะ, แม่ทะ, เสริมงาม, etc.), south (เถิน, แม่พริก)",
+   "Tai Lue / Yong (e.g. community linked to ต.กล้วยแพะ, อ.เมือง)",
+   "Highland and minority languages documented by lampangculture: Iu Mien, Hmong, Akha, Lisu, Lahu, Karen, Lawa, Khmu",
+   "Burmese/Shan heritage community (Tha Ma O), Chinese (Guangdong) ceramic families",
+   "Standard Central Thai"
+  ],
+  "dialect_group": "Lanna East (with Phrae, Nan, Phayao, Chiang Rai, Uttaradit): clipped accent; เอือ often realised as เอีย",
+  "pronunciation_features": [
+   {
+    "feature_th": "สำเนียงลำปางสั้นและห้วนกว่าเชียงใหม่",
+    "feature_en": "Shorter, more clipped delivery than Chiang Mai",
+    "example_local": "บ่ะฮู่",
+    "example_central": "ไม่รู้ (เชียงใหม่: บ่ะฮู้)",
+    "source": [
+     "https://culture.lpru.ac.th/WebCulture2553/CultureKnowledge/file/05-03.pdf"
+    ],
+    "confidence": "high"
+   },
+   {
+    "feature_th": "คำที่เชียงใหม่ใช้ไม้โท ลำปางออกเสียงเป็นแบบไม้เอก (ตามการสะกดของ LPRU)",
+    "feature_en": "Words Chiang Mai writes with mai tho are said (and spelled) with mai ek in Lampang",
+    "example_local": "กิ๋นน่ำ, สามร่อย",
+    "example_central": "ดื่มน้ำ, สามร้อย",
+    "source": [
+     "https://culture.lpru.ac.th/WebCulture2553/CultureKnowledge/file/05-03.pdf",
+     "https://goal90antique.blogspot.com/2017/10/blog-post_30.html"
+    ],
+    "confidence": "high"
+   },
+   {
+    "feature_th": "ล้านนาตะวันออกไม่ค่อยมีสระเอือะ/เอือ ใช้เอียะ/เอียแทน",
+    "feature_en": "Eastern Lanna largely lacks uea, using ia instead",
+    "example_local": "กำเมียง",
+    "example_central": "คำเมือง",
+    "source": [
+     "https://goal90antique.blogspot.com/2017/10/blog-post_30.html",
+     "https://culture.lpru.ac.th/WebCulture2553/CultureKnowledge/file/05-03.pdf"
+    ],
+    "confidence": "high"
+   },
+   {
+    "feature_th": "คำเมืองทั่วไป: ช→จ, พ→ป, ค→ก, ท→ต, ร→ฮ",
+    "feature_en": "General Northern consonant correspondences",
+    "example_local": "จ๊อน, แปง, กำ, ตาง, เฮา",
+    "example_central": "ช้อน, แพง, คำ, ทาง, เรา",
+    "source": [
+     "https://culture.lpru.ac.th/WebCulture2553/CultureKnowledge/file/05-03.pdf"
+    ],
+    "confidence": "high"
+   },
+   {
+    "feature_th": "ไม่แยก ล/ร ชัดเจน (ร มักเป็น ล หรือ ฮ)",
+    "feature_en": "l/r not distinguished (r often l or h)",
+    "example_local": "",
+    "example_central": "",
+    "source": [
+     "https://culture.lpru.ac.th/WebCulture2553/CultureKnowledge/file/05-03.pdf"
+    ],
+    "confidence": "medium"
+   }
+  ],
+  "tone_notes_en": "No Lampang-specific tone inventory was obtained this round. Tones on general words come from Thai Wiktionary, which describes a Chiang Mai-type six-tone system. Lampang belongs to the eastern Lanna tone group. LPRU shows its tone differences only through spelling (ฮู้→ฮู่, น้ำ→น่ำ, ร้อย→ร่อย), which suggests lower or shorter realisations of some tones; treat exact contours as unverified. The Lue items carry tone digits from the LPRU source numbering, not Chao contours.",
+  "script_notes": "Tai Tham (ตัวเมือง / อักษรธรรมล้านนา) is used in palm-leaf and พับสา manuscripts, for example the Thoen legend (ตำนานเมืองเถิน) at Wat Mae Wa Luang and the manuscripts of Wat Santhan. lampangculture notes the three names ตัวเมือง, อักษรธรรม, อักษรธรรมล้านนา. Street signage is overwhelmingly Central Thai script; Tai Tham appears on some temple and heritage signs (not surveyed).",
+  "code_switching_and_generations_en": "Everyday Lampang speech mixes Kham Mueang and Central Thai; LPRU records the term แปล๊ด for such mixed speech. Oral genres are fading. For example, Grandma Khamyuang of Lampang Luang (95 in 2015) was the last singer of the children's swing song สิกจุงจา because later generations did not learn it. Minority language speakers (Lue, hill peoples) are commonly trilingual with Kham Mueang and Central Thai."
+ },
+ "vocabulary": [
+  {
+   "local_th": "กำเมียง",
+   "roman": "kam miang",
+   "pronunciation": "kam . miang; tones not sourced (derived: kam 33 mid, miang 33 mid by analogy with Chiang Mai กำเมือง; low)",
+   "central_th": "คำเมือง",
+   "en": "Kham Mueang, the Northern language (eastern Lanna pronunciation)",
+   "category": "language",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": [
+    "https://culture.lpru.ac.th/WebCulture2553/CultureKnowledge/file/05-03.pdf",
+    "https://goal90antique.blogspot.com/2017/10/blog-post_30.html"
+   ],
+   "confidence": "high",
+   "notes": "Eastern Lanna (Lampang, Phrae, Nan, Chiang Rai, Phayao, Uttaradit) tends to use เอีย where the west has เอือ."
+  },
+  {
+   "local_th": "บ่ะฮู่",
+   "roman": "ba hu",
+   "pronunciation": "ba . hu; LPRU contrasts Chiang Mai บ่ะฮู้ with Lampang บ่ะฮู่ (shorter/lower final syllable). Exact contour not sourced (derived, low).",
+   "central_th": "ไม่รู้",
+   "en": "don't know (Lampang short form)",
+   "category": "everyday",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": [
+    "https://culture.lpru.ac.th/WebCulture2553/CultureKnowledge/file/05-03.pdf"
+   ],
+   "confidence": "high"
+  },
+  {
+   "local_th": "กิ๋นน่ำ",
+   "roman": "kin nam",
+   "pronunciation": "kin [24 low-rising, sourced for กิ๋น] . nam (Lampang: written with mai ek, shorter than Chiang Mai น้ำ /naːm45/; exact tone not sourced)",
+   "central_th": "ดื่มน้ำ",
+   "en": "to drink water (Lampang spelling/pronunciation)",
+   "category": "everyday/food",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": [
+    "https://culture.lpru.ac.th/WebCulture2553/CultureKnowledge/file/05-03.pdf",
+    "https://goal90antique.blogspot.com/2017/10/blog-post_30.html"
+   ],
+   "confidence": "high",
+   "notes": "In the North you \"eat\" water: กิ๋น covers both eating and drinking."
+  },
+  {
+   "local_th": "สามร่อย",
+   "roman": "sam roi",
+   "pronunciation": "sam . roi (Lampang form written with mai ek vs Chiang Mai ฮ้อย/ร้อย; exact tone not sourced)",
+   "central_th": "สามร้อย",
+   "en": "three hundred (Lampang pronunciation)",
+   "category": "numbers/market",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": [
+    "https://culture.lpru.ac.th/WebCulture2553/CultureKnowledge/file/05-03.pdf"
+   ],
+   "confidence": "high",
+   "notes": "Useful when haggling: prices sound different from Chiang Mai."
+  },
+  {
+   "local_th": "รถม้า",
+   "roman": "rot ma",
+   "pronunciation": "not sourced (ม้า alone: maː 45 high-rising per th.wiktionary)",
+   "central_th": "รถม้า",
+   "en": "horse carriage (symbol of Lampang, \"เมืองรถม้า\")",
+   "category": "transport/identity",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": [
+    "https://en.wikipedia.org/wiki/Lampang"
+   ],
+   "confidence": "high"
+  },
+  {
+   "local_th": "ชามตราไก่",
+   "roman": "cham tra kai",
+   "pronunciation": "not sourced",
+   "central_th": "ชามตราไก่",
+   "en": "rooster bowl (Lampang GI ceramic)",
+   "category": "crafts/identity",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": [
+    "https://www.sarakadeelite.com/brand-story/lampang-rooster-bowl/",
+    "https://www.khaosod.co.th/technologychaoban/techno-news/article_22984"
+   ],
+   "confidence": "high"
+  },
+  {
+   "local_th": "ถ้วยก๋าไก่",
+   "roman": "thuai ka kai",
+   "pronunciation": "ก๋า: kaː 24 low-rising (th.wiktionary via PyThaiNLP, sense \"crow\"); here ก๋าไก่ is a spelling seen in a web headline only",
+   "central_th": "ชามตราไก่",
+   "en": "rooster bowl, Northern name as used in some Northern writing",
+   "category": "crafts",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": [
+    "https://www.chiangraifocus.com/1775/"
+   ],
+   "confidence": "low",
+   "notes": "Only a page title was seen, and the page was not opened. Needs a speaker to confirm."
+  },
+  {
+   "local_th": "ห่อนึ่ง",
+   "roman": "ho nueng",
+   "pronunciation": "ho [21 low-falling, th.wiktionary]; nueng not sourced",
+   "central_th": "ห่อหมก",
+   "en": "steamed banana-leaf parcel (Northern \"ho mok\")",
+   "category": "food",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": [
+    "https://lampangculture.com/a13-view.php?id=1"
+   ],
+   "confidence": "high"
+  },
+  {
+   "local_th": "ห่อนึ่งปี้ / ห่อนึ่งน้อง",
+   "roman": "ho nueng pi / ho nueng nong",
+   "pronunciation": "not sourced",
+   "central_th": "ห่อหมกห่อใหญ่ / ห่อเล็ก",
+   "en": "\"elder\" (big) parcel for the temple guardian spirit / \"younger\" (small) parcel for alms (Lampang Luang)",
+   "category": "food/ritual",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": [
+    "https://lampangculture.com/a13-view.php?id=1"
+   ],
+   "confidence": "high"
+  },
+  {
+   "local_th": "ผักแค",
+   "roman": "phak khae",
+   "pronunciation": "not sourced",
+   "central_th": "ใบชะพลู",
+   "en": "wild betel leaf (Piper sarmentosum), per lampangculture",
+   "category": "food/herb",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": [
+    "https://lampangculture.com/a13-view.php?id=1"
+   ],
+   "confidence": "medium",
+   "notes": "In other Northern dishes (แกงแค), ผักแค can refer to a different plant (Acacia-type). Check this locally."
+  },
+  {
+   "local_th": "ใบยอ",
+   "roman": "bai yo",
+   "pronunciation": "not sourced",
+   "central_th": "ใบยอ",
+   "en": "noni leaf (lampangculture also gives another name, ใบตาเสือ; verify)",
+   "category": "food/herb",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": [
+    "https://lampangculture.com/a13-view.php?id=1"
+   ],
+   "confidence": "low"
+  },
+  {
+   "local_th": "แก้มื้อนา",
+   "roman": "kae mue na",
+   "pronunciation": "not sourced",
+   "central_th": "(ประเพณีทำบุญรายวันพระช่วงเข้าพรรษา)",
+   "en": "Lampang Luang merit-making held on each of the 12 holy days of Buddhist Lent",
+   "category": "ritual",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": [
+    "https://lampangculture.com/a4-view.php?id=4"
+   ],
+   "confidence": "high"
+  },
+  {
+   "local_th": "เจ้ามื้อ",
+   "roman": "chao mue",
+   "pronunciation": "not sourced",
+   "central_th": "เจ้าภาพ",
+   "en": "host/sponsor of a given day's merit-making",
+   "category": "ritual/social",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": [
+    "https://lampangculture.com/a4-view.php?id=4"
+   ],
+   "confidence": "high"
+  },
+  {
+   "local_th": "วันดา",
+   "roman": "wan da",
+   "pronunciation": "not sourced",
+   "central_th": "วันสุกดิบ (วันเตรียมงาน)",
+   "en": "preparation day before a holy day or ceremony",
+   "category": "ritual/time",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": [
+    "https://lampangculture.com/a4-view.php?id=4"
+   ],
+   "confidence": "high"
+  },
+  {
+   "local_th": "สลุง",
+   "roman": "salung",
+   "pronunciation": "not sourced",
+   "central_th": "ขันน้ำ (ขันเงิน/ทองเหลือง)",
+   "en": "bowl (silver, gold, brass, lacquer or aluminium) for holding sacred water",
+   "category": "ritual object",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": [
+    "https://lampangculture.com/a4-view.php?id=3",
+    "https://huggingface.co/datasets/pythainlp/lanna_dict"
+   ],
+   "confidence": "high",
+   "tai_tham": "ᩈᩖ᩻ᩩᨦ"
+  },
+  {
+   "local_th": "สลุงหลวง",
+   "roman": "salung luang",
+   "pronunciation": "not sourced",
+   "central_th": "ขันน้ำใบใหญ่",
+   "en": "the giant bowl (89 x 49 cm, made 1990) paraded at Lampang Songkran",
+   "category": "festival",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": [
+    "https://lampangculture.com/a4-view.php?id=3"
+   ],
+   "confidence": "high"
+  },
+  {
+   "local_th": "น้ำขมิ้นส้มป่อย",
+   "roman": "nam khamin som poi",
+   "pronunciation": "not sourced",
+   "central_th": "น้ำขมิ้นส้มป่อย",
+   "en": "turmeric and som poi pod water for blessing and bathing Buddha images",
+   "category": "ritual",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": [
+    "https://lampangculture.com/a4-view.php?id=3",
+    "https://mpp.egat.co.th/hellomaemoh/index.php?option=com_content&view=article&id=981:2023-06-12-08-50-55&catid=43&Itemid=245"
+   ],
+   "confidence": "high"
+  },
+  {
+   "local_th": "ผีโขน / ผีขน",
+   "roman": "phi khon / phi khon (short)",
+   "pronunciation": "not sourced; source notes some say the short form ผีขน",
+   "central_th": "ผีโขน",
+   "en": "masked/costumed \"ghost\" performers of Ban Si Luang, Chae Son (merit bridge for the dead)",
+   "category": "ritual",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": [
+    "https://lampangculture.com/a4-view.php?id=2"
+   ],
+   "confidence": "high"
+  },
+  {
+   "local_th": "แปดเป็ง (8 เป็ง)",
+   "roman": "paet peng",
+   "pronunciation": "เป็ง: peŋ 33 mid (from ยี่เป็ง, th.wiktionary)",
+   "central_th": "วันเพ็ญเดือน 8 (วิสาขบูชา)",
+   "en": "full moon of Northern month 8 (Visakha Bucha); relic-bathing fairs",
+   "category": "festival/time",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": [
+    "https://lampangculture.com/a4-view.php?id=2"
+   ],
+   "confidence": "high"
+  },
+  {
+   "local_th": "ผีมด",
+   "roman": "phi mot",
+   "pronunciation": "not sourced",
+   "central_th": "ผีบรรพบุรุษ (สายผีมด)",
+   "en": "a lineage of ancestral spirits that possess mediums at spirit-dance ceremonies",
+   "category": "belief",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": [
+    "https://mpp.egat.co.th/hellomaemoh/index.php?option=com_content&view=article&id=981:2023-06-12-08-50-55&catid=43&Itemid=245"
+   ],
+   "confidence": "medium"
+  },
+  {
+   "local_th": "ผีเม็ง",
+   "roman": "phi meng",
+   "pronunciation": "not sourced",
+   "central_th": "ผีบรรพบุรุษสายเม็ง (มอญ)",
+   "en": "a noble ancestral spirit lineage (linked to Mon heritage in Lanna tradition); red-cloth rite",
+   "category": "belief",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": [
+    "https://mpp.egat.co.th/hellomaemoh/index.php?option=com_content&view=article&id=981:2023-06-12-08-50-55&catid=43&Itemid=245"
+   ],
+   "confidence": "medium",
+   "notes": "The Mon link is general Lanna knowledge and is not stated in the EGAT page."
+  },
+  {
+   "local_th": "ผาม",
+   "roman": "pham",
+   "pronunciation": "not sourced",
+   "central_th": "ปะรำพิธี",
+   "en": "temporary pavilion for spirit-dance ceremonies",
+   "category": "ritual",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": [
+    "https://mpp.egat.co.th/hellomaemoh/index.php?option=com_content&view=article&id=981:2023-06-12-08-50-55&catid=43&Itemid=245"
+   ],
+   "confidence": "high"
+  },
+  {
+   "local_th": "ฟ้อนผี",
+   "roman": "fon phi",
+   "pronunciation": "fon 45 high-rising (ฟ้อน, th.wiktionary); phi 24 low-rising (ผี)",
+   "central_th": "รำผี (ร่างทรงฟ้อน)",
+   "en": "spirit dance by possessed mediums",
+   "category": "ritual",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": [
+    "https://mpp.egat.co.th/hellomaemoh/index.php?option=com_content&view=article&id=981:2023-06-12-08-50-55&catid=43&Itemid=245",
+    "https://knowledgeportal.okmd.or.th/kmap/65fff112d420b"
+   ],
+   "confidence": "high"
+  },
+  {
+   "local_th": "พ่อหนาน",
+   "roman": "pho nan",
+   "pronunciation": "not sourced",
+   "central_th": "อาจารย์ประกอบพิธี (ผู้เคยบวชพระ)",
+   "en": "ritual officiant (a man who has been a monk)",
+   "category": "ritual/people",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": [
+    "https://lampangculture.com/a4-view.php?id=7"
+   ],
+   "confidence": "high"
+  },
+  {
+   "local_th": "สิกจุงจา",
+   "roman": "sik chung cha",
+   "pronunciation": "not sourced",
+   "central_th": "ชิงช้า / เล่นชิงช้า",
+   "en": "swing, swinging (old children's song genre named after it)",
+   "category": "play/music",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": [
+    "https://lampangculture.com/a2-view.php?id=2"
+   ],
+   "confidence": "high"
+  },
+  {
+   "local_th": "ค่าว",
+   "roman": "khao",
+   "pronunciation": "not sourced",
+   "central_th": "กลอนล้านนา",
+   "en": "Lanna verse form (e.g. works of พระยาพรหมโวหาร)",
+   "category": "literature",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": [
+    "https://lampangculture.com/a2-view.php?id=4"
+   ],
+   "confidence": "high"
+  },
+  {
+   "local_th": "พับสา",
+   "roman": "phap sa",
+   "pronunciation": "not sourced",
+   "central_th": "สมุดข่อย/กระดาษสาพับ",
+   "en": "folded mulberry-paper manuscript",
+   "category": "literature/script",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": [
+    "https://lampangculture.com/a6-view-all.php"
+   ],
+   "confidence": "medium"
+  },
+  {
+   "local_th": "กุบ",
+   "roman": "kup",
+   "pronunciation": "not sourced",
+   "central_th": "หมวก (งอบ)",
+   "en": "woven hat (lampangculture craft series สานกุบ)",
+   "category": "crafts",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": [
+    "https://lampangculture.com/a1-view-all.php"
+   ],
+   "confidence": "medium"
+  },
+  {
+   "local_th": "ผางประทีป",
+   "roman": "phang prathip",
+   "pronunciation": "not sourced",
+   "central_th": "ถ้วยประทีป (ตะคันน้ำมัน)",
+   "en": "small clay oil lamp offered at temples",
+   "category": "ritual object",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": [
+    "https://lampangculture.com/a6-view-all.php"
+   ],
+   "confidence": "medium"
+  },
+  {
+   "local_th": "เปิ่น",
+   "roman": "poen",
+   "pronunciation": "source tone digit 4 (Lue numbering; not converted)",
+   "central_th": "ฉัน (พูดกับผู้ใหญ่)",
+   "en": "I (to elders), Tai Lue",
+   "category": "Lue/pronoun",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": [
+    "https://culture.lpru.ac.th/WebCulture2553/CultureKnowledge/file/05-01.pdf"
+   ],
+   "confidence": "medium",
+   "notes": "Tai Lue (Lue/Yong-related) form recorded by LPRU from a Lue community linked to ต.กล้วยแพะ, Mueang Lampang; not general Lampang Kham Mueang. Tone digits in the source are a numbered tone system, not Chao contours."
+  },
+  {
+   "local_th": "ตู๋",
+   "roman": "tu",
+   "pronunciation": "source tone digit 1",
+   "central_th": "ฉัน / เรา",
+   "en": "I/we, Tai Lue",
+   "category": "Lue/pronoun",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": [
+    "https://culture.lpru.ac.th/WebCulture2553/CultureKnowledge/file/05-01.pdf"
+   ],
+   "confidence": "low",
+   "notes": "Tai Lue (Lue/Yong-related) form recorded by LPRU from a Lue community linked to ต.กล้วยแพะ, Mueang Lampang; not general Lampang Kham Mueang. Tone digits in the source are a numbered tone system, not Chao contours."
+  },
+  {
+   "local_th": "อึ่ม",
+   "roman": "uem",
+   "pronunciation": "source tone digit 3",
+   "central_th": "ไม่",
+   "en": "not, Tai Lue",
+   "category": "Lue/grammar",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": [
+    "https://culture.lpru.ac.th/WebCulture2553/CultureKnowledge/file/05-01.pdf"
+   ],
+   "confidence": "medium",
+   "notes": "Tai Lue (Lue/Yong-related) form recorded by LPRU from a Lue community linked to ต.กล้วยแพะ, Mueang Lampang; not general Lampang Kham Mueang. Tone digits in the source are a numbered tone system, not Chao contours. LPRU says the syllable has several functions."
+  },
+  {
+   "local_th": "เก๋า",
+   "roman": "kao",
+   "pronunciation": "source tone digit 1",
+   "central_th": "ไหม (คำถาม)",
+   "en": "question particle, Tai Lue",
+   "category": "Lue/grammar",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": [
+    "https://culture.lpru.ac.th/WebCulture2553/CultureKnowledge/file/05-01.pdf"
+   ],
+   "confidence": "low",
+   "notes": "Tai Lue (Lue/Yong-related) form recorded by LPRU from a Lue community linked to ต.กล้วยแพะ, Mueang Lampang; not general Lampang Kham Mueang. Tone digits in the source are a numbered tone system, not Chao contours."
+  },
+  {
+   "local_th": "ป่อ / แหม่",
+   "roman": "po / mae",
+   "pronunciation": "source tone digit 4 for both",
+   "central_th": "พ่อ / แม่",
+   "en": "father / mother, Tai Lue",
+   "category": "Lue/kinship",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": [
+    "https://culture.lpru.ac.th/WebCulture2553/CultureKnowledge/file/05-01.pdf"
+   ],
+   "confidence": "medium",
+   "notes": "Tai Lue (Lue/Yong-related) form recorded by LPRU from a Lue community linked to ต.กล้วยแพะ, Mueang Lampang; not general Lampang Kham Mueang. Tone digits in the source are a numbered tone system, not Chao contours."
+  },
+  {
+   "local_th": "ป่ออุ้ย / แหม่อุ้ย",
+   "roman": "po ui / mae ui",
+   "pronunciation": "not reliably extracted",
+   "central_th": "ปู่ / ย่า",
+   "en": "grandfather / grandmother, Tai Lue",
+   "category": "Lue/kinship",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": [
+    "https://culture.lpru.ac.th/WebCulture2553/CultureKnowledge/file/05-01.pdf"
+   ],
+   "confidence": "low",
+   "notes": "Tai Lue (Lue/Yong-related) form recorded by LPRU from a Lue community linked to ต.กล้วยแพะ, Mueang Lampang; not general Lampang Kham Mueang. Tone digits in the source are a numbered tone system, not Chao contours."
+  },
+  {
+   "local_th": "หอมป้อม",
+   "roman": "hom pom",
+   "pronunciation": "not sourced",
+   "central_th": "ผักชี",
+   "en": "coriander",
+   "category": "food/herb",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": [
+    "https://goal90antique.blogspot.com/2017/10/blog-post_30.html"
+   ],
+   "confidence": "medium",
+   "notes": "Goal90 also gives หอมน้อย."
+  },
+  {
+   "local_th": "บะก้วย",
+   "roman": "ba kuai",
+   "pronunciation": "not sourced",
+   "central_th": "กล้วย",
+   "en": "banana",
+   "category": "food",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": [
+    "https://culture.lpru.ac.th/WebCulture2553/CultureKnowledge/file/05-03.pdf"
+   ],
+   "confidence": "medium",
+   "notes": "LPRU also lists บะแก๋ว and บะมั้น as other forms (regional). Which one is used in Lampang itself was not specified."
+  },
+  {
+   "local_th": "บะก้วยเต้ด / บะเต้ด",
+   "roman": "ba kuai tet / ba tet",
+   "pronunciation": "not sourced",
+   "central_th": "มะละกอ",
+   "en": "papaya",
+   "category": "food",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": [
+    "https://culture.lpru.ac.th/WebCulture2553/CultureKnowledge/file/05-03.pdf"
+   ],
+   "confidence": "medium",
+   "notes": "Literally \"foreign banana\"; regional variants."
+  },
+  {
+   "local_th": "แปง (แพง)",
+   "roman": "paeng",
+   "pronunciation": "not sourced for this sense (th.wiktionary gives a separate word แปง \"to make\" with tone 24; in Tai Tham the two are spelled differently, ᨻᩯ᩠ᨦ expensive vs ᨸᩯ᩠ᨦ make)",
+   "central_th": "แพง",
+   "en": "expensive",
+   "category": "market",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": [
+    "https://culture.lpru.ac.th/WebCulture2553/CultureKnowledge/file/05-03.pdf",
+    "https://huggingface.co/datasets/pythainlp/lanna_dict"
+   ],
+   "confidence": "high"
+  },
+  {
+   "local_th": "จ๊อน",
+   "roman": "chon",
+   "pronunciation": "not sourced (spelled with mai tri, suggesting a high tone; derived, low)",
+   "central_th": "ช้อน",
+   "en": "spoon",
+   "category": "household",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": [
+    "https://culture.lpru.ac.th/WebCulture2553/CultureKnowledge/file/05-03.pdf",
+    "https://huggingface.co/datasets/pythainlp/lanna_dict"
+   ],
+   "confidence": "high",
+   "tai_tham": "ᨩᩬ᩶ᩁ"
+  },
+  {
+   "local_th": "กิ๋น",
+   "roman": "kin",
+   "pronunciation": "kin [24 low-rising] ; IPA /kin˨˦/ (th.wiktionary via PyThaiNLP lanna_dict; Chiang Mai-based reference, local realisation may differ)",
+   "central_th": "กิน",
+   "en": "to eat",
+   "category": "verb/food",
+   "example_sentence_local": "กิ๋นข้าวแล้วกา",
+   "example_sentence_en": "Have you eaten yet? (greeting)",
+   "source": [
+    "https://huggingface.co/datasets/pythainlp/lanna_dict",
+    "https://culture.lpru.ac.th/WebCulture2553/CultureKnowledge/file/05-03.pdf"
+   ],
+   "confidence": "high",
+   "tai_tham": "ᨠᩥ᩠ᨶ",
+   "notes": "Lampang (eastern Lanna) speakers tend to say words shorter and more clipped than Chiang Mai speakers (LPRU)."
+  },
+  {
+   "local_th": "ลำ",
+   "roman": "lam",
+   "pronunciation": "",
+   "central_th": "อร่อย",
+   "en": "delicious",
+   "category": "food/adjective",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": [
+    "https://huggingface.co/datasets/pythainlp/lanna_dict"
+   ],
+   "confidence": "high",
+   "tai_tham": "ᩃᩣᩴ",
+   "notes": "Tone not given in dictionary entry; verify with a speaker. Lampang (eastern Lanna) speakers tend to say words shorter and more clipped than Chiang Mai speakers (LPRU)."
+  },
+  {
+   "local_th": "แต๊",
+   "roman": "tae",
+   "pronunciation": "tɛː [45 high-rising] ; IPA /tɛː˦˥/ (th.wiktionary via PyThaiNLP lanna_dict; Chiang Mai-based reference, local realisation may differ)",
+   "central_th": "แท้, จริง",
+   "en": "truly, really",
+   "category": "intensifier",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": [
+    "https://huggingface.co/datasets/pythainlp/lanna_dict"
+   ],
+   "confidence": "high",
+   "tai_tham": "ᨴᩯ᩶",
+   "notes": "Lampang (eastern Lanna) speakers tend to say words shorter and more clipped than Chiang Mai speakers (LPRU)."
+  },
+  {
+   "local_th": "ม่วน",
+   "roman": "muan",
+   "pronunciation": "muan [42 high-falling] ; IPA /muan˦˨/ (th.wiktionary via PyThaiNLP lanna_dict; Chiang Mai-based reference, local realisation may differ)",
+   "central_th": "สนุก, ไพเราะ",
+   "en": "fun; pleasant to hear",
+   "category": "adjective",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": [
+    "https://huggingface.co/datasets/pythainlp/lanna_dict"
+   ],
+   "confidence": "high",
+   "tai_tham": "ᨾ᩠ᩅ᩵ᩁ",
+   "notes": "Lampang (eastern Lanna) speakers tend to say words shorter and more clipped than Chiang Mai speakers (LPRU)."
+  },
+  {
+   "local_th": "อู้",
+   "roman": "u",
+   "pronunciation": "ʔuːʔ [44ʔ high-level-glottal] ; IPA /ʔuː˦˦ʔ/ (th.wiktionary via PyThaiNLP lanna_dict; Chiang Mai-based reference, local realisation may differ)",
+   "central_th": "พูด, คุย",
+   "en": "to speak, chat",
+   "category": "verb",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": [
+    "https://huggingface.co/datasets/pythainlp/lanna_dict"
+   ],
+   "confidence": "high",
+   "tai_tham": "ᩉᩪ᩶",
+   "notes": "Lampang (eastern Lanna) speakers tend to say words shorter and more clipped than Chiang Mai speakers (LPRU)."
+  },
+  {
+   "local_th": "บ่",
+   "roman": "bo",
+   "pronunciation": "bɔː [21 low-falling] ; IPA /bɔː˨˩/ (th.wiktionary via PyThaiNLP lanna_dict; Chiang Mai-based reference, local realisation may differ)",
+   "central_th": "ไม่",
+   "en": "not",
+   "category": "grammar",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": [
+    "https://huggingface.co/datasets/pythainlp/lanna_dict",
+    "https://culture.lpru.ac.th/WebCulture2553/CultureKnowledge/file/05-03.pdf"
+   ],
+   "confidence": "high",
+   "tai_tham": "ᨷᩴ᩵",
+   "notes": "LPRU writes it บ่ะ in บ่ะฮู้/บ่ะฮู่ (don't know). Lampang (eastern Lanna) speakers tend to say words shorter and more clipped than Chiang Mai speakers (LPRU)."
+  },
+  {
+   "local_th": "ป้อ",
+   "roman": "po",
+   "pronunciation": "pɔː [42 high-falling] ; IPA /pɔː˦˨/ (th.wiktionary via PyThaiNLP lanna_dict; Chiang Mai-based reference, local realisation may differ)",
+   "central_th": "พ่อ",
+   "en": "father",
+   "category": "kinship",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": [
+    "https://huggingface.co/datasets/pythainlp/lanna_dict",
+    "https://goal90antique.blogspot.com/2017/10/blog-post_30.html"
+   ],
+   "confidence": "high",
+   "tai_tham": "ᨻᩬᩴ᩵",
+   "notes": "Lampang (eastern Lanna) speakers tend to say words shorter and more clipped than Chiang Mai speakers (LPRU)."
+  },
+  {
+   "local_th": "อุ้ย",
+   "roman": "ui",
+   "pronunciation": "ʔuj [45 high-rising] ; IPA /ʔuj˦˥/ (th.wiktionary via PyThaiNLP lanna_dict; Chiang Mai-based reference, local realisation may differ)",
+   "central_th": "ปู่ ย่า ตา ยาย",
+   "en": "grandparent / elderly person (term of respect)",
+   "category": "kinship",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": [
+    "https://huggingface.co/datasets/pythainlp/lanna_dict"
+   ],
+   "confidence": "high",
+   "tai_tham": "ᨤᩫ᩠ᨶ",
+   "notes": "Lampang (eastern Lanna) speakers tend to say words shorter and more clipped than Chiang Mai speakers (LPRU)."
+  },
+  {
+   "local_th": "ปี้",
+   "roman": "pi",
+   "pronunciation": "piː [42 high-falling] ; IPA /piː˦˨/ (th.wiktionary via PyThaiNLP lanna_dict; Chiang Mai-based reference, local realisation may differ)",
+   "central_th": "พี่",
+   "en": "older sibling",
+   "category": "kinship",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": [
+    "https://huggingface.co/datasets/pythainlp/lanna_dict",
+    "https://goal90antique.blogspot.com/2017/10/blog-post_30.html",
+    "https://culture.lpru.ac.th/WebCulture2553/CultureKnowledge/file/05-03.pdf"
+   ],
+   "confidence": "high",
+   "tai_tham": "ᨻᩦ᩵",
+   "notes": "Lampang (eastern Lanna) speakers tend to say words shorter and more clipped than Chiang Mai speakers (LPRU)."
+  },
+  {
+   "local_th": "อ้าย",
+   "roman": "ai",
+   "pronunciation": "ʔaːjʔ [44ʔ high-level-glottal] ; IPA /ʔaːj˦˦ʔ/ (th.wiktionary via PyThaiNLP lanna_dict; Chiang Mai-based reference, local realisation may differ)",
+   "central_th": "พี่ชาย",
+   "en": "older brother; polite address to a young man",
+   "category": "kinship",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": [
+    "https://huggingface.co/datasets/pythainlp/lanna_dict",
+    "https://culture.lpru.ac.th/WebCulture2553/CultureKnowledge/file/05-03.pdf"
+   ],
+   "confidence": "high",
+   "tai_tham": "ᩋ᩶ᩣ᩠ᨿ",
+   "notes": "Lampang (eastern Lanna) speakers tend to say words shorter and more clipped than Chiang Mai speakers (LPRU)."
+  },
+  {
+   "local_th": "แม่ญิง",
+   "roman": "mae ying",
+   "pronunciation": "mɛː [42 high-falling] . ɲiŋ [33 mid] ; IPA /mɛː˦˨.ɲiŋ˧˧/ (th.wiktionary via PyThaiNLP lanna_dict; Chiang Mai-based reference, local realisation may differ)",
+   "central_th": "ผู้หญิง",
+   "en": "woman",
+   "category": "people",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": [
+    "https://huggingface.co/datasets/pythainlp/lanna_dict"
+   ],
+   "confidence": "high",
+   "tai_tham": "ᨾᩯ᩵ᨿᩥ᩠ᨦ",
+   "notes": "Lampang (eastern Lanna) speakers tend to say words shorter and more clipped than Chiang Mai speakers (LPRU)."
+  },
+  {
+   "local_th": "เฮา",
+   "roman": "hao",
+   "pronunciation": "haw [33 mid] ; IPA /haw˧˧/ (th.wiktionary via PyThaiNLP lanna_dict; Chiang Mai-based reference, local realisation may differ)",
+   "central_th": "เรา",
+   "en": "we / I (inclusive)",
+   "category": "pronoun",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": [
+    "https://huggingface.co/datasets/pythainlp/lanna_dict",
+    "https://culture.lpru.ac.th/WebCulture2553/CultureKnowledge/file/05-03.pdf"
+   ],
+   "confidence": "high",
+   "tai_tham": "ᩁᩮᩢᩣ",
+   "notes": "Lampang (eastern Lanna) speakers tend to say words shorter and more clipped than Chiang Mai speakers (LPRU)."
+  },
+  {
+   "local_th": "เปิ้น",
+   "roman": "poen",
+   "pronunciation": "pɤn [42 high-falling] ; IPA /pɤn˦˨/ (th.wiktionary via PyThaiNLP lanna_dict; Chiang Mai-based reference, local realisation may differ)",
+   "central_th": "เขา / ท่าน / ฉัน (สนิท)",
+   "en": "he/she (polite); also \"I\" among intimates",
+   "category": "pronoun",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": [
+    "https://huggingface.co/datasets/pythainlp/lanna_dict"
+   ],
+   "confidence": "high",
+   "tai_tham": "ᨻᩮᩥ᩠᩵ᨶ",
+   "notes": "Lampang (eastern Lanna) speakers tend to say words shorter and more clipped than Chiang Mai speakers (LPRU)."
+  },
+  {
+   "local_th": "ตั๋ว",
+   "roman": "tua",
+   "pronunciation": "tua [24 low-rising] ; IPA /tua˨˦/ (th.wiktionary via PyThaiNLP lanna_dict; Chiang Mai-based reference, local realisation may differ)",
+   "central_th": "ตัว, เธอ, คุณ",
+   "en": "you (familiar); body/self",
+   "category": "pronoun",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": [
+    "https://huggingface.co/datasets/pythainlp/lanna_dict"
+   ],
+   "confidence": "high",
+   "tai_tham": "ᨲ᩠ᩅᩫ",
+   "notes": "Lampang (eastern Lanna) speakers tend to say words shorter and more clipped than Chiang Mai speakers (LPRU)."
+  },
+  {
+   "local_th": "หื้อ",
+   "roman": "hue",
+   "pronunciation": "hɯːʔ [44ʔ high-level-glottal] ; IPA /hɯː˦˦ʔ/ (th.wiktionary via PyThaiNLP lanna_dict; Chiang Mai-based reference, local realisation may differ)",
+   "central_th": "ให้",
+   "en": "to give; to let",
+   "category": "verb",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": [
+    "https://huggingface.co/datasets/pythainlp/lanna_dict"
+   ],
+   "confidence": "high",
+   "tai_tham": "ᩉᩨ᩶",
+   "notes": "Lampang (eastern Lanna) speakers tend to say words shorter and more clipped than Chiang Mai speakers (LPRU)."
+  },
+  {
+   "local_th": "ฮู้",
+   "roman": "hu",
+   "pronunciation": "huː [45 high-rising] ; IPA /huː˦˥/ (th.wiktionary via PyThaiNLP lanna_dict; Chiang Mai-based reference, local realisation may differ)",
+   "central_th": "รู้",
+   "en": "to know",
+   "category": "verb",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": [
+    "https://huggingface.co/datasets/pythainlp/lanna_dict",
+    "https://culture.lpru.ac.th/WebCulture2553/CultureKnowledge/file/05-03.pdf"
+   ],
+   "confidence": "high",
+   "tai_tham": "ᩁᩪ᩶",
+   "notes": "Lampang (eastern Lanna) speakers tend to say words shorter and more clipped than Chiang Mai speakers (LPRU)."
+  },
+  {
+   "local_th": "ไค่",
+   "roman": "khai",
+   "pronunciation": "xaj [42 high-falling] ; IPA /xaj˦˨/ (th.wiktionary via PyThaiNLP lanna_dict; Chiang Mai-based reference, local realisation may differ)",
+   "central_th": "อยาก",
+   "en": "to want",
+   "category": "verb",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": [
+    "https://huggingface.co/datasets/pythainlp/lanna_dict"
+   ],
+   "confidence": "high",
+   "tai_tham": "ᨣᩕᩱ᩵",
+   "notes": "Lampang (eastern Lanna) speakers tend to say words shorter and more clipped than Chiang Mai speakers (LPRU)."
+  },
+  {
+   "local_th": "เยียะ",
+   "roman": "yia",
+   "pronunciation": "ɲiaʔ [45 high-rising] ; IPA /ɲiaʔ˦˥/ (th.wiktionary via PyThaiNLP lanna_dict; Chiang Mai-based reference, local realisation may differ)",
+   "central_th": "ทำ",
+   "en": "to do / make",
+   "category": "verb",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": [
+    "https://huggingface.co/datasets/pythainlp/lanna_dict"
+   ],
+   "confidence": "high",
+   "tai_tham": "ᨿᩮ᩠ᨿᩡ",
+   "notes": "Also written ยะ (LPRU example ยะอะหยั๋งกิ๋นกา). Lampang (eastern Lanna) speakers tend to say words shorter and more clipped than Chiang Mai speakers (LPRU)."
+  },
+  {
+   "local_th": "อะหยัง",
+   "roman": "a-yang",
+   "pronunciation": "ʔa [tone ?] . ɲaŋ [24 low-rising] ; IPA /ʔa.ɲaŋ˨˦/ (th.wiktionary via PyThaiNLP lanna_dict; Chiang Mai-based reference, local realisation may differ)",
+   "central_th": "อะไร",
+   "en": "what",
+   "category": "question word",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": [
+    "https://huggingface.co/datasets/pythainlp/lanna_dict",
+    "https://culture.lpru.ac.th/WebCulture2553/CultureKnowledge/file/05-03.pdf"
+   ],
+   "confidence": "high",
+   "tai_tham": "ᩉ᩠ᨿᩢᨦ",
+   "notes": "LPRU spells it อะหยั๋ง. Lampang (eastern Lanna) speakers tend to say words shorter and more clipped than Chiang Mai speakers (LPRU)."
+  },
+  {
+   "local_th": "จิ๊น",
+   "roman": "chin",
+   "pronunciation": "t͡ɕin [45 high-rising] ; IPA /t͡ɕin˦˥/ (th.wiktionary via PyThaiNLP lanna_dict; Chiang Mai-based reference, local realisation may differ)",
+   "central_th": "เนื้อสัตว์",
+   "en": "meat",
+   "category": "food",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": [
+    "https://huggingface.co/datasets/pythainlp/lanna_dict"
+   ],
+   "confidence": "high",
+   "tai_tham": "ᨩᩥ᩠᩶ᨶ",
+   "notes": "Lampang (eastern Lanna) speakers tend to say words shorter and more clipped than Chiang Mai speakers (LPRU)."
+  },
+  {
+   "local_th": "กาด",
+   "roman": "kat",
+   "pronunciation": "kaːt [21 low-falling] ; IPA /kaːt˨˩/ (th.wiktionary via PyThaiNLP lanna_dict; Chiang Mai-based reference, local realisation may differ)",
+   "central_th": "ตลาด",
+   "en": "market",
+   "category": "place",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": [
+    "https://huggingface.co/datasets/pythainlp/lanna_dict"
+   ],
+   "confidence": "high",
+   "tai_tham": "ᨠᩣ᩠ᨯ",
+   "notes": "Lampang (eastern Lanna) speakers tend to say words shorter and more clipped than Chiang Mai speakers (LPRU)."
+  },
+  {
+   "local_th": "แอ่ว",
+   "roman": "aeo",
+   "pronunciation": "ʔɛw [21 low-falling] ; IPA /ʔɛw˨˩/ (th.wiktionary via PyThaiNLP lanna_dict; Chiang Mai-based reference, local realisation may differ)",
+   "central_th": "เที่ยว, เยี่ยม",
+   "en": "to go out, visit, travel",
+   "category": "verb",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": [
+    "https://huggingface.co/datasets/pythainlp/lanna_dict"
+   ],
+   "confidence": "high",
+   "tai_tham": "ᩋᩯ᩠᩵ᩅ",
+   "notes": "Lampang (eastern Lanna) speakers tend to say words shorter and more clipped than Chiang Mai speakers (LPRU)."
+  },
+  {
+   "local_th": "ตาง",
+   "roman": "tang",
+   "pronunciation": "taːŋ [33 mid] ; IPA /taːŋ˧˧/ (th.wiktionary via PyThaiNLP lanna_dict; Chiang Mai-based reference, local realisation may differ)",
+   "central_th": "ทาง",
+   "en": "way, road",
+   "category": "place",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": [
+    "https://huggingface.co/datasets/pythainlp/lanna_dict",
+    "https://culture.lpru.ac.th/WebCulture2553/CultureKnowledge/file/05-03.pdf"
+   ],
+   "confidence": "high",
+   "tai_tham": "ᨴᩤ᩠ᨦ",
+   "notes": "Example of Northern ต for Central ท (LPRU). Lampang (eastern Lanna) speakers tend to say words shorter and more clipped than Chiang Mai speakers (LPRU)."
+  },
+  {
+   "local_th": "เฮือน",
+   "roman": "huean",
+   "pronunciation": "hɯan [33 mid] ; IPA /hɯan˧˧/ (th.wiktionary via PyThaiNLP lanna_dict; Chiang Mai-based reference, local realisation may differ)",
+   "central_th": "เรือน, บ้าน",
+   "en": "house",
+   "category": "housing",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": [
+    "https://huggingface.co/datasets/pythainlp/lanna_dict"
+   ],
+   "confidence": "high",
+   "tai_tham": "ᩁᩮᩬᩥᩁ",
+   "notes": "Lampang (eastern Lanna) speakers tend to say words shorter and more clipped than Chiang Mai speakers (LPRU)."
+  },
+  {
+   "local_th": "ข่วง",
+   "roman": "khuang",
+   "pronunciation": "",
+   "central_th": "ลาน",
+   "en": "open ground / courtyard (e.g. temple ground)",
+   "category": "place",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": [
+    "https://huggingface.co/datasets/pythainlp/lanna_dict"
+   ],
+   "confidence": "high",
+   "tai_tham": "ᨡ᩠ᩅ᩵ᨦ",
+   "notes": "Lampang (eastern Lanna) speakers tend to say words shorter and more clipped than Chiang Mai speakers (LPRU)."
+  },
+  {
+   "local_th": "ขัว",
+   "roman": "khua",
+   "pronunciation": "xua [24 low-rising] ; IPA /xua˨˦/ (th.wiktionary via PyThaiNLP lanna_dict; Chiang Mai-based reference, local realisation may differ)",
+   "central_th": "สะพาน",
+   "en": "bridge",
+   "category": "place",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": [
+    "https://huggingface.co/datasets/pythainlp/lanna_dict"
+   ],
+   "confidence": "high",
+   "tai_tham": "ᨡ᩠ᩅᩫ",
+   "notes": "Lampang (eastern Lanna) speakers tend to say words shorter and more clipped than Chiang Mai speakers (LPRU)."
+  },
+  {
+   "local_th": "ไฮ่",
+   "roman": "hai",
+   "pronunciation": "haj [42 high-falling] ; IPA /haj˦˨/ (th.wiktionary via PyThaiNLP lanna_dict; Chiang Mai-based reference, local realisation may differ)",
+   "central_th": "ไร่",
+   "en": "upland field",
+   "category": "farming",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": [
+    "https://huggingface.co/datasets/pythainlp/lanna_dict"
+   ],
+   "confidence": "high",
+   "tai_tham": "ᩁᩱ᩵",
+   "notes": "Lampang (eastern Lanna) speakers tend to say words shorter and more clipped than Chiang Mai speakers (LPRU)."
+  },
+  {
+   "local_th": "ดอย",
+   "roman": "doi",
+   "pronunciation": "dɔːj [33 mid] ; IPA /dɔːj˧˧/ (th.wiktionary via PyThaiNLP lanna_dict; Chiang Mai-based reference, local realisation may differ)",
+   "central_th": "ภูเขา",
+   "en": "mountain",
+   "category": "place",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": [
+    "https://huggingface.co/datasets/pythainlp/lanna_dict"
+   ],
+   "confidence": "high",
+   "tai_tham": "ᨯᩬ᩠ᨿ",
+   "notes": "Lampang (eastern Lanna) speakers tend to say words shorter and more clipped than Chiang Mai speakers (LPRU)."
+  },
+  {
+   "local_th": "จ๊าง",
+   "roman": "chang",
+   "pronunciation": "t͡ɕaːŋ [45 high-rising] ; IPA /t͡ɕaːŋ˦˥/ (th.wiktionary via PyThaiNLP lanna_dict; Chiang Mai-based reference, local realisation may differ)",
+   "central_th": "ช้าง",
+   "en": "elephant",
+   "category": "animal",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": [
+    "https://huggingface.co/datasets/pythainlp/lanna_dict",
+    "https://goal90antique.blogspot.com/2017/10/blog-post_30.html",
+    "https://culture.lpru.ac.th/WebCulture2553/CultureKnowledge/file/05-03.pdf"
+   ],
+   "confidence": "high",
+   "tai_tham": "ᨩ᩶ᩣ᩠ᨦ",
+   "notes": "Also written จ้าง (LPRU). Lampang (eastern Lanna) speakers tend to say words shorter and more clipped than Chiang Mai speakers (LPRU)."
+  },
+  {
+   "local_th": "ฮ้อน",
+   "roman": "hon",
+   "pronunciation": "hɔːn [45 high-rising] ; IPA /hɔːn˦˥/ (th.wiktionary via PyThaiNLP lanna_dict; Chiang Mai-based reference, local realisation may differ)",
+   "central_th": "ร้อน",
+   "en": "hot (weather)",
+   "category": "weather",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": [
+    "https://huggingface.co/datasets/pythainlp/lanna_dict"
+   ],
+   "confidence": "high",
+   "tai_tham": "ᩁᩬ᩶ᩁ",
+   "notes": "Lampang (eastern Lanna) speakers tend to say words shorter and more clipped than Chiang Mai speakers (LPRU)."
+  },
+  {
+   "local_th": "หน้อย",
+   "roman": "noi",
+   "pronunciation": "nɔːjʔ [44ʔ high-level-glottal] ; IPA /nɔːj˦˦ʔ/ (th.wiktionary via PyThaiNLP lanna_dict; Chiang Mai-based reference, local realisation may differ)",
+   "central_th": "น้อย, นิดหน่อย",
+   "en": "a little, small",
+   "category": "quantity",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": [
+    "https://huggingface.co/datasets/pythainlp/lanna_dict"
+   ],
+   "confidence": "high",
+   "tai_tham": "ᩉ᩠ᨶᩬ᩠᩶ᨿ",
+   "notes": "Lampang (eastern Lanna) speakers tend to say words shorter and more clipped than Chiang Mai speakers (LPRU)."
+  },
+  {
+   "local_th": "หลวง",
+   "roman": "luang",
+   "pronunciation": "",
+   "central_th": "ใหญ่",
+   "en": "big, great, royal",
+   "category": "adjective",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": [
+    "https://huggingface.co/datasets/pythainlp/lanna_dict"
+   ],
+   "confidence": "high",
+   "tai_tham": "ᩉᩖ᩠ᩅᨦ",
+   "notes": "Lampang (eastern Lanna) speakers tend to say words shorter and more clipped than Chiang Mai speakers (LPRU)."
+  },
+  {
+   "local_th": "นัก",
+   "roman": "nak",
+   "pronunciation": "nak [45 high-rising] ; IPA /nak˦˥/ (th.wiktionary via PyThaiNLP lanna_dict; Chiang Mai-based reference, local realisation may differ)",
+   "central_th": "มาก",
+   "en": "very, a lot",
+   "category": "intensifier",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": [
+    "https://huggingface.co/datasets/pythainlp/lanna_dict"
+   ],
+   "confidence": "high",
+   "tai_tham": "ᨶᩢ᩠ᨠ",
+   "notes": "Lampang (eastern Lanna) speakers tend to say words shorter and more clipped than Chiang Mai speakers (LPRU)."
+  },
+  {
+   "local_th": "แหม",
+   "roman": "hae",
+   "pronunciation": "hɛm [24 low-rising] ; IPA /hɛm˨˦/ (th.wiktionary via PyThaiNLP lanna_dict; Chiang Mai-based reference, local realisation may differ)",
+   "central_th": "อีก",
+   "en": "again, more",
+   "category": "adverb",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": [
+    "https://huggingface.co/datasets/pythainlp/lanna_dict"
+   ],
+   "confidence": "high",
+   "tai_tham": "ᩉᩯ᩠ᨾ",
+   "notes": "Lampang (eastern Lanna) speakers tend to say words shorter and more clipped than Chiang Mai speakers (LPRU)."
+  },
+  {
+   "local_th": "หัน",
+   "roman": "han",
+   "pronunciation": "han [24 low-rising] ; IPA /han˨˦/ (th.wiktionary via PyThaiNLP lanna_dict; Chiang Mai-based reference, local realisation may differ)",
+   "central_th": "เห็น",
+   "en": "to see",
+   "category": "verb",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": [
+    "https://huggingface.co/datasets/pythainlp/lanna_dict"
+   ],
+   "confidence": "high",
+   "tai_tham": "ᩉᩢ᩠ᨶ",
+   "notes": "Lampang (eastern Lanna) speakers tend to say words shorter and more clipped than Chiang Mai speakers (LPRU)."
+  },
+  {
+   "local_th": "ฮัก",
+   "roman": "hak",
+   "pronunciation": "hak [45 high-rising] ; IPA /hak˦˥/ (th.wiktionary via PyThaiNLP lanna_dict; Chiang Mai-based reference, local realisation may differ)",
+   "central_th": "รัก",
+   "en": "to love",
+   "category": "verb",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": [
+    "https://huggingface.co/datasets/pythainlp/lanna_dict"
+   ],
+   "confidence": "high",
+   "tai_tham": "ᩁᩢ᩠ᨠ",
+   "notes": "Lampang (eastern Lanna) speakers tend to say words shorter and more clipped than Chiang Mai speakers (LPRU)."
+  },
+  {
+   "local_th": "สล่า",
+   "roman": "sala",
+   "pronunciation": "sa [tone ?] . laː [21 low-falling] ; IPA /sa.laː˨˩/ (th.wiktionary via PyThaiNLP lanna_dict; Chiang Mai-based reference, local realisation may differ)",
+   "central_th": "ช่าง",
+   "en": "craftsman, master builder",
+   "category": "work/crafts",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": [
+    "https://huggingface.co/datasets/pythainlp/lanna_dict"
+   ],
+   "confidence": "high",
+   "tai_tham": "ᩈᩖ᩻᩵ᩣ",
+   "notes": "Lampang (eastern Lanna) speakers tend to say words shorter and more clipped than Chiang Mai speakers (LPRU)."
+  },
+  {
+   "local_th": "ตุง",
+   "roman": "tung",
+   "pronunciation": "tuŋ [33 mid] ; IPA /tuŋ˧˧/ (th.wiktionary via PyThaiNLP lanna_dict; Chiang Mai-based reference, local realisation may differ)",
+   "central_th": "ธง (ตุงล้านนา)",
+   "en": "Lanna ritual banner/flag",
+   "category": "ritual",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": [
+    "https://huggingface.co/datasets/pythainlp/lanna_dict"
+   ],
+   "confidence": "high",
+   "tai_tham": "ᨴᩩᨦ",
+   "notes": "Lampang (eastern Lanna) speakers tend to say words shorter and more clipped than Chiang Mai speakers (LPRU)."
+  },
+  {
+   "local_th": "ขึด",
+   "roman": "khuet",
+   "pronunciation": "",
+   "central_th": "อัปมงคล, เสนียด",
+   "en": "taboo / inauspicious act that brings misfortune",
+   "category": "belief",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": [
+    "https://huggingface.co/datasets/pythainlp/lanna_dict",
+    "https://ethnicity.sac.or.th/database-ethnic/181"
+   ],
+   "confidence": "high",
+   "tai_tham": "ᨡᩧ᩠ᨯ",
+   "notes": "Lampang (eastern Lanna) speakers tend to say words shorter and more clipped than Chiang Mai speakers (LPRU)."
+  },
+  {
+   "local_th": "งาย",
+   "roman": "ngai",
+   "pronunciation": "ŋaːj [33 mid] ; IPA /ŋaːj˧˧/ (th.wiktionary via PyThaiNLP lanna_dict; Chiang Mai-based reference, local realisation may differ)",
+   "central_th": "เวลาเช้า",
+   "en": "morning (meal time)",
+   "category": "time",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": [
+    "https://huggingface.co/datasets/pythainlp/lanna_dict"
+   ],
+   "confidence": "high",
+   "tai_tham": "ᨦᩣ᩠ᨿ",
+   "notes": "Lampang (eastern Lanna) speakers tend to say words shorter and more clipped than Chiang Mai speakers (LPRU)."
+  },
+  {
+   "local_th": "มดส้ม",
+   "roman": "mot som",
+   "pronunciation": "mot [45 high-rising] . somʔ [44ʔ high-level-glottal] ; IPA /mot˦˥.som˦˦ʔ/ (th.wiktionary via PyThaiNLP lanna_dict; Chiang Mai-based reference, local realisation may differ)",
+   "central_th": "มดแดง",
+   "en": "red weaver ant (eggs are eaten)",
+   "category": "food",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": [
+    "https://huggingface.co/datasets/pythainlp/lanna_dict"
+   ],
+   "confidence": "high",
+   "tai_tham": "ᨾᩫ᩠ᨯᩈᩫ᩠᩶ᨾ",
+   "notes": "Lampang (eastern Lanna) speakers tend to say words shorter and more clipped than Chiang Mai speakers (LPRU)."
+  },
+  {
+   "local_th": "ซอ",
+   "roman": "so",
+   "pronunciation": "sɔː [33 mid] ; IPA /sɔː˧˧/ (th.wiktionary via PyThaiNLP lanna_dict; Chiang Mai-based reference, local realisation may differ)",
+   "central_th": "ขับร้องทำนองล้านนา",
+   "en": "Lanna sung repartee / folk singing",
+   "category": "music",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": [
+    "https://huggingface.co/datasets/pythainlp/lanna_dict"
+   ],
+   "confidence": "high",
+   "tai_tham": "ᨩᩬᩴ",
+   "notes": "Lampang (eastern Lanna) speakers tend to say words shorter and more clipped than Chiang Mai speakers (LPRU)."
+  },
+  {
+   "local_th": "ฟ้อน",
+   "roman": "fon",
+   "pronunciation": "fɔːn [45 high-rising] ; IPA /fɔːn˦˥/ (th.wiktionary via PyThaiNLP lanna_dict; Chiang Mai-based reference, local realisation may differ)",
+   "central_th": "รำ",
+   "en": "to dance (Lanna dance)",
+   "category": "arts",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": [
+    "https://huggingface.co/datasets/pythainlp/lanna_dict"
+   ],
+   "confidence": "high",
+   "tai_tham": "ᨼᩬ᩶ᩁ",
+   "notes": "Lampang (eastern Lanna) speakers tend to say words shorter and more clipped than Chiang Mai speakers (LPRU)."
+  },
+  {
+   "local_th": "ยี่เป็ง",
+   "roman": "yi peng",
+   "pronunciation": "ɲiː [42 high-falling] . peŋ [33 mid] ; IPA /ɲiː˦˨.peŋ˧˧/ (th.wiktionary via PyThaiNLP lanna_dict; Chiang Mai-based reference, local realisation may differ)",
+   "central_th": "วันเพ็ญเดือนยี่ (ลอยกระทง)",
+   "en": "full moon of the 2nd Northern month (Loi Krathong season)",
+   "category": "festival",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": [
+    "https://huggingface.co/datasets/pythainlp/lanna_dict"
+   ],
+   "confidence": "high",
+   "tai_tham": "ᨿᩦ᩵ᨻᩮ᩠ᨦ",
+   "notes": "Lampang (eastern Lanna) speakers tend to say words shorter and more clipped than Chiang Mai speakers (LPRU)."
+  },
+  {
+   "local_th": "ปี๋",
+   "roman": "pi",
+   "pronunciation": "piː [24 low-rising] ; IPA /piː˨˦/ (th.wiktionary via PyThaiNLP lanna_dict; Chiang Mai-based reference, local realisation may differ)",
+   "central_th": "ปี",
+   "en": "year",
+   "category": "time",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": [
+    "https://huggingface.co/datasets/pythainlp/lanna_dict"
+   ],
+   "confidence": "high",
+   "tai_tham": "ᨸᩦ",
+   "notes": "Lampang (eastern Lanna) speakers tend to say words shorter and more clipped than Chiang Mai speakers (LPRU)."
+  },
+  {
+   "local_th": "ซ้า",
+   "roman": "sa",
+   "pronunciation": "saː [45 high-rising] ; IPA /saː˦˥/ (th.wiktionary via PyThaiNLP lanna_dict; Chiang Mai-based reference, local realisation may differ)",
+   "central_th": "ตะกร้า",
+   "en": "basket",
+   "category": "household",
+   "example_sentence_local": "",
+   "example_sentence_en": "",
+   "source": [
+    "https://huggingface.co/datasets/pythainlp/lanna_dict",
+    "https://ethnicity.sac.or.th/database-ethnic/181"
+   ],
+   "confidence": "high",
+   "tai_tham": "ᨩ᩶ᩣ",
+   "notes": "Lampang (eastern Lanna) speakers tend to say words shorter and more clipped than Chiang Mai speakers (LPRU)."
+  }
+ ],
+ "phrases": [
+  {
+   "local_th": "กิ๋นข้าวแล้วกา",
+   "roman": "kin khao laeo ka",
+   "central_th": "กินข้าวแล้วหรือยัง",
+   "en": "Have you eaten yet?",
+   "situation": "Standard greeting",
+   "confidence": "high",
+   "source": "https://culture.lpru.ac.th/WebCulture2553/CultureKnowledge/file/05-03.pdf"
+  },
+  {
+   "local_th": "ไปตังใดมา",
+   "roman": "pai tang dai ma",
+   "central_th": "ไปไหนมา",
+   "en": "Where have you been?",
+   "situation": "Greeting a neighbour",
+   "confidence": "high",
+   "source": "https://culture.lpru.ac.th/WebCulture2553/CultureKnowledge/file/05-03.pdf"
+  },
+  {
+   "local_th": "บ่ะฮู่",
+   "roman": "ba hu",
+   "central_th": "ไม่รู้",
+   "en": "Don't know",
+   "situation": "Lampang short form",
+   "confidence": "high",
+   "source": "https://culture.lpru.ac.th/WebCulture2553/CultureKnowledge/file/05-03.pdf"
+  },
+  {
+   "local_th": "กิ๋นน่ำก่อ",
+   "roman": "kin nam ko",
+   "central_th": "ดื่มน้ำไหม",
+   "en": "Would you like some water?",
+   "situation": "Offering water to a guest",
+   "confidence": "medium",
+   "source": [
+    "https://culture.lpru.ac.th/WebCulture2553/CultureKnowledge/file/05-03.pdf",
+    "https://huggingface.co/datasets/pythainlp/lanna_dict"
+   ],
+   "note": "Composed: กิ๋นน่ำ (LPRU) + ก่อ question particle (th.wiktionary)."
+  },
+  {
+   "local_th": "สามร่อยก่อ",
+   "roman": "sam roi ko",
+   "central_th": "สามร้อยใช่ไหม",
+   "en": "Three hundred (baht)?",
+   "situation": "Checking a price at the market",
+   "confidence": "medium",
+   "source": [
+    "https://culture.lpru.ac.th/WebCulture2553/CultureKnowledge/file/05-03.pdf",
+    "https://huggingface.co/datasets/pythainlp/lanna_dict"
+   ],
+   "note": "Composed."
+  },
+  {
+   "local_th": "แปงนัก",
+   "roman": "paeng nak",
+   "central_th": "แพงมาก",
+   "en": "Too expensive!",
+   "situation": "Friendly haggling",
+   "confidence": "medium",
+   "source": [
+    "https://culture.lpru.ac.th/WebCulture2553/CultureKnowledge/file/05-03.pdf",
+    "https://huggingface.co/datasets/pythainlp/lanna_dict"
+   ],
+   "note": "Composed from sourced words."
+  },
+  {
+   "local_th": "ลำแต๊",
+   "roman": "lam tae",
+   "central_th": "อร่อยจริงๆ",
+   "en": "Really delicious",
+   "situation": "Praising ho nueng or khao soi",
+   "confidence": "medium",
+   "source": "https://huggingface.co/datasets/pythainlp/lanna_dict",
+   "note": "Composed."
+  },
+  {
+   "local_th": "ขึ้นรถม้าไปแอ่ว",
+   "roman": "khuen rot ma pai aeo",
+   "central_th": "นั่งรถม้าไปเที่ยว",
+   "en": "Take a horse-carriage ride",
+   "situation": "Tourist chat in Lampang town",
+   "confidence": "medium",
+   "source": [
+    "https://en.wikipedia.org/wiki/Lampang",
+    "https://huggingface.co/datasets/pythainlp/lanna_dict"
+   ],
+   "note": "Composed."
+  }
+ ],
+ "proverbs_sayings": [
+  {
+   "local_th": "ค่าวช้างขึด",
+   "roman": "khao chang khuet",
+   "meaning_th": "ค่าวของพระยาพรหมโวหาร (กวีชาวลำปาง พ.ศ. 2345-2430)",
+   "meaning_en": "A khao verse work by Phraya Phrommawohan (Lampang, 1802-1887), \"rattana kawi\" of Lanna. The title plays on khuet (taboo). Content not extracted.",
+   "source": [
+    "https://lampangculture.com/a2-view.php?id=4"
+   ]
+  },
+  {
+   "local_th": "ค่าวรำนางจม",
+   "roman": "khao ram nang chom",
+   "meaning_th": "ค่าวของพระยาพรหมโวหาร",
+   "meaning_en": "Another famous khao by Phraya Phrommawohan; a monument to him stands at Khuean Yang, Sop Tui, and he is honoured each April.",
+   "source": [
+    "https://lampangculture.com/a2-view.php?id=4"
+   ]
+  },
+  {
+   "local_th": "เพลงสิกจุงจา",
+   "roman": "phleng sik chung cha",
+   "meaning_th": "เพลงร้องเล่นของเด็กขณะเล่นชิงช้า เนื้อหาเกี่ยวกับชีวิตประจำวัน ทำอาหาร ไปวัด ความซนของเด็ก",
+   "meaning_en": "Children's swing song (90+ years old) about daily life: cooking, going to the temple, children's mischief. Its last known singer was Grandma Khamyuang Yamnuan of Lampang Luang.",
+   "source": [
+    "https://lampangculture.com/a2-view.php?id=2"
+   ]
+  },
+  {
+   "local_th": "เพลงร่ำเปิงลำปาง",
+   "roman": "phleng ram poeng lampang",
+   "meaning_th": "เพลงที่ อ.ศักดิ์ (สักเสริญ) รัตนชัย ปราชญ์ชาวลำปางแต่ง",
+   "meaning_en": "Song by Lampang scholar Sak (Saksoen) Rattanachai, whose title evokes longing for and praise of Lampang. Lyrics not retrieved.",
+   "source": [
+    "https://lampangculture.com/a2-view-all.php"
+   ]
+  },
+  {
+   "local_th": "มัจฉาพญาปลาช่อน (ธรรมเทศนาขอฝน)",
+   "roman": "matcha phaya pla chon",
+   "meaning_th": "ธรรมเทศนาเมืองเหนือเรื่องพระโพธิสัตว์เสวยชาติเป็นพญาปลาช่อน อธิษฐานขอฝน ใช้ฟังในพิธีขอฝน",
+   "meaning_en": "Northern sermon about the Bodhisatta as King Snakehead Fish, who prayed for rain. It is recited at rain-calling rites in Ban Pa Hew, Mueang Pan.",
+   "source": [
+    "https://lampangculture.com/a4-view.php?id=7"
+   ]
+  }
+ ],
+ "ethnic_communities": [
+  {
+   "group": "Tai Yuan / Khon Mueang",
+   "self_designation": "คนเมือง",
+   "where": "Throughout",
+   "language": "Kham Mueang (eastern)",
+   "notes_en": "Majority.",
+   "source": [
+    "https://lampangculture.com/a7-view.php?id=1"
+   ]
+  },
+  {
+   "group": "Tai Lue / Yong",
+   "self_designation": "ไทลื้อ / ยอง",
+   "where": "ต.กล้วยแพะ อ.เมืองลำปาง (Yong/Lue from Mueang Yong per SAC and LPRU)",
+   "language": "Tai Lue (Yong-like), Kham Mueang, Central Thai",
+   "notes_en": "LPRU documents Lue pronouns, kinship terms and classifiers. SAC lists a Yong settlement at Mueang Lampang.",
+   "source": [
+    "https://culture.lpru.ac.th/WebCulture2553/CultureKnowledge/file/05-01.pdf",
+    "https://ethnicity.sac.or.th/database-ethnic/181",
+    "https://lampangculture.com/a7-view-all.php"
+   ]
+  },
+  {
+   "group": "Burmese-heritage community",
+   "self_designation": "(not stated in source)",
+   "where": "Tha Ma O (ท่ามะโอ), Mueang Lampang (as rendered by source summary)",
+   "language": "Thai / Kham Mueang; Burmese heritage",
+   "notes_en": "lampangculture presents hang le curry as a dish of this community. Connected to the teak-era Burmese and Shan presence and temple building. The place-name rendering needs confirmation.",
+   "source": [
+    "https://lampangculture.com/a13-view.php?id=5",
+    "https://en.wikipedia.org/wiki/Lampang"
+   ]
+  },
+  {
+   "group": "Chinese (Guangdong) ceramic families",
+   "self_designation": "(Thai-Chinese)",
+   "where": "Mueang Lampang; kaolin at บ้านปางค่า อ.แจ้ห่ม",
+   "language": "Thai; heritage Chinese",
+   "notes_en": "Founders included ซิมหยู แซ่ฉิน (อาปาอี้) and ซิวคิม แซ่กว๊อก from the Guangdong area. The first factory opened in 1957, and 18 factories had formed an association by 1973.",
+   "source": [
+    "https://www.khaosod.co.th/technologychaoban/techno-news/article_22984",
+    "https://www.sarakadeelite.com/brand-story/lampang-rooster-bowl/"
+   ]
+  },
+  {
+   "group": "Iu Mien",
+   "self_designation": "Iu Mien (อิวเมี่ยน); exonym เย้า",
+   "where": "Lampang (districts not given in fetched list)",
+   "language": "Iu Mien",
+   "notes_en": "Use อิวเมี่ยน, the name lampangculture itself uses.",
+   "source": [
+    "https://lampangculture.com/a7-view-all.php"
+   ]
+  },
+  {
+   "group": "Hmong",
+   "self_designation": "Hmong (ม้ง); avoid the old exonym แม้ว, which is considered derogatory",
+   "where": "Lampang (districts not given)",
+   "language": "Hmong",
+   "notes_en": "",
+   "source": [
+    "https://lampangculture.com/a7-view-all.php"
+   ]
+  },
+  {
+   "group": "Akha",
+   "self_designation": "Akha (อาข่า); avoid the exonym อีก้อ, which is considered derogatory",
+   "where": "Lampang (districts not given)",
+   "language": "Akha",
+   "notes_en": "",
+   "source": [
+    "https://lampangculture.com/a7-view-all.php"
+   ]
+  },
+  {
+   "group": "Lisu",
+   "self_designation": "Lisu (ลีซู)",
+   "where": "Lampang (districts not given)",
+   "language": "Lisu",
+   "notes_en": "",
+   "source": [
+    "https://lampangculture.com/a7-view-all.php"
+   ]
+  },
+  {
+   "group": "Lahu",
+   "self_designation": "Lahu (ลาหู่); lampangculture uses the Thai exonym มูเซอ",
+   "where": "Lampang (districts not given)",
+   "language": "Lahu",
+   "notes_en": "Prefer ลาหู่.",
+   "source": [
+    "https://lampangculture.com/a7-view-all.php"
+   ]
+  },
+  {
+   "group": "Karen",
+   "self_designation": "Pgaz K'nyau / Kanyaw (ปกาเกอะญอ) for S'gaw Karen; กะเหรี่ยง is the Thai exonym",
+   "where": "Lampang (districts not given)",
+   "language": "Karen",
+   "notes_en": "Which Karen subgroup lives in Lampang was not verified.",
+   "source": [
+    "https://lampangculture.com/a7-view-all.php"
+   ]
+  },
+  {
+   "group": "Lawa / Lua",
+   "self_designation": "ลัวะ (self-names vary)",
+   "where": "Lampang (districts not given)",
+   "language": "Lawa",
+   "notes_en": "",
+   "source": [
+    "https://lampangculture.com/a7-view-all.php"
+   ]
+  },
+  {
+   "group": "Khmu",
+   "self_designation": "Khmu (ขมุ)",
+   "where": "Lampang (districts not given)",
+   "language": "Khmu",
+   "notes_en": "",
+   "source": [
+    "https://lampangculture.com/a7-view-all.php"
+   ]
+  }
+ ],
+ "beliefs_rituals": [
+  {
+   "name_th": "หอผีเมืองลำปาง (เจ้าพ่อหลักเมือง เจ้าพ่อหมอกมุงเมือง เจ้าพ่อกว้าน เจ้าราชวงศ์)",
+   "name_en": "Lampang's city guardian-spirit shrines",
+   "description_th": "ผีระดับเมืองได้แก่ เจ้าพ่อหลักเมือง (หน้าศาลากลางเก่า ถ.ไปรษณีย์) เจ้าพ่อหมอกมุงเมือง (หลังหออะม็อก ถ.ศรีเกิด) เจ้าพ่อกว้าน (โรงเรียนบุญวาทย์ฯ/ตลาดออมสิน) เจ้าราชวงศ์ (ตลาดราชวงศ์ ถ.บุญวาทย์) นอกจากนี้มีผีธรรมชาติ ผีขุนน้ำ ผีฝาย ผีเหมือง ผีทุ่งนา",
+   "description_en": "The city-level guardian spirits have shrines at these places: the City Pillar shrine (in front of the old provincial hall, Praisani Rd); Chao Pho Mok Mung Mueang (behind the Ho Amok bastion, Si Koet Rd); Chao Pho Kwan (Boonyawat school / Omsin market); and Chao Ratchawong (Ratchawong market, Boonyawat Rd). Nature spirits of headwaters, weirs, channels and fields are honoured too.",
+   "when": "City Pillar rite each May, followed by a spirit dance the next day; Mok Mung Mueang Feb-Mar; Chao Pho Kang on the 6th waning day of Northern month 9",
+   "where": "Mueang Lampang",
+   "visitor_guidance_en": "Watch spirit dances from the side, and do not photograph mediums up close without asking. At one shrine, offerings must be all white.",
+   "source": [
+    "https://knowledgeportal.okmd.or.th/kmap/65fff112d420b"
+   ],
+   "confidence": "high"
+  },
+  {
+   "name_th": "ข้อห้ามศาลเจ้าพ่อก้าง",
+   "name_en": "Forest taboo of the Chao Pho Kang shrine",
+   "description_th": "ห้ามตัดไม้ทำลายป่า เปลี่ยนทางลำห้วย หรือแสวงหาผลประโยชน์นอกจารีต มิฉะนั้นจะเกิดความวิบัติ",
+   "description_en": "It is forbidden to cut the forest, divert the stream or exploit the place against custom, or disaster and suffering will follow. This is an example of spirit belief working as environmental protection.",
+   "when": "Always",
+   "where": "Chao Pho Kang shrine (Lampang)",
+   "visitor_guidance_en": "Do not pick plants or leave rubbish near the shrine.",
+   "source": [
+    "https://knowledgeportal.okmd.or.th/kmap/65fff112d420b"
+   ],
+   "confidence": "medium"
+  },
+  {
+   "name_th": "เจ้าพ่อประตูผา (พญามือเหล็ก)",
+   "name_en": "Chao Pho Pratu Pha, the Iron-Handed Lord",
+   "description_th": "ตามตำนาน หนานข้อมือเหล็ก ทหารเอกของท้าวลิ้นก่าน (ราว พ.ศ. 2251-2275) สู้กับทัพพม่าที่ดอยประตูผาจนสิ้นใจยืนพิงผา ใช้แขนเป็นโล่ ชาวลำปางยกย่องเป็นวีรบุรุษและผีอารักษ์ มีพิธีบวงสรวงและฟ้อนผีมดผีเม็งทุกปีช่วงเมษายน",
+   "description_en": "In the legend, Nan Kho Mue Lek, a champion of Thao Lin Kan (c. 1708-1732), fought the Burmese at Doi Pratu Pha using his arms as shields and died standing against the cliff. He is revered as a hero and guardian spirit, with an annual April ceremony featuring phi mot / phi meng spirit dances. Research lists his roles as local history, a sacred focus, identity, social cohesion and a symbol of courage.",
+   "when": "April (e.g. 22 Apr 2023, per EGAT); ดำหัว rite also reported",
+   "where": "Doi Pratu Pha, on the Mueang Lampang-Ngao boundary; EGAT describes a ceremony at ต.บ้านดง อ.แม่เมาะ",
+   "visitor_guidance_en": "Travellers traditionally pay respects when passing. Stop at the shrine, wai, and do not joke about the spirit.",
+   "source": [
+    "https://www.gotolampang.com/%E0%B8%95%E0%B8%B3%E0%B8%99%E0%B8%B2%E0%B8%99-%E0%B8%A8%E0%B8%B2%E0%B8%A5%E0%B9%80%E0%B8%88%E0%B9%89%E0%B8%B2%E0%B8%9E%E0%B9%88%E0%B8%AD%E0%B8%9B%E0%B8%A3%E0%B8%B0%E0%B8%95%E0%B8%B9%E0%B8%9C%E0%B8%B2/",
+    "https://mpp.egat.co.th/hellomaemoh/index.php?option=com_content&view=article&id=981:2023-06-12-08-50-55&catid=43&Itemid=245",
+    "https://he02.tci-thaijo.org/index.php/Veridian-E-Journal/article/view/152928"
+   ],
+   "confidence": "medium"
+  },
+  {
+   "name_th": "ผีมด ผีเม็ง และการฟ้อนผี",
+   "name_en": "Phi mot / phi meng ancestral spirit dances",
+   "description_th": "ผีปู่ย่าคุ้มครองครอบครัว สายผีมดเข้าทรงร่างทรง สายผีเม็งเป็นผีเจ้านายต้องมีพิธีผ้าแดง จัดในผามที่ประดับผ้า มีดนตรีปี่พาทย์ ร่างทรงฟ้อนตามลักษณะผีแต่ละตน ผู้คนจากลำปาง ลำพูน เชียงใหม่ พะเยา แพร่ เชียงราย มาร่วม",
+   "description_en": "Ancestral spirits protect the family. Phi mot spirits possess mediums; phi meng are \"noble\" spirits that need a red-cloth rite. Ceremonies take place in a decorated pavilion (pham) with music, and each medium dances in the character of their spirit. People come from Lampang, Lamphun, Chiang Mai, Phayao, Phrae and Chiang Rai.",
+   "when": "Mostly the dry season/April",
+   "where": "Family and community pavilions",
+   "visitor_guidance_en": "Only attend if invited. Sit low and do not step over offerings. Mediums may offer drinks or blessings, and it is polite to accept a small amount.",
+   "source": [
+    "https://mpp.egat.co.th/hellomaemoh/index.php?option=com_content&view=article&id=981:2023-06-12-08-50-55&catid=43&Itemid=245"
+   ],
+   "confidence": "medium"
+  },
+  {
+   "name_th": "ผีโขนบ้านศรีหลวง แจ้ซ้อน",
+   "name_en": "Phi Khon of Ban Si Luang, Chae Son",
+   "description_th": "ประเพณีแต่งกายเป็นผี (ใช้ผ้าเก่า/จีวรเก่าที่ขอจากพระ) ในงาน 8 เป็ง/วิสาขบูชา มีมากว่า 70 ปี เชื่อว่าเป็นสะพานบุญให้ผู้ล่วงลับมาทำบุญ และผู้เล่นจะมีรูปงามในชาติหน้า ต้องเก็บเป็นความลับ ห้ามแพร่งพราย และทำลายชุดหลังจบพิธี",
+   "description_en": "A 70-plus-year custom of dressing as ghosts in old cloth or monks' robes during the 8 Peng / Visakha fair. It is believed to be a merit bridge for the dead and to bring the performer good looks in the next life. Identities are kept secret and costumes are destroyed afterwards.",
+   "when": "Visakha Bucha (≈May)",
+   "where": "บ้านศรีหลวง ต.แจ้ซ้อน อ.เมืองปาน",
+   "visitor_guidance_en": "Do not try to unmask or identify performers, and ask before photographing.",
+   "source": [
+    "https://lampangculture.com/a4-view.php?id=2"
+   ],
+   "confidence": "high"
+  },
+  {
+   "name_th": "ประเพณีแก้มื้อนา",
+   "name_en": "Kae Mue Na merit cycle (Lampang Luang)",
+   "description_th": "ทำบุญทุกวันพระตลอดพรรษา 12 ครั้ง แต่ละครั้งมีเจ้ามื้อเป็นเจ้าภาพ วันดาเตรียมของ เช้าตักบาตรด้วยข้าวเปลือกข้าวสารและห่อนึ่งหลวง 2 ห่อ อุทิศให้บรรพบุรุษ ผีเจ้านา และญาติผู้ล่วงลับ",
+   "description_en": "Merit-making on every holy day of Lent, 12 times in all, each hosted by a sponsor (chao mue). On the preparation day (wan da) people prepare food. In the morning they give alms of paddy and rice plus two big ho nueng parcels, then share a meal, ask the elders for blessings, and in the evening hear a sermon. The merit goes to ancestors, the field spirits and dead relatives.",
+   "when": "July-September (Buddhist Lent)",
+   "where": "วัดพระธาตุลำปางหลวง อ.เกาะคา",
+   "visitor_guidance_en": "Visitors can make merit too. Bring food for alms only if hosts invite you.",
+   "source": [
+    "https://lampangculture.com/a4-view.php?id=4",
+    "https://lampangculture.com/a13-view.php?id=1"
+   ],
+   "confidence": "high"
+  },
+  {
+   "name_th": "พิธีขอฝน-ฟังธรรมพญาปลาช่อน",
+   "name_en": "Rain-calling rite with the King Snakehead sermon",
+   "description_th": "จัดเฉพาะปีที่ฝนแล้ง ขบวนแห่ฆ้องกลอง อัญเชิญพระพุทธรูป พ่อหนานทำพิธีขึ้นขันท้าวทั้งสี่ พิธีสงฆ์ ฟังธรรมมัจฉาพญาปลาช่อน สรงน้ำพระพุทธรูปปางประทานพรขอฝน",
+   "description_en": "Held only in drought years. A gong-and-drum procession brings out a Buddha image; the officiant (pho nan) makes offerings to the Four Guardian Kings; monks chant the King Snakehead Fish sermon; and the Buddha image is bathed to ask for rain.",
+   "when": "August, drought years only",
+   "where": "บ้านป่าเหว อ.เมืองปาน",
+   "visitor_guidance_en": "Join respectfully and dress modestly.",
+   "source": [
+    "https://lampangculture.com/a4-view.php?id=7"
+   ],
+   "confidence": "high"
+  },
+  {
+   "name_th": "วัดพระธาตุลำปางหลวง: ภาพพระธาตุกลับหัว ข้อห้ามสตรี (พระธาตุประจำปีเกิดปีฉลู)",
+   "name_en": "Wat Phra That Lampang Luang: inverted image, restriction for women (Ox-year birth stupa)",
+   "description_th": "ในหอพระพุทธบาทมีภาพพระธาตุกลับหัวแบบกล้องรูเข็ม ห้ามสตรีเข้าบางพื้นที่ตามความเชื่อล้านนา มีรอยกระสุนจากเหตุการณ์ พ.ศ. 2275 วิหารพระพุทธถือเป็นวิหารเก่าแก่ที่สุดของล้านนา",
+   "description_en": "Inside the Buddha Footprint hall a pinhole effect projects an upside-down image of the stupa. Women may not enter this area, in line with Lanna belief. Bullet marks from the 1732 fight against the Burmese remain, and the Phra Phut viharn is described as the oldest surviving viharn in Lanna. The pairing with the Ox birth year is common Lanna knowledge but was not in the fetched sources.",
+   "when": "Year-round",
+   "where": "อ.เกาะคา",
+   "visitor_guidance_en": "Women should respect the signs at the Phra Phutthabat hall. Wear modest dress, and take off shoes inside viharns.",
+   "source": [
+    "https://en.wikipedia.org/wiki/Wat_Phra_That_Lampang_Luang",
+    "https://lampangculture.com/a8-view.php?id=1"
+   ],
+   "confidence": "medium"
+  }
+ ],
+ "way_of_life": [
+  {
+   "topic": "crafts",
+   "description_th": "งานช่างดั้งเดิม: สล่าตีดาบ ทำฝัก-ด้ามดาบ ช่างทำเกวียน สานกุบ (หมวก) สานกล่องข้าว (บ้านป่าจ้ำ บ้านไผ่) จักสานใบตาล ถักปอบหวาย",
+   "description_en": "Traditional crafts: sword-smithing and sheath/handle making, cart-building, woven hats (kup), sticky-rice boxes (Ban Pa Cham, Ban Phai), palm-leaf and rattan work.",
+   "source": [
+    "https://lampangculture.com/a1-view-all.php"
+   ]
+  },
+  {
+   "topic": "ceramics",
+   "description_th": "ดินขาวคุณภาพที่แจ้ห่ม นำไปสู่โรงงานร่วมสามัคคี (พ.ศ. 2500) และสมาคมเซรามิก 18 โรงงาน (พ.ศ. 2516) ชามตราไก่ขึ้นทะเบียน GI 8 ก.ย. 2554 แหล่งเตาโบราณหลายแห่ง เช่น วังเหนือ (ต.วังแก้ว ต.วังเหนือ ต.วังใต้ ต.ทุ่งฮั้ว) เสริมงาม และเมือง",
+   "description_en": "Kaolin found at Chae Hom led to the first factory in 1957 and an 18-factory ceramics association in 1973. The rooster bowl was registered as a GI on 8 Sep 2011 (Google Doodle, 2022). Many ancient kiln sites are documented (Wang Nuea area, Serm Ngam, Mueang).",
+   "source": [
+    "https://www.sarakadeelite.com/brand-story/lampang-rooster-bowl/",
+    "https://www.khaosod.co.th/technologychaoban/techno-news/article_22984",
+    "https://lampangculture.com/a3-view-all.php"
+   ]
+  },
+  {
+   "topic": "logging and elephants",
+   "description_th": "ยุคสัมปทานไม้สักปลายศตวรรษที่ 19 ถึงต้น 20 ทำให้เมืองเจริญ นายห้างพม่า-ไทใหญ่สร้างวัดศิลปะพม่า (9 ใน 31 แห่งของไทย) ปัจจุบันมีสถาบันคชบาลแห่งชาติ (ศูนย์อนุรักษ์ช้างไทย) ที่ห้างฉัตร",
+   "description_en": "The teak concessions of the late 1800s to early 1900s brought wealth. Burmese/Shan timber merchants funded Burmese-style temples, and Lampang has 9 of Thailand's 31 remaining. The National Elephant Institute (Thai Elephant Conservation Center, founded 1993) is at Hang Chat.",
+   "source": [
+    "https://en.wikipedia.org/wiki/Lampang",
+    "https://en.wikipedia.org/wiki/Thai_Elephant_Conservation_Center"
+   ]
+  },
+  {
+   "topic": "transport",
+   "description_th": "รถม้าเริ่มใช้ราว พ.ศ. 2459 พร้อมสถานีรถไฟ (เปิด 1 เม.ย. 2459) ปัจจุบันเป็นสัญลักษณ์เมือง",
+   "description_en": "Horse carriages date from around 1916, when the railway station opened (1 Apr 1916). They are now the city emblem.",
+   "source": [
+    "https://en.wikipedia.org/wiki/Lampang"
+   ]
+  },
+  {
+   "topic": "farming",
+   "description_th": "นาข้าวและพิธีกรรมผูกกับฤดูฝน เช่น แก้มื้อนา พิธีขอฝน ผีขุนน้ำ ผีฝาย ผีเหมือง",
+   "description_en": "Paddy farming ties into rites such as Kae Mue Na, rain-calling and offerings to weir, channel and headwater spirits.",
+   "source": [
+    "https://lampangculture.com/a4-view.php?id=4",
+    "https://lampangculture.com/a4-view.php?id=7",
+    "https://knowledgeportal.okmd.or.th/kmap/65fff112d420b"
+   ]
+  },
+  {
+   "topic": "community",
+   "description_th": "การทำบุญร่วมกัน เช่น ห่อนึ่งสองขนาด ห่อปี้ถวายอารักษ์วัด ห่อน้องใส่บาตร และการทำแกงฮังเลร่วมกันเพื่องานบุญ",
+   "description_en": "Communal cooking for merit: two sizes of ho nueng (the big one for the temple guardian spirit, the small one for alms), and neighbours cooking hang le together for festivals.",
+   "source": [
+    "https://lampangculture.com/a13-view.php?id=1",
+    "https://lampangculture.com/a13-view.php?id=5"
+   ]
+  }
+ ],
+ "festivals": [
+  {
+   "name_th": "งานบุญแห่สลุงหลวง",
+   "name_en": "Great Salung procession (Lampang Songkran)",
+   "lunar_or_date": "12 April annually (since 1989-1990)",
+   "what_happens_en": "A giant silver bowl (made 1990) collects people's turmeric-som poi water to bathe Phra Chao Kaeo Don Tao. There is also a Salung Luang god/goddess contest, judged by a Lanna divination with mayom leaves.",
+   "source": [
+    "https://lampangculture.com/a4-view.php?id=3"
+   ]
+  },
+  {
+   "name_th": "บวงสรวงพญาพรหมโวหาร",
+   "name_en": "Homage to poet Phraya Phrommawohan",
+   "lunar_or_date": "April annually",
+   "what_happens_en": "Rite at his monument (Khuean Yang, Sop Tui).",
+   "source": [
+    "https://lampangculture.com/a2-view.php?id=4"
+   ]
+  },
+  {
+   "name_th": "บวงสรวงเจ้าพ่อประตูผา / ดำหัวเจ้าพ่อประตูผา",
+   "name_en": "Chao Pho Pratu Pha ceremony",
+   "lunar_or_date": "April (e.g. 22 Apr 2023)",
+   "what_happens_en": "Offerings and phi mot / phi meng spirit dances.",
+   "source": [
+    "https://mpp.egat.co.th/hellomaemoh/index.php?option=com_content&view=article&id=981:2023-06-12-08-50-55&catid=43&Itemid=245"
+   ]
+  },
+  {
+   "name_th": "บวงสรวงเจ้าพ่อหลักเมือง",
+   "name_en": "City Pillar spirit rite",
+   "lunar_or_date": "May annually; spirit dance the next day",
+   "what_happens_en": "Offerings at the City Pillar shrine, then a spirit dance.",
+   "source": [
+    "https://knowledgeportal.okmd.or.th/kmap/65fff112d420b"
+   ]
+  },
+  {
+   "name_th": "ผีโขน งาน 8 เป็ง",
+   "name_en": "Phi Khon at the 8 Peng fair",
+   "lunar_or_date": "Visakha Bucha (≈May)",
+   "what_happens_en": "Costumed \"ghosts\" join the relic-bathing fair at Ban Si Luang, Mueang Pan.",
+   "source": [
+    "https://lampangculture.com/a4-view.php?id=2"
+   ]
+  },
+  {
+   "name_th": "ประเพณีแก้มื้อนา",
+   "name_en": "Kae Mue Na",
+   "lunar_or_date": "Every holy day, July-Sept",
+   "what_happens_en": "Rotating merit feasts at Wat Phra That Lampang Luang.",
+   "source": [
+    "https://lampangculture.com/a4-view.php?id=4"
+   ]
+  },
+  {
+   "name_th": "พิธีขอฝน-ฟังธรรมพญาปลาช่อน",
+   "name_en": "Rain-calling rite",
+   "lunar_or_date": "August (drought years)",
+   "what_happens_en": "Procession, sermon and bathing of a Buddha image.",
+   "source": [
+    "https://lampangculture.com/a4-view.php?id=7"
+   ]
+  },
+  {
+   "name_th": "บวงสรวงเจ้าพ่อหมอกมุงเมือง",
+   "name_en": "Chao Pho Mok Mung Mueang rite",
+   "lunar_or_date": "February-March",
+   "what_happens_en": "Offerings at the shrine behind Ho Amok.",
+   "source": [
+    "https://knowledgeportal.okmd.or.th/kmap/65fff112d420b"
+   ]
+  }
+ ],
+ "food_specialties": [
+  {
+   "name_th": "ห่อนึ่งแคหมู (บ้านลำปางหลวง)",
+   "name_en": "Steamed pork parcel with wild betel leaf",
+   "description_en": "Pork stir-fried with a pounded paste (dried chilli, garlic, coriander, shallot, lemongrass, galangal, coriander root), mixed with ผักแค, long beans, eggplant, coconut milk and ใบยอ, then wrapped in banana leaf and steamed. Made in two sizes for Kae Mue Na.",
+   "where_to_eat_or_buy": "Lampang Luang (Ko Kha) during Lent; local markets",
+   "source": [
+    "https://lampangculture.com/a13-view.php?id=1"
+   ]
+  },
+  {
+   "name_th": "ยำมะถั่วมะเขือ",
+   "name_en": "Long-bean and eggplant yam (Tai Yuan)",
+   "description_en": "A rainy-season dish of boiled long beans, eggplants, pea eggplants, bitter gourd, lablab beans and hed lom mushrooms, pounded with roasted chilli and garlic, and seasoned with pla ra and shrimp paste. Eaten with sticky rice.",
+   "where_to_eat_or_buy": "Home cooking, khao kaeng stalls",
+   "source": [
+    "https://lampangculture.com/a13-view.php?id=2"
+   ]
+  },
+  {
+   "name_th": "แกงฮังเล",
+   "name_en": "Hang le pork curry",
+   "description_en": "A Burmese-origin braised pork curry with tamarind, ginger, garlic, shallot, pickled garlic and hang le powder, simmered about 3 hours. It is cooked for merit events and important guests, and associated with the Burmese-heritage community of Mueang Lampang.",
+   "where_to_eat_or_buy": "Festivals, northern restaurants",
+   "source": [
+    "https://lampangculture.com/a13-view.php?id=5"
+   ]
+  },
+  {
+   "name_th": "น้ำพริกอ่อง",
+   "name_en": "Nam phrik ong (tomato-pork chilli dip)",
+   "description_en": "Listed as a Lampang food heritage item. Recipe details were not extracted this round.",
+   "where_to_eat_or_buy": "Markets",
+   "source": [
+    "https://lampangculture.com/a13-view-all.php"
+   ]
+  },
+  {
+   "name_th": "แกงแคไก่",
+   "name_en": "Kaeng khae with chicken",
+   "description_en": "Listed as a Lampang food heritage item (herb and vegetable curry).",
+   "where_to_eat_or_buy": "Khao kaeng stalls",
+   "source": [
+    "https://lampangculture.com/a13-view-all.php"
+   ]
+  }
+ ],
+ "markets_and_places": [
+  {
+   "name_th": "วัดพระธาตุลำปางหลวง",
+   "name_en": "Wat Phra That Lampang Luang",
+   "why_relevant_en": "Oldest surviving Lanna viharn, the inverted stupa image, 1732 bullet marks, and Kae Mue Na.",
+   "source": [
+    "https://en.wikipedia.org/wiki/Wat_Phra_That_Lampang_Luang",
+    "https://lampangculture.com/a8-view.php?id=1"
+   ]
+  },
+  {
+   "name_th": "วัดพระแก้วดอนเต้า",
+   "name_en": "Wat Phra Kaeo Don Tao",
+   "why_relevant_en": "Housed the Emerald Buddha 1436-1468; its Phra Chao Kaeo Don Tao is bathed with water from the Salung Luang.",
+   "source": [
+    "https://en.wikipedia.org/wiki/Lampang",
+    "https://lampangculture.com/a4-view.php?id=3"
+   ]
+  },
+  {
+   "name_th": "สถานีรถไฟนครลำปาง",
+   "name_en": "Lampang railway station",
+   "why_relevant_en": "Opened 1 April 1916; origin of the horse-carriage culture.",
+   "source": [
+    "https://en.wikipedia.org/wiki/Lampang"
+   ]
+  },
+  {
+   "name_th": "สะพานรัษฎาภิเศก",
+   "name_en": "Ratsadaphisek Bridge",
+   "why_relevant_en": "Built 1894 for logging-era transport; a city landmark.",
+   "source": [
+    "https://en.wikipedia.org/wiki/Lampang"
+   ]
+  },
+  {
+   "name_th": "พิพิธภัณฑ์เซรามิคธนบดี",
+   "name_en": "Dhanabadee Ceramic Museum",
+   "why_relevant_en": "History of the rooster bowl and the Chinese founding families.",
+   "source": [
+    "https://www.khaosod.co.th/technologychaoban/techno-news/article_22984"
+   ]
+  },
+  {
+   "name_th": "บ้านปางค่า อ.แจ้ห่ม",
+   "name_en": "Ban Pang Kha, Chae Hom",
+   "why_relevant_en": "Where the kaolin was found (km 26-27 of the Lampang-Chae Hom road).",
+   "source": [
+    "https://www.khaosod.co.th/technologychaoban/techno-news/article_22984"
+   ]
+  },
+  {
+   "name_th": "สถาบันคชบาลแห่งชาติ (ศูนย์อนุรักษ์ช้างไทย) อ.ห้างฉัตร",
+   "name_en": "National Elephant Institute, Hang Chat",
+   "why_relevant_en": "Elephant conservation centre, TECC since 1993.",
+   "source": [
+    "https://en.wikipedia.org/wiki/Thai_Elephant_Conservation_Center"
+   ]
+  },
+  {
+   "name_th": "ศาลเจ้าพ่อประตูผา",
+   "name_en": "Chao Pho Pratu Pha shrine",
+   "why_relevant_en": "Hero-spirit shrine on the Lampang-Ngao road.",
+   "source": [
+    "https://www.gotolampang.com/%E0%B8%95%E0%B8%B3%E0%B8%99%E0%B8%B2%E0%B8%99-%E0%B8%A8%E0%B8%B2%E0%B8%A5%E0%B9%80%E0%B8%88%E0%B9%89%E0%B8%B2%E0%B8%9E%E0%B9%88%E0%B8%AD%E0%B8%9B%E0%B8%A3%E0%B8%B0%E0%B8%95%E0%B8%B9%E0%B8%9C%E0%B8%B2/"
+   ]
+  },
+  {
+   "name_th": "วัดปงยางคก / วัดไหล่หินหลวง / วัดคะตึกเชียงมั่น / วัดเวียง",
+   "name_en": "Historic viharns of Lampang",
+   "why_relevant_en": "Documented as architectural heritage by lampangculture.",
+   "source": [
+    "https://lampangculture.com/a8-view-all.php"
+   ]
+  },
+  {
+   "name_th": "ตลาดออมสิน / ตลาดราชวงศ์",
+   "name_en": "Omsin and Ratchawong markets",
+   "why_relevant_en": "Everyday markets that also host city guardian-spirit shrines.",
+   "source": [
+    "https://knowledgeportal.okmd.or.th/kmap/65fff112d420b"
+   ]
+  },
+  {
+   "name_th": "หออะม็อก",
+   "name_en": "Ho Amok bastion",
+   "why_relevant_en": "Old city fortification; shrine of Chao Pho Mok Mung Mueang behind it.",
+   "source": [
+    "https://knowledgeportal.okmd.or.th/kmap/65fff112d420b"
+   ]
+  }
+ ],
+ "etiquette_local_en": [
+  "Follow the signs at Wat Phra That Lampang Luang, where women may not enter certain areas (e.g. the Phra Phutthabat hall).",
+  "Watch city-spirit dances and phi mot / phi meng ceremonies respectfully from the side. Ask before photographing mediums, and never mock possession.",
+  "Do not try to unmask or identify phi khon performers, because secrecy is part of the merit.",
+  "Use the self-designations for hill peoples: Hmong (not แม้ว), Akha (not อีก้อ), Lahu (not มูเซอ), Iu Mien, and Pgaz K'nyau for Karen.",
+  "When you pass the Chao Pho Pratu Pha shrine, a wai or a short stop is a respectful local custom.",
+  "Horse-carriage drivers depend on tourists. Agree the route and price before setting off, and avoid overloading the carriage.",
+  "Lampang people may find the Chiang Mai accent \"slow\"; imitating their short forms (บ่ะฮู่, กิ๋นน่ำ) gets a friendly reaction."
+ ],
+ "conversation_starters": [
+  {
+   "local_th": "กิ๋นข้าวแล้วกา",
+   "roman": "kin khao laeo ka",
+   "en": "Have you eaten yet?",
+   "why_works_en": "It is the universal Northern greeting."
+  },
+  {
+   "local_th": "อู้กำเมียงได้ก่อ",
+   "roman": "u kam miang dai ko",
+   "en": "Can you speak Kham Mueang (eastern pronunciation)?",
+   "why_works_en": "Using the eastern form กำเมียง shows you know Lampang speech differs (composed; check with a speaker)."
+  },
+  {
+   "local_th": "ชามตราไก่ใบนี้งามแต๊",
+   "roman": "cham tra kai bai ni ngam tae",
+   "en": "This rooster bowl is really beautiful",
+   "why_works_en": "Ceramics are a source of civic pride (composed)."
+  },
+  {
+   "local_th": "ห่อนึ่งลำแต๊",
+   "roman": "ho nueng lam tae",
+   "en": "The ho nueng is delicious",
+   "why_works_en": "Praising local food always opens conversation (composed)."
+  },
+  {
+   "local_th": "เคยขึ้นรถม้าก่อ",
+   "roman": "khoei khuen rot ma ko",
+   "en": "Have you ever ridden a horse carriage?",
+   "why_works_en": "It is the emblem of Lampang, and locals love telling stories about it (composed)."
+  }
+ ],
+ "needs_expert_review": [
+  "Exact tone contours of Lampang forms (บ่ะฮู่, กิ๋นน่ำ, สามร่อย, กำเมียง): LPRU shows the difference only through spelling.",
+  "Tai Lue word list (เปิ่น, ตู๋, อึ่ม, เก๋า, ป่ออุ้ย...) extracted from the LPRU PDF by an automated reader. Tone digits and a few glosses may be garbled.",
+  "ผักแค = ใบชะพลู and ใบยอ = ใบตาเสือ equivalences (lampangculture, via automated summary).",
+  "ถ้วยก๋าไก่ as a Northern name for the rooster bowl (only a page title was seen).",
+  "Name of the Burmese-heritage community (rendered \"Tam Mao\", assumed ท่ามะโอ).",
+  "Location of the Chao Pho Pratu Pha ceremony: the Mueang/Ngao boundary vs ต.บ้านดง อ.แม่เมาะ (the EGAT article; may be a separate shrine or event).",
+  "Northern Lampang sub-dialect district list (one district name garbled, probably วังเหนือ).",
+  "Birth-year relic pairing (Lampang Luang = Ox year): not in the fetched sources.",
+  "Composed phrases and conversation starters."
+ ],
+ "gaps": [
+  "lampangculture food pages for น้ำพริกอ่อง and แกงแคไก่, and the language pages for each hill people, were not opened (time/budget).",
+  "thairath rooster-bowl article returned 403; the so04 thaijo lexical-variation paper and the jber dialect-change paper are robots-blocked; pantip redirected; th.wikipedia is blocked.",
+  "No sourced Lampang-vs-Chiang Mai lexical list beyond the LPRU spelling examples. There is also no sourced Lampang province slogan (คำขวัญ) and no data on the Thoen/Mae Phrik southern accent.",
+  "The web search budget for the session ran out mid-task."
+ ],
+ "confidence": "medium",
+ "sources": [
+  "https://culture.lpru.ac.th/WebCulture2553/CultureKnowledge/file/05-01.pdf",
+  "https://culture.lpru.ac.th/WebCulture2553/CultureKnowledge/file/05-03.pdf",
+  "https://en.wikipedia.org/wiki/Lampang",
+  "https://en.wikipedia.org/wiki/Thai_Elephant_Conservation_Center",
+  "https://en.wikipedia.org/wiki/Wat_Phra_That_Lampang_Luang",
+  "https://ethnicity.sac.or.th/database-ethnic/181",
+  "https://goal90antique.blogspot.com/2017/10/blog-post_30.html",
+  "https://he02.tci-thaijo.org/index.php/Veridian-E-Journal/article/view/152928",
+  "https://huggingface.co/datasets/pythainlp/lanna_dict",
+  "https://knowledgeportal.okmd.or.th/kmap/65fff112d420b",
+  "https://lampangculture.com/a1-view-all.php",
+  "https://lampangculture.com/a13-view-all.php",
+  "https://lampangculture.com/a13-view.php?id=1",
+  "https://lampangculture.com/a13-view.php?id=2",
+  "https://lampangculture.com/a13-view.php?id=5",
+  "https://lampangculture.com/a2-view-all.php",
+  "https://lampangculture.com/a2-view.php?id=2",
+  "https://lampangculture.com/a2-view.php?id=4",
+  "https://lampangculture.com/a3-view-all.php",
+  "https://lampangculture.com/a4-view.php?id=2",
+  "https://lampangculture.com/a4-view.php?id=3",
+  "https://lampangculture.com/a4-view.php?id=4",
+  "https://lampangculture.com/a4-view.php?id=7",
+  "https://lampangculture.com/a6-view-all.php",
+  "https://lampangculture.com/a7-view-all.php",
+  "https://lampangculture.com/a7-view.php?id=1",
+  "https://lampangculture.com/a8-view-all.php",
+  "https://lampangculture.com/a8-view.php?id=1",
+  "https://mpp.egat.co.th/hellomaemoh/index.php?option=com_content&view=article&id=981:2023-06-12-08-50-55&catid=43&Itemid=245",
+  "https://www.chiangraifocus.com/1775/",
+  "https://www.gotolampang.com/%E0%B8%95%E0%B8%B3%E0%B8%99%E0%B8%B2%E0%B8%99-%E0%B8%A8%E0%B8%B2%E0%B8%A5%E0%B9%80%E0%B8%88%E0%B9%89%E0%B8%B2%E0%B8%9E%E0%B9%88%E0%B8%AD%E0%B8%9B%E0%B8%A3%E0%B8%B0%E0%B8%95%E0%B8%B9%E0%B8%9C%E0%B8%B2/",
+  "https://www.khaosod.co.th/technologychaoban/techno-news/article_22984",
+  "https://www.sarakadeelite.com/brand-story/lampang-rooster-bowl/"
+ ]
+}

@@ -1,0 +1,340 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kratip Components</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:wght@400;500;700;800&family=Noto+Sans+Thai+Looped:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/lucide@0.460.0/dist/umd/lucide.min.js"></script>
+<style>
+  :root {
+    color-scheme: light;
+    --paper:#FAF9F6; --white:#FFFFFF; --ink:#1E2238;
+    --you:#2B3263; --you-wash:#ECEEF5; --them:#8A5A44; --them-wash:#F3ECE6;
+    --ink-2:rgb(30 34 56 / .70); --line:rgb(30 34 56 / .10); --line-2:rgb(30 34 56 / .18);
+    --f-lat:'Atkinson Hyperlegible Next', system-ui, sans-serif;
+    --f-th:'Noto Sans Thai Looped','Noto Sans Thai','Thonburi',sans-serif;
+    --sh-2:0 1px 2px rgb(30 34 56 / .06), 0 6px 16px -6px rgb(30 34 56 / .14);
+    --sh-dock:0 10px 30px -10px rgb(30 34 56 / .30), 0 0 0 1px var(--line);
+    /* Kratip additions */
+    --weave-bg: repeating-linear-gradient(45deg, var(--them) 0 6px, transparent 6px 12px), repeating-linear-gradient(-45deg, var(--you) 0 6px, transparent 6px 12px);
+    --weave-frame: repeating-linear-gradient(45deg, var(--them) 0 5px, var(--paper) 5px 7px, var(--you) 7px 12px, var(--paper) 12px 14px);
+  }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body { background:#EFEDE7; color:var(--ink); font:16px/1.5 var(--f-lat); padding:40px 16px 96px; }
+  .th { font-family:var(--f-th); }
+  svg.lucide { stroke-width:2.1; width:1em; height:1em; flex:none; }
+  .page { max-width:1240px; margin:0 auto; }
+  .eyebrow { font-size:12px; font-weight:800; letter-spacing:.09em; text-transform:uppercase; color:var(--ink-2); }
+  h1 { font-size:clamp(32px,5vw,52px); font-weight:800; letter-spacing:-.02em; line-height:1.02; margin-top:6px; }
+  h1 .y { color:var(--you); } h1 .t { color:var(--them); }
+  .lede { color:var(--ink-2); max-width:70ch; margin-top:12px; font-size:17px; }
+  section { margin-top:56px; }
+  section > h2 { font-size:24px; font-weight:800; letter-spacing:-.01em; }
+  section > p { color:var(--ink-2); max-width:70ch; margin:4px 0 18px; font-size:15px; }
+  .row { display:flex; flex-wrap:wrap; gap:24px; align-items:flex-start; }
+  .spec { width:330px; max-width:100%; }
+  .spec h3 { font-size:13px; font-weight:800; letter-spacing:.06em; text-transform:uppercase; color:var(--ink-2); margin-bottom:10px; }
+  .spec .note { font-size:13.5px; color:var(--ink-2); margin-top:10px; line-height:1.45; }
+  .spec .note b { color:var(--ink); }
+
+  /* the Kratip ground, used by every canvas */
+  .ground { position:relative; background:var(--paper); border-radius:20px; padding:16px 14px; overflow:hidden; box-shadow:inset 0 0 0 1px var(--line); display:flex; flex-direction:column; gap:12px; }
+  .ground::before { content:""; position:absolute; inset:0; pointer-events:none; opacity:.05; background:var(--weave-bg); }
+  .ground > * { position:relative; }
+
+  /* ---- header ---- */
+  .hd { display:flex; align-items:center; gap:10px; }
+  .hd .wm { line-height:1.05; }
+  .hd .wm b { font-family:var(--f-th); font-weight:700; font-size:22px; color:var(--you); display:block; }
+  .hd .wm span { font-size:10px; font-weight:800; letter-spacing:.14em; text-transform:uppercase; color:var(--them); }
+  .hd .sp { flex:1; }
+  .ib { width:38px; height:38px; border-radius:12px; display:grid; place-items:center; font-size:19px; background:var(--white); box-shadow:var(--sh-2); color:var(--ink); }
+
+  /* ---- labels ---- */
+  .lbl { font-size:11px; font-weight:800; letter-spacing:.09em; text-transform:uppercase; display:flex; gap:6px; align-items:center; margin-bottom:4px; }
+  .lbl::before { content:""; width:7px; height:7px; border-radius:50%; background:currentColor; }
+  .lbl.y { color:var(--you); } .lbl.t { color:var(--them); }
+
+  /* ---- messages: white cards with a hairline and a colored spine ---- */
+  .msg { max-width:88%; background:var(--white); border-radius:18px; padding:11px 14px; box-shadow:0 0 0 1px var(--line), var(--sh-2); }
+  .msg.me { align-self:flex-end; border-bottom-right-radius:6px; box-shadow:inset -3px 0 0 var(--you), 0 0 0 1px var(--line), var(--sh-2); }
+  .msg.them { align-self:flex-start; border-bottom-left-radius:6px; box-shadow:inset 3px 0 0 var(--them), 0 0 0 1px var(--line), var(--sh-2); }
+  .msg .big { font-size:18px; font-weight:700; line-height:1.3; }
+  .msg .big.th { font-size:20px; font-weight:600; line-height:1.4; }
+  .msg .big ul { padding-left:20px; }
+  .msg .small { font-size:14px; color:var(--ink-2); margin-top:6px; padding-top:6px; border-top:1px solid var(--line); }
+  .msg .tools { display:flex; gap:8px; margin-top:8px; }
+  .tool { height:32px; padding:0 10px; border-radius:10px; display:inline-flex; gap:6px; align-items:center; font-size:13px; font-weight:700; color:var(--you); background:var(--you-wash); }
+  .them .tool { color:var(--them); background:var(--them-wash); }
+  /* alt: wash version, for comparison */
+  .msg.wash.me { background:var(--you-wash); box-shadow:none; }
+  .msg.wash.them { background:var(--them-wash); box-shadow:none; }
+
+  /* ---- listening / working ---- */
+  .listen { display:flex; align-items:center; gap:10px; font-weight:700; font-size:15px; }
+  .wave { display:flex; gap:3px; align-items:center; height:24px; }
+  .wave b { width:4px; border-radius:2px; background:currentColor; animation:wave 1s ease-in-out infinite; }
+  .wave b:nth-child(2n){animation-delay:.15s} .wave b:nth-child(3n){animation-delay:.3s}
+  @keyframes wave { 0%,100% { height:5px; } 50% { height:22px; } }
+  .me .listen { color:var(--you); } .them .listen { color:var(--them); }
+  .proc { align-self:flex-end; max-width:88%; position:relative; overflow:hidden; border-radius:18px 18px 6px 18px; padding:2px; }
+  .proc::before { content:""; position:absolute; inset:-60%; background:conic-gradient(var(--you) 0 22%, transparent 22% 100%); animation:spin 1.4s linear infinite; }
+  .proc > div { position:relative; background:var(--white); border-radius:16px 16px 4px 16px; padding:10px 13px; color:var(--ink-2); font-style:italic; font-size:14px; }
+  @keyframes spin { to { transform:rotate(360deg); } }
+  .status-line { align-self:flex-end; font-size:12px; color:var(--ink-2); display:flex; gap:6px; align-items:center; }
+
+  /* ---- context card: woven frame ---- */
+  .card { border-radius:16px; padding:3px; background:var(--weave-frame); }
+  .card > div { background:var(--white); border-radius:13px; padding:12px 14px; }
+  .card h3 { font-size:17px; font-weight:800; } .card h3 .th { font-weight:500; font-size:15px; color:var(--ink-2); }
+  .card p { font-size:14px; color:var(--ink-2); line-height:20px; margin-top:2px; }
+  .card .k { font-size:11px; font-weight:800; letter-spacing:.09em; text-transform:uppercase; color:var(--ink-2); display:flex; gap:6px; align-items:center; margin-bottom:4px; }
+  .facts { display:flex; flex-wrap:wrap; gap:6px 12px; font-size:13px; font-weight:700; margin-top:8px; }
+  .facts span { display:inline-flex; gap:5px; align-items:center; }
+  .heat { display:inline-flex; gap:2px; align-items:flex-end; }
+  .heat b { width:6px; height:11px; border-radius:2px; background:var(--line-2); }
+  .heat b.on { background:var(--ink); }
+  /* conflict: inversion, the woven frame becomes solid ink */
+  .card.stop { background:var(--ink); }
+  .card.stop h3 { text-decoration:line-through; text-decoration-thickness:2px; }
+  .stamp { display:inline-flex; gap:6px; align-items:center; background:var(--ink); color:#fff; font-size:13px; font-weight:800; padding:5px 10px; border-radius:8px; margin:-12px -14px 8px; border-radius:12px 12px 0 0; width:calc(100% + 28px); }
+
+  /* ---- my info ---- */
+  .info { background:var(--white); border-radius:16px; padding:12px 14px; box-shadow:0 0 0 1px var(--line), var(--sh-2); }
+  .info .hdr { display:flex; justify-content:space-between; align-items:center; font-weight:800; font-size:15px; }
+  .info .hdr span { display:flex; gap:8px; align-items:center; }
+  .chips { display:flex; flex-wrap:wrap; gap:6px; margin-top:10px; }
+  .chip { border-radius:999px; padding:6px 12px; font-size:13px; font-weight:700; box-shadow:inset 0 0 0 1.5px var(--line-2); display:inline-flex; gap:5px; align-items:center; }
+  .chip.on { background:var(--you); color:#fff; box-shadow:none; }
+  .hello { text-align:center; padding:10px 0 4px; }
+  .hello b { display:block; font-size:22px; font-weight:800; letter-spacing:-.01em; }
+  .hello span { color:var(--ink-2); font-size:14px; }
+
+  /* ---- docks ---- */
+  .dockwrap { height:110px; position:relative; }
+  .dock { position:absolute; left:0; right:0; bottom:8px; background:var(--white); border-radius:26px; box-shadow:var(--sh-dock); display:flex; align-items:center; justify-content:space-between; padding:0 6px; }
+  .dock.h72 { height:72px; }
+  .dock.h84 { height:92px; }
+  .mic { width:60px; height:60px; border-radius:20px; display:grid; place-items:center; font-size:26px; }
+  .mic.t { background:var(--them-wash); color:var(--them); }
+  .mic.y { background:var(--you); color:#fff; }
+  .mic.on { background:var(--them); color:#fff; }
+  .mic.off { opacity:.35; }
+  .pill { height:52px; padding:0 18px; border-radius:18px; display:inline-flex; gap:8px; align-items:center; font-size:15px; font-weight:800; }
+  .pill.t { background:var(--them-wash); color:var(--them); font-family:var(--f-th); font-size:17px; }
+  .pill.y { background:var(--you); color:#fff; }
+  .pill.stop { background:var(--ink); color:#fff; }
+  .under { display:flex; flex-direction:column; align-items:center; gap:3px; }
+  .under .mic { width:52px; height:52px; border-radius:17px; font-size:23px; }
+  .under span { font-size:11px; font-weight:800; letter-spacing:.06em; text-transform:uppercase; }
+  .under.t span { color:var(--them); font-family:var(--f-th); font-size:13px; letter-spacing:0; }
+  .under.y span { color:var(--you); }
+  .mid { flex:1; text-align:center; font-size:13px; font-weight:700; color:var(--ink-2); display:flex; gap:8px; justify-content:center; align-items:center; }
+  .pulse { animation:pulse 1.6s ease-out infinite; }
+  .y.pulse { --pc:rgb(43 50 99 / .45); } .t.pulse { --pc:rgb(138 90 68 / .45); }
+  @keyframes pulse { 0% { box-shadow:0 0 0 0 var(--pc); } 100% { box-shadow:0 0 0 14px transparent; } }
+
+  .verdict { margin-top:64px; max-width:900px; border-top:2px solid var(--ink); padding-top:16px; }
+  .verdict h2 { font-size:24px; font-weight:800; }
+  .verdict table { width:100%; border-collapse:collapse; margin-top:12px; font-size:15px; }
+  .verdict th, .verdict td { text-align:left; padding:8px 10px 8px 0; border-bottom:1px solid var(--line); vertical-align:top; }
+  .verdict th { font-size:12px; letter-spacing:.08em; text-transform:uppercase; color:var(--ink-2); }
+  @media (prefers-reduced-motion: reduce) { * { animation:none !important; } }
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute">
+  <defs>
+    <pattern id="weave" width="12" height="12" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <rect width="12" height="12" fill="#fff"/>
+      <rect x="0" y="1" width="10" height="4" rx="1" fill="#8A5A44"/>
+      <rect x="1" y="7" width="4" height="10" rx="1" fill="#8A5A44"/>
+    </pattern>
+    <symbol id="mark" viewBox="0 0 64 64">
+      <path d="M12 4h40a8 8 0 0 1 8 8v32a8 8 0 0 1-8 8H26l-12 10v-10h-2a8 8 0 0 1-8-8V12a8 8 0 0 1 8-8z" fill="url(#weave)" stroke="#2B3263" stroke-width="3.5" stroke-linejoin="round"/>
+      <path d="M32 10 L50 28 L32 46 L14 28 Z" fill="#fff"/>
+      <text x="32" y="36" text-anchor="middle" font-family="Noto Sans Thai Looped, Noto Sans Thai, Thonburi, sans-serif" font-weight="700" font-size="21" fill="#2B3263">อู้</text>
+    </symbol>
+  </defs>
+</svg>
+
+<div class="page">
+<header>
+  <div class="eyebrow">อู้เมือง · Direction A · Kratip</div>
+  <h1>Every component, <span class="t">woven</span> on <span class="y">paper</span>.</h1>
+  <p class="lede">One rule on top of DESIGN.md: <b>the weave is the ground, white is what floats on it.</b> Every card is white with a hairline. Identity moves from the wash to a 3px spine on the inner edge. The weave itself is only visible in two places: 5% behind everything, and full strength framing the context card.</p>
+</header>
+
+<section>
+  <h2>1 · Header</h2>
+  <p>Logo mark 34px + wordmark, U Mueang under it. No location. Two 38px white squares on the right.</p>
+  <div class="row">
+    <div class="spec">
+      <div class="ground">
+        <div class="hd"><svg width="34" height="34"><use href="#mark"/></svg><div class="wm"><b>อู้เมือง</b><span>U Mueang</span></div><div class="sp"></div><div class="ib"><i data-lucide="user-round"></i></div><div class="ib"><i data-lucide="plus"></i></div></div>
+      </div>
+      <div class="note">The mark here is my SVG placeholder. It needs replacing by a clean trace of the real logo (bamboo rim, herringbone weave, tail bottom-left).</div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>2 · Messages</h2>
+  <p>Big = translation, small = original. Speaker label with a dot. The spine (3px, inner edge) says who speaks; text stays ink.</p>
+  <div class="row">
+    <div class="spec">
+      <h3>You, ready</h3>
+      <div class="ground">
+        <div class="msg me">
+          <div class="lbl y">You</div>
+          <div class="big th"><ul><li>จานนี้คืออะไรครับ</li><li>เผ็ดไหมครับ</li><li>ผมแพ้ถั่วลิสง มีถั่วลิสงไหมครับ</li></ul></div>
+          <div class="small">What is this dish? Is it spicy? I'm allergic to peanuts, any in it?</div>
+          <div class="tools"><span class="tool"><i data-lucide="volume-2"></i>Play again</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="spec">
+      <h3>Vendor, ready</h3>
+      <div class="ground">
+        <div class="msg them">
+          <div class="lbl t">Vendor</div>
+          <div class="big">Chicken khao soi. A little spicy. No peanuts.</div>
+          <div class="small th">ข้าวซอยไก่ครับ เผ็ดนิดหน่อย ไม่มีถั่วลิสงครับ</div>
+          <div class="tools"><span class="tool"><i data-lucide="volume-2"></i>Play</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="spec">
+      <h3>For comparison: wash (DESIGN.md today)</h3>
+      <div class="ground">
+        <div class="msg me wash"><div class="lbl y">You</div><div class="big th">จานนี้คืออะไรครับ</div><div class="small">What is this dish?</div></div>
+        <div class="msg them wash"><div class="lbl t">Vendor</div><div class="big">Chicken khao soi.</div><div class="small th">ข้าวซอยไก่ครับ</div></div>
+      </div>
+      <div class="note"><b>Verdict:</b> washes disappear on the weave (grey on grey). White + spine holds up, and it makes the chat and the cards one family.</div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>3 · Listening and working</h2>
+  <p>Same card, three states. The card never changes place, only its content.</p>
+  <div class="row">
+    <div class="spec">
+      <h3>You, listening</h3>
+      <div class="ground">
+        <div class="msg me"><div class="listen"><i data-lucide="mic"></i>Listening <span class="wave"><b></b><b></b><b></b><b></b><b></b><b></b><b></b></span> 0:09</div></div>
+      </div>
+    </div>
+    <div class="spec">
+      <h3>You, working (raw transcript)</h3>
+      <div class="ground">
+        <div class="proc"><div>uh so this one, the yellow soup in the big bowl, what is it… is it spicy? oh and I'm allergic to peanuts so…</div></div>
+        <div class="status-line"><i data-lucide="languages"></i>Cleaning up and translating…</div>
+      </div>
+    </div>
+    <div class="spec">
+      <h3>Vendor, listening</h3>
+      <div class="ground">
+        <div class="msg them"><div class="listen th"><i data-lucide="mic"></i>กำลังฟัง <span class="wave"><b></b><b></b><b></b><b></b><b></b><b></b><b></b></span> 0:04</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>4 · Context cards</h2>
+  <p>The only place the weave is at full strength: this card belongs to both people. Conflict = the frame turns solid ink.</p>
+  <div class="row">
+    <div class="spec">
+      <h3>Dish, fits you</h3>
+      <div class="ground">
+        <div class="card"><div>
+          <div class="k"><i data-lucide="soup"></i>What it is · based on your info</div>
+          <h3>Khao soi <span class="th">ข้าวซอย</span></h3>
+          <p>Coconut curry noodle soup, crispy noodles on top. A Chiang Mai signature.</p>
+          <div class="facts"><span><i data-lucide="drumstick"></i>Chicken</span><span><span class="heat"><b class="on"></b><b></b><b></b></span>Mild</span><span><i data-lucide="check"></i>Vendor: no peanuts</span></div>
+        </div></div>
+      </div>
+    </div>
+    <div class="spec">
+      <h3>Dish, conflict with My info</h3>
+      <div class="ground">
+        <div class="card stop"><div>
+          <div class="stamp"><i data-lucide="octagon-x"></i>Contains peanuts · you avoid peanuts</div>
+          <h3>Nam prik ong <span class="th">น้ำพริกอ่อง</span></h3>
+          <p>Northern pork and tomato chili dip, often served with crispy pork skin.</p>
+          <div class="facts"><span><i data-lucide="drumstick"></i>Pork</span><span><span class="heat"><b class="on"></b><b class="on"></b><b></b></span>Medium</span></div>
+        </div></div>
+      </div>
+      <div class="note">Inversion, not red: the woven frame becomes the darkest thing on screen. Same shape, so you learn one card.</div>
+    </div>
+    <div class="spec">
+      <h3>Word (Kham Mueang)</h3>
+      <div class="ground">
+        <div class="card"><div>
+          <div class="k"><i data-lucide="book-open"></i>Local word</div>
+          <h3>Lam <span class="th">ลำ</span></h3>
+          <p>Kham Mueang for "delicious". Say <b>lam dtae dtae</b> and watch the smile.</p>
+        </div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>5 · Session start and My info</h2>
+  <div class="row">
+    <div class="spec">
+      <h3>New session</h3>
+      <div class="ground">
+        <div class="hello"><b>Say what's on your mind.</b><span>We'll turn it into clear Thai.</span></div>
+        <div class="info">
+          <div class="hdr"><span><i data-lucide="user-round"></i>My info</span><i data-lucide="x"></i></div>
+          <div class="chips"><span class="chip on"><i data-lucide="octagon-x"></i>Peanuts</span><span class="chip on"><i data-lucide="flame"></i>Mild</span><span class="chip">+ Add</span></div>
+        </div>
+      </div>
+      <div class="note">Same white card family, no spine: it's neither voice. Language (English, French…) lives here, set once.</div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>6 · Dock, three options</h2>
+  <p>Floating white bar, 60px mics or close. Center = state only (empty when idle). Pick one.</p>
+  <div class="row">
+    <div class="spec">
+      <h3>D1 · Verb inside, pills (v5 spirit)</h3>
+      <div class="ground"><div class="dockwrap"><div class="dock h72"><span class="pill t"><i data-lucide="mic"></i>พูด</span><div class="mid"></div><span class="pill y pulse"><i data-lucide="mic"></i>Speak</span></div></div></div>
+      <div class="note">Verb always readable. Pills 52px, bar 72px. The vendor's pill says พูด, big Thai.</div>
+    </div>
+    <div class="spec">
+      <h3>D2 · Icon, verb under (small)</h3>
+      <div class="ground"><div class="dockwrap"><div class="dock h84"><div class="under t"><div class="mic t"><i data-lucide="mic"></i></div><span>พูด</span></div><div class="mid"></div><div class="under y"><div class="mic y pulse"><i data-lucide="mic"></i></div><span>Speak</span></div></div></div></div>
+      <div class="note">Cleanest. Bar 92px, mic 52px + 11px label. The label is the only thing under 13px in the app.</div>
+    </div>
+    <div class="spec">
+      <h3>D3 · Icon only, center shows state</h3>
+      <div class="ground"><div class="dockwrap"><div class="dock h72"><div class="mic on pulse t"><i data-lucide="square"></i></div><div class="mid"><span class="wave" style="color:var(--them)"><b></b><b></b><b></b><b></b><b></b></span><span class="th">กำลังฟัง</span></div><div class="mic y off"><i data-lucide="mic"></i></div></div></div></div>
+      <div class="note">Shown while the vendor speaks: their mic became Stop (solid clay), the center shows the state, your mic dims. Idle: center empty, both mics normal. This state logic applies to D1 and D2 too.</div>
+    </div>
+  </div>
+</section>
+
+<div class="verdict">
+  <h2>What I think</h2>
+  <table>
+    <tr><th>Point</th><th>Take</th></tr>
+    <tr><td><b>Bubbles</b></td><td>White + hairline + spine. The wash bubbles from DESIGN.md go grey on the weave. This is the one real change to the system; DESIGN.md L1 needs an update if you go A.</td></tr>
+    <tr><td><b>Frames</b></td><td>Woven frame only on context cards (both voices). Hairline on everything else. If everything is woven, nothing is.</td></tr>
+    <tr><td><b>Dock</b></td><td>D2. The verb is there for the vendor, small enough not to shout at you. Center empty when idle, no "Your turn".</td></tr>
+    <tr><td><b>Turn</b></td><td>The pulse on the mic is the turn signal. Nothing else needed.</td></tr>
+    <tr><td><b>Logo</b></td><td>Placeholder until someone gives us a clean SVG of the real mark. Ask whoever made it for the source.</td></tr>
+  </table>
+</div>
+</div>
+<script>lucide.createIcons();</script>
+</body>
+</html>

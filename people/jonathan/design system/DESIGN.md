@@ -138,7 +138,7 @@ Washes (`--you-wash`, `--them-wash`) are no longer message backgrounds: they go 
 
 | Component | Spec |
 |---|---|
-| **Message (both voices)** | L1 white card, max 92%, padding 14/16/12. You: right, spine on the right edge (`inset -3px 0 0 var(--you)`), contour `0 0 0 1.5px rgb(43 50 99 / .28)`. Vendor: left, spine left (`inset 3px 0 0 var(--them)`), contour `rgb(138 90 68 / .32)`. **No speaker label.** |
+| **Message (both voices)** | L1 white card, **fixed width `calc(100% - 70px)`**: each card stops at the inner edge of the other speaker's mic. Padding 14/16/12. You: right, spine on the right edge (`inset -3px 0 0 var(--you)`), contour `0 0 0 1.5px rgb(43 50 99 / .28)`. Vendor: left, spine left (`inset 3px 0 0 var(--them)`), contour `rgb(138 90 68 / .32)`. **No speaker label.** |
 | **Message content** | Big = translation, small = original, hairline between. **Same list format in both halves**: one bullet per question, on a shared grid (`grid-template-columns: 14px 1fr`, gap 6) so Thai and Latin markers align. Marker in the speaker's color for the big text, `--line-2` for the small. Thai big: 19/600 line-height 1.45. Latin big: 17/700 line-height 1.35. Small: 14, ink-2. |
 | **Play** | Tapping anywhere on a message plays it. Tool at the bottom of the card, 34px, radius 10: idle = wash bg, speaker color, `volume-2` + "Play again" (or "Play"). Playing = solid speaker color, white text, same `volume-2` icon with its two arcs animated one after the other (opacity, ~0.8s loop), plus a soft ring breathing around the card. |
 | **Listening** | Same message card, content = `mic` + "Listening" / `กำลังฟัง` + wave + timer, in the speaker's color, 15/700. |
@@ -151,6 +151,7 @@ Washes (`--you-wash`, `--them-wash`) are no longer message backgrounds: they go 
 | **Dock, states** | Turn = pulse on the mic whose turn it is (box-shadow ring, 1.6s). Tap = that button becomes Stop (solid clay / solid ink, `square`, verb "หยุด" / "Stop"), the other dims to 35%. **Middle of the dock**: empty at rest; wave + timer in the speaker's color while listening (K3); `languages` + "Translating…" with both mics dimmed while working (K5); after your Thai has played, `arrow-left` + "ตาคุณ" in clay pointing at the vendor's button, gone when they tap (K4), mirrored in English after their reply. Never a logo in the middle. |
 | **Header** | Mark 34 + wordmark, spacer, two 38px white squares (radius 12, `--sh-2`): `user-round` (About you), `plus` (new conversation). **No background, no line**: floats over the chat on the same weave. The chat still stacks from the bottom; as it grows, older messages fade out (mask on the chat, transparent under the header, opaque ~34px below) instead of sliding under a band. Never a paper or frosted band: it breaks the weave. |
 | **Heat meter** | 3 bars 6x11, radius 2. On = ink, off = `--line-2`. |
+| **Shapes** | **Tags / chips = pill** (radius 999): About you chips, language, allergies, spice, diet. **Buttons = squarer** (radius 12 from 38px up, 10 under, 18 for the 64px mics), like the header squares. Never a pill button, never a square tag. |
 | **Buttons (elsewhere)** | Height 38 to 48, radius 12, 700 14px. Solid = indigo bg, white text. Ghost = white bg, indigo text, inset 1.5px `--line-2`. |
 
 ### Show mode
@@ -160,6 +161,7 @@ Dropped (PRD D2): one stable screen, the vendor uses their own mic in the dock.
 ## 6. Spacing and touch
 
 - Spacing: 4, 6, 8, 10, 12, 14, 16, 24. Screen gutter 14 to 16px, stream gap 12px.
+- Group label (11/800 uppercase, line-height 14) to its chips: 6px. Tighter than the gap between groups (18px), so the label reads as belonging to its choices.
 - Touch targets ≥ 44px, reply pills ≥ 47px, mic 60px.
 - Focus: `outline: 3px solid var(--you); outline-offset: 2px`.
 

@@ -1,6 +1,6 @@
 .row {
   display: flex;
-  max-width: 100%;
+  width: 100%;
 }
 
 .you {
@@ -17,8 +17,8 @@
   --accent: var(--you);
   --wash: var(--you-wash);
   position: relative;
-  max-width: 92%;
-  min-width: min(62%, 240px);
+  /* Fixed width: each card stops at the inner edge of the other speaker's mic (dock 12 + 8 + 64 = 84, minus the 14 gutter). */
+  width: calc(100% - 70px);
   padding: 14px 16px 12px;
   border-radius: 18px;
   background: var(--white);
@@ -181,7 +181,7 @@
 .proc {
   position: relative;
   overflow: hidden;
-  max-width: 92%;
+  width: calc(100% - 70px);
   padding: 2.5px;
   border-radius: 18px;
   --accent: var(--you);

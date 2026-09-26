@@ -55,7 +55,7 @@
   gap: 6px;
   min-height: 44px;
   padding: 0 14px;
-  border-radius: 12px;
+  border-radius: 999px; /* Tags are pills; buttons stay squarer (radius 12). */
   font-size: 15px;
   font-weight: 700;
   color: var(--ink);
@@ -155,13 +155,15 @@ label.chip {
   font-size: 11px;
   font-weight: 800;
   letter-spacing: 0.09em;
+  line-height: 14px;
   text-transform: uppercase;
   color: var(--ink-2);
-  margin-bottom: 8px;
+  margin-bottom: 6px;
 }
 
 .done {
-  height: 52px;
+  flex: none; /* the sheet scrolls; without this the flex column squashes Done */
+  height: 48px;
   border-radius: 12px;
   background: var(--you);
   color: var(--white);

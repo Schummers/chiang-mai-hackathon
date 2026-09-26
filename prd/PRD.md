@@ -1,6 +1,6 @@
 # PRD
 
-**Owner**: jonathan. **Status**: draft v0.1, 2026-09-26. **Challenge**: 02, Navigate Chiang Mai's cultural layers ([brief](hackathon-brief.md)).
+**Owner**: jonathan. **Status**: draft v0.2, 2026-09-26 (design decided, wireframes v4). **Challenge**: 02, Navigate Chiang Mai's cultural layers ([brief](hackathon-brief.md)).
 **Working name**: TBD (branding workstream).
 
 > A translator that explains, and that is designed for both people in the conversation.
@@ -44,19 +44,23 @@ The result: the exchange stops at the first question, when it could have become 
 
 The first question the jury will ask. Our answer has to be **visible in the demo**, not only in the prompt:
 
-1. **Designed for the other side.** A full-screen "show" mode in Thai, audio played automatically, and suggested replies the vendor can tap. Nobody else designs for the person who receives the phone.
+1. **Designed for the other side.** The vendor has their own mic button, labelled in Thai, which pulses when it's their turn. Your message is played aloud in Thai and shown big, in bullets, one per question. Nobody else designs for the person who receives the phone.
 2. **Explains, not only translates.** When a dish or ingredient comes up, a card says what it is, which meat, how spicy, and flags your allergies.
-3. **Local context.** Northern Thai dishes, a Kham Mueang dictionary, date and season, the scene (market or restaurant), your photo, your saved preferences.
+3. **Local context.** Northern Thai dishes, a Kham Mueang dictionary, date and season, your saved info (allergies, spice, diet).
 4. **Cheap enough to be free.** Small models and browser text-to-speech, not a premium voice agent.
 
 ## Core flow
 
-1. **Input**: press one big mic button and brain-dump in your own language: context, hesitations, corrections included. Optionally add a photo (menu, stall).
-2. **Process**: speech-to-text, then a model that cleans, structures and enriches the request with context (scene, dishes, dictionary, preferences, season), and translates to Central Thai.
-3. **Output**: on top, the cleaned request in your language (so you can check it); below, the Thai version; a play button reads the Thai aloud (some people prefer listening to reading).
-4. **Show**: one tap switches to a full-screen Thai view for the vendor, with suggested replies as large buttons and a mic as fallback.
-5. **Answer back**: the vendor's reply is translated into your language, with a dish card whenever a dish or ingredient is mentioned.
-6. **Keep talking**: the app suggests one friendly follow-up question in Thai ("How long have you run this stall?"), which turns a transaction into an exchange.
+One stable screen: a chat on top, an action bar at the bottom with only two buttons (vendor mic left in grey, your mic right in black). 👤 top left opens My info, ＋ top right starts a new conversation. Wireframes: `people/jonathan/wireframes/v5.html`.
+
+1. **New session**: opening the app starts a conversation. a compact "My info" card (selected allergies, spice, diet) sits under "Say what's on your mind"; ✕ closes it, 👤 top left reopens it.
+2. **You speak**: tap your mic ("Speak", language underneath, e.g. "English ▾"). It turns into "Stop" and a Listening card with a live wave appears on your side of the chat.
+3. **Working on it**: your raw transcript appears at once, with a light running around it, while the model cleans, structures, enriches (dishes, dictionary, My info) and translates to Central Thai.
+4. **Ready**: the bubble turns into the final message: Thai big and bold, your language small underneath, bullets when there are several questions. The Thai plays aloud. The vendor's mic starts pulsing.
+5. **The vendor speaks**: same pattern on the left, in grey and in Thai.
+6. **Reply**: your language big, Thai original small. A full-width context card (third style) explains any dish or ingredient named, and flags allergy risks. Your mic pulses, the conversation goes on.
+
+Every message has a 🔊 button outside the bubble, on its inner side. Rule: **big = translation, small = original**.
 
 ## Language decisions
 
@@ -67,40 +71,41 @@ The first question the jury will ask. Our answer has to be **visible in the demo
 
 **In (demo MVP)**
 - Mobile web app, no install, no account, opened from a QR code.
-- Voice brain dump, photo input, scene chip (market / restaurant).
-- Output in the user's language + Thai + audio.
-- Show mode with suggested replies and mic.
-- Answer translated back, with dish cards.
-- Preferences and allergies set once, injected into every request.
-- One suggested follow-up question.
+- Dictation only, both sides, Thai fixed as the other language.
+- Chat thread with bilingual bubbles, bullets, 🔊 on every message.
+- Context card for dishes and ingredients, allergy flagged as a risk, never guaranteed.
+- My info stored on the phone, sent with every request.
 
 **Out (later)**
-- Gamification, levels, saved "memory" of deep exchanges, social features.
-- Restaurants uploading their own menu (two-sided market, impossible to prove in a weekend; the user's photo gives the same context).
+- Gamification, levels, social features.
+- **Memories (delight, V2 first)**: at the end of a good exchange, the app offers to save a memory, a short verbatim of the conversation (e.g. "20 years, it was my mother's stall"). The list of your memories opens from 👤 at the top left. It is the end goal made visible: a real cultural exchange, not a transaction.
+- Restaurants uploading their own menu (two-sided market, impossible to prove in a weekend).
 - On-device models, offline mode, native iOS/Android apps.
 - Thai-initiated flow (the "Later" user above).
 - Non-food scenes (barber, pharmacy, transport).
+- Typing, photo input, scene chip, suggested replies for the vendor, suggested follow-up questions (dropped during the design session, V2 candidates).
 
-## Open design questions (round 2)
+## Design decisions (session 2026-09-26)
 
-Current recommendations, to be decided in the design session.
-
-| # | Question | Recommendation |
+| # | Decision | Why |
 |---|---|---|
-| D1 | How does the Thai person reply? | Model-generated suggested replies as big Thai buttons ("very spicy / a little / not spicy"), mic as fallback. |
-| D2 | How does the screen pass from one person to the other? | Full-screen "show" mode rather than a split screen: at a stall you hold the phone, it isn't lying on a table. |
-| D3 | What does the Western user see when the answer comes back? | Translation plus a dish card (what it is, meat, spice level, allergy flag). |
-| D4 | Confirm the brain dump before showing it? | No blocking step. Cleaned version on top, Thai below, re-record if wrong. |
-| D5 | Home screen? | One giant mic, photo secondary, keyboard hidden. Scene chip preselected and editable; geolocation is optional (permission prompt, invisible in a demo). |
-| D6 | Where do preferences live? | Chips at first launch, no account. A declared allergy is always stated in the Thai message. |
-| D7 | History? | One thread per conversation, "New conversation" button. |
-| D8 | How does the jury try it? | QR code at the end of the demo, works on their phones in the room. |
+| D1 | The vendor replies by voice with their own mic, no suggested replies | Tap-to-choose felt artificial; a pulsing Thai-labelled mic tells them where to tap. |
+| D2 | One stable chat screen, no full-screen "show" mode, no split screen | Screens changed too much between states; split screen fails at a stall. |
+| D3 | Big = translation, small = original, in every bubble | The reader of each bubble reads the big text. |
+| D4 | No blocking confirmation; raw transcript shown first, then the final version | Shows you were heard and makes the wait visible (R3). |
+| D5 | Action bar with only two buttons: vendor mic left, your mic right; verb inside the mic, language underneath | You on the right, under the right thumb; the phone is handed to the left. |
+| D6 | My info shown as a compact card at the start of each session, closable; always reachable from 👤 top left | Makes the personalization visible from the first second. |
+| D7 | No chat history: opening the app always starts a new conversation, ＋ replaces the current one. Memories (later) will live next to My info behind 👤 | Keeps navigation minimal; what's worth keeping is a memory, not a log. |
+| D8 | Context cards full width, in a third style | They belong to neither side. |
+| D9 | Allergy: flagged as a risk with a check, never a guarantee | Addresses R4. |
 
 ## Constraints
 
 - Web app for the hackathon, mobile first (`prototype/`, Vite + React + TypeScript).
 - API models for the demo, chosen to be cheap enough for a free app. Model choices per step: models workstream.
-- Text-to-speech: browser speech synthesis first (free, Thai voices on most phones), to verify on the team's devices.
+- Speech-to-text: hosted (e.g. OpenAI `gpt-4o-transcribe`, Thai supported). Claude does not take audio, and the browser's own speech recognition is unreliable on iPhone.
+- Text-to-speech: browser speech synthesis (iOS has a Thai voice; Android depends on the phone). iOS blocks sound without a tap: auto-play relies on unlocking audio on the mic tap, to test on an iPhone.
+- One structured model response per message: translation items, original items, optional context card.
 - Public repo: API keys only in `prototype/.env.local`, never committed.
 
 ## Major risks
@@ -131,7 +136,7 @@ Current recommendations, to be decided in the design session.
 Draft, to refine once the flow works.
 
 1. **Problem (45 s)**: a real verbatim from our interviews, the curry stall situation.
-2. **Live scene (2 min 30)**: brain dump at a "stall", show mode, the vendor taps a reply, dish card, follow-up question.
+2. **Live scene (2 min 30)**: brain dump at a "stall", Thai played aloud, the vendor answers on their mic, context card with the allergy flag, one more exchange.
 3. **Why it's different (45 s)**: designed for both sides, explains, local context.
 4. **Try it now (30 s)**: QR code on screen.
 5. **Next (30 s)**: Thai-initiated flow, more scenes, on-device models.

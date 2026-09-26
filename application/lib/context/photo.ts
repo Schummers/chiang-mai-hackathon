@@ -83,6 +83,11 @@ export const PHOTO_SCHEMA = {
 } as const;
 
 const str = (v: unknown): string | undefined => (typeof v === "string" && v.trim() ? v.trim() : undefined);
+/** A "Thai" name with no Thai script in it (the model copied the English): drop it. */
+const thai = (v: unknown): string | undefined => {
+  const s = str(v);
+  return s && /[\u0E00-\u0E7F]/.test(s) ? s : undefined;
+};
 
 const UNREADABLE: PhotoCard = {
   kind: "sign",
@@ -108,7 +113,7 @@ export function toPhotoCard(raw: unknown, myInfo: MyInfo, pack: Pack = PACK): Ph
   const dishId = str(r.dishId);
 
   const card: PhotoCard = { kind, title, description };
-  const titleThai = str(r.titleThai);
+  const titleThai = thai(r.titleThai);
   if (titleThai) card.titleThai = titleThai;
 
   if (kind === "menu") {
@@ -117,7 +122,7 @@ export function toPhotoCard(raw: unknown, myInfo: MyInfo, pack: Pack = PACK): Ph
       .slice(0, MAX_ITEMS)
       .map((i) => {
         const item: PhotoMenuItem = { name: str(i.name)! };
-        const nameThai = str(i.nameThai);
+        const nameThai = thai(i.nameThai);
         const note = str(i.note);
         const warning = warningFor(str(i.dishId), str(i.warning), myInfo, pack);
         if (nameThai) item.nameThai = nameThai;

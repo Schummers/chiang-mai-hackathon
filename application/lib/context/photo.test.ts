@@ -43,6 +43,12 @@ describe("toPhotoCard", () => {
     expect(card.spice).toBe(3);
   });
 
+  it("drops a Thai name that has no Thai in it", () => {
+    const card = toPhotoCard({ kind: "menu", title: "Appetizers", titleThai: "Appetizers menu", description: "", items: [{ name: "Fries", nameThai: "Fries" }] }, info());
+    expect(card.titleThai).toBeUndefined();
+    expect(card.items![0].nameThai).toBeUndefined();
+  });
+
   it("falls back to a plain sign card on anything off", () => {
     for (const raw of [null, "text", { kind: "poster", title: "x", description: "y" }, { kind: "dish" }]) {
       const card = toPhotoCard(raw, info());

@@ -1,0 +1,274 @@
+import { describe, expect, it, vi } from "vitest";
+import { ConversationEngine } from "./engine";
+import { createMockTurnService, KHAO_SOI_SCRIPT } from "./mockTurnService";
+import { createTurnService } from "./turnService";
+import type { MyInfo, TranslateInput, TranslateResult, TurnService } from "./types";
+
+// A turn service whose calls resolve only when the test says so.
+function controllableService() {
+  const transcribes: { language: string; resolve: (raw: string) => void; reject: (e: Error) => void }[] = [];
+  const translates: { input: TranslateInput; resolve: (r: TranslateResult) => void; reject: (e: Error) => void }[] = [];
+  const service: TurnService = {
+    transcribe: (_audio, language) =>
+      new Promise((resolve, reject) => transcribes.push({ language, resolve, reject })),
+    translate: (input) => new Promise((resolve, reject) => translates.push({ input, resolve, reject })),
+  };
+  return { service, transcribes, translates };
+}
+
+const audio = new Blob(["fake"], { type: "audio/webm" });
+const flush = () => new Promise((r) => setTimeout(r, 0));
+
+const reply = (over: Partial<TranslateResult> = {}): TranslateResult => ({
+  translation: ["จานนี้คืออะไรครับ"],
+  original: ["What is this dish?"],
+  card: null,
+  ...over,
+});
+
+async function fullTurn(engine: ConversationEngine, fake: ReturnType<typeof controllableService>, speaker: "you" | "vendor", result: TranslateResult) {
+  engine.micTap(speaker);
+  const done = engine.stop(speaker, audio);
+  await flush();
+  fake.transcribes.at(-1)!.resolve("some raw words");
+  await flush();
+  fake.translates.at(-1)!.resolve(result);
+  await done;
+}
+
+describe("conversation engine", () => {
+  it("opens on an empty conversation where it's your turn", () => {
+    const engine = new ConversationEngine({ service: controllableService().service });
+    expect(engine.getState().messages).toEqual([]);
+    expect(engine.getState().phase).toEqual({ kind: "idle", nextTurn: "you" });
+  });
+
+  it("lets only one speaker record at a time", () => {
+    const engine = new ConversationEngine({ service: controllableService().service, now: () => 1000 });
+    engine.micTap("you");
+    expect(engine.getState().phase).toEqual({ kind: "listening", speaker: "you", startedAt: 1000 });
+    engine.micTap("vendor");
+    expect(engine.getState().phase).toMatchObject({ kind: "listening", speaker: "you" });
+  });
+
+  it("either side may start when idle, the pulse is only a hint", () => {
+    const engine = new ConversationEngine({ service: controllableService().service });
+    engine.micTap("vendor");
+    expect(engine.getState().phase).toMatchObject({ kind: "listening", speaker: "vendor" });
+  });
+
+  it("shows the raw transcript before the final message", async () => {
+    const fake = controllableService();
+    const engine = new ConversationEngine({ service: fake.service });
+    engine.micTap("you");
+    const done = engine.stop("you", audio);
+    expect(engine.getState().phase).toEqual({ kind: "processing", speaker: "you" });
+
+    await flush();
+    fake.transcribes[0].resolve("uh so what is this, is it spicy");
+    await flush();
+    expect(engine.getState().phase).toEqual({ kind: "processing", speaker: "you", raw: "uh so what is this, is it spicy" });
+    expect(engine.getState().messages).toHaveLength(0);
+
+    fake.translates[0].resolve(reply());
+    await done;
+    expect(engine.getState().messages).toMatchObject([
+      { speaker: "you", translation: ["จานนี้คืออะไรครับ"], original: ["What is this dish?"], card: null },
+    ]);
+  });
+
+  it("hands the turn to the other side after each message", async () => {
+    const fake = controllableService();
+    const engine = new ConversationEngine({ service: fake.service });
+    await fullTurn(engine, fake, "you", reply());
+    expect(engine.getState().phase).toEqual({ kind: "idle", nextTurn: "vendor" });
+    await fullTurn(engine, fake, "vendor", reply());
+    expect(engine.getState().phase).toEqual({ kind: "idle", nextTurn: "you" });
+  });
+
+  it("transcribes the vendor in Thai and you in your language", async () => {
+    const fake = controllableService();
+    const engine = new ConversationEngine({ service: fake.service, getUserLanguage: () => "fr" });
+    await fullTurn(engine, fake, "you", reply());
+    await fullTurn(engine, fake, "vendor", reply());
+    expect(fake.transcribes.map((t) => t.language)).toEqual(["fr", "th"]);
+  });
+
+  it("keeps several questions as separate bullets", async () => {
+    const fake = controllableService();
+    const engine = new ConversationEngine({ service: fake.service });
+    const items = { translation: ["a", "b", "c"], original: ["A", "B", "C"] };
+    await fullTurn(engine, fake, "you", reply(items));
+    expect(engine.getState().messages[0]).toMatchObject(items);
+  });
+
+  it("attaches a context card only when the service returns one", async () => {
+    const fake = controllableService();
+    const engine = new ConversationEngine({ service: fake.service });
+    const card = { name: "Khao Soi", description: "Curry noodle soup" };
+    await fullTurn(engine, fake, "you", reply());
+    await fullTurn(engine, fake, "vendor", reply({ card }));
+    expect(engine.getState().messages.map((m) => m.card)).toEqual([null, card]);
+  });
+
+  it("sends my info, my language and the history with every translation", async () => {
+    const fake = controllableService();
+    const myInfo: MyInfo = { allergies: ["peanuts"], spice: "mild", diet: [] };
+    const engine = new ConversationEngine({ service: fake.service, getMyInfo: () => myInfo, getUserLanguage: () => "en" });
+    await fullTurn(engine, fake, "you", reply());
+    await fullTurn(engine, fake, "vendor", reply());
+    expect(fake.translates[1].input).toMatchObject({
+      raw: "some raw words",
+      speaker: "vendor",
+      userLanguage: "en",
+      myInfo,
+      history: [{ speaker: "you" }],
+    });
+  });
+
+  it("reports info detected in what you said", async () => {
+    const fake = controllableService();
+    const onDetectedInfo = vi.fn();
+    const engine = new ConversationEngine({ service: fake.service, onDetectedInfo });
+    await fullTurn(engine, fake, "you", reply({ detectedInfo: { allergies: ["peanuts"] } }));
+    expect(onDetectedInfo).toHaveBeenCalledWith({ allergies: ["peanuts"] });
+  });
+
+  it("shows a network error when transcription fails, and the same speaker can retry", async () => {
+    const fake = controllableService();
+    const engine = new ConversationEngine({ service: fake.service });
+    engine.micTap("you");
+    const done = engine.stop("you", audio);
+    await flush();
+    fake.transcribes[0].reject(new Error("offline"));
+    await done;
+    expect(engine.getState().phase).toEqual({ kind: "error", speaker: "you", reason: "network" });
+    expect(engine.getState().messages).toHaveLength(0);
+
+    engine.micTap("you");
+    expect(engine.getState().phase).toMatchObject({ kind: "listening", speaker: "you" });
+  });
+
+  it("shows a network error when translation fails", async () => {
+    const fake = controllableService();
+    const engine = new ConversationEngine({ service: fake.service });
+    engine.micTap("vendor");
+    const done = engine.stop("vendor", audio);
+    await flush();
+    fake.transcribes[0].resolve("ข้าวซอย");
+    await flush();
+    fake.translates[0].reject(new Error("500"));
+    await done;
+    expect(engine.getState().phase).toEqual({ kind: "error", speaker: "vendor", reason: "network" });
+  });
+
+  it("shows an empty-recording error when nothing was heard", async () => {
+    const fake = controllableService();
+    const engine = new ConversationEngine({ service: fake.service });
+    engine.micTap("you");
+    const done = engine.stop("you", audio);
+    await flush();
+    fake.transcribes[0].resolve("   ");
+    await done;
+    expect(engine.getState().phase).toEqual({ kind: "error", speaker: "you", reason: "empty" });
+    expect(fake.translates).toHaveLength(0);
+  });
+
+  it("shows a mic-denied error, and dismissing it gives the turn back to that speaker", () => {
+    const engine = new ConversationEngine({ service: controllableService().service });
+    engine.micTap("you");
+    engine.fail("you", "mic-denied");
+    expect(engine.getState().phase).toEqual({ kind: "error", speaker: "you", reason: "mic-denied" });
+    engine.dismissError();
+    expect(engine.getState().phase).toEqual({ kind: "idle", nextTurn: "you" });
+  });
+
+  it("cancels a recording without sending anything", () => {
+    const fake = controllableService();
+    const engine = new ConversationEngine({ service: fake.service });
+    engine.micTap("vendor");
+    engine.cancel();
+    expect(engine.getState().phase).toEqual({ kind: "idle", nextTurn: "vendor" });
+  });
+
+  it("starts a new conversation from scratch and ignores late answers from the old one", async () => {
+    const fake = controllableService();
+    const engine = new ConversationEngine({ service: fake.service });
+    await fullTurn(engine, fake, "you", reply());
+    engine.micTap("vendor");
+    const late = engine.stop("vendor", audio);
+    await flush();
+
+    engine.newConversation();
+    expect(engine.getState().messages).toEqual([]);
+    expect(engine.getState().phase).toEqual({ kind: "idle", nextTurn: "you" });
+
+    fake.transcribes[1].resolve("late words");
+    await late;
+    expect(fake.translates).toHaveLength(1);
+    expect(engine.getState().phase).toEqual({ kind: "idle", nextTurn: "you" });
+    expect(engine.getState().messages).toEqual([]);
+  });
+
+  it("notifies subscribers on every change", () => {
+    const engine = new ConversationEngine({ service: controllableService().service });
+    const listener = vi.fn();
+    const unsubscribe = engine.subscribe(listener);
+    engine.micTap("you");
+    engine.cancel();
+    unsubscribe();
+    engine.micTap("you");
+    expect(listener).toHaveBeenCalledTimes(2);
+  });
+});
+
+describe("mock turn service (Khao Soi scenario)", () => {
+  it("replays the 4-turn exchange, with the card on the vendor's first answer", async () => {
+    const onDetectedInfo = vi.fn();
+    const engine = new ConversationEngine({
+      service: createMockTurnService({ transcribeMs: 0, translateMs: 0 }),
+      onDetectedInfo,
+    });
+    for (const speaker of ["you", "vendor", "you", "vendor"] as const) {
+      engine.micTap(speaker);
+      await engine.stop(speaker, audio);
+    }
+    const messages = engine.getState().messages;
+    expect(messages.map((m) => m.speaker)).toEqual(["you", "vendor", "you", "vendor"]);
+    expect(messages[0].translation).toHaveLength(3);
+    expect(messages[1].translation).toEqual(["Chicken khao soi", "A little spicy", "No peanuts"]);
+    expect(messages[1].card).toMatchObject({ name: "Khao Soi", nameThai: "ข้าวซอย" });
+    expect(messages.filter((m) => m.card)).toHaveLength(1);
+    expect(onDetectedInfo).toHaveBeenCalledWith({ allergies: ["peanuts"] });
+    expect(engine.getState().phase).toEqual({ kind: "idle", nextTurn: "you" });
+  });
+
+  it("replays the scenario from the start after a new conversation", async () => {
+    const engine = new ConversationEngine({ service: createMockTurnService({ transcribeMs: 0, translateMs: 0 }) });
+    engine.micTap("you");
+    await engine.stop("you", audio);
+    engine.newConversation();
+    engine.micTap("you");
+    const done = engine.stop("you", audio);
+    await new Promise((r) => setTimeout(r, 1));
+    expect(engine.getState().phase).toMatchObject({ raw: KHAO_SOI_SCRIPT[0].raw });
+    await done;
+  });
+
+  it("waits roughly the configured delays", async () => {
+    vi.useFakeTimers();
+    const service = createMockTurnService({ transcribeMs: 800, translateMs: 1500 });
+    let raw: string | undefined;
+    service.transcribe(audio, "en").then((r) => (raw = r));
+    await vi.advanceTimersByTimeAsync(799);
+    expect(raw).toBeUndefined();
+    await vi.advanceTimersByTimeAsync(1);
+    expect(raw).toBe(KHAO_SOI_SCRIPT[0].raw);
+    vi.useRealTimers();
+  });
+
+  it("is the default turn service", () => {
+    expect(createTurnService(undefined).kind).toBe("mock");
+    expect(createTurnService("api").kind).toBe("api");
+  });
+});

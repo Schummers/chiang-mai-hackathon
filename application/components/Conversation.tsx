@@ -1,18 +1,36 @@
 "use client";
 
 import { Plus, UserRound } from "lucide-react";
-import { useCallback, useState } from "react";
-import type { Speaker } from "@/lib/engine/types";
+import { useCallback, useRef, useState } from "react";
+import type { MyInfo, Speaker } from "@/lib/engine/types";
+import { mergeMyInfo } from "@/lib/myInfo";
 import { Recorder } from "@/lib/recorder";
 import { useConversation } from "@/lib/useConversation";
+import { myInfoStore, useMyInfo } from "@/lib/useMyInfo";
 import { ActionBar } from "./ActionBar";
 import { ChatThread } from "./ChatThread";
 import { ListeningCard } from "./ListeningCard";
+import { MyInfoCard, MyInfoPage, Toast } from "./MyInfo";
 import s from "./Screen.module.css";
 
 /** The one stable screen: top bar, chat, two-mic action bar. */
 export function Conversation() {
-  const { engine, state } = useConversation({});
+  const myInfo = useMyInfo();
+  const [infoOpen, setInfoOpen] = useState(false);
+  const [infoCardClosed, setInfoCardClosed] = useState(false);
+  const [toast, setToast] = useState<string | null>(null);
+  const toastTimer = useRef<ReturnType<typeof setTimeout>>(undefined);
+
+  const onDetectedInfo = (detected: Partial<MyInfo>) => {
+    const { info, changed } = mergeMyInfo(myInfoStore.get(), detected);
+    if (!changed) return;
+    myInfoStore.set(info);
+    setToast("Saved to My info");
+    clearTimeout(toastTimer.current);
+    toastTimer.current = setTimeout(() => setToast(null), 2500);
+  };
+
+  const { engine, state } = useConversation({ getMyInfo: myInfoStore.get, onDetectedInfo });
   const [recorder] = useState(() => new Recorder());
   const getLevel = useCallback(() => recorder.level, [recorder]);
 
@@ -28,6 +46,7 @@ export function Conversation() {
     if (phase.kind === "listening" && phase.speaker === speaker) return void finish(speaker);
 
     recorder.unlockAudio(); // must run inside the tap, for iOS
+    setInfoCardClosed(true);
     engine.micTap(speaker);
     const now = engine.getState().phase;
     if (now.kind !== "listening" || now.speaker !== speaker) return;
@@ -40,6 +59,7 @@ export function Conversation() {
   const newConversation = () => {
     recorder.cancel();
     engine.newConversation();
+    setInfoCardClosed(false);
   };
 
   const { phase } = state;
@@ -56,7 +76,7 @@ export function Conversation() {
   return (
     <main className={s.screen}>
       <header className={s.top}>
-        <button className={s.iconBtn} aria-label="My info">
+        <button className={s.iconBtn} aria-label="My info" onClick={() => setInfoOpen(true)}>
           <UserRound size={22} strokeWidth={2.1} />
         </button>
         <div className={s.brand}>
@@ -67,9 +87,20 @@ export function Conversation() {
         </button>
       </header>
 
-      <ChatThread state={state} live={live} />
+      <ChatThread
+        state={state}
+        live={live}
+        intro={
+          !infoCardClosed && (
+            <MyInfoCard info={myInfo} onOpen={() => setInfoOpen(true)} onClose={() => setInfoCardClosed(true)} />
+          )
+        }
+      />
 
       <ActionBar state={state} onTap={onTap} yourVerb="Speak" yourStop="Stop" yourLanguage="English" />
+
+      {infoOpen && <MyInfoPage info={myInfo} onChange={myInfoStore.set} onDone={() => setInfoOpen(false)} />}
+      {toast && <Toast text={toast} />}
     </main>
   );
 }

@@ -1,0 +1,65 @@
+import { beforeEach, describe, expect, it } from "vitest";
+import { chipLabels, loadMyInfo, mergeMyInfo, saveMyInfo } from "./myInfo";
+import { EMPTY_MY_INFO, type MyInfo } from "./engine/types";
+
+function fakeStorage(): Storage {
+  const data = new Map<string, string>();
+  return {
+    getItem: (k) => data.get(k) ?? null,
+    setItem: (k, v) => void data.set(k, v),
+    removeItem: (k) => void data.delete(k),
+    clear: () => data.clear(),
+    key: () => null,
+    get length() {
+      return data.size;
+    },
+  };
+}
+
+const broken = {
+  getItem: () => {
+    throw new Error("blocked");
+  },
+  setItem: () => {
+    throw new Error("blocked");
+  },
+} as unknown as Storage;
+
+describe("my info", () => {
+  let storage: Storage;
+  beforeEach(() => (storage = fakeStorage()));
+
+  it("is empty the first time", () => {
+    expect(loadMyInfo(storage)).toEqual(EMPTY_MY_INFO);
+  });
+
+  it("comes back after being saved on the phone", () => {
+    const info: MyInfo = { allergies: ["peanuts"], spice: "mild", diet: ["halal"] };
+    saveMyInfo(info, storage);
+    expect(loadMyInfo(storage)).toEqual(info);
+  });
+
+  it("falls back to empty when storage is blocked or corrupted", () => {
+    expect(loadMyInfo(broken)).toEqual(EMPTY_MY_INFO);
+    expect(() => saveMyInfo(EMPTY_MY_INFO, broken)).not.toThrow();
+    storage.setItem("u-mueang:my-info", "{not json");
+    expect(loadMyInfo(storage)).toEqual(EMPTY_MY_INFO);
+  });
+
+  it("adds what was said aloud without dropping what was there", () => {
+    const current: MyInfo = { allergies: ["gluten"], spice: null, diet: ["no-pork"] };
+    const { info, changed } = mergeMyInfo(current, { allergies: ["peanuts"], spice: "mild" });
+    expect(info).toEqual({ allergies: ["gluten", "peanuts"], spice: "mild", diet: ["no-pork"] });
+    expect(changed).toBe(true);
+  });
+
+  it("reports no change when the info was already known", () => {
+    const current: MyInfo = { allergies: ["peanuts"], spice: null, diet: [] };
+    expect(mergeMyInfo(current, { allergies: ["peanuts"] }).changed).toBe(false);
+  });
+
+  it("lists only the selected chips", () => {
+    expect(chipLabels({ allergies: ["peanuts"], spice: "mild", diet: [] })).toEqual(["Peanut allergy", "Mild spice"]);
+    expect(chipLabels(EMPTY_MY_INFO)).toEqual([]);
+  });
+});

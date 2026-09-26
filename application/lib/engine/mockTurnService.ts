@@ -27,6 +27,7 @@ export const KHAO_SOI_SCRIPT: ScriptTurn[] = [
           "Curry noodle soup with coconut milk, a Chiang Mai signature. Crispy noodles on top, pickled mustard greens and shallots on the side.",
         meat: "Chicken",
         spice: 1,
+        localDetail: "Locals squeeze in lime and stir in the chili paste to taste.",
         warning: "The vendor says no peanuts. Toppings vary between stalls: double-check the chili paste.",
       },
     },

@@ -22,6 +22,8 @@ export type ContextCard = {
   meat?: string;
   /** 0 = not spicy, 1 = mild, 2 = medium, 3 = hot. */
   spice?: 0 | 1 | 2 | 3;
+  /** One line anchoring it in Chiang Mai: when or how locals eat it. */
+  localDetail?: string;
   /** Risk based on My info. A flag to double-check, never a guarantee. */
   warning?: string;
 };

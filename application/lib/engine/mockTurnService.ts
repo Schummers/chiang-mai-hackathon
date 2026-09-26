@@ -61,10 +61,13 @@ const MOCK_MENU: PhotoCard = {
   titleThai: "ร้านข้าวซอย",
   description: "A handwritten menu of Chiang Mai classics, noodles and curries.",
   items: [
-    { name: "Khao Soi Gai", nameThai: "ข้าวซอยไก่", note: "Chicken curry noodle soup, a little spicy" },
-    { name: "Gaeng Hang Lay", nameThai: "แกงฮังเล", note: "Slow-cooked pork curry, sweet and mild" },
-    { name: "Nam Prik Ong", nameThai: "น้ำพริกอ่อง", note: "Pork and tomato chili dip with vegetables" },
-    { name: "Sai Oua", nameThai: "ไส้อั่ว", note: "Grilled herb sausage, pork" },
+    { name: "Khao Soi Gai", nameThai: "ข้าวซอยไก่", note: "Mild ok" },
+    { name: "Gaeng Hang Lay", nameThai: "แกงฮังเล", note: "Local" },
+    { name: "Nam Prik Ong", nameThai: "น้ำพริกอ่อง", note: "Local" },
+    { name: "Sai Oua", nameThai: "ไส้อั่ว", note: "Local" },
+    { name: "Khanom Jeen Nam Ngiao", nameThai: "ขนมจีนน้ำเงี้ยว", note: "Medium" },
+    { name: "Laab Mueang", nameThai: "ลาบเมือง", note: "Hot" },
+    { name: "Kaeng Khae", nameThai: "แกงแค", note: "Local" },
   ],
 };
 
@@ -79,6 +82,32 @@ export function mockMenuCard(myInfo: MyInfo): PhotoCard {
   };
 }
 
+/** One fixture per other kind. After the menu, the mock cycles through them so every card can be seen. */
+export const MOCK_PHOTO_CARDS: PhotoCard[] = [
+  {
+    kind: "dish",
+    title: "Khao Soi",
+    titleThai: "ข้าวซอย",
+    description: "Curry noodle soup with coconut milk, crispy noodles on top.",
+    meat: "Chicken",
+    spice: 1,
+    localDetail: "Locals squeeze in lime and stir in the chili paste to taste.",
+  },
+  {
+    kind: "produce",
+    title: "Longan",
+    titleThai: "ลำไย",
+    description: "Sweet, juicy, peel and eat. Chiang Mai's fruit.",
+    localDetail: "In season July to September.",
+  },
+  {
+    kind: "sign",
+    title: "No shoes inside",
+    titleThai: "กรุณาถอดรองเท้า",
+    description: "Temple rule: leave your shoes at the steps.",
+  },
+];
+
 export type MockOptions = { transcribeMs?: number; translateMs?: number; readPhotoMs?: number };
 
 const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
@@ -92,6 +121,7 @@ function turnFor(speaker: Speaker, index: number): ScriptTurn {
 export function createMockTurnService({ transcribeMs = 800, translateMs = 1500, readPhotoMs = 2000 }: MockOptions = {}): TurnService {
   // Turns each side has completed, so a failed turn replays the same line on retry.
   const done: Record<Speaker, number> = { you: 0, vendor: 0 };
+  let photos = 0;
   return {
     async transcribe(_audio, language) {
       const speaker: Speaker = language === "th" ? "vendor" : "you";
@@ -106,11 +136,13 @@ export function createMockTurnService({ transcribeMs = 800, translateMs = 1500, 
     },
     async readPhoto(_image, { myInfo }) {
       await sleep(readPhotoMs);
-      return mockMenuCard(myInfo);
+      const n = photos++ % (MOCK_PHOTO_CARDS.length + 1);
+      return n === 0 ? mockMenuCard(myInfo) : MOCK_PHOTO_CARDS[n - 1];
     },
     reset() {
       done.you = 0;
       done.vendor = 0;
+      photos = 0;
     },
   };
 }

@@ -525,6 +525,16 @@ describe("mock photo reading", () => {
     expect(card.items!.some((i) => /peanut/i.test(i.warning ?? ""))).toBe(true);
   });
 
+  it("then cycles through a dish, a fruit and a sign, and back to the menu", async () => {
+    const service = createMockTurnService({ readPhotoMs: 0 });
+    const input = { userLanguage: "en", myInfo: { allergies: [], spice: null, diet: [] } };
+    const kinds = [];
+    for (let i = 0; i < 5; i++) kinds.push((await service.readPhoto!(image, input)).kind);
+    expect(kinds).toEqual(["menu", "dish", "produce", "sign", "menu"]);
+    service.reset!();
+    expect((await service.readPhoto!(image, input)).kind).toBe("menu");
+  });
+
   it("flags nothing when About you is empty", async () => {
     vi.useFakeTimers();
     const service = createMockTurnService({ readPhotoMs: 10 });

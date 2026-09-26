@@ -1,0 +1,1696 @@
+[
+  {
+    "id": "say-hello",
+    "type": "say",
+    "moment": "start",
+    "slot": "none",
+    "english": "Hello",
+    "centralThai": {
+      "m": "สวัสดีครับ",
+      "f": "สวัสดีค่ะ"
+    },
+    "khamMueang": {
+      "m": "สะหวัดดีคับ",
+      "f": "สะหวัดดีเจ้า"
+    },
+    "romanised": {
+      "central": {
+        "m": "sa-wat-dee khrap",
+        "f": "sa-wat-dee kha"
+      },
+      "khamMueang": {
+        "m": "sa-wat-dee khap",
+        "f": "sa-wat-dee jao"
+      }
+    },
+    "likelyReplies": [
+      {
+        "th": "สะหวัดดีเจ้า",
+        "en": "Hello (polite)"
+      },
+      {
+        "th": "เจิญเจ้า",
+        "en": "Please, come in / go ahead"
+      }
+    ],
+    "sources": [
+      "https://www.fixconcern.com/greeting-and-asking-questions-in-northern-languages/",
+      "https://www.fixconcern.com/order-food-in-northern-languages/",
+      "https://www.centarahotelsresorts.com/journal/northern-thai-language-oo-kam-mueang"
+    ],
+    "confidence": "high",
+    "reviewerNote": "Also works as goodbye. Male particle: sources split between คับ (fixconcern) and KRUB (Centara). Is สวั๋สดี spelling preferred?"
+  },
+  {
+    "id": "say-how-are-you",
+    "type": "say",
+    "moment": "start",
+    "slot": "none",
+    "english": "How are you? (to a vendor you already know)",
+    "centralThai": {
+      "m": "สบายดีไหมครับ",
+      "f": "สบายดีไหมคะ"
+    },
+    "khamMueang": {
+      "m": "สบายดีบ๋อ",
+      "f": "สบายดีบ๋อ"
+    },
+    "romanised": {
+      "central": {
+        "m": "sa-bai dee mai khrap",
+        "f": "sa-bai dee mai kha"
+      },
+      "khamMueang": {
+        "m": "sa-bai dee bor",
+        "f": "sa-bai dee bor"
+      }
+    },
+    "likelyReplies": [
+      {
+        "th": "สบายดีค่ะ",
+        "en": "I'm fine"
+      },
+      {
+        "th": "สบายดี แล้วคุณล่ะ",
+        "en": "Fine, and you?"
+      }
+    ],
+    "sources": [
+      "https://www.wongnai.com/articles/northern-language",
+      "http://thingsasian.com/story/northern-thai-primer"
+    ],
+    "confidence": "high",
+    "reviewerNote": "For a second visit only; strangers do not need it. Can a particle be added after บ๋อ?"
+  },
+  {
+    "id": "say-sorry",
+    "type": "say",
+    "moment": "start",
+    "slot": "none",
+    "english": "Excuse me / sorry",
+    "centralThai": {
+      "m": "ขอโทษครับ",
+      "f": "ขอโทษค่ะ"
+    },
+    "khamMueang": {
+      "m": "สูมาเต๊อะคับ",
+      "f": "สูมาเต๊อะเจ้า"
+    },
+    "romanised": {
+      "central": {
+        "m": "kho thot khrap",
+        "f": "kho thot kha"
+      },
+      "khamMueang": {
+        "m": "soo-ma ter khap",
+        "f": "soo-ma ter jao"
+      }
+    },
+    "likelyReplies": [
+      {
+        "th": "ไม่เป็นไรค่ะ",
+        "en": "No problem"
+      }
+    ],
+    "sources": [
+      "people/luke/lanna-context/kham_mueang_glossary.json",
+      "https://www.centarahotelsresorts.com/journal/northern-thai-language-oo-kam-mueang"
+    ],
+    "confidence": "medium",
+    "reviewerNote": "Is สูมาเต๊อะ used to get a busy vendor's attention, or only to apologise? If only to apologise, which word do you use to call a vendor?"
+  },
+  {
+    "id": "say-little-northern",
+    "type": "say",
+    "moment": "start",
+    "slot": "none",
+    "english": "I only speak a little Northern Thai",
+    "centralThai": {
+      "m": "พูดภาษาเหนือได้นิดหน่อยครับ",
+      "f": "พูดภาษาเหนือได้นิดหน่อยค่ะ"
+    },
+    "khamMueang": null,
+    "romanised": {
+      "central": {
+        "m": "phuut phaa-saa nuea dai nit noi khrap",
+        "f": "phuut phaa-saa nuea dai nit noi kha"
+      },
+      "khamMueang": null
+    },
+    "likelyReplies": [
+      {
+        "th": "พูดเก่งแล้วค่ะ",
+        "en": "You already speak well!"
+      }
+    ],
+    "sources": [
+      "https://adahouse-cnx.com/th/blog/kham-mueang-northern-thai",
+      "people/luke/lanna-context/etiquette.json (conversation.good_topics)"
+    ],
+    "confidence": "medium",
+    "reviewerNote": "Kham Mueang left empty: we found อู้ (speak) and กำเมือง, but no sourced sentence. How would you say it?"
+  },
+  {
+    "id": "say-this-one",
+    "type": "say",
+    "moment": "decide",
+    "slot": "none",
+    "english": "This one, please (dish or product)",
+    "centralThai": {
+      "m": "เอาอันนี้ครับ",
+      "f": "เอาอันนี้ค่ะ"
+    },
+    "khamMueang": null,
+    "romanised": {
+      "central": {
+        "m": "ao an-nee khrap",
+        "f": "ao an-nee kha"
+      },
+      "khamMueang": null
+    },
+    "likelyReplies": [
+      {
+        "th": "ได้เจ้า",
+        "en": "OK"
+      },
+      {
+        "th": "เอากี่อันคะ",
+        "en": "How many?"
+      }
+    ],
+    "sources": [
+      "people/luke/lanna-context/kham_mueang_glossary.json"
+    ],
+    "confidence": "high",
+    "reviewerNote": "Plain ordering line, Central Thai only. Is there a Northern way that a tourist can manage?"
+  },
+  {
+    "id": "say-not-too-spicy",
+    "type": "say",
+    "moment": "decide",
+    "slot": "none",
+    "english": "Not too spicy, please",
+    "centralThai": {
+      "m": "ไม่เผ็ดมากนะครับ",
+      "f": "ไม่เผ็ดมากนะคะ"
+    },
+    "khamMueang": null,
+    "romanised": {
+      "central": {
+        "m": "mai phet mak na khrap",
+        "f": "mai phet mak na kha"
+      },
+      "khamMueang": null
+    },
+    "likelyReplies": [
+      {
+        "th": "ได้ค่ะ ไม่เผ็ด",
+        "en": "OK, not spicy"
+      }
+    ],
+    "sources": [
+      "https://www.centarahotelsresorts.com/journal/northern-thai-language-oo-kam-mueang",
+      "people/luke/lanna-context/kham_mueang_glossary.json"
+    ],
+    "confidence": "high",
+    "reviewerNote": "The pack has บ่เผ็ด (Centara: BOR-PED) but no full sentence. Would บ่เผ็ดนักเน้อ sound natural? (unsourced, please confirm or fix)"
+  },
+  {
+    "id": "say-no-rush",
+    "type": "say",
+    "moment": "decide",
+    "slot": "none",
+    "english": "No rush, take your time",
+    "centralThai": {
+      "m": "ไม่ต้องรีบครับ",
+      "f": "ไม่ต้องรีบค่ะ"
+    },
+    "khamMueang": {
+      "m": "บ่าดีฟั่งคับ",
+      "f": "บ่าดีฟั่งเจ้า"
+    },
+    "romanised": {
+      "central": {
+        "m": "mai tong reep khrap",
+        "f": "mai tong reep kha"
+      },
+      "khamMueang": {
+        "m": "baa dee fang khap",
+        "f": "baa dee fang jao"
+      }
+    },
+    "likelyReplies": [
+      {
+        "th": "ยินดีเจ้า",
+        "en": "Thank you"
+      }
+    ],
+    "sources": [
+      "https://www.trueplookpanya.com/learning/detail/25164",
+      "people/luke/lanna-context/kham_mueang_glossary.json"
+    ],
+    "confidence": "medium",
+    "reviewerNote": "For when the stall is busy. Source lists บ่าดีฟั่ง as 'don't hurry'. Is it kind, or does it sound like an order to a vendor?"
+  },
+  {
+    "id": "say-more-sticky-rice",
+    "type": "say",
+    "moment": "receive",
+    "slot": "none",
+    "english": "More sticky rice, please",
+    "centralThai": {
+      "m": "ขอข้าวเหนียวเพิ่มครับ",
+      "f": "ขอข้าวเหนียวเพิ่มค่ะ"
+    },
+    "khamMueang": null,
+    "romanised": {
+      "central": {
+        "m": "kho khao niao perm khrap",
+        "f": "kho khao niao perm kha"
+      },
+      "khamMueang": null
+    },
+    "likelyReplies": [
+      {
+        "th": "ได้เจ้า",
+        "en": "Sure"
+      }
+    ],
+    "sources": [
+      "https://www.fixconcern.com/order-food-in-northern-languages/",
+      "people/luke/lanna-context/kham_mueang_glossary.json"
+    ],
+    "confidence": "medium",
+    "reviewerNote": "Sourced Northern line is for a group: เอาข้าวนึ่งแหมคนจานเจ้า ('one more plate each'). What is the one-person version? ข้าวนึ่ง = sticky rice. Only relevant when eating at the stall."
+  },
+  {
+    "id": "say-delicious",
+    "type": "say",
+    "moment": "receive",
+    "slot": "none",
+    "english": "Delicious!",
+    "centralThai": {
+      "m": "อร่อยครับ",
+      "f": "อร่อยค่ะ"
+    },
+    "khamMueang": {
+      "m": "ลำคับ",
+      "f": "ลำเจ้า"
+    },
+    "romanised": {
+      "central": {
+        "m": "a-roi khrap",
+        "f": "a-roi kha"
+      },
+      "khamMueang": {
+        "m": "lam khap",
+        "f": "lam jao"
+      }
+    },
+    "likelyReplies": [
+      {
+        "th": "ลำก่อ",
+        "en": "Is it good?"
+      },
+      {
+        "th": "ยินดีเจ้า",
+        "en": "Thank you"
+      }
+    ],
+    "sources": [
+      "https://adahouse-cnx.com/th/blog/kham-mueang-northern-thai",
+      "https://www.sanook.com/campus/1392241/",
+      "https://www.thairath.co.th/lifestyle/life/2775195",
+      "people/luke/lanna-context/lanna_dict_full.json (PyThaiNLP lanna_dict, from Thai Wiktionary)"
+    ],
+    "confidence": "high",
+    "reviewerNote": "The core move. Is ลำ + particle alone natural, or do people always add ขนาด / แต๊?"
+  },
+  {
+    "id": "say-very-delicious",
+    "type": "say",
+    "moment": "receive",
+    "slot": "none",
+    "english": "Very delicious!",
+    "centralThai": {
+      "m": "อร่อยมากครับ",
+      "f": "อร่อยมากค่ะ"
+    },
+    "khamMueang": {
+      "m": "ลำขนาดคับ",
+      "f": "ลำขนาดเจ้า"
+    },
+    "romanised": {
+      "central": {
+        "m": "a-roi mak khrap",
+        "f": "a-roi mak kha"
+      },
+      "khamMueang": {
+        "m": "lam kha-nat khap",
+        "f": "lam kha-nat jao"
+      }
+    },
+    "likelyReplies": [
+      {
+        "th": "ยินดีเจ้า",
+        "en": "Thank you"
+      },
+      {
+        "th": "กินอีกนะ",
+        "en": "Have some more"
+      }
+    ],
+    "sources": [
+      "https://www.fixconcern.com/praise-in-the-northern-language/",
+      "https://adahouse-cnx.com/th/blog/kham-mueang-northern-thai",
+      "https://www.centarahotelsresorts.com/journal/northern-thai-language-oo-kam-mueang"
+    ],
+    "confidence": "high",
+    "reviewerNote": "Three sourced variants: ลำขนาด, จ๊าดลำ, ลำแต๊ๆ. Which one would make a vendor smile most?"
+  },
+  {
+    "id": "say-so-beautiful",
+    "type": "say",
+    "moment": "explore",
+    "slot": "none",
+    "english": "So beautiful! (sweets, produce, display)",
+    "centralThai": {
+      "m": "สวยมากครับ",
+      "f": "สวยมากค่ะ"
+    },
+    "khamMueang": {
+      "m": "งามขนาด",
+      "f": "งามขนาด"
+    },
+    "romanised": {
+      "central": {
+        "m": "suay mak khrap",
+        "f": "suay mak kha"
+      },
+      "khamMueang": {
+        "m": "ngaam kha-nat",
+        "f": "ngaam kha-nat"
+      }
+    },
+    "likelyReplies": [
+      {
+        "th": "ยินดีเจ้า",
+        "en": "Thank you"
+      }
+    ],
+    "sources": [
+      "https://www.fixconcern.com/praise-in-the-northern-language/"
+    ],
+    "confidence": "high",
+    "reviewerNote": "Can งาม be said about food or produce, or only about people and things?"
+  },
+  {
+    "id": "say-how-much-this",
+    "type": "say",
+    "moment": "explore",
+    "slot": "none",
+    "english": "How much is this?",
+    "centralThai": {
+      "m": "อันนี้เท่าไหร่ครับ",
+      "f": "อันนี้เท่าไหร่คะ"
+    },
+    "khamMueang": {
+      "m": "อันนี้เต้าใดคับ",
+      "f": "อันนี้เต้าใดเจ้า"
+    },
+    "romanised": {
+      "central": {
+        "m": "an-nee thao-rai khrap",
+        "f": "an-nee thao-rai kha"
+      },
+      "khamMueang": {
+        "m": "an-nee tao dai khap",
+        "f": "an-nee tao dai jao"
+      }
+    },
+    "likelyReplies": [
+      {
+        "th": "ซาวบาท",
+        "en": "20 baht"
+      },
+      {
+        "th": "ซาวห้าบาท",
+        "en": "25 baht"
+      }
+    ],
+    "sources": [
+      "people/luke/lanna-context/kham_mueang_glossary.json",
+      "https://www.centarahotelsresorts.com/journal/northern-thai-language-oo-kam-mueang"
+    ],
+    "confidence": "medium",
+    "reviewerNote": "Spelling open: เต้าใด / เต๊าใด / เต่าใด. Centara: TAO-DAI-JAO. siamdot source was unreachable today."
+  },
+  {
+    "id": "say-how-much-all",
+    "type": "say",
+    "moment": "pay",
+    "slot": "none",
+    "english": "How much for everything?",
+    "centralThai": {
+      "m": "ทั้งหมดเท่าไหร่ครับ",
+      "f": "ทั้งหมดเท่าไหร่คะ"
+    },
+    "khamMueang": {
+      "m": "ตึงหมดนี่เต่าใดคับ",
+      "f": "ตึงหมดนี่เต่าใดจ้าว"
+    },
+    "romanised": {
+      "central": {
+        "m": "thang mot thao-rai khrap",
+        "f": "thang mot thao-rai kha"
+      },
+      "khamMueang": {
+        "m": "tueng mot nee tao dai khap",
+        "f": "tueng mot nee tao dai jao"
+      }
+    },
+    "likelyReplies": [
+      {
+        "th": "ตึงหมด 190 บาทจ้าว",
+        "en": "190 baht in total"
+      }
+    ],
+    "sources": [
+      "https://www.fixconcern.com/order-food-in-northern-languages/"
+    ],
+    "confidence": "high",
+    "reviewerNote": "Same source spells เต่าใด and จ้าว here, while the glossary uses เต้าใด and เจ้า. Pick one canonical form."
+  },
+  {
+    "id": "say-thank-you",
+    "type": "say",
+    "moment": "pay",
+    "slot": "none",
+    "english": "Thank you",
+    "centralThai": {
+      "m": "ขอบคุณครับ",
+      "f": "ขอบคุณค่ะ"
+    },
+    "khamMueang": {
+      "m": "ยินดีคับ",
+      "f": "ยินดีเจ้า"
+    },
+    "romanised": {
+      "central": {
+        "m": "khop khun khrap",
+        "f": "khop khun kha"
+      },
+      "khamMueang": {
+        "m": "yin-dee khap",
+        "f": "yin-dee jao"
+      }
+    },
+    "likelyReplies": [
+      {
+        "th": "ยินดีเจ้า",
+        "en": "Thank you (too)"
+      },
+      {
+        "th": "แล้วมาเที่ยวอีกนะคะ",
+        "en": "Come visit again"
+      }
+    ],
+    "sources": [
+      "https://www.fixconcern.com/greeting-and-asking-questions-in-northern-languages/",
+      "https://www.thairath.co.th/lifestyle/life/2775195",
+      "https://www.mangozero.com/10-senteces-about-klinkasalong/",
+      "people/luke/lanna-context/kham_mueang_glossary.json"
+    ],
+    "confidence": "high",
+    "reviewerNote": "False friend: in Central Thai ยินดี means 'glad / you're welcome'. Do Warorot vendors still say ยินดี, or mostly ขอบคุณเจ้า?"
+  },
+  {
+    "id": "say-thank-you-very-much",
+    "type": "say",
+    "moment": "leave",
+    "slot": "none",
+    "english": "Thank you very much",
+    "centralThai": {
+      "m": "ขอบคุณมากครับ",
+      "f": "ขอบคุณมากค่ะ"
+    },
+    "khamMueang": {
+      "m": "ยินดีจ๊าดนักคับ",
+      "f": "ยินดีจ๊าดนักเจ้า"
+    },
+    "romanised": {
+      "central": {
+        "m": "khop khun mak khrap",
+        "f": "khop khun mak kha"
+      },
+      "khamMueang": {
+        "m": "yin-dee jaat nak khap",
+        "f": "yin-dee jaat nak jao"
+      }
+    },
+    "likelyReplies": [
+      {
+        "th": "ยินดีเจ้า",
+        "en": "Thank you"
+      }
+    ],
+    "sources": [
+      "https://www.fixconcern.com/greeting-and-asking-questions-in-northern-languages/"
+    ],
+    "confidence": "high",
+    "reviewerNote": "Both male and female forms are quoted by the source."
+  },
+  {
+    "id": "say-see-you-again",
+    "type": "say",
+    "moment": "leave",
+    "slot": "none",
+    "english": "See you again",
+    "centralThai": {
+      "m": "แล้วเจอกันใหม่ครับ",
+      "f": "แล้วเจอกันใหม่ค่ะ"
+    },
+    "khamMueang": {
+      "m": "แล้วปะกั๋นใหม่เน้อ",
+      "f": "แล้วปะกั๋นใหม่เน้อ"
+    },
+    "romanised": {
+      "central": {
+        "m": "laew jer kan mai khrap",
+        "f": "laew jer kan mai kha"
+      },
+      "khamMueang": {
+        "m": "laew pa kan mai noe",
+        "f": "laew pa kan mai noe"
+      }
+    },
+    "likelyReplies": [
+      {
+        "th": "แล้วมาเที่ยวอีกนะคะ",
+        "en": "Come visit again"
+      }
+    ],
+    "sources": [
+      "https://sistacafe.com/summaries/66250",
+      "https://www.centarahotelsresorts.com/journal/northern-thai-language-oo-kam-mueang",
+      "people/luke/lanna-context/lanna_dict_full.json (PyThaiNLP lanna_dict, from Thai Wiktionary)"
+    ],
+    "confidence": "medium",
+    "reviewerNote": "sistacafe writes แล้วปะกั๋นใหม่ (we added เน้อ). Centara gives WAI-PA-GUN-JAO (ไว้ปะกั๋นเจ้า?). Which one is more natural?"
+  },
+  {
+    "id": "say-come-back",
+    "type": "say",
+    "moment": "leave",
+    "slot": "none",
+    "english": "I'll come back again",
+    "centralThai": {
+      "m": "จะมาอีกนะครับ",
+      "f": "จะมาอีกนะคะ"
+    },
+    "khamMueang": null,
+    "romanised": {
+      "central": {
+        "m": "ja ma eek na khrap",
+        "f": "ja ma eek na kha"
+      },
+      "khamMueang": null
+    },
+    "likelyReplies": [
+      {
+        "th": "มาอีกนะคะ",
+        "en": "Come again"
+      },
+      {
+        "th": "ยินดีเจ้า",
+        "en": "Thank you"
+      }
+    ],
+    "sources": [
+      "https://www.fixconcern.com/order-food-in-northern-languages/"
+    ],
+    "confidence": "high",
+    "reviewerNote": "Kham Mueang not sourced. แหม = อีก (again) in the North. How would you say it?"
+  },
+  {
+    "id": "say-good-sales",
+    "type": "say",
+    "moment": "leave",
+    "slot": "none",
+    "english": "Hope you sell out today!",
+    "centralThai": {
+      "m": "ขอให้ขายดีนะครับ",
+      "f": "ขอให้ขายดีนะคะ"
+    },
+    "khamMueang": null,
+    "romanised": {
+      "central": {
+        "m": "kho hai khaai dee na khrap",
+        "f": "kho hai khaai dee na kha"
+      },
+      "khamMueang": null
+    },
+    "likelyReplies": [
+      {
+        "th": "ยินดีเจ้า",
+        "en": "Thank you"
+      },
+      {
+        "th": "สาธุ",
+        "en": "Amen (blessing)"
+      }
+    ],
+    "sources": [
+      "https://www.fixconcern.com/northern-language-sentences/"
+    ],
+    "confidence": "medium",
+    "reviewerNote": "A blessing vendors like. The sourced Northern 'good luck' is ขอหื้อโจคดีเน้อ (Chiang Rai accent), but it is not about sales. Would ขอหื้อขายดีเน้อ be natural? (unsourced)"
+  },
+  {
+    "id": "ask-what-is-this",
+    "type": "ask",
+    "moment": "explore",
+    "slot": "none",
+    "english": "What is this?",
+    "centralThai": {
+      "m": "อันนี้คืออะไรครับ",
+      "f": "อันนี้คืออะไรคะ"
+    },
+    "khamMueang": {
+      "m": "อันนี้อะหยังคับ",
+      "f": "อันนี้อะหยังเจ้า"
+    },
+    "romanised": {
+      "central": {
+        "m": "an-nee khue a-rai khrap",
+        "f": "an-nee khue a-rai kha"
+      },
+      "khamMueang": {
+        "m": "an-nee a-yang khap",
+        "f": "an-nee a-yang jao"
+      }
+    },
+    "likelyReplies": [
+      {
+        "th": "ไส้อั่วค่ะ",
+        "en": "It's sai ua (Northern sausage)"
+      },
+      {
+        "th": "น้ำพริกหนุ่ม",
+        "en": "Green chilli dip"
+      }
+    ],
+    "sources": [
+      "https://www.centarahotelsresorts.com/journal/northern-thai-language-oo-kam-mueang",
+      "people/luke/lanna-context/kham_mueang_glossary.json",
+      "https://www.wongnai.com/articles/northern-language"
+    ],
+    "confidence": "medium",
+    "reviewerNote": "Centara romanises UN-NEE-A-YOUNG-JAO; the Thai script is our reading. อะหยัง = อะไร is well sourced."
+  },
+  {
+    "id": "ask-northern-name",
+    "type": "ask",
+    "moment": "explore",
+    "slot": "produce",
+    "english": "What do you call {produce} here in the North?",
+    "centralThai": {
+      "m": "{produce} ภาษาเหนือเรียกว่าอะไรครับ",
+      "f": "{produce} ภาษาเหนือเรียกว่าอะไรคะ"
+    },
+    "khamMueang": null,
+    "romanised": {
+      "central": {
+        "m": "{produce} phaa-saa nuea riak waa a-rai khrap",
+        "f": "{produce} phaa-saa nuea riak waa a-rai kha"
+      },
+      "khamMueang": null
+    },
+    "likelyReplies": [
+      {
+        "th": "ภาษาเหนือเรียกว่า บะ...",
+        "en": "In Kham Mueang we say ba..."
+      },
+      {
+        "th": "เรียกเหมือนกันค่ะ",
+        "en": "Same word"
+      }
+    ],
+    "sources": [
+      "https://www.sanook.com/campus/1392241/",
+      "people/luke/lanna-context/lanna_dict_full.json (PyThaiNLP lanna_dict, from Thai Wiktionary)",
+      "people/luke/lanna-context/etiquette.json (conversation.good_topics)",
+      "people/luke/lanna-context/seasonal_produce.json"
+    ],
+    "confidence": "high",
+    "reviewerNote": "Vendors often love teaching words. ฮ้อง = เรียก (sanook, lanna_dict), but no sourced full question. With no slot, point: อันนี้ภาษาเหนือเรียกว่าอะไร."
+  },
+  {
+    "id": "ask-how-to-eat",
+    "type": "ask",
+    "moment": "explore",
+    "slot": "dish",
+    "english": "How do you eat {dish}?",
+    "centralThai": {
+      "m": "{dish} กินยังไงครับ",
+      "f": "{dish} กินยังไงคะ"
+    },
+    "khamMueang": null,
+    "romanised": {
+      "central": {
+        "m": "{dish} kin yang-ngai khrap",
+        "f": "{dish} kin yang-ngai kha"
+      },
+      "khamMueang": null
+    },
+    "likelyReplies": [
+      {
+        "th": "กินกับข้าวเหนียวค่ะ",
+        "en": "Eat it with sticky rice"
+      },
+      {
+        "th": "จิ้มน้ำพริก",
+        "en": "Dip it in chilli paste"
+      }
+    ],
+    "sources": [
+      "people/luke/lanna-context/etiquette.json (conversation.good_topics)",
+      "people/luke/lanna-context/northern_dishes.json",
+      "https://www.wongnai.com/articles/northern-language"
+    ],
+    "confidence": "high",
+    "reviewerNote": "Invites the vendor to teach (sticky rice balls, dips). จะใด = อย่างไร is sourced, but not the full sentence (กิ๋นจะใด)."
+  },
+  {
+    "id": "ask-made-yourself",
+    "type": "ask",
+    "moment": "explore",
+    "slot": "none",
+    "english": "Did you make this yourself?",
+    "centralThai": {
+      "m": "ทำเองเหรอครับ",
+      "f": "ทำเองเหรอคะ"
+    },
+    "khamMueang": null,
+    "romanised": {
+      "central": {
+        "m": "tham eng rer khrap",
+        "f": "tham eng rer kha"
+      },
+      "khamMueang": null
+    },
+    "likelyReplies": [
+      {
+        "th": "ทำเองค่ะ",
+        "en": "I made it myself"
+      },
+      {
+        "th": "แม่ทำค่ะ",
+        "en": "My mother made it"
+      }
+    ],
+    "sources": [
+      "people/luke/lanna-context/etiquette.json (conversation.good_topics)"
+    ],
+    "confidence": "high",
+    "reviewerNote": "Short and easy to answer. ยะ = ทำ in Kham Mueang (sanook)."
+  },
+  {
+    "id": "ask-family-recipe",
+    "type": "ask",
+    "moment": "receive",
+    "slot": "none",
+    "english": "Is this your family recipe?",
+    "centralThai": {
+      "m": "สูตรของที่บ้านเหรอครับ",
+      "f": "สูตรของที่บ้านเหรอคะ"
+    },
+    "khamMueang": null,
+    "romanised": {
+      "central": {
+        "m": "suut khong thee baan rer khrap",
+        "f": "suut khong thee baan rer kha"
+      },
+      "khamMueang": null
+    },
+    "likelyReplies": [
+      {
+        "th": "สูตรแม่ค่ะ",
+        "en": "My mother's recipe"
+      },
+      {
+        "th": "สูตรยายค่ะ",
+        "en": "Grandma's recipe"
+      }
+    ],
+    "sources": [
+      "people/luke/lanna-context/etiquette.json (conversation.good_topics)"
+    ],
+    "confidence": "medium",
+    "reviewerNote": "Is สูตรของที่บ้าน natural, or would you say สูตรที่บ้าน / สูตรแม่?"
+  },
+  {
+    "id": "ask-in-season",
+    "type": "ask",
+    "moment": "explore",
+    "slot": "none",
+    "english": "What's in season right now?",
+    "centralThai": {
+      "m": "ช่วงนี้มีผักผลไม้อะไรตามฤดูบ้างครับ",
+      "f": "ช่วงนี้มีผักผลไม้อะไรตามฤดูบ้างคะ"
+    },
+    "khamMueang": null,
+    "romanised": {
+      "central": {
+        "m": "chuang nee mee phak phon-la-mai a-rai taam rue-duu baang khrap",
+        "f": "chuang nee mee phak phon-la-mai a-rai taam rue-duu baang kha"
+      },
+      "khamMueang": null
+    },
+    "likelyReplies": [
+      {
+        "th": "เห็ดถอบค่ะ",
+        "en": "Het thop mushrooms"
+      },
+      {
+        "th": "ส้มโอ",
+        "en": "Pomelo"
+      }
+    ],
+    "sources": [
+      "people/luke/lanna-context/etiquette.json (conversation.good_topics)",
+      "people/luke/lanna-context/seasonal_produce.json"
+    ],
+    "confidence": "medium",
+    "reviewerNote": "A bit long for a tourist. Is there a shorter natural way, e.g. ช่วงนี้อะไรกำลังออก?"
+  },
+  {
+    "id": "ask-favourite",
+    "type": "ask",
+    "moment": "decide",
+    "slot": "none",
+    "english": "Which one do you like best?",
+    "centralThai": {
+      "m": "ชอบอันไหนที่สุดครับ",
+      "f": "ชอบอันไหนที่สุดคะ"
+    },
+    "khamMueang": null,
+    "romanised": {
+      "central": {
+        "m": "chop an nai thee-sut khrap",
+        "f": "chop an nai thee-sut kha"
+      },
+      "khamMueang": null
+    },
+    "likelyReplies": [
+      {
+        "th": "อันนี้ค่ะ",
+        "en": "This one"
+      },
+      {
+        "th": "อร่อยทุกอันค่ะ",
+        "en": "They're all delicious"
+      }
+    ],
+    "sources": [
+      "people/luke/lanna-context/etiquette.json (conversation.good_topics)"
+    ],
+    "confidence": "high",
+    "reviewerNote": "Should the visitor add พี่ / ป้า / แม่ before it? ThingsAsian says ชอบ is ส่อบ in the North (not used here)."
+  },
+  {
+    "id": "ask-is-it-spicy",
+    "type": "ask",
+    "moment": "decide",
+    "slot": "dish",
+    "english": "Is {dish} spicy?",
+    "centralThai": {
+      "m": "{dish} เผ็ดไหมครับ",
+      "f": "{dish} เผ็ดไหมคะ"
+    },
+    "khamMueang": null,
+    "romanised": {
+      "central": {
+        "m": "{dish} phet mai khrap",
+        "f": "{dish} phet mai kha"
+      },
+      "khamMueang": null
+    },
+    "likelyReplies": [
+      {
+        "th": "ไม่เผ็ดค่ะ",
+        "en": "Not spicy"
+      },
+      {
+        "th": "เผ็ดนิดเดียว",
+        "en": "A little spicy"
+      }
+    ],
+    "sources": [
+      "https://www.centarahotelsresorts.com/journal/northern-thai-language-oo-kam-mueang",
+      "people/luke/lanna-context/kham_mueang_glossary.json"
+    ],
+    "confidence": "high",
+    "reviewerNote": "Very useful, easy yes/no. Northern would use ก่อ as the question particle (เผ็ดก่อ?), but it is not sourced for this word."
+  },
+  {
+    "id": "ask-where-from",
+    "type": "ask",
+    "moment": "explore",
+    "slot": "produce",
+    "english": "Where does {produce} come from?",
+    "centralThai": {
+      "m": "{produce} มาจากไหนครับ",
+      "f": "{produce} มาจากไหนคะ"
+    },
+    "khamMueang": null,
+    "romanised": {
+      "central": {
+        "m": "{produce} maa jaak nai khrap",
+        "f": "{produce} maa jaak nai kha"
+      },
+      "khamMueang": null
+    },
+    "likelyReplies": [
+      {
+        "th": "มาจากดอยค่ะ",
+        "en": "From the mountains"
+      },
+      {
+        "th": "สวนที่บ้านค่ะ",
+        "en": "From our own garden"
+      }
+    ],
+    "sources": [
+      "people/luke/lanna-context/etiquette.json (conversation.good_topics)",
+      "people/luke/lanna-context/seasonal_produce.json"
+    ],
+    "confidence": "high",
+    "reviewerNote": "Friendly and easy. Answers like a place name are fine. Never follow up about the vendor's own origin or ethnicity."
+  },
+  {
+    "id": "ask-how-long-selling",
+    "type": "ask",
+    "moment": "pay",
+    "slot": "none",
+    "english": "Have you been selling here a long time?",
+    "centralThai": {
+      "m": "ขายที่นี่มานานแล้วเหรอครับ",
+      "f": "ขายที่นี่มานานแล้วเหรอคะ"
+    },
+    "khamMueang": null,
+    "romanised": {
+      "central": {
+        "m": "khaai thee-nee maa naan laew rer khrap",
+        "f": "khaai thee-nee maa naan laew rer kha"
+      },
+      "khamMueang": null
+    },
+    "likelyReplies": [
+      {
+        "th": "ยี่สิบปีแล้วค่ะ",
+        "en": "20 years now"
+      },
+      {
+        "th": "ตั้งแต่รุ่นแม่ค่ะ",
+        "en": "Since my mother's time"
+      }
+    ],
+    "sources": [
+      "people/luke/lanna-context/etiquette.json (conversation.good_topics)"
+    ],
+    "confidence": "medium",
+    "reviewerNote": "Proud-story question. เมิน = นาน (long time) is sourced, but not a full sentence."
+  },
+  {
+    "id": "ask-have-you-eaten",
+    "type": "ask",
+    "moment": "leave",
+    "slot": "none",
+    "english": "Have you eaten yet? (friendly Northern greeting)",
+    "centralThai": {
+      "m": "กินข้าวหรือยังครับ",
+      "f": "กินข้าวหรือยังคะ"
+    },
+    "khamMueang": {
+      "m": "กิ๋นข้าวแล้วกา",
+      "f": "กิ๋นข้าวแล้วกา"
+    },
+    "romanised": {
+      "central": {
+        "m": "kin khao rue yang khrap",
+        "f": "kin khao rue yang kha"
+      },
+      "khamMueang": {
+        "m": "kin khao laew ka",
+        "f": "kin khao laew ka"
+      }
+    },
+    "likelyReplies": [
+      {
+        "th": "กิ๋นแล้วจ้าว",
+        "en": "I have"
+      },
+      {
+        "th": "ยังบ่าได้กิ๋นเตื่อ",
+        "en": "Not yet"
+      }
+    ],
+    "sources": [
+      "https://www.fixconcern.com/greeting-and-asking-questions-in-northern-languages/",
+      "people/luke/lanna-context/etiquette.json (conversation.good_topics)"
+    ],
+    "confidence": "medium",
+    "reviewerNote": "Sourced greeting, used like 'how are you'. Is it odd for a tourist to ask a food vendor at work? Better at the end than at the start?"
+  },
+  {
+    "id": "ask-secret-ingredient",
+    "type": "ask",
+    "moment": "receive",
+    "slot": "none",
+    "english": "What's the secret ingredient? I won't tell anyone!",
+    "centralThai": {
+      "m": "เคล็ดลับคืออะไรครับ ไม่บอกใครหรอก",
+      "f": "เคล็ดลับคืออะไรคะ ไม่บอกใครหรอก"
+    },
+    "khamMueang": null,
+    "romanised": {
+      "central": {
+        "m": "khlet-lap khue a-rai khrap, mai bok khrai rok",
+        "f": "khlet-lap khue a-rai kha, mai bok khrai rok"
+      },
+      "khamMueang": null
+    },
+    "likelyReplies": [
+      {
+        "th": "ความลับค่ะ",
+        "en": "It's a secret!"
+      },
+      {
+        "th": "ใส่ใจค่ะ",
+        "en": "Love (lit. 'putting your heart in')"
+      }
+    ],
+    "sources": [
+      "people/luke/lanna-context/etiquette.json (conversation.good_topics)"
+    ],
+    "confidence": "medium",
+    "reviewerNote": "Playful. Does it sound teasing in a nice way? Would you say สูตรลับ instead of เคล็ดลับ?",
+    "tone": "playful"
+  },
+  {
+    "id": "ask-farang-spicy",
+    "type": "ask",
+    "moment": "explore",
+    "slot": "dish",
+    "english": "Can a farang handle {dish}? (spice joke about yourself)",
+    "centralThai": {
+      "m": "{dish} ฝรั่งกินได้ไหมครับ",
+      "f": "{dish} ฝรั่งกินได้ไหมคะ"
+    },
+    "khamMueang": null,
+    "romanised": {
+      "central": {
+        "m": "{dish} farang kin dai mai khrap",
+        "f": "{dish} farang kin dai mai kha"
+      },
+      "khamMueang": null
+    },
+    "likelyReplies": [
+      {
+        "th": "ได้ค่ะ ไม่เผ็ด",
+        "en": "Yes, it's not spicy"
+      },
+      {
+        "th": "เผ็ดนะ ลองดู",
+        "en": "It's spicy, try it!"
+      }
+    ],
+    "sources": [
+      "people/luke/lanna-context/etiquette.json (conversation.good_topics)"
+    ],
+    "confidence": "medium",
+    "reviewerNote": "Self-deprecating joke; the visitor calls themself ฝรั่ง. Friendly, or awkward coming from a foreigner?",
+    "tone": "playful"
+  },
+  {
+    "id": "ask-become-local",
+    "type": "ask",
+    "moment": "receive",
+    "slot": "none",
+    "english": "If I eat this every day, will I become a Northerner?",
+    "centralThai": {
+      "m": "ถ้ากินทุกวัน จะเป็นคนเมืองไหมครับ",
+      "f": "ถ้ากินทุกวัน จะเป็นคนเมืองไหมคะ"
+    },
+    "khamMueang": null,
+    "romanised": {
+      "central": {
+        "m": "thaa kin thuk wan, ja pen khon mueang mai khrap",
+        "f": "thaa kin thuk wan, ja pen khon mueang mai kha"
+      },
+      "khamMueang": null
+    },
+    "likelyReplies": [
+      {
+        "th": "เป็นแล้วค่ะ",
+        "en": "You already are!"
+      },
+      {
+        "th": "ต้องอู้กำเมืองด้วย",
+        "en": "You'll need to speak Kham Mueang too"
+      }
+    ],
+    "sources": [
+      "https://adahouse-cnx.com/th/blog/kham-mueang-northern-thai",
+      "people/luke/lanna-context/etiquette.json (conversation.good_topics)"
+    ],
+    "confidence": "medium",
+    "reviewerNote": "Light joke using คนเมือง (Northerners' own name for themselves, Ada House). It's about the visitor, never the vendor. Warm or odd?",
+    "tone": "playful"
+  },
+  {
+    "id": "ask-what-family-eats",
+    "type": "ask",
+    "moment": "explore",
+    "slot": "none",
+    "english": "Which one does your family eat at home?",
+    "centralThai": {
+      "m": "อันไหนที่บ้านชอบกินที่สุดครับ",
+      "f": "อันไหนที่บ้านชอบกินที่สุดคะ"
+    },
+    "khamMueang": null,
+    "romanised": {
+      "central": {
+        "m": "an nai thee baan chop kin thee-sut khrap",
+        "f": "an nai thee baan chop kin thee-sut kha"
+      },
+      "khamMueang": null
+    },
+    "likelyReplies": [
+      {
+        "th": "อันนี้ค่ะ",
+        "en": "This one"
+      },
+      {
+        "th": "กินทุกวันค่ะ",
+        "en": "We eat it every day"
+      }
+    ],
+    "sources": [
+      "people/luke/lanna-context/etiquette.json (conversation.good_topics)"
+    ],
+    "confidence": "high",
+    "reviewerNote": "Easy to answer by pointing.",
+    "tone": "playful"
+  },
+  {
+    "id": "ask-teach-me",
+    "type": "ask",
+    "moment": "receive",
+    "slot": "dish",
+    "english": "Could you teach me to make {dish}?",
+    "centralThai": {
+      "m": "สอนทำ{dish}ได้ไหมครับ",
+      "f": "สอนทำ{dish}ได้ไหมคะ"
+    },
+    "khamMueang": null,
+    "romanised": {
+      "central": {
+        "m": "son tham {dish} dai mai khrap",
+        "f": "son tham {dish} dai mai kha"
+      },
+      "khamMueang": null
+    },
+    "likelyReplies": [
+      {
+        "th": "ได้ค่ะ ง่ายมาก",
+        "en": "Sure, it's easy"
+      },
+      {
+        "th": "มาเรียนพรุ่งนี้",
+        "en": "Come learn tomorrow"
+      }
+    ],
+    "sources": [
+      "people/luke/lanna-context/etiquette.json (conversation.good_topics)"
+    ],
+    "confidence": "medium",
+    "reviewerNote": "Mostly a compliment; vendors usually answer with a laugh or a quick tip. Too much to ask a busy vendor?",
+    "tone": "playful"
+  },
+  {
+    "id": "echo-lam",
+    "type": "echo",
+    "moment": "vendor-used-northern-word",
+    "slot": "word",
+    "english": "Vendor asks 'ลำก่อ?' (is it good?) -> say: 'Very delicious!'",
+    "centralThai": {
+      "m": "อร่อยมากครับ",
+      "f": "อร่อยมากค่ะ"
+    },
+    "khamMueang": {
+      "m": "ลำขนาดคับ",
+      "f": "ลำขนาดเจ้า"
+    },
+    "romanised": {
+      "central": {
+        "m": "a-roi mak khrap",
+        "f": "a-roi mak kha"
+      },
+      "khamMueang": {
+        "m": "lam kha-nat khap",
+        "f": "lam kha-nat jao"
+      }
+    },
+    "likelyReplies": [
+      {
+        "th": "ยินดีเจ้า",
+        "en": "Thank you"
+      }
+    ],
+    "sources": [
+      "https://www.thairath.co.th/lifestyle/life/2775195",
+      "https://www.fixconcern.com/praise-in-the-northern-language/"
+    ],
+    "confidence": "high",
+    "reviewerNote": "Trigger ลำก่อ = อร่อยไหม (Thairath).",
+    "trigger": [
+      "ลำก่อ",
+      "ลำ"
+    ]
+  },
+  {
+    "id": "echo-sao",
+    "type": "echo",
+    "moment": "vendor-used-northern-word",
+    "slot": "word",
+    "english": "Vendor says a price with 'ซาว' (= 20) -> repeat it: 'Twenty baht!'",
+    "centralThai": {
+      "m": "ยี่สิบบาทครับ",
+      "f": "ยี่สิบบาทค่ะ"
+    },
+    "khamMueang": {
+      "m": "ซาวบาทคับ",
+      "f": "ซาวบาทเจ้า"
+    },
+    "romanised": {
+      "central": {
+        "m": "yee-sip baat khrap",
+        "f": "yee-sip baat kha"
+      },
+      "khamMueang": {
+        "m": "sao baat khap",
+        "f": "sao baat jao"
+      }
+    },
+    "likelyReplies": [
+      {
+        "th": "ใช่ค่ะ",
+        "en": "That's right"
+      },
+      {
+        "th": "เจ้า",
+        "en": "Yes"
+      }
+    ],
+    "sources": [
+      "https://www.thairath.co.th/lifestyle/life/2775195",
+      "https://www.sanook.com/campus/1392241/",
+      "https://www.centarahotelsresorts.com/journal/northern-thai-language-oo-kam-mueang",
+      "https://en.wikipedia.org/wiki/Northern_Thai_language"
+    ],
+    "confidence": "high",
+    "reviewerNote": "ซาวบาท quoted by Thairath. The app shows digits: ซาว = 20, ซาวห้า = 25. Do Warorot vendors still count this way?",
+    "trigger": [
+      "ซาว",
+      "ซาวบาท"
+    ]
+  },
+  {
+    "id": "echo-yindee",
+    "type": "echo",
+    "moment": "vendor-used-northern-word",
+    "slot": "word",
+    "english": "Vendor thanks you with 'ยินดีเจ้า' -> thank them back the Northern way",
+    "centralThai": {
+      "m": "ขอบคุณครับ",
+      "f": "ขอบคุณค่ะ"
+    },
+    "khamMueang": {
+      "m": "ยินดีคับ",
+      "f": "ยินดีเจ้า"
+    },
+    "romanised": {
+      "central": {
+        "m": "khop khun khrap",
+        "f": "khop khun kha"
+      },
+      "khamMueang": {
+        "m": "yin-dee khap",
+        "f": "yin-dee jao"
+      }
+    },
+    "likelyReplies": [
+      {
+        "th": "(ยิ้ม)",
+        "en": "(a smile)"
+      }
+    ],
+    "sources": [
+      "https://www.fixconcern.com/greeting-and-asking-questions-in-northern-languages/",
+      "https://www.thairath.co.th/lifestyle/life/2775195",
+      "https://www.mangozero.com/10-senteces-about-klinkasalong/"
+    ],
+    "confidence": "high",
+    "reviewerNote": "False friend: here ยินดี = thank you, not 'you're welcome'. Is it natural to answer ยินดี with ยินดี?",
+    "trigger": [
+      "ยินดี",
+      "ยินดีเจ้า",
+      "ยินดีจ๊าดนัก"
+    ]
+  },
+  {
+    "id": "echo-kin-khao",
+    "type": "echo",
+    "moment": "vendor-used-northern-word",
+    "slot": "word",
+    "english": "Vendor asks 'กิ๋นข้าวแล้วกา' (have you eaten?) -> 'Yes, I have'",
+    "centralThai": {
+      "m": "กินแล้วครับ",
+      "f": "กินแล้วค่ะ"
+    },
+    "khamMueang": {
+      "m": "กิ๋นแล้วคับ",
+      "f": "กิ๋นแล้วจ้าว"
+    },
+    "romanised": {
+      "central": {
+        "m": "kin laew khrap",
+        "f": "kin laew kha"
+      },
+      "khamMueang": {
+        "m": "kin laew khap",
+        "f": "kin laew jao"
+      }
+    },
+    "likelyReplies": [
+      {
+        "th": "กินอีกนะ",
+        "en": "Eat some more then"
+      }
+    ],
+    "sources": [
+      "https://www.fixconcern.com/greeting-and-asking-questions-in-northern-languages/"
+    ],
+    "confidence": "high",
+    "reviewerNote": "Answer for 'not yet': ยังบ่าได้กิ๋นเตื่อ (same source). The male form คับ is our addition.",
+    "trigger": [
+      "กิ๋นข้าวแล้วกา",
+      "กิ๋นข้าวแล้วกา๋"
+    ]
+  },
+  {
+    "id": "echo-sabai-di-bo",
+    "type": "echo",
+    "moment": "vendor-used-northern-word",
+    "slot": "word",
+    "english": "Vendor asks 'สบายดีบ๋อ' (how are you?) -> 'I'm fine'",
+    "centralThai": {
+      "m": "สบายดีครับ",
+      "f": "สบายดีค่ะ"
+    },
+    "khamMueang": {
+      "m": "สบายดีคับ",
+      "f": "สบายดีเจ้า"
+    },
+    "romanised": {
+      "central": {
+        "m": "sa-bai dee khrap",
+        "f": "sa-bai dee kha"
+      },
+      "khamMueang": {
+        "m": "sa-bai dee khap",
+        "f": "sa-bai dee jao"
+      }
+    },
+    "likelyReplies": [
+      {
+        "th": "ดีแล้วค่ะ",
+        "en": "Good"
+      }
+    ],
+    "sources": [
+      "https://www.wongnai.com/articles/northern-language"
+    ],
+    "confidence": "high",
+    "reviewerNote": "Reply is the shared word สบายดี plus particle.",
+    "trigger": [
+      "สบายดีบ๋อ",
+      "สบายดีก่อ"
+    ]
+  },
+  {
+    "id": "echo-khao-nueng",
+    "type": "echo",
+    "moment": "vendor-used-northern-word",
+    "slot": "word",
+    "english": "Vendor says 'ข้าวนึ่ง' (sticky rice) -> use the Northern word back",
+    "centralThai": {
+      "m": "ข้าวเหนียวครับ",
+      "f": "ข้าวเหนียวค่ะ"
+    },
+    "khamMueang": {
+      "m": "ข้าวนึ่งคับ",
+      "f": "ข้าวนึ่งเจ้า"
+    },
+    "romanised": {
+      "central": {
+        "m": "khao niao khrap",
+        "f": "khao niao kha"
+      },
+      "khamMueang": {
+        "m": "khao nueng khap",
+        "f": "khao nueng jao"
+      }
+    },
+    "likelyReplies": [
+      {
+        "th": "ได้เจ้า",
+        "en": "Sure"
+      }
+    ],
+    "sources": [
+      "https://www.fixconcern.com/order-food-in-northern-languages/",
+      "people/luke/lanna-context/kham_mueang_glossary.json"
+    ],
+    "confidence": "high",
+    "reviewerNote": "A one-word echo is enough to make the point.",
+    "trigger": [
+      "ข้าวนึ่ง"
+    ]
+  },
+  {
+    "id": "echo-ma-aeo",
+    "type": "echo",
+    "moment": "vendor-used-northern-word",
+    "slot": "word",
+    "english": "Vendor asks if you came 'แอ่ว' (to visit / travel) -> 'Yes, visiting'",
+    "centralThai": {
+      "m": "มาเที่ยวครับ",
+      "f": "มาเที่ยวค่ะ"
+    },
+    "khamMueang": {
+      "m": "มาแอ่วคับ",
+      "f": "มาแอ่วเจ้า"
+    },
+    "romanised": {
+      "central": {
+        "m": "maa thiao khrap",
+        "f": "maa thiao kha"
+      },
+      "khamMueang": {
+        "m": "maa aeo khap",
+        "f": "maa aeo jao"
+      }
+    },
+    "likelyReplies": [
+      {
+        "th": "สนุกไหม",
+        "en": "Having fun?"
+      }
+    ],
+    "sources": [
+      "https://www.wongnai.com/articles/northern-language",
+      "people/luke/lanna-context/lanna_dict_full.json (PyThaiNLP lanna_dict, from Thai Wiktionary)",
+      "https://www.fixconcern.com/greeting-and-asking-questions-in-northern-languages/"
+    ],
+    "confidence": "medium",
+    "reviewerNote": "แอ่ว = เที่ยว is well sourced. มาแอ่ว repeats the vendor's own word; please confirm it is natural.",
+    "trigger": [
+      "แอ่ว",
+      "มาแอ่ว"
+    ]
+  },
+  {
+    "id": "echo-muan",
+    "type": "echo",
+    "moment": "vendor-used-northern-word",
+    "slot": "word",
+    "english": "Vendor asks 'ม่วนก่อ?' (having fun?) -> 'Yes, fun!'",
+    "centralThai": {
+      "m": "สนุกครับ",
+      "f": "สนุกค่ะ"
+    },
+    "khamMueang": {
+      "m": "ม่วนคับ",
+      "f": "ม่วนเจ้า"
+    },
+    "romanised": {
+      "central": {
+        "m": "sa-nuk khrap",
+        "f": "sa-nuk kha"
+      },
+      "khamMueang": {
+        "m": "muan khap",
+        "f": "muan jao"
+      }
+    },
+    "likelyReplies": [
+      {
+        "th": "ดีแล้วค่ะ",
+        "en": "Good"
+      }
+    ],
+    "sources": [
+      "https://adahouse-cnx.com/th/blog/kham-mueang-northern-thai",
+      "people/luke/lanna-context/lanna_dict_full.json (PyThaiNLP lanna_dict, from Thai Wiktionary)",
+      "http://thingsasian.com/story/northern-thai-primer"
+    ],
+    "confidence": "medium",
+    "reviewerNote": "ม่วน = fun is sourced. The trigger question ม่วนก่อ is our guess (ก่อ = ไหม).",
+    "trigger": [
+      "ม่วน",
+      "ม่วนก่อ"
+    ]
+  },
+  {
+    "id": "echo-bo-phet",
+    "type": "echo",
+    "moment": "vendor-used-northern-word",
+    "slot": "word",
+    "english": "Vendor asks 'เผ็ดก่อ?' / offers chilli -> 'Not spicy, please'",
+    "centralThai": {
+      "m": "ไม่เผ็ดครับ",
+      "f": "ไม่เผ็ดค่ะ"
+    },
+    "khamMueang": {
+      "m": "บ่เผ็ดคับ",
+      "f": "บ่เผ็ดเจ้า"
+    },
+    "romanised": {
+      "central": {
+        "m": "mai phet khrap",
+        "f": "mai phet kha"
+      },
+      "khamMueang": {
+        "m": "bor phet khap",
+        "f": "bor phet jao"
+      }
+    },
+    "likelyReplies": [
+      {
+        "th": "ได้เจ้า",
+        "en": "OK"
+      }
+    ],
+    "sources": [
+      "https://www.centarahotelsresorts.com/journal/northern-thai-language-oo-kam-mueang",
+      "people/luke/lanna-context/kham_mueang_glossary.json"
+    ],
+    "confidence": "medium",
+    "reviewerNote": "Centara gives BOR-PED; บ่ is the Northern 'no' (Wikipedia). Spelling of the negative: บ่ / บ่อ / บ่ะ?",
+    "trigger": [
+      "เผ็ดก่อ",
+      "บ่เผ็ด"
+    ]
+  },
+  {
+    "id": "echo-jao-yes",
+    "type": "echo",
+    "moment": "vendor-used-northern-word",
+    "slot": "word",
+    "english": "Vendor answers just 'เจ้า' (= yes, politely) -> answer 'yes' the same way",
+    "centralThai": {
+      "m": "ครับ",
+      "f": "ค่ะ"
+    },
+    "khamMueang": {
+      "m": "คับ",
+      "f": "เจ้า"
+    },
+    "romanised": {
+      "central": {
+        "m": "khrap",
+        "f": "kha"
+      },
+      "khamMueang": {
+        "m": "khap",
+        "f": "jao"
+      }
+    },
+    "likelyReplies": [],
+    "sources": [
+      "people/luke/lanna-context/kham_mueang_glossary.json",
+      "https://www.fixconcern.com/greeting-and-asking-questions-in-northern-languages/",
+      "https://adahouse-cnx.com/th/blog/kham-mueang-northern-thai"
+    ],
+    "confidence": "medium",
+    "reviewerNote": "Main open question: may a male visitor say เจ้า, or only คับ?",
+    "trigger": [
+      "เจ้า",
+      "จ้าว"
+    ]
+  },
+  {
+    "id": "echo-kad-luang",
+    "type": "echo",
+    "moment": "vendor-used-northern-word",
+    "slot": "word",
+    "english": "Vendor says 'กาดหลวง' (Warorot market) -> use the local name back",
+    "centralThai": {
+      "m": "ตลาดวโรรสครับ",
+      "f": "ตลาดวโรรสค่ะ"
+    },
+    "khamMueang": {
+      "m": "กาดหลวง",
+      "f": "กาดหลวง"
+    },
+    "romanised": {
+      "central": {
+        "m": "ta-laat wa-ro-rot khrap",
+        "f": "ta-laat wa-ro-rot kha"
+      },
+      "khamMueang": {
+        "m": "kaat luang",
+        "f": "kaat luang"
+      }
+    },
+    "likelyReplies": [
+      {
+        "th": "ใช่ค่ะ",
+        "en": "That's right"
+      }
+    ],
+    "sources": [
+      "https://en.wikipedia.org/wiki/Warorot_Market",
+      "people/luke/lanna-context/lanna_dict_full.json (PyThaiNLP lanna_dict, from Thai Wiktionary)"
+    ],
+    "confidence": "high",
+    "reviewerNote": "กาด = market (lanna_dict).",
+    "trigger": [
+      "กาด",
+      "กาดหลวง"
+    ]
+  }
+]

@@ -1,0 +1,546 @@
+{
+  "meta": {
+    "topic": "Customs and traditions of Northern Thai highland peoples and Tai minority groups",
+    "compiled": "2026-09-26",
+    "notes": "For respectful interaction at markets and villages. All entries flagged for expert review where uncertain. Greetings only where sourced."
+  },
+  "general": {
+    "principles": [
+      "Most highland and Tai-minority people in Chiang Mai are Thai citizens living modern lives (traders, farmers, students, office workers). Do not frame as 'primitive', 'unchanging' or 'untouched'.",
+      "Use self-designations; 'hill tribe' (chao khao) is the official Thai term but is considered derogatory by indigenous rights advocates.",
+      "Present beliefs as held by some people/communities; practice varies by village, religion (animist, Buddhist, Christian, Muslim) and generation.",
+      "Avoid citizenship, statelessness, refugee status, land disputes and opium history in small talk."
+    ],
+    "general_signs": [
+      {
+        "sign": "Taleo (woven bamboo star/lattice talisman)",
+        "meaning": "Marks a protected space or event and a sanction on entering or leaving; placed above doors, at field edges or village entrances.",
+        "action": "Do not enter; call out and ask permission.",
+        "source": "https://www.taeclaos.org/featured_item/taleo/",
+        "confidence": "medium"
+      },
+      {
+        "sign": "Sticks with green leaves (sometimes cross-shaped) at a Hmong house",
+        "meaning": "Family should not be disturbed; house protected during ritual/healing.",
+        "action": "Do not enter or knock; come back later.",
+        "source": "https://ethnomed.org/culture/hmong/",
+        "confidence": "medium"
+      }
+    ],
+    "general_etiquette": [
+      {
+        "rule": "Do not touch spirit gates, spirit catchers or religious symbols at house fronts/village entrances.",
+        "source": "https://www.thailandhilltribeholidays.com/visit-hill-tribe-villages-dos-donts/",
+        "confidence": "low"
+      },
+      {
+        "rule": "Remove shoes before entering homes; do not point feet at people; do not touch adults' heads.",
+        "source": "https://www.thailandhilltribeholidays.com/visit-hill-tribe-villages-dos-donts/",
+        "confidence": "medium"
+      },
+      {
+        "rule": "Dress modestly (cover knees and shoulders); avoid public displays of affection.",
+        "source": "https://www.thailandhilltribeholidays.com/visit-hill-tribe-villages-dos-donts/",
+        "confidence": "low"
+      },
+      {
+        "rule": "Support people by buying crafts, homestays and meals rather than handing out money or sweets.",
+        "source": "https://www.thailandhilltribeholidays.com/visit-hill-tribe-villages-dos-donts/",
+        "confidence": "low"
+      }
+    ]
+  },
+  "groups": [
+    {
+      "group": "Karen (Sgaw and Pwo)",
+      "self_designation": "Sgaw: Pgaz K'nyau; Pwo: Phlong. Largest highland group in Thailand (roughly half of the officially listed 'hill tribe' population).",
+      "exonyms_to_avoid": [
+        "'Yang' (Shan/Northern Thai usage) and 'Kariang' (Thai, from Mon) are outsider names; prefer 'Karen' or the self-name. Whether these are felt as insulting is not established in sources used -- review.",
+        "'Hill tribe' / chao khao: official Thai term since the 1960s; IWGIA and indigenous advocates regard it as derogatory -- prefer 'Karen people' or 'Indigenous peoples'."
+      ],
+      "visitor_customs": [
+        "Remove shoes before entering a house.",
+        "Wrist-tying (ki cu / 'Ki Jue') ceremonies: one Feb-Apr at the start of the farming season, one (Laku) in Aug-Sep asking blessing of the rice goddess; family members' wrists are tied with thread three times with prayers, followed by a shared meal. Visitors may sometimes be offered a thread -- accept graciously if offered; do not assume you are invited to family rites.",
+        "Karen communities include animists, Buddhists and Christians; do not assume religion."
+      ],
+      "taboos": [
+        "Do not touch spirit-related objects at house fronts or village entrances.",
+        "A sign such as a woven bamboo talisman (taleo) or sticks with leaves at a house or village entrance may mean a ritual is in progress -- stop and ask before entering (see general_signs)."
+      ],
+      "textiles_identity": "Unmarried girls traditionally wear white garments; married women wear different styles (commonly described as a blouse and sarong). Backstrap-loom weaving is still practised. Dress signals marital status and identity -- not a costume to try on without invitation.",
+      "festivals": [
+        "Karen Wrist Tying Day (August; also observed by diaspora in Bangkok/Mae Sot).",
+        "Farming-season wrist tying Feb-Apr."
+      ],
+      "crafts_goods": [
+        "Backstrap-loom woven cloth, bags and shirts.",
+        "'Karen hill tribe silver' (high-purity silver beads and jewelry) is widely sold in Chiang Mai -- brand/marketing claims vary; ask the seller where and by whom it was made."
+      ],
+      "food_traditions": [
+        "Rotational (swidden) rice farming has been part of Karen culture for centuries; rice is central to ceremonies (sticky rice dumplings, rice cakes, rice liquor)."
+      ],
+      "greetings": [
+        {
+          "text": "",
+          "roman": "Ta bluh doh mah",
+          "english": "Thank you very much (Sgaw Karen)"
+        },
+        {
+          "text": "",
+          "roman": "Na oh sue oh klay ah?",
+          "english": "How are you? (Sgaw Karen)"
+        },
+        {
+          "text": "",
+          "roman": "Ghaw luh a ghay",
+          "english": "Good morning (Sgaw Karen)"
+        }
+      ],
+      "photography_norms": "Ask before photographing people, homes, altars or ceremonies; accept a 'no'. If you promise to send photos back, follow through. (General guidance; norms vary by village, family and generation.)",
+      "ethical_notes": "Most Karen in Thailand are farmers, workers, students and professionals in modern Thai society. Land rights in forest areas are a live political issue -- avoid raising land disputes or citizenship in small talk. Do not conflate Karen with the Kayan ('long neck') tourist villages.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Karen_people",
+        "https://karenhilltribes.org.uk/ceremony-and-community-in-the-hills/",
+        "https://mnkaren.org/wp-content/uploads/2017/01/Basic-Karen-Language-Phrases.pdf",
+        "https://en.wikipedia.org/wiki/Hill_tribe_(Thailand)",
+        "https://www.thailandhilltribeholidays.com/visit-hill-tribe-villages-dos-donts/"
+      ],
+      "confidence": "medium",
+      "needs_expert_review": [
+        "Greetings come from a US Karen community guide (Minnesota) using an informal romanisation; verify with Thai Sgaw speakers. Pwo phrases not found.",
+        "Whether 'Yang'/'Kariang' are felt as offensive."
+      ]
+    },
+    {
+      "group": "Kayan (Kayan Lahwi)",
+      "self_designation": "Kayan (Kayan Lahwi subgroup wears neck coils). Karen-speaking but a distinct identity.",
+      "exonyms_to_avoid": [
+        "'Padaung' (Shan term): Kayan in Mae Hong Son refer to themselves as Kayan and object to being called Padaung (some Kayan authors do use it).",
+        "'Long neck Karen' / 'giraffe women': tourism labels -- avoid; say 'Kayan'."
+      ],
+      "visitor_customs": [
+        "Talk with people as people, not as an attraction; buy crafts directly (a main income source).",
+        "Ask before photographing."
+      ],
+      "taboos": [
+        "Do not ask to touch or try on neck coils; do not treat rings as a costume or photo prop."
+      ],
+      "textiles_identity": "Brass neck coils worn by some Kayan Lahwi women, begun in childhood. Since at least 2006 some younger women in Mae Hong Son removed rings for education or in protest. Wearing or not wearing rings is a personal choice.",
+      "festivals": [],
+      "crafts_goods": [
+        "Hand-woven scarves and textiles, souvenirs sold in villages."
+      ],
+      "food_traditions": [],
+      "greetings": [],
+      "photography_norms": "Photography is the core of the controversy: always ask, don't pose people, and consider whether your visit/entrance fee benefits the residents.",
+      "ethical_notes": "Many Kayan in Thailand arrived as refugees from Myanmar in the late 1980s-1990s. UNHCR raised concerns over the provincial government's refusal to let registered Kayan refugees take up resettlement offers, reportedly for economic (tourism) reasons. Reports describe limited freedom of movement outside their home province, low stipends and entrance-fee revenue going to operators. Residents' views differ: some describe feeling in a 'human zoo', others want visitors for genuine cross-cultural exchange (e.g., Huay Pu Keng community-based tourism). Avoid citizenship/refugee status as small talk.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Kayan_people_(Myanmar)",
+        "https://www.chiangmaicitylife.com/clg/our-city/meet-the-locals/frozen-in-time-stuck-in-place-inside-the-controversial-world-of-the-long-neck-kayan/",
+        "https://www.huckmag.com/article/kayan-rings"
+      ],
+      "confidence": "medium",
+      "needs_expert_review": [
+        "Current (2026) status of movement restrictions and citizenship for Kayan in Chiang Mai-area villages may have changed."
+      ]
+    },
+    {
+      "group": "Hmong",
+      "self_designation": "Hmong (Mahidol museum glosses it as 'free people'). Subgroups include Blue/Green Hmong (Hmong Njua/Ntsuab) and White Hmong (Hmong Daw/Dawb); in Thai: ม้ง (Mong).",
+      "exonyms_to_avoid": [
+        "'Meo' (แม้ว): former official Thai registration term, often used as an insult -- considered derogatory."
+      ],
+      "visitor_customs": [
+        "On arrival guests are traditionally welcomed with 'koj tuaj los' ('you have come').",
+        "Remove shoes; wait to be invited inside.",
+        "In some traditional households men are served first and women eat after (Mahidol museum) -- observe, don't comment."
+      ],
+      "taboos": [
+        "A sign of sticks with green leaves (sometimes cross-shaped) outside a house means the family is not to be disturbed -- the house is being protected from spirits during a ritual/healing. Do not enter.",
+        "House spirits are believed to live in parts of the house (corners, stove, doors) and there is a household altar (xwm kab) -- do not touch altar items or photograph without permission.",
+        "Many traditional elders (especially men) do not want strangers to touch their heads or their children's heads.",
+        "Traditionally forbidden to practise the qeej/reed organ inside the house."
+      ],
+      "textiles_identity": "Paj ntaub ('flower cloth') embroidery, applique and batik are identity markers: indigo wax-resist batik is used by Blue/Green Hmong but not White Hmong. Mothers traditionally prepare new clothes for New Year. Story cloths emerged in Thai/Lao refugee camps in the 1970s.",
+      "festivals": [
+        "Hmong New Year (Noj Tsiab Peb Caug): traditionally from the 1st day of the 1st Hmong lunar month, ~3 days; in Thailand usually Dec-Jan and dates set by each community. Household rites: sweeping out, soul calling (hu plig), offering to the altar (txi xwm kab), feeding ancestors (laig dab). Ball tossing (pov pob) is a courtship game.",
+        "Urban Hmong New Year in Chiang Mai city since 1999, now with business booths."
+      ],
+      "crafts_goods": [
+        "Embroidery, batik indigo textiles, story cloths, silver jewelry. Hmong traders have sold produce and crafts at the Chiang Mai Night Bazaar since the 1970s."
+      ],
+      "food_traditions": [
+        "Pigs are central to many ceremonies; chopsticks traditionally used (now spoons common)."
+      ],
+      "greetings": [
+        {
+          "text": "Nyob zoo",
+          "roman": "nyaw zhong (approx.)",
+          "english": "Hello"
+        },
+        {
+          "text": "Koj tuaj los",
+          "roman": "",
+          "english": "You have come (welcome to a guest)"
+        }
+      ],
+      "photography_norms": "Ask before photographing people, homes, altars or ceremonies; accept a 'no'. If you promise to send photos back, follow through. (General guidance; norms vary by village, family and generation.) Especially avoid photographing ceremonies behind a leaf/stick taboo sign.",
+      "ethical_notes": "Hmong in Chiang Mai include urban entrepreneurs, university graduates and market traders; avoid 'primitive' framing and opium-era stereotypes.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Hmong_people",
+        "https://ethnomed.org/culture/hmong/",
+        "https://www.hmongstudiesjournal.org/uploads/4/5/8/7/4587788/yangcheepsutjarit_hsj_21.pdf",
+        "https://en.wikipedia.org/wiki/Hmong_textile_art",
+        "https://museumlc.mahidol.ac.th/hmong/",
+        "https://studyhmong.com/basic-greetings-nyob-zoo/"
+      ],
+      "confidence": "medium",
+      "needs_expert_review": [
+        "Leaf/stick taboo sign sourced from EthnoMed (US diaspora health resource); confirm it matches Thai Hmong practice.",
+        "Pronunciation hint for 'nyob zoo' is my approximation, not sourced (RPA final letters mark tone)."
+      ]
+    },
+    {
+      "group": "Iu Mien",
+      "self_designation": "Iu Mien / Mien.",
+      "exonyms_to_avoid": [
+        "'Yao' (Thai: เย้า): official Chinese/Thai classification; Iu Mien do not refer to themselves as 'Yao'. Prefer 'Mien'."
+      ],
+      "visitor_customs": [
+        "Ancestor veneration is central; homes have an ancestral altar and Taoist-derived ritual paintings -- do not touch or photograph without asking."
+      ],
+      "taboos": [
+        "Religious/ritual script written in Chinese-derived characters is used for chants and religion -- treat ritual books and paintings as sacred, not souvenirs (unless clearly made for sale)."
+      ],
+      "textiles_identity": "Women's dress: turbans, jackets with red accents (red ruff/lapels), and densely cross-stitched trousers/skirts with geometric patterns; skill passed from mothers and grandmothers. Silver jewelry is ceremonial (e.g., silver bracelet in engagements).",
+      "festivals": [
+        "Lunar New Year.",
+        "Spirit Day (reported as 14th of the 7th month/'July 14' in the source -- likely lunar; verify)."
+      ],
+      "crafts_goods": [
+        "Cross-stitch embroidered cloth, bags, jackets (notably from Nan).",
+        "Silverwork."
+      ],
+      "food_traditions": [],
+      "greetings": [],
+      "photography_norms": "Ask before photographing people, homes, altars or ceremonies; accept a 'no'. If you promise to send photos back, follow through. (General guidance; norms vary by village, family and generation.)",
+      "ethical_notes": "Religion includes Taoist-influenced folk religion, Buddhism and Christianity. Many Mien are Thai citizens in towns and farms; avoid 'exotic' framing.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Iu_Mien_people",
+        "https://www.nancreativecity.org/content/5866/mienembroideredfabric"
+      ],
+      "confidence": "medium",
+      "needs_expert_review": [
+        "Spirit Day date (lunar vs Gregorian).",
+        "No sourced Mien greeting found."
+      ]
+    },
+    {
+      "group": "Lahu",
+      "self_designation": "Lahu (Ladhulsi). Subgroups named by traditional dress colour: Lahu Na (Black), Lahu Nyi (Red), Lahu Shi (Yellow), Lahu Hpu (White), Lahu Shehleh.",
+      "exonyms_to_avoid": [
+        "'Muser/Musoe' (มูเซอ): Tai/Burmese exonym meaning 'hunter'. Mahidol's museum lists it alongside 'Lahu' without calling it offensive; prefer 'Lahu' anyway."
+      ],
+      "visitor_customs": [
+        "Village life traditionally guided by elders' collective authority -- ask for the headman/elder when arriving in a village."
+      ],
+      "taboos": [],
+      "textiles_identity": "Subgroup names reference dress colour; dress is an identity marker.",
+      "festivals": [
+        "Lahu New Year (Kin Wo / 'Kinwa Khao Jawe'): no fixed date, set after harvest, typically Feb-Apr; 12 days in two six-day phases (big year and small year), with overnight 'ka kawe' dancing, top-spinning (men) and cloth-ball games (women), pig offering and sticky rice to the deity G'ui sha (Uisa). An International Lahu New Year is held in Chiang Rai."
+      ],
+      "crafts_goods": [
+        "Musical instruments (gourd pipes, drums, leaf-blowing)."
+      ],
+      "food_traditions": [
+        "Rice and corn farming; sticky rice balls prepared for New Year."
+      ],
+      "greetings": [],
+      "photography_norms": "Ask before photographing people, homes, altars or ceremonies; accept a 'no'. If you promise to send photos back, follow through. (General guidance; norms vary by village, family and generation.)",
+      "ethical_notes": "Many Lahu are Christian or Buddhist as well as following traditional religion; don't generalise.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Lahu_people",
+        "https://museumlc.mahidol.ac.th/lahu/",
+        "https://thaitourstudy.com/routepiangluang/en/?modules=travel-detail&id=25"
+      ],
+      "confidence": "medium",
+      "needs_expert_review": [
+        "Whether 'Muser' is felt as disrespectful today.",
+        "No sourced Lahu greeting."
+      ]
+    },
+    {
+      "group": "Lisu",
+      "self_designation": "Lisu (Thai: ลีซู; older Thai 'Lisaw' ลีซอ).",
+      "exonyms_to_avoid": [
+        "'Lisaw' is an older Thai form; prefer 'Lisu' (offence not established -- review)."
+      ],
+      "visitor_customs": [
+        "During New Year, hosts offer snacks, tea and liquor to visitors as thanks for blessings -- accept or politely decline."
+      ],
+      "taboos": [],
+      "textiles_identity": "Brightly coloured dress (blue, green, purple), women's red and white bead headwear and bead necklaces; men wear low-crotch trousers, silver-buttoned shirts, red sash and tasselled bag. Thai Lisu dress differs from Lisu in China/Myanmar.",
+      "festivals": [
+        "Lisu New Year coincides with Chinese New Year; 3 days (can extend to 3-7): ancestral offerings (a male from each household attends), honouring elders, shrine visits, dancing around a planted tree, gourd-pipe music."
+      ],
+      "crafts_goods": [
+        "Beadwork, tasselled bags, embroidered clothing."
+      ],
+      "food_traditions": [
+        "Coffee growing at Doi Chaang (Chiang Rai) involves Akha, Lisu and Chinese farmers."
+      ],
+      "greetings": [],
+      "photography_norms": "Ask before photographing people, homes, altars or ceremonies; accept a 'no'. If you promise to send photos back, follow through. (General guidance; norms vary by village, family and generation.)",
+      "ethical_notes": "",
+      "sources": [
+        "https://museumlc.mahidol.ac.th/lisu/",
+        "https://thaitourstudy.com/routepiangluang/en/index.php?modules=tradition-detail&id=23",
+        "https://en.wikipedia.org/wiki/Lisu_people",
+        "https://doichaangcoffee.co.th/en/about-us/the-legend/"
+      ],
+      "confidence": "medium",
+      "needs_expert_review": [
+        "No sourced Lisu greeting."
+      ]
+    },
+    {
+      "group": "Akha",
+      "self_designation": "Akha; their way of life/customary law is 'Akha Zang' (Akha Way).",
+      "exonyms_to_avoid": [
+        "'Ekaw' / 'Kaw' / 'Gaw' (Thai/Tai): the Akha view these as derogatory.",
+        "'Kho'/'Kha' (Laos): historically used for upland groups -- avoid."
+      ],
+      "visitor_customs": [
+        "Walk around/through the village gate respectfully without touching it."
+      ],
+      "taboos": [
+        "Village spirit gate (carved wooden gate with male/female figures and birds) marks the boundary between the human village and the spirit world; it is renewed yearly. Human touch is believed to defile it, requiring ritual and sacrifice to restore -- do not touch.",
+        "Village swing (tall four-post swing, rebuilt yearly for ancestor offerings) -- do not play on it or touch it."
+      ],
+      "textiles_identity": "Women: black jacket with embroidered cuffs/lapels, short skirt, leggings, beaded sporran; headdresses with silver coins, feathers etc. vary by subgroup and marital status. Hand-spun cotton, indigo-dyed.",
+      "festivals": [
+        "Swing Festival 'Yehkuja' ('eating bitter rice'), ~4 days in late August (~120 days after rice planting); also called Women's New Year.",
+        "Men's New Year in late December."
+      ],
+      "crafts_goods": [
+        "Indigo cloth, embroidery, silver headdress ornaments.",
+        "Arabica coffee (e.g., Doi Chaang, Chiang Rai: Akha, Lisu and Chinese farmers; company founded 2003)."
+      ],
+      "food_traditions": [
+        "Highland rice staple; dishes such as a peanut-herb-chilli sauce for rice and chayote fried with pork."
+      ],
+      "greetings": [],
+      "photography_norms": "Ask before photographing people, homes, altars or ceremonies; accept a 'no'. If you promise to send photos back, follow through. (General guidance; norms vary by village, family and generation.) Do not climb or pose on the gate or swing for photos.",
+      "ethical_notes": "Some Akha are Christian or Buddhist and may not follow gate rituals, but the gate remains important in many villages.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Akha_people",
+        "https://www.greenshinto.com/2018/09/17/the-akha-spirit-gate/",
+        "https://en.wikipedia.org/wiki/Hill_tribe_(Thailand)",
+        "https://doichaangcoffee.co.th/en/about-us/the-legend/"
+      ],
+      "confidence": "medium",
+      "needs_expert_review": [
+        "Specific fines/penalties for touching gates were not found in sources -- do not state any.",
+        "No sourced Akha greeting."
+      ]
+    },
+    {
+      "group": "Lua / Lawa",
+      "self_designation": "Lawa/Lua (Eastern Lawa of Chiang Mai prefer outsiders to call them 'Lua'). Palaungic (Austroasiatic) language. Western Lawa near Mae Sariang (Mae Hong Son); Eastern Lawa centred on Bo Luang (Chiang Mai).",
+      "exonyms_to_avoid": [
+        "Note: Siam Society source lists 'Lua' among outsider terms historically used for various low-status groups -- use the name the community uses."
+      ],
+      "visitor_customs": [
+        "Acknowledge Lawa as among the region's earliest inhabitants; Chiang Mai was founded on the site of a Lawa settlement."
+      ],
+      "taboos": [],
+      "textiles_identity": "",
+      "festivals": [],
+      "crafts_goods": [
+        "Known for craft skills, especially ironsmithing."
+      ],
+      "food_traditions": [],
+      "greetings": [],
+      "photography_norms": "Ask before photographing people, homes, altars or ceremonies; accept a 'no'. If you promise to send photos back, follow through. (General guidance; norms vary by village, family and generation.)",
+      "ethical_notes": "Many Lawa are integrated into mainstream Thai society; some keep traditional animist practice.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Lawa_people",
+        "https://thesiamsociety.org/wp-content/uploads/1987/03/JSS_075_0h_Filbeck_NewEthnicNamesForTinOfNan.pdf"
+      ],
+      "confidence": "low",
+      "needs_expert_review": [
+        "Thin data; Chiang Mai founding legends involving Lawa (e.g., Inthakhin pillar, Pu Sae Ya Sae) not sourced here -- expert to add."
+      ]
+    },
+    {
+      "group": "Khmu (Kmhmu')",
+      "self_designation": "Khmu / Kmhmu'.",
+      "exonyms_to_avoid": [
+        "'Kha': the Siam Society source lists it among exonyms connoting historically low status; avoid."
+      ],
+      "visitor_customs": [],
+      "taboos": [
+        "Taleo woven-bamboo talismans are rooted in Kmhmu tradition: placed above a house door, at a field edge or village entrance, they mark a boundary/sanction on entering or leaving -- call out and ask permission before passing."
+      ],
+      "textiles_identity": "",
+      "festivals": [],
+      "crafts_goods": [
+        "Regarded as skilled metalworkers (offerings to a forge deity reported)."
+      ],
+      "food_traditions": [],
+      "greetings": [],
+      "photography_norms": "Ask before photographing people, homes, altars or ceremonies; accept a 'no'. If you promise to send photos back, follow through. (General guidance; norms vary by village, family and generation.)",
+      "ethical_notes": "In Thailand clustered in Nan (also Phayao, Chiang Rai); many are well integrated and some speak Kham Mueang at home.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Khmu_people",
+        "https://www.taeclaos.org/featured_item/taleo/",
+        "https://thesiamsociety.org/wp-content/uploads/1987/03/JSS_075_0h_Filbeck_NewEthnicNamesForTinOfNan.pdf"
+      ],
+      "confidence": "low",
+      "needs_expert_review": [
+        "Taleo source is from Laos (TAEC); confirm use among Thai Khmu.",
+        "Metalwork note from factsanddetails (low-quality reference)."
+      ]
+    },
+    {
+      "group": "Mal and Prai (the 'Htin/Tin')",
+      "self_designation": "Two groups: Mal (indigenous ethnonym) and Prai. Mainly Nan Province.",
+      "exonyms_to_avoid": [
+        "'Tin'/'Htin' (Thai, 'local inhabitant'), and 'Kha', 'Phai', 'Lua' -- connote historically low status and were not readily accepted as self-names (Siam Society, 1987); some younger people later adopted 'Tin'. Prefer Mal / Prai."
+      ],
+      "visitor_customs": [],
+      "taboos": [],
+      "textiles_identity": "",
+      "festivals": [],
+      "crafts_goods": [
+        "Bamboo/rattan basketry is commonly associated with them (not verified in sources opened)."
+      ],
+      "food_traditions": [],
+      "greetings": [],
+      "photography_norms": "Ask before photographing people, homes, altars or ceremonies; accept a 'no'. If you promise to send photos back, follow through. (General guidance; norms vary by village, family and generation.)",
+      "ethical_notes": "",
+      "sources": [
+        "https://thesiamsociety.org/wp-content/uploads/1987/03/JSS_075_0h_Filbeck_NewEthnicNamesForTinOfNan.pdf"
+      ],
+      "confidence": "low",
+      "needs_expert_review": [
+        "Basketry claim unverified.",
+        "Current naming preference (source from 1987)."
+      ]
+    },
+    {
+      "group": "Tai Yai (Shan)",
+      "self_designation": "Tai (self-name). In Thailand called 'Tai Yai' ('great Tai'); 'Shan' is seldom used locally.",
+      "exonyms_to_avoid": [
+        "'Ngiao' (เงี้ยว), the Northern Thai/Tai Yuan name -- may be felt as disparaging by some; prefer 'Tai Yai' (not confirmed in sources -- review)."
+      ],
+      "visitor_customs": [
+        "Theravada Buddhist: temple etiquette (shoes off, modest dress, don't point feet at Buddha images or monks)."
+      ],
+      "taboos": [],
+      "textiles_identity": "Distinct traditional dress worn at festivals and events.",
+      "festivals": [
+        "Poy Sang Long: novice ordination of boys (~7-14), end of March/early April, especially Mae Hong Son; boys dressed as princes are carried on relatives' shoulders for 3 days, ordained on day 3. Also held in Chiang Mai Shan temples."
+      ],
+      "crafts_goods": [],
+      "food_traditions": [
+        "Shan-style noodles at Mae Hong Son morning markets (specific dishes not sourced here)."
+      ],
+      "greetings": [],
+      "photography_norms": "Poy Sang Long processions are public and often photographed; still ask before close-up portraits of the boys and families.",
+      "ethical_notes": "Communities in Chiang Mai, Chiang Rai, Mae Hong Son, Lampang include long-settled citizens and recent migrant workers from Shan State. Avoid questions about migration/documentation status.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Shan_people",
+        "https://en.wikipedia.org/wiki/Poy_Sang_Long",
+        "https://www.chiangmai-alacarte.com/the-tai-yai-people-of-north-thailand/"
+      ],
+      "confidence": "medium",
+      "needs_expert_review": [
+        "Whether 'Ngiao' is derogatory.",
+        "Tai Yai foods (e.g., tua nao, Shan noodle dishes) -- defer to food agent's files."
+      ]
+    },
+    {
+      "group": "Tai Lue",
+      "self_designation": "Tai Lue (Thai Lue).",
+      "exonyms_to_avoid": [],
+      "visitor_customs": [
+        "Theravada Buddhist temple etiquette applies."
+      ],
+      "taboos": [],
+      "textiles_identity": "Renowned weavers (looms once under most houses, now fewer). Red, white or pink turbans; men's indigo/black jackets and trousers; women's colourful sarongs. Traditional dress mostly worn at festivals and ceremonies.",
+      "festivals": [
+        "Take part in Songkran and Loy Krathong parades, Salak Yom (Lamphun), Lamyai festival."
+      ],
+      "crafts_goods": [
+        "Hand-woven cotton textiles (Ban Luang Nuea / Ban Luang Tai, Doi Saket; also Nan, Phayao, Chiang Rai)."
+      ],
+      "food_traditions": [],
+      "greetings": [],
+      "photography_norms": "Ask before photographing people, homes, altars or ceremonies; accept a 'no'. If you promise to send photos back, follow through. (General guidance; norms vary by village, family and generation.)",
+      "ethical_notes": "",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Tai_Lue_people",
+        "https://www.chiangmai-alacarte.com/the-tai-lue-people-of-chiang-mai/"
+      ],
+      "confidence": "medium",
+      "needs_expert_review": []
+    },
+    {
+      "group": "Tai Khuen (Tai Khün)",
+      "self_designation": "Tai Khün, from Kengtung (Chiang Tung), Shan State. Language ~90-95% lexically similar to Northern Thai; traditionally written in Tai Tham script.",
+      "exonyms_to_avoid": [],
+      "visitor_customs": [],
+      "taboos": [],
+      "textiles_identity": "",
+      "festivals": [],
+      "crafts_goods": [],
+      "food_traditions": [],
+      "greetings": [],
+      "photography_norms": "Ask before photographing people, homes, altars or ceremonies; accept a 'no'. If you promise to send photos back, follow through. (General guidance; norms vary by village, family and generation.)",
+      "ethical_notes": "Spoken in Chiang Rai Province; Chiang Mai communities not verified.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Kh%C3%BCn_language",
+        "https://www.chiangmai-alacarte.com/the-tai-yai-people-of-north-thailand/"
+      ],
+      "confidence": "low",
+      "needs_expert_review": [
+        "Very thin -- Khuen villages/crafts (lacquerware?) in Chiang Mai not verified."
+      ]
+    },
+    {
+      "group": "Yunnanese Chinese (Chin Haw)",
+      "self_designation": "Yunnanese; Thai: Chin Haw (จีนฮ่อ). About one-third are Hui Muslims.",
+      "exonyms_to_avoid": [
+        "'Haw/Ho' is the standard Thai term; whether it is disliked is not established -- 'Yunnanese' is a safe choice."
+      ],
+      "visitor_customs": [
+        "Muslim Yunnanese: respect halal practice and mosque etiquette (e.g., Ban Haw Mosque, Chiang Mai)."
+      ],
+      "taboos": [
+        "Avoid offering pork/alcohol to Hui Muslim hosts."
+      ],
+      "textiles_identity": "",
+      "festivals": [
+        "Chinese New Year among non-Muslim Yunnanese (general knowledge; not sourced specifically)."
+      ],
+      "crafts_goods": [
+        "Oolong tea from Doi Mae Salong (Santikhiri), planted from Taiwanese stock from 1973; also cherries, plums, lychee, peaches."
+      ],
+      "food_traditions": [
+        "Yunnanese cuisine restaurants in Mae Salong."
+      ],
+      "greetings": [],
+      "photography_norms": "Ask before photographing people, homes, altars or ceremonies; accept a 'no'. If you promise to send photos back, follow through. (General guidance; norms vary by village, family and generation.)",
+      "ethical_notes": "Histories include Panthay Rebellion refugees, caravan traders, and post-1949 KMT soldiers (Mae Salong; citizenship granted 1982). KMT/opium history is sensitive; don't open with it.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Chin_Haw",
+        "https://en.wikipedia.org/wiki/Doi_Mae_Salong"
+      ],
+      "confidence": "medium",
+      "needs_expert_review": [
+        "Preference between 'Chin Haw' and 'Yunnanese'."
+      ]
+    }
+  ]
+}

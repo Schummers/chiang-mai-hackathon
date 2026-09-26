@@ -1,0 +1,600 @@
+[
+  {
+    "topic": "wai_greeting",
+    "norm": "The wai (palms together, slight bow) is the respectful greeting. The younger or lower-status person usually wais first; the senior returns it. Hand height rises with the respect shown: about chest level for peers, chin/nose for elders and teachers, forehead for monks and Buddha images.",
+    "do": [
+      "Return a wai that is offered to you, a modest chest-level wai with a small bow is safe when unsure",
+      "Let elders and hosts see you wai first if you are clearly the junior person",
+      "Wai monks without expecting one back"
+    ],
+    "dont": [
+      "Don't initiate a wai to children; they are expected to wai adults first",
+      "Don't wai every vendor or waiter; a smile, nod and thank-you fits casual service",
+      "Don't wai while holding things awkwardly; put items down or just nod and smile"
+    ],
+    "why": "The wai encodes relative age and status. Getting the direction right matters more than technical precision.",
+    "northern_specific": false,
+    "translation_implication": "When a user says hello to an elder, the app can suggest pairing the greeting with a wai. When a vendor or child wais the user, the note should say to return it or smile and nod. Don't tell users to wai service staff first.",
+    "source": "https://www.chiangraitimes.com/travel-guide/wai-etiquette-in-thailand/",
+    "confidence": "medium",
+    "needs_expert_review": "Heights and who-initiates rules are widely repeated, but this source is a regional news/travel guide rather than academic. Reviewer to confirm."
+  },
+  {
+    "topic": "hierarchy_and_address_terms",
+    "norm": "Thai (including Kham Mueang) speech marks relative age and status. People commonly address others with kinship terms instead of 'you': phi (older sibling, for someone somewhat older), nong (younger sibling), lung (uncle, older than your parents) and pa (aunt, older than your parents). In Kham Mueang, u-i (อุ๊ย) is used for the generation older than lung/pa: pho-u-i/po-u-i (ป้ออุ๊ย, elderly man) and mae-u-i (แม่อุ๊ย, elderly woman), for relatives and non-relatives alike.",
+    "do": [
+      "Address an older market vendor as phi, or as pa/lung if clearly a generation older",
+      "Use mae-u-i / pho-u-i (Kham Mueang) or yai/ta (Central Thai) only for clearly elderly people, and warmly",
+      "Accept being called phi or nong (or 'farang') without offence; it places you, it doesn't insult you"
+    ],
+    "dont": [
+      "Don't translate kinship terms literally as 'uncle/aunt/grandma' without explanation; they are respectful address, not claims of family",
+      "Don't use the bare pronoun 'you' (khun is fine but formal) as if it were neutral English 'you'",
+      "Don't call a middle-aged woman mae-u-i; implying someone is older than they are can be unflattering"
+    ],
+    "why": "Choosing the right kinship term signals respect and warmth at once. Picking one too old or too young is a small social misstep.",
+    "northern_specific": true,
+    "translation_implication": "Map English 'you' to a kinship term using the profile card's estimated age. If age is unknown, prefer phi for adults of similar or older age. Back-translate incoming kinship terms as 'you (respectful, like aunt/uncle)' plus a note, not a literal family claim.",
+    "source": "https://teeneelanna.com/moojoomhao/home/space.php?uid=1&do=blog&id=1698",
+    "confidence": "medium",
+    "needs_expert_review": "u-i terms come from a Kham Mueang community blog (teeneelanna.com), and the romanisation is ours. The task brief's 'phor-u/mae-u' seems to mean ป้ออุ๊ย/แม่อุ๊ย. Reviewer should confirm spelling, tone and the age thresholds for lung/pa vs u-i."
+  },
+  {
+    "topic": "polite_particles_jao_vs_kha_khrap",
+    "norm": "Central Thai softens and politens sentences with khrap (male speakers) and kha/kha (female speakers). Kham Mueang uses jao (เจ้า, often romanised chao) at the end of polite sentences, e.g. sawatdi jao, khop khun jao. Wikipedia describes jao as the female form alongside khap for males. Other sources and common local usage treat jao as usable by all genders, especially in local-style greetings.",
+    "do": [
+      "Add a polite particle to almost every short utterance to strangers and elders",
+      "Offer 'jao' as a friendly Northern flourish; locals often find a visitor's jao endearing",
+      "Default to Central Thai khrap/kha when unsure; everyone understands it"
+    ],
+    "dont": [
+      "Don't leave requests to elders bare, without a particle; it can sound curt",
+      "Don't overuse Kham Mueang with younger urban people who may prefer Central Thai"
+    ],
+    "why": "Particles carry politeness in Thai the way 'please' and tone of voice do in English. Leaving them out reads as brusque.",
+    "northern_specific": true,
+    "translation_implication": "Always append a particle in output. Choose jao for female users when the context packet says Northern/elder/rural and the dialect toggle is on; for male users default to khap/khrap until a native speaker confirms men's use of jao; otherwise khrap/kha matched to the user's stated gender. When the incoming text has 'jao', add a note that it is a Northern politeness marker, not a word to translate.",
+    "source": "https://en.wikipedia.org/wiki/Northern_Thai_language",
+    "confidence": "medium",
+    "needs_expert_review": "Sources conflict on whether male speakers use jao. Wikipedia (Northern Thai language): chao = female, khap = male. A Centara hotel guide says the same, while an X/Twitter user and community sources say jao is used by all genders. Needs a native Kham Mueang speaker's ruling."
+  },
+  {
+    "topic": "kreng_jai",
+    "norm": "Kreng jai (literally 'fear/awe-heart') is a cluster of norms: being considerate, not wanting to burden or impose on others, deferring to seniors, and avoiding conflict, including refusing politely rather than directly. It makes people reluctant to ask questions, disagree, or say no to someone of higher status or a guest.",
+    "do": [
+      "Make it easy to say no: offer options and say it's fine either way",
+      "Watch for hesitation, excuses or vague answers as a possible 'no'",
+      "Say thank you for help that was clearly an effort"
+    ],
+    "dont": [
+      "Don't press for a yes/no answer repeatedly",
+      "Don't read 'no questions' as full understanding"
+    ],
+    "why": "Considerate restraint and not imposing are social virtues. A direct refusal or a clarifying question can feel like imposing on the other person.",
+    "northern_specific": false,
+    "translation_implication": "When a local speaker hedges, gives an excuse or answers vaguely, the cultural note should say this may be a polite 'no' or reluctance, and suggest a softer follow-up, e.g. offering an easy out. When the user makes a request of an elder, soften the Thai (add 'if it's convenient', a particle, and 'no problem if not').",
+    "source": "https://journals.plos.org/globalpublichealth/article?id=10.1371%2Fjournal.pgph.0001875",
+    "confidence": "high"
+  },
+  {
+    "topic": "indirect_yes_and_softened_refusals",
+    "norm": "A smile, a nod or 'yes' (khrap/kha/jao) often means 'I heard you' rather than 'I agree'. Refusals are usually indirect: an excuse, 'I'll think about it', 'maybe later', a change of subject, or silence. Silence itself is used politely to avoid disagreeing and to protect face.",
+    "do": [
+      "Ask open questions ('which day suits you?') rather than yes/no ones",
+      "Treat 'maybe' or 'I'll see' as a likely no unless followed up",
+      "Accept an excuse gracefully without probing"
+    ],
+    "dont": [
+      "Don't take a polite particle alone as agreement",
+      "Don't force a direct 'no'; it causes loss of face on both sides"
+    ],
+    "why": "Protecting everyone's face and keeping harmony are valued over literal explicitness.",
+    "northern_specific": false,
+    "translation_implication": "This is the most important translation rule. Don't translate a bare 'khrap/kha/jao' or nod-equivalent as 'Yes, I agree'; render it as 'Yes / I hear you' plus a note if context is a request. Flag hedges ('I'll see', 'not sure', 'maybe') with 'possibly a polite no'. For outgoing refusals from the user, soften the Thai (regret + reason + thanks) instead of a flat 'no'.",
+    "source": "https://theculturalatlas.org/thai-culture/thai-culture-communication",
+    "confidence": "high"
+  },
+  {
+    "topic": "face_sia_na",
+    "norm": "Face (na) is a person's dignity, reputation and standing. Causing someone to lose face (sia na), by public criticism, correction or shouting, is a serious social injury. Giving face, by complimenting and showing respect in front of others, is valued. Politeness strategies include indirectness, avoiding confrontation or strong criticism, and suppressing negative emotion.",
+    "do": [
+      "Raise problems privately and gently, framed as your own misunderstanding",
+      "Praise in public, correct in private",
+      "Let a vendor save face if a price or change is wrong ('maybe I misunderstood')"
+    ],
+    "dont": [
+      "Don't correct or contradict an elder, monk or official in front of others",
+      "Don't raise your voice or show exasperation; you lose face yourself"
+    ],
+    "why": "Face protects social relationships in a hierarchical, harmony-oriented culture.",
+    "northern_specific": false,
+    "translation_implication": "If the user's message is a complaint or correction, the app should offer a face-saving Thai rendering (e.g. 'I might have misunderstood, could we check...') and note why. Don't render blunt English criticism literally.",
+    "source": "https://files.eric.ed.gov/fulltext/EJ1311224.pdf",
+    "confidence": "high"
+  },
+  {
+    "topic": "jai_yen_calm_heart",
+    "norm": "Jai yen ('cool heart') is the valued state of calm, even-tempered composure. Ethnographic work in a Northern Thai town (Mae Jaeng, Chiang Mai province) describes it as a central local emotional ideal, cultivated through Buddhist ideas of letting go of attachment. Its opposite, jai ron ('hot heart'), is disapproved of.",
+    "do": [
+      "Stay calm and smiling when things go wrong (late bus, wrong order)",
+      "Use 'jai yen yen' lightly to calm a situation"
+    ],
+    "dont": [
+      "Don't show anger publicly; overly dramatic or rapid gestures may be read as anger",
+      "Don't read calm as indifference"
+    ],
+    "why": "Calm composure shows maturity and moral self-control. Anger is seen as losing control, and losing face.",
+    "northern_specific": true,
+    "translation_implication": "If the user's input is angry or all-caps, the app should translate content but tone it down and add a note that visible anger usually worsens outcomes. Translate 'jai yen yen' as 'take it easy / stay calm', not a literal 'cold heart'.",
+    "source": "https://medanthro.net/bookreview/review-of-living-buddhism-mind-self-and-emotion-in-a/",
+    "confidence": "high",
+    "needs_expert_review": "Northern_specific is set true because the key ethnography is Northern, but jai yen is pan-Thai."
+  },
+  {
+    "topic": "mai_pen_rai",
+    "norm": "Mai pen rai (Kham Mueang: bo pen yang / bor pen yang) means 'never mind / it's nothing / you're welcome / no problem'. It shows easygoing acceptance and is used to smooth over small mishaps, apologies and thanks.",
+    "do": [
+      "Reply with mai pen rai / bo pen yang jao when someone apologises for something small",
+      "Take it as a real release from obligation for minor matters"
+    ],
+    "dont": [
+      "Don't take mai pen rai as 'I'm fine' when a larger problem is clearly unresolved; it may be politeness",
+      "Don't use it to brush off something you caused that hurt someone"
+    ],
+    "why": "It keeps interactions light and preserves harmony.",
+    "northern_specific": true,
+    "translation_implication": "Translate by context: 'you're welcome' after thanks, 'no worries' after an apology, 'never mind' after a mistake. Offer the Kham Mueang form bo pen yang when the dialect toggle is on.",
+    "source": "https://www.centarahotelsresorts.com/journal/northern-thai-language-oo-kam-mueang",
+    "confidence": "medium",
+    "needs_expert_review": "Kham Mueang form 'bor pen young' comes from a hotel-group blog (Centara); spelling/tone should be checked."
+  },
+  {
+    "topic": "sanuk",
+    "norm": "Sanuk is enjoyment or fun as a normal part of daily life, including work. Activities, jobs and conversations are often judged by whether they are sanuk, and light joking is common even in serious settings. Humour can also mask sadness or awkwardness.",
+    "do": [
+      "Join in the joking; laughter often defuses awkwardness",
+      "Show you are enjoying the food, the market or the conversation"
+    ],
+    "dont": [
+      "Don't read laughter during an awkward moment as mockery; it often eases tension",
+      "Don't treat light joking as a lack of seriousness"
+    ],
+    "why": "Enjoyment and a light touch keep social life harmonious.",
+    "northern_specific": false,
+    "translation_implication": "When a speaker laughs or jokes about a problem, the cultural note can explain it may be easing tension rather than making light of it. Don't translate a laugh particle as sarcasm.",
+    "source": "https://en.wikipedia.org/wiki/Sanuk_(Thai_culture)",
+    "confidence": "medium"
+  },
+  {
+    "topic": "head_and_feet",
+    "norm": "The head is the most respected part of the body, and the feet the lowest. Touching someone's head (including patting a child's head) is rude. Pointing feet or the soles at people, monks, Buddha images or spirit houses is offensive. People avoid stepping over others, or over food, and keep feet tucked when seated on the floor.",
+    "do": [
+      "Sit with feet tucked to the side or behind you on the floor, especially in temples and homes",
+      "Bend slightly and lower your body when passing in front of seated elders",
+      "Keep feet off tables and chairs"
+    ],
+    "dont": [
+      "Don't pat heads, even of children",
+      "Don't point with your foot or move objects with it",
+      "Don't cross your legs pointing at an elder or monk"
+    ],
+    "why": "The body hierarchy mirrors social hierarchy: high = respected, low = impure.",
+    "northern_specific": false,
+    "translation_implication": "In home, temple and khantoke contexts, add a one-line posture reminder. If a user asks to take a photo with a child, remind them not to pat the child's head.",
+    "source": "https://theculturalatlas.org/thai-culture/thai-culture-etiquette",
+    "confidence": "high"
+  },
+  {
+    "topic": "pointing_beckoning_and_passing_objects",
+    "norm": "Pointing at people with the index finger is considered rude. To beckon, use a palm-down scooping motion, not a palm-up finger curl. Pass and receive things with the right hand, or both hands for formal items, and don't toss money or objects onto a counter.",
+    "do": [
+      "Gesture with an open hand to indicate a person or item",
+      "Hand over money with the right hand or both hands"
+    ],
+    "dont": [
+      "Don't point at people or monks with a finger",
+      "Don't beckon with a curled finger",
+      "Don't throw money down"
+    ],
+    "why": "Casual or tossing gestures read as dismissive.",
+    "northern_specific": false,
+    "translation_implication": "When the user says 'that one' at a market, the note can suggest an open-hand gesture. Payment moments can get a short 'hand money over, don't toss it' note.",
+    "source": "https://www.thaiholidayguide.com/thai-gestures-body-language/",
+    "confidence": "medium"
+  },
+  {
+    "topic": "monks_conduct",
+    "norm": "Monks are treated with the highest respect. Women should not touch a monk or hand anything directly to one: offerings go on a cloth or tray placed for the monk, or a man hands them over. In general neither men nor women touch monks. Kneel or lower yourself when offering to a seated monk. Monks aren't expected to return a lay person's wai.",
+    "do": [
+      "Women: place items on the monk's cloth or tray",
+      "Lower yourself below a seated monk's head level when possible",
+      "Give up seats to monks on public transport (commonly observed practice)"
+    ],
+    "dont": [
+      "Don't touch monks or their robes",
+      "Don't sit higher than or right next to a monk if a woman",
+      "Don't photograph monks up close without asking"
+    ],
+    "why": "Monastic discipline (Vinaya) restricts physical contact with women to support celibacy vows. Lay people protect monks from breaking rules.",
+    "northern_specific": false,
+    "translation_implication": "When a female user wants to give something to a monk, add a note about using a cloth or intermediary. Speech to and about monks uses a special respectful vocabulary in Thai. The app should use simple, highly polite phrasing and flag monk-directed output for native review rather than guessing specialised terms.",
+    "source": "https://amazingthailand.com/don-t-touch-monks",
+    "confidence": "medium",
+    "needs_expert_review": "amazingthailand.com is NOT the official TAT site. The rule is widely confirmed, but the seat-on-transport line has no source here; it is general knowledge and should be checked. Monk-specific vocabulary is deliberately not generated here and needs an expert to supply it."
+  },
+  {
+    "topic": "temple_etiquette_and_dress",
+    "norm": "Dress modestly at temples and in villages: shoulders covered and shorts/skirts to the knee or longer. Remove shoes before entering temple buildings and homes. Sit with feet tucked away from Buddha images, speak quietly, and don't climb on or pose disrespectfully with Buddha images.",
+    "do": [
+      "Carry a scarf or sarong for temple visits",
+      "Remove shoes where others have",
+      "Walk clockwise around chedi if joining others"
+    ],
+    "dont": [
+      "Don't point feet at Buddha images",
+      "Don't wear revealing clothing inside temple grounds",
+      "Don't touch or climb Buddha images for photos"
+    ],
+    "why": "Temples are active places of worship. Modesty and a low posture show respect for the Buddha, Dhamma and Sangha.",
+    "northern_specific": false,
+    "translation_implication": "When the place in the context packet is a wat, prepend a dress and posture reminder to cultural notes. Translate temple signs literally but add context.",
+    "source": "https://www.green-trails.com/our-code-of-conduct-for-village-visits/",
+    "confidence": "medium",
+    "needs_expert_review": "Dress rule is sourced from a trekking operator's village code (knee-length shorts). Temple-specific rules vary by wat. Clockwise circumambulation is a general Buddhist practice and not directly sourced here."
+  },
+  {
+    "topic": "lanna_temple_women_restrictions",
+    "norm": "Some Lanna temples bar women from certain areas, e.g. the ubosot (ordination hall) of Wat Sri Suphan in Chiang Mai, and signs near some chedis such as at Wat Chedi Luang. The rule is linked to older Lanna beliefs that female bodies, particularly during menstruation, could weaken sacred objects or protective charms buried in the ground beneath. This is not standard Buddhist practice across Thailand and is debated by Thais themselves.",
+    "do": [
+      "Follow the sign; admire from the permitted area",
+      "If curious, ask respectfully about the history rather than challenging staff"
+    ],
+    "dont": [
+      "Don't argue with temple staff or monks about the rule on the spot",
+      "Don't present it as universal Thai Buddhism"
+    ],
+    "why": "It is a local Lanna animist-rooted tradition that survives at specific sites.",
+    "northern_specific": true,
+    "translation_implication": "If a female user asks why she can't enter, give a neutral historical explanation and note it is local and contested. Don't editorialise, and don't claim all temples do this.",
+    "source": "https://www.chiangraitimes.com/chiang-mai/chiang-mai-temple-sign-sparks-debate/",
+    "confidence": "medium",
+    "needs_expert_review": "Which specific temples/areas currently restrict women should be verified on-site. Chiang Rai Times is regional news."
+  },
+  {
+    "topic": "royal_institution_and_lese_majeste",
+    "norm": "The monarchy is held in deep formal respect, and Section 112 of the Criminal Code (lese-majeste) carries 3 to 15 years' imprisonment per count. Anyone can file a complaint, police must investigate, and foreigners have been prosecuted, including for statements made abroad and for defacing royal images. People customarily stand still when the national anthem is broadcast in public at 08:00 and 18:00.",
+    "do": [
+      "Stand still when the national anthem plays at 08:00/18:00 in public places (e.g. markets, stations)",
+      "Treat royal images and banknotes (which bear the King's image) with care"
+    ],
+    "dont": [
+      "Don't discuss, joke about or criticise the monarchy in conversation or on social media",
+      "Don't step on dropped banknotes or coins to stop them rolling",
+      "Don't deface royal portraits"
+    ],
+    "why": "It is a legal risk as well as a social one. Opinions vary privately, but public talk is heavily constrained.",
+    "northern_specific": false,
+    "translation_implication": "The app should NOT translate content that criticises or jokes about the royal family without a clear warning. Suggest the user rephrase or drop it. Never generate commentary on the monarchy in cultural notes. If a local speaker mentions the King respectfully, translate neutrally and respectfully.",
+    "source": "https://en.wikipedia.org/wiki/L%C3%A8se-majest%C3%A9_in_Thailand",
+    "confidence": "high",
+    "needs_expert_review": "The banknote-stepping point is widely cited but not in the fetched sources. Reviewer to confirm. Anthem times are from Wikipedia (Thai National Anthem)."
+  },
+  {
+    "topic": "bargaining_at_markets",
+    "norm": "Bargaining is normal at street markets, night bazaars and souvenir stalls, but not in malls, shops with posted prices, 7-Eleven, or for street food and fresh produce sold in small amounts. Tone matters more than tactics: stay friendly and smiling, and only bargain if you intend to buy. Avoid squeezing small rural vendors over a few baht.",
+    "do": [
+      "Ask politely 'lot dai mai?' (can you reduce?) with a smile",
+      "Accept the final price graciously, or thank them and walk on",
+      "Buy more to get a better price rather than grinding one item down"
+    ],
+    "dont": [
+      "Don't bargain on cooked food, fruit by the bag, or fixed-price shops",
+      "Don't haggle aggressively or show annoyance",
+      "Don't agree a price and then walk away"
+    ],
+    "why": "Bargaining is a social exchange. Pushing too hard causes loss of face, and in rural/highland contexts small sums matter more to the seller.",
+    "northern_specific": true,
+    "translation_implication": "When the place is a night bazaar or souvenir market, the app can offer a polite bargaining phrase. When the place is a fresh market, local food stall or highland trader selling produce, add a note that prices are usually fixed and bargaining is uncommon. Translate the vendor's final price firmly, not as an opening offer.",
+    "source": "https://www.thelongestwayhome.com/travel-guides/thailand/how-to-bargain-for-souvenirs-deals-thailand.html",
+    "confidence": "low",
+    "needs_expert_review": "Main source is a travel blog. The discount ranges quoted there (roughly 30-60% off first price on souvenirs) are anecdotal and should NOT be shown as rules. Reviewer to set guidance on percentages and on fresh-market norms in Chiang Mai."
+  },
+  {
+    "topic": "tipping",
+    "norm": "Tipping is appreciated but not required. Check for a 10% service charge on bills. At local restaurants without one, leaving small change or 20-50 baht is common, and nothing is expected at street food stalls. Massage therapists are commonly tipped in cash directly, around 50-100 baht per hour at local shops. Round up taxi fares.",
+    "do": [
+      "Hand tips directly and discreetly",
+      "Check the bill for a service charge first"
+    ],
+    "dont": [
+      "Don't make a show of tipping",
+      "Don't feel obliged to tip at street stalls or markets"
+    ],
+    "why": "Tipping culture is modest and has grown with tourism.",
+    "northern_specific": false,
+    "translation_implication": "Only add tipping notes when the place is a restaurant, massage shop or tour. Don't add them for markets or vendors.",
+    "source": "https://www.chiangraitimes.com/travel-guide/tipping-in-thailand/",
+    "confidence": "low",
+    "needs_expert_review": "Amounts come from a regional news travel guide and change over time. Reviewer to sanity-check for Chiang Mai in 2026."
+  },
+  {
+    "topic": "eating_etiquette",
+    "norm": "Standard Thai meals use a spoon (right hand) and fork (left hand), with the fork pushing food onto the spoon. Chopsticks are for noodles. Dishes are shared family-style, each with a serving spoon: take a little at a time onto your own rice rather than eating from the communal dish with your own spoon. Sticky rice (khao niao), the Northern staple, is eaten by hand: pinch a small ball and use it to scoop dips and curries.",
+    "do": [
+      "Use the serving spoon for shared dishes",
+      "Take small portions and go back for more",
+      "Eat sticky rice with your right hand, rolling small balls"
+    ],
+    "dont": [
+      "Don't put the fork in your mouth",
+      "Don't pile a shared dish onto your plate",
+      "Don't use your own spoon in the communal dish"
+    ],
+    "why": "Sharing reflects togetherness. Taking too much or 'contaminating' shared food is inconsiderate.",
+    "northern_specific": true,
+    "translation_implication": "In food contexts, notes can explain sticky-rice-by-hand and serving-spoon use. Translate invitations like 'kin khao duay kan' as 'come eat with us', not a formal invitation.",
+    "source": "https://thaicookingchiangmai.com/thai-etiquette-table-manners/",
+    "confidence": "medium",
+    "needs_expert_review": "Right-hand-for-sticky-rice is our inference from the general right-hand norm. The source only says 'by hand'. Leftover-rice norms in Cultural Atlas (leaving a little signals fullness) weren't cross-checked."
+  },
+  {
+    "topic": "khantoke",
+    "norm": "Khantoke is the Lanna tradition of eating seated on the floor around a khantoke (a low, round pedestal tray of rattan or teak) with several dishes and sticky rice shared among diners. It is associated with hospitality, sharing and hierarchy, and is today often experienced as a staged dinner-and-dance for visitors.",
+    "do": [
+      "Sit with legs tucked to the side, not pointing at others",
+      "Share from the tray using sticky rice or serving spoons"
+    ],
+    "dont": [
+      "Don't stretch your feet under or toward the tray",
+      "Don't step over the tray or other diners"
+    ],
+    "why": "Floor dining brings head and feet rules to the fore.",
+    "northern_specific": true,
+    "translation_implication": "In a khantoke context, the note should cover posture and sharing. Translate 'khantoke' as a named Lanna tradition, not just 'dinner'.",
+    "source": "https://lannakingdom.com/culture",
+    "confidence": "medium",
+    "needs_expert_review": "lannakingdom.com is run by 'Lanna Creative' (unknown authority). The core facts are uncontroversial but would benefit from a CMU or museum source."
+  },
+  {
+    "topic": "gift_giving",
+    "norm": "Gifts are optional but appreciated when visiting: fruit, flowers, snacks or cakes. Wrapping is done with care, and some sources say to avoid blue, black and green (some associate these with mourning). Gifts are usually not opened in front of the giver unless invited. Give and receive with the right hand or both hands.",
+    "do": [
+      "Bring a small food gift (fruit, snacks) when visiting a home",
+      "Give with both hands and a slight bow",
+      "Let the recipient open it later"
+    ],
+    "dont": [
+      "Don't insist the recipient open a gift in front of you",
+      "Don't give expensive gifts that create obligation"
+    ],
+    "why": "Reciprocity and not burdening the other person (kreng jai) shape gift giving.",
+    "northern_specific": false,
+    "translation_implication": "If a local refuses a gift once, the note can explain it may be polite modesty; offer again gently. Translate 'mai tong' in gift contexts as 'you didn't have to!' rather than 'no'.",
+    "source": "https://theculturalatlas.org/thai-culture/thai-culture-etiquette",
+    "confidence": "medium",
+    "needs_expert_review": "Colour taboo (especially black) is widely stated but varies. Reviewer should confirm current relevance, and whether a Northern-specific gift custom exists."
+  },
+  {
+    "topic": "visiting_homes",
+    "norm": "Remove shoes before entering a house. Don't step on the door threshold. Sit on the floor with feet tucked. Greet elders in the household first. Many homes have a spirit house or an ancestral shrine that should be treated respectfully.",
+    "do": [
+      "Take shoes off at the door and line them up",
+      "Step over the threshold, not on it",
+      "Greet the oldest person first with a wai"
+    ],
+    "dont": [
+      "Don't step on the threshold",
+      "Don't point feet at the family shrine, spirit house or elders",
+      "Don't wander into rooms uninvited"
+    ],
+    "why": "Threshold beliefs vary; some Thais connect them to guardian spirits of the house. Shoes carry dirt from the lowly ground.",
+    "northern_specific": false,
+    "translation_implication": "In a 'home visit' context, give a short arrival checklist. If the host says 'come up' (khuen ma), translate as 'come in' (homes are traditionally raised).",
+    "source": "https://theculturalatlas.org/thai-culture/thai-culture-etiquette",
+    "confidence": "medium",
+    "needs_expert_review": "The spirit rationale for the threshold taboo is commonly given but was not confirmed in a fetched source. The 'khuen ma' rendering is ours. Reviewer should check both."
+  },
+  {
+    "topic": "public_displays_of_affection_and_emotion",
+    "norm": "Public displays of affection (kissing, hugging, often hand-holding in villages) are considered inappropriate, especially in rural and highland communities. Visible anger, shouting and dramatic gestures are frowned upon and may make things worse.",
+    "do": [
+      "Keep affection private, especially in villages and temples",
+      "Stay calm and polite in disputes"
+    ],
+    "dont": [
+      "Don't kiss or embrace in villages or temples",
+      "Don't shout or gesticulate angrily"
+    ],
+    "why": "Emotional restraint (jai yen) and modesty are valued, more strongly in conservative rural areas.",
+    "northern_specific": false,
+    "translation_implication": "When the location is a village, add a modesty note. For heated exchanges, soften the translation and advise calm.",
+    "source": "https://www.green-trails.com/our-code-of-conduct-for-village-visits/",
+    "confidence": "medium"
+  },
+  {
+    "topic": "photography_of_people",
+    "norm": "Always ask before photographing people, especially elders, highland villagers, monks and people at ritual events. In some villages people ask a small fee for photos (e.g. 10 baht was reported in an Akha village), and in tourist-facing villages traditional dress may be worn as part of that work. Buying something first often makes a photo request more comfortable.",
+    "do": [
+      "Ask first (a phrase plus a gesture at the camera)",
+      "Accept a no without argument",
+      "Pay if a fee is requested, or buy a small item",
+      "Show people the photo"
+    ],
+    "dont": [
+      "Don't photograph ceremonies, spirit gates or shrines without permission",
+      "Don't photograph children without a parent's consent",
+      "Don't treat villagers as scenery"
+    ],
+    "why": "Consent and dignity matter. Photography has been part of the commodification of highland peoples in ethnic tourism.",
+    "northern_specific": true,
+    "translation_implication": "When the user asks to take a photo, generate a polite ask-permission phrase in Thai (and the local language if the profile card specifies one). Don't generate text that pressures a no into a yes.",
+    "source": "https://www.researchgate.net/publication/301659188_Ethnic_Tourism_in_Northern_Thailand_Viewpoints_of_the_Akha_and_the_Karen",
+    "confidence": "medium",
+    "needs_expert_review": "Study authors and year were not captured from the ResearchGate page. Reviewer should add a citation. The 10-baht fee is one village's practice, not a norm."
+  },
+  {
+    "topic": "highland_communities_self_designation",
+    "norm": "Use peoples' own names: Akha (not 'Kaw/Ekaw', which Akha consider derogatory), Hmong (not 'Meo/Miao', considered derogatory), Karen (sub-groups such as S'gaw and Pwo; Thai 'Kariang' and Shan 'Yang' are exonyms), Lahu, Lisu, Mien, Lua/Lawa and others. The Thai umbrella term chao khao ('hill people') is common but IWGIA and indigenous-rights advocates regard 'hill tribe' as derogatory; 'highland people' or the group's own name is safer.",
+    "do": [
+      "Use the group's self-name or 'people of X village'",
+      "Ask people how they prefer to be described if relevant"
+    ],
+    "dont": [
+      "Don't use 'Meo', 'Kaw/Ekaw' or other slurs, even if a Thai speaker uses them",
+      "Don't generalise all highland peoples into one 'hill tribe'",
+      "Don't exoticise dress or customs"
+    ],
+    "why": "Many exonyms carry historical contempt. Self-designation shows respect.",
+    "northern_specific": true,
+    "translation_implication": "If incoming Thai contains a derogatory exonym, translate it but annotate that the term is considered offensive and give the self-name. Never produce exonyms in outgoing text.",
+    "source": "https://en.wikipedia.org/wiki/Akha_people ; https://en.wikipedia.org/wiki/Hmong_people ; https://en.wikipedia.org/wiki/Hill_tribe_(Thailand)",
+    "confidence": "medium",
+    "needs_expert_review": "Verifier: Wikipedia 'Hill tribe (Thailand)' confirms IWGIA views 'hill tribe' as derogatory. Ask a community member which Thai umbrella term they prefer."
+  },
+  {
+    "topic": "highland_village_conduct",
+    "norm": "In highland villages: dress modestly (knee-length shorts, no swimwear), remove shoes before entering any house, avoid public affection, drink moderately or not at all, and respect quiet evenings, since villagers often sleep by about 10 pm. In Akha villages the carved village gate marks the boundary between the human domain and the spirit world, and the tall village swing is ritual, not play equipment.",
+    "do": [
+      "Follow your guide or host's cues",
+      "Ask whenever unsure",
+      "Show curiosity about language, crafts and food"
+    ],
+    "dont": [
+      "Don't touch or walk through a spirit gate for fun, or photograph it without asking",
+      "Don't play on ritual swings",
+      "Don't get drunk in villages"
+    ],
+    "why": "Villages are homes and sacred landscapes, not attractions. Beliefs vary between villages, and many community members are Christian or Buddhist.",
+    "northern_specific": true,
+    "translation_implication": "When the profile card indicates a highland trader or village setting, add a village-conduct note and prefer simple Central Thai unless a local-language glossary is present.",
+    "source": "https://www.green-trails.com/our-code-of-conduct-for-village-visits/",
+    "confidence": "medium",
+    "needs_expert_review": "The spirit gate detail is from Wikipedia (Akha people). Practices differ by village and religion. Reviewer should check wording."
+  },
+  {
+    "topic": "buddhist_holidays_alcohol",
+    "norm": "Alcohol sales are banned nationwide on major Buddhist holy days: Makha Bucha, Visakha Bucha, Asalha Bucha, Khao Phansa (start of Buddhist Lent) and Ok Phansa (end of Lent). Exemptions (international airport terminals, hotels, licensed entertainment venues, tourist-zone pubs/bars/karaoke, special events) are in force under the Office of the Prime Minister announcement on alcohol-ban days, 2025, as reported by Nation Thailand on 25 Feb 2026. General sales hours: since the Royal Gazette notice of late May 2026, alcohol may generally be sold 11:00-24:00 (the old 14:00-17:00 afternoon ban, suspended on trial from late 2025, was lifted). Drinking is restricted at temples, government offices, petrol stations, public parks and public transport areas.",
+    "do": [
+      "Expect shops, restaurants and markets not to sell alcohol on these days",
+      "Check the festival calendar before planning drinks"
+    ],
+    "dont": [
+      "Don't ask vendors to sell alcohol on holy days",
+      "Don't drink conspicuously near temples on these days"
+    ],
+    "why": "These days are for merit-making and observing precepts.",
+    "northern_specific": false,
+    "translation_implication": "If the date in the context packet matches a Buddhist holy day, add a note when the user asks to buy alcohol. Cross-reference festival_calendar.json for exact dates.",
+    "source": "https://www.khaosodenglish.com/tourism/2025/03/04/thailand-keeps-buddhist-holiday-alcohol-ban-adds-tourism-exemptions/ ; https://www.tatnews.org/2026/05/alcohol-sales-and-consumption-rules-updated-in-thailand-what-tourists-need-to-know/ ; https://www.businesstoday.in/nri/visa/story/thailand-officially-revises-alcohol-sales-hours-with-select-exemptions-check-new-timings-533969-2026-05-30 ; https://www.nationthailand.com/blogs/news/general/40062977",
+    "confidence": "medium",
+    "needs_expert_review": "Verifier 2026-09-26: removed the claim that the 14:00-17:00 ban still applies (TAT, May 2026: sales generally 11:00-24:00). The 2025 holy-day exemptions were only a committee proposal in the Khaosod source; confirm they were gazetted. Lunar holy-day dates change yearly: use festival_calendar.json. | Compiler 2026-09-26: Nation Thailand (25 Feb 2026) describes the 2025 PM Office announcement with the five exemption categories as binding, so the exemptions sentence was updated to match festival_calendar.json/etiquette.json."
+  },
+  {
+    "topic": "conversation_topics",
+    "norm": "Welcome topics include food (kin khao reu yang? 'have you eaten yet?' works as a caring greeting), where you're from, where you're going (pai nai ma?), family, the weather and the season, and local places. Thais may ask foreigners fairly direct questions about age, marital status or earnings, usually out of friendly curiosity. Avoid politics, the monarchy and religion-critical remarks. Foreigners should not ask locals about income, land, or citizenship/ID status (a sensitive issue for some highland people).",
+    "do": [
+      "Open with food or where someone is from",
+      "Compliment the food, the place or the craftwork",
+      "Answer personal questions lightly or deflect with a smile"
+    ],
+    "dont": [
+      "Don't bring up politics, the monarchy, or someone's legal status",
+      "Don't ask a vendor or villager how much they earn",
+      "Don't read 'have you eaten?' as an invitation to a meal"
+    ],
+    "why": "Food is the main social connector. Some topics carry legal risk or deep sensitivity.",
+    "northern_specific": false,
+    "translation_implication": "Translate 'kin khao reu yang?' as 'Have you eaten? (a friendly greeting, like how are you)'. If a user's question touches citizenship, legal status or income, warn before translating and suggest an alternative.",
+    "source": "https://www.nationthailand.com/life/art-culture/40050932",
+    "confidence": "medium",
+    "needs_expert_review": "The note on locals asking about age, marital status and earnings is general knowledge. It wasn't confirmed in a fetched source."
+  },
+  {
+    "topic": "spirit_beliefs_and_khwan",
+    "norm": "Many Northern Thai (Khon Mueang) households combine Theravada Buddhism with belief in spirits (phi): ancestral spirits (phi pu ya), village and temple guardian spirits, and the city pillar (Inthakhin in Chiang Mai). Spirit houses receive daily offerings. Khwan are vital essences believed to reside in the body. Su khwan / riak khwan ceremonies call a person's khwan back and bind it with white cotton string tied at the wrist, e.g. after illness, travel or before life events. Lanna healing rituals are often used alongside, not instead of, hospital care. Belief and practice vary greatly between families, villages and generations.",
+    "do": [
+      "Accept a wrist string (sai sin) graciously if offered; people commonly leave it on until it falls off or for several days",
+      "Treat spirit houses and offerings respectfully"
+    ],
+    "dont": [
+      "Don't touch, move or take items from spirit houses or offerings",
+      "Don't mock spirit beliefs",
+      "Don't cut off a blessing string in front of the person who tied it"
+    ],
+    "why": "These are living beliefs for some people, tied to wellbeing, family and place.",
+    "northern_specific": true,
+    "translation_implication": "Translate khwan as 'life essence / spirit (khwan)' with a short note, not 'soul' alone. Present beliefs as 'many people believe' rather than fact or superstition, and don't call them 'superstitions' in output.",
+    "source": "https://en.wikipedia.org/wiki/Tai_folk_religion",
+    "confidence": "medium",
+    "needs_expert_review": "Phi pu ya, Inthakhin and dam hua come from lannakingdom.com (moderate authority). Riak khwan is from Suwipa Champawan 2024, Journal of Thai Studies. Guidance on how long to keep the string on is general knowledge, not sourced."
+  },
+  {
+    "topic": "dam_hua_respect_to_elders",
+    "norm": "During Songkran (Pi Mai Mueang in Lanna), people perform dam hua: paying respect to elders by pouring scented water over their hands and asking forgiveness and blessings. Carrying sand to temples to build sand chedis is also a merit-making custom.",
+    "do": [
+      "If invited to a dam hua, join respectfully, gently and in a low posture",
+      "Distinguish the gentle rite from street water-throwing"
+    ],
+    "dont": [
+      "Don't splash elders or monks as you would in street water fights"
+    ],
+    "why": "It expresses gratitude and hierarchy within family and community.",
+    "northern_specific": true,
+    "translation_implication": "In April contexts, explain dam hua if it comes up. Translate it as 'ceremony of respect to elders', not 'water fight'.",
+    "source": "https://lannakingdom.com/culture",
+    "confidence": "medium"
+  },
+  {
+    "topic": "kham_mueang_use_and_generations",
+    "norm": "Kham Mueang (Northern Thai) is valued as a soft-spoken, identity-bearing language, but many younger urban people speak mostly Central Thai and some see the dialect as old-fashioned. Older people and rural communities use it most. A visitor's attempt at Kham Mueang greetings (sawatdi jao, khop jai jao) is usually received warmly.",
+    "do": [
+      "Use Kham Mueang greetings with elders and rural vendors",
+      "Switch to Central Thai if the person replies in it"
+    ],
+    "dont": [
+      "Don't assume every Chiang Mai local speaks or prefers Kham Mueang",
+      "Don't mock or correct someone's accent"
+    ],
+    "why": "Language choice signals identity, age and status.",
+    "northern_specific": true,
+    "translation_implication": "Pick the register from the profile card (elder/rural leads to Kham Mueang forms; young/urban leads to Central Thai). Always offer Central Thai as a fallback. When the user tries Kham Mueang, the note can say it is appreciated.",
+    "source": "https://chiangmaicitylife.com/citylife-articles/rip-kham-mueang-the-slow-death-of-a-language",
+    "confidence": "medium",
+    "needs_expert_review": "'khop jai jao' is common, but Centara lists 'khob khun jao'. Check with the glossary agent/reviewer."
+  },
+  {
+    "topic": "northern_thai_tones_for_translation",
+    "norm": "Northern Thai has six phonemic tones on open or sonorant-final syllables (Wikipedia lists low-rising, low-falling, high-level with glottal closure, mid-level, high-falling and high-rising) and fewer on stop-final syllables. Its tone categories and some consonants correspond differently from Central Thai, so the same word can have a different tone or initial (e.g. Northern keeps a separate ny sound /ɲ/ for ญ, which Central Thai merges with ย /j/; ร often becomes ฮ; many ค ช ท พ become unaspirated).",
+    "do": [
+      "Show Kham Mueang in Thai script and romanisation together",
+      "Include audio or a native-check flag for key phrases"
+    ],
+    "dont": [
+      "Don't apply Central Thai tone marks' values to Kham Mueang spelling"
+    ],
+    "why": "Tone errors change meaning. Romanisations rarely encode tone.",
+    "northern_specific": true,
+    "translation_implication": "Mark Kham Mueang phrases as 'pronunciation approximate' unless native-verified. See lanna-language.md and sound_correspondences.json (other agents) for full detail.",
+    "source": "https://en.wikipedia.org/wiki/Northern_Thai_language",
+    "confidence": "medium",
+    "needs_expert_review": "The tone inventory differs across descriptions and by province. Defer to the language agent's files and an expert."
+  },
+  {
+    "topic": "lanna_vs_bangkok_differences",
+    "norm": "Compared with Bangkok, Lanna social style is often described as slower-paced, softer-spoken and more rooted in local identity (Kham Mueang, Tai Tham script, spirit cults such as city-pillar and ancestral spirits, sticky rice as a staple, khantoke). Historically, Lanna households had strong female authority: the house belonged to the woman, and grooms often married into the wife's family. That tradition was later overlaid by Central Thai and other influences. Local pride in Lanna identity matters to many people.",
+    "do": [
+      "Show interest in Lanna identity (script, food, language)",
+      "Recognise Northern people as Khon Mueang with their own history, not just 'Thai'"
+    ],
+    "dont": [
+      "Don't describe Northern culture as a 'rural version' of Bangkok culture",
+      "Don't generalise; Chiang Mai city is also cosmopolitan"
+    ],
+    "why": "Lanna was a separate kingdom until its incorporation into Siam, and regional identity persists.",
+    "northern_specific": true,
+    "translation_implication": "In Northern contexts, cultural notes can reference Lanna-specific practice where it applies, but shouldn't overclaim differences for everyday politeness, which is largely shared.",
+    "source": "https://www.thaienquirer.com/18429/the-lanna-woman-and-pa-sin-tin-jok/",
+    "confidence": "medium",
+    "needs_expert_review": "Matrilocal/matriarchal claims are quoted from Dr. Vithi Phanichphant via Thai Enquirer. 'Slower pace/softer' is a common characterisation, not measured. Reviewer should temper the wording if needed."
+  }
+]

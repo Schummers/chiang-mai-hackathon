@@ -1,0 +1,288 @@
+{
+  "meta": {
+    "topic": "Regional dialect variation across Northern Thailand (Lanna provinces + Northern-speaking Uttaradit/Tak)",
+    "compiled": "2026-09-26",
+    "for": "Contextual Translate context packets (Claude Impact Labs hackathon, Chiang Mai)",
+    "romanization_note": "roman fields are RTGS-style romanizations derived by the researcher from the sourced Thai script; RTGS does not mark tone, and Northern tones differ from Central Thai. Treat roman as a reading aid, not a pronunciation authority.",
+    "tone_mark_note": "Kham Mueang written in Thai script uses Thai tone marks to approximate Northern tones, so spellings like กิ๋น (Central กิน) or น่ำ (Central น้ำ) are informal conventions and vary by writer.",
+    "status": "DRAFT - every entry needs review by the team's Thai/Northern Thai culture expert before production use."
+  },
+  "sources_index": {
+    "WIKI_NT": "https://en.wikipedia.org/wiki/Northern_Thai_language",
+    "KRU": "https://krunuttaya.wordpress.com/2012/04/05/%E0%B8%A0%E0%B8%B2%E0%B8%A9%E0%B8%B2%E0%B9%84%E0%B8%97%E0%B8%A2%E0%B8%96%E0%B8%B4%E0%B9%88%E0%B8%99%E0%B9%80%E0%B8%AB%E0%B8%99%E0%B8%B7%E0%B8%AD-%E0%B8%81%E0%B8%B3%E0%B9%80%E0%B8%A1%E0%B8%B7/",
+    "LPRU": "https://culture.lpru.ac.th/WebCulture2553/CultureKnowledge/file/05-03.pdf",
+    "KATSURA1969": "https://kyoto-seas.org/pdf/7/2/070201.pdf",
+    "PHRAE_THESIS": "https://sure.su.ac.th/xmlui/handle/123456789/1811",
+    "KOKHA_LUE2020": "https://so06.tci-thaijo.org/index.php/wiwitwannasan/article/view/242012",
+    "SAOWA2023": "https://www.academia.edu/100525756/The_study_of_the_Northern_Thai_dialect_Phonetic_variations_of_Sao_Wa_sub_variant_in_Chiang_Rai_province",
+    "YONG_WIKI": "https://en.wikipedia.org/wiki/Yong_language",
+    "LAMPHUN_GOV": "https://www.lamphun.go.th/en/information/aboutus/9/history-of-lamphun-province",
+    "YONG_CMU2025": "https://mfuir.mfu.ac.th/jspui/bitstream/123456789/1029/1/2025-v14-no1-p.72-97.pdf",
+    "LUE_PEOPLE": "https://en.wikipedia.org/wiki/Tai_Lue_people",
+    "LUE_LANG": "https://en.wikipedia.org/wiki/Tai_Lue_language",
+    "LUE_CM": "https://www.chiangmai-alacarte.com/the-tai-lue-people-of-chiang-mai/",
+    "SHAN_WIKI": "https://en.wikipedia.org/wiki/Shan_language",
+    "SHAN_OMNIGLOT": "https://www.omniglot.com/writing/shan.htm",
+    "MHS_WIKI": "https://en.wikipedia.org/wiki/Mae_Hong_Son_province",
+    "TAIYAI_FOOD": "https://www.thaipbsworld.com/lifestyle/tai-yai-delicacies-in-mae-hong-son",
+    "SHAN_NY": "https://www.sca-uk.org.uk/wp-content/uploads/2021/03/SCA_UK-Newsletter-V3.pdf",
+    "KHUN_WIKI": "https://en.wikipedia.org/wiki/Kh%C3%BCn_language",
+    "NANTARAM": "https://wikicommunity.sac.or.th/community/1116",
+    "TONPAO": "https://wikicommunity.sac.or.th/community/1654",
+    "CR_WIKI": "https://en.wikipedia.org/wiki/Chiang_Rai_province",
+    "NAN_WIKI": "https://en.wikipedia.org/wiki/Nan_province",
+    "LAPLAE": "https://wikicommunity.sac.or.th/community/1757",
+    "TAK_MAESOT2010": "https://so06.tci-thaijo.org/index.php/VANNAVIDAS/article/view/68845",
+    "TAK_WIKI": "https://en.wikipedia.org/wiki/Tak_province",
+    "CITYLIFE2017": "https://www.chiangmaicitylife.com/clg/our-city/culture/rip-kham-mueang-the-slow-death-of-a-language/",
+    "PHAYAO_3GEN": "https://so04.tci-thaijo.org/index.php/socku/article/view/131414/98614",
+    "SANOOK": "https://www.sanook.com/campus/1392241/"
+  },
+  "provinces": [
+    {
+      "province": "Chiang Mai",
+      "province_th": "เชียงใหม่",
+      "main_varieties": [
+        {"name": "Kham Mueang / Northern Thai, Chiang Mai (western) variety", "name_th": "คำเมือง", "note": "Reference variety for most learning materials; 6 tones on smooth syllables, 4 on checked syllables; phonetic realization of the 6 tones is not agreed in the literature.", "source": "https://en.wikipedia.org/wiki/Northern_Thai_language", "confidence": "high"}
+      ],
+      "other_languages": [
+        {"name": "Tai Khuen (self: ไทเขิน)", "where": "Ban Nantaram (Chiang Mai city, lacquerware community); Ban Ton Pao, San Kamphaeng (sa-paper village, elders keep a Khuen accent)", "note": "Ancestors from Chiang Tung (Kengtung). Used locally, increasingly mixed with Kham Mueang and Central Thai. Source's migration date is internally inconsistent.", "source": "https://wikicommunity.sac.or.th/community/1116", "confidence": "medium"},
+        {"name": "Tai Lue (ไทลื้อ)", "where": "Doi Saket (Ban Luang Nua, Ban Luang Tai), Mae Rim, Samoeng, Mae On", "source": "https://www.chiangmai-alacarte.com/the-tai-lue-people-of-chiang-mai/", "confidence": "medium"},
+        {"name": "Yong (ไทยอง)", "where": "San Kamphaeng district; Wiang Tha Kan (San Pa Tong)", "source": "https://en.wikipedia.org/wiki/Yong_language", "confidence": "medium"},
+        {"name": "Tai Yai / Shan (self: Tai, Tai Yai, Tai Long)", "where": "Chiang Mai province (large recent labour-migrant population too)", "note": "Exonym 'Ngiao' (เงี้ยว) is considered derogatory/outdated - never use it in app output.", "source": "https://en.wikipedia.org/wiki/Shan_language", "confidence": "high"}
+      ],
+      "distinguishing_features": [
+        {"text": "Katsura (1969) found the Chiang Mai dialect the most similar to Central Thai in how tone marks map to tones, compared with Chiang Rai (Mae Chan), Lampang and Phrae.", "source": "https://kyoto-seas.org/pdf/7/2/070201.pdf", "confidence": "medium"},
+        {"text": "Other northern provinces perceive Chiang Mai speech as longer/drawn out; LPRU says Lampang, Phrae, Nan, Chiang Rai, Phayao and Uttaradit speech is 'shorter and more clipped' (ออกสั้นและห้วนกว่า) than Chiang Mai.", "source": "https://culture.lpru.ac.th/WebCulture2553/CultureKnowledge/file/05-03.pdf", "confidence": "medium"},
+        {"text": "Even within Chiang Mai city, neighbourhood variants existed: Chang Moi people said 'mua huan' for going home while Tha Phae people said 'pik baan'; such distinctions are disappearing.", "source": "https://www.chiangmaicitylife.com/clg/our-city/culture/rip-kham-mueang-the-slow-death-of-a-language/", "confidence": "medium"}
+      ],
+      "example_words": [
+        {"local": "ซาว", "roman": "sao", "central_thai": "ยี่สิบ (yi sip)", "english": "twenty", "source": "https://en.wikipedia.org/wiki/Northern_Thai_language", "confidence": "high"},
+        {"local": "อู้", "roman": "u", "central_thai": "พูด (phut)", "english": "to speak", "source": "https://en.wikipedia.org/wiki/Northern_Thai_language", "confidence": "high"},
+        {"local": "บ่", "roman": "bo", "central_thai": "ไม่ (mai)", "english": "no / not", "source": "https://en.wikipedia.org/wiki/Northern_Thai_language", "confidence": "high"},
+        {"local": "อ้าย", "roman": "ai", "central_thai": "พี่ชาย (phi chai)", "english": "older brother (also polite address to a man)", "source": "https://en.wikipedia.org/wiki/Northern_Thai_language", "confidence": "high"},
+        {"local": "มัก", "roman": "mak", "central_thai": "ชอบ (chop)", "english": "to like", "source": "https://en.wikipedia.org/wiki/Northern_Thai_language", "confidence": "high"},
+        {"local": "นัก", "roman": "nak", "central_thai": "มาก (mak)", "english": "very / much", "source": "https://en.wikipedia.org/wiki/Northern_Thai_language", "confidence": "high"},
+        {"local": "ม่วน", "roman": "muan", "central_thai": "สนุก (sanuk)", "english": "fun, enjoyable", "source": "https://en.wikipedia.org/wiki/Northern_Thai_language", "confidence": "high"},
+        {"local": "ลำ", "roman": "lam", "central_thai": "อร่อย (aroi)", "english": "delicious", "source": "https://www.sanook.com/campus/1392241/", "confidence": "medium"},
+        {"local": "อะหยัง", "roman": "a-yang", "central_thai": "อะไร (arai)", "english": "what", "source": "https://www.sanook.com/campus/1392241/", "confidence": "medium"},
+        {"local": "ปิ๊ก", "roman": "pik", "central_thai": "กลับ (klap)", "english": "to return (home)", "source": "https://www.sanook.com/campus/1392241/", "confidence": "medium"}
+      ],
+      "app_notes": "Default assumption for the app. 'ซาว' (20) is the single most important market word: 'ซาวห้าบาท' = 25 baht; a Central-Thai-only model may mis-hear or mistranslate it. Old-city vendors and rural stallholders are more likely to use full Kham Mueang; young urban people usually code-switch or use Central Thai with a Northern accent.",
+      "sources": ["https://en.wikipedia.org/wiki/Northern_Thai_language", "https://kyoto-seas.org/pdf/7/2/070201.pdf", "https://wikicommunity.sac.or.th/community/1116", "https://wikicommunity.sac.or.th/community/1654", "https://www.chiangmai-alacarte.com/the-tai-lue-people-of-chiang-mai/", "https://www.chiangmaicitylife.com/clg/our-city/culture/rip-kham-mueang-the-slow-death-of-a-language/", "https://www.sanook.com/campus/1392241/"],
+      "confidence": "high"
+    },
+    {
+      "province": "Lamphun",
+      "province_th": "ลำพูน",
+      "main_varieties": [
+        {"name": "Kham Mueang (western, close to Chiang Mai)", "source": "https://en.wikipedia.org/wiki/Northern_Thai_language", "confidence": "medium"},
+        {"name": "Yong / Mueang Yong accent (สำเนียงเมืองยอง)", "note": "Descendants of Yong people resettled from Mueang Yong (now in Myanmar); Lamphun gov says 10,000 Yong were settled opposite Wat Phra That Hariphunchai. Speakers in Pa Sang, Mae Tha and Mueang Lamphun districts; ~12,600 speakers (2000). Phonologically close to Tai Lue.", "source": "https://en.wikipedia.org/wiki/Yong_language", "confidence": "high"}
+      ],
+      "other_languages": [
+        {"name": "Yong (ไทยอง / คนยอง)", "where": "Pa Sang, Mae Tha, Mueang Lamphun; also San Kamphaeng and San Pa Tong in Chiang Mai", "note": "Known for weaving and crafts (Lamphun gov). Younger Yong speakers are merging some tones under Northern and Standard Thai contact (2019 observation).", "source": "https://www.lamphun.go.th/en/information/aboutus/9/history-of-lamphun-province", "confidence": "high"}
+      ],
+      "distinguishing_features": [
+        {"text": "Mueang Yong accent monophthongizes diphthongs: สระอัว -> โอ, สระเอีย -> เอ, สระเอือ -> เออ/เอ (source text gives เอ for เอือ but example เมือง->เมิง implies เออ).", "source": "https://krunuttaya.wordpress.com/2012/04/05/%E0%B8%A0%E0%B8%B2%E0%B8%A9%E0%B8%B2%E0%B9%84%E0%B8%97%E0%B8%A2%E0%B8%96%E0%B8%B4%E0%B9%88%E0%B8%99%E0%B9%80%E0%B8%AB%E0%B8%99%E0%B8%B7%E0%B8%AD-%E0%B8%81%E0%B8%B3%E0%B9%80%E0%B8%A1%E0%B8%B7/", "confidence": "medium"},
+        {"text": "Consistent with Tai Lue phonology: a Chiang Kham Tai Lue study found 18 simple vowels and no complex (centering) vowels, versus 18+3 in Lampang Northern Thai.", "source": "https://so06.tci-thaijo.org/index.php/wiwitwannasan/article/view/242012", "confidence": "high"}
+      ],
+      "example_words": [
+        {"local": "เมิง", "roman": "moeng", "central_thai": "เมือง (mueang)", "english": "town / 'mueang' (as in คำเมือง)", "source": "https://krunuttaya.wordpress.com/2012/04/05/%E0%B8%A0%E0%B8%B2%E0%B8%A9%E0%B8%B2%E0%B9%84%E0%B8%97%E0%B8%A2%E0%B8%96%E0%B8%B4%E0%B9%88%E0%B8%99%E0%B9%80%E0%B8%AB%E0%B8%99%E0%B8%B7%E0%B8%AD-%E0%B8%81%E0%B8%B3%E0%B9%80%E0%B8%A1%E0%B8%B7/", "confidence": "medium"},
+        {"local": "โสย", "roman": "soi", "central_thai": "สวย (suai)", "english": "beautiful", "source": "https://krunuttaya.wordpress.com/2012/04/05/%E0%B8%A0%E0%B8%B2%E0%B8%A9%E0%B8%B2%E0%B9%84%E0%B8%97%E0%B8%A2%E0%B8%96%E0%B8%B4%E0%B9%88%E0%B8%99%E0%B9%80%E0%B8%AB%E0%B8%99%E0%B8%B7%E0%B8%AD-%E0%B8%81%E0%B8%B3%E0%B9%80%E0%B8%A1%E0%B8%B7/", "confidence": "medium"},
+        {"local": "สืบจะต๋า", "roman": "suep cha ta", "central_thai": "(no direct equivalent; ต่ออายุ-type ceremony)", "english": "Yong life-extension / merit ritual (Suep Chata)", "source": "https://mfuir.mfu.ac.th/jspui/bitstream/123456789/1029/1/2025-v14-no1-p.72-97.pdf", "confidence": "medium"}
+      ],
+      "app_notes": "If a Lamphun/Pa Sang speaker says words that look like Central/Northern words with the diphthong flattened (เมิง for เมือง), normalize ia/ua/uea before lookup. Only 3 examples verified; ask expert for more Yong market words.",
+      "sources": ["https://en.wikipedia.org/wiki/Yong_language", "https://www.lamphun.go.th/en/information/aboutus/9/history-of-lamphun-province", "https://so06.tci-thaijo.org/index.php/wiwitwannasan/article/view/242012", "https://mfuir.mfu.ac.th/jspui/bitstream/123456789/1029/1/2025-v14-no1-p.72-97.pdf"],
+      "confidence": "medium"
+    },
+    {
+      "province": "Lampang",
+      "province_th": "ลำปาง",
+      "main_varieties": [
+        {"name": "Kham Mueang, eastern-type accent", "note": "Described by Lampang Rajabhat University as shorter/more clipped than Chiang Mai speech.", "source": "https://culture.lpru.ac.th/WebCulture2553/CultureKnowledge/file/05-03.pdf", "confidence": "medium"}
+      ],
+      "other_languages": [],
+      "distinguishing_features": [
+        {"text": "Tone correspondences differ from Chiang Mai: words written with mai tho (้) in Chiang Mai-style spelling are commonly written with mai ek (่) for eastern speech, e.g. น้ำ -> น่ำ, ร้อย -> ร่อย.", "source": "https://krunuttaya.wordpress.com/2012/04/05/%E0%B8%A0%E0%B8%B2%E0%B8%A9%E0%B8%B2%E0%B9%84%E0%B8%97%E0%B8%A2%E0%B8%96%E0%B8%B4%E0%B9%88%E0%B8%99%E0%B9%80%E0%B8%AB%E0%B8%99%E0%B8%B7%E0%B8%AD-%E0%B8%81%E0%B8%B3%E0%B9%80%E0%B8%A1%E0%B8%B7/", "confidence": "medium"},
+        {"text": "Northern Thai of Ko Kha (Lampang): 21 consonant phonemes, 6 clusters, 21 vowels (18 simple + 3 complex), 6 tones (Khaorian & Liamprawat 2020).", "source": "https://so06.tci-thaijo.org/index.php/wiwitwannasan/article/view/242012", "confidence": "high"},
+        {"text": "Katsura (1969) included Mueang Lampang in a four-dialect comparison; Chiang Mai was closest to Central Thai in tone-mark behaviour.", "source": "https://kyoto-seas.org/pdf/7/2/070201.pdf", "confidence": "medium"}
+      ],
+      "example_words": [
+        {"local": "กิ๋นน่ำ", "roman": "kin nam", "central_thai": "กินน้ำ / ดื่มน้ำ (kin nam)", "english": "drink water (eastern spelling; Chiang Mai-style กิ๋นน้ำ)", "source": "https://krunuttaya.wordpress.com/2012/04/05/%E0%B8%A0%E0%B8%B2%E0%B8%A9%E0%B8%B2%E0%B9%84%E0%B8%97%E0%B8%A2%E0%B8%96%E0%B8%B4%E0%B9%88%E0%B8%99%E0%B9%80%E0%B8%AB%E0%B8%99%E0%B8%B7%E0%B8%AD-%E0%B8%81%E0%B8%B3%E0%B9%80%E0%B8%A1%E0%B8%B7/", "confidence": "medium"},
+        {"local": "สามร่อย", "roman": "sam roi", "central_thai": "สามร้อย (sam roi)", "english": "three hundred (price!)", "source": "https://krunuttaya.wordpress.com/2012/04/05/%E0%B8%A0%E0%B8%B2%E0%B8%A9%E0%B8%B2%E0%B9%84%E0%B8%97%E0%B8%A2%E0%B8%96%E0%B8%B4%E0%B9%88%E0%B8%99%E0%B9%80%E0%B8%AB%E0%B8%99%E0%B8%B7%E0%B8%AD-%E0%B8%81%E0%B8%B3%E0%B9%80%E0%B8%A1%E0%B8%B7/", "confidence": "medium"},
+        {"local": "บ่ะฮู่", "roman": "ba hu", "central_thai": "ไม่รู้ (mai ru)", "english": "don't know (eastern; Chiang Mai-style บ่ะฮู้) - direction reported inconsistently between sources", "source": "https://krunuttaya.wordpress.com/2012/04/05/%E0%B8%A0%E0%B8%B2%E0%B8%A9%E0%B8%B2%E0%B9%84%E0%B8%97%E0%B8%A2%E0%B8%96%E0%B8%B4%E0%B9%88%E0%B8%99%E0%B9%80%E0%B8%AB%E0%B8%99%E0%B8%B7%E0%B8%AD-%E0%B8%81%E0%B8%B3%E0%B9%80%E0%B8%A1%E0%B8%B7/", "confidence": "low"},
+        {"local": "ปี้", "roman": "pi", "central_thai": "พี่ชาย (phi chai)", "english": "older brother (outside Chiang Mai; Chiang Mai says อ้าย). Exact provinces not specified by source.", "source": "https://krunuttaya.wordpress.com/2012/04/05/%E0%B8%A0%E0%B8%B2%E0%B8%A9%E0%B8%B2%E0%B9%84%E0%B8%97%E0%B8%A2%E0%B8%96%E0%B8%B4%E0%B9%88%E0%B8%99%E0%B9%80%E0%B8%AB%E0%B8%99%E0%B8%B7%E0%B8%AD-%E0%B8%81%E0%B8%B3%E0%B9%80%E0%B8%A1%E0%B8%B7/", "confidence": "low"},
+        {"local": "บะแก๋ว / บะมั้น", "roman": "ba kaeo / ba man", "central_thai": "ฝรั่ง (farang, the fruit)", "english": "guava (non-Chiang Mai forms; Chiang Mai บะก้วย)", "source": "https://krunuttaya.wordpress.com/2012/04/05/%E0%B8%A0%E0%B8%B2%E0%B8%A9%E0%B8%B2%E0%B9%84%E0%B8%97%E0%B8%A2%E0%B8%96%E0%B8%B4%E0%B9%88%E0%B8%99%E0%B9%80%E0%B8%AB%E0%B8%99%E0%B8%B7%E0%B8%AD-%E0%B8%81%E0%B8%B3%E0%B9%80%E0%B8%A1%E0%B8%B7/", "confidence": "low"},
+        {"local": "หอมน้อย / หอมหน้อย", "roman": "hom noi", "central_thai": "ผักชี (phak chi)", "english": "coriander (non-Chiang Mai; Chiang Mai หอมป้อม)", "source": "https://krunuttaya.wordpress.com/2012/04/05/%E0%B8%A0%E0%B8%B2%E0%B8%A9%E0%B8%B2%E0%B9%84%E0%B8%97%E0%B8%A2%E0%B8%96%E0%B8%B4%E0%B9%88%E0%B8%99%E0%B9%80%E0%B8%AB%E0%B8%99%E0%B8%B7%E0%B8%AD-%E0%B8%81%E0%B8%B3%E0%B9%80%E0%B8%A1%E0%B8%B7/", "confidence": "low"},
+        {"local": "บะเตด", "roman": "ba tet", "central_thai": "มะละกอ (malako)", "english": "papaya (non-Chiang Mai; Chiang Mai บะก้วยเตด)", "source": "https://krunuttaya.wordpress.com/2012/04/05/%E0%B8%A0%E0%B8%B2%E0%B8%A9%E0%B8%B2%E0%B9%84%E0%B8%97%E0%B8%A2%E0%B8%96%E0%B8%B4%E0%B9%88%E0%B8%99%E0%B9%80%E0%B8%AB%E0%B8%99%E0%B8%B7%E0%B8%AD-%E0%B8%81%E0%B8%B3%E0%B9%80%E0%B8%A1%E0%B8%B7/", "confidence": "low"}
+      ],
+      "app_notes": "Fruit/herb names (guava, papaya, coriander) are exactly what a nomad meets at a market, and they differ between Chiang Mai and eastern provinces; accept both sets. Source lumps 'other provinces' together - expert should confirm which province uses which.",
+      "sources": ["https://culture.lpru.ac.th/WebCulture2553/CultureKnowledge/file/05-03.pdf", "https://krunuttaya.wordpress.com/2012/04/05/%E0%B8%A0%E0%B8%B2%E0%B8%A9%E0%B8%B2%E0%B9%84%E0%B8%97%E0%B8%A2%E0%B8%96%E0%B8%B4%E0%B9%88%E0%B8%99%E0%B9%80%E0%B8%AB%E0%B8%99%E0%B8%B7%E0%B8%AD-%E0%B8%81%E0%B8%B3%E0%B9%80%E0%B8%A1%E0%B8%B7/", "https://so06.tci-thaijo.org/index.php/wiwitwannasan/article/view/242012", "https://kyoto-seas.org/pdf/7/2/070201.pdf"],
+      "confidence": "medium"
+    },
+    {
+      "province": "Chiang Rai",
+      "province_th": "เชียงราย",
+      "main_varieties": [
+        {"name": "Kham Mueang, Chiang Rai sub-dialect (eastern-type accent per LPRU)", "note": "Majority of residents are Kham Mueang speakers.", "source": "https://en.wikipedia.org/wiki/Chiang_Rai_province", "confidence": "high"},
+        {"name": "Sao Wa sub-variant (Bun Rueang, Chiang Khong)", "note": "Village settled from Nan c.1882; differs from standard Chiang Rai speech in question/negation particles (lengthened vowel, different pitch).", "source": "https://www.academia.edu/100525756/The_study_of_the_Northern_Thai_dialect_Phonetic_variations_of_Sao_Wa_sub_variant_in_Chiang_Rai_province", "confidence": "medium"}
+      ],
+      "other_languages": [
+        {"name": "Tai Lue (ไทลื้อ)", "where": "Chiang Khong district and elsewhere", "source": "https://www.chiangmai-alacarte.com/the-tai-lue-people-of-chiang-mai/", "confidence": "medium"},
+        {"name": "Tai Khuen (Khün)", "where": "Chiang Rai province", "note": "90-95% lexical similarity with Northern Thai.", "source": "https://en.wikipedia.org/wiki/Kh%C3%BCn_language", "confidence": "high"},
+        {"name": "Tai Yai / Shan", "where": "Chiang Rai province (border areas)", "source": "https://en.wikipedia.org/wiki/Shan_language", "confidence": "medium"},
+        {"name": "Highland peoples: Akha, Lahu, Karen, Hmong, Lisu, Yao (Mien)", "note": "About 12.5% of population per Wikipedia (which also lists Tai Lue/Tai Yai in that group). Use self-designations; each has its own language.", "source": "https://en.wikipedia.org/wiki/Chiang_Rai_province", "confidence": "medium"}
+      ],
+      "distinguishing_features": [
+        {"text": "Katsura (1969) documented Chiang Rai (Mae Chan) Northern Thai with /h/ where Central Thai has /r/, e.g. Central rwa vs Chiang Rai hwa 'boat' (เรือ -> เฮือ). The r->h correspondence is general across Northern Thai.", "source": "https://kyoto-seas.org/pdf/7/2/070201.pdf", "confidence": "medium"},
+        {"text": "Shorter/clipped eastern-type accent relative to Chiang Mai.", "source": "https://culture.lpru.ac.th/WebCulture2553/CultureKnowledge/file/05-03.pdf", "confidence": "medium"}
+      ],
+      "example_words": [
+        {"local": "เฮือ", "roman": "huea", "central_thai": "เรือ (ruea)", "english": "boat (r -> h correspondence)", "source": "https://kyoto-seas.org/pdf/7/2/070201.pdf", "confidence": "medium"},
+        {"local": "(question particle, transcribed /ka5/, Sao Wa /kaa1/)", "roman": "ka / kaa", "central_thai": "ไหม / หรือ (question particle) - equivalence assumed", "english": "yes/no question particle; Thai script not given in source", "source": "https://www.academia.edu/100525756/The_study_of_the_Northern_Thai_dialect_Phonetic_variations_of_Sao_Wa_sub_variant_in_Chiang_Rai_province", "confidence": "low"}
+      ],
+      "app_notes": "Chiang Rai is the most multilingual Lanna province for a visitor (Lue, Khuen, Shan, Akha, Lahu, Mien, Yunnanese Chinese communities). If the vendor profile lists a highland group, do not assume Kham Mueang is their first language; Central Thai is usually the shared language with outsiders.",
+      "sources": ["https://en.wikipedia.org/wiki/Chiang_Rai_province", "https://www.academia.edu/100525756/The_study_of_the_Northern_Thai_dialect_Phonetic_variations_of_Sao_Wa_sub_variant_in_Chiang_Rai_province", "https://en.wikipedia.org/wiki/Kh%C3%BCn_language", "https://kyoto-seas.org/pdf/7/2/070201.pdf"],
+      "confidence": "medium"
+    },
+    {
+      "province": "Phayao",
+      "province_th": "พะเยา",
+      "main_varieties": [
+        {"name": "Kham Mueang, eastern-type accent", "source": "https://culture.lpru.ac.th/WebCulture2553/CultureKnowledge/file/05-03.pdf", "confidence": "medium"}
+      ],
+      "other_languages": [
+        {"name": "Tai Lue (ไทลื้อ)", "where": "Chiang Kham ('a major centre of Lue culture in North Thailand'), Chiang Muan", "note": "Arrived late 18th - mid 19th century. Shares 6 tones with Northern Thai but has no complex (centering) vowels and lacks /ɲ/.", "source": "https://so06.tci-thaijo.org/index.php/wiwitwannasan/article/view/242012", "confidence": "high"}
+      ],
+      "distinguishing_features": [
+        {"text": "Tai Lue has ~95% lexical similarity with Northern Thai, so Lue speakers and Kham Mueang speakers largely understand each other; differences are mainly vowels and phonetic tone shapes.", "source": "https://en.wikipedia.org/wiki/Tai_Lue_language", "confidence": "high"},
+        {"text": "A study of Kham Mueang use across three generations exists for Tambon Wiang, Phayao (Kasetsart social science journal); full text could not be accessed.", "source": "https://so04.tci-thaijo.org/index.php/socku/article/view/131414/98614", "confidence": "low"}
+      ],
+      "example_words": [],
+      "app_notes": "No verified Phayao-specific word list found. Treat like the eastern group (see Lampang) plus Tai Lue vowel flattening (as Yong).",
+      "sources": ["https://so06.tci-thaijo.org/index.php/wiwitwannasan/article/view/242012", "https://www.chiangmai-alacarte.com/the-tai-lue-people-of-chiang-mai/", "https://en.wikipedia.org/wiki/Tai_Lue_language"],
+      "confidence": "medium"
+    },
+    {
+      "province": "Phrae",
+      "province_th": "แพร่",
+      "main_varieties": [
+        {"name": "Kham Mueang, Phrae sub-dialect 1", "where": "Mueang, Rong Kwang, Den Chai, Sung Men, Song, Long", "note": "Lexical dialect-geography thesis (Yoojaroensuk 1991, 70 meanings, 124 informants + 280 villages).", "source": "https://sure.su.ac.th/xmlui/handle/123456789/1811", "confidence": "high"},
+        {"name": "Kham Mueang, Phrae sub-dialect 2", "where": "Wang Chin district", "source": "https://sure.su.ac.th/xmlui/handle/123456789/1811", "confidence": "high"}
+      ],
+      "other_languages": [],
+      "distinguishing_features": [
+        {"text": "Katsura (1969): Phrae showed the most conspicuous 'register overlapping' of tones among the four Northern dialects he compared.", "source": "https://kyoto-seas.org/pdf/7/2/070201.pdf", "confidence": "medium"},
+        {"text": "Eastern-type clipped accent and eastern tone correspondences (see Lampang examples).", "source": "https://culture.lpru.ac.th/WebCulture2553/CultureKnowledge/file/05-03.pdf", "confidence": "medium"}
+      ],
+      "example_words": [],
+      "app_notes": "The thesis word lists (70 meanings) would be ideal data but were not accessible online; request from Silpakorn library or ask expert.",
+      "sources": ["https://sure.su.ac.th/xmlui/handle/123456789/1811", "https://kyoto-seas.org/pdf/7/2/070201.pdf"],
+      "confidence": "medium"
+    },
+    {
+      "province": "Nan",
+      "province_th": "น่าน",
+      "main_varieties": [
+        {"name": "Kham Mueang, Nan variety (eastern-type)", "note": "Singled out in linguistic literature as phonologically distinct; migrants from Nan founded communities elsewhere (e.g. Sao Wa, Chiang Rai, c.1882) that keep distinct particles.", "source": "https://en.wikipedia.org/wiki/Northern_Thai_language", "confidence": "medium"}
+      ],
+      "other_languages": [
+        {"name": "Tai Lue (ไทลื้อ)", "where": "Pua, Thung Chang, Tha Wang Pha districts", "source": "https://www.chiangmai-alacarte.com/the-tai-lue-people-of-chiang-mai/", "confidence": "medium"},
+        {"name": "T'in (Htin / Mal / Prai) - Khmuic (Mon-Khmer) language", "note": "Highland groups ~10.5% of Nan population; Wikipedia also lists Mlabri, Hmong, Mien, Khmu.", "source": "https://en.wikipedia.org/wiki/Nan_province", "confidence": "medium"}
+      ],
+      "distinguishing_features": [
+        {"text": "Eastern-type clipped accent and eastern tone correspondences (see Lampang).", "source": "https://culture.lpru.ac.th/WebCulture2553/CultureKnowledge/file/05-03.pdf", "confidence": "medium"}
+      ],
+      "example_words": [],
+      "app_notes": "No verified Nan-specific vocabulary found online in time; high-priority item for expert review.",
+      "sources": ["https://en.wikipedia.org/wiki/Northern_Thai_language", "https://en.wikipedia.org/wiki/Nan_province", "https://www.chiangmai-alacarte.com/the-tai-lue-people-of-chiang-mai/"],
+      "confidence": "low"
+    },
+    {
+      "province": "Mae Hong Son",
+      "province_th": "แม่ฮ่องสอน",
+      "main_varieties": [
+        {"name": "Tai Yai / Shan (ภาษาไทใหญ่; self: Tai, Tai Yai, Tai Long)", "note": "Shan are the largest population group; own round script (related to Burmese/Mon script). 5-6 tones, different from Thai.", "source": "https://en.wikipedia.org/wiki/Mae_Hong_Son_province", "confidence": "high"},
+        {"name": "Kham Mueang", "where": "e.g. Mae Sariang, Pai", "source": "https://en.wikipedia.org/wiki/Mae_Hong_Son_province", "confidence": "medium"}
+      ],
+      "other_languages": [
+        {"name": "Karen (several groups incl. Kayan Lahwi), Lahu, Lisu, Lua (Lawa), Hmong, Pa-O, Yunnanese Chinese", "note": "Highland groups ~63% of provincial population per Wikipedia.", "source": "https://en.wikipedia.org/wiki/Mae_Hong_Son_province", "confidence": "medium"}
+      ],
+      "distinguishing_features": [
+        {"text": "'Ngiao' (เงี้ยว) is an outdated exonym for Shan with derogatory connotations; use Tai Yai / ไทใหญ่.", "source": "https://en.wikipedia.org/wiki/Shan_language", "confidence": "high"},
+        {"text": "Tai Yai food vocabulary in Mae Hong Son markets: Tua Pu Oon (chickpea soup with rice noodles), Gaeng Hung Lae (curry), Ok/Op Gai (stew; ok/op = stewing), A-la-wa, Peng-Mong (tray desserts). Morning market: Talad Sai Yood.", "source": "https://www.thaipbsworld.com/lifestyle/tai-yai-delicacies-in-mae-hong-son", "confidence": "medium"}
+      ],
+      "example_words": [
+        {"local": "Mai Soong (Thai script not sourced)", "roman": "mai sung", "central_thai": "สวัสดี (sawatdi) - equivalence assumed", "english": "Shan greeting; 'Mai Soong Pi Mai Tai' = Happy Shan New Year", "source": "https://www.sca-uk.org.uk/wp-content/uploads/2021/03/SCA_UK-Newsletter-V3.pdf", "confidence": "low"}
+      ],
+      "app_notes": "In Mae Hong Son the local speaker may be a Tai Yai speaker using Central Thai (or Kham Mueang) as a second language. Offer Central Thai output by default; Shan script output is out of scope.",
+      "sources": ["https://en.wikipedia.org/wiki/Mae_Hong_Son_province", "https://en.wikipedia.org/wiki/Shan_language", "https://www.thaipbsworld.com/lifestyle/tai-yai-delicacies-in-mae-hong-son"],
+      "confidence": "medium"
+    },
+    {
+      "province": "Uttaradit (Northern-speaking parts)",
+      "province_th": "อุตรดิตถ์",
+      "main_varieties": [
+        {"name": "Kham Mueang (Laplae / Tha Pla areas)", "note": "Uttaradit listed as a Northern Thai province; Laplae is one of the locations in Thanajirawat's (2018) dialect grouping. LPRU groups Uttaradit with the eastern clipped accent.", "source": "https://en.wikipedia.org/wiki/Northern_Thai_language", "confidence": "medium"},
+        {"name": "Central Thai with Sukhothai-type accent", "where": "parts of Laplae: Thung Yang, Phai Lom, Dong Sa Kaeo subdistricts", "source": "https://wikicommunity.sac.or.th/community/1757", "confidence": "medium"}
+      ],
+      "other_languages": [
+        {"name": "Tai Phuan (ไทพวน)", "where": "Laplae (e.g. Ban Pa Yang, Ban Nam Sai), resettled in Rama III's reign; known for weaving", "source": "https://wikicommunity.sac.or.th/community/1757", "confidence": "medium"}
+      ],
+      "distinguishing_features": [
+        {"text": "Laplae's Tai Yuan (Northern Thai) population traces origin to Chiang Saen (villages Ban Chiang Saen, Ban Nam Ang).", "source": "https://wikicommunity.sac.or.th/community/1757", "confidence": "medium"},
+        {"text": "Local food term: ข้าวแคบ (khao khaep), thin crisp rice-flour sheet with black sesame, iconic Laplae snack; durian cultivars หลงลับแล, หลินลับแล.", "source": "https://wikicommunity.sac.or.th/community/1757", "confidence": "high"}
+      ],
+      "example_words": [
+        {"local": "ข้าวแคบ", "roman": "khao khaep", "central_thai": "(no equivalent - local product)", "english": "Laplae rice cracker sheet", "source": "https://wikicommunity.sac.or.th/community/1757", "confidence": "high"}
+      ],
+      "app_notes": "Transition zone: expect a mix of Northern, Central (Sukhothai-type) and Phuan speech within one district.",
+      "sources": ["https://wikicommunity.sac.or.th/community/1757", "https://en.wikipedia.org/wiki/Northern_Thai_language", "https://culture.lpru.ac.th/WebCulture2553/CultureKnowledge/file/05-03.pdf"],
+      "confidence": "medium"
+    },
+    {
+      "province": "Tak (Northern-speaking parts)",
+      "province_th": "ตาก",
+      "main_varieties": [
+        {"name": "Kham Mueang (e.g. Ban Huai Muang, Tha Sai Luat, Mae Sot)", "note": "Phonology study with speakers 50+: 20 initial consonants, 6 clusters, 20 vowels (18+2 complex), 6 tones.", "source": "https://so06.tci-thaijo.org/index.php/VANNAVIDAS/article/view/68845", "confidence": "medium"}
+      ],
+      "other_languages": [
+        {"name": "Karen (largest highland group), Hmong, Lahu, Lisu, Akha, Yao; Burmese and Karen in Mae Sot/border", "source": "https://en.wikipedia.org/wiki/Tak_province", "confidence": "medium"}
+      ],
+      "distinguishing_features": [
+        {"text": "Which Tak districts are predominantly Northern- vs Central-speaking could not be verified from an accessible source.", "source": "https://en.wikipedia.org/wiki/Tak_province", "confidence": "low"}
+      ],
+      "example_words": [],
+      "app_notes": "Low relevance for a Chiang Mai demo; default to Central Thai, accept Kham Mueang markers.",
+      "sources": ["https://so06.tci-thaijo.org/index.php/VANNAVIDAS/article/view/68845", "https://en.wikipedia.org/wiki/Tak_province"],
+      "confidence": "low"
+    }
+  ],
+  "cross_cutting": {
+    "dialect_groups": {"text": "Thanajirawat (2018) proposes five major Northern Thai dialect groups based on tonal split/merger patterns (data points include Bokeo, Mae Chaem, Laplae, Tha Pla, Xayaburi, Ratchaburi). Popular/regional sources split a western (Chiang Mai-Lamphun) accent from an eastern clipped accent (Lampang, Phrae, Nan, Chiang Rai, Phayao, Uttaradit).", "source": "https://en.wikipedia.org/wiki/Northern_Thai_language", "confidence": "medium"},
+    "generational_urban_rural": [
+      {"text": "Northern Thai is typically code-switched with Standard Thai in developed/urban areas; exclusive Northern Thai use persists in remote areas.", "source": "https://en.wikipedia.org/wiki/Northern_Thai_language", "confidence": "high"},
+      {"text": "1921 Compulsory Education Act pushed out non-Central Thai in schools; Tai Tham script literacy collapsed.", "source": "https://www.chiangmaicitylife.com/clg/our-city/culture/rip-kham-mueang-the-slow-death-of-a-language/", "confidence": "high"},
+      {"text": "Many younger people speak Central Thai vocabulary with a Northern accent rather than full Kham Mueang; students from other provinces are teased for their accent; Prof. Thanet Charoenmuang (2017) predicted loss within 30-50 years (opinion).", "source": "https://www.chiangmaicitylife.com/clg/our-city/culture/rip-kham-mueang-the-slow-death-of-a-language/", "confidence": "medium"},
+      {"text": "Minority Tai varieties (Yong, Khuen) are also shifting: younger Yong speakers merge tones under Northern/Standard Thai contact; Tai Khuen in Nantaram is mixed with Kham Mueang and Central Thai.", "source": "https://en.wikipedia.org/wiki/Yong_language", "confidence": "medium"}
+    ],
+    "sound_correspondences_for_normalization": [
+      {"rule": "Central /r/ -> Northern /h/ (เรือ -> เฮือ)", "source": "https://kyoto-seas.org/pdf/7/2/070201.pdf", "confidence": "medium"},
+      {"rule": "Yong / Tai Lue: ua->o, ia->e, uea->oe (เมือง -> เมิง, สวย -> โสย)", "source": "https://krunuttaya.wordpress.com/2012/04/05/%E0%B8%A0%E0%B8%B2%E0%B8%A9%E0%B8%B2%E0%B9%84%E0%B8%97%E0%B8%A2%E0%B8%96%E0%B8%B4%E0%B9%88%E0%B8%99%E0%B9%80%E0%B8%AB%E0%B8%99%E0%B8%B7%E0%B8%AD-%E0%B8%81%E0%B8%B3%E0%B9%80%E0%B8%A1%E0%B8%B7/", "confidence": "medium"},
+      {"rule": "Eastern provinces: mai tho spellings of Chiang Mai-style Kham Mueang often appear with mai ek (น้ำ/น่ำ, ร้อย/ร่อย); treat as same word", "source": "https://krunuttaya.wordpress.com/2012/04/05/%E0%B8%A0%E0%B8%B2%E0%B8%A9%E0%B8%B2%E0%B9%84%E0%B8%97%E0%B8%A2%E0%B8%96%E0%B8%B4%E0%B9%88%E0%B8%99%E0%B9%80%E0%B8%AB%E0%B8%99%E0%B8%B7%E0%B8%AD-%E0%B8%81%E0%B8%B3%E0%B9%80%E0%B8%A1%E0%B8%B7/", "confidence": "medium"}
+    ],
+    "mixed_speech_detection_markers": {
+      "note": "Researcher-assembled list of high-signal Kham Mueang tokens from the entries above. Presence of any => set dialect='northern-mixed'.",
+      "tokens": ["บ่", "อู้", "ซาว", "มัก", "นัก", "ม่วน", "ลำ", "อะหยัง", "ปิ๊ก", "กิ๋น", "เจ้า", "อ้าย", "ตี๋ไหน", "เฮือ", "บะก้วย", "บะเตด", "หอมป้อม", "หอมน้อย"],
+      "confidence": "medium"
+    },
+    "app_design_recommendations": [
+      "Recommendation (not a sourced fact): pass the speaker's province + age band + stated ethnicity/language from the profile card; use them only to widen the accepted vocabulary, never to guess identity.",
+      "Recommendation: detect Kham Mueang tokens and translate them without 'correcting' the speaker; add a short cultural note only when a word is regional (e.g. 'ซาว = 20 in Northern Thai').",
+      "Recommendation: numbers and prices get special handling - confirm ซาว/ซาวห้า etc. back to the foreigner in digits.",
+      "Recommendation: reply to the local person in polite Central Thai by default (universally understood); optionally add Northern politeness particle เจ้า only if the user opts in, as a foreigner's Kham Mueang can be charming but also sound odd.",
+      "Recommendation: speech-to-text trained on Central Thai will often map Northern tones to Central spellings; the LLM prompt should tell Claude that the transcript may be Kham Mueang written in Thai script with non-standard tone marks.",
+      "Recommendation: for ethnic minority vendors (Tai Yai, Lue, Karen, Akha etc.) assume Central Thai is the contact language; never output exonyms like เงี้ยว for people. Dish names that contain it (ขนมจีนน้ำเงี้ยว, ข้าวเงี้ยว) are the normal food names and are fine."
+    ]
+  }
+}

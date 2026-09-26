@@ -1,0 +1,1745 @@
+[
+  {
+    "id": "new-sticky-rice",
+    "thai": "ข้าวเหนียวใหม่",
+    "rtgs": "khao niao mai",
+    "kham_mueang": "khao nueng (steamed sticky rice as eaten)",
+    "kham_mueang_thai": "ข้าวนึ่ง",
+    "english": "new-crop glutinous (sticky) rice",
+    "scientific": "Oryza sativa (glutinous)",
+    "category": "rice",
+    "months": [
+      10,
+      11,
+      12
+    ],
+    "peak_months": [
+      11
+    ],
+    "northern_dishes": [
+      "eaten daily with nam phrik, larb, kaeng",
+      "khao kan chin uses non-sticky rice (exception)"
+    ],
+    "where_sold": "every fresh market; rice mills; farmers sell new rice after harvest",
+    "note": "Chiang Mai cycle per source: plough May-Jun when rains allow, nursery 3-6 weeks, transplant Jul-Aug, harvest Sep-Oct as fields dry (late varieties into Nov-Dec). Northern Thais favour glutinous rice. 'New rice' is a seasonal talking point after harvest.",
+    "source": "https://www.chiangmai1.com/chiang_mai/sub/rice_cultivation.shtml",
+    "extra_sources": [
+      "https://lannainfo.library.cmu.ac.th/en_lannafood/detail_lannafood.php?id_food=185"
+    ],
+    "confidence": "medium"
+  },
+  {
+    "id": "longan",
+    "thai": "ลำไย",
+    "rtgs": "lamyai",
+    "english": "longan",
+    "scientific": "Dimocarpus longan",
+    "category": "fruit",
+    "months": [
+      6,
+      7,
+      8
+    ],
+    "peak_months": [
+      7,
+      8
+    ],
+    "northern_dishes": [
+      "eaten fresh",
+      "dried longan (lamyai op haeng) sold year-round"
+    ],
+    "where_sold": "roadside stalls in Lamphun/Chiang Mai; Ton Lamyai (flower & fruit) market, Chiang Mai (open 24h)",
+    "note": "FAO: harvest late June to late August. Signature crop of Chiang Mai-Lamphun; strong biennial on/off years. Lamphun holds a longan festival in August.",
+    "source": "https://www.fao.org/4/x6908e/x6908e0d.htm",
+    "extra_sources": [
+      "https://changpuakmagazine.com/en-article/Juicy-and-Sweet/646844/",
+      "https://thailandfoundation.or.th/the-beginners-guide-to-seasonal-thai-fruits/"
+    ],
+    "confidence": "high"
+  },
+  {
+    "id": "lychee",
+    "thai": "ลิ้นจี่",
+    "rtgs": "linchi",
+    "english": "lychee",
+    "scientific": "Litchi chinensis",
+    "category": "fruit",
+    "months": [
+      5,
+      6
+    ],
+    "peak_months": [
+      5,
+      6
+    ],
+    "northern_dishes": [
+      "eaten fresh"
+    ],
+    "where_sold": "markets and roadside stalls, mainly northern upland growing areas",
+    "note": "Northern cool-requiring cultivars (Hong Huay ฮงฮวย, Chakrapad, Kim Cheng, O-Hia) ripen mid-May to mid-June, 2-4 weeks after lowland lychee (from mid-March). Thai spelling of cultivars: only Hong Huay verified.",
+    "source": "https://www.fao.org/4/ac684e/ac684e0c.htm",
+    "extra_sources": [
+      "https://www.sansaket.com/farm/fruit/thailand-fruit-seasons"
+    ],
+    "confidence": "high"
+  },
+  {
+    "id": "mango",
+    "thai": "มะม่วง",
+    "rtgs": "mamuang",
+    "english": "mango (ripe and green)",
+    "scientific": "Mangifera indica",
+    "category": "fruit",
+    "months": [
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "peak_months": [
+      4,
+      5
+    ],
+    "northern_dishes": [
+      "khao niao mamuang (sticky rice with mango)",
+      "tam mamuang (pounded green mango, Lanna style)",
+      "sa yot mamuang (young mango shoots salad)"
+    ],
+    "where_sold": "all markets; hot-season glut",
+    "note": "Varieties: nam dok mai, mahachanok, khiao sawoei (eaten green/sour). Hot-season fruit; overlaps Songkran (April).",
+    "source": "https://thailandfoundation.or.th/the-beginners-guide-to-seasonal-thai-fruits/",
+    "extra_sources": [
+      "https://changpuakmagazine.com/en-article/Juicy-and-Sweet/646844/",
+      "https://lannainfo.library.cmu.ac.th/en_lannafood/detail_lannafood.php?id_food=118",
+      "https://lannainfo.library.cmu.ac.th/en_lannafood/detail_lannafood.php?id_food=148"
+    ],
+    "confidence": "high"
+  },
+  {
+    "id": "tangerine",
+    "thai": "ส้มเขียวหวาน",
+    "rtgs": "som khiao wan",
+    "english": "green-skinned tangerine / mandarin",
+    "scientific": "Citrus reticulata",
+    "category": "fruit",
+    "months": [
+      10,
+      11,
+      12,
+      1,
+      2,
+      3
+    ],
+    "peak_months": [
+      11,
+      12
+    ],
+    "northern_dishes": [
+      "eaten fresh; juice"
+    ],
+    "where_sold": "markets everywhere; Fang/Mae Ai district (Chiang Mai) is a known growing area for the 'Sai Nam Phueng' (ส้มสายน้ำผึ้ง) cultivar",
+    "note": "Thailand Foundation lists orange peak as November. 'Som Fang' (Fang tangerine) is a common market label — verify local usage.",
+    "source": "https://www.sansaket.com/farm/fruit/thailand-fruit-seasons",
+    "extra_sources": [
+      "https://thailandfoundation.or.th/the-beginners-guide-to-seasonal-thai-fruits/",
+      "https://www.researchgate.net/publication/270496425_Physico-chemical_Changes_During_Growth_and_Maturation_of_Tangerine_Fruit_cv_'Sai_Nam_Phueng'_and_'See_Thong'"
+    ],
+    "confidence": "medium"
+  },
+  {
+    "id": "strawberry",
+    "thai": "สตรอว์เบอร์รี",
+    "rtgs": "satroboeri",
+    "english": "strawberry (highland)",
+    "category": "fruit",
+    "months": [
+      11,
+      12,
+      1,
+      2,
+      3
+    ],
+    "peak_months": [
+      12,
+      1,
+      2
+    ],
+    "northern_dishes": [
+      "eaten fresh",
+      "strawberry wine, jam, dried fruit (Samoeng souvenirs)"
+    ],
+    "where_sold": "Samoeng (Chiang Mai), Mae Rim, Royal Project shops, Doi Ang Khang; roadside stalls in cool season",
+    "note": "Royal Project main cultivar: 'Phanthu Phra Ratchathan 80' (สตรอว์เบอร์รีพันธุ์พระราชทาน 80). Samoeng strawberry festival held around 14 February. Sansaket lists Oct-Apr broadly; peak is cool season.",
+    "source": "https://www.sansaket.com/farm/fruit/thailand-fruit-seasons",
+    "extra_sources": [
+      "https://en.wikivoyage.org/wiki/Samoeng",
+      "https://market.royalproject.org/productSeason.php?method=season&sub=11&type=catmain&maincat=7"
+    ],
+    "confidence": "medium"
+  },
+  {
+    "id": "avocado",
+    "thai": "อาโวคาโด",
+    "rtgs": "awokhado",
+    "english": "avocado",
+    "scientific": "Persea americana",
+    "category": "fruit",
+    "months": [
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "peak_months": [
+      8,
+      9,
+      10
+    ],
+    "northern_dishes": [
+      "eaten fresh; cafe menus"
+    ],
+    "where_sold": "Royal Project shops; markets in Nan, Tak, Chiang Mai, Chiang Rai",
+    "note": "FAO: Thai harvest July-December by cultivar (e.g. Buccaneer อาโวคาโด พันธุ์บัคคาเนีย on Royal Project list). A Thailand Avocado Festival has been held in Chiang Mai.",
+    "source": "https://www.fao.org/4/x6902e/x6902e0b.htm",
+    "extra_sources": [
+      "https://market.royalproject.org/productSeason.php?method=season&sub=11&type=catmain&maincat=7"
+    ],
+    "confidence": "high"
+  },
+  {
+    "id": "persimmon",
+    "thai": "ลูกพลับ",
+    "rtgs": "luk phlap",
+    "english": "persimmon",
+    "scientific": "Diospyros kaki",
+    "category": "fruit",
+    "months": [
+      7,
+      8,
+      9
+    ],
+    "peak_months": [
+      8,
+      9
+    ],
+    "northern_dishes": [
+      "eaten fresh"
+    ],
+    "where_sold": "Khun Klang village, Doi Inthanon (orchards & festival); Royal Project shops",
+    "note": "Harvest late July-September at Doi Inthanon; Royal Project sells Fuyu and 'P2' persimmons. Persimmon festival in late September. Highland deciduous fruit.",
+    "source": "https://www.pattayamail.com/thailandnews/persimmons-galore-chiang-mais-tourist-appeal-in-rainy-season-16211",
+    "extra_sources": [
+      "https://market.royalproject.org/productSeason.php?method=season&sub=11&type=catmain&maincat=7",
+      "https://www.fao.org/4/ab985e/ab985e0a.htm"
+    ],
+    "confidence": "medium"
+  },
+  {
+    "id": "rambutan",
+    "thai": "เงาะ",
+    "rtgs": "ngo",
+    "english": "rambutan",
+    "scientific": "Nephelium lappaceum",
+    "category": "fruit",
+    "months": [
+      5,
+      6,
+      7,
+      8
+    ],
+    "peak_months": [
+      5,
+      6
+    ],
+    "northern_dishes": [
+      "eaten fresh"
+    ],
+    "where_sold": "all markets (mostly trucked in from eastern/southern Thailand)",
+    "source": "https://changpuakmagazine.com/en-article/Juicy-and-Sweet/646844/",
+    "extra_sources": [
+      "https://www.sansaket.com/farm/fruit/thailand-fruit-seasons"
+    ],
+    "confidence": "medium"
+  },
+  {
+    "id": "mangosteen",
+    "thai": "มังคุด",
+    "rtgs": "mangkhut",
+    "english": "mangosteen",
+    "scientific": "Garcinia mangostana",
+    "category": "fruit",
+    "months": [
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "northern_dishes": [
+      "eaten fresh"
+    ],
+    "where_sold": "all markets (mostly from eastern/southern Thailand)",
+    "source": "https://changpuakmagazine.com/en-article/Juicy-and-Sweet/646844/",
+    "confidence": "medium"
+  },
+  {
+    "id": "durian",
+    "thai": "ทุเรียน",
+    "rtgs": "thurian",
+    "english": "durian",
+    "scientific": "Durio zibethinus",
+    "category": "fruit",
+    "months": [
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "peak_months": [
+      5
+    ],
+    "northern_dishes": [
+      "eaten fresh; with sticky rice"
+    ],
+    "where_sold": "markets and trucks; often banned inside hotels/guesthouses because of smell",
+    "note": "Most durian in Chiang Mai is brought from other regions; northern-grown durian also exists — verify.",
+    "source": "https://changpuakmagazine.com/en-article/Juicy-and-Sweet/646844/",
+    "extra_sources": [
+      "https://thailandfoundation.or.th/the-beginners-guide-to-seasonal-thai-fruits/"
+    ],
+    "confidence": "medium"
+  },
+  {
+    "id": "langsat",
+    "thai": "ลางสาด",
+    "rtgs": "langsat",
+    "english": "langsat",
+    "scientific": "Lansium parasiticum",
+    "category": "fruit",
+    "months": [
+      7,
+      8,
+      9,
+      10
+    ],
+    "northern_dishes": [
+      "eaten fresh"
+    ],
+    "where_sold": "markets; rainy-season fruit",
+    "source": "https://changpuakmagazine.com/en-article/Juicy-and-Sweet/646844/",
+    "confidence": "medium"
+  },
+  {
+    "id": "custard-apple",
+    "thai": "น้อยหน่า",
+    "rtgs": "noina",
+    "english": "custard apple / sugar apple",
+    "scientific": "Annona squamosa",
+    "category": "fruit",
+    "months": [
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "northern_dishes": [
+      "eaten fresh"
+    ],
+    "where_sold": "markets",
+    "source": "https://changpuakmagazine.com/en-article/Juicy-and-Sweet/646844/",
+    "extra_sources": [
+      "https://www.sansaket.com/farm/fruit/thailand-fruit-seasons"
+    ],
+    "confidence": "medium"
+  },
+  {
+    "id": "pomelo",
+    "thai": "ส้มโอ",
+    "rtgs": "som o",
+    "kham_mueang": "som o (Lanna salad: tam som-o)",
+    "english": "pomelo",
+    "scientific": "Citrus maxima",
+    "category": "fruit",
+    "months": [
+      8,
+      9,
+      10,
+      11
+    ],
+    "northern_dishes": [
+      "tam som-o (Lanna pomelo salad with garlic, lemongrass, nam pu)"
+    ],
+    "where_sold": "markets",
+    "note": "Thailand Foundation gives peak July; Sansaket Sep-Nov — sources disagree.",
+    "source": "https://www.sansaket.com/farm/fruit/thailand-fruit-seasons",
+    "extra_sources": [
+      "https://thailandfoundation.or.th/the-beginners-guide-to-seasonal-thai-fruits/",
+      "https://lannainfo.library.cmu.ac.th/en_lannafood/detail_lannafood.php?id_food=121"
+    ],
+    "confidence": "medium"
+  },
+  {
+    "id": "green-jackfruit",
+    "thai": "ขนุนอ่อน",
+    "rtgs": "khanun on",
+    "kham_mueang": "banun / ma nun (Lanna name reflected in 'tam banun')",
+    "english": "young green jackfruit (vegetable)",
+    "scientific": "Artocarpus heterophyllus",
+    "category": "vegetable",
+    "months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "northern_dishes": [
+      "tam khanun / tam banun (pounded jackfruit)",
+      "kaeng khanun (jackfruit curry for weddings & New Year)"
+    ],
+    "where_sold": "fresh markets, sold whole or pre-boiled",
+    "note": "Sansaket: jackfruit year-round but 'possibly not year round in northeast and north'. CMU: kaeng khanun is auspicious because khanun ~ 'support/prosper'.",
+    "source": "https://www.sansaket.com/farm/fruit/thailand-fruit-seasons",
+    "extra_sources": [
+      "https://lannainfo.library.cmu.ac.th/en_lannafood/detail_lannafood.php?id_food=109",
+      "https://lannainfo.library.cmu.ac.th/en_lannafood/detail_lannafood.php?id_food=16"
+    ],
+    "confidence": "medium"
+  },
+  {
+    "id": "ripe-jackfruit",
+    "thai": "ขนุน",
+    "rtgs": "khanun",
+    "english": "ripe jackfruit",
+    "category": "fruit",
+    "months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "northern_dishes": [
+      "eaten fresh"
+    ],
+    "where_sold": "markets",
+    "source": "https://www.sansaket.com/farm/fruit/thailand-fruit-seasons",
+    "confidence": "low"
+  },
+  {
+    "id": "pineapple",
+    "thai": "สับปะรด",
+    "rtgs": "sapparot",
+    "english": "pineapple",
+    "scientific": "Ananas comosus",
+    "category": "fruit",
+    "months": [
+      4,
+      5,
+      6,
+      7
+    ],
+    "northern_dishes": [
+      "eaten fresh"
+    ],
+    "where_sold": "markets",
+    "source": "https://www.sansaket.com/farm/fruit/thailand-fruit-seasons",
+    "extra_sources": [
+      "https://thailandfoundation.or.th/the-beginners-guide-to-seasonal-thai-fruits/"
+    ],
+    "confidence": "medium"
+  },
+  {
+    "id": "tamarind",
+    "thai": "มะขาม",
+    "rtgs": "makham",
+    "english": "tamarind (fruit and young leaves)",
+    "scientific": "Tamarindus indica",
+    "category": "fruit",
+    "months": [
+      11,
+      12,
+      1,
+      2,
+      3
+    ],
+    "northern_dishes": [
+      "young leaves (yot makham) sour agent in kaeng het tap tao",
+      "sa yot makham (young tamarind leaf salad)"
+    ],
+    "where_sold": "markets",
+    "source": "https://www.sansaket.com/farm/fruit/thailand-fruit-seasons",
+    "extra_sources": [
+      "https://lannainfo.library.cmu.ac.th/en_lannafood/detail_lannafood.php?id_food=151",
+      "https://lannainfo.library.cmu.ac.th/en_lannafood/detail_lannafood.php?id_food=58"
+    ],
+    "confidence": "medium"
+  },
+  {
+    "id": "banana",
+    "thai": "กล้วยน้ำว้า",
+    "rtgs": "kluai nam wa",
+    "english": "namwa banana",
+    "category": "fruit",
+    "months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "northern_dishes": [
+      "khanom kluai (banana cake)",
+      "banana leaves used to wrap sai ua, khai pam, aep, chin som"
+    ],
+    "where_sold": "everywhere",
+    "source": "https://www.sansaket.com/farm/fruit/thailand-fruit-seasons",
+    "extra_sources": [
+      "https://changpuakmagazine.com/en-article/Juicy-and-Sweet/646844/",
+      "https://lannainfo.library.cmu.ac.th/en_lannafood/detail_lannafood.php?id_food=92"
+    ],
+    "confidence": "high"
+  },
+  {
+    "id": "guava",
+    "thai": "ฝรั่ง",
+    "rtgs": "farang",
+    "english": "guava",
+    "category": "fruit",
+    "months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "peak_months": [
+      1
+    ],
+    "northern_dishes": [
+      "eaten fresh with chilli-salt-sugar dip"
+    ],
+    "where_sold": "fruit carts, markets",
+    "note": "Same word as 'farang' = Westerner — a classic pun conversation starter.",
+    "source": "https://www.sansaket.com/farm/fruit/thailand-fruit-seasons",
+    "extra_sources": [
+      "https://thailandfoundation.or.th/the-beginners-guide-to-seasonal-thai-fruits/"
+    ],
+    "confidence": "high"
+  },
+  {
+    "id": "rose-apple",
+    "thai": "ชมพู่",
+    "rtgs": "chomphu",
+    "english": "rose apple / wax apple",
+    "category": "fruit",
+    "months": [
+      12,
+      1,
+      2,
+      3,
+      4,
+      8,
+      9,
+      10,
+      11
+    ],
+    "peak_months": [
+      12
+    ],
+    "northern_dishes": [
+      "eaten fresh"
+    ],
+    "where_sold": "markets",
+    "source": "https://www.sansaket.com/farm/fruit/thailand-fruit-seasons",
+    "extra_sources": [
+      "https://thailandfoundation.or.th/the-beginners-guide-to-seasonal-thai-fruits/"
+    ],
+    "confidence": "medium"
+  },
+  {
+    "id": "jujube",
+    "thai": "พุทรา",
+    "rtgs": "phutsa",
+    "english": "Indian jujube",
+    "scientific": "Ziziphus mauritiana",
+    "category": "fruit",
+    "months": [
+      12,
+      1,
+      2
+    ],
+    "peak_months": [
+      1
+    ],
+    "northern_dishes": [
+      "eaten fresh"
+    ],
+    "where_sold": "markets, fruit carts",
+    "source": "https://thailandfoundation.or.th/the-beginners-guide-to-seasonal-thai-fruits/",
+    "confidence": "medium"
+  },
+  {
+    "id": "dragon-fruit",
+    "thai": "แก้วมังกร",
+    "rtgs": "kaeo mangkon",
+    "english": "dragon fruit",
+    "category": "fruit",
+    "months": [
+      8,
+      9,
+      10,
+      11
+    ],
+    "northern_dishes": [
+      "eaten fresh"
+    ],
+    "where_sold": "markets",
+    "note": "Also sold year-round from off-season production.",
+    "source": "https://www.sansaket.com/farm/fruit/thailand-fruit-seasons",
+    "confidence": "medium"
+  },
+  {
+    "id": "watermelon",
+    "thai": "แตงโม",
+    "rtgs": "taengmo",
+    "english": "watermelon",
+    "category": "fruit",
+    "months": [
+      2,
+      3,
+      4,
+      5
+    ],
+    "northern_dishes": [
+      "eaten fresh; smoothies"
+    ],
+    "where_sold": "markets",
+    "source": "https://www.sansaket.com/farm/fruit/thailand-fruit-seasons",
+    "confidence": "medium"
+  },
+  {
+    "id": "sapodilla",
+    "thai": "ละมุด",
+    "rtgs": "lamut",
+    "english": "sapodilla",
+    "category": "fruit",
+    "months": [
+      10,
+      11,
+      12
+    ],
+    "northern_dishes": [
+      "eaten fresh"
+    ],
+    "where_sold": "markets",
+    "source": "https://www.sansaket.com/farm/fruit/thailand-fruit-seasons",
+    "confidence": "medium"
+  },
+  {
+    "id": "black-grape",
+    "thai": "องุ่นดำไร้เมล็ด",
+    "rtgs": "a-ngun dam rai malet",
+    "english": "seedless black grape (Royal Project)",
+    "category": "fruit",
+    "months": [
+      10,
+      11,
+      12,
+      1,
+      2,
+      3
+    ],
+    "where_sold": "Royal Project shops; Chiang Rai highland projects",
+    "note": "Months are Sansaket's generic grape season; Royal Project-specific timing not verified.",
+    "source": "https://www.sansaket.com/farm/fruit/thailand-fruit-seasons",
+    "extra_sources": [
+      "https://market.royalproject.org/productSeason.php?method=season&sub=11&type=catmain&maincat=7",
+      "https://www.timeout.com/bangkok/th/news/ขึ้นเหนือไปชมพืชผลหลากสีของ-โครงการหลวง-ก่อนส่งถึงมือคนกรุงปลายเดือนนี้-021820"
+    ],
+    "confidence": "low"
+  },
+  {
+    "id": "cape-gooseberry",
+    "thai": "เคปกูสเบอร์รี",
+    "rtgs": "khep kutsaboeri",
+    "english": "cape gooseberry / physalis (Royal Project)",
+    "category": "fruit",
+    "where_sold": "Royal Project shops",
+    "note": "Months not found in any fetched source.",
+    "source": "https://market.royalproject.org/productSeason.php?method=season&sub=11&type=catmain&maincat=7",
+    "confidence": "low",
+    "months": []
+  },
+  {
+    "id": "ma-kor-savoury-fruit",
+    "rtgs": "ma kor (as given by source)",
+    "english": "olive-like savoury fruit, identified by source as Lithocarpus ceriferus",
+    "category": "fruit",
+    "months": [
+      8,
+      9
+    ],
+    "northern_dishes": [
+      "eaten with fried fish and sticky rice"
+    ],
+    "note": "Thailand Foundation: 'consumed with fried fish and sticky rice in Northern Thailand around August to September'. Thai spelling and botanical ID NOT verified — expert check needed.",
+    "source": "https://thailandfoundation.or.th/the-beginners-guide-to-seasonal-thai-fruits/",
+    "confidence": "low"
+  },
+  {
+    "id": "phak-kut-fern",
+    "thai": "ผักกูด",
+    "rtgs": "phak kut",
+    "kham_mueang": "phak kut",
+    "english": "vegetable fern (fiddlehead)",
+    "scientific": "Diplazium esculentum",
+    "category": "forest vegetable",
+    "months": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "peak_months": [
+      6,
+      7,
+      8,
+      9
+    ],
+    "northern_dishes": [
+      "yam phak kut (fern salad, often with pork / coconut cream)",
+      "blanched with nam phrik (luak jim nam phrik)",
+      "khai chiao phak kut (fern omelette)",
+      "kaeng som phak kut",
+      "stir-fried with oyster sauce"
+    ],
+    "where_sold": "fresh morning markets (e.g. Muang Mai, Warorot area, village markets); vendors sell bundles of curled fronds",
+    "note": "Grows along streams and wet ground; most abundant in the rainy season (months derived from 'rainy season' — no month-level source). The 'fern vegetable' from the team's market story.",
+    "source": "https://www.khaosod.co.th/technologychaoban/techno-news/article_146330",
+    "extra_sources": [
+      "https://en.wikipedia.org/wiki/Diplazium_esculentum"
+    ],
+    "confidence": "medium"
+  },
+  {
+    "id": "cha-om",
+    "thai": "ชะอม",
+    "rtgs": "cha-om",
+    "kham_mueang": "phak la",
+    "kham_mueang_thai": "ผักหละ",
+    "english": "acacia shoots (climbing wattle / 'cha-om')",
+    "scientific": "Senegalia pennata (syn. Acacia pennata; CMU writes 'Acacia insuavis')",
+    "category": "vegetable",
+    "months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "peak_months": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "northern_dishes": [
+      "khai chiao cha-om (cha-om omelette; Central/national dish, common in North too)",
+      "kaeng phak cha-om / kaeng phak la",
+      "kaeng khae",
+      "kaeng khanun",
+      "kaeng nomai",
+      "kaeng het lom"
+    ],
+    "where_sold": "every fresh market in bundles; omelette sold at curry-and-rice stalls",
+    "note": "Kasetsart farmers' library: rainy season is when cha-om flushes heavily; Nov-Jan yields low and price rises. Pungent smell; thorny stems. Kham Mueang name 'phak la' per CMU ('kaeng phak la or kaeng phak cha om'); Thai spelling ผักหละ needs expert confirmation. The 'acacia omelette' case from the team's story.",
+    "source": "https://thaifarmer.lib.ku.ac.th/news/61154ec5d7b6d07100d775cd",
+    "extra_sources": [
+      "https://lannainfo.library.cmu.ac.th/en_lannafood/detail_lannafood.php?id_food=33",
+      "https://en.wikipedia.org/wiki/List_of_Thai_ingredients"
+    ],
+    "confidence": "medium"
+  },
+  {
+    "id": "phak-waan-pa",
+    "thai": "ผักหวานป่า",
+    "rtgs": "phak wan pa",
+    "english": "wild 'sweet vegetable' shoots",
+    "scientific": "Melientha suavis",
+    "category": "forest vegetable",
+    "months": [
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "peak_months": [
+      3,
+      4
+    ],
+    "northern_dishes": [
+      "kaeng phak wan sai khai mot (with red ant eggs)",
+      "kaeng phak wan pa with glass noodles and dried fish"
+    ],
+    "where_sold": "fresh markets, dry/hot season only; pricey",
+    "note": "Austin Bush: Feb-May with red ant eggs; CMU: March-June. Distinct from cultivated phak wan ban (Sauropus) — CMU has separate kaeng phakwan ban recipe.",
+    "source": "https://www.austinbushphotography.com/blog/2020/3/26/kaeng-phak-waan-sai-khai-mot",
+    "extra_sources": [
+      "https://lannainfo.library.cmu.ac.th/en_lannafood/detail_lannafood.php?id_food=43",
+      "https://en.wikipedia.org/wiki/List_of_Thai_ingredients"
+    ],
+    "confidence": "high"
+  },
+  {
+    "id": "phak-chiang-da",
+    "thai": "ผักเชียงดา",
+    "rtgs": "phak chiang da",
+    "kham_mueang": "phak cheng",
+    "english": "Gymnema leaves ('phak cheng')",
+    "category": "vegetable",
+    "northern_dishes": [
+      "kaeng phak chiang da (with dried fish, tomato)"
+    ],
+    "where_sold": "fresh markets",
+    "note": "Month availability not found in sources; botanical ID (Gymnema inodorum) from general knowledge — verify.",
+    "source": "https://lannainfo.library.cmu.ac.th/en_lannafood/detail_lannafood.php?id_food=35",
+    "confidence": "medium",
+    "months": []
+  },
+  {
+    "id": "phak-khae",
+    "thai": "ผักแค",
+    "rtgs": "phak khae",
+    "english": "'phak khae' leaves (source: Piper sarmentosum)",
+    "category": "vegetable",
+    "months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "northern_dishes": [
+      "kaeng khae (curry named after it)"
+    ],
+    "where_sold": "fresh markets",
+    "note": "Wikipedia says kaeng khae is named after 'phak khae' = Piper sarmentosum; many Thai cooks associate cha phlu with Piper sarmentosum instead. Needs expert check.",
+    "source": "https://en.wikipedia.org/wiki/Kaeng_khae",
+    "confidence": "low"
+  },
+  {
+    "id": "phak-hueat",
+    "thai": "ผักเหือด",
+    "rtgs": "phak hueat",
+    "english": "young leaves of phak hueat (local tree)",
+    "category": "forest vegetable",
+    "northern_dishes": [
+      "kaeng phak hueat (with pork ribs)",
+      "yam phak hueat"
+    ],
+    "where_sold": "fresh markets",
+    "note": "Season and species not stated in source.",
+    "source": "https://lannainfo.library.cmu.ac.th/en_lannafood/detail_lannafood.php?id_food=45",
+    "extra_sources": [
+      "https://lannainfo.library.cmu.ac.th/en_lannafood/detail_lannafood.php?id_food=137"
+    ],
+    "confidence": "medium",
+    "months": []
+  },
+  {
+    "id": "dok-ngiu",
+    "thai": "ดอกงิ้ว",
+    "rtgs": "dok ngio",
+    "kham_mueang": "dok ngiu",
+    "kham_mueang_thai": null,
+    "english": "dried red silk-cotton (kapok) flower cores",
+    "scientific": "Bombax ceiba",
+    "category": "dried flower",
+    "months": [
+      2,
+      3
+    ],
+    "northern_dishes": [
+      "khanom chin nam ngiao",
+      "kaeng khae"
+    ],
+    "where_sold": "dried, in bags at fresh markets year-round",
+    "note": "Tree flowers in the cool/late dry season from around February before leafing; fallen blooms collected and sun-dried. Fresh collection months approximated; dried product is year-round. Compiler 2026-09-26: removed unsourced Northern spelling 'ดอกเงี้ยว' / 'dok ngiao' (it conflated งิ้ว kapok with เงี้ยว, the Shan exonym in nam ngiao). Standard spelling ดอกงิ้ว kept.",
+    "source": "https://bucksspices.com/blogs/news/red-cotton-flower-northern-thailand-lanna-kitchen",
+    "extra_sources": [
+      "https://en.wikipedia.org/wiki/Nam_ngiao",
+      "https://en.wikipedia.org/wiki/Kaeng_khae"
+    ],
+    "confidence": "medium"
+  },
+  {
+    "id": "makhwaen",
+    "thai": "มะแขว่น",
+    "rtgs": "makhwaen",
+    "english": "makhwaen (Northern prickly-ash pepper)",
+    "scientific": "Zanthoxylum myriacanthum / Z. limonella",
+    "category": "spice",
+    "months": [
+      11,
+      12
+    ],
+    "northern_dishes": [
+      "larb mueang spice mix (phrik lap)",
+      "kai thot makhwaen (fried chicken)",
+      "larb nuea"
+    ],
+    "where_sold": "dried seeds sold year-round at spice stalls in fresh markets",
+    "note": "MDPI study: fruit harvested Nov-Dec in northern Thailand (Mae Taeng, Chiang Mai).",
+    "source": "https://www.mdpi.com/2077-0472/9/4/78",
+    "extra_sources": [
+      "https://en.wikipedia.org/wiki/List_of_Thai_ingredients",
+      "https://guide.michelin.com/th/en/article/dining-out/11-must-try-northern-thai-dishes-in-chiang-mai"
+    ],
+    "confidence": "high"
+  },
+  {
+    "id": "bamboo-shoot",
+    "thai": "หน่อไม้",
+    "rtgs": "no mai",
+    "english": "fresh bamboo shoots",
+    "category": "forest vegetable",
+    "months": [
+      6,
+      7,
+      8,
+      9
+    ],
+    "northern_dishes": [
+      "kaeng nomai (bamboo shoot curry with cha-om, yanang leaves)",
+      "khua nomai",
+      "yam nomai",
+      "ho nueng nomai"
+    ],
+    "where_sold": "fresh markets; boiled shoots in bags",
+    "note": "Rainy-season availability is general knowledge; no month-level source was fetched (Bangkok Post page blocked). Verify.",
+    "source": "https://lannainfo.library.cmu.ac.th/en_lannafood/detail_lannafood.php?id_food=54",
+    "extra_sources": [
+      "https://lannainfo.library.cmu.ac.th/en_lannafood/detail_lannafood.php?id_food=83",
+      "https://lannainfo.library.cmu.ac.th/en_lannafood/detail_lannafood.php?id_food=141"
+    ],
+    "confidence": "low"
+  },
+  {
+    "id": "pickled-bamboo",
+    "thai": "หน่อไม้ดอง",
+    "rtgs": "no mai dong",
+    "english": "pickled / sour bamboo shoots",
+    "category": "preserved",
+    "months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "northern_dishes": [
+      "kaeng het thop with pickled bamboo",
+      "kaeng ho"
+    ],
+    "where_sold": "fresh markets, in buckets or bags",
+    "source": "https://lannainfo.library.cmu.ac.th/en_lannafood/detail_lannafood.php?id_food=59",
+    "extra_sources": [
+      "https://lannainfo.library.cmu.ac.th/en_lannafood/detail_lannafood.php?id_food=70"
+    ],
+    "confidence": "medium"
+  },
+  {
+    "id": "phak-kat-som",
+    "thai": "ผักกาดดอง",
+    "rtgs": "phak kat dong",
+    "kham_mueang": "phak kat som",
+    "kham_mueang_thai": "ผักกาดส้ม",
+    "english": "pickled mustard greens",
+    "category": "preserved",
+    "months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "northern_dishes": [
+      "khao soi (side)",
+      "khanom chin nam ngiao (side)",
+      "yam phak kat som"
+    ],
+    "where_sold": "markets, khao soi shops",
+    "note": "CMU names the Lanna pickle 'phak kat som'; Thai spelling ผักกาดส้ม from general usage.",
+    "source": "https://lannainfo.library.cmu.ac.th/en_lannafood/detail_lannafood.php?id_food=73",
+    "extra_sources": [
+      "https://lannainfo.library.cmu.ac.th/en_lannafood/detail_lannafood.php?id_food=128",
+      "https://lannainfo.library.cmu.ac.th/en_lannafood/detail_lannafood.php?id_food=132"
+    ],
+    "confidence": "medium"
+  },
+  {
+    "id": "phak-kat-choy",
+    "thai": "ผักกาด",
+    "rtgs": "phak kat",
+    "english": "flowering mustard / pak choi greens",
+    "category": "vegetable",
+    "northern_dishes": [
+      "jo phak kat (sour soup with pork ribs, tamarind, fermented fish)",
+      "kaeng phak kat"
+    ],
+    "where_sold": "fresh markets",
+    "note": "Season not verified (often associated with the cool season).",
+    "source": "https://lannainfo.library.cmu.ac.th/en_lannafood/detail_lannafood.php?id_food=98",
+    "extra_sources": [
+      "https://guide.michelin.com/th/en/article/dining-out/11-must-try-northern-thai-dishes-in-chiang-mai",
+      "https://lannainfo.library.cmu.ac.th/en_lannafood/detail_lannafood.php?id_food=29"
+    ],
+    "confidence": "low",
+    "months": []
+  },
+  {
+    "id": "houttuynia",
+    "thai": "ผักคาวตอง",
+    "rtgs": "phak khao tong",
+    "kham_mueang": "phak khao tong",
+    "english": "fish-mint / Houttuynia leaves",
+    "scientific": "Houttuynia cordata",
+    "category": "herb",
+    "months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "northern_dishes": [
+      "raw side green for larb"
+    ],
+    "where_sold": "fresh markets, herb stalls",
+    "source": "https://lannainfo.library.cmu.ac.th/en_lannafood/detail_lannafood.php?id_food=179",
+    "confidence": "medium"
+  },
+  {
+    "id": "young-green-chilli",
+    "thai": "พริกหนุ่ม",
+    "rtgs": "phrik num",
+    "english": "young long green chilli",
+    "category": "vegetable",
+    "months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "northern_dishes": [
+      "nam phrik num"
+    ],
+    "where_sold": "all markets; often roasted & sold ready-made nam phrik num at Warorot/Kad Luang",
+    "source": "https://grantourismotravels.com/northern-thailand-specialties-chiang-mai/",
+    "extra_sources": [
+      "https://guide.michelin.com/th/en/article/dining-out/11-must-try-northern-thai-dishes-in-chiang-mai"
+    ],
+    "confidence": "medium"
+  },
+  {
+    "id": "dried-chilli",
+    "thai": "พริกแห้ง",
+    "rtgs": "phrik haeng",
+    "english": "dried chilli (spur and bird chilli)",
+    "category": "spice",
+    "months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "northern_dishes": [
+      "nam phrik ong",
+      "larb chilli paste",
+      "virtually all kaeng pastes"
+    ],
+    "where_sold": "spice stalls",
+    "source": "https://lannainfo.library.cmu.ac.th/en_lannafood/detail_lannafood.php?id_food=174",
+    "confidence": "medium"
+  },
+  {
+    "id": "garlic",
+    "thai": "กระเทียม",
+    "rtgs": "krathiam",
+    "english": "small-clove local garlic",
+    "category": "vegetable",
+    "months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "northern_dishes": [
+      "fried garlic topping on larb, tam khanun, khao kan chin",
+      "pickled garlic in kaeng hang le"
+    ],
+    "where_sold": "markets",
+    "note": "Northern local garlic harvest season (widely said to be cool/dry season) could not be verified — expert check.",
+    "source": "https://en.wikipedia.org/wiki/List_of_Thai_ingredients",
+    "confidence": "low"
+  },
+  {
+    "id": "shallot",
+    "thai": "หอมแดง",
+    "rtgs": "hom daeng",
+    "english": "shallot",
+    "category": "vegetable",
+    "months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "northern_dishes": [
+      "curry pastes, nam phrik"
+    ],
+    "where_sold": "markets",
+    "source": "https://en.wikipedia.org/wiki/List_of_Thai_ingredients",
+    "confidence": "medium"
+  },
+  {
+    "id": "long-pepper",
+    "thai": "ดีปลี",
+    "rtgs": "dipli",
+    "english": "long pepper",
+    "scientific": "Piper retrofractum",
+    "category": "spice",
+    "months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "northern_dishes": [
+      "larb spice mix",
+      "kaeng hang le masala"
+    ],
+    "where_sold": "spice stalls",
+    "source": "https://en.wikipedia.org/wiki/List_of_Thai_ingredients",
+    "confidence": "medium"
+  },
+  {
+    "id": "thua-nao",
+    "thai": "ถั่วเน่า",
+    "rtgs": "thua nao",
+    "kham_mueang": "thua nao khaep / thua nao moe",
+    "kham_mueang_thai": "ถั่วเน่าแคบ",
+    "english": "fermented soybean (sheets 'khaep' or paste 'moe')",
+    "category": "preserved",
+    "months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "northern_dishes": [
+      "khanom chin nam ngiao",
+      "nam phrik ong (some recipes)",
+      "many kaeng in place of shrimp paste"
+    ],
+    "where_sold": "fresh markets; associated with Tai Yai/Shan cooking",
+    "source": "https://lannainfo.library.cmu.ac.th/en_lannafood/detail_lannafood.php?id_food=196",
+    "extra_sources": [
+      "https://lannainfo.library.cmu.ac.th/en_lannafood/detail_lannafood.php?id_food=140",
+      "https://en.wikipedia.org/wiki/List_of_Thai_ingredients"
+    ],
+    "confidence": "high"
+  },
+  {
+    "id": "nam-pu",
+    "thai": "น้ำปู",
+    "rtgs": "nam pu",
+    "english": "rice-field crab paste (black, cooked-down)",
+    "category": "preserved",
+    "northern_dishes": [
+      "nam phrik nam pu",
+      "tam som-o",
+      "nomai curries"
+    ],
+    "where_sold": "fresh markets in small tubs",
+    "note": "Production season not verified (often said to be made in the rainy/rice season).",
+    "source": "https://lannainfo.library.cmu.ac.th/en_lannafood/detail_lannafood.php?id_food=93",
+    "confidence": "low",
+    "months": []
+  },
+  {
+    "id": "rice-field-crab",
+    "thai": "ปูนา",
+    "rtgs": "pu na",
+    "english": "rice-field crab",
+    "category": "aquatic",
+    "northern_dishes": [
+      "pu ong (crab fat grilled with egg in the shell)",
+      "nam pu"
+    ],
+    "where_sold": "markets",
+    "note": "Season not verified.",
+    "source": "https://guide.michelin.com/th/en/article/dining-out/11-must-try-northern-thai-dishes-in-chiang-mai",
+    "confidence": "low",
+    "months": []
+  },
+  {
+    "id": "khai-river-weed",
+    "thai": "ไก",
+    "rtgs": "khai / kai",
+    "kham_mueang": "khai",
+    "english": "river weed (green freshwater alga)",
+    "scientific": "Cladophora spp. (per general literature)",
+    "category": "aquatic",
+    "months": [
+      2,
+      3,
+      4
+    ],
+    "northern_dishes": [
+      "eaten fresh or as sun-dried seasoned sheets (Lao: khai paen)"
+    ],
+    "where_sold": "Chiang Khong (Chiang Rai) along the Mekong; dried sheets in Chiang Rai/Nan markets",
+    "note": "SEA Junction: harvested Feb-Apr in the dry season; fresh bunches ~20-25 THB, dried ~1,000 THB/kg; declining due to upstream dams. Thai spelling ไก / ไค varies — expert check. NOT the same as 'khai nam' (Wolffia, see pham).",
+    "source": "http://seajunction.org/the-disappearance-of-khai-river-weed-in-northern-thailand/",
+    "confidence": "medium"
+  },
+  {
+    "id": "pham-wolffia",
+    "thai": "ผำ",
+    "rtgs": "pham",
+    "kham_mueang": "pham / khai nam / khai nae",
+    "kham_mueang_thai": "ผำ",
+    "english": "water-meal (tiny floating plant, 'khai nam')",
+    "scientific": "Wolffia spp. (general knowledge)",
+    "category": "aquatic",
+    "northern_dishes": [
+      "khua pham (stir-fried with pork, lemongrass, galangal)"
+    ],
+    "where_sold": "fresh markets, sold wet in bags",
+    "note": "CMU calls it 'water algae (pham, khai nam or khai nae)'. Season not stated.",
+    "source": "https://lannainfo.library.cmu.ac.th/en_lannafood/detail_lannafood.php?id_food=79",
+    "confidence": "medium",
+    "months": []
+  },
+  {
+    "id": "het-thop",
+    "thai": "เห็ดเผาะ",
+    "rtgs": "het pho",
+    "kham_mueang": "het thop",
+    "kham_mueang_thai": "เห็ดถอบ",
+    "english": "barometer earthstar ('puffball') mushroom",
+    "scientific": "Astraeus odoratus / A. spp.",
+    "category": "wild mushroom",
+    "months": [
+      5,
+      6
+    ],
+    "peak_months": [
+      5,
+      6
+    ],
+    "northern_dishes": [
+      "kaeng het thop with pickled bamboo & chicken/pork",
+      "khua het pho",
+      "boiled with salt, dipped in nam phrik"
+    ],
+    "where_sold": "Chiang Mai Gate market and roadside sellers at start of rains; priced per litre (~150-300 THB/L reported in 2015)",
+    "note": "Cannot be cultivated; very prized. Linked in public debate to forest burning (belief that fire boosts yield; Wikipedia notes no evidence). Sensitive topic during haze season.",
+    "source": "https://en.wikipedia.org/wiki/Astraeus_odoratus",
+    "extra_sources": [
+      "https://www.chiangmaicitylife.com/citynews/local/hed-thob-mushroom-prices-skyrocket/",
+      "https://lannainfo.library.cmu.ac.th/en_lannafood/detail_lannafood.php?id_food=59",
+      "https://lannainfo.library.cmu.ac.th/en_lannafood/detail_lannafood.php?id_food=85"
+    ],
+    "confidence": "high"
+  },
+  {
+    "id": "het-khon",
+    "thai": "เห็ดโคน",
+    "rtgs": "het khon",
+    "kham_mueang": "het khon",
+    "english": "termite mushroom",
+    "scientific": "Termitomyces spp.",
+    "category": "wild mushroom",
+    "months": [
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "northern_dishes": [
+      "kaeng / soup",
+      "grilled or stir-fried"
+    ],
+    "where_sold": "village and town fresh markets in the rains; expensive",
+    "note": "Seen June at Khun Yuam (Mae Hong Son); 1993 Chiang Mai market foray notes a red Termitomyces fruiting Oct-Nov. Species vary by month.",
+    "source": "https://mycologicalmemories.com/finding-wild-mushrooms-at-the-market-in-khun-yuam-northern-thailand/",
+    "extra_sources": [
+      "https://www.academia.edu/24298291/A_fungus_foray_to_Chiang_Mai_market_in_Northern_Thailand",
+      "https://en.wikipedia.org/wiki/List_of_Thai_ingredients"
+    ],
+    "confidence": "medium"
+  },
+  {
+    "id": "het-tap-tao",
+    "thai": "เห็ดตับเต่า",
+    "rtgs": "het tap tao",
+    "kham_mueang": "het ha",
+    "english": "bolete ('turtle-liver') mushroom",
+    "scientific": "Phlebopus sp. (source: 'likely P. colossus')",
+    "category": "wild mushroom",
+    "months": [
+      6,
+      7,
+      8
+    ],
+    "northern_dishes": [
+      "kaeng het tap tao with young tamarind leaves & pork"
+    ],
+    "where_sold": "fresh markets in the rains",
+    "source": "https://mycologicalmemories.com/finding-wild-mushrooms-at-the-market-in-khun-yuam-northern-thailand/",
+    "extra_sources": [
+      "https://lannainfo.library.cmu.ac.th/en_lannafood/detail_lannafood.php?id_food=58"
+    ],
+    "confidence": "medium"
+  },
+  {
+    "id": "het-lom",
+    "thai": "เห็ดลม",
+    "rtgs": "het lom",
+    "english": "het lom (tough wild mushroom, sold fresh or dried)",
+    "category": "wild mushroom",
+    "months": [
+      7,
+      8,
+      9
+    ],
+    "northern_dishes": [
+      "kaeng het lom with cha-om and pepper vine",
+      "khua het lom",
+      "nam phrik het lom"
+    ],
+    "where_sold": "markets; dried het lom year-round",
+    "note": "Species ID conflicts across sources (1993 foray labels 'Hed Lom' as Russula). Months approximate.",
+    "source": "https://lannainfo.library.cmu.ac.th/en_lannafood/detail_lannafood.php?id_food=60",
+    "extra_sources": [
+      "https://www.academia.edu/24298291/A_fungus_foray_to_Chiang_Mai_market_in_Northern_Thailand",
+      "https://lannainfo.library.cmu.ac.th/en_lannafood/detail_lannafood.php?id_food=86"
+    ],
+    "confidence": "low"
+  },
+  {
+    "id": "het-khai",
+    "thai": "เห็ดไข่",
+    "rtgs": "het khai",
+    "english": "'egg mushroom' (wild, rainy season)",
+    "category": "wild mushroom",
+    "months": [
+      6,
+      7,
+      8
+    ],
+    "northern_dishes": [
+      "kaeng, grilled"
+    ],
+    "where_sold": "fresh markets",
+    "note": "Species ID uncertain (source says a red Russula; many Thais use het khai for Amanita). Expert check.",
+    "source": "https://mycologicalmemories.com/finding-wild-mushrooms-at-the-market-in-khun-yuam-northern-thailand/",
+    "confidence": "low"
+  },
+  {
+    "id": "het-daeng",
+    "thai": "เห็ดแดง",
+    "rtgs": "het daeng",
+    "english": "red brittlegill mushroom",
+    "scientific": "Russula lepida",
+    "category": "wild mushroom",
+    "months": [
+      8,
+      9
+    ],
+    "where_sold": "Chiang Mai market (observed September 1993)",
+    "source": "https://www.academia.edu/24298291/A_fungus_foray_to_Chiang_Mai_market_in_Northern_Thailand",
+    "confidence": "low"
+  },
+  {
+    "id": "het-kamin",
+    "thai": "เห็ดขมิ้น",
+    "rtgs": "het khamin",
+    "english": "small chanterelle ('turmeric mushroom')",
+    "scientific": "Cantharellus minor",
+    "category": "wild mushroom",
+    "months": [
+      8,
+      9
+    ],
+    "where_sold": "Chiang Mai market (observed September 1993)",
+    "source": "https://www.academia.edu/24298291/A_fungus_foray_to_Chiang_Mai_market_in_Northern_Thailand",
+    "confidence": "low"
+  },
+  {
+    "id": "het-hu-nu",
+    "thai": "เห็ดหูหนู",
+    "rtgs": "het hu nu",
+    "english": "wood-ear mushroom",
+    "scientific": "Auricularia sp.",
+    "category": "mushroom (cultivated & wild)",
+    "months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "where_sold": "all markets",
+    "source": "https://www.academia.edu/24298291/A_fungus_foray_to_Chiang_Mai_market_in_Northern_Thailand",
+    "confidence": "medium"
+  },
+  {
+    "id": "het-nang-fa",
+    "thai": "เห็ดนางฟ้า",
+    "rtgs": "het nang fa",
+    "english": "oyster mushroom",
+    "scientific": "Pleurotus sp.",
+    "category": "mushroom (cultivated)",
+    "months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "where_sold": "all markets; most abundant mushroom in 1993 survey",
+    "source": "https://www.academia.edu/24298291/A_fungus_foray_to_Chiang_Mai_market_in_Northern_Thailand",
+    "confidence": "medium"
+  },
+  {
+    "id": "khai-mot-daeng",
+    "thai": "ไข่มดแดง",
+    "rtgs": "khai mot daeng",
+    "kham_mueang": "khai mot som",
+    "english": "red (weaver) ant eggs & larvae",
+    "scientific": "Oecophylla smaragdina",
+    "category": "insect",
+    "months": [
+      2,
+      3,
+      4,
+      5
+    ],
+    "peak_months": [
+      3,
+      4
+    ],
+    "northern_dishes": [
+      "kaeng phak wan sai khai mot",
+      "chio khai mot daeng (with egg)",
+      "tam khai mot daeng",
+      "khai jiao / omelette"
+    ],
+    "where_sold": "fresh markets on small plates or bags, hot season",
+    "note": "Bush: Feb-May; CMU: comes out with phak wan March-June; ~600 THB per ~0.5 kg reported (Sakon Nakhon). Also Isan staple.",
+    "source": "https://www.austinbushphotography.com/blog/2020/3/26/kaeng-phak-waan-sai-khai-mot",
+    "extra_sources": [
+      "https://mysakonnakhon.com/red-ant-eggs-thailand/",
+      "https://lannainfo.library.cmu.ac.th/en_lannafood/detail_lannafood.php?id_food=100",
+      "https://lannainfo.library.cmu.ac.th/en_lannafood/detail_lannafood.php?id_food=111"
+    ],
+    "confidence": "high"
+  },
+  {
+    "id": "rot-duan",
+    "thai": "รถด่วน",
+    "rtgs": "rot duan",
+    "english": "bamboo caterpillar ('express train')",
+    "scientific": "Omphisa fuscidentalis",
+    "category": "insect",
+    "months": [
+      11,
+      12,
+      1,
+      2
+    ],
+    "northern_dishes": [
+      "deep-fried snack"
+    ],
+    "where_sold": "insect carts at night markets; also farmed now",
+    "note": "Thai formal name หนอนไม้ไผ่ (non mai phai). Wild collection during larval diapause ~Nov-Feb.",
+    "source": "https://en.wikipedia.org/wiki/Omphisa_fuscidentalis",
+    "confidence": "high"
+  },
+  {
+    "id": "cricket",
+    "thai": "จิ้งหรีด",
+    "rtgs": "chingrit",
+    "english": "crickets",
+    "category": "insect",
+    "months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "northern_dishes": [
+      "deep-fried snack"
+    ],
+    "where_sold": "insect carts at night markets",
+    "note": "Largely farmed; wild seasonality not verified.",
+    "source": "https://en.wikipedia.org/wiki/Thai_cuisine",
+    "confidence": "low"
+  },
+  {
+    "id": "maeng-da",
+    "thai": "แมงดา",
+    "rtgs": "maengda",
+    "english": "giant water bug",
+    "scientific": "Lethocerus indicus",
+    "category": "insect",
+    "northern_dishes": [
+      "nam phrik maengda"
+    ],
+    "where_sold": "markets; flavour also sold as bottled essence",
+    "note": "Season not verified.",
+    "source": "https://lannainfo.library.cmu.ac.th/en_lannafood/detail_lannafood.php?id_food=170",
+    "confidence": "low",
+    "months": []
+  },
+  {
+    "id": "maeng-man",
+    "thai": "แมงมัน",
+    "rtgs": "maeng man",
+    "english": "winged queen ants/termites (per CMU 'maengman chom')",
+    "category": "insect",
+    "northern_dishes": [
+      "maengman chom (fermented/preserved)"
+    ],
+    "where_sold": "village markets",
+    "note": "Identity and season (commonly said to emerge with first rains) not verified — expert check.",
+    "source": "https://lannainfo.library.cmu.ac.th/en_lannafood/detail_lannafood.php?id_food=207",
+    "confidence": "low",
+    "months": []
+  },
+  {
+    "id": "coffee",
+    "thai": "กาแฟ",
+    "rtgs": "kafae",
+    "english": "arabica coffee cherries/beans",
+    "scientific": "Coffea arabica",
+    "category": "beverage crop",
+    "months": [
+      11,
+      12,
+      1,
+      2
+    ],
+    "where_sold": "Doi Chang, Doi Tung (Chiang Rai); many Chiang Mai highland villages; cafes",
+    "note": "Cherry picking Nov-Feb (cool season). Coffee farms are frequently run by highland communities (e.g. Akha at Doi Chang).",
+    "source": "https://www.bonvoyagethailand.com/chiang-rai/coffee-tea-guide/",
+    "confidence": "medium"
+  },
+  {
+    "id": "oolong-tea",
+    "thai": "ชาอูหลง",
+    "rtgs": "cha u-long",
+    "english": "oolong tea (Mae Salong)",
+    "category": "beverage crop",
+    "months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "peak_months": [
+      3,
+      4
+    ],
+    "where_sold": "Mae Salong (Chiang Rai), tea shops",
+    "note": "Picked year-round; premium first flush March-April. Taiwanese-style cultivation by Yunnanese Chinese community.",
+    "source": "https://www.bonvoyagethailand.com/chiang-rai/coffee-tea-guide/",
+    "confidence": "medium"
+  },
+  {
+    "id": "miang",
+    "thai": "เมี่ยง",
+    "rtgs": "miang",
+    "english": "fermented tea leaves (chewed/snacked)",
+    "category": "preserved",
+    "months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "northern_dishes": [
+      "miang (chewed after meals)",
+      "miang song-khrueang (with coconut, ginger, peanuts)"
+    ],
+    "where_sold": "upland miang-producing villages; some fresh markets",
+    "note": "Assam-type tea leaves steamed same day as picked, then fermented. Traditional social snack; less common among young people (unverified).",
+    "source": "https://lannainfo.library.cmu.ac.th/en_lannafood/detail_lannafood.php?id_food=13",
+    "confidence": "high"
+  }
+]

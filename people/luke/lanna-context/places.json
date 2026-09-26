@@ -1,0 +1,1206 @@
+{
+ "schema": "places.v1",
+ "generated": "2026-09-26",
+ "city": "Chiang Mai",
+ "language_codes": {
+  "kham_mueang": "Northern Thai (Kham Mueang)",
+  "central_thai": "Standard/Central Thai",
+  "english_basic": "basic English likely at tourist-facing stalls",
+  "hmong": "Hmong (Hmoob)",
+  "yunnanese_chinese": "Yunnanese Southwestern Mandarin",
+  "shan": "Shan (Tai Yai)"
+ },
+ "notes": [
+  "likely_languages is an inference from vendor type/location, not a survey; Kham Mueang use by older local vendors is expected but unverified per market (expert review).",
+  "lat/lon: coord_source names where coordinates came from (Wikipedia, Longdo Map, chiangmailocator, OSM via mapcarta, Wongnai). Verify before pinning stalls.",
+  "dish_ref points to id in northern_dishes.json.",
+  "Hours change often; show as 'typical' in UI."
+ ],
+ "places": [
+  {
+   "id": "warorot",
+   "name_en": "Warorot Market (Kad Luang)",
+   "name_th": "ตลาดวโรรส (กาดหลวง)",
+   "name_rtgs": "Talat Worarot (Kat Luang)",
+   "lat": 18.790222,
+   "lon": 99.000657,
+   "coord_source": "https://en.wikipedia.org/wiki/Warorot_Market",
+   "type": "fresh_market_general",
+   "area": "Chang Moi, by Ping River (Chinatown)",
+   "open_days": "daily",
+   "hours": "about 05:00-18:00 (indoor shops about 09:00-18:00); takeaway food stalls outside about 18:00-22:00",
+   "known_for": [
+    "Oldest big market of Chiang Mai; market since 1910 (Princess Dara Rasmi)",
+    "Northern Thai packaged foods to bring home: sai ua, nam phrik num, khaep mu, moo yor",
+    "Dry goods, chili pastes, banana-leaf sweets; upper floors fabric, hill-tribe clothing, indigo cloth, temple bells",
+    "Part of the Chinatown (Trok Lao Jo) district"
+   ],
+   "typical_vendors": [
+    "older Northern Thai food vendors",
+    "Thai-Chinese shop owners",
+    "textile sellers",
+    "Hmong vendors in adjacent lane"
+   ],
+   "likely_languages": [
+    "kham_mueang",
+    "central_thai",
+    "teochew_or_other_chinese_heritage (inferred, older Thai-Chinese shopkeepers)",
+    "english_basic"
+   ],
+   "signature_foods": [
+    {
+     "th": "ไส้อั่ว",
+     "rtgs": "sai ua",
+     "en": "Northern herb sausage",
+     "dish_ref": "sai-ua"
+    },
+    {
+     "th": "น้ำพริกหนุ่ม",
+     "rtgs": "nam phrik num",
+     "en": "roasted green chili dip",
+     "dish_ref": "nam-phrik-num"
+    },
+    {
+     "th": "แคบหมู",
+     "rtgs": "khaep mu",
+     "en": "pork cracklings (eaten with nam phrik num)",
+     "dish_ref": "khaep-mu"
+    },
+    {
+     "th": "หมูยอ",
+     "rtgs": "mu yo",
+     "en": "steamed pork sausage loaf"
+    },
+    {
+     "th": "หมูทอด",
+     "rtgs": "mu thot",
+     "en": "fried pork (Dam Rong / ดำรงค์ stall known for this)"
+    },
+    {
+     "th": "มะปรางอ่อน",
+     "rtgs": "maprang on",
+     "en": "young marian plum, very sour, dipped in chili-shrimp paste"
+    }
+   ],
+   "nomad_tips": [
+    "Go early morning for the local crowd; indoor shops wind down around 18:00",
+    "Ask for a vacuum-packed sai ua / nam phrik num set if taking it on a flight",
+    "Tagged items are usually fixed price; bargaining is normal for textiles, not for food",
+    "Combine with Ton Lamyai and the flower market across the road"
+   ],
+   "source": "https://en.wikipedia.org/wiki/Warorot_Market",
+   "sources_extra": [
+    "https://migrationology.com/warorot-market-chiang-mai/",
+    "https://northernth.com/en/chiang-mai-markets/",
+    "https://wander-lush.org/guide-warorot-lamyai-hmong-market-chiang-mai-thailand/"
+   ],
+   "confidence": "high",
+   "review": [
+    "Opening hours differ between sources (05:00 vs 09:00 start)"
+   ]
+  },
+  {
+   "id": "ton-lamyai",
+   "name_en": "Ton Lamyai Market",
+   "name_th": "ตลาดต้นลำไย (กาดต้นลำไย)",
+   "name_rtgs": "Talat Ton Lamyai",
+   "lat": 18.790402,
+   "lon": 99.001341,
+   "coord_source": "https://www.chiangmailocator.com/chiang-mai-shops-5043:ton-lam-yai-market",
+   "type": "fresh_market_general",
+   "area": "Wichayanon Rd / Praisani Rd, next to Warorot",
+   "open_days": "daily",
+   "hours": "outdoor section 24h; indoor shops about 05:00-sunset",
+   "known_for": [
+    "Wet market and produce next to Warorot",
+    "Hill-tribe Arabica coffee, tea leaves, dried shrimp, homewares"
+   ],
+   "typical_vendors": [
+    "produce and meat sellers",
+    "dry goods sellers",
+    "florists (flower street next door)"
+   ],
+   "likely_languages": [
+    "kham_mueang",
+    "central_thai"
+   ],
+   "signature_foods": [
+    {
+     "th": "น้ำพริกหนุ่ม",
+     "rtgs": "nam phrik num",
+     "en": "roasted green chili dip",
+     "dish_ref": "nam-phrik-num"
+    },
+    {
+     "th": "ไส้อั่ว",
+     "rtgs": "sai ua",
+     "en": "Northern herb sausage",
+     "dish_ref": "sai-ua"
+    }
+   ],
+   "nomad_tips": [
+    "The riverside flower stalls are open all night; marigold garlands are temple offerings, not decoration",
+    "Wet-market floors get slippery; wear closed shoes"
+   ],
+   "source": "https://wander-lush.org/guide-warorot-lamyai-hmong-market-chiang-mai-thailand/",
+   "sources_extra": [
+    "https://changpuakmagazine.com/en-article/7-DAYS-7-MARKETS/264360/",
+    "https://www.facebook.com/p/%E0%B8%81%E0%B8%B2%E0%B8%94%E0%B8%95%E0%B9%89%E0%B8%99%E0%B8%A5%E0%B8%B3%E0%B9%84%E0%B8%A2-Tonlamyai-Market-100064173544265/"
+   ],
+   "confidence": "high",
+   "review": [
+    "Thai name taken from the market's Facebook page title (กาดต้นลำไย); ตลาดต้นลำไย is the Central Thai form"
+   ]
+  },
+  {
+   "id": "ton-lamyai-flower",
+   "name_en": "Ton Lamyai Flower Market",
+   "name_th": null,
+   "name_rtgs": null,
+   "lat": 18.790648,
+   "lon": 99.001585,
+   "coord_source": "https://www.chiangmailocator.com/chiang-mai-hangouts-2638:ton-lamyai-flower-market",
+   "type": "flower_market",
+   "area": "Praisani Rd along the Ping River",
+   "open_days": "daily",
+   "hours": "24h",
+   "known_for": [
+    "Orchids, roses, lilies, chrysanthemums, bouquets",
+    "Cheap marigolds and orchids",
+    "Temple offering garlands"
+   ],
+   "typical_vendors": [
+    "florists",
+    "flower wholesalers"
+   ],
+   "likely_languages": [
+    "kham_mueang",
+    "central_thai"
+   ],
+   "signature_foods": [],
+   "nomad_tips": [
+    "Good place to buy flowers for a host or a temple visit",
+    "Busiest early morning and before Buddhist holy days (inferred)"
+   ],
+   "source": "https://changpuakmagazine.com/en-article/7-DAYS-7-MARKETS/264360/",
+   "sources_extra": [
+    "https://www.mamanoicookingschool.com/blog/markets-chiang-mai/"
+   ],
+   "confidence": "medium",
+   "review": [
+    "No Thai name found in a source",
+    "'busier before holy days' is inference"
+   ]
+  },
+  {
+   "id": "hmong-lane-warorot",
+   "name_en": "Hmong Market / Trok Lao Jo lane (Chinatown)",
+   "name_th": null,
+   "name_rtgs": null,
+   "lat": 18.790222,
+   "lon": 99.000657,
+   "coord_source": "approximate: Warorot Market coords; lane is at Warorot's south-west corner",
+   "type": "textile_market",
+   "area": "Lanes between Tha Phae Rd and Warorot (Kuang Men area)",
+   "open_days": "daily",
+   "hours": "Hmong vendors about 07:00-17:00",
+   "known_for": [
+    "Batik and embroidered Hmong skirts, quilts, antique fabric panels, hemp fabric, Akha hats",
+    "Chinese shrine about 130 years old; Indian-Thai textile shops; Lisu and Karen goods"
+   ],
+   "typical_vendors": [
+    "Hmong textile vendors",
+    "Thai-Chinese and Indian-Thai textile shops"
+   ],
+   "likely_languages": [
+    "hmong",
+    "central_thai",
+    "kham_mueang"
+   ],
+   "signature_foods": [],
+   "nomad_tips": [
+    "Greet in Thai; many Hmong vendors are Thai-Hmong bilingual (inferred)",
+    "Use the self-designation Hmong; the older Thai exonym 'Meo' (แม้ว) is considered derogatory; Thai form ม้ง",
+    "Ask before photographing vendors or their children",
+    "Bargaining on textiles is expected; start well below asking but stay friendly"
+   ],
+   "source": "https://en.wikipedia.org/wiki/Warorot_Market",
+   "sources_extra": [
+    "https://changpuakmagazine.com/en-article/LAO-JOW-STREET/438038/",
+    "https://wander-lush.org/guide-warorot-lamyai-hmong-market-chiang-mai-thailand/"
+   ],
+   "confidence": "medium",
+   "review": [
+    "Coordinates approximate",
+    "Thai spelling of 'Trok Lao Jo' not found in a source",
+    "Meo exonym note consistent with ethnic_groups.json"
+   ]
+  },
+  {
+   "id": "muang-mai",
+   "name_en": "Muang Mai Market",
+   "name_th": "ตลาดเมืองใหม่",
+   "name_rtgs": "Talat Mueang Mai",
+   "lat": 18.797976,
+   "lon": 98.997583,
+   "coord_source": "https://www.chiangmailocator.com/chiang-mai-shops-2448:muang-mai-market",
+   "type": "wholesale_produce",
+   "area": "Chang Moi Rd Soi 3, by the Ping River north of Warorot",
+   "open_days": "daily",
+   "hours": "24h; busiest before dawn / early morning",
+   "known_for": [
+    "Chiang Mai's largest wholesale fruit and vegetable market",
+    "Restaurants source ingredients here; small portions also sold",
+    "Seasonal fruit arrives here first (lamyai/longan, lychee, mango)"
+   ],
+   "typical_vendors": [
+    "wholesale produce traders",
+    "farmers from surrounding districts",
+    "meat and fish sellers"
+   ],
+   "likely_languages": [
+    "kham_mueang",
+    "central_thai"
+   ],
+   "signature_foods": [
+    {
+     "rtgs": "seasonal fruit",
+     "en": "whatever is in season - check seasonal_produce.json"
+    }
+   ],
+   "nomad_tips": [
+    "Prices are per kilo and wholesale-sized; ask for a smaller amount",
+    "Night/early morning is when trucks unload; stay out of the way of carts",
+    "Very little English; the app is most useful here"
+   ],
+   "source": "https://www.chiangmailocator.com/chiang-mai-shops-2448:muang-mai-market",
+   "sources_extra": [
+    "https://northernth.com/en/chiang-mai-markets/",
+    "https://www.mamanoicookingschool.com/blog/markets-chiang-mai/"
+   ],
+   "confidence": "high",
+   "review": [
+    "'fruit arrives here first' is general inference"
+   ]
+  },
+  {
+   "id": "somphet",
+   "name_en": "Somphet Market (Sompet)",
+   "name_th": null,
+   "name_rtgs": "Talat Somphet",
+   "lat": 18.79161,
+   "lon": 98.993093,
+   "coord_source": "https://www.chiangmailocator.com/chiang-mai-hangouts-1822:sompet-market",
+   "type": "fresh_market_small",
+   "area": "Moon Muang Rd Soi 6, north-east Old City",
+   "open_days": "daily",
+   "hours": "morning to evening (exact hours not verified)",
+   "known_for": [
+    "Small fresh market inside the Old City",
+    "Used by cooking schools for market tours",
+    "Fresh herbs, fruit, ready-to-eat Northern Thai dishes"
+   ],
+   "typical_vendors": [
+    "produce sellers",
+    "prepared-food vendors",
+    "vendors used to cooking-class groups"
+   ],
+   "likely_languages": [
+    "central_thai",
+    "kham_mueang",
+    "english_basic"
+   ],
+   "signature_foods": [
+    {
+     "th": "น้ำพริกหนุ่ม",
+     "rtgs": "nam phrik num",
+     "en": "roasted green chili dip",
+     "dish_ref": "nam-phrik-num"
+    },
+    {
+     "th": "ไส้อั่ว",
+     "rtgs": "sai ua",
+     "en": "Northern herb sausage",
+     "dish_ref": "sai-ua"
+    }
+   ],
+   "nomad_tips": [
+    "Easiest local market to walk to from Old City guesthouses",
+    "Vendors are used to foreigners; good place to practise first Kham Mueang phrases"
+   ],
+   "source": "https://www.mamanoicookingschool.com/blog/markets-chiang-mai/",
+   "sources_extra": [
+    "https://www.chiangmailocator.com/chiang-mai-hangouts-1822:sompet-market"
+   ],
+   "confidence": "medium",
+   "review": [
+    "Thai spelling (likely ตลาดสมเพชร) not confirmed from a source",
+    "Hours not verified"
+   ]
+  },
+  {
+   "id": "jing-jai",
+   "name_en": "Jing Jai Market (JJ Market)",
+   "name_th": "ตลาดจริงใจ",
+   "name_rtgs": "Talat Ching Chai",
+   "lat": 18.807929,
+   "lon": 98.994742,
+   "coord_source": "https://www.chiangmailocator.com/chiang-mai-shops-5466:jj-market",
+   "type": "weekend_farmers_craft",
+   "area": "45 Assadathon Rd, Pa Tan (north of Chang Phueak Gate)",
+   "open_days": "Sat,Sun",
+   "hours": "about 06:30-13:00 (some sources say until 15:00)",
+   "known_for": [
+    "Weekend farmers' market with organic produce",
+    "Handmade crafts and designer clothing",
+    "No motorbikes inside; plastic/foam discouraged",
+    "Live music, coffee, picnic tables"
+   ],
+   "typical_vendors": [
+    "organic farmers",
+    "craft makers and young designers",
+    "street food and coffee vendors"
+   ],
+   "likely_languages": [
+    "central_thai",
+    "kham_mueang",
+    "english_basic"
+   ],
+   "signature_foods": [
+    {
+     "rtgs": "organic produce",
+     "en": "vegetables and fruit from local farms"
+    },
+    {
+     "rtgs": "coffee",
+     "en": "Northern-grown coffee"
+    }
+   ],
+   "nomad_tips": [
+    "Arrive before 09:00 for produce and before the heat",
+    "Bring your own bag",
+    "Not the same as the CMU / Kad Na Mor market - different place"
+   ],
+   "source": "https://www.cktravels.com/jing-jai-weekend-farmers-market-chiang-mai/",
+   "sources_extra": [
+    "https://sathai.org/?p=4070",
+    "https://kindeeyunuea.com/22375/"
+   ],
+   "confidence": "high",
+   "review": [
+    "Closing time varies 13:00-15:00 across sources",
+    "Task brief called it 'Chiang Mai University JJ market' - it is not at CMU"
+   ]
+  },
+  {
+   "id": "one-nimman",
+   "name_en": "One Nimman",
+   "name_th": "วันนิมมาน",
+   "name_rtgs": "Wan Nimman",
+   "lat": 18.8,
+   "lon": 98.968,
+   "coord_source": "https://www.wongnai.com/attractions/340131EJ-one-nimman",
+   "type": "lifestyle_mall_market",
+   "area": "1 Nimmanhaemin Rd (Soi 1), Suthep",
+   "open_days": "daily",
+   "hours": "11:00-21:00 official (night market zone to 22:00); Wongnai lists 11:00-23:00",
+   "known_for": [
+    "Red-brick Lanna/European-style community mall",
+    "One Nimman Select: locally designed souvenirs and crafts",
+    "Night market zone and rotating events"
+   ],
+   "typical_vendors": [
+    "boutique shops",
+    "cafes and restaurants",
+    "young Thai designers"
+   ],
+   "likely_languages": [
+    "central_thai",
+    "english_basic",
+    "mandarin (inferred, Chinese tourist traffic)"
+   ],
+   "signature_foods": [],
+   "nomad_tips": [
+    "Most English-friendly spot in the list; less need for translation",
+    "Good meeting point; Nimman is the main nomad neighbourhood"
+   ],
+   "source": "https://www.onenimman.com/en/",
+   "sources_extra": [
+    "https://www.wongnai.com/attractions/340131EJ-one-nimman"
+   ],
+   "confidence": "medium",
+   "review": [
+    "Coordinates look rounded (3 decimals); verify on map"
+   ]
+  },
+  {
+   "id": "chang-phueak-market",
+   "name_en": "Chang Phueak Market / Chang Phueak Gate night food market",
+   "name_th": "ตลาดช้างเผือก",
+   "name_rtgs": "Talat Chang Phueak",
+   "lat": 18.79597,
+   "lon": 98.985621,
+   "coord_source": "https://map.longdo.com/main/p/A00140432",
+   "type": "fresh_market_and_night_food",
+   "area": "Mani Noppharat Rd, just north of Chang Phueak (White Elephant) Gate",
+   "open_days": "daily",
+   "hours": "day market (listed as 24h); night food stalls about 17:00-24:00",
+   "known_for": [
+    "Evening street-food strip by the north gate",
+    "Stewed pork leg rice (khao kha mu) stall is famous",
+    "Noodles, satay, seafood omelette, fruit shakes, Thai desserts"
+   ],
+   "typical_vendors": [
+    "long-running street-food vendors",
+    "fresh market sellers"
+   ],
+   "likely_languages": [
+    "central_thai",
+    "kham_mueang",
+    "english_basic"
+   ],
+   "signature_foods": [
+    {
+     "rtgs": "khao kha mu",
+     "en": "stewed pork leg on rice"
+    },
+    {
+     "rtgs": "sukiyaki",
+     "en": "Thai-style sukiyaki"
+    }
+   ],
+   "nomad_tips": [
+    "Come after 17:00 for the food stalls",
+    "Popular stalls have queues; order by pointing plus the app"
+   ],
+   "source": "https://kindeeyunuea.com/22375/",
+   "sources_extra": [
+    "https://www.mamanoicookingschool.com/blog/markets-chiang-mai/",
+    "https://chiangmaitraveller.com/chiang-mai-markets/",
+    "https://map.longdo.com/main/p/A00140432"
+   ],
+   "confidence": "medium",
+   "review": [
+    "Thai script for khao kha mu not sourced here (ข้าวขาหมู expected)",
+    "'Cowboy hat lady' stall fame not verified"
+   ]
+  },
+  {
+   "id": "thanin",
+   "name_en": "Thanin Market (Siri Wattana Market)",
+   "name_th": "ตลาดธานินทร์ (ตลาดศิริวัฒนา)",
+   "name_rtgs": "Talat Thanin",
+   "lat": 18.804478,
+   "lon": 98.984636,
+   "coord_source": "https://map.longdo.com/main/p/A10123716",
+   "type": "fresh_market_general",
+   "area": "Chang Phueak Rd, near Chiang Mai Rajabhat University",
+   "open_days": "daily",
+   "hours": "04:30-21:00",
+   "known_for": [
+    "Large, clean locals' market",
+    "Ready-to-eat curries (kaeng thung / bagged curries) and Thai desserts",
+    "Northern dishes, curry puffs"
+   ],
+   "typical_vendors": [
+    "prepared-food vendors",
+    "older Northern Thai cooks",
+    "produce sellers"
+   ],
+   "likely_languages": [
+    "kham_mueang",
+    "central_thai"
+   ],
+   "signature_foods": [
+    {
+     "th": "แกงฮังเล",
+     "rtgs": "kaeng hang le",
+     "en": "Northern pork curry (Burmese/Shan influenced)",
+     "dish_ref": "kaeng-hang-le"
+    },
+    {
+     "th": "น้ำพริกอ่อง",
+     "rtgs": "nam phrik ong",
+     "en": "tomato-pork chili dip",
+     "dish_ref": "nam-phrik-ong"
+    }
+   ],
+   "nomad_tips": [
+    "Good for buying bagged curries to take home",
+    "Morning is best for the widest choice"
+   ],
+   "source": "https://kindeeyunuea.com/22375/",
+   "sources_extra": [
+    "https://www.mamanoicookingschool.com/blog/markets-chiang-mai/",
+    "https://map.longdo.com/main/p/A10123716"
+   ],
+   "confidence": "medium",
+   "review": [
+    "Thai names: Longdo spells ธานินทร์, kindeeyunuea ธานินท์, TripAdvisor ศิริวัฒนา; the specific dishes listed are typical, not confirmed per stall"
+   ]
+  },
+  {
+   "id": "sunday-walking-street",
+   "name_en": "Sunday Walking Street (Tha Phae / Ratchadamnoen)",
+   "name_th": "ถนนคนเดินท่าแพ",
+   "name_rtgs": "Thanon Khon Doen Tha Phae",
+   "lat": 18.787916,
+   "lon": 98.99128,
+   "coord_source": "https://www.chiangmailocator.com/chiang-mai-hangouts-73:sunday-market",
+   "type": "walking_street_night",
+   "area": "Tha Phae Gate west along Ratchadamnoen Rd to Wat Phra Singh, plus side roads",
+   "open_days": "Sun",
+   "hours": "about 16:00-23:00 (peak 19:00-21:00)",
+   "known_for": [
+    "Lanna and Thai handicrafts, art, textiles",
+    "Food courts in temple grounds along the route",
+    "Foot massage"
+   ],
+   "typical_vendors": [
+    "artisans and students selling own work",
+    "food vendors",
+    "hill-tribe craft sellers"
+   ],
+   "likely_languages": [
+    "central_thai",
+    "kham_mueang",
+    "english_basic"
+   ],
+   "signature_foods": [
+    {
+     "th": "ไส้อั่ว",
+     "rtgs": "sai ua",
+     "en": "Northern herb sausage",
+     "dish_ref": "sai-ua"
+    },
+    {
+     "rtgs": "khanom khrok",
+     "en": "coconut-milk pancakes"
+    },
+    {
+     "rtgs": "roti sai mai",
+     "en": "cotton-candy roti"
+    }
+   ],
+   "nomad_tips": [
+    "Arrive 16:30-17:30 to beat the crowds",
+    "Carry small notes (20/50/100 baht)",
+    "Remove shoes and dress modestly if entering temple grounds",
+    "Very crowded; keep phone secure"
+   ],
+   "source": "https://www.feel-chiang-mai.com/street-food-markets/chiang-mai-walking-streets-guide/",
+   "sources_extra": [
+    "https://en.wikipedia.org/wiki/Tha_Phae_Gate",
+    "https://changpuakmagazine.com/en-article/7-DAYS-7-MARKETS/264360/"
+   ],
+   "confidence": "high",
+   "review": [
+    "Many locals also call it กาดวันอาทิตย์; not source-verified"
+   ]
+  },
+  {
+   "id": "wualai-saturday",
+   "name_en": "Saturday Walking Street (Wua Lai Rd)",
+   "name_th": "ถนนคนเดินวัวลาย",
+   "name_rtgs": "Thanon Khon Doen Wua Lai",
+   "lat": 18.7787,
+   "lon": 98.9834,
+   "coord_source": "https://en.wikipedia.org/wiki/Wat_Sri_Suphan (temple on Wua Lai Rd, mid-street)",
+   "type": "walking_street_night",
+   "area": "Wua Lai Rd, from Chiang Mai Gate south; traditional silversmith quarter (Haiya)",
+   "open_days": "Sat",
+   "hours": "about 16:00-22:30 (sources range 16:00-23:00)",
+   "known_for": [
+    "Silversmith district: silver jewellery, aluminium/silver craft",
+    "Lacquerware and handicrafts",
+    "Wat Sri Suphan silver ordination hall"
+   ],
+   "typical_vendors": [
+    "silversmiths",
+    "artisans",
+    "food vendors",
+    "foot massage"
+   ],
+   "likely_languages": [
+    "kham_mueang",
+    "central_thai",
+    "english_basic"
+   ],
+   "signature_foods": [
+    {
+     "th": "ไส้อั่ว",
+     "rtgs": "sai ua",
+     "en": "Northern herb sausage",
+     "dish_ref": "sai-ua"
+    }
+   ],
+   "nomad_tips": [
+    "Smaller and slightly less crowded than Sunday",
+    "Wat Sri Suphan ordination hall: women are traditionally not permitted inside (check signage)",
+    "Ask the silversmith 'handmade here?' - many workshops are on the street"
+   ],
+   "source": "https://chiangmaitraveller.com/chiang-mai-markets/",
+   "sources_extra": [
+    "https://en.wikipedia.org/wiki/Wat_Sri_Suphan",
+    "https://www.mamanoicookingschool.com/blog/markets-chiang-mai/"
+   ],
+   "confidence": "high",
+   "review": [
+    "Women-not-permitted rule for the ubosot is widely reported but not from the cited pages - expert/culture check"
+   ]
+  },
+  {
+   "id": "night-bazaar",
+   "name_en": "Chiang Mai Night Bazaar",
+   "name_th": "ไนท์บาซาร์",
+   "name_rtgs": "Nai Basa",
+   "lat": 18.783955,
+   "lon": 99.000292,
+   "coord_source": "https://www.chiangmailocator.com/chiang-mai-hangouts-1823:night-market",
+   "type": "tourist_night_market",
+   "area": "Chang Khlan Rd, between the moat and Ping River",
+   "open_days": "daily",
+   "hours": "about 17:00/18:00-24:00",
+   "known_for": [
+    "Souvenirs, handicrafts, antiques, clothing",
+    "Food centres (Anusarn, Kalare)",
+    "Originally Chinese-merchant owned; Ban Ho mosque and Yunnanese community nearby"
+   ],
+   "typical_vendors": [
+    "tourist-oriented retailers",
+    "hill-tribe goods sellers",
+    "food-court vendors"
+   ],
+   "likely_languages": [
+    "central_thai",
+    "english_basic",
+    "mandarin (inferred)",
+    "kham_mueang"
+   ],
+   "signature_foods": [
+    {
+     "th": "ข้าวซอย",
+     "rtgs": "khao soi",
+     "en": "curried egg-noodle soup",
+     "dish_ref": "khao-soi"
+    }
+   ],
+   "nomad_tips": [
+    "Most touristic and highest starting prices; bargain politely",
+    "Walk to Ban Ho area for halal khao soi"
+   ],
+   "source": "https://en.wikipedia.org/wiki/Chiang_Mai_Night_Bazaar",
+   "sources_extra": [
+    "https://www.mamanoicookingschool.com/blog/markets-chiang-mai/",
+    "https://mercure.accor.com/en/mercure-local-guide/local-gastronomy/chiang-mai-markets-thailand.html"
+   ],
+   "confidence": "high",
+   "review": []
+  },
+  {
+   "id": "kad-na-mor",
+   "name_en": "Kad Na Mor (CMU front-gate night market, Malin Plaza)",
+   "name_th": "กาดหน้ามอ",
+   "name_rtgs": "Kat Na Mo",
+   "lat": 18.8085897,
+   "lon": 98.9551801,
+   "coord_source": "https://www.chiangmaimaster.com/place/kad-na-mor-cmu-night-market",
+   "type": "student_night_market",
+   "area": "Huay Kaew Rd, opposite Chiang Mai University main gate",
+   "open_days": "daily",
+   "hours": "about 17:00-22:00/22:30 (busiest after 18:30)",
+   "known_for": [
+    "Cheap student fashion, cosmetics, gadgets",
+    "Street food: grilled skewers, Northern snacks, Japanese/Korean food, longan juice"
+   ],
+   "typical_vendors": [
+    "student-oriented fashion stalls",
+    "young food vendors"
+   ],
+   "likely_languages": [
+    "central_thai",
+    "kham_mueang",
+    "english_basic"
+   ],
+   "signature_foods": [
+    {
+     "rtgs": "nam lamyai",
+     "en": "longan juice"
+    }
+   ],
+   "nomad_tips": [
+    "'Kad' is Kham Mueang for market (Central Thai talat); 'Na Mor' = in front of the university",
+    "Also try Kad Lang Mor (behind the university)",
+    "Red songthaew from Nimman or Old City"
+   ],
+   "source": "https://www.chiangmaimaster.com/place/kad-na-mor-cmu-night-market",
+   "sources_extra": [
+    "https://chiangmaitraveller.com/chiang-mai-markets/",
+    "https://northernth.com/en/chiang-mai-markets/"
+   ],
+   "confidence": "high",
+   "review": [
+    "Gloss of 'Kad'/'Na Mor' - confirm against kham_mueang_glossary.json"
+   ]
+  },
+  {
+   "id": "ton-payom",
+   "name_en": "Ton Payom Market (Suthep Market)",
+   "name_th": "ตลาดต้นพยอม (ตลาดสุเทพ)",
+   "name_rtgs": "Talat Ton Phayom",
+   "lat": 18.790338,
+   "lon": 98.962058,
+   "coord_source": "https://map.longdo.com/main/p/A10045204",
+   "type": "fresh_market_general",
+   "area": "Suthep Rd, near CMU south side, ~5 min west of Suthep Gate",
+   "open_days": "daily",
+   "hours": "not verified (morning to evening typical)",
+   "known_for": [
+    "Complete locals' fresh market near CMU",
+    "Produce, herbs, rice noodles, tofu, meat",
+    "Ready-to-eat Northern food, grilled frogs, pork crackling"
+   ],
+   "typical_vendors": [
+    "produce and meat sellers",
+    "prepared-food vendors",
+    "students and university staff as customers"
+   ],
+   "likely_languages": [
+    "kham_mueang",
+    "central_thai"
+   ],
+   "signature_foods": [
+    {
+     "th": "ไส้อั่ว",
+     "rtgs": "sai ua",
+     "en": "Northern herb sausage",
+     "dish_ref": "sai-ua"
+    },
+    {
+     "th": "แคบหมู",
+     "rtgs": "khaep mu",
+     "en": "pork cracklings",
+     "dish_ref": "khaep-mu"
+    }
+   ],
+   "nomad_tips": [
+    "Close to Nimman/CMU; a real local market with few tourists",
+    "Point-and-ask works; prices rarely inflated"
+   ],
+   "source": "https://www.chiangmaitravelhub.com/attractions/ton-payom/",
+   "sources_extra": [
+    "https://map.longdo.com/main/p/A10045204",
+    "https://map.longdo.com/main/p/A10065744"
+   ],
+   "confidence": "medium",
+   "review": [
+    "Opening hours not verified",
+    "Ton Payom sai ua stall (Sai Ua La Wan) mentioned by eatingthaifood but not opened"
+   ]
+  },
+  {
+   "id": "chiang-mai-gate",
+   "name_en": "Chiang Mai Gate Market",
+   "name_th": "ตลาดประตูเชียงใหม่",
+   "name_rtgs": "Talat Pratu Chiang Mai",
+   "lat": 18.781498,
+   "lon": 98.988391,
+   "coord_source": "https://map.longdo.com/main/p/A10118044/info",
+   "type": "fresh_market_and_night_food",
+   "area": "Bamrung Buri Rd, south Old City gate",
+   "open_days": "daily",
+   "hours": "morning market about 04:00-12:00; evening food about 17:00-24:00",
+   "known_for": [
+    "One of the biggest morning markets in the city",
+    "Local food and Thai sweets",
+    "Evening street food outside the gate"
+   ],
+   "typical_vendors": [
+    "breakfast and prepared-food vendors",
+    "Thai dessert sellers",
+    "produce sellers"
+   ],
+   "likely_languages": [
+    "kham_mueang",
+    "central_thai",
+    "english_basic"
+   ],
+   "signature_foods": [
+    {
+     "th": "ข้าวซอย",
+     "rtgs": "khao soi",
+     "en": "curried egg-noodle soup",
+     "dish_ref": "khao-soi"
+    },
+    {
+     "th": "ขนมจีนน้ำเงี้ยว",
+     "rtgs": "khanom chin nam ngiao",
+     "en": "rice noodles in Shan-style tomato-pork broth",
+     "dish_ref": "khanom-chin-nam-ngiao"
+    }
+   ],
+   "nomad_tips": [
+    "Start of the Saturday Wua Lai walking street",
+    "Good breakfast stop for Old City nomads"
+   ],
+   "source": "https://mercure.accor.com/en/mercure-local-guide/local-gastronomy/chiang-mai-markets-thailand.html",
+   "sources_extra": [
+    "https://kindeeyunuea.com/22375/",
+    "https://map.longdo.com/main/p/A10118044/info"
+   ],
+   "confidence": "medium",
+   "review": [
+    "Hours conflict: Mercure 04:00-12:00 & 17:00-24:00; kindeeyunuea 16:00-02:00",
+    "Dishes listed are typical, not confirmed from a source for this market"
+   ]
+  },
+  {
+   "id": "nong-hoi",
+   "name_en": "Nong Hoi Market",
+   "name_th": "ตลาดหนองหอย",
+   "name_rtgs": "Talat Nong Hoi",
+   "lat": 18.764186,
+   "lon": 99.005971,
+   "coord_source": "https://map.longdo.com/main/p/A10566711",
+   "type": "fresh_market_general",
+   "area": "Soi 12, Nong Hoi, south-east Mueang (Wat Ket side)",
+   "open_days": "daily",
+   "hours": "05:00-20:00; organic zone 07:00-17:00",
+   "known_for": [
+    "Large residential fresh market",
+    "Has an organic-farming zone (Sustainable Agriculture Foundation list)"
+   ],
+   "typical_vendors": [
+    "produce and meat sellers",
+    "organic farmers",
+    "prepared-food vendors"
+   ],
+   "likely_languages": [
+    "kham_mueang",
+    "central_thai"
+   ],
+   "signature_foods": [],
+   "nomad_tips": [
+    "Very local, little English",
+    "Look for the organic zone signs"
+   ],
+   "source": "https://northernth.com/en/chiang-mai-markets/",
+   "sources_extra": [
+    "https://sathai.org/?p=4070",
+    "https://map.longdo.com/main/p/A10566711"
+   ],
+   "confidence": "medium",
+   "review": []
+  },
+  {
+   "id": "san-pa-khoi",
+   "name_en": "San Pa Khoi Market",
+   "name_th": "ตลาดสันป่าข่อย",
+   "name_rtgs": "Talat San Pa Khoi",
+   "lat": 18.785593,
+   "lon": 99.009499,
+   "coord_source": "https://map.longdo.com/main/p/A00140372",
+   "type": "fresh_market_general",
+   "area": "Bamrung Rat Rd, Wat Ket, east of the Ping River (near the railway station)",
+   "open_days": "daily",
+   "hours": "not verified",
+   "known_for": [
+    "Old east-bank fresh market",
+    "Known sai ua stall: ร้านไส้อั่วป้าต้อย (Pa Toi's sai ua)"
+   ],
+   "typical_vendors": [
+    "older Northern Thai vendors (inferred)",
+    "prepared-food vendors"
+   ],
+   "likely_languages": [
+    "kham_mueang",
+    "central_thai"
+   ],
+   "signature_foods": [
+    {
+     "th": "ไส้อั่ว",
+     "rtgs": "sai ua",
+     "en": "Northern herb sausage",
+     "dish_ref": "sai-ua"
+    }
+   ],
+   "nomad_tips": [
+    "Near the train station - useful before a train",
+    "Very local"
+   ],
+   "source": "https://map.longdo.com/main/p/A00140372",
+   "sources_extra": [
+    "https://map.longdo.com/main/p/A10057894/info"
+   ],
+   "confidence": "medium",
+   "review": [
+    "Hours and character not verified; 'near railway station' is geographic inference from coords"
+   ]
+  },
+  {
+   "id": "mae-hia",
+   "name_en": "Mae Hia Fresh Market (Mali Place)",
+   "name_th": "ตลาดสดแม่เหียะ",
+   "name_rtgs": "Talat Sot Mae Hia",
+   "lat": 18.74772,
+   "lon": 98.94193,
+   "coord_source": "https://mapcarta.com/W318022580 (OSM way 318022580)",
+   "type": "fresh_market_general",
+   "area": "32 Moo 2, Canal Road (Highway 121), Mae Hia, south-west of city",
+   "open_days": "daily",
+   "hours": "active from about 04:00, most vendors 06:00-12:00 (another source says 24h)",
+   "known_for": [
+    "Big suburban fresh market with prepared Northern food",
+    "Well-known sai ua",
+    "Grilled pork belly, mok (steamed in banana leaf)"
+   ],
+   "typical_vendors": [
+    "older Northern Thai vendors",
+    "prepared-food vendors",
+    "produce sellers"
+   ],
+   "likely_languages": [
+    "kham_mueang",
+    "central_thai"
+   ],
+   "signature_foods": [
+    {
+     "th": "ไส้อั่ว",
+     "rtgs": "sai ua",
+     "en": "Northern herb sausage",
+     "dish_ref": "sai-ua"
+    },
+    {
+     "th": "หมูสามชั้นย่าง",
+     "rtgs": "mu sam chan yang",
+     "en": "grilled pork belly"
+    },
+    {
+     "th": "น้ำพริกหนุ่ม",
+     "rtgs": "nam phrik num",
+     "en": "roasted green chili dip",
+     "dish_ref": "nam-phrik-num"
+    },
+    {
+     "rtgs": "mok",
+     "en": "fish/pork/brain steamed in banana leaf"
+    },
+    {
+     "th": "แคบหมู",
+     "rtgs": "khaep mu",
+     "en": "pork cracklings",
+     "dish_ref": "khaep-mu"
+    }
+   ],
+   "nomad_tips": [
+    "Go before 10:00",
+    "Near Night Safari / Royal Park Rajapruek; 15 min by car from town"
+   ],
+   "source": "https://www.eatingthaifood.com/restaurants/best-sai-oua-sausage-chiang-mai/",
+   "sources_extra": [
+    "https://mapcarta.com/W318022580",
+    "https://northernth.com/en/chiang-mai-markets/"
+   ],
+   "confidence": "high",
+   "review": [
+    "Hours conflict (morning vs 24h)",
+    "Thai for 'mok' not sourced (หมก expected)"
+   ]
+  },
+  {
+   "id": "kad-mae-jo-2477",
+   "name_en": "Kad Mae Jo 2477 (Mae Jo University farmers' market)",
+   "name_th": "กาดแม่โจ้ 2477",
+   "name_rtgs": "Kat Mae Cho 2477",
+   "lat": 18.897491,
+   "lon": 99.008459,
+   "coord_source": "https://map.longdo.com/main/p/A10380779/info/mobile/",
+   "type": "farmers_market_university",
+   "area": "Maejo University, Nong Han, San Sai (north of city)",
+   "open_days": "Fri,Sat (one source: Thu,Fri)",
+   "hours": "07:00-15:00",
+   "known_for": [
+    "Safe/organic produce sold direct from producers",
+    "Three zones: traditional food & community products; organic cooperatives; Maejo University research produce",
+    "2477 = Buddhist Era year 1934 (university founding)"
+   ],
+   "typical_vendors": [
+    "farmers and cooperatives",
+    "university student producers",
+    "traditional food vendors"
+   ],
+   "likely_languages": [
+    "kham_mueang",
+    "central_thai"
+   ],
+   "signature_foods": [
+    {
+     "rtgs": "organic produce",
+     "en": "vegetables and fruit"
+    },
+    {
+     "rtgs": "traditional Northern snacks",
+     "en": "see northern_dishes.json"
+    }
+   ],
+   "nomad_tips": [
+    "About 30-40 min drive north; combine with a San Sai trip",
+    "Check the market's Facebook page for current days before going"
+   ],
+   "source": "https://www.mocagrimart.com/th/info/attraction/detail/itemid/7396",
+   "sources_extra": [
+    "https://www.cmhy.city/en/place/19099-Meajo-Market-2477-ThuFri",
+    "https://pr.mju.ac.th/wtms_newsDetail.aspx?nID=20017&lang=th-TH"
+   ],
+   "confidence": "medium",
+   "review": [
+    "Open days conflict: Fri-Sat (Ministry of Commerce site) vs Thu-Fri (cmhy.city); market moved building (MJU PR)",
+    "Task mentioned 'Kad Gao Mai / Mae Jo' - Kad Gao Mai could not be identified"
+   ]
+  },
+  {
+   "id": "yunnan-friday-market",
+   "name_en": "Yunnan (Chin Haw) Friday Market near Ban Ho Mosque",
+   "name_th": "ตลาดนัดจีนยูนาน",
+   "name_rtgs": "Talat Nat Chin Yunnan",
+   "lat": 18.786667,
+   "lon": 99.001111,
+   "coord_source": "https://en.wikipedia.org/wiki/Ban_Ho_Mosque (mosque coords; market is on Charoen Prathet Soi 1 nearby)",
+   "type": "community_morning_market",
+   "area": "Charoen Prathet Rd Soi 1 / Ban Ho area, Chang Khlan (near Night Bazaar)",
+   "open_days": "Fri (one source: Fri,Sat)",
+   "hours": "about 05:00-12:00",
+   "known_for": [
+    "Weekly market that grew from Chin Haw Muslims gathering for Friday prayers",
+    "Yunnanese, Muslim (halal) and Tai Yai (Shan) foods",
+    "Leafy greens, fermented bean paste, fried tofu, pickled vegetables"
+   ],
+   "typical_vendors": [
+    "Yunnanese Chinese (Chin Haw / Hui) vendors",
+    "Tai Yai (Shan) vendors",
+    "halal food sellers"
+   ],
+   "likely_languages": [
+    "yunnanese_chinese",
+    "central_thai",
+    "shan (inferred from Tai Yai food vendors)",
+    "kham_mueang"
+   ],
+   "signature_foods": [
+    {
+     "th": "ข้าวซอย",
+     "rtgs": "khao soi",
+     "en": "curried egg-noodle soup (associated with Chin Haw cooks)",
+     "dish_ref": "khao-soi"
+    },
+    {
+     "rtgs": "fried tofu",
+     "en": "Yunnan-style tofu"
+    },
+    {
+     "rtgs": "fermented bean curd / pickled vegetables",
+     "en": "Yunnan preserved foods"
+    }
+   ],
+   "nomad_tips": [
+    "Halal area: do not bring pork (not all Chin Haw are Muslim, but this market grew around the mosque); dress modestly near the mosque, especially at Friday midday prayer",
+    "Vendors switch between Chinese and Thai; a Mandarin greeting may be appreciated, Thai is safe",
+    "Go early; over by noon"
+   ],
+   "source": "https://www.chiangmaicitylife.com/clg/our-city/what-brings-yunnan-here-a-chinese-migration-story/",
+   "sources_extra": [
+    "https://kindeeyunuea.com/22375/",
+    "https://changpuakmagazine.com/en-article/7-DAYS-7-MARKETS/264360/",
+    "https://www.chiangmaicitylife.com/clg/living/exploring-chiang-mais-muslim-friendly-travel-destinations-from-the-yunnan-market-to-the-citys-cultural-heritage/",
+    "https://en.wikipedia.org/wiki/Ban_Ho_Mosque"
+   ],
+   "confidence": "medium",
+   "review": [
+    "Location conflict: Charoen Prathet Soi 1 (kindeeyunuea) vs Kalare/Plearn area Chang Khlan Rd 'recently relocated' (Citylife) - verify current spot",
+    "Friday only vs Fri-Sat",
+    "'Mandarin greeting appreciated' is inference; many speak Yunnanese Southwestern Mandarin"
+   ]
+  },
+  {
+   "id": "santitham",
+   "name_en": "Santitham Morning Market",
+   "name_th": null,
+   "name_rtgs": "Talat Santitham",
+   "lat": null,
+   "lon": null,
+   "coord_source": null,
+   "type": "fresh_market_small",
+   "area": "Santitham neighbourhood (between Old City north-west corner and Chang Phueak)",
+   "open_days": "daily",
+   "hours": "from about 05:30 (morning)",
+   "known_for": [
+    "Neighbourhood morning market: fruit, vegetables, grilled meats, sticky rice, fresh noodles",
+    "Santitham is a budget local neighbourhood popular with longer-stay nomads"
+   ],
+   "typical_vendors": [
+    "local breakfast vendors",
+    "produce sellers"
+   ],
+   "likely_languages": [
+    "kham_mueang",
+    "central_thai"
+   ],
+   "signature_foods": [
+    {
+     "rtgs": "khao niao",
+     "en": "sticky rice"
+    },
+    {
+     "rtgs": "grilled pork / chicken",
+     "en": "grilled meats"
+    }
+   ],
+   "nomad_tips": [
+    "Grab sticky rice + grilled pork for breakfast",
+    "Nimman is walkable from here"
+   ],
+   "source": "https://www.chiangmaiambassador.com/lifestyle/neighborhoods/santitham",
+   "sources_extra": [],
+   "confidence": "low",
+   "review": [
+    "Exact location/coords not found; source says 'Inthawarorot Road', which is an Old City road - possibly an error",
+    "Thai name not verified"
+   ]
+  },
+  {
+   "id": "chamcha-market",
+   "name_en": "Chamcha Market (San Kamphaeng)",
+   "name_th": "ตลาดฉำฉามาร์เก็ต",
+   "name_rtgs": "Talat Chamcha",
+   "lat": null,
+   "lon": null,
+   "coord_source": null,
+   "type": "weekend_craft_market",
+   "area": "Soi 11, San Klang, San Kamphaeng (east of city)",
+   "open_days": "Sat,Sun",
+   "hours": "09:00-14:30",
+   "known_for": [
+    "Handicrafts, food, photo spots under a large rain tree (chamcha)"
+   ],
+   "typical_vendors": [
+    "craft makers",
+    "food vendors"
+   ],
+   "likely_languages": [
+    "central_thai",
+    "kham_mueang",
+    "english_basic"
+   ],
+   "signature_foods": [],
+   "nomad_tips": [
+    "Combine with San Kamphaeng / Bo Sang craft villages"
+   ],
+   "source": "https://kindeeyunuea.com/22375/",
+   "sources_extra": [],
+   "confidence": "medium",
+   "review": [
+    "Coordinates not found"
+   ]
+  }
+ ]
+}

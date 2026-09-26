@@ -1,0 +1,729 @@
+{
+ "_about": "Example context packet for the hero demo: a foreign nomad buying food at Warorot Market (Kad Luang), Chiang Mai, on Saturday 26 September 2026. Assembled by the compiler from the files in this folder; every item keeps its confidence. Paste the 'system_prompt_block' fields (or the whole object as JSON) into the Claude system prompt.",
+ "generated": "2026-09-26",
+ "instructions_for_model": [
+  "Translate between the two people. Default output to the vendor: polite Central Thai with the Northern particle เจ้า (female speaker) / คับ (male speaker) only if the user's profile opts in. Do not generate full Kham Mueang sentences.",
+  "Input from the vendor may be Kham Mueang, Central Thai with a Northern accent, or mixed. Use the glossary and sound rules (ค/ช/ท/พ -> ก/จ/ต/ป, ร -> ฮ in many words, มะ- -> บะ-) to read it.",
+  "Prices: ซาว = 20 (ซาวห้า = 25). Always echo numbers as digits in both languages, e.g. 'ซาวห้าบาท = 25 baht'.",
+  "False friend: ยินดี / ยินดีเจ้า from a Northern speaker means THANK YOU, not 'you're welcome'.",
+  "Add at most one short cultural note, only when it helps this exchange (season, festival, etiquette). Mark anything low-confidence as 'locals may say...'.",
+  "Never name or guess anyone's ethnicity unless their profile card states it. Never use exonyms for people (e.g. แม้ว/Meo, เงี้ยว/Ngiao, 'hill tribe'); dish names such as ขนมจีนน้ำเงี้ยว are fine.",
+  "Avoid politics, the monarchy, citizenship/ID status and income questions in suggested small talk."
+ ],
+ "place": {
+  "id": "warorot",
+  "name_en": "Warorot Market (Kad Luang)",
+  "name_th": "ตลาดวโรรส (กาดหลวง)",
+  "lat": 18.790222,
+  "lon": 99.000657,
+  "area": "Chang Moi, by Ping River (Chinatown)",
+  "hours": "about 05:00-18:00 (indoor shops about 09:00-18:00); takeaway food stalls outside about 18:00-22:00",
+  "known_for": [
+   "Oldest big market of Chiang Mai; market since 1910 (Princess Dara Rasmi)",
+   "Northern Thai packaged foods to bring home: sai ua, nam phrik num, khaep mu, moo yor",
+   "Dry goods, chili pastes, banana-leaf sweets; upper floors fabric, hill-tribe clothing, indigo cloth, temple bells",
+   "Part of the Chinatown (Trok Lao Jo) district"
+  ],
+  "typical_vendors": [
+   "older Northern Thai food vendors",
+   "Thai-Chinese shop owners",
+   "textile sellers",
+   "Hmong vendors in adjacent lane"
+  ],
+  "likely_languages": [
+   "kham_mueang",
+   "central_thai",
+   "teochew_or_other_chinese_heritage (inferred, older Thai-Chinese shopkeepers)",
+   "english_basic"
+  ],
+  "signature_foods": [
+   {
+    "th": "ไส้อั่ว",
+    "rtgs": "sai ua",
+    "en": "Northern herb sausage",
+    "dish_ref": "sai-ua"
+   },
+   {
+    "th": "น้ำพริกหนุ่ม",
+    "rtgs": "nam phrik num",
+    "en": "roasted green chili dip",
+    "dish_ref": "nam-phrik-num"
+   },
+   {
+    "th": "แคบหมู",
+    "rtgs": "khaep mu",
+    "en": "pork cracklings (eaten with nam phrik num)",
+    "dish_ref": "khaep-mu"
+   },
+   {
+    "th": "หมูยอ",
+    "rtgs": "mu yo",
+    "en": "steamed pork sausage loaf"
+   },
+   {
+    "th": "หมูทอด",
+    "rtgs": "mu thot",
+    "en": "fried pork (Dam Rong / ดำรงค์ stall known for this)"
+   },
+   {
+    "th": "มะปรางอ่อน",
+    "rtgs": "maprang on",
+    "en": "young marian plum, very sour, dipped in chili-shrimp paste"
+   }
+  ],
+  "nomad_tips": [
+   "Go early morning for the local crowd; indoor shops wind down around 18:00",
+   "Ask for a vacuum-packed sai ua / nam phrik num set if taking it on a flight",
+   "Tagged items are usually fixed price; bargaining is normal for textiles, not for food",
+   "Combine with Ton Lamyai and the flower market across the road"
+  ],
+  "nearby": [
+   {
+    "name": "Ton Lamyai Market",
+    "name_th": "ตลาดต้นลำไย (กาดต้นลำไย)"
+   },
+   {
+    "name": "Hmong Market / Trok Lao Jo lane (Chinatown)",
+    "name_th": null,
+    "note": "Hmong textile vendors; the self-name is Hmong (ม้ง)."
+   }
+  ],
+  "source": "https://en.wikipedia.org/wiki/Warorot_Market",
+  "confidence": "high",
+  "review": [
+   "Opening hours differ between sources (05:00 vs 09:00 start)"
+  ]
+ },
+ "time": {
+  "date": "2026-09-26",
+  "weekday": "Saturday",
+  "season": "rainy",
+  "lanna_month": {
+   "number": 12,
+   "thai": "เดือนสิบสอง",
+   "rtgs": "duean sip-song",
+   "central_thai_month_number": 10,
+   "central_thai_name": "เดือนสิบ",
+   "note": "Approximate: lunar months drift against Gregorian months each year; Lanna count = Central Thai lunar month + 2. Month 1 is called เดือนเกี๋ยง (kiang), not เดือนอ้าย."
+  },
+  "climate_normals_sept": {
+   "avg_high_c": 32.0,
+   "avg_low_c": 23.7,
+   "rainfall_mm": 207.2,
+   "rainy_days": 14.7,
+   "avg_humidity_pct": 81.7
+  },
+  "air_quality": "Generally clean air.",
+  "what_locals_talk_about": "Very wet; flood risk from Ping River (major floods have peaked late Sep-early Oct). Humidity ~82%.",
+  "small_talk_hooks": [
+   "Rain and possible Ping River flooding (late Sep-early Oct is the flood peak; 2024 flooded the Night Bazaar area near Warorot)",
+   "Lanna month 12 = salak (merit-basket) season at temples",
+   "Ok Phansa (end of Buddhist Lent) is one month away"
+  ],
+  "source": "https://en.wikipedia.org/wiki/Chiang_Mai",
+  "confidence": "high",
+  "live_weather_hint": "Use Open-Meteo forecast + air-quality (no key) for today's actual weather; see weather_apis.json."
+ },
+ "in_season_produce": [
+  {
+   "id": "cha-om",
+   "thai": "ชะอม",
+   "rtgs": "cha-om",
+   "kham_mueang": "phak la (ผักหละ, spelling unverified)",
+   "english": "acacia shoots (climbing wattle / 'cha-om')",
+   "peak_now": true,
+   "confidence": "medium",
+   "note": "Sold year-round, flushes in the rains; cheaper now than in Nov-Jan."
+  },
+  {
+   "id": "phak-kut-fern",
+   "thai": "ผักกูด",
+   "rtgs": "phak kut",
+   "kham_mueang": "phak kut",
+   "english": "vegetable fern (fiddlehead)",
+   "peak_now": true,
+   "confidence": "medium"
+  },
+  {
+   "id": "avocado",
+   "thai": "อาโวคาโด",
+   "rtgs": "awokhado",
+   "kham_mueang": null,
+   "english": "avocado",
+   "peak_now": true,
+   "confidence": "high"
+  },
+  {
+   "id": "persimmon",
+   "thai": "ลูกพลับ",
+   "rtgs": "luk phlap",
+   "kham_mueang": null,
+   "english": "persimmon",
+   "peak_now": true,
+   "confidence": "medium"
+  },
+  {
+   "id": "mangosteen",
+   "thai": "มังคุด",
+   "rtgs": "mangkhut",
+   "kham_mueang": null,
+   "english": "mangosteen",
+   "peak_now": false,
+   "confidence": "medium"
+  },
+  {
+   "id": "langsat",
+   "thai": "ลางสาด",
+   "rtgs": "langsat",
+   "kham_mueang": null,
+   "english": "langsat",
+   "peak_now": false,
+   "confidence": "medium"
+  },
+  {
+   "id": "custard-apple",
+   "thai": "น้อยหน่า",
+   "rtgs": "noina",
+   "kham_mueang": null,
+   "english": "custard apple / sugar apple",
+   "peak_now": false,
+   "confidence": "medium"
+  },
+  {
+   "id": "pomelo",
+   "thai": "ส้มโอ",
+   "rtgs": "som o",
+   "kham_mueang": "som o (Lanna salad: tam som-o)",
+   "english": "pomelo",
+   "peak_now": false,
+   "confidence": "medium"
+  },
+  {
+   "id": "rose-apple",
+   "thai": "ชมพู่",
+   "rtgs": "chomphu",
+   "kham_mueang": null,
+   "english": "rose apple / wax apple",
+   "peak_now": false,
+   "confidence": "medium"
+  },
+  {
+   "id": "dragon-fruit",
+   "thai": "แก้วมังกร",
+   "rtgs": "kaeo mangkon",
+   "kham_mueang": null,
+   "english": "dragon fruit",
+   "peak_now": false,
+   "confidence": "medium"
+  },
+  {
+   "id": "ma-kor-savoury-fruit",
+   "thai": null,
+   "rtgs": "ma kor (as given by source)",
+   "kham_mueang": null,
+   "english": "olive-like savoury fruit, identified by source as Lithocarpus ceriferus",
+   "peak_now": false,
+   "confidence": "low"
+  },
+  {
+   "id": "bamboo-shoot",
+   "thai": "หน่อไม้",
+   "rtgs": "no mai",
+   "kham_mueang": null,
+   "english": "fresh bamboo shoots",
+   "peak_now": false,
+   "confidence": "low"
+  },
+  {
+   "id": "het-khon",
+   "thai": "เห็ดโคน",
+   "rtgs": "het khon",
+   "kham_mueang": "het khon",
+   "english": "termite mushroom",
+   "peak_now": false,
+   "confidence": "medium"
+  },
+  {
+   "id": "het-lom",
+   "thai": "เห็ดลม",
+   "rtgs": "het lom",
+   "kham_mueang": null,
+   "english": "het lom (tough wild mushroom, sold fresh or dried)",
+   "peak_now": false,
+   "confidence": "low"
+  },
+  {
+   "id": "het-daeng",
+   "thai": "เห็ดแดง",
+   "rtgs": "het daeng",
+   "kham_mueang": null,
+   "english": "red brittlegill mushroom",
+   "peak_now": false,
+   "confidence": "low"
+  },
+  {
+   "id": "het-kamin",
+   "thai": "เห็ดขมิ้น",
+   "rtgs": "het khamin",
+   "kham_mueang": null,
+   "english": "small chanterelle ('turmeric mushroom')",
+   "peak_now": false,
+   "confidence": "low"
+  }
+ ],
+ "relevant_dishes": [
+  {
+   "thai": "ข้าวซอย",
+   "rtgs": "khao soi",
+   "english": "curried egg-noodle soup",
+   "season": "year-round",
+   "confidence": "high"
+  },
+  {
+   "thai": "ไส้อั่ว",
+   "rtgs": "sai ua",
+   "english": "Northern herb pork sausage",
+   "season": "year-round",
+   "confidence": "high"
+  },
+  {
+   "thai": "น้ำพริกหนุ่ม",
+   "rtgs": "nam phrik num",
+   "english": "roasted green chilli dip",
+   "season": "year-round",
+   "confidence": "high"
+  },
+  {
+   "thai": "แคบหมู",
+   "rtgs": "khaep mu",
+   "english": "pork crackling",
+   "season": "year-round",
+   "confidence": "high"
+  },
+  {
+   "thai": "แกงผักชะอม",
+   "rtgs": "kaeng phak cha-om",
+   "english": "cha-om (acacia) curry",
+   "season": "best in rainy season",
+   "confidence": "high"
+  },
+  {
+   "thai": "ไข่เจียวชะอม",
+   "rtgs": "khai chiao cha-om",
+   "english": "cha-om omelette",
+   "season": "year-round (cheaper in rainy season)",
+   "confidence": "medium"
+  },
+  {
+   "thai": "ยำผักกูด",
+   "rtgs": "yam phak kut",
+   "english": "vegetable fern salad",
+   "season": "rainy season",
+   "confidence": "medium"
+  },
+  {
+   "thai": "แกงเห็ดตับเต่า",
+   "rtgs": "kaeng het tap tao",
+   "english": "bolete mushroom curry",
+   "season": "rainy season",
+   "confidence": "high"
+  },
+  {
+   "thai": "แกงหน่อไม้",
+   "rtgs": "kaeng no mai",
+   "english": "bamboo shoot curry",
+   "season": "rainy season",
+   "confidence": "medium"
+  },
+  {
+   "thai": "ตำส้มโอ",
+   "rtgs": "tam som o",
+   "english": "Lanna pomelo salad",
+   "season": "pomelo season",
+   "confidence": "medium"
+  }
+ ],
+ "glossary_subset": [
+  {
+   "kham_mueang_thai_script": "สะหวัดดีเจ้า",
+   "kham_mueang_roman": "sa-wat-di jao",
+   "central_thai": "สวัสดีค่ะ",
+   "english": "hello / goodbye (polite, female speaker)",
+   "usage_note": "Women end with jao (เจ้า); men use khap (คับ). Also spelled สวั๋สดีเจ้า.",
+   "confidence": "high"
+  },
+  {
+   "kham_mueang_thai_script": "สะหวัดดีคับ",
+   "kham_mueang_roman": "sa-wat-di khap",
+   "central_thai": "สวัสดีครับ",
+   "english": "hello / goodbye (polite, male speaker)",
+   "usage_note": "Male polite form.",
+   "confidence": "high"
+  },
+  {
+   "kham_mueang_thai_script": "ยินดีเจ้า",
+   "kham_mueang_roman": "yin-di jao",
+   "central_thai": "ขอบคุณค่ะ",
+   "english": "thank you",
+   "usage_note": "Key false friend: in Central Thai ยินดี means 'glad / you're welcome'; in Kham Mueang it is the everyday 'thank you'. Men: ยินดีคับ.",
+   "confidence": "high"
+  },
+  {
+   "kham_mueang_thai_script": "ยินดีจ๊าดนักเจ้า",
+   "kham_mueang_roman": "yin-di jat nak jao",
+   "central_thai": "ขอบคุณมากค่ะ",
+   "english": "thank you very much",
+   "usage_note": "jat nak = very much.",
+   "confidence": "high"
+  },
+  {
+   "kham_mueang_thai_script": "เจ้า",
+   "kham_mueang_roman": "jao",
+   "central_thai": "ค่ะ / คะ",
+   "english": "polite sentence-final particle (female, also 'yes')",
+   "usage_note": "Answering just 'jao' means 'yes (politely)'. Men use khap.",
+   "confidence": "high"
+  },
+  {
+   "kham_mueang_thai_script": "คับ",
+   "kham_mueang_roman": "khap",
+   "central_thai": "ครับ",
+   "english": "polite sentence-final particle (male)",
+   "usage_note": "Also written คั่บ.",
+   "confidence": "high"
+  },
+  {
+   "kham_mueang_thai_script": "อันนี้เต้าใดเจ้า",
+   "kham_mueang_roman": "an ni tao dai jao",
+   "central_thai": "อันนี้เท่าไรคะ",
+   "english": "how much is this?",
+   "confidence": "high"
+  },
+  {
+   "kham_mueang_thai_script": "เต้าใด",
+   "kham_mueang_roman": "tao dai",
+   "central_thai": "เท่าไร",
+   "english": "how much?",
+   "usage_note": "Spellings vary: เต้าใด / เต๊าใด / เต่าใด / เต้าได. Key market word.",
+   "confidence": "high"
+  },
+  {
+   "kham_mueang_thai_script": "ซาว",
+   "kham_mueang_roman": "sao",
+   "central_thai": "ยี่สิบ",
+   "english": "twenty (20)",
+   "usage_note": "Lexically different: ซาว, not ยี่สิบ. Prices like 20/25 baht use it.",
+   "confidence": "high"
+  },
+  {
+   "kham_mueang_thai_script": "ซาวเอ๋ด",
+   "kham_mueang_roman": "sao et",
+   "central_thai": "ยี่สิบเอ็ด",
+   "english": "twenty-one (21)",
+   "confidence": "high"
+  },
+  {
+   "kham_mueang_thai_script": "บ่",
+   "kham_mueang_roman": "bo",
+   "central_thai": "ไม่",
+   "english": "not, no",
+   "usage_note": "Also written บ่อ / บ่ะ / หมะ. Most important negation word.",
+   "confidence": "high"
+  },
+  {
+   "kham_mueang_thai_script": "ก่อ",
+   "kham_mueang_roman": "ko",
+   "central_thai": "ไหม",
+   "english": "yes/no question particle",
+   "usage_note": "e.g. ได้ก่อ = can (you)?",
+   "confidence": "high"
+  },
+  {
+   "kham_mueang_thai_script": "แหม",
+   "kham_mueang_roman": "mae",
+   "central_thai": "อีก",
+   "english": "more, again, another",
+   "usage_note": "เอา...แหม = another one. Not the Central exclamation แหม.",
+   "confidence": "high"
+  },
+  {
+   "kham_mueang_thai_script": "แปง",
+   "kham_mueang_roman": "paeng",
+   "central_thai": "แพง",
+   "english": "expensive",
+   "usage_note": "Central ph -> Northern p.",
+   "confidence": "high"
+  },
+  {
+   "kham_mueang_thai_script": "ลดหน่อยได้ก่อเจ้า",
+   "kham_mueang_roman": "lot noi dai ko jao",
+   "central_thai": "ลดหน่อยได้ไหมคะ",
+   "english": "can you reduce it a little?",
+   "usage_note": "Polite bargaining. Fixed-price food stalls usually do not bargain.",
+   "confidence": "high"
+  },
+  {
+   "kham_mueang_thai_script": "ได้เจ้า",
+   "kham_mueang_roman": "dai jao",
+   "central_thai": "ได้ค่ะ",
+   "english": "yes / OK / can do",
+   "usage_note": "Vendor agreeing to a request.",
+   "confidence": "high"
+  },
+  {
+   "kham_mueang_thai_script": "บ่ะเอาเจ้า",
+   "kham_mueang_roman": "ba ao jao",
+   "central_thai": "ไม่เอาค่ะ",
+   "english": "I don't want (it), no thanks",
+   "usage_note": "Polite way to decline an offer. Centara: BOR-AO.",
+   "confidence": "high"
+  },
+  {
+   "kham_mueang_thai_script": "ลำ",
+   "kham_mueang_roman": "lam",
+   "central_thai": "อร่อย",
+   "english": "delicious",
+   "usage_note": "The #1 food compliment in the North.",
+   "confidence": "high"
+  },
+  {
+   "kham_mueang_thai_script": "ลำขนาด",
+   "kham_mueang_roman": "lam kha-nat",
+   "central_thai": "อร่อยมาก",
+   "english": "very delicious",
+   "usage_note": "Centara: LUM / KANAD.",
+   "confidence": "high"
+  },
+  {
+   "kham_mueang_thai_script": "บ่เผ็ด",
+   "kham_mueang_roman": "bo phet",
+   "central_thai": "ไม่เผ็ด",
+   "english": "not spicy",
+   "usage_note": "Centara gives BOR-PED; Thai script composed from บ่ + เผ็ด (เผ็ด is shared with Central).",
+   "confidence": "medium"
+  },
+  {
+   "kham_mueang_thai_script": "ข้าวนึ่ง",
+   "kham_mueang_roman": "khao nueng",
+   "central_thai": "ข้าวเหนียว",
+   "english": "sticky rice (steamed glutinous rice)",
+   "usage_note": "Staple of Northern meals.",
+   "confidence": "high"
+  },
+  {
+   "kham_mueang_thai_script": "กาดหลวง",
+   "kham_mueang_roman": "kat luang",
+   "central_thai": "ตลาดใหญ่ (ตลาดวโรรส)",
+   "english": "'big market' - local name of Warorot Market, Chiang Mai",
+   "confidence": "high"
+  },
+  {
+   "kham_mueang_thai_script": "ติ้ว",
+   "kham_mueang_roman": "tio",
+   "central_thai": "หิ้ว",
+   "english": "to carry (by hand, e.g. a bag)",
+   "confidence": "high"
+  },
+  {
+   "kham_mueang_thai_script": "อ้าย",
+   "kham_mueang_roman": "ai",
+   "central_thai": "พี่ชาย",
+   "english": "older brother; polite address to a man a bit older than you",
+   "usage_note": "Addressing a male vendor as 'ai' is friendly. Central อ้าย can be pejorative - Northern usage is respectful.",
+   "confidence": "high"
+  },
+  {
+   "kham_mueang_thai_script": "ปี่ / ปี้",
+   "kham_mueang_roman": "pi",
+   "central_thai": "พี่ (สาว)",
+   "english": "older sibling / older sister; address to a woman a bit older",
+   "usage_note": "Spelled ปี่ or ปี้ across sources.",
+   "confidence": "high"
+  },
+  {
+   "kham_mueang_thai_script": "แม่อุ้ย",
+   "kham_mueang_roman": "mae ui",
+   "central_thai": "ย่า / ยาย",
+   "english": "grandmother; respectful address to an elderly woman (e.g. elderly vendor)",
+   "confidence": "high"
+  },
+  {
+   "kham_mueang_thai_script": "กิ๋นข้าวแล้วกา",
+   "kham_mueang_roman": "kin khao laeo ka",
+   "central_thai": "กินข้าวหรือยัง",
+   "english": "have you eaten yet? (friendly greeting)",
+   "usage_note": "Used as a greeting like 'how are you', not a literal meal invitation.",
+   "confidence": "high"
+  },
+  {
+   "kham_mueang_thai_script": "บะโอ",
+   "kham_mueang_roman": "ba o",
+   "central_thai": "ส้มโอ",
+   "english": "pomelo",
+   "confidence": "high"
+  },
+  {
+   "kham_mueang_thai_script": "ผักหละ",
+   "kham_mueang_roman": "phak la",
+   "central_thai": "ชะอม",
+   "english": "acacia (cha-om) shoots",
+   "usage_note": "Source: แกงผักหละ (ผักชะอม).",
+   "confidence": "medium"
+  },
+  {
+   "kham_mueang_thai_script": "สูมาเต๊อะเจ้า",
+   "kham_mueang_roman": "su-ma toe jao",
+   "central_thai": "ขอโทษค่ะ",
+   "english": "sorry / excuse me",
+   "usage_note": "From Pali khama (forgiveness). Centara gives SU-MA-TER-JAO.",
+   "confidence": "high"
+  }
+ ],
+ "dialect_notes": {
+  "variety": "Chiang Mai (western) Kham Mueang",
+  "app_notes": "Default assumption for the app. 'ซาว' (20) is the single most important market word: 'ซาวห้าบาท' = 25 baht; a Central-Thai-only model may mis-hear or mistranslate it. Old-city vendors and rural stallholders are more likely to use full Kham Mueang; young urban people usually code-switch or use Central Thai with a Northern accent.",
+  "features": [
+   "Katsura (1969) found the Chiang Mai dialect the most similar to Central Thai in how tone marks map to tones, compared with Chiang Rai (Mae Chan), Lampang and Phrae.",
+   "Other northern provinces perceive Chiang Mai speech as longer/drawn out; LPRU says Lampang, Phrae, Nan, Chiang Rai, Phayao and Uttaradit speech is 'shorter and more clipped' (ออกสั้นและห้วนกว่า) than Chiang Mai."
+  ],
+  "address_terms": "Call a middle-aged woman vendor ป้า (pa) or ปี่ (pi) if near your age; an elderly woman แม่อุ้ย (mae ui); a man อ้าย (ai) or ลุง (lung).",
+  "regional_variants_to_accept": "Guava บะหมั้น / บะก้วย / บะแก๋ว; papaya บะก้วยเต๊ด / บะเตด; coriander หอมป้อม / หอมน้อย (low-medium confidence; see regional_dialects.json)",
+  "source": "https://culture.lpru.ac.th/WebCulture2553/CultureKnowledge/file/05-03.pdf"
+ },
+ "festivals_now_and_next": [
+  {
+   "name": "Tan Kuay Salak (lot-drawn alms baskets)",
+   "thai": "ประเพณีตานก๋วยสลาก",
+   "dates": [
+    {
+     "start": "2026-09-15",
+     "end": "2026-10-26",
+     "estimated": true,
+     "note": "Season: each temple picks its own day, Sept-Oct"
+    }
+   ],
+   "what_happens": "Families prepare kuay salak (woven bamboo baskets) of food and daily necessities, write a salak slip naming a deceased relative, and monks draw lots to receive baskets; merit goes to the dead and goods help monks and the poor. Big decorated 'kuay chok' baskets may hold mirrors, combs, umbrellas.",
+   "etiquette": [
+    "It is a merit ceremony for the dead - visitors welcome but keep quiet during chanting"
+   ],
+   "alcohol_ban": false,
+   "source": "https://www.silpa-mag.com/culture/article_38356",
+   "confidence": "medium",
+   "app_note": "In season now: vendors may be selling basket goods; a vendor may mention going to the temple for salak."
+  },
+  {
+   "name": "Salak Yom (Lamphun)",
+   "thai": "ประเพณีสลากย้อม",
+   "dates": [
+    {
+     "start": "2026-09-20",
+     "end": "2026-09-26",
+     "estimated": false,
+     "note": "2026 Lamphun city event; big procession 25 Sep 19:00"
+    }
+   ],
+   "what_happens": "Unique Lamphun tradition with roots in the Yong people (related to the Tai Lue of Sipsongpanna): unmarried young women make and offer tall decorated salak trees (3-12 m) hung with offerings; believed to earn merit comparable to a man's ordination. Nightly lights and a procession of salak trees.",
+   "etiquette": [
+    "Dress modestly at Wat Phra That Hariphunchai",
+    "Ask before photographing the women with their trees"
+   ],
+   "alcohol_ban": false,
+   "source": "https://mgronline.com/travel/detail/9690000091382",
+   "confidence": "medium",
+   "app_note": "Final day today (grand parade 09:30 in Lamphun, about 30 km south). Good small-talk hook."
+  },
+  {
+   "name": "Ok Phansa (End of Buddhist Lent)",
+   "thai": "วันออกพรรษา",
+   "dates": [
+    {
+     "start": "2026-10-26",
+     "end": "2026-10-26",
+     "estimated": false
+    }
+   ],
+   "what_happens": "End of the monks' rains retreat. Merit-making at temples; the following weeks are the season for kathin robe-offering ceremonies and, in Nan, the long-boat races.",
+   "etiquette": [
+    "Nationwide ban on alcohol sales for the whole day except exempt venues (hotels, international airport terminals, licensed entertainment venues)",
+    "Dress modestly if visiting a temple; expect temples to be busy early morning"
+   ],
+   "alcohol_ban": true,
+   "source": "https://myhora.com/calendar/thai-2569.aspx",
+   "confidence": "high",
+   "app_note": "Alcohol-sale ban day. If the user asks to buy beer on 26 Oct, warn them."
+  },
+  {
+   "name": "Yi Peng / Loy Krathong (Chiang Mai)",
+   "thai": "ประเพณีเดือนยี่เป็ง / ลอยกระทง",
+   "dates": [
+    {
+     "start": "2026-11-23",
+     "end": "2026-11-25",
+     "estimated": false,
+     "note": "Chiang Mai municipality official dates; Loy Krathong full-moon day is 2026-11-24"
+    }
+   ],
+   "what_happens": "Lanna festival of light held with Loy Krathong: temples and homes decorated with hanging and decorative paper lanterns (khom khwaen, khom fai), small clay oil lamps (phang prathip) lit as offerings, krathong floated on the Ping River, krathong procession/competition (2026: on 25 Nov). Sky lanterns (khom loi) are associated with the festival but the municipality asks that none be released inside Ch",
+   "etiquette": [
+    "Do not release sky lanterns in Chiang Mai city: municipality asks for a strict ban; releases near the airport no-fly zone are illegal",
+    "Float krathong gently; biodegradable (banana-trunk/leaf) krathong are preferred",
+    "Crowds are very heavy on the full-moon night; temples are still places of worship",
+    "Do not buy tickets for 'Yi Peng' mass-release events from unofficial sellers (many look-alike ticket sites exist)"
+   ],
+   "alcohol_ban": false,
+   "source": "https://www.chiangmainews.co.th/news/chiangmai/4138857/",
+   "confidence": "high",
+   "app_note": "Biggest upcoming Chiang Mai festival. Sky lanterns may not be released inside the city."
+  }
+ ],
+ "etiquette_tips": [
+  {
+   "tip": "Bargain politely and with a smile for crafts/clothes; food and marked prices are not bargained.",
+   "source": "https://www.feel-chiang-mai.com/street-food-markets/chiang-mai-walking-streets-guide/",
+   "confidence": "medium"
+  },
+  {
+   "tip": "Return a wai if a vendor offers one; a smile and nod is fine for ordinary service. Don't wai children first.",
+   "source": "https://www.chiangraitimes.com/travel-guide/wai-etiquette-in-thailand/",
+   "confidence": "medium"
+  },
+  {
+   "tip": "Stay calm and smiling if disputing a price; public anger causes loss of face.",
+   "source": null,
+   "confidence": "low"
+  },
+  {
+   "tip": "Using a few Kham Mueang words (ยินดีเจ้า, ลำขนาด) is usually appreciated.",
+   "source": null,
+   "confidence": "low"
+  },
+  {
+   "tip": "Use self-designations: Hmong (not 'Maeo'), Tai / Tai Yai for Shan, Karen/Pgaz K'nyau (Kariang/Yang are Thai exonyms), Tai Yuan / khon mueang for Northern Thais. Avoid 'hill tribe' as an identity label where possible (Thai official term is 'chao khao'). Full list in ethnic_groups.json.",
+   "source": null,
+   "confidence": "low"
+  }
+ ],
+ "profile_cards_example": {
+  "user": {
+   "name": "Sam",
+   "role": "digital nomad",
+   "languages": [
+    "English"
+   ],
+   "thai_level": "beginner",
+   "gender_for_particles": "male (use คับ)",
+   "diet": "no pork",
+   "goals": "buy vegetables and a Northern snack"
+  },
+  "vendor": {
+   "role": "fresh-vegetable vendor, Warorot",
+   "languages": [
+    "Kham Mueang",
+    "Central Thai"
+   ],
+   "age_band": "60+",
+   "ethnicity": "not stated (do not infer)"
+  }
+ },
+ "confidence_legend": "high = sourced primary/reputable; medium = one reasonable source or consistent secondary sources; low = unsourced or conflicting, check with reviewer."
+}

@@ -1,0 +1,789 @@
+{
+  "meta": {
+    "topic": "Tonal structure of Northern Thai (Kham Mueang, Chiang Mai variety) vs Central/Standard Thai",
+    "compiled": "2026-09-26",
+    "notes": "Tone values differ between sources (Gedney 1964 fieldwork published 1999 vs Lanna Dictionary 2007) and between speakers/generations. Treat contours as approximate targets, not fixed facts. Items marked needs_expert_review should be checked by a native Kham Mueang speaker before being shown to users.",
+    "primary_sources": [
+      {
+        "title": "Northern Thai language (Wikipedia, citing Gedney 1999; Lanna Dictionary 2007; Thanajirawat 2018)",
+        "url": "https://en.wikipedia.org/wiki/Northern_Thai_language",
+        "kind": "reference"
+      },
+      {
+        "title": "Lanna language (Wikipedia mirror of same article; Gedney vs Lanna Dictionary values; Thanajirawat 2018 classification)",
+        "url": "https://en.wikipedia.org/wiki/Lanna_language",
+        "kind": "reference"
+      },
+      {
+        "title": "Tai Tham script (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/Tai_Tham_script",
+        "kind": "reference"
+      },
+      {
+        "title": "Proto-Tai language (Wikipedia; Gedney tone box, Pittayaporn)",
+        "url": "https://en.wikipedia.org/wiki/Proto-Tai_language",
+        "kind": "reference"
+      },
+      {
+        "title": "Thai language (Wikipedia; Standard Thai tones)",
+        "url": "https://en.wikipedia.org/wiki/Thai_language",
+        "kind": "reference"
+      },
+      {
+        "title": "Taninpong et al. 2026, The Development of Northern Thai Dialect Speech Recognition System, Applied Sciences 16(1):160",
+        "url": "https://www.mdpi.com/2076-3417/16/1/160",
+        "kind": "academic"
+      },
+      {
+        "title": "Taerungruang et al. 2024/2025, PaSCoNT: Parallel Speech Corpus of Northern-central Thai, Computer Speech & Language 89",
+        "url": "https://www.sciencedirect.com/science/article/abs/pii/S0885230824000755",
+        "kind": "academic"
+      },
+      {
+        "title": "Khaorian & Liamprawat 2020, Comparative phonology of Northern Thai (Ko Kha, Lampang) and Tai Lue (Chiang Kham, Phayao), Wiwitwannasan",
+        "url": "https://so06.tci-thaijo.org/index.php/wiwitwannasan/article/view/242012",
+        "kind": "academic"
+      },
+      {
+        "title": "Pornpottanamas 2023, Classifying Lao ethnic languages using tonal criteria, Manusya 26(1) (Gedney tone box method)",
+        "url": "https://www.sciencedirect.com/org/science/article/pii/S0859992023000052",
+        "kind": "academic"
+      },
+      {
+        "title": "Nuankaew et al. 2025, Speech Recognition Model for Confused Thai Lanna Vocabulary, MIWAI 2024 (LNCS)",
+        "url": "https://link.springer.com/content/pdf/10.1007/978-981-96-0695-5_8.pdf",
+        "kind": "academic"
+      },
+      {
+        "title": "Royal Thai General System of Transcription (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/Royal_Thai_General_System_of_Transcription",
+        "kind": "reference"
+      }
+    ]
+  },
+  "tone_count": {
+    "northern_thai_chiang_mai": 6,
+    "central_thai": 5,
+    "statement": "Chiang Mai Northern Thai has six phonemic tones on smooth (live) syllables; checked (dead) syllables show four tonal realisations. Standard Thai has five (mid, low, falling, high, rising). Confirmed by Wikipedia (Gedney 1999; Lanna Dictionary 2007) and Taninpong et al. 2026 ('Northern Thai has six tones while Standard Thai has only five tones'). Khaorian & Liamprawat 2020 also report a 6-tone system for Ko Kha, Lampang.",
+    "source": "https://en.wikipedia.org/wiki/Northern_Thai_language ; https://www.mdpi.com/2076-3417/16/1/160 ; https://so06.tci-thaijo.org/index.php/wiwitwannasan/article/view/242012",
+    "confidence": "high"
+  },
+  "tones": [
+    {
+      "id": "T1",
+      "name": "low-rising",
+      "gedney_category": "A1-2 (and checked DS1-3)",
+      "contour_chao": "24 (Lanna Dictionary 2007); 14 (Gedney, 1964 data)",
+      "description": "Starts low and rises. Used for proto-tone A words with 'high-class' initials AND with plain voiceless stops ก จ ต ป (which are mid class in Standard Thai). To Central Thai ears it sounds close to the Central rising tone, which is why Northern words like กิน are often spelled กิ๋น in Thai script.",
+      "example_words": [
+        {
+          "thai_script": "เหลา",
+          "tai_tham": "ᩉᩮᩖᩢᩣ",
+          "roman": "lǎw",
+          "meaning": "to sharpen (whittle)"
+        },
+        {
+          "thai_script": "หู",
+          "roman": "hǔu",
+          "meaning": "ear (row 1, A)"
+        },
+        {
+          "thai_script": "ตา",
+          "roman": "tǎa",
+          "meaning": "eye (row 2, A; mid tone in Standard Thai)"
+        },
+        {
+          "thai_script": "กิ๋น (standard spelling กิน)",
+          "roman": "kǐn",
+          "meaning": "eat",
+          "note": "Thai-script spelling with ๋ from a Northern vocabulary list (low-confidence source: https://skm.ssru.ac.th/news/view/1392241)"
+        }
+      ],
+      "source": "https://en.wikipedia.org/wiki/Northern_Thai_language",
+      "confidence": "high"
+    },
+    {
+      "id": "T2",
+      "name": "low-falling (also described as mid-low / low level)",
+      "gedney_category": "B1-3 (and checked DL1-3)",
+      "contour_chao": "21 (Lanna Dictionary 2007); 22 (Gedney)",
+      "description": "Low, level-to-slightly-falling pitch. Roughly corresponds to the Standard Thai low tone. Words spelled with mai ek (่) on high or mid-class letters.",
+      "example_words": [
+        {
+          "thai_script": "เหล่า",
+          "tai_tham": "ᩉᩮᩖᩢ᩵ᩣ",
+          "roman": "làw",
+          "meaning": "forest; group"
+        },
+        {
+          "thai_script": "สี่",
+          "roman": "sìi",
+          "meaning": "four"
+        },
+        {
+          "thai_script": "เต่า",
+          "roman": "tàw",
+          "meaning": "turtle"
+        },
+        {
+          "thai_script": "ด่า",
+          "roman": "dàa",
+          "meaning": "to scold"
+        }
+      ],
+      "source": "https://en.wikipedia.org/wiki/Northern_Thai_language",
+      "confidence": "high"
+    },
+    {
+      "id": "T3",
+      "name": "high-level with glottal closure (glottalized high)",
+      "gedney_category": "C1-3",
+      "contour_chao": "44ʔ (Lanna Dictionary 2007); 53ʔ high-falling glottalized (Gedney)",
+      "description": "High pitch ending in a glottal catch. Words spelled with mai tho (้) on high or mid-class letters: in Standard Thai these have the FALLING tone, in Chiang Mai they are high and 'clipped'. Taninpong et al. 2026 single this out as the tone unique to Northern Thai.",
+      "example_words": [
+        {
+          "thai_script": "เหล้า",
+          "tai_tham": "ᩉᩮᩖᩢ᩶ᩣ",
+          "roman": "la̋wʔ (lâw in Standard Thai)",
+          "meaning": "liquor"
+        },
+        {
+          "thai_script": "ป้า",
+          "roman": "pâa (Std) / high-glottal (NT)",
+          "meaning": "aunt (older than parent)"
+        },
+        {
+          "thai_script": "บ้า",
+          "roman": "bâa (Std) / high-glottal (NT)",
+          "meaning": "crazy"
+        }
+      ],
+      "source": "https://en.wikipedia.org/wiki/Northern_Thai_language ; https://www.mdpi.com/2076-3417/16/1/160",
+      "confidence": "medium",
+      "needs_expert_review": "Sources disagree on whether it is level (44ʔ) or falling (53ʔ); the /la᷇w/ transcription symbol used on Wikipedia is also used inconsistently for checked syllables."
+    },
+    {
+      "id": "T4",
+      "name": "mid-level (Gedney: mid-high, sometimes rising at end)",
+      "gedney_category": "A3-4",
+      "contour_chao": "33 (Lanna Dictionary 2007); 44 (Gedney)",
+      "description": "Level mid pitch. Proto-A words with glottalized initials (อ บ ด อย) and with low-class initials. Largely matches the Standard Thai mid tone for these words, so low risk of confusion.",
+      "example_words": [
+        {
+          "thai_script": "เลา",
+          "tai_tham": "ᩃᩮᩢᩣ",
+          "roman": "law",
+          "meaning": "beautiful; reed"
+        },
+        {
+          "thai_script": "ดี",
+          "roman": "dii",
+          "meaning": "good"
+        },
+        {
+          "thai_script": "ตาง (Std ทาง)",
+          "roman": "taang",
+          "meaning": "way, road (note de-aspiration ท→ต)"
+        }
+      ],
+      "source": "https://en.wikipedia.org/wiki/Northern_Thai_language",
+      "confidence": "high"
+    },
+    {
+      "id": "T5",
+      "name": "high-falling (Gedney: falling)",
+      "gedney_category": "B4 (and checked DL4; per Thanajirawat also DS4)",
+      "contour_chao": "42 (Lanna Dictionary 2007); 41 (Gedney)",
+      "description": "Falls from high. Low-class letters with mai ek (่) or no mark on long checked syllables. Same category as the Standard Thai falling tone, so these words sound 'normal' to Central speakers.",
+      "example_words": [
+        {
+          "thai_script": "เล่า",
+          "tai_tham": "ᩃᩮᩢ᩵ᩣ",
+          "roman": "lâw",
+          "meaning": "to tell (a story)"
+        },
+        {
+          "thai_script": "แม่",
+          "roman": "mâe",
+          "meaning": "mother"
+        },
+        {
+          "thai_script": "ลาก",
+          "roman": "lâak",
+          "meaning": "to drag (checked, DL4)"
+        }
+      ],
+      "source": "https://en.wikipedia.org/wiki/Northern_Thai_language",
+      "confidence": "high"
+    },
+    {
+      "id": "T6",
+      "name": "high-rising (Gedney: high rising-falling, glottalized)",
+      "gedney_category": "C4",
+      "contour_chao": "45 (Lanna Dictionary 2007); 454ʔ (Gedney)",
+      "description": "High rising pitch. Low-class letters with mai tho (้). Standard Thai has high tone for these. Because Northern de-aspirates ช ค ท พ, these words are often written in Thai script with mid-class letters plus mai tri (๊), e.g. จ๊อน for ช้อน.",
+      "example_words": [
+        {
+          "thai_script": "เล้า",
+          "tai_tham": "ᩃᩮᩢ᩶ᩣ",
+          "roman": "láw",
+          "meaning": "coop, pen (animal enclosure)"
+        },
+        {
+          "thai_script": "ม้า",
+          "roman": "máa",
+          "meaning": "horse"
+        },
+        {
+          "thai_script": "จ๊อน (Std ช้อน)",
+          "roman": "cɔ́ɔn",
+          "meaning": "spoon"
+        },
+        {
+          "thai_script": "ฮ้อน (Std ร้อน)",
+          "roman": "hɔ́ɔn",
+          "meaning": "hot"
+        }
+      ],
+      "source": "https://en.wikipedia.org/wiki/Northern_Thai_language",
+      "confidence": "high"
+    }
+  ],
+  "checked_syllable_tones": {
+    "summary": "Checked (dead) syllables have four realisations in Chiang Mai. Short-vowel checked (DS) and long-vowel checked (DL) behave differently.",
+    "items": [
+      {
+        "category": "DS1-3",
+        "northern_tone": "low-rising (same as T1)",
+        "central_tone": "low",
+        "example": {
+          "thai_script": "หลั๋ก (Std หลัก)",
+          "tai_tham": "ᩉᩖᩢᨠ",
+          "roman": "lǎk",
+          "meaning": "post, pillar"
+        },
+        "other_examples": [
+          "ขุด to dig",
+          "ตก to fall",
+          "ดัด to bend"
+        ]
+      },
+      {
+        "category": "DS4",
+        "northern_tone": "high (Wikipedia table labels 'high-rising'; its comparison table and Thanajirawat's formula B4=DL4=DS4 suggest a high-falling realisation)",
+        "central_tone": "high",
+        "example": {
+          "thai_script": "ลัก",
+          "tai_tham": "ᩃᩢ᩠ᨠ",
+          "roman": "lák",
+          "meaning": "to steal"
+        },
+        "other_examples": [
+          "นก bird",
+          "กึ๊ด (Std คิด) to think"
+        ],
+        "confidence": "low",
+        "needs_expert_review": "Exact contour of DS4 in modern Chiang Mai speech is inconsistent across the sources consulted."
+      },
+      {
+        "category": "DL1-3",
+        "northern_tone": "low-falling (same as T2)",
+        "central_tone": "low",
+        "example": {
+          "thai_script": "หลาก",
+          "roman": "làak",
+          "meaning": "to differ from others"
+        },
+        "other_examples": [
+          "ถูก to hit/correct",
+          "ปาก mouth",
+          "ดอก flower"
+        ]
+      },
+      {
+        "category": "DL4",
+        "northern_tone": "high-falling (same as T5)",
+        "central_tone": "falling",
+        "example": {
+          "thai_script": "ลาก",
+          "roman": "lâak",
+          "meaning": "to drag"
+        },
+        "other_examples": [
+          "มีด knife"
+        ]
+      }
+    ],
+    "source": "https://en.wikipedia.org/wiki/Northern_Thai_language ; https://en.wikipedia.org/wiki/Lanna_language",
+    "confidence": "medium"
+  },
+  "gedney_box_mapping": [
+    {
+      "proto_category": "A",
+      "gedney_row": 1,
+      "consonant_class": "High class in both (friction sounds: ข ฉ ถ ผ ฝ ส ห, หน หม หล ...)",
+      "northern_tone": "low-rising (24)",
+      "central_tone": "rising (214)",
+      "example": "หู ear",
+      "differs": true,
+      "source": "https://en.wikipedia.org/wiki/Northern_Thai_language",
+      "confidence": "high"
+    },
+    {
+      "proto_category": "A",
+      "gedney_row": 2,
+      "consonant_class": "Plain voiceless stops ก จ ต ป (Mid class in Standard Thai; behave like High class in Chiang Mai)",
+      "northern_tone": "low-rising (24)",
+      "central_tone": "mid (33)",
+      "example": "ตา eye; กิน eat",
+      "differs": true,
+      "note": "KEY DIFFERENCE: Northern splits A as A12-34, Central as A1-234.",
+      "source": "https://en.wikipedia.org/wiki/Northern_Thai_language ; https://en.wikipedia.org/wiki/Lanna_language",
+      "confidence": "high"
+    },
+    {
+      "proto_category": "A",
+      "gedney_row": 3,
+      "consonant_class": "Glottal/pre-glottalized อ บ ด อย (Mid class in both)",
+      "northern_tone": "mid (33)",
+      "central_tone": "mid (33)",
+      "example": "ดี good",
+      "differs": false,
+      "source": "https://en.wikipedia.org/wiki/Northern_Thai_language",
+      "confidence": "high"
+    },
+    {
+      "proto_category": "A",
+      "gedney_row": 4,
+      "consonant_class": "Low class (proto-voiced: ค ช ท พ ง น ม ย ร ล ว ...)",
+      "northern_tone": "mid (33)",
+      "central_tone": "mid (33)",
+      "example": "นา rice field; ทาง/ตาง way",
+      "differs": false,
+      "source": "https://en.wikipedia.org/wiki/Northern_Thai_language",
+      "confidence": "high"
+    },
+    {
+      "proto_category": "B (mai ek ่ on high/mid; no mark in dead syllables)",
+      "gedney_row": "1-3",
+      "consonant_class": "High + Mid",
+      "northern_tone": "low-falling (21)",
+      "central_tone": "low (21)",
+      "example": "สี่ four; เต่า turtle; ด่า scold",
+      "differs": false,
+      "source": "https://en.wikipedia.org/wiki/Northern_Thai_language",
+      "confidence": "high"
+    },
+    {
+      "proto_category": "B",
+      "gedney_row": 4,
+      "consonant_class": "Low",
+      "northern_tone": "high-falling (42)",
+      "central_tone": "falling (41)",
+      "example": "แม่ mother; เล่า tell",
+      "differs": false,
+      "source": "https://en.wikipedia.org/wiki/Northern_Thai_language",
+      "confidence": "high"
+    },
+    {
+      "proto_category": "C (mai tho ้)",
+      "gedney_row": "1-3",
+      "consonant_class": "High + Mid",
+      "northern_tone": "high-level glottalized (44ʔ)",
+      "central_tone": "falling (41)",
+      "example": "เหล้า liquor; ป้า aunt; บ้า crazy",
+      "differs": true,
+      "source": "https://en.wikipedia.org/wiki/Northern_Thai_language",
+      "confidence": "high"
+    },
+    {
+      "proto_category": "C",
+      "gedney_row": 4,
+      "consonant_class": "Low",
+      "northern_tone": "high-rising (45) / rising-falling glottalized (Gedney 454ʔ)",
+      "central_tone": "high (45)",
+      "example": "ม้า horse; เล้า coop",
+      "differs": "partly (both high, contour differs)",
+      "source": "https://en.wikipedia.org/wiki/Northern_Thai_language",
+      "confidence": "medium"
+    },
+    {
+      "proto_category": "DS (short vowel, stop final)",
+      "gedney_row": "1-3",
+      "consonant_class": "High + Mid",
+      "northern_tone": "low-rising (=A12)",
+      "central_tone": "low",
+      "example": "ขุด dig; ตก fall; หลัก post",
+      "differs": true,
+      "source": "https://en.wikipedia.org/wiki/Northern_Thai_language",
+      "confidence": "medium"
+    },
+    {
+      "proto_category": "DS",
+      "gedney_row": 4,
+      "consonant_class": "Low",
+      "northern_tone": "high (falling per Thanajirawat B4=DL4=DS4; 'high-rising' label on Wikipedia checked table)",
+      "central_tone": "high",
+      "example": "นก bird; ลัก steal",
+      "differs": "uncertain",
+      "source": "https://en.wikipedia.org/wiki/Lanna_language",
+      "confidence": "low",
+      "needs_expert_review": true
+    },
+    {
+      "proto_category": "DL (long vowel, stop final)",
+      "gedney_row": "1-3",
+      "consonant_class": "High + Mid",
+      "northern_tone": "low-falling (=B123)",
+      "central_tone": "low",
+      "example": "ปาก mouth; ดอก flower",
+      "differs": false,
+      "source": "https://en.wikipedia.org/wiki/Northern_Thai_language",
+      "confidence": "high"
+    },
+    {
+      "proto_category": "DL",
+      "gedney_row": 4,
+      "consonant_class": "Low",
+      "northern_tone": "high-falling (=B4)",
+      "central_tone": "falling",
+      "example": "มีด knife; ลาก drag",
+      "differs": false,
+      "source": "https://en.wikipedia.org/wiki/Northern_Thai_language",
+      "confidence": "high"
+    }
+  ],
+  "split_formulae": {
+    "northern_thai_main_group": "A12-34, BCD123-4 (B4=DL4=DS4) [Thanajirawat 2018 via Wikipedia]",
+    "central_thai": "A1-234, B123-4, C123-4, DS123-4, DL123-4 (standard reflexes; five surface tones)",
+    "source": "https://en.wikipedia.org/wiki/Lanna_language ; https://en.wikipedia.org/wiki/Proto-Tai_language",
+    "confidence": "medium"
+  },
+  "regional_variation": [
+    {
+      "area": "Chiang Mai, Chiang Rai, Phayao, Nan, Phrae, extending to Tak",
+      "notes": "Wikipedia (citing Gedney/Lanna Dictionary) says the Northern-vs-Standard tone relationships are 'typical of Northern Thai, being found for at least Chiang Mai, Chiang Rai, Phayao, Nan and Prae, and extending at least to Tak'. Same categories, but phonetic contours may differ by town; no reliable per-province contour data found.",
+      "source": "https://en.wikipedia.org/wiki/Northern_Thai_language",
+      "confidence": "medium"
+    },
+    {
+      "area": "Most Tai Yuan varieties (Thailand, Laos, Myanmar)",
+      "notes": "Thanajirawat (2018) group 1: A12-34 and BCD123-4 (B4=DL4=DS4).",
+      "source": "https://en.wikipedia.org/wiki/Lanna_language",
+      "confidence": "medium"
+    },
+    {
+      "area": "Mae Chaem district (Chiang Mai province) and Laplae district (Uttaradit)",
+      "notes": "Thanajirawat (2018): A12-34 and BCD123-4 with an extra merger A34=B123=DL123, i.e. fewer tone contrasts than Chiang Mai city. Mae Chaem is a Chiang Mai district, so 'Chiang Mai tones' are not uniform even within the province.",
+      "source": "https://en.wikipedia.org/wiki/Lanna_language",
+      "confidence": "medium"
+    },
+    {
+      "area": "Tha Pla (Uttaradit) and Xayaburi (Laos)",
+      "notes": "Thanajirawat (2018): A12-34, BDL1234, CDS123-4 - a different split in B and D.",
+      "source": "https://en.wikipedia.org/wiki/Lanna_language",
+      "confidence": "medium"
+    },
+    {
+      "area": "Ratchaburi (Tai Yuan diaspora community in central Thailand)",
+      "notes": "Thanajirawat (2018): A12-34, BCD123-4 with mergers A34=B123=DL123 and B4=C4=DL4.",
+      "source": "https://en.wikipedia.org/wiki/Lanna_language",
+      "confidence": "medium"
+    },
+    {
+      "area": "Ko Kha district, Lampang",
+      "notes": "Six-tone system; split pattern similar to Tai Lue of Chiang Kham (Phayao), differing only in phonetic characteristics of each tone (Khaorian & Liamprawat 2020).",
+      "source": "https://so06.tci-thaijo.org/index.php/wiwitwannasan/article/view/242012",
+      "confidence": "high"
+    },
+    {
+      "area": "Generational variation",
+      "notes": "Gedney's Chiang Mai data came from one speaker in 1964; the 2007 Lanna Dictionary gives different contours (e.g. C1-3 44ʔ vs 53ʔ). Wikipedia notes 'tones may change within one's lifetime'. Young urban speakers also code-switch heavily with Central Thai, so expect mixed tone systems.",
+      "source": "https://en.wikipedia.org/wiki/Lanna_language ; https://adahouse-cnx.com/th/blog/kham-mueang-northern-thai",
+      "confidence": "medium"
+    },
+    {
+      "area": "Nan, Phrae, Chiang Rai (specific contours)",
+      "notes": "GAP: no accessible source giving contour values for these provinces was found. Do not claim province-specific tone differences without expert input.",
+      "source": "",
+      "confidence": "low",
+      "needs_expert_review": true
+    }
+  ],
+  "script_tone_marking": {
+    "tai_tham": "Tai Tham mainly uses two tone marks: mai yo ᩵ (U+1A75, TAI THAM SIGN TONE-1; equivalent to Thai mai ek ่) and mai kho jang ᩶ (U+1A76, TONE-2; equivalent to mai tho ้). High- and low-class consonants are paired so that 2 marks + unmarked give 6 tones across a pair (e.g. ᩉᩮᩖᩢᩣ / ᩉᩮᩖᩢ᩵ᩣ / ᩉᩮᩖᩢ᩶ᩣ vs ᩃᩮᩢᩣ / ᩃᩮᩢ᩵ᩣ / ᩃᩮᩢ᩶ᩣ = the six /law/ tones). Mid-class consonants ([ʔ], [b], [d], [j]) have no pair, so the same mark can stand for different tones; Tai Khuen added extra marks (᩷ ᩸ ᩹) to resolve this.",
+    "thai_script_for_kham_mueang": "When Kham Mueang is written in Thai script (social media, signs, ASR output), writers keep the Tai Tham/Thai mark etymology for most words but add mai jattawa ๋ or mai tri ๊ to show Northern pronunciation, especially where de-aspiration changed the consonant class: กิ๋น (กิน), หลั๋ก (หลัก), จ๊อน (ช้อน), กึ๊ด (คิด). Spelling is not standardised.",
+    "unicode_note": "Tai Tham Unicode block is U+1A20-U+1AAF; font support on phones is patchy, so the app should show Thai script (and optionally Tai Tham) plus romanization.",
+    "source": "https://en.wikipedia.org/wiki/Tai_Tham_script ; https://en.wikipedia.org/wiki/Northern_Thai_language",
+    "confidence": "medium"
+  },
+  "consonant_correspondences_affecting_asr": [
+    {
+      "standard": "ร /r/",
+      "northern": "ฮ /h/",
+      "examples": [
+        {
+          "central": "ร้อน",
+          "northern": "ฮ้อน",
+          "meaning": "hot"
+        },
+        {
+          "central": "รัก",
+          "northern": "ฮัก",
+          "meaning": "love"
+        }
+      ],
+      "source": "https://en.wikipedia.org/wiki/Northern_Thai_language",
+      "confidence": "high",
+      "note": "Applies in many words, not all (Wikipedia: 'In many words...'). Do not apply ฮ→ร blindly."
+    },
+    {
+      "standard": "low-class aspirates ค ช ท พ /kʰ tɕʰ tʰ pʰ/",
+      "northern": "unaspirated /k tɕ t p/ (written ก จ ต ป)",
+      "examples": [
+        {
+          "central": "คิด",
+          "northern": "กึ๊ด",
+          "meaning": "think"
+        },
+        {
+          "central": "ช้อน",
+          "northern": "จ๊อน",
+          "meaning": "spoon"
+        },
+        {
+          "central": "ทาง",
+          "northern": "ตาง",
+          "meaning": "way"
+        }
+      ],
+      "source": "https://en.wikipedia.org/wiki/Northern_Thai_language",
+      "confidence": "medium",
+      "exceptions": "Not all Central aspirates de-aspirate. Wikipedia lists ฅ, คร, ฆ, ฒ, พร, ภ as remaining aspirated (e.g. คน 'person', historically ฅน, stays /kʰ/). De-aspiration mainly affects words whose ค ช ท พ come from Proto-Tai voiced stops."
+    },
+    {
+      "standard": "unaspirated stop + r cluster",
+      "northern": "aspirated stop (Wikipedia: 'unaspirated consonants become aspirated when followed by /r/')",
+      "examples": [],
+      "source": "https://en.wikipedia.org/wiki/Northern_Thai_language",
+      "confidence": "medium",
+      "needs_expert_review": "No example word verified; see sound_correspondences.json by the language agent."
+    },
+    {
+      "standard": "unaspirated stop + ร cluster (ปร, กร)",
+      "northern": "aspirated stop, ร dropped (ผ, ข)",
+      "examples": [
+        {
+          "central": "ประเทศ",
+          "northern": "ผะเต้ศ",
+          "meaning": "country"
+        },
+        {
+          "central": "กราบ",
+          "northern": "ขาบ",
+          "meaning": "to prostrate"
+        }
+      ],
+      "source": "https://en.wikipedia.org/wiki/Northern_Thai_language",
+      "confidence": "medium",
+      "verifier_note": "Added by verifier 2026-09-26 from Wikipedia examples; check with a native speaker."
+    }
+  ],
+  "minimal_pairs": [
+    {
+      "set": "law six-way (Chiang Mai)",
+      "items": [
+        {
+          "thai_script": "เหลา",
+          "tone": "T1 low-rising",
+          "meaning": "sharpen"
+        },
+        {
+          "thai_script": "เหล่า",
+          "tone": "T2 low-falling",
+          "meaning": "forest; group"
+        },
+        {
+          "thai_script": "เหล้า",
+          "tone": "T3 high-level glottal",
+          "meaning": "liquor"
+        },
+        {
+          "thai_script": "เลา",
+          "tone": "T4 mid",
+          "meaning": "beautiful; reed"
+        },
+        {
+          "thai_script": "เล่า",
+          "tone": "T5 high-falling",
+          "meaning": "tell"
+        },
+        {
+          "thai_script": "เล้า",
+          "tone": "T6 high-rising",
+          "meaning": "coop, pen"
+        }
+      ],
+      "source": "https://en.wikipedia.org/wiki/Northern_Thai_language",
+      "confidence": "high"
+    },
+    {
+      "set": "checked lak/laak (Chiang Mai)",
+      "items": [
+        {
+          "thai_script": "หลัก",
+          "tone": "low-rising",
+          "meaning": "post"
+        },
+        {
+          "thai_script": "ลัก",
+          "tone": "high",
+          "meaning": "steal"
+        },
+        {
+          "thai_script": "หลาก",
+          "tone": "low-falling",
+          "meaning": "differ"
+        },
+        {
+          "thai_script": "ลาก",
+          "tone": "high-falling",
+          "meaning": "drag"
+        }
+      ],
+      "source": "https://en.wikipedia.org/wiki/Northern_Thai_language",
+      "confidence": "medium"
+    },
+    {
+      "set": "Northern vs Central same word, different tone",
+      "items": [
+        {
+          "thai_script": "ตา",
+          "central": "mid",
+          "northern": "low-rising",
+          "meaning": "eye"
+        },
+        {
+          "thai_script": "กิน / กิ๋น",
+          "central": "mid",
+          "northern": "low-rising",
+          "meaning": "eat"
+        },
+        {
+          "thai_script": "ป้า",
+          "central": "falling",
+          "northern": "high-level glottal",
+          "meaning": "aunt"
+        },
+        {
+          "thai_script": "เหล้า",
+          "central": "falling",
+          "northern": "high-level glottal",
+          "meaning": "liquor"
+        },
+        {
+          "thai_script": "ตก",
+          "central": "low",
+          "northern": "low-rising",
+          "meaning": "fall"
+        }
+      ],
+      "source": "https://en.wikipedia.org/wiki/Northern_Thai_language",
+      "confidence": "high"
+    }
+  ],
+  "asr_pitfalls": [
+    {
+      "id": "asr1",
+      "pitfall": "Central-Thai-trained ASR under-performs on Northern speech; dialect-specific or mixed Northern+Central training lowers WER.",
+      "evidence": "PaSCoNT (Taerungruang et al.) found training on the parallel Northern-Central corpus gave lower WER for both dialects; Taninpong et al. built a dedicated 50-hour Chiang Mai corpus.",
+      "source": "https://www.sciencedirect.com/science/article/abs/pii/S0885230824000755",
+      "confidence": "high"
+    },
+    {
+      "id": "asr2",
+      "pitfall": "Tone is the largest error class for end-to-end models on Northern Thai.",
+      "evidence": "Taninpong et al. 2026: XLS-R errors were 'tone misrecognitions and character confusions with the percentage of 40.29 and 32.58'; TDNN-HMM errors were mostly word misrecognitions (38.01%) and vowel confusions (25.98%).",
+      "source": "https://www.mdpi.com/2076-3417/16/1/160",
+      "confidence": "high"
+    },
+    {
+      "id": "asr3",
+      "pitfall": "De-aspiration: ASR may write ก จ ต ป where Central spelling has ค ช ท พ (e.g. ตาง for ทาง, จ๊อน for ช้อน, กึ๊ด for คิด), or pick a different real Central word with the unaspirated consonant.",
+      "mitigation": "Generate candidates by swapping ก↔ค, จ↔ช, ต↔ท, ป↔พ and re-check tone/meaning in context.",
+      "source": "https://en.wikipedia.org/wiki/Northern_Thai_language",
+      "confidence": "medium"
+    },
+    {
+      "id": "asr4",
+      "pitfall": "ร→ฮ: Northern ฮัก, ฮ้อน, etc. may be transcribed with ฮ (not a Central word) or matched to an unrelated ฮ-word.",
+      "mitigation": "Try ฮ→ร substitution as a candidate.",
+      "source": "https://en.wikipedia.org/wiki/Northern_Thai_language",
+      "confidence": "medium"
+    },
+    {
+      "id": "asr5",
+      "pitfall": "Row-2 A words (ก จ ต ป + no tone mark, e.g. กิน, ตา, ใจ) are low-rising in Chiang Mai; ASR or human transcribers may add ๋ (กิ๋น) or choose a rising-tone near-homophone.",
+      "mitigation": "Strip ๋ and ๊ from ก จ ต ป words and retry lookup.",
+      "source": "https://en.wikipedia.org/wiki/Northern_Thai_language",
+      "confidence": "medium",
+      "needs_expert_review": "Inference from the tone table; not an observed ASR error list."
+    },
+    {
+      "id": "asr6",
+      "pitfall": "C1-3 words (mai tho on high/mid letters: ป้า, บ้า, เหล้า, ข้าว) are high and glottal in Chiang Mai instead of falling; Central ASR may map them to high-tone (mai tri/low-class mai tho) near-homophones.",
+      "mitigation": "If a high-tone word makes no sense, try the same syllable with a falling tone (mai tho on high/mid class).",
+      "source": "https://en.wikipedia.org/wiki/Northern_Thai_language",
+      "confidence": "low",
+      "needs_expert_review": "Inference; no published confusion list found."
+    },
+    {
+      "id": "asr7",
+      "pitfall": "Northern-only vocabulary (อู้ speak, ลำ delicious, ม่วน fun, ซาว twenty, particle เจ้า) is out-of-vocabulary for Central models or gets a Central meaning (ลำ = 'stalk/boat classifier' in Central).",
+      "mitigation": "Pass the Kham Mueang glossary in the context packet; prefer Northern sense when the place is northern.",
+      "source": "https://adahouse-cnx.com/th/blog/kham-mueang-northern-thai",
+      "confidence": "medium"
+    },
+    {
+      "id": "asr8",
+      "pitfall": "Heavy code-switching: speakers mix Central grammar with Northern words and particles mid-sentence.",
+      "source": "https://adahouse-cnx.com/th/blog/kham-mueang-northern-thai",
+      "confidence": "medium"
+    }
+  ],
+  "llm_normalisation_strategy": [
+    "1. Treat ASR Thai-script output as a noisy phonetic transcription, not final spelling.",
+    "2. For each unknown or context-odd word, generate candidates: (a) ฮ→ร; (b) ก→ค, จ→ช, ต→ท, ป→พ (Northern unaspirated from Standard low-class aspirate; not every word, see exceptions); (b2) ผ/ข → ปร/กร clusters (ผะเต้ศ→ประเทศ); (c) remove ๋ / ๊ and recompute the Standard spelling; (d) swap tone categories using the gedney_box_mapping (e.g. heard low-rising on ก จ ต ป → Standard mid; heard high-glottal → Standard falling with ้ on high/mid letter).",
+    "3. Rank candidates with the Kham Mueang glossary and conversation context (market, prices, food).",
+    "4. When unsure, return the literal transcription plus the best guess and ask the user to confirm rather than silently correcting.",
+    "Confidence: medium (design recommendation derived from sources above, not an evaluated method)."
+  ],
+  "romanization": {
+    "recommendation": "Show Thai script + a readable romanization. RTGS (official Thai road-sign system) 'does not record tones' and does not mark vowel length, so it cannot distinguish Northern tones. Use diacritics for the five Central-like tones (mid unmarked, low `, falling ^, high ´, rising ˇ) and add an explicit marker for the Northern high-glottal tone (e.g. a superscript Chao number such as law⁴⁴ʔ or a tone number). Keep Chao numbers in the data layer (e.g. kin²⁴) so the model is not tied to one display scheme.",
+    "source": "https://en.wikipedia.org/wiki/Royal_Thai_General_System_of_Transcription",
+    "confidence": "medium"
+  },
+  "tips_for_foreigners": [
+    {
+      "tip": "Central Thai pronunciation is understood everywhere in the North; attempting a few Northern words (e.g. the polite particle เจ้า, ลำ 'delicious') is appreciated, but mispronounced tones are rarely a problem in context.",
+      "confidence": "low",
+      "source": "https://adahouse-cnx.com/th/blog/kham-mueang-northern-thai",
+      "needs_expert_review": true
+    },
+    {
+      "tip": "Northern words like กิ๋น 'eat' start low and rise - think of it as the Thai rising tone, not mid.",
+      "confidence": "medium",
+      "source": "https://en.wikipedia.org/wiki/Northern_Thai_language"
+    },
+    {
+      "tip": "In many words, soften aspirated consonants: ช→จ, ค→ก, ท→ต, พ→ป, and say ร as ฮ (ฮัก for รัก). Not every word changes (e.g. คน stays aspirated), so copy what local speakers say.",
+      "confidence": "medium",
+      "source": "https://en.wikipedia.org/wiki/Northern_Thai_language"
+    },
+    {
+      "tip": "Don't mimic an 'accent' for comic effect; learn phrases from the person you are talking to - pronunciation varies by town and generation.",
+      "confidence": "medium",
+      "source": "https://en.wikipedia.org/wiki/Lanna_language"
+    }
+  ]
+}

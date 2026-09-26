@@ -1,0 +1,140 @@
+{
+ "_note": "Endpoints verified from official docs pages; live calls could not be tested from the research sandbox (network egress blocked). Test before the demo.",
+ "chiang_mai_coords": {
+  "lat": 18.79,
+  "lon": 98.98,
+  "tmd_wmo_station": "48327",
+  "source": "https://en.wikipedia.org/wiki/List_of_Thai_Meteorological_Department_weather_stations_in_northern_Thailand"
+ },
+ "recommended_for_hackathon": "Open-Meteo (weather + air quality, no key, CORS-friendly) as primary; WAQI with a free token as secondary for station-based AQI.",
+ "apis": [
+  {
+   "name": "Open-Meteo Forecast",
+   "endpoint": "https://api.open-meteo.com/v1/forecast",
+   "example": "https://api.open-meteo.com/v1/forecast?latitude=18.79&longitude=98.98&current=temperature_2m,relative_humidity_2m,precipitation,weather_code&daily=temperature_2m_max,temperature_2m_min,precipitation_sum&timezone=Asia/Bangkok",
+   "key_required": false,
+   "key_note": "No key for non-commercial use; commercial use needs apikey and customer-prefixed URL.",
+   "params": [
+    "latitude",
+    "longitude",
+    "current",
+    "hourly",
+    "daily",
+    "timezone",
+    "forecast_days (max 16)"
+   ],
+   "source": "https://open-meteo.com/en/docs",
+   "confidence": "high"
+  },
+  {
+   "name": "Open-Meteo Air Quality",
+   "endpoint": "https://air-quality-api.open-meteo.com/v1/air-quality",
+   "example": "https://air-quality-api.open-meteo.com/v1/air-quality?latitude=18.79&longitude=98.98&current=pm2_5,pm10,us_aqi&timezone=Asia/Bangkok",
+   "key_required": false,
+   "variables": [
+    "pm2_5",
+    "pm10",
+    "us_aqi",
+    "european_aqi"
+   ],
+   "caveat": "Model-based (CAMS global ~45 km over Asia), not station measurements; may underestimate local valley smoke peaks.",
+   "source": "https://open-meteo.com/en/docs/air-quality-api",
+   "confidence": "high"
+  },
+  {
+   "name": "WAQI / aqicn.org JSON API",
+   "endpoint": "https://api.waqi.info/feed/{city}/?token={token}",
+   "example": "https://api.waqi.info/feed/geo:18.79;98.98/?token=YOUR_TOKEN",
+   "key_required": true,
+   "key_note": "Free token from https://aqicn.org/data-platform/token/ ; a 'demo' token exists for testing only. Requires attribution to World Air Quality Index Project and originating EPA; no resale/paid use.",
+   "endpoints": [
+    "city feed",
+    "geo feed (geo:lat;lng)",
+    "here (IP)",
+    "map bounds",
+    "search"
+   ],
+   "source": "https://aqicn.org/api/",
+   "confidence": "medium",
+   "confidence_note": "URL patterns from widely used community clients; docs page summarised, not all paths shown verbatim."
+  },
+  {
+   "name": "IQAir AirVisual API",
+   "endpoint": "https://api.airvisual.com/v2/nearest_city?lat={lat}&lon={lon}&key={key}",
+   "key_required": true,
+   "key_note": "Free Community key from https://www.iqair.com/dashboard/api ; rate limits vary by plan (>10 calls/s errors).",
+   "endpoints": [
+    "nearest_city",
+    "city (city/state/country)"
+   ],
+   "source": "https://api-docs.iqair.com/",
+   "confidence": "medium",
+   "confidence_note": "Host api.airvisual.com and query-param form from common usage; verify on docs."
+  },
+  {
+   "name": "Air4Thai (Pollution Control Department, official Thai AQI)",
+   "endpoint": "http://air4thai.pcd.go.th/services/getNewAQI_JSON.php",
+   "example": "http://air4thai.pcd.go.th/services/getNewAQI_JSON.php?stationID=35t",
+   "key_required": false,
+   "response_fields": [
+    "stations[]",
+    "stationID",
+    "nameTH/nameEN",
+    "areaTH/areaEN",
+    "lat",
+    "long",
+    "AQILast (or LastUpdate in older version) -> AQI.aqi, PM25.value, PM10.value, date, time"
+   ],
+   "caveat": "Official Thai AQI scale (differs from US AQI: 37.5 ug/m3 PM2.5 24h = AQI 100). Plain HTTP, possible CORS issues - call from backend. Station ID 35t is an unverified example; fetch the full list and filter areaEN for Chiang Mai.",
+   "source": "https://python3.wannaphong.com/2020/03/python.html",
+   "confidence": "medium"
+  },
+  {
+   "name": "CMU CCDC DustBoy (Chiang Mai University low-cost sensor network)",
+   "endpoint": "https://www.cmuccdc.org/ (API section on site)",
+   "key_required": null,
+   "caveat": "Dense Chiang Mai sensor coverage, hourly; API details not verified.",
+   "source": "https://www.cmuccdc.org/hourly",
+   "confidence": "low"
+  },
+  {
+   "name": "TMD API (Thai Meteorological Department)",
+   "endpoint": "https://data.tmd.go.th/api/WeatherForecast7Days/V1/?uid={uid}&ukey={ukey}",
+   "key_required": true,
+   "key_note": "Register at https://data.tmd.go.th/api/index1.php to obtain uid/ukey. Docs PDF: https://data.tmd.go.th/api/doc/reference/WeatherForecast7Days_ver2.pdf",
+   "caveat": "No AQI/UV. Docs could not be opened from sandbox (robots/SSL); exact path/params unverified. Not recommended for a same-day hackathon.",
+   "source": "https://github.com/arm89400-hue/weather",
+   "confidence": "low"
+  }
+ ],
+ "thai_aqi_bands": {
+  "bands": [
+   {
+    "range": "0-25",
+    "label": "Excellent"
+   },
+   {
+    "range": "26-50",
+    "label": "Good"
+   },
+   {
+    "range": "51-100",
+    "label": "Moderate"
+   },
+   {
+    "range": "101-200",
+    "label": "Unhealthy"
+   },
+   {
+    "range": "201+",
+    "label": "Very unhealthy"
+   }
+  ],
+  "pm25_24h_standard_ug_m3": 37.5,
+  "standard_effective": "2023-06-01 (previously 50)",
+  "annual_standard_ug_m3": 15,
+  "source": "https://www.chiangraitimes.com/environment/reading-thailands-aqi/",
+  "standard_source": "https://www.thaipbsworld.com/environment/thailands-new-air-quality-standard-to-become-effective-in-june-2023",
+  "confidence": "high"
+ }
+}

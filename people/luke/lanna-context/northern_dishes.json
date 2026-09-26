@@ -1,0 +1,729 @@
+[
+ {
+  "id": "khao-soi",
+  "thai": "ข้าวซอย",
+  "rtgs": "khao soi",
+  "english": "curried egg-noodle soup",
+  "type": "noodle",
+  "description": "Egg noodles in coconut-milk curry broth, topped with crispy fried noodles; served with pickled mustard greens, shallots, lime, chilli. CMU notes it is associated with Chinese Muslim (Chin Haw / Ho) cooks.",
+  "key_ingredients": [
+   "egg noodles",
+   "chicken or beef",
+   "coconut milk",
+   "curry paste (dried chilli, turmeric, kaffir lime rind)",
+   "pickled mustard greens"
+  ],
+  "season": "year-round",
+  "source": "https://lannainfo.library.cmu.ac.th/en_lannafood/detail_lannafood.php?id_food=73",
+  "extra_sources": [
+   "https://grantourismotravels.com/northern-thailand-specialties-chiang-mai/",
+   "https://guide.michelin.com/th/en/article/dining-out/11-must-try-northern-thai-dishes-in-chiang-mai"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "sai-ua",
+  "thai": "ไส้อั่ว",
+  "rtgs": "sai ua",
+  "english": "Northern herb pork sausage",
+  "type": "grilled",
+  "description": "Coiled pork sausage packed with lemongrass, kaffir lime leaf, galangal, turmeric, chilli, shallot; grilled or smoked. Popular Chiang Mai souvenir.",
+  "key_ingredients": [
+   "pork",
+   "lemongrass",
+   "kaffir lime leaf",
+   "galangal",
+   "turmeric",
+   "dried chilli"
+  ],
+  "season": "year-round",
+  "source": "https://grantourismotravels.com/northern-thailand-specialties-chiang-mai/",
+  "extra_sources": [
+   "https://lannainfo.library.cmu.ac.th/en_lannafood/detail_lannafood.php?id_food=188",
+   "https://guide.michelin.com/th/en/article/dining-out/11-must-try-northern-thai-dishes-in-chiang-mai"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "nam-phrik-num",
+  "thai": "น้ำพริกหนุ่ม",
+  "rtgs": "nam phrik num",
+  "english": "roasted green chilli dip",
+  "type": "relish",
+  "description": "Pounded roasted long green chillies, garlic and shallots; eaten with sticky rice, pork crackling (khaep mu) and vegetables. Can be very hot.",
+  "key_ingredients": [
+   "young green chilli (phrik num)",
+   "garlic",
+   "shallot"
+  ],
+  "season": "year-round",
+  "source": "https://grantourismotravels.com/northern-thailand-specialties-chiang-mai/",
+  "extra_sources": [
+   "https://lannainfo.library.cmu.ac.th/en_lannafood/detail_lannafood.php?id_food=172",
+   "https://guide.michelin.com/th/en/article/dining-out/11-must-try-northern-thai-dishes-in-chiang-mai"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "nam-phrik-ong",
+  "thai": "น้ำพริกอ่อง",
+  "rtgs": "nam phrik ong",
+  "english": "pork & tomato chilli relish",
+  "type": "relish",
+  "description": "Bolognese-like relish of minced pork, tomato and dried chilli; mild; served with raw/boiled vegetables and pork crackling.",
+  "key_ingredients": [
+   "minced pork",
+   "tomato",
+   "dried chilli",
+   "thua nao or shrimp paste"
+  ],
+  "season": "year-round",
+  "source": "https://grantourismotravels.com/northern-thailand-specialties-chiang-mai/",
+  "extra_sources": [
+   "https://lannainfo.library.cmu.ac.th/en_lannafood/detail_lannafood.php?id_food=174"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "kaeng-hang-le",
+  "thai": "แกงฮังเล",
+  "rtgs": "kaeng hang le",
+  "kham_mueang_thai": "แก๋งฮังเล",
+  "english": "Burmese-style pork belly curry",
+  "type": "curry",
+  "description": "Rich, oily pork curry using dried spice mix (hang le powder), ginger, tamarind, pickled garlic, sometimes peanuts; eaten with ordinary rice rather than sticky rice. Name from Burmese 'hin lay'.",
+  "key_ingredients": [
+   "pork belly",
+   "hang le spice powder",
+   "ginger",
+   "pickled garlic",
+   "tamarind"
+  ],
+  "season": "year-round; festive",
+  "occasion": "festivals, merit-making, weddings",
+  "source": "https://en.wikipedia.org/wiki/Kaeng_hang_le",
+  "extra_sources": [
+   "https://lannainfo.library.cmu.ac.th/en_lannafood/detail_lannafood.php?id_food=68",
+   "https://guide.michelin.com/th/en/article/dining-out/11-must-try-northern-thai-dishes-in-chiang-mai"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "kaeng-khae",
+  "thai": "แกงแค",
+  "rtgs": "kaeng khae",
+  "english": "Northern mixed-herb jungle curry",
+  "type": "curry",
+  "description": "Coconut-free curry of many local vegetables and herbs (phak khae, cha-om, pea eggplant, bamboo, ivy gourd, dried kapok flower) with chicken, frog, dried fish or snail.",
+  "key_ingredients": [
+   "phak khae leaves",
+   "cha-om",
+   "dok ngiu",
+   "eggplants",
+   "ivy gourd",
+   "chicken or other protein"
+  ],
+  "season": "year-round; vegetables vary by season",
+  "source": "https://en.wikipedia.org/wiki/Kaeng_khae",
+  "extra_sources": [
+   "https://lannainfo.library.cmu.ac.th/en_lannafood/detail_lannafood.php?id_food=19",
+   "https://lannainfo.library.cmu.ac.th/en_lannafood/detail_lannafood.php?id_food=20"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "kaeng-ho",
+  "thai": "แกงโฮะ",
+  "rtgs": "kaeng ho",
+  "english": "'combined' curry (leftover stir-fry)",
+  "type": "curry",
+  "description": "'Ho' = put together: leftover curries (esp. hang le) stir-fried with glass noodles, pickled bamboo, vegetables and kaffir lime leaves; often made after festivals.",
+  "key_ingredients": [
+   "hang le curry",
+   "glass noodles",
+   "pickled bamboo shoot",
+   "long beans",
+   "eggplant"
+  ],
+  "season": "year-round; after feasts",
+  "note": "CMU spells แกงโฮ; common spelling แกงโฮะ — verify.",
+  "source": "https://lannainfo.library.cmu.ac.th/en_lannafood/detail_lannafood.php?id_food=70",
+  "confidence": "medium"
+ },
+ {
+  "id": "larb-mueang",
+  "thai": "ลาบเมือง",
+  "rtgs": "larb mueang",
+  "english": "Northern-style minced meat larb",
+  "type": "larb",
+  "description": "Minced pork (or beef/buffalo) with blood, offal and a dry spice paste (makhwaen, long pepper, cloves, etc.) — darker and drier than Isan larb; eaten raw ('dip') or cooked ('khua'). Served with bitter/fragrant side greens.",
+  "key_ingredients": [
+   "minced pork",
+   "pork blood",
+   "offal",
+   "phrik lap spice paste",
+   "makhwaen",
+   "Vietnamese mint"
+  ],
+  "season": "year-round",
+  "note": "Raw versions carry parasite/bacterial risk — useful cultural+safety note for visitors.",
+  "source": "https://lannainfo.library.cmu.ac.th/en_lannafood/detail_lannafood.php?id_food=179",
+  "extra_sources": [
+   "https://grantourismotravels.com/northern-thailand-specialties-chiang-mai/",
+   "https://lannainfo.library.cmu.ac.th/en_lannafood/detail_lannafood.php?id_food=182"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "larb-nuea",
+  "thai": "ลาบเนื้อ",
+  "rtgs": "larb nuea",
+  "english": "Northern beef larb",
+  "type": "larb",
+  "description": "Spicy chopped beef with local herbs, galangal and makhwaen to cut gaminess.",
+  "key_ingredients": [
+   "beef",
+   "makhwaen",
+   "galangal",
+   "herbs"
+  ],
+  "season": "year-round",
+  "source": "https://guide.michelin.com/th/en/article/dining-out/11-must-try-northern-thai-dishes-in-chiang-mai",
+  "confidence": "medium"
+ },
+ {
+  "id": "lu",
+  "thai": "หลู้",
+  "rtgs": "lu",
+  "english": "raw blood 'larb' dish",
+  "type": "larb",
+  "description": "Like larb/sa: pork blood mixed with spices, crispy offal and herbs.",
+  "key_ingredients": [
+   "pork blood",
+   "crispy fried offal",
+   "lap chilli paste"
+  ],
+  "season": "year-round",
+  "note": "Thai spelling หลู้ not in fetched source. Raw blood — health risk (Streptococcus suis) is a known public-health warning; frame carefully.",
+  "source": "https://lannainfo.library.cmu.ac.th/en_lannafood/detail_lannafood.php?id_food=177",
+  "confidence": "low"
+ },
+ {
+  "id": "khanom-chin-nam-ngiao",
+  "thai": "ขนมจีนน้ำเงี้ยว",
+  "rtgs": "khanom chin nam ngiao",
+  "english": "rice noodles with Shan-style pork-tomato broth",
+  "type": "noodle",
+  "description": "Fermented rice noodles in a tangy tomato-pork rib broth with blood cake, thua nao and dried kapok flower (dok ngiu); Tai Yai (Shan) origin; auspicious banquet dish in Lanna.",
+  "key_ingredients": [
+   "khanom chin rice noodles",
+   "pork ribs",
+   "tomato",
+   "blood cake",
+   "thua nao",
+   "dok ngiu"
+  ],
+  "season": "year-round",
+  "source": "https://en.wikipedia.org/wiki/Nam_ngiao",
+  "extra_sources": [
+   "https://lannainfo.library.cmu.ac.th/en_lannafood/detail_lannafood.php?id_food=71",
+   "https://guide.michelin.com/th/en/article/dining-out/11-must-try-northern-thai-dishes-in-chiang-mai"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "khaep-mu",
+  "thai": "แคบหมู",
+  "rtgs": "khaep mu",
+  "english": "pork crackling",
+  "type": "snack",
+  "description": "Crispy deep-fried pork skin; eaten with nam phrik num/ong. Chiang Mai souvenir.",
+  "key_ingredients": [
+   "pork skin"
+  ],
+  "season": "year-round",
+  "source": "https://lannainfo.library.cmu.ac.th/en_lannafood/detail_lannafood.php?id_food=194",
+  "extra_sources": [
+   "https://en.wikipedia.org/wiki/Thai_cuisine"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "jin-som",
+  "thai": "แหนม",
+  "rtgs": "naem",
+  "kham_mueang_thai": "จิ๊นส้ม",
+  "english": "fermented sour pork",
+  "type": "fermented",
+  "description": "Pork mixed with garlic, salt and sticky rice, wrapped in banana leaves and fermented 2-3 days; eaten raw, grilled in leaf (jin som mok) or stir-fried with egg.",
+  "key_ingredients": [
+   "pork",
+   "pork skin",
+   "garlic",
+   "sticky rice",
+   "salt"
+  ],
+  "season": "year-round",
+  "note": "Northern name jin som (CMU 'chin som'); Thai script จิ๊นส้ม from general usage — verify.",
+  "source": "https://lannainfo.library.cmu.ac.th/en_lannafood/detail_lannafood.php?id_food=144",
+  "extra_sources": [
+   "https://grantourismotravels.com/northern-thailand-specialties-chiang-mai/",
+   "https://lannainfo.library.cmu.ac.th/en_lannafood/detail_lannafood.php?id_food=205",
+   "https://lannainfo.library.cmu.ac.th/en_lannafood/detail_lannafood.php?id_food=77"
+  ],
+  "confidence": "medium"
+ },
+ {
+  "id": "khao-kan-jin",
+  "thai": "ข้าวกั๊นจิ๊น",
+  "rtgs": "khao kan jin",
+  "english": "rice-and-pork-blood steamed parcels",
+  "type": "steamed",
+  "description": "Rice mixed with minced pork and pork blood, seasoned, steamed in banana leaf; topped with fried garlic and dried chilli. Tai Yai origin; 'kan' squeeze, 'jin' meat.",
+  "key_ingredients": [
+   "rice",
+   "minced pork",
+   "pork blood",
+   "garlic",
+   "banana leaf"
+  ],
+  "season": "year-round",
+  "note": "Also called ข้าวเงี้ยว khao ngiao.",
+  "source": "https://en.wikipedia.org/wiki/Khao_kan_chin",
+  "extra_sources": [
+   "https://lannainfo.library.cmu.ac.th/en_lannafood/detail_lannafood.php?id_food=178"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "tam-khanun",
+  "thai": "ตำขนุน",
+  "rtgs": "tam khanun",
+  "english": "pounded young jackfruit",
+  "type": "tam",
+  "description": "Boiled young jackfruit pounded with chilli paste then stir-fried with pork, garlic, tomato and kaffir lime leaf; topped with fried garlic and chilli.",
+  "key_ingredients": [
+   "young jackfruit",
+   "minced pork",
+   "dried chilli paste",
+   "shrimp paste",
+   "fermented fish"
+  ],
+  "season": "year-round (jackfruit availability varies)",
+  "note": "CMU: also 'tam banun'.",
+  "source": "https://lannainfo.library.cmu.ac.th/en_lannafood/detail_lannafood.php?id_food=109",
+  "extra_sources": [
+   "https://guide.michelin.com/th/en/article/dining-out/11-must-try-northern-thai-dishes-in-chiang-mai"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "kaeng-khanun",
+  "thai": "แกงขนุน",
+  "rtgs": "kaeng khanun",
+  "english": "young jackfruit curry",
+  "type": "curry",
+  "description": "Green jackfruit curry with pork ribs, tomato, cha-om and pepper vine; auspicious name so served at weddings and New Year.",
+  "key_ingredients": [
+   "young jackfruit",
+   "pork ribs",
+   "cha-om",
+   "pepper vine"
+  ],
+  "season": "year-round",
+  "occasion": "weddings, Songkran/New Year",
+  "source": "https://lannainfo.library.cmu.ac.th/en_lannafood/detail_lannafood.php?id_food=16",
+  "extra_sources": [
+   "https://guide.michelin.com/th/en/article/dining-out/11-must-try-northern-thai-dishes-in-chiang-mai"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "kaeng-phak-wan-khai-mot",
+  "thai": "แกงผักหวานใส่ไข่มด",
+  "rtgs": "kaeng phak wan sai khai mot",
+  "english": "wild sweet-leaf soup with red ant eggs",
+  "type": "curry",
+  "description": "Light curry-soup of phak wan pa leaves and red ant eggs with tomato; prized for its 'popping' texture; eaten hot with sticky rice.",
+  "key_ingredients": [
+   "phak wan pa",
+   "red ant eggs",
+   "lemongrass-chilli paste",
+   "tomato",
+   "glass noodles (optional)"
+  ],
+  "season": "Feb-May (hot season)",
+  "source": "https://www.austinbushphotography.com/blog/2020/3/26/kaeng-phak-waan-sai-khai-mot",
+  "extra_sources": [
+   "https://lannainfo.library.cmu.ac.th/en_lannafood/detail_lannafood.php?id_food=43"
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "chio-khai-mot-daeng",
+  "rtgs": "chio khai mot daeng",
+  "english": "red ant egg 'chio' (soupy egg dish)",
+  "type": "chio",
+  "description": "Red ant eggs cooked in a chilli-shallot-tomato broth with beaten egg stirred in; also called chio khai mot som.",
+  "key_ingredients": [
+   "red ant eggs",
+   "chicken egg",
+   "tomato",
+   "dried chilli paste"
+  ],
+  "season": "Feb-May",
+  "note": "Thai script not found in source.",
+  "source": "https://lannainfo.library.cmu.ac.th/en_lannafood/detail_lannafood.php?id_food=100",
+  "confidence": "medium"
+ },
+ {
+  "id": "kaeng-phak-cha-om",
+  "thai": "แกงผักชะอม",
+  "rtgs": "kaeng phak cha-om",
+  "kham_mueang_thai": "แก๋งผักหละ",
+  "english": "cha-om (acacia) curry",
+  "type": "curry",
+  "description": "Simple Northern vegetable curry of cha-om with dried fish, young galangal and roasted green chilli.",
+  "key_ingredients": [
+   "cha-om",
+   "dried fish",
+   "young galangal",
+   "dried chilli paste"
+  ],
+  "season": "best in rainy season",
+  "note": "Kham Mueang Thai spelling unverified.",
+  "source": "https://lannainfo.library.cmu.ac.th/en_lannafood/detail_lannafood.php?id_food=33",
+  "confidence": "high"
+ },
+ {
+  "id": "khai-chiao-cha-om",
+  "thai": "ไข่เจียวชะอม",
+  "rtgs": "khai chiao cha-om",
+  "english": "cha-om omelette",
+  "type": "egg",
+  "description": "Thick omelette packed with cha-om shoots; national rather than specifically Lanna, sold at curry-rice stalls; often cut into squares and eaten with nam phrik kapi or in kaeng som.",
+  "key_ingredients": [
+   "eggs",
+   "cha-om"
+  ],
+  "season": "year-round (cheaper in rainy season)",
+  "source": "https://en.wikipedia.org/wiki/List_of_Thai_ingredients",
+  "extra_sources": [
+   "https://thaifarmer.lib.ku.ac.th/news/61154ec5d7b6d07100d775cd"
+  ],
+  "confidence": "medium"
+ },
+ {
+  "id": "yam-phak-kut",
+  "thai": "ยำผักกูด",
+  "rtgs": "yam phak kut",
+  "english": "vegetable fern salad",
+  "type": "yam",
+  "description": "Blanched fern fronds tossed with pork/shrimp, shallot, chilli, lime, sometimes coconut cream.",
+  "key_ingredients": [
+   "phak kut fern",
+   "pork or shrimp",
+   "shallot",
+   "lime",
+   "coconut cream (optional)"
+  ],
+  "season": "rainy season",
+  "source": "https://www.khaosod.co.th/technologychaoban/techno-news/article_146330",
+  "extra_sources": [
+   "https://en.wikipedia.org/wiki/Diplazium_esculentum"
+  ],
+  "confidence": "medium"
+ },
+ {
+  "id": "kaeng-het-thop",
+  "thai": "แกงเห็ดถอบ",
+  "rtgs": "kaeng het thop",
+  "kham_mueang_thai": "แก๋งเห็ดถอบ",
+  "english": "earthstar mushroom curry",
+  "type": "curry",
+  "description": "Het thop / het pho with pickled bamboo shoots and chicken or pork in chilli paste broth; the signature early-rains dish.",
+  "key_ingredients": [
+   "het thop mushrooms",
+   "pickled bamboo shoots",
+   "chicken or pork",
+   "chilli paste"
+  ],
+  "season": "May-Jun",
+  "note": "Northern spelling unverified.",
+  "source": "https://lannainfo.library.cmu.ac.th/en_lannafood/detail_lannafood.php?id_food=59",
+  "confidence": "high"
+ },
+ {
+  "id": "kaeng-het-tap-tao",
+  "thai": "แกงเห็ดตับเต่า",
+  "rtgs": "kaeng het tap tao",
+  "english": "bolete mushroom curry",
+  "type": "curry",
+  "description": "Bolete mushrooms with minced pork and young tamarind leaves (or acidum) in chilli broth.",
+  "key_ingredients": [
+   "het tap tao",
+   "minced pork",
+   "young tamarind leaves"
+  ],
+  "season": "rainy season",
+  "source": "https://lannainfo.library.cmu.ac.th/en_lannafood/detail_lannafood.php?id_food=58",
+  "confidence": "high"
+ },
+ {
+  "id": "kaeng-het-lom",
+  "thai": "แกงเห็ดลม",
+  "rtgs": "kaeng het lom",
+  "english": "het lom mushroom curry",
+  "type": "curry",
+  "description": "Het lom mushrooms with cha-om and pepper-vine leaves, galangal and lemongrass.",
+  "key_ingredients": [
+   "het lom",
+   "cha-om",
+   "pepper vine",
+   "chilli paste"
+  ],
+  "season": "rainy season (dried het lom year-round)",
+  "source": "https://lannainfo.library.cmu.ac.th/en_lannafood/detail_lannafood.php?id_food=60",
+  "confidence": "medium"
+ },
+ {
+  "id": "kaeng-no-mai",
+  "thai": "แกงหน่อไม้",
+  "rtgs": "kaeng no mai",
+  "english": "bamboo shoot curry",
+  "type": "curry",
+  "description": "Fresh bamboo shoots with cha-om, pepper vine and yanang leaves; sometimes pork bones, fish or crab paste.",
+  "key_ingredients": [
+   "bamboo shoot",
+   "cha-om",
+   "yanang leaves",
+   "fermented fish"
+  ],
+  "season": "rainy season",
+  "source": "https://lannainfo.library.cmu.ac.th/en_lannafood/detail_lannafood.php?id_food=54",
+  "confidence": "medium"
+ },
+ {
+  "id": "jo-phak-kat",
+  "thai": "จอผักกาด",
+  "rtgs": "jo phak kat",
+  "english": "mustard-green sour soup",
+  "type": "soup",
+  "description": "Flowering mustard greens boiled with shrimp paste or fermented fish, soured with tamarind, often with pork ribs; topped with dried chilli and fried garlic.",
+  "key_ingredients": [
+   "phak kat greens",
+   "tamarind",
+   "pork ribs",
+   "fermented fish"
+  ],
+  "season": "cool season (unverified)",
+  "source": "https://guide.michelin.com/th/en/article/dining-out/11-must-try-northern-thai-dishes-in-chiang-mai",
+  "extra_sources": [
+   "https://lannainfo.library.cmu.ac.th/en_lannafood/detail_lannafood.php?id_food=98"
+  ],
+  "confidence": "medium"
+ },
+ {
+  "id": "khai-pam",
+  "thai": "ไข่ป่าม",
+  "rtgs": "khai pam",
+  "english": "eggs grilled in banana-leaf cups",
+  "type": "egg",
+  "description": "Beaten eggs with spring onion and chilli poured into banana-leaf cups and grilled over charcoal; variants add pork, fish or crab.",
+  "key_ingredients": [
+   "eggs",
+   "spring onion",
+   "chilli",
+   "banana leaf"
+  ],
+  "season": "year-round",
+  "note": "Thai spelling from general usage.",
+  "source": "https://lannainfo.library.cmu.ac.th/en_lannafood/detail_lannafood.php?id_food=120",
+  "extra_sources": [
+   "https://guide.michelin.com/th/en/article/dining-out/11-must-try-northern-thai-dishes-in-chiang-mai"
+  ],
+  "confidence": "medium"
+ },
+ {
+  "id": "pu-ong",
+  "thai": "ปูอ่อง",
+  "rtgs": "pu ong",
+  "english": "rice-field crab fat grilled in shell",
+  "type": "grilled",
+  "description": "Crab fat/roe mixed with egg and seasoning, grilled in the crab shell.",
+  "key_ingredients": [
+   "rice-field crab fat",
+   "egg",
+   "garlic"
+  ],
+  "season": "unverified (likely rainy-season crabs)",
+  "source": "https://guide.michelin.com/th/en/article/dining-out/11-must-try-northern-thai-dishes-in-chiang-mai",
+  "extra_sources": [
+   "https://lannainfo.library.cmu.ac.th/en_lannafood/detail_lannafood.php?id_food=191"
+  ],
+  "confidence": "medium"
+ },
+ {
+  "id": "tam-som-o",
+  "thai": "ตำส้มโอ",
+  "rtgs": "tam som o",
+  "english": "Lanna pomelo salad",
+  "type": "tam",
+  "description": "Pomelo pounded with garlic, lemongrass and nam pu (crab paste).",
+  "key_ingredients": [
+   "pomelo",
+   "nam pu",
+   "garlic",
+   "lemongrass"
+  ],
+  "season": "pomelo season",
+  "source": "https://en.wikipedia.org/wiki/Thai_cuisine",
+  "extra_sources": [
+   "https://lannainfo.library.cmu.ac.th/en_lannafood/detail_lannafood.php?id_food=121"
+  ],
+  "confidence": "medium"
+ },
+ {
+  "id": "kaeng-bon",
+  "thai": "แกงบอน",
+  "rtgs": "kaeng bon",
+  "english": "taro-stem curry",
+  "type": "curry",
+  "description": "Araceae (taro) stems steamed until soft (to remove itchiness) and cooked with pork ears, tamarind and spices; also cooked in bamboo as 'lam bon'.",
+  "key_ingredients": [
+   "taro/aroid stems",
+   "pork ears",
+   "tamarind",
+   "chilli paste"
+  ],
+  "season": "unverified",
+  "note": "Must be well cooked or it itches the throat.",
+  "source": "https://lannainfo.library.cmu.ac.th/en_lannafood/detail_lannafood.php?id_food=25",
+  "confidence": "medium"
+ },
+ {
+  "id": "kaeng-phak-chiang-da",
+  "thai": "แกงผักเชียงดา",
+  "rtgs": "kaeng phak chiang da",
+  "english": "phak chiang da curry",
+  "type": "curry",
+  "description": "Tender phak chiang da leaves with dried fish and cherry tomato in chilli broth; sometimes with cha-om.",
+  "key_ingredients": [
+   "phak chiang da",
+   "dried fish",
+   "tomato"
+  ],
+  "season": "unverified",
+  "source": "https://lannainfo.library.cmu.ac.th/en_lannafood/detail_lannafood.php?id_food=35",
+  "confidence": "high"
+ },
+ {
+  "id": "khua-pham",
+  "thai": "ขั่วผำ",
+  "rtgs": "khua pham",
+  "english": "stir-fried water-meal (Wolffia)",
+  "type": "stir-fry",
+  "description": "Pham (khai nam) stir-fried with pork belly, lemongrass, galangal and kaffir lime leaf.",
+  "key_ingredients": [
+   "pham / khai nam",
+   "pork belly",
+   "lemongrass",
+   "galangal"
+  ],
+  "season": "unverified",
+  "note": "Thai spelling approximate (source rendering garbled).",
+  "source": "https://lannainfo.library.cmu.ac.th/en_lannafood/detail_lannafood.php?id_food=79",
+  "confidence": "medium"
+ },
+ {
+  "id": "miang",
+  "thai": "เมี่ยง",
+  "rtgs": "miang",
+  "english": "fermented tea-leaf snack",
+  "type": "snack",
+  "description": "Fermented tea leaves chewed after meals, sometimes wrapped with salt, ginger, coconut, peanuts (miang song-khrueang); social snack.",
+  "key_ingredients": [
+   "fermented Assam tea leaves",
+   "salt",
+   "ginger (optional)"
+  ],
+  "season": "year-round",
+  "source": "https://lannainfo.library.cmu.ac.th/en_lannafood/detail_lannafood.php?id_food=13",
+  "confidence": "high"
+ },
+ {
+  "id": "kai-thot-makhwaen",
+  "thai": "ไก่ทอดมะแขว่น",
+  "rtgs": "kai thot makhwaen",
+  "english": "makhwaen fried chicken",
+  "type": "fried",
+  "description": "Chicken marinated with makhwaen pepper and fried; eaten with sticky rice.",
+  "key_ingredients": [
+   "chicken",
+   "makhwaen"
+  ],
+  "season": "year-round",
+  "source": "https://guide.michelin.com/th/en/article/dining-out/11-must-try-northern-thai-dishes-in-chiang-mai",
+  "confidence": "medium"
+ },
+ {
+  "id": "nam-phrik-nam-pu",
+  "thai": "น้ำพริกน้ำปู",
+  "rtgs": "nam phrik nam pu",
+  "english": "crab-paste chilli relish",
+  "type": "relish",
+  "description": "Relish based on black rice-field crab paste (nam pu) with chilli.",
+  "key_ingredients": [
+   "nam pu",
+   "chilli",
+   "garlic"
+  ],
+  "season": "year-round",
+  "source": "https://en.wikipedia.org/wiki/Thai_cuisine",
+  "extra_sources": [
+   "https://lannainfo.library.cmu.ac.th/en_lannafood/detail_lannafood.php?id_food=163"
+  ],
+  "confidence": "medium"
+ },
+ {
+  "id": "aep",
+  "thai": "แอ็บ",
+  "rtgs": "aep",
+  "english": "banana-leaf grilled parcel",
+  "type": "grilled",
+  "description": "Food (fish, pork, prawns, pig brain, insects) mixed with paste and slow-grilled in banana leaf.",
+  "key_ingredients": [
+   "fish/pork/insects",
+   "curry paste",
+   "banana leaf"
+  ],
+  "season": "year-round",
+  "note": "Thai spelling แอ็บ from general usage — verify.",
+  "source": "https://en.wikipedia.org/wiki/Thai_cuisine",
+  "extra_sources": [
+   "https://lannainfo.library.cmu.ac.th/en_lannafood/detail_lannafood.php?id_food=110",
+   "https://lannainfo.library.cmu.ac.th/en_lannafood/detail_lannafood.php?id_food=107"
+  ],
+  "confidence": "low"
+ },
+ {
+  "id": "ho-nueng",
+  "thai": "ห่อนึ่ง",
+  "rtgs": "ho nueng",
+  "english": "steamed banana-leaf parcel (Lanna ho mok)",
+  "type": "steamed",
+  "description": "Chicken, pork, fish or bamboo shoot with curry paste steamed in banana leaf.",
+  "key_ingredients": [
+   "protein or bamboo",
+   "curry paste",
+   "banana leaf"
+  ],
+  "season": "year-round",
+  "source": "https://lannainfo.library.cmu.ac.th/en_lannafood/detail_lannafood.php?id_food=199",
+  "extra_sources": [
+   "https://lannainfo.library.cmu.ac.th/en_lannafood/detail_lannafood.php?id_food=189",
+   "https://lannainfo.library.cmu.ac.th/en_lannafood/detail_lannafood.php?id_food=197"
+  ],
+  "confidence": "medium"
+ }
+]

@@ -1,0 +1,341 @@
+{
+ "meta": {
+  "generated": "2026-09-26",
+  "scope": "Etiquette and cultural concepts for nomads in Chiang Mai / Northern Thailand. Complements cultural_norms.json, beliefs_superstitions.json, ethnic_groups.json.",
+  "note": "Items with source=null are widely repeated practice without a fetched source here; marked low confidence for expert review."
+ },
+ "etiquette": [
+  {
+   "id": "temple_dress",
+   "topic": "Temples: dress and conduct",
+   "rule": "Cover shoulders and knees; remove shoes before entering buildings and take off hats; keep voices low; no smoking, vaping or alcohol on temple grounds; never climb on, sit on or touch Buddha images.",
+   "do": [
+    "Carry a scarf/sarong",
+    "Sit with feet tucked, soles pointing away from Buddha images and monks",
+    "Photograph discreetly, no flash",
+    "Small donation (e.g. 20 THB) is welcome"
+   ],
+   "dont": [
+    "Sit on monks' platforms or chairs",
+    "Point feet at Buddha images"
+   ],
+   "northern_specific": false,
+   "app_note": null,
+   "source": "https://fanclubthailand.co.uk/etiquette-advice-for-visiting-thai-temples/",
+   "confidence": "high",
+   "needs_review": null
+  },
+  {
+   "id": "temple_women_areas",
+   "topic": "Temples: areas closed to women (Northern)",
+   "rule": "Some Northern temples and the Inthakhin city pillar shrine at Wat Chedi Luang bar women from specific sacred areas (sign: ห้ามสตรีเข้า / 'Ladies do not enter'). Local explanations combine Buddhist monastic rules with a belief that menstruation weakens protective yantra/relics.",
+   "do": [
+    "Follow the sign without debate; men can go in and women can pay respect from outside"
+   ],
+   "dont": [
+    "Argue with temple staff or call it sexist on site"
+   ],
+   "northern_specific": true,
+   "app_note": "If a female user asks why she can't enter, give the neutral cultural explanation, not a judgement.",
+   "source": "https://www.chiangmainews.co.th/social/2863720/",
+   "confidence": "high",
+   "needs_review": null
+  },
+  {
+   "id": "monks",
+   "topic": "Monks",
+   "rule": "Monks may not touch women or take items directly from a woman's hand.",
+   "do": [
+    "Women: place an offering on a cloth or tray the monk sets down, or hand it via a man",
+    "Give monks the seat/space; lower your head slightly when passing"
+   ],
+   "dont": [
+    "Women: touch a monk or his robe, sit right next to him on public transport",
+    "Offer a monk food after noon (monks do not eat after midday) - app note, unverified"
+   ],
+   "northern_specific": false,
+   "app_note": null,
+   "source": "https://fanclubthailand.co.uk/etiquette-advice-for-visiting-thai-temples/",
+   "confidence": "high",
+   "needs_review": "'No food after noon' rule not from fetched source (well known Vinaya rule)."
+  },
+  {
+   "id": "head_feet",
+   "topic": "Head and feet",
+   "rule": "The head is the highest/most respected part of the body and feet the lowest; keep your head lower than monks and Buddha images, don't point feet at people or sacred objects.",
+   "do": [
+    "Apologise if you accidentally touch someone's head or step over their things"
+   ],
+   "dont": [
+    "Pat an adult's (or child's) head",
+    "Point with your foot, rest feet on tables, step over people or food"
+   ],
+   "northern_specific": false,
+   "app_note": null,
+   "source": "https://fanclubthailand.co.uk/etiquette-advice-for-visiting-thai-temples/",
+   "confidence": "medium",
+   "needs_review": "Head-touching rule not explicit in fetched source; widely documented."
+  },
+  {
+   "id": "wai",
+   "topic": "Wai greeting",
+   "rule": "Palms together with a slight bow; junior person usually wais first. Full details in cultural_norms.json (wai_greeting).",
+   "do": [
+    "Return a wai from an elder or vendor with a smile and nod or a chest-level wai"
+   ],
+   "dont": [
+    "Wai first to children or to service staff every time"
+   ],
+   "northern_specific": false,
+   "app_note": "Pair Northern greeting 'sa-wat-di jao' (สะหวัดดีเจ้า, see kham_mueang_glossary.json) with a wai for elders.",
+   "source": "https://www.chiangraitimes.com/travel-guide/wai-etiquette-in-thailand/",
+   "confidence": "medium",
+   "needs_review": null
+  },
+  {
+   "id": "royal_respect",
+   "topic": "Monarchy",
+   "rule": "Criticising, insulting or joking about the King, Queen, Heir-apparent or Regent is a crime under Criminal Code Art. 112 (3-15 years per count), also for foreigners and for online posts; not standing for the royal anthem has led to charges.",
+   "do": [
+    "Stand for the royal anthem (e.g. in cinemas before films)",
+    "Treat royal portraits and banknotes (which carry the King's image) with respect"
+   ],
+   "dont": [
+    "Raise the monarchy as small talk or make jokes about it",
+    "Step on dropped banknotes/coins to stop them rolling"
+   ],
+   "northern_specific": false,
+   "app_note": "If a user's message touches the monarchy, translate faithfully but add a cultural note advising caution; never generate commentary on the royal family.",
+   "source": "https://en.wikipedia.org/wiki/L%C3%A8se-majest%C3%A9_in_Thailand",
+   "confidence": "high",
+   "needs_review": "Banknote-stepping example is common guidance, not in the fetched article."
+  },
+  {
+   "id": "alcohol_ban_buddhist",
+   "topic": "Alcohol sales bans: Buddhist holidays",
+   "rule": "No alcohol sales all day on Makha Bucha, Visakha Bucha, Asalha Bucha, Khao Phansa and Ok Phansa. Exempt: hotels, international airport terminals, licensed entertainment venues, bar-type venues in designated tourist zones, special events. Penalty up to 6 months and/or 10,000 THB. Loy Krathong and Songkran are NOT ban days.",
+   "do": [
+    "Check festival_calendar.json alcohol_ban flag",
+    "Expect 7-Eleven and restaurants to refuse sales"
+   ],
+   "dont": [
+    "Ask a shop to 'make an exception'"
+   ],
+   "northern_specific": false,
+   "app_note": null,
+   "source": "https://www.nationthailand.com/blogs/news/general/40062977",
+   "confidence": "high",
+   "needs_review": null
+  },
+  {
+   "id": "alcohol_ban_election",
+   "topic": "Alcohol sales bans: elections",
+   "rule": "Nationwide ban from 18:00 the day before voting to 18:00 on election day (national, and 24h for local elections in the area); applies to everyone including tourists.",
+   "do": [
+    "Check Election Commission announcements for local elections"
+   ],
+   "dont": [
+    "Discuss or ask vendors about their vote"
+   ],
+   "northern_specific": false,
+   "app_note": null,
+   "source": "https://www.khaosodenglish.com/life/nightlife/2026/02/07/police-warn-of-alcohol-sales-ban-ahead-of-election/",
+   "confidence": "high",
+   "needs_review": null
+  },
+  {
+   "id": "national_anthem",
+   "topic": "National anthem",
+   "rule": "The national anthem plays at 08:00 and 18:00 in some public places (parks, stations); people stop and stand still.",
+   "do": [
+    "Stop walking and stand quietly until it ends"
+   ],
+   "dont": [],
+   "northern_specific": false,
+   "app_note": null,
+   "source": null,
+   "confidence": "low",
+   "needs_review": "No fetched source - widely known practice; expert please confirm and add source."
+  },
+  {
+   "id": "phit_phi",
+   "topic": "'Phit phi' - offending the ancestor spirits",
+   "rule": "In Lanna belief, some transgressions (e.g. inappropriate physical contact or entering private rooms of a family's house) offend the family's ancestral spirits (phi pu ya) and require a forgiveness ritual/compensation.",
+   "do": [
+    "Be restrained with physical affection towards a local partner in front of their family or in their home"
+   ],
+   "dont": [
+    "Enter bedrooms of a Northern family home uninvited"
+   ],
+   "northern_specific": true,
+   "app_note": null,
+   "source": "https://lannernews.com/31102566-02/",
+   "confidence": "medium",
+   "needs_review": "Expert: confirm scope of ผิดผี (compensation customs) and appropriate wording for foreigners dating locals."
+  },
+  {
+   "id": "spirit_houses",
+   "topic": "Spirit houses and ancestor shrines",
+   "rule": "Many Northern homes and businesses have a shrine for ancestor spirits (หิ้ง/หอผีปู่ย่า hing/ho phi pu ya) - often on the east wall above the sleeping area or a small house in a corner of the compound - plus the widespread spirit house for the land guardian. Offerings: flowers, incense, candles, drinks, food.",
+   "do": [
+    "Leave offerings untouched",
+    "Ask before photographing a family shrine"
+   ],
+   "dont": [
+    "Lean on, sit near or use a spirit house as a shelf",
+    "Eat or move offerings"
+   ],
+   "northern_specific": true,
+   "app_note": null,
+   "source": "https://www.royalparkrajapruek.org/Knowledge/view/410",
+   "confidence": "medium",
+   "needs_review": "Land-guardian spirit house term (ศาลพระภูมิ/ศาลเจ้าที่) not from a fetched Northern source."
+  },
+  {
+   "id": "markets_bargaining",
+   "topic": "Market and vendor etiquette",
+   "rule": "Bargain politely and with a smile for crafts/clothes; food and marked prices are not bargained.",
+   "do": [
+    "Carry small notes",
+    "Say 'mai phet' (not spicy) if needed; 'jay' for vegan/vegetarian (Chinese-style)"
+   ],
+   "dont": [
+    "Haggle hard over small sums",
+    "Touch produce or food without gesture/permission"
+   ],
+   "northern_specific": false,
+   "app_note": null,
+   "source": "https://www.feel-chiang-mai.com/street-food-markets/chiang-mai-walking-streets-guide/",
+   "confidence": "medium",
+   "needs_review": "'jay' = Chinese-Buddhist vegan (no garlic/onion too) - expert confirm nuance."
+  },
+  {
+   "id": "ethnic_terms",
+   "topic": "Respectful ethnic names",
+   "rule": "Use self-designations: Hmong (not 'Maeo'), Tai / Tai Yai for Shan, Karen/Pgaz K'nyau (Kariang/Yang are Thai exonyms), Tai Yuan / khon mueang for Northern Thais. Avoid 'hill tribe' as an identity label where possible (Thai official term is 'chao khao'). Full list in ethnic_groups.json.",
+   "do": [
+    "Ask 'which village/where are you from?' rather than guessing someone's ethnicity"
+   ],
+   "dont": [
+    "Treat highland people as a photo attraction",
+    "Assume a highland person does not speak Thai"
+   ],
+   "northern_specific": true,
+   "app_note": null,
+   "source": null,
+   "confidence": "low",
+   "needs_review": "No single fetched source here; cross-check against ethnic_groups.json and expert."
+  }
+ ],
+ "lanna_concepts": [
+  {
+   "id": "khwan",
+   "term": "Khwan / Su Khwan / Hong Khwan",
+   "thai": "ขวัญ / สู่ขวัญ / ฮ้องขวัญ / เรียกขวัญ",
+   "meaning": "Khwan is the vital soul-essence that can flee when a person is frightened or unsettled (ขวัญหนี 'khwan ni', ขวัญหาย). Soul-calling ceremonies (Lanna: ฮ้องขวัญ hong khwan; old phrase สู่ข้าวเอาขวัญ) call it back at life transitions: ordination, new house, weddings, farewells, welcoming guests, promotions, recovery from illness, graduations. Guests often receive white cotton strings tied on the wrist.",
+   "app_note": "A vendor saying something about a user's 'khwan' after a fright or accident is a caring gesture; translate as 'your spirit/soul', not literally 'ghost'.",
+   "source": "https://www.matichon.co.th/weekly/column/article_418919",
+   "confidence": "medium",
+   "needs_review": "Wrist-string tying (ผูกข้อมือ) not in fetched article; Lanna romanization of ขวัญหนี needs expert check."
+  },
+  {
+   "id": "phi",
+   "term": "Phi (spirits)",
+   "thai": "ผี",
+   "meaning": "Protective and place spirits: ผีปู่ย่า phi pu ya (family ancestors; shrine kept by the eldest daughter line, เก๊าผี), ผีเสื้อบ้าน phi suea ban (village guardian), ผีเสื้อเมือง phi suea mueang (city guardian, spirits of former rulers), ผีขุนน้ำ (headwater spirits), ผีดง/ผีดอย (forest/mountain spirits). Spirits are protectors, not only 'ghosts'.",
+   "app_note": "Translate 'phi' by context: ancestor spirit / guardian spirit rather than 'ghost'.",
+   "source": "https://lannernews.com/31102566-02/",
+   "confidence": "medium"
+  },
+  {
+   "id": "khantoke",
+   "term": "Khantoke dinner",
+   "thai": "ขันโตก",
+   "meaning": "A khantoke is a low round pedestal tray (~35 cm) used as a table for floor-seated meals with sticky rice (khao niao) and several dishes, used at weddings, housewarmings, temple fairs; the 'khantoke dinner' with dance shows for guests began in Chiang Mai in the 20th century.",
+   "app_note": "Eat sticky rice with the right hand, rolling small balls; sit with feet tucked away from the tray.",
+   "source": "https://en.wikipedia.org/wiki/Khantoke",
+   "confidence": "medium",
+   "needs_review": "Right-hand/rolling etiquette and typical dishes (e.g. kaeng hang le, nam phrik ong, khaep mu) not in fetched source - check food files."
+  },
+  {
+   "id": "textiles",
+   "term": "Lanna textiles: pha sin tin chok",
+   "thai": "ผ้าซิ่นตีนจก",
+   "meaning": "Hand-woven tube skirt of three parts: หัวซิ่น (waistband), ตัวซิ่น (body), ตีนซิ่น (decorated hem). 'Chok' (จก) is a discontinuous supplementary-weft technique picking up warp threads with a needle/quill; motifs include naga, hamsa (swans) and stupas. Mae Chaem district (Chiang Mai) is the best-known centre; a Tai Yuan tradition. Takes a long time to weave, so good pieces are expensive.",
+   "app_note": "Good compliment topic with weavers/vendors; asking where a sin was woven is welcome.",
+   "source": "https://www.chiangmainews.co.th/100lanna/3301588/",
+   "confidence": "medium"
+  },
+  {
+   "id": "lanna_months",
+   "term": "Lanna month numbering",
+   "thai": "เดือนเหนือ",
+   "meaning": "Lanna months run two ahead of Central Thai months, so Central month 12 = Lanna month 2 (Yi Peng = 'full moon of month two'); Inthakhin is 'month 8 in, month 9 out' (= Central 6-7).",
+   "source": "https://en.wikipedia.org/wiki/Yi_Peng_festival",
+   "confidence": "high"
+  }
+ ],
+ "conversation": {
+  "good_topics": [
+   {
+    "topic": "Food: 'have you eaten?' (kin khao laeo ka / กิ๋นข้าวแล้วกา), favourite Northern dishes, what's in season",
+    "source": "see kham_mueang_glossary.json",
+    "confidence": "medium"
+   },
+   {
+    "topic": "The current or next festival (Yi Peng, Songkran, Flower Festival) and how the family celebrates",
+    "source": "festival_calendar.json",
+    "confidence": "medium"
+   },
+   {
+    "topic": "Local crafts (umbrellas, silver, textiles) and where things were made",
+    "source": "https://www.chiangmainews.co.th/100lanna/3301588/",
+    "confidence": "medium"
+   },
+   {
+    "topic": "Weather/season: cool season, smoky season, rains",
+    "source": "see climate_by_month.json",
+    "confidence": "medium"
+   },
+   {
+    "topic": "Learning a few Kham Mueang words - usually delights locals",
+    "source": null,
+    "confidence": "low"
+   }
+  ],
+  "avoid_or_careful": [
+   {
+    "topic": "The monarchy (legal risk: Art. 112)",
+    "source": "https://en.wikipedia.org/wiki/L%C3%A8se-majest%C3%A9_in_Thailand",
+    "confidence": "high"
+   },
+   {
+    "topic": "Party politics, elections, protests - don't ask vendors how they vote",
+    "source": "https://www.chiangraitimes.com/politics/thailand-election-rules-2026-alcohol-ban-campaign-blackout/",
+    "confidence": "low"
+   },
+   {
+    "topic": "Criticising Buddhism, monks or Buddha images (Buddha-head decor/tattoos can offend)",
+    "source": "https://fanclubthailand.co.uk/etiquette-advice-for-visiting-thai-temples/",
+    "confidence": "medium"
+   },
+   {
+    "topic": "Loud anger or public confrontation - losing face; stay calm and smiling when disputing prices",
+    "source": null,
+    "confidence": "low"
+   },
+   {
+    "topic": "Framing highland/ethnic minorities as exotic, poor or 'primitive'",
+    "source": null,
+    "confidence": "low"
+   }
+  ],
+  "normal_questions_that_surprise_westerners": [
+   {
+    "topic": "Locals may ask your age, marital status, whether you have children, or what you earn/pay in rent; it is usually friendly curiosity to place you socially. A vague light answer is fine.",
+    "source": null,
+    "confidence": "low"
+   }
+  ]
+ }
+}

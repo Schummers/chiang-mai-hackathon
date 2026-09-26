@@ -1,0 +1,968 @@
+{
+ "meta": {
+  "topic": "Ethnic groups of Northern Thailand for respectful conversation",
+  "generated": "2026-09-26",
+  "use": "Inject the matching group entry into the context packet only if the person's profile card states it; never infer ethnicity from appearance or name.",
+  "general_rules": [
+   {
+    "text": "Many members dislike the umbrella term 'hill tribe' / ชาวเขา (chao khao); IWGIA considers it derogatory. Prefer the group's own name, or 'ethnic group' / 'Indigenous peoples' / กลุ่มชาติพันธุ์ (klum chatiphan).",
+    "source": "https://en.wikipedia.org/wiki/Hill_tribe_(Thailand)",
+    "confidence": "high"
+   },
+   {
+    "text": "Do not ask about citizenship, ID cards, 'where are you really from' or legal status: statelessness affects hundreds of thousands of highland people and is sensitive. Let the person volunteer it.",
+    "source": "https://minorityrights.org/communities/indigenous-peoples-thailand/",
+    "confidence": "high"
+   },
+   {
+    "text": "Thailand does not legally recognise 'indigenous peoples' as a category; a 2025 law affirms ethnic groups' rights to language/culture; a 2025 fast-track citizenship process targets ~480,000 pending cases.",
+    "source": "https://minorityrights.org/communities/indigenous-peoples-thailand/",
+    "confidence": "medium"
+   }
+  ]
+ },
+ "groups": [
+  {
+   "group": "Khon Mueang (Northern Thai / Tai Yuan)",
+   "self_designation": "คนเมือง Khon Mueang ('people of the mueang/cultivated valleys'); ethnonym Tai Yuan / Yuan",
+   "exonyms_to_avoid": [
+    {
+     "text": "'Lao' – Siamese historically called Northern Thais Lao; Northern Thais reject this and view it negatively.",
+     "source": "https://en.wikipedia.org/wiki/Northern_Thai_people",
+     "confidence": "high"
+    }
+   ],
+   "language_family": "Kra-Dai > Southwestern Tai; language Kham Mueang (คำเมือง), traditionally written in Tai Tham (Lanna) script",
+   "regions": [
+    "Majority population of the 8-9 northern provinces: Chiang Mai, Lamphun, Lampang, Chiang Rai, Phayao, Phrae, Nan, Mae Hong Son (minority there), Uttaradit"
+   ],
+   "greetings": [
+    {
+     "text": "สะหวัดดีเจ้า / สวัสดีคับ",
+     "roman": "sa-wat-di jao (women) / sa-wat-di khap (men)",
+     "english": "hello (polite; jao = female polite particle, khap = male)",
+     "source": "https://www.fixconcern.com/greeting-and-asking-questions-in-northern-languages/",
+     "confidence": "high"
+    },
+    {
+     "text": "ยินดีเจ้า / ยินดีคับ",
+     "roman": "yin-di jao / yin-di khap",
+     "english": "thank you (in Central Thai ยินดี means 'glad/you're welcome' – false friend)",
+     "source": "https://chiangmai.siamdot.com/thai-northern-language/",
+     "confidence": "high"
+    }
+   ],
+   "foods_and_goods": [
+    {
+     "text": "Khao soi (Northern curry-coconut egg-noodle soup) is Chiang Mai's signature dish; its predecessor likely arrived via Chin Haw (Yunnanese) Muslim traders.",
+     "source": "https://en.wikipedia.org/wiki/Khao_soi",
+     "confidence": "high"
+    }
+   ],
+   "festivals": [
+    {
+     "text": "See seasonal/festival files for Yi Peng, Pi Mai Mueang (Songkran). Theravada Buddhism with spirit houses and veneration of local guardian spirits.",
+     "source": "https://en.wikipedia.org/wiki/Northern_Thai_people",
+     "confidence": "medium"
+    }
+   ],
+   "etiquette_notes": [
+    {
+     "text": "Tai Tham script and Kham Mueang were suppressed under 20th-century 'Thaification' and have been revived since the 1990s; speaking even a few Kham Mueang words is generally appreciated.",
+     "source": "https://en.wikipedia.org/wiki/Northern_Thai_people",
+     "confidence": "high"
+    }
+   ],
+   "chiang_mai_places": [
+    "Warorot / Kad Luang market",
+    "Old city temples"
+   ],
+   "sources": [
+    "https://en.wikipedia.org/wiki/Northern_Thai_people"
+   ],
+   "confidence": "high"
+  },
+  {
+   "group": "Tai Yai (Shan)",
+   "self_designation": "Tai (တႆး); historically Tai Long. Thai: ไทใหญ่ Tai Yai ('Great Tai')",
+   "exonyms_to_avoid": [
+    {
+     "text": "'Ngiao' (เงี้ยว) – Tai Yuan/Northern Thai name for Shan. Sources checked do not rule on it, but it is widely perceived as pejorative; prefer 'Tai Yai' or 'Tai'.",
+     "source": "https://en.wikipedia.org/wiki/Shan_people",
+     "confidence": "low"
+    },
+    {
+     "text": "Avoid calling Shan people 'illegal'; advocates prefer 'undocumented' / 'migrant worker'.",
+     "source": "https://www.chiangmaicitylife.com/clg/living/migrant-lives-matter-the-challenges-and-prejudices-faced-by-shan-migrant-workers/",
+     "confidence": "high"
+    }
+   ],
+   "language_family": "Kra-Dai > Southwestern Tai (Shan), closely related to Thai and Lao; own Shan script",
+   "regions": [
+    "Mae Hong Son (largest established Shan population)",
+    "Chiang Mai",
+    "Chiang Rai (Mae Sai)",
+    "Mae Sariang",
+    "Lampang",
+    "Shan State, Myanmar (origin of most recent migrants)"
+   ],
+   "greetings": [
+    {
+     "text": "Mai Soong (Shan script not sourced)",
+     "roman": "mai sung",
+     "english": "Shan greeting; 'Mai Soong Pi Mai Tai' = Happy Shan New Year",
+     "source": "https://www.sca-uk.org.uk/wp-content/uploads/2021/03/SCA_UK-Newsletter-V3.pdf",
+     "confidence": "medium"
+    }
+   ],
+   "foods_and_goods": [
+    {
+     "text": "Naam ngiao (น้ำเงี้ยว) – noodle dish with pork ribs and tomato, found 'anywhere you find Shan people'.",
+     "source": "https://www.austinbushphotography.com/blog/blog/mae-hong-son-again.html",
+     "confidence": "high"
+    },
+    {
+     "text": "Kaeng hang lay (แกงฮังเล) – pork belly curry, prominent Shan dish.",
+     "source": "https://www.maehongsonholidays.com/shan-foods/",
+     "confidence": "high"
+    },
+    {
+     "text": "Nam phrik varieties incl. nam phrik tua nao (fermented soybean chili dip); lettuce, ivy gourd and gourd curries; bamboo shoot / star fruit / mango salads.",
+     "source": "https://www.maehongsonholidays.com/shan-foods/",
+     "confidence": "high"
+    },
+    {
+     "text": "Thamin (sticky-rice 'cake' with sugar and coconut milk); laap khua with bitter herbs.",
+     "source": "https://www.austinbushphotography.com/blog/blog/mae-hong-son-again.html",
+     "confidence": "high"
+    },
+    {
+     "text": "Shan khao soi variant and green-pea tofu porridge sold at the Friday Chin Haw market; Shan tofu salad.",
+     "source": "https://bangkokglutton.com/2025/02/14/markets-chin-haw-market/",
+     "confidence": "medium"
+    },
+    {
+     "text": "Khao kan jin (rice cooked with pork blood, wrapped in banana leaf).",
+     "source": "https://bangkokglutton.com/2025/02/14/markets-chin-haw-market/",
+     "confidence": "medium"
+    }
+   ],
+   "festivals": [
+    {
+     "text": "Poy Sang Long (ปอยส่างลอง) / Buat Luk Kaeo – novice ordination of boys dressed as princes, carried so feet don't touch the ground; late March–early April (2026: 31 Mar–3 Apr); biggest in Mae Hong Son, also at Wat Pa Pao, Chiang Mai.",
+     "source": "https://www.tagthai.com/explore/events/p/poy-sang-long-festival",
+     "confidence": "high"
+    },
+    {
+     "text": "Poy Pi Mai Tai (Shan New Year) around the Shan lunar new year, ~late November.",
+     "source": "https://www.sca-uk.org.uk/wp-content/uploads/2021/03/SCA_UK-Newsletter-V3.pdf",
+     "confidence": "medium"
+    }
+   ],
+   "etiquette_notes": [
+    {
+     "text": "About 90% of Chiang Mai Province's 100,000+ migrant workers are Shan; many work as labourers, domestic and market/agricultural workers and face prejudice. Don't assume someone is Burmese – many Shan identify as Tai.",
+     "source": "https://www.chiangmaicitylife.com/clg/living/migrant-lives-matter-the-challenges-and-prejudices-faced-by-shan-migrant-workers/",
+     "confidence": "medium"
+    },
+    {
+     "text": "At Poy Sang Long: dress modestly, don't block processions when photographing.",
+     "source": "https://www.tagthai.com/explore/events/p/poy-sang-long-festival",
+     "confidence": "high"
+    },
+    {
+     "text": "Do not ask about citizenship, ID cards, 'where are you really from' or legal status: statelessness affects hundreds of thousands of highland people and is sensitive. Let the person volunteer it.",
+     "source": "https://minorityrights.org/communities/indigenous-peoples-thailand/",
+     "confidence": "high"
+    }
+   ],
+   "chiang_mai_places": [
+    "Wat Pa Pao (first Chiang Mai temple for Shan, founded 1883, NE corner of old city; Poy Sang Long each April, Shan-language classes)",
+    "Friday Chin Haw/Yunnan market, Chang Khlan"
+   ],
+   "sources": [
+    "https://en.wikipedia.org/wiki/Shan_people",
+    "https://en.wikipedia.org/wiki/Wat_Pa_Pao,_Mueang_Chiang_Mai"
+   ],
+   "confidence": "medium"
+  },
+  {
+   "group": "Tai Lue (Lü)",
+   "self_designation": "Tai Lue (ไทลื้อ); also Tai Sipsongpanna",
+   "exonyms_to_avoid": [],
+   "language_family": "Kra-Dai > Southwestern Tai; own Tai Lue script",
+   "regions": [
+    "Nan",
+    "Phayao (Chiang Kham district)",
+    "Chiang Rai",
+    "Chiang Mai",
+    "Origin: Sipsongpanna, Yunnan"
+   ],
+   "greetings": [],
+   "foods_and_goods": [],
+   "festivals": [
+    {
+     "text": "Theravada Buddhist; khap lue song and pi mae (bamboo wind instrument) traditions.",
+     "source": "https://en.wikipedia.org/wiki/Tai_Lue_people",
+     "confidence": "medium"
+    }
+   ],
+   "etiquette_notes": [
+    {
+     "text": "Many Lue came to Lanna in the 'kep phak sai sa, kep kha sai mueang' resettlement era (c. 1782–1845) along with Yong people.",
+     "source": "https://www.lamphun.go.th/en/information/aboutus/9/history-of-lamphun-province",
+     "confidence": "medium"
+    }
+   ],
+   "chiang_mai_places": [],
+   "sources": [
+    "https://en.wikipedia.org/wiki/Tai_Lue_people"
+   ],
+   "confidence": "medium"
+  },
+  {
+   "group": "Tai Khuen (Khün)",
+   "self_designation": "Tai Khuen, ᨴᩱ᩠ᨿᨡᩨ᩠ᨶ [táj kʰɯ̌ːn]; Thai ไทเขิน",
+   "exonyms_to_avoid": [],
+   "language_family": "Kra-Dai > Southwestern Tai; written in Tai Tham script",
+   "regions": [
+    "Chiang Mai (Wualai / Wat Nantaram area)",
+    "Chiang Rai",
+    "Origin: Kengtung (Chiang Tung), Shan State"
+   ],
+   "greetings": [],
+   "foods_and_goods": [
+    {
+     "text": "Lacquerware (khrueang khoen) – Khuen artisans brought from Kengtung settled around Wat Nantaram; only a handful of artisans remain.",
+     "source": "https://www.chiangmai-alacarte.com/blog/wat-nantaram-in-chiang-mai/",
+     "confidence": "medium"
+    }
+   ],
+   "festivals": [],
+   "etiquette_notes": [
+    {
+     "text": "Community descends from war captives relocated by King Kawila in the early 19th century – history of forced migration; treat with care.",
+     "source": "https://www.chiangmai-alacarte.com/blog/wat-nantaram-in-chiang-mai/",
+     "confidence": "medium"
+    }
+   ],
+   "chiang_mai_places": [
+    "Wat Nantaram / Wualai Road area"
+   ],
+   "sources": [
+    "https://www.omniglot.com/writing/khun.htm"
+   ],
+   "confidence": "medium"
+  },
+  {
+   "group": "Tai Yong",
+   "self_designation": "Yong / Tai Yong (ไทยอง), from Mueang Yong, Shan State",
+   "exonyms_to_avoid": [],
+   "language_family": "Kra-Dai > Southwestern Tai (close to Tai Lue – verify)",
+   "regions": [
+    "Lamphun (esp. Pa Sang district)",
+    "Origin: Mueang Yong, now Myanmar"
+   ],
+   "greetings": [],
+   "foods_and_goods": [
+    {
+     "text": "Known as skilled cloth weavers (Pa Sang area).",
+     "source": "https://en.wikipedia.org/wiki/Pa_Sang_district",
+     "confidence": "high"
+    }
+   ],
+   "festivals": [],
+   "etiquette_notes": [
+    {
+     "text": "~10,000 Yong resettled to Lamphun in the 1782–1845 restoration era; became weavers and craftsmen central to restoring Lamphun's Lanna culture.",
+     "source": "https://www.lamphun.go.th/en/information/aboutus/9/history-of-lamphun-province",
+     "confidence": "high"
+    }
+   ],
+   "chiang_mai_places": [],
+   "sources": [
+    "https://www.lamphun.go.th/en/information/aboutus/9/history-of-lamphun-province"
+   ],
+   "confidence": "medium"
+  },
+  {
+   "group": "Karen (Sgaw, Pwo)",
+   "self_designation": "Sgaw: Pga K'nyau / Pwakenyaw; Pwo: Phlong / Kêphlong",
+   "exonyms_to_avoid": [
+    {
+     "text": "'Yang' (Northern Thai) and 'Kariang' (กะเหรี่ยง, Central Thai) are the usual Thai names; 'Karen' itself may originally have been derogatory. Not clearly offensive in everyday Thai – expert to confirm.",
+     "source": "https://en.wikipedia.org/wiki/Karen_people",
+     "confidence": "medium"
+    },
+    {
+     "text": "Many members dislike the umbrella term 'hill tribe' / ชาวเขา (chao khao); IWGIA considers it derogatory. Prefer the group's own name, or 'ethnic group' / 'Indigenous peoples' / กลุ่มชาติพันธุ์ (klum chatiphan).",
+     "source": "https://en.wikipedia.org/wiki/Hill_tribe_(Thailand)",
+     "confidence": "high"
+    }
+   ],
+   "language_family": "Sino-Tibetan > Karenic (Sgaw, Eastern Pwo, Western Pwo are mutually unintelligible)",
+   "regions": [
+    "Northern and western Thailand; Chiang Mai (Sgaw most populous), Mae Hong Son, Tak, Chiang Rai; ~320,000–400,000 in Thailand, largest highland group"
+   ],
+   "greetings": [
+    {
+     "text": "Ghaw luh a ghay",
+     "roman": "ghaw luh a ghay",
+     "english": "hello / good morning (dialect not stated, probably Sgaw)",
+     "source": "https://mnkaren.org/wp-content/uploads/2017/01/Basic-Karen-Language-Phrases.pdf",
+     "confidence": "medium"
+    },
+    {
+     "text": "Ta bluh doh mah",
+     "roman": "ta bluh doh mah",
+     "english": "thank you (very much)",
+     "source": "https://mnkaren.org/wp-content/uploads/2017/01/Basic-Karen-Language-Phrases.pdf",
+     "confidence": "medium"
+    }
+   ],
+   "foods_and_goods": [
+    {
+     "text": "Hand-woven, naturally dyed textiles whose patterns signal lineage and identity.",
+     "source": "https://www.aleenta.com/en/blog/the-karen-hill-tribes-of-chiang-mai/",
+     "confidence": "medium"
+    }
+   ],
+   "festivals": [
+    {
+     "text": "Karen New Year – lunar, falls in December or January.",
+     "source": "https://en.wikipedia.org/wiki/Karen_people",
+     "confidence": "high"
+    },
+    {
+     "text": "Karen wrist-tying ceremony – annually in August.",
+     "source": "https://en.wikipedia.org/wiki/Karen_people",
+     "confidence": "high"
+    }
+   ],
+   "etiquette_notes": [
+    {
+     "text": "Karen communities are animist, Buddhist and Christian, often side by side – don't assume religion.",
+     "source": "https://www.aleenta.com/en/blog/the-karen-hill-tribes-of-chiang-mai/",
+     "confidence": "medium"
+    },
+    {
+     "text": "Ask before photographing; buy directly from artisans.",
+     "source": "https://www.aleenta.com/en/blog/the-karen-hill-tribes-of-chiang-mai/",
+     "confidence": "medium"
+    },
+    {
+     "text": "Do not ask about citizenship, ID cards, 'where are you really from' or legal status: statelessness affects hundreds of thousands of highland people and is sensitive. Let the person volunteer it.",
+     "source": "https://minorityrights.org/communities/indigenous-peoples-thailand/",
+     "confidence": "high"
+    }
+   ],
+   "chiang_mai_places": [
+    "Highland People Discovery Museum"
+   ],
+   "sources": [
+    "https://en.wikipedia.org/wiki/Karen_people",
+    "https://www.everyculture.com/East-Southeast-Asia/Karen-Orientation.html"
+   ],
+   "confidence": "high"
+  },
+  {
+   "group": "Kayan",
+   "self_designation": "Kayan (Kayan Lahwi subgroup wears brass neck coils)",
+   "exonyms_to_avoid": [
+    {
+     "text": "'Padaung' (Shan term) – Kayan in Mae Hong Son object to it.",
+     "source": "https://en.wikipedia.org/wiki/Kayan_people_(Myanmar)",
+     "confidence": "high"
+    },
+    {
+     "text": "'Long-neck' / 'long-neck Karen' / 'giraffe women' framing – objectifying; avoid.",
+     "source": "https://en.wikipedia.org/wiki/Kayan_people_(Myanmar)",
+     "confidence": "medium"
+    }
+   ],
+   "language_family": "Sino-Tibetan > Karenic",
+   "regions": [
+    "Mae Hong Son (refugee/tourist villages); origin Kayah/Shan States, Myanmar"
+   ],
+   "greetings": [],
+   "foods_and_goods": [],
+   "festivals": [],
+   "etiquette_notes": [
+    {
+     "text": "UNHCR (2008) raised concerns over tourism to Kayan villages when registered refugees were not allowed to resettle; some young women removed rings in protest at exploitation. Don't treat people as an attraction; avoid ethical-tourism debates with vendors unless they raise it.",
+     "source": "https://en.wikipedia.org/wiki/Kayan_people_(Myanmar)",
+     "confidence": "high"
+    }
+   ],
+   "chiang_mai_places": [],
+   "sources": [
+    "https://en.wikipedia.org/wiki/Kayan_people_(Myanmar)"
+   ],
+   "confidence": "high"
+  },
+  {
+   "group": "Hmong",
+   "self_designation": "Hmong (Hmong Daw / White Hmong; Hmong Njua / Mong Leng – Blue/Green Hmong). Thai: ม้ง Mong",
+   "exonyms_to_avoid": [
+    {
+     "text": "'Meo' (แม้ว) – Thai/Lao alteration of Chinese 'Miao'; carried strong pejorative connotations. Use Hmong / ม้ง.",
+     "source": "https://en.wikipedia.org/wiki/Hmong_people",
+     "confidence": "high"
+    },
+    {
+     "text": "Many members dislike the umbrella term 'hill tribe' / ชาวเขา (chao khao); IWGIA considers it derogatory. Prefer the group's own name, or 'ethnic group' / 'Indigenous peoples' / กลุ่มชาติพันธุ์ (klum chatiphan).",
+     "source": "https://en.wikipedia.org/wiki/Hill_tribe_(Thailand)",
+     "confidence": "high"
+    }
+   ],
+   "language_family": "Hmong-Mien (Hmongic)",
+   "regions": [
+    "Northern mountain provinces: Chiang Mai, Chiang Rai, Nan, Tak, Phitsanulok, Phetchabun (provinces beyond Chiang Mai not verified here)"
+   ],
+   "greetings": [
+    {
+     "text": "Nyob zoo",
+     "roman": "nyaw zhong (approx.)",
+     "english": "hello",
+     "source": "https://ucanr.edu/sites/default/files/2019-03/300850.pdf",
+     "confidence": "high"
+    },
+    {
+     "text": "Ua tsaug",
+     "roman": "ua chao (approx.)",
+     "english": "thank you",
+     "source": "https://ucanr.edu/sites/default/files/2019-03/300850.pdf",
+     "confidence": "high"
+    },
+    {
+     "text": "Koj puas nyob zoo",
+     "roman": "",
+     "english": "how are you?",
+     "source": "https://ucanr.edu/sites/default/files/2019-03/300850.pdf",
+     "confidence": "high"
+    }
+   ],
+   "foods_and_goods": [
+    {
+     "text": "Batik and embroidered skirts, vintage Hmong fabric remnants, quilts, baby carriers – Hmong Market next to Warorot/Ton Lamyai.",
+     "source": "https://wander-lush.org/guide-warorot-lamyai-hmong-market-chiang-mai-thailand/",
+     "confidence": "high"
+    },
+    {
+     "text": "Doi Pui Hmong village (mostly Green Hmong, on Doi Suthep): souvenir shops, cafes, fruit and vegetable growing via Royal Project (coffee replaced opium).",
+     "source": "https://www.green-trails.com/doi-pui-hmong-village/",
+     "confidence": "medium"
+    }
+   ],
+   "festivals": [
+    {
+     "text": "Hmong New Year (Noj Peb Caug) – end of harvest; traditionally 30th day of the 12th Hmong lunar month (late Dec–Jan) but in Thailand celebrations are often Nov–Dec; pov pob ball-tossing game.",
+     "source": "https://en.wikipedia.org/wiki/Hmong_calendar",
+     "confidence": "medium"
+    }
+   ],
+   "etiquette_notes": [
+    {
+     "text": "'Hmong' is commonly glossed by speakers as linked to 'free'; the name was promoted from the 1970s against Meo/Miao.",
+     "source": "https://en.wikipedia.org/wiki/Hmong_people",
+     "confidence": "high"
+    },
+    {
+     "text": "Do not ask about citizenship, ID cards, 'where are you really from' or legal status: statelessness affects hundreds of thousands of highland people and is sensitive. Let the person volunteer it.",
+     "source": "https://minorityrights.org/communities/indigenous-peoples-thailand/",
+     "confidence": "high"
+    }
+   ],
+   "chiang_mai_places": [
+    "Hmong Market (Warorot/Ton Lamyai area)",
+    "Doi Pui Hmong village + Ban Hmong Doi Pui Museum",
+    "Highland People Discovery Museum"
+   ],
+   "sources": [
+    "https://en.wikipedia.org/wiki/Hmong_people",
+    "https://wander-lush.org/guide-warorot-lamyai-hmong-market-chiang-mai-thailand/"
+   ],
+   "confidence": "high"
+  },
+  {
+   "group": "Iu Mien (Mien)",
+   "self_designation": "Iu Mien / Mien; Thai เมี่ยน / อิ้วเมี่ยน",
+   "exonyms_to_avoid": [
+    {
+     "text": "'Yao' (เย้า) – Chinese-derived classification; Iu Mien do not call themselves Yao and Thai officials now use 'Iu Mien'. Not necessarily an insult but avoid.",
+     "source": "https://en.wikipedia.org/wiki/Iu_Mien_people",
+     "confidence": "high"
+    }
+   ],
+   "language_family": "Hmong-Mien (Mienic)",
+   "regions": [
+    "~40,000 in Thailand; mainly Nan, Chiang Rai, Phayao (provinces not verified in fetched source)"
+   ],
+   "greetings": [],
+   "foods_and_goods": [
+    {
+     "text": "Finely embroidered clothing (design historically references ancestor Panhu).",
+     "source": "https://en.wikipedia.org/wiki/Iu_Mien_people",
+     "confidence": "medium"
+    }
+   ],
+   "festivals": [],
+   "etiquette_notes": [
+    {
+     "text": "Religion: Taoist-influenced Mien folk religion, Buddhism and Christianity; ritual texts in Chinese characters.",
+     "source": "https://en.wikipedia.org/wiki/Iu_Mien_people",
+     "confidence": "high"
+    },
+    {
+     "text": "Do not ask about citizenship, ID cards, 'where are you really from' or legal status: statelessness affects hundreds of thousands of highland people and is sensitive. Let the person volunteer it.",
+     "source": "https://minorityrights.org/communities/indigenous-peoples-thailand/",
+     "confidence": "high"
+    }
+   ],
+   "chiang_mai_places": [
+    "Highland People Discovery Museum"
+   ],
+   "sources": [
+    "https://en.wikipedia.org/wiki/Iu_Mien_people"
+   ],
+   "confidence": "medium"
+  },
+  {
+   "group": "Lahu",
+   "self_designation": "Lahu (Ladhulsi); subgroups Lahu Na (Black), Lahu Nyi (Red), Lahu Shi (Yellow) etc.",
+   "exonyms_to_avoid": [
+    {
+     "text": "'Musoe' / 'Musser' (มูเซอ, 'hunter') – Thai exonym; prefer Lahu (ลาหู่). Offensiveness not established in sources – expert to confirm.",
+     "source": "https://en.wikipedia.org/wiki/Lahu_people",
+     "confidence": "medium"
+    }
+   ],
+   "language_family": "Sino-Tibetan > Lolo-Burmese > Loloish",
+   "regions": [
+    "Chiang Rai, Chiang Mai, Mae Hong Son (not verified per province); Lahu Na serves as a lingua franca among highland groups"
+   ],
+   "greetings": [
+    {
+     "text": "Awˬ bon uiˍ jaˇ",
+     "roman": "aw bon ui ja",
+     "english": "thank you (very much)",
+     "source": "https://userspace.com.au/~felix/files/learning_lahu.pdf",
+     "confidence": "medium"
+    },
+    {
+     "text": "Chehˬ sha chehˬ awˍ laˇ?",
+     "roman": "che sha che aw la",
+     "english": "how are you? (lit. living easily?)",
+     "source": "https://userspace.com.au/~felix/files/learning_lahu.pdf",
+     "confidence": "medium"
+    }
+   ],
+   "foods_and_goods": [
+    {
+     "text": "O pu (อ่อผุ) – pounded sticky-rice balls made for New Year; black pig offered.",
+     "source": "https://www.chiangmainews.co.th/100lanna/3563644/",
+     "confidence": "medium"
+    }
+   ],
+   "festivals": [
+    {
+     "text": "Kin Wo (กินวอ) Lahu New Year – after harvest, date set by each village, typically Feb–Apr; ~12 days in women's and men's phases; top spinning, ball games, ka kao we (ก่าเคาะเว) dancing through the night.",
+     "source": "https://www.chiangmainews.co.th/100lanna/3563644/",
+     "confidence": "medium"
+    }
+   ],
+   "etiquette_notes": [
+    {
+     "text": "Do not ask about citizenship, ID cards, 'where are you really from' or legal status: statelessness affects hundreds of thousands of highland people and is sensitive. Let the person volunteer it.",
+     "source": "https://minorityrights.org/communities/indigenous-peoples-thailand/",
+     "confidence": "high"
+    }
+   ],
+   "chiang_mai_places": [
+    "Highland People Discovery Museum"
+   ],
+   "sources": [
+    "https://en.wikipedia.org/wiki/Lahu_people"
+   ],
+   "confidence": "medium"
+  },
+  {
+   "group": "Lisu",
+   "self_designation": "Lisu (ꓡꓲ‐ꓢꓴ); Thai ลีซู / ลีซอ (Lisaw)",
+   "exonyms_to_avoid": [
+    {
+     "text": "'Lisaw' is the older Thai name; many prefer 'Lisu' (ลีซู) – expert to confirm.",
+     "source": "https://en.wikipedia.org/wiki/Lisu_people",
+     "confidence": "low"
+    }
+   ],
+   "language_family": "Sino-Tibetan > Loloish",
+   "regions": [
+    "~55,000 in Thailand; remote northern mountains (Chiang Mai, Chiang Rai, Mae Hong Son – not verified per province)"
+   ],
+   "greetings": [],
+   "foods_and_goods": [
+    {
+     "text": "Silver jewellery and bright clothing worn at New Year.",
+     "source": "https://en.wikipedia.org/wiki/Lisu_people",
+     "confidence": "medium"
+    }
+   ],
+   "festivals": [
+    {
+     "text": "Lisu New Year coincides with Chinese (lunar) New Year: best clothes, silver, music, feasting.",
+     "source": "https://en.wikipedia.org/wiki/Lisu_people",
+     "confidence": "high"
+    }
+   ],
+   "etiquette_notes": [
+    {
+     "text": "Do not ask about citizenship, ID cards, 'where are you really from' or legal status: statelessness affects hundreds of thousands of highland people and is sensitive. Let the person volunteer it.",
+     "source": "https://minorityrights.org/communities/indigenous-peoples-thailand/",
+     "confidence": "high"
+    }
+   ],
+   "chiang_mai_places": [
+    "Highland People Discovery Museum"
+   ],
+   "sources": [
+    "https://en.wikipedia.org/wiki/Lisu_people"
+   ],
+   "confidence": "medium"
+  },
+  {
+   "group": "Akha",
+   "self_designation": "Akha; language Avkavdawv",
+   "exonyms_to_avoid": [
+    {
+     "text": "'Ekaw' / 'Kaw' / 'Igor' (อีก้อ) – Tai exonym; Akha consider it derogatory (connotation close to 'slave'). Use Akha (อาข่า).",
+     "source": "https://factsanddetails.com/asian/cat66/sub417/item2745.html",
+     "confidence": "high"
+    },
+    {
+     "text": "Don't lump Akha together with China's 'Hani' – many Akha resist that classification.",
+     "source": "https://en.wikipedia.org/wiki/Akha_people",
+     "confidence": "high"
+    }
+   ],
+   "language_family": "Sino-Tibetan > Loloish (Hanoish)",
+   "regions": [
+    "~70,000–80,000 in Thailand, concentrated in Chiang Rai; also Chiang Mai"
+   ],
+   "greetings": [],
+   "foods_and_goods": [
+    {
+     "text": "Akha Ama Coffee – social enterprise founded by Lee Ayu Chuepa (Akha), well-known Chiang Mai café; 'hill tribe Arabica' sold at Ton Lamyai.",
+     "source": "https://www.asaihotels.com/the-journal/from-root-to-cup-with-lee-ayu-chuepa-from-akha-ama-coffee/",
+     "confidence": "medium"
+    },
+    {
+     "text": "Chili pastes pounded in stone mortar; highland rice, vegetables, pork, chicken.",
+     "source": "https://factsanddetails.com/asian/cat66/sub417/item2745.html",
+     "confidence": "medium"
+    }
+   ],
+   "festivals": [
+    {
+     "text": "Swing Festival (Yehkuja, 'eating bitter rice'; 'Women's New Year') – late August, ~120 days after rice planting; Men's New Year late December.",
+     "source": "https://en.wikipedia.org/wiki/Akha_people",
+     "confidence": "high"
+    }
+   ],
+   "etiquette_notes": [
+    {
+     "text": "Village spirit gate (lokha): don't touch it; don't walk through unless you're visiting a house.",
+     "source": "https://factsanddetails.com/asian/cat66/sub417/item2745.html",
+     "confidence": "high"
+    },
+    {
+     "text": "Do not ask about citizenship, ID cards, 'where are you really from' or legal status: statelessness affects hundreds of thousands of highland people and is sensitive. Let the person volunteer it.",
+     "source": "https://minorityrights.org/communities/indigenous-peoples-thailand/",
+     "confidence": "high"
+    }
+   ],
+   "chiang_mai_places": [
+    "Akha Ama Coffee cafés",
+    "Highland People Discovery Museum"
+   ],
+   "sources": [
+    "https://en.wikipedia.org/wiki/Akha_people"
+   ],
+   "confidence": "high"
+  },
+  {
+   "group": "Lawa / Lua",
+   "self_designation": "Lawa (Eastern Lawa of Chiang Mai prefer outsiders say 'Lua'); Thai ลัวะ / ละว้า",
+   "exonyms_to_avoid": [
+    {
+     "text": "Thais use 'Lua' loosely for several different Palaungic groups (and even for H'tin) – ask rather than assume.",
+     "source": "https://en.wikipedia.org/wiki/Lawa_people",
+     "confidence": "medium"
+    }
+   ],
+   "language_family": "Austroasiatic > Palaungic",
+   "regions": [
+    "Mae Hong Son (Western Lawa near Mae Sariang)",
+    "Chiang Mai (Eastern Lawa, Bo Luang area)"
+   ],
+   "greetings": [],
+   "foods_and_goods": [
+    {
+     "text": "Known as ironsmiths / skilled crafts.",
+     "source": "https://en.wikipedia.org/wiki/Lawa_people",
+     "confidence": "medium"
+    }
+   ],
+   "festivals": [],
+   "etiquette_notes": [
+    {
+     "text": "Regarded as original inhabitants of the North before the Tai; Chiang Mai was founded on a Lawa site and Lawa appear in Lanna founding legends (Camadevi, Mangrai) – a point of respect.",
+     "source": "https://en.wikipedia.org/wiki/Lawa_people",
+     "confidence": "high"
+    }
+   ],
+   "chiang_mai_places": [
+    "Highland People Discovery Museum"
+   ],
+   "sources": [
+    "https://en.wikipedia.org/wiki/Lawa_people"
+   ],
+   "confidence": "medium"
+  },
+  {
+   "group": "Khmu (Khamu)",
+   "self_designation": "Khmu (likely 'people'); also pruʔ",
+   "exonyms_to_avoid": [
+    {
+     "text": "'Kha' (ข่า, historically 'slave/serf') – derogatory.",
+     "source": "https://en.wikipedia.org/wiki/Khmu_people",
+     "confidence": "high"
+    }
+   ],
+   "language_family": "Austroasiatic > Khmuic",
+   "regions": [
+    "~10,000 in Thailand, mainly Nan near the Lao border; some in Phayao and Chiang Rai"
+   ],
+   "greetings": [],
+   "foods_and_goods": [],
+   "festivals": [
+    {
+     "text": "Traditional rice-planting, harvest, new year and purification festivals; independent new year now rarely held.",
+     "source": "https://en.wikipedia.org/wiki/Khmu_people",
+     "confidence": "medium"
+    }
+   ],
+   "etiquette_notes": [
+    {
+     "text": "Do not ask about citizenship, ID cards, 'where are you really from' or legal status: statelessness affects hundreds of thousands of highland people and is sensitive. Let the person volunteer it.",
+     "source": "https://minorityrights.org/communities/indigenous-peoples-thailand/",
+     "confidence": "high"
+    }
+   ],
+   "chiang_mai_places": [
+    "Highland People Discovery Museum"
+   ],
+   "sources": [
+    "https://en.wikipedia.org/wiki/Khmu_people"
+   ],
+   "confidence": "medium"
+  },
+  {
+   "group": "H'tin / Prai and Mal",
+   "self_designation": "Mal and Prai (two branches; 'phyam mal', 'khram prai')",
+   "exonyms_to_avoid": [
+    {
+     "text": "'Tin/Htin' (ถิ่น, Thai for 'local inhabitant'), 'Lua', 'Phai', 'Kha' – outsider names connoting low status; prefer Mal / Prai.",
+     "source": "https://thesiamsociety.org/wp-content/uploads/1987/03/JSS_075_0h_Filbeck_NewEthnicNamesForTinOfNan.pdf",
+     "confidence": "high"
+    }
+   ],
+   "language_family": "Austroasiatic (Mon-Khmer), close to Khmu",
+   "regions": [
+    "Nan: Pua, Chiang Klang, Thong Chang districts; Sayabury, Laos"
+   ],
+   "greetings": [],
+   "foods_and_goods": [],
+   "festivals": [],
+   "etiquette_notes": [
+    {
+     "text": "Do not ask about citizenship, ID cards, 'where are you really from' or legal status: statelessness affects hundreds of thousands of highland people and is sensitive. Let the person volunteer it.",
+     "source": "https://minorityrights.org/communities/indigenous-peoples-thailand/",
+     "confidence": "high"
+    }
+   ],
+   "chiang_mai_places": [
+    "Highland People Discovery Museum"
+   ],
+   "sources": [
+    "https://thesiamsociety.org/wp-content/uploads/1987/03/JSS_075_0h_Filbeck_NewEthnicNamesForTinOfNan.pdf"
+   ],
+   "confidence": "medium"
+  },
+  {
+   "group": "Yunnanese Chinese (Chin Haw)",
+   "self_designation": "Commonly 'Yunnanese'; Thai จีนฮ่อ (Chin Haw/Ho). Muslim members are Hui (Chinese Muslims).",
+   "exonyms_to_avoid": [
+    {
+     "text": "Whether 'Haw' is felt as pejorative is not established in sources; 'Yunnanese' is a safe neutral term.",
+     "source": "https://en.wikipedia.org/wiki/Chin_Haw",
+     "confidence": "low"
+    }
+   ],
+   "language_family": "Sino-Tibetan > Sinitic (Southwestern Mandarin / Yunnanese)",
+   "regions": [
+    "Chiang Mai (Ban Haw near Night Bazaar)",
+    "Chiang Rai highlands incl. former KMT settlements (e.g. Mae Salong – not verified here)"
+   ],
+   "greetings": [],
+   "foods_and_goods": [
+    {
+     "text": "Khao soi's predecessor arrived via Chin Haw Muslim traders; khao soi Islam (halal, chicken/beef) around Ban Haw.",
+     "source": "https://en.wikipedia.org/wiki/Khao_soi",
+     "confidence": "high"
+    },
+    {
+     "text": "Friday-morning Chin Haw/Yunnan market: cured ham and sausages, corn pancakes, mala sausages, dim sum, black-sesame doughnuts, plus Burmese mohinga, biryani, samosas.",
+     "source": "https://bangkokglutton.com/2025/02/14/markets-chin-haw-market/",
+     "confidence": "medium"
+    },
+    {
+     "text": "Historic mule-caravan trade in cotton, silks, tea, tobacco.",
+     "source": "https://www.chiangmai-alacarte.com/blog/the-muslim-community-in-chiang-mai/",
+     "confidence": "medium"
+    }
+   ],
+   "festivals": [
+    {
+     "text": "Friday prayers at Ban Haw mosque; the Friday market grew out of this gathering.",
+     "source": "https://www.chiangmaicitylife.com/clg/living/exploring-chiang-mais-muslim-friendly-travel-destinations-from-the-yunnan-market-to-the-citys-cultural-heritage/",
+     "confidence": "medium"
+    }
+   ],
+   "etiquette_notes": [
+    {
+     "text": "About one-third of Chin Haw are Muslim; the majority are Buddhist or follow Chinese folk religion – don't assume. Halal food around Ban Haw: don't bring pork.",
+     "source": "https://en.wikipedia.org/wiki/Chin_Haw",
+     "confidence": "high"
+    },
+    {
+     "text": "Some descend from post-1949 Kuomintang remnants; avoid political questions.",
+     "source": "https://en.wikipedia.org/wiki/Chin_Haw",
+     "confidence": "medium"
+    }
+   ],
+   "chiang_mai_places": [
+    "Ban Haw Mosque (มัสยิดเฮดายาตูลอิสลามบ้านฮ่อ), Charoen Prathet Rd area (Soi 1/Soi 6 cited variously – verify) near Night Bazaar – largest mosque in Chiang Mai province",
+    "Friday Yunnan market (Kad Ban Hor), Chang Khlan Rd"
+   ],
+   "sources": [
+    "https://en.wikipedia.org/wiki/Chin_Haw",
+    "https://en.wikipedia.org/wiki/Ban_Ho_Mosque"
+   ],
+   "confidence": "medium"
+  },
+  {
+   "group": "Burmese / Shan migrant workers (Myanmar nationals)",
+   "self_designation": "Varies: Tai (Shan), Bamar, Karen, Pa-O, Mon etc. – ask",
+   "exonyms_to_avoid": [
+    {
+     "text": "'Illegal' – use 'migrant' or 'undocumented'. Online stereotypes paint migrants as disease-carrying 'vermin'; never echo these.",
+     "source": "https://www.chiangmaicitylife.com/clg/living/migrant-lives-matter-the-challenges-and-prejudices-faced-by-shan-migrant-workers/",
+     "confidence": "high"
+    }
+   ],
+   "language_family": "Mostly Tai (Shan) or Sino-Tibetan (Burmese, Karen)",
+   "regions": [
+    "Chiang Mai Province: 100,000+ migrant workers, ~90% Shan"
+   ],
+   "greetings": [
+    {
+     "text": "မင်္ဂလာပါ",
+     "roman": "mingalaba",
+     "english": "hello (Burmese; use for Bamar speakers – Shan speakers may prefer Mai Soong)",
+     "source": "https://en.wikipedia.org/wiki/Mingalaba",
+     "confidence": "low"
+    }
+   ],
+   "foods_and_goods": [
+    {
+     "text": "Mohinga, samosas, biryani at the Friday Chin Haw market.",
+     "source": "https://bangkokglutton.com/2025/02/14/markets-chin-haw-market/",
+     "confidence": "medium"
+    }
+   ],
+   "festivals": [],
+   "etiquette_notes": [
+    {
+     "text": "Legal restrictions (not culture) limit jobs to labour/domestic roles and create vulnerability; never ask about papers or status. Many market workers are Shan and speak Northern Thai-like Tai.",
+     "source": "https://www.chiangmaicitylife.com/clg/living/migrant-lives-matter-the-challenges-and-prejudices-faced-by-shan-migrant-workers/",
+     "confidence": "medium"
+    }
+   ],
+   "chiang_mai_places": [
+    "Wat Pa Pao",
+    "Friday Chin Haw market"
+   ],
+   "sources": [
+    "https://www.chiangmaicitylife.com/clg/living/migrant-lives-matter-the-challenges-and-prejudices-faced-by-shan-migrant-workers/"
+   ],
+   "confidence": "medium"
+  }
+ ],
+ "chiang_mai_places": [
+  {
+   "name": "Warorot Market / Kad Luang (ตลาดวโรรส / กาดหลวง)",
+   "what": "Main downtown market in Chiang Mai's Chinatown between Tha Phae Gate and the Ping River; 3-storey hall plus Chang Moi Rd stalls; dry goods, chili paste by the kilo, Northern snacks, hill-tribe clothing.",
+   "source": "https://wander-lush.org/guide-warorot-lamyai-hmong-market-chiang-mai-thailand/",
+   "confidence": "high"
+  },
+  {
+   "name": "Ton Lamyai market (ตลาดต้นลำไย)",
+   "what": "Next to Warorot; flowers/produce, 'hill tribe Arabica coffee' and local tea, woven rice baskets.",
+   "source": "https://wander-lush.org/guide-warorot-lamyai-hmong-market-chiang-mai-thailand/",
+   "confidence": "high"
+  },
+  {
+   "name": "Hmong Market (by Warorot)",
+   "what": "Batik and embroidered skirts, vintage Hmong fabric, quilts, baby carriers.",
+   "source": "https://wander-lush.org/guide-warorot-lamyai-hmong-market-chiang-mai-thailand/",
+   "confidence": "high"
+  },
+  {
+   "name": "Wat Ket Karam & Wat Ket Museum",
+   "what": "East bank of the Ping; temple founded 1428; museum set up c. 2000 by Jack Bain in a building financed by Chinese residents; multicultural riverside trading quarter. Museum under restoration as of last report.",
+   "source": "https://www.chiangmai-alacarte.com/blog/wat-ket-karaam-and-the-wat-ket-museum/",
+   "confidence": "medium"
+  },
+  {
+   "name": "Ban Haw Mosque & Yunnanese quarter (Chang Khlan / Charoen Prathet)",
+   "what": "Hui/Chin Haw mosque near the Night Bazaar; founding given as 19th century (Wikipedia) vs built 1916 (other source); Friday Yunnan market.",
+   "source": "https://en.wikipedia.org/wiki/Ban_Ho_Mosque",
+   "confidence": "medium"
+  },
+  {
+   "name": "Wat Pa Pao",
+   "what": "Shan temple NE corner of old city, founded 1883; Poy Sang Long each April; Shan community centre.",
+   "source": "https://en.wikipedia.org/wiki/Wat_Pa_Pao,_Mueang_Chiang_Mai",
+   "confidence": "high"
+  },
+  {
+   "name": "Wat Nantaram / Wualai",
+   "what": "Tai Khuen lacquerware community area.",
+   "source": "https://www.chiangmai-alacarte.com/blog/wat-nantaram-in-chiang-mai/",
+   "confidence": "medium"
+  },
+  {
+   "name": "Highland People Discovery Museum",
+   "what": "Formerly the Tribal Museum (of CMU's Tribal Research Institute); beside Ratchamangkhala Park, Mueang Chiang Mai; exhibits on Akha, Karen, Khamu, Lahu, Lua, Lisu, Hmong, Mien, H'tin, Mlabri; monthly highland market.",
+   "source": "https://en.wikipedia.org/wiki/Highland_People_Discovery_Museum",
+   "confidence": "medium"
+  },
+  {
+   "name": "Doi Pui Hmong village",
+   "what": "Green Hmong village on Doi Suthep; shops, cafés, small museum (10 THB).",
+   "source": "https://www.green-trails.com/doi-pui-hmong-village/",
+   "confidence": "medium"
+  }
+ ]
+}

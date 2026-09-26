@@ -1,0 +1,584 @@
+{
+ "about": "Regular Kham Mueang (Northern Thai) <-> Central Thai mappings to help an LLM normalise Northern speech written in Thai script to standard Thai. Rules are tendencies, not absolute; always prefer glossary lookups first. Northern forms here are as written in Thai script by native-speaker web sources (Chiang Mai / Chiang Rai), whose tone-mark spellings are informal.",
+ "how_to_use": [
+  "1. Look up whole words/phrases in kham_mueang_glossary.json.",
+  "2. Apply lexical substitutions (lexical_map) for high-frequency function words.",
+  "3. If still unknown, try reversing the consonant rules (e.g. Northern ฮ- -> Central ร-; Northern unaspirated ก/จ/ต/ป -> Central ค/ช/ท/พ) and check if a real Central word results.",
+  "4. Ignore Northern tone marks (๋ ๊) when matching; they encode Northern tones on otherwise identical words (กิ๋น = กิน)."
+ ],
+ "consonant_rules": [
+  {
+   "id": "aspiration_loss",
+   "northern": "unaspirated ก /k/, จ /tɕ/, ต /t/, ป /p/",
+   "central": "aspirated ค /kʰ/, ช /tɕʰ/, ท /tʰ/, พ /pʰ/",
+   "scope": "Words whose Central initial is the LOW-class aspirated letter (ค ช ท พ). High-class aspirates (ข ฉ ถ ผ) generally stay aspirated (ถึง -> เถิง, ข้าว -> เข้า).",
+   "examples": [
+    [
+     "คิด",
+     "กึ๊ด",
+     "think"
+    ],
+    [
+     "ชาว",
+     "จาว",
+     "people of"
+    ],
+    [
+     "เชียงราย",
+     "เจียงฮาย",
+     "Chiang Rai"
+    ],
+    [
+     "ช้อน",
+     "จ๊อน",
+     "spoon"
+    ],
+    [
+     "ใช้",
+     "ใจ๊",
+     "use"
+    ],
+    [
+     "เชิญ",
+     "เจิญ",
+     "invite/please"
+    ],
+    [
+     "โชค",
+     "โจค",
+     "luck"
+    ],
+    [
+     "ทั้ง",
+     "ตึง",
+     "all"
+    ],
+    [
+     "ที่",
+     "ตี้/ตี่",
+     "at/that"
+    ],
+    [
+     "พ่อ",
+     "ป้อ",
+     "father"
+    ],
+    [
+     "พี่",
+     "ปี่/ปี้",
+     "older sibling"
+    ],
+    [
+     "เพื่อน",
+     "เปื่อน",
+     "friend"
+    ],
+    [
+     "แพง",
+     "แปง",
+     "expensive"
+    ],
+    [
+     "พัน",
+     "ปัน",
+     "thousand"
+    ]
+   ],
+   "source": "https://en.wikipedia.org/wiki/Northern_Thai_language",
+   "confidence": "high",
+   "note": "Wikipedia states the general rule (/kʰ tɕʰ tʰ pʰ/ vs /k tɕ t p/, example คิด); examples from GTK, KIN, SIAM, FIX."
+  },
+  {
+   "id": "r_to_h",
+   "northern": "ฮ /h/",
+   "central": "ร /r/ (initial)",
+   "examples": [
+    [
+     "รัก",
+     "ฮัก",
+     "love"
+    ],
+    [
+     "รู้",
+     "ฮู้",
+     "know"
+    ],
+    [
+     "ร้อน",
+     "ฮ้อน",
+     "hot"
+    ],
+    [
+     "เรือน",
+     "เฮือน",
+     "house"
+    ],
+    [
+     "โรงเรียน",
+     "โฮงเฮียน",
+     "school"
+    ],
+    [
+     "เรา",
+     "เฮา",
+     "we"
+    ],
+    [
+     "รูป",
+     "ฮูป",
+     "photo"
+    ],
+    [
+     "รับ",
+     "ฮับ",
+     "receive/order"
+    ],
+    [
+     "เรียน",
+     "เฮียน",
+     "study"
+    ],
+    [
+     "ราย",
+     "ฮาย",
+     "(in เจียงฮาย)"
+    ]
+   ],
+   "source": "https://en.wikipedia.org/wiki/Northern_Thai_language",
+   "confidence": "high",
+   "note": "Very productive; reverse it first when an unknown word starts with ฮ."
+  },
+  {
+   "id": "ny_palatal",
+   "northern": "ญ /ɲ/ (nasal)",
+   "central": "ย /j/ or ญ read as /j/",
+   "examples": [
+    [
+     "ยาก",
+     "ญาก",
+     "difficult"
+    ],
+    [
+     "ผู้หญิง",
+     "แม่ญิง",
+     "woman"
+    ]
+   ],
+   "source": "https://en.wikipedia.org/wiki/Northern_Thai_language",
+   "confidence": "high"
+  },
+  {
+   "id": "cluster_reduction",
+   "northern": "single consonant",
+   "central": "clusters กล- ปล- (and some ปร-)",
+   "examples": [
+    [
+     "กล้วย",
+     "ก้วย",
+     "banana"
+    ],
+    [
+     "ปลา",
+     "ป๋า",
+     "fish"
+    ],
+    [
+     "มะปราง",
+     "บะผาง",
+     "marian plum (ปร -> ผ)"
+    ]
+   ],
+   "source": "https://www.chiangrai108.com/artsculture/10392/",
+   "confidence": "medium",
+   "note": "Colloquial Central Thai also drops /l/ and /r/ in clusters, so this is partly shared."
+  },
+  {
+   "id": "s_spelling",
+   "northern": "ซ",
+   "central": "ส",
+   "examples": [
+    [
+     "สิบ",
+     "ซิบ",
+     "ten"
+    ],
+    [
+     "สิบเอ็ด",
+     "ซิบเอ๋ด",
+     "eleven"
+    ]
+   ],
+   "source": "https://www.tewfree.com/%E0%B8%84%E0%B8%B3%E0%B8%A8%E0%B8%B1%E0%B8%9E%E0%B8%97%E0%B9%8C%E0%B8%A0%E0%B8%B2%E0%B8%A9%E0%B8%B2%E0%B9%80%E0%B8%AB%E0%B8%99%E0%B8%B7%E0%B8%AD/",
+   "confidence": "medium",
+   "note": "Same /s/ sound; the letter change reflects Northern tone, not a consonant change."
+  }
+ ],
+ "vowel_and_tone_rules": [
+  {
+   "id": "tone_mark_respelling",
+   "description": "Northern Thai-script spellings add ๋ (mai chattawa) or ๊ (mai tri) to Central words to show the Northern tone. Strip these marks when matching.",
+   "examples": [
+    [
+     "กิน",
+     "กิ๋น",
+     "eat"
+    ],
+    [
+     "จาน",
+     "จ๋าน",
+     "plate"
+    ],
+    [
+     "แกง",
+     "แก๋ง",
+     "curry"
+    ],
+    [
+     "กัน",
+     "กั๋น",
+     "together"
+    ],
+    [
+     "ใจ",
+     "ใจ๋",
+     "heart/mind"
+    ],
+    [
+     "ตัว",
+     "ตั๋ว",
+     "you (pron.)"
+    ],
+    [
+     "เจ็ด",
+     "เจ๋ด",
+     "seven"
+    ],
+    [
+     "ปู",
+     "ปู๋",
+     "crab"
+    ]
+   ],
+   "source": "https://www.gotoknow.org/posts/248586",
+   "confidence": "high",
+   "note": "Chiang Mai dialect has 6 tones on smooth syllables vs Central's 5 (Wikipedia), so Thai-script spellings are approximate."
+  },
+  {
+   "id": "vowel_shifts",
+   "description": "Sporadic vowel correspondences seen in common words.",
+   "examples": [
+    [
+     "เห็น",
+     "หัน",
+     "see (e -> a)"
+    ],
+    [
+     "เอว",
+     "แอว",
+     "waist"
+    ],
+    [
+     "ให้",
+     "หื้อ",
+     "give"
+    ],
+    [
+     "คิด",
+     "กึ๊ด",
+     "think (i -> ɯ)"
+    ],
+    [
+     "ถึง",
+     "เถิง",
+     "reach"
+    ],
+    [
+     "ข้าว (meal)",
+     "เข้า",
+     "as in เข้างาย/เข้าแลง"
+    ]
+   ],
+   "source": "https://www.gotoknow.org/posts/248586",
+   "confidence": "medium",
+   "note": "Not fully regular; treat as lookup hints."
+  },
+  {
+   "id": "fruit_prefix",
+   "description": "Central fruit/vegetable prefix มะ- corresponds to Northern บะ-/บ่ะ-/หมะ-.",
+   "examples": [
+    [
+     "มะเขือเทศ",
+     "บะเขือส้ม",
+     "tomato"
+    ],
+    [
+     "มะพร้าว",
+     "บะป๊าว",
+     "coconut"
+    ],
+    [
+     "มะละกอ",
+     "บะก้วยเต๊ด",
+     "papaya"
+    ],
+    [
+     "ขนุน",
+     "บะหนุน",
+     "jackfruit"
+    ],
+    [
+     "แตงกวา",
+     "บะแต๋ง",
+     "cucumber"
+    ]
+   ],
+   "source": "https://www.chiangrai108.com/artsculture/10392/",
+   "confidence": "high"
+  }
+ ],
+ "lexical_map": {
+  "note": "High-frequency words that are different lexemes, not sound shifts. Northern -> Central.",
+  "source": "see kham_mueang_glossary.json per entry",
+  "pairs": [
+   [
+    "บ่",
+    "ไม่",
+    "not"
+   ],
+   [
+    "ก่อ",
+    "ไหม",
+    "question"
+   ],
+   [
+    "กา",
+    "หรือ/เหรอ",
+    "confirm question"
+   ],
+   [
+    "บ๋อ",
+    "ไหม",
+    "question"
+   ],
+   [
+    "เจ้า",
+    "ค่ะ/คะ",
+    "polite female"
+   ],
+   [
+    "คับ",
+    "ครับ",
+    "polite male"
+   ],
+   [
+    "เน้อ",
+    "นะ",
+    "softener"
+   ],
+   [
+    "เต๊อะ",
+    "เถอะ",
+    "urging"
+   ],
+   [
+    "แหม",
+    "อีก",
+    "more"
+   ],
+   [
+    "ขนาด / จ๊าด / นัก / แต๊",
+    "มาก / จริง",
+    "very"
+   ],
+   [
+    "อะหยัง / หยัง",
+    "อะไร",
+    "what"
+   ],
+   [
+    "เต้าใด",
+    "เท่าไร",
+    "how much"
+   ],
+   [
+    "ตี้ไหน",
+    "ที่ไหน",
+    "where"
+   ],
+   [
+    "จะใด",
+    "อย่างไร",
+    "how"
+   ],
+   [
+    "ยินดี",
+    "ขอบคุณ",
+    "thank you (FALSE FRIEND)"
+   ],
+   [
+    "สูมา",
+    "ขอโทษ",
+    "sorry"
+   ],
+   [
+    "ลำ",
+    "อร่อย",
+    "delicious"
+   ],
+   [
+    "อู้",
+    "พูด",
+    "speak"
+   ],
+   [
+    "ยะ",
+    "ทำ",
+    "do"
+   ],
+   [
+    "ผ่อ",
+    "ดู",
+    "look"
+   ],
+   [
+    "หื้อ",
+    "ให้",
+    "give"
+   ],
+   [
+    "ไข / ใค่",
+    "อยาก",
+    "want"
+   ],
+   [
+    "แอ่ว",
+    "เที่ยว",
+    "go out"
+   ],
+   [
+    "ปิ๊ก",
+    "กลับ",
+    "return"
+   ],
+   [
+    "เมิน",
+    "นาน",
+    "long time"
+   ],
+   [
+    "ม่วน",
+    "สนุก",
+    "fun"
+   ],
+   [
+    "งาม",
+    "สวย",
+    "beautiful"
+   ],
+   [
+    "หลวง",
+    "ใหญ่",
+    "big"
+   ],
+   [
+    "กาด",
+    "ตลาด",
+    "market"
+   ],
+   [
+    "ซาว",
+    "ยี่สิบ",
+    "twenty"
+   ],
+   [
+    "ข้าวนึ่ง",
+    "ข้าวเหนียว",
+    "sticky rice"
+   ],
+   [
+    "แลง",
+    "เย็น",
+    "evening"
+   ],
+   [
+    "ละอ่อน",
+    "เด็ก",
+    "child"
+   ],
+   [
+    "เปิ้น",
+    "ฉัน/เขา",
+    "I or he/she"
+   ],
+   [
+    "ตั๋ว",
+    "เธอ/คุณ",
+    "you"
+   ],
+   [
+    "ข้าเจ้า",
+    "ดิฉัน",
+    "I (female polite)"
+   ],
+   [
+    "หมู่เฮา",
+    "พวกเรา",
+    "we"
+   ],
+   [
+    "อ้าย",
+    "พี่ชาย",
+    "older brother"
+   ],
+   [
+    "ป้ออุ้ย / แม่อุ้ย",
+    "ปู่ตา / ย่ายาย",
+    "grandpa / grandma"
+   ]
+  ]
+ },
+ "false_friends": [
+  {
+   "northern": "ยินดี",
+   "northern_meaning": "thank you",
+   "central_meaning": "glad; you're welcome",
+   "source": "https://chiangmai.siamdot.com/thai-northern-language/",
+   "confidence": "high"
+  },
+  {
+   "northern": "แหม",
+   "northern_meaning": "more, again (= อีก)",
+   "central_meaning": "exclamation 'oh my'",
+   "source": "https://www.gotoknow.org/posts/248586",
+   "confidence": "high"
+  },
+  {
+   "northern": "เปิ้น",
+   "northern_meaning": "I (polite) OR he/she",
+   "central_meaning": "(not used)",
+   "source": "https://www.chiangrai108.com/artsculture/10392/",
+   "confidence": "high"
+  },
+  {
+   "northern": "อยาก (อยากข้าว)",
+   "northern_meaning": "hungry (for rice)",
+   "central_meaning": "to want",
+   "source": "https://www.trueplookpanya.com/learning/detail/25164",
+   "confidence": "medium"
+  },
+  {
+   "northern": "ส้ม",
+   "northern_meaning": "sour (as in จิ๊นส้ม, บะเขือส้ม)",
+   "central_meaning": "orange (fruit); sour only in compounds like แกงส้ม",
+   "source": "https://www.wongnai.com/food-tips/top-35-must-try-northern-thai-dishes",
+   "confidence": "medium"
+  },
+  {
+   "northern": "เจ้า",
+   "northern_meaning": "polite particle (yes); formal 'you'",
+   "central_meaning": "lord/owner; royal/sacred prefix",
+   "source": "https://www.gotoknow.org/posts/248586",
+   "confidence": "high"
+  }
+ ]
+}

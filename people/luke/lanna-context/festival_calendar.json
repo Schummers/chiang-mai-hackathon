@@ -1,0 +1,788 @@
+{
+ "meta": {
+  "generated": "2026-09-26",
+  "covers": "2026-10 to 2027-12 (with a few earlier 2026 events for reference)",
+  "date_format": "ISO YYYY-MM-DD; estimated=true means not officially announced",
+  "lanna_month_offset": "Lanna month number = Central Thai month number + 2 (e.g. Central 12 = Lanna 2 'yi')",
+  "alcohol_ban_days_rule": "Whole-day nationwide ban on Makha Bucha, Visakha Bucha, Asalha Bucha, Khao Phansa, Ok Phansa (PM Office notification 2025); exempt: hotels, international airport terminals, licensed entertainment venues, tourist-zone bars, special events. Election: 18:00 eve to 18:00 election day."
+ },
+ "festivals": [
+  {
+   "id": "ok_phansa",
+   "name": "Ok Phansa (End of Buddhist Lent)",
+   "thai": "วันออกพรรษา",
+   "rtgs": "Wan Ok Phansa",
+   "category": "buddhist",
+   "dates_2026_2027": [
+    {
+     "start": "2026-10-26",
+     "end": "2026-10-26",
+     "estimated": false
+    },
+    {
+     "start": "2027-10-15",
+     "end": "2027-10-15",
+     "estimated": false
+    }
+   ],
+   "lunar_rule": "Full moon (15th waxing day) of Central Thai lunar month 11; ends the 3-month rains retreat. Lanna calendar counts this as month 1 (Lanna months run 2 ahead of Central).",
+   "location": "All temples; Chiang Mai, Nan and Northern provinces",
+   "what_happens": "End of the monks' rains retreat. Merit-making at temples; the following weeks are the season for kathin robe-offering ceremonies and, in Nan, the long-boat races.",
+   "foods": [],
+   "etiquette": [
+    "Nationwide ban on alcohol sales for the whole day except exempt venues (hotels, international airport terminals, licensed entertainment venues)",
+    "Dress modestly if visiting a temple; expect temples to be busy early morning"
+   ],
+   "alcohol_ban": true,
+   "source": "https://myhora.com/calendar/thai-2569.aspx",
+   "extra_sources": [
+    "https://myhora.com/calendar/thai-2570.aspx",
+    "https://www.nationthailand.com/blogs/news/general/40062977"
+   ],
+   "confidence": "high",
+   "needs_review": null
+  },
+  {
+   "id": "yi_peng_loy_krathong",
+   "name": "Yi Peng / Loy Krathong (Chiang Mai)",
+   "thai": "ประเพณีเดือนยี่เป็ง / ลอยกระทง",
+   "rtgs": "Prapheni Duean Yi Peng / Loi Krathong",
+   "category": "lanna_festival",
+   "dates_2026_2027": [
+    {
+     "start": "2026-11-23",
+     "end": "2026-11-25",
+     "estimated": false,
+     "note": "Chiang Mai municipality official dates; Loy Krathong full-moon day is 2026-11-24"
+    },
+    {
+     "start": "2027-11-12",
+     "end": "2027-11-14",
+     "estimated": true,
+     "note": "Loy Krathong full-moon day 2027-11-13 (myhora); municipal festival days not yet announced, estimated as the day before to day after"
+    }
+   ],
+   "lunar_rule": "Full moon of Central Thai month 12 = Lanna month 2 ('yi' = two, 'peng' = full moon). Loy Krathong day is 15th waxing of month 12.",
+   "location": "Chiang Mai old city and Ping River (Tha Phae Gate, Nawarat Bridge area, temples such as Wat Phan Tao); also every Northern province",
+   "what_happens": "Lanna festival of light held with Loy Krathong: temples and homes decorated with hanging and decorative paper lanterns (khom khwaen, khom fai), small clay oil lamps (phang prathip) lit as offerings, krathong floated on the Ping River, krathong procession/competition (2026: on 25 Nov). Sky lanterns (khom loi) are associated with the festival but the municipality asks that none be released inside Chiang Mai city; mass releases happen only at ticketed, permitted events outside the city.",
+   "foods": [],
+   "etiquette": [
+    "Do not release sky lanterns in Chiang Mai city: municipality asks for a strict ban; releases near the airport no-fly zone are illegal",
+    "Float krathong gently; biodegradable (banana-trunk/leaf) krathong are preferred",
+    "Crowds are very heavy on the full-moon night; temples are still places of worship",
+    "Do not buy tickets for 'Yi Peng' mass-release events from unofficial sellers (many look-alike ticket sites exist)"
+   ],
+   "alcohol_ban": false,
+   "source": "https://www.chiangmainews.co.th/news/chiangmai/4138857/",
+   "extra_sources": [
+    "https://myhora.com/calendar/thai-2569.aspx",
+    "https://myhora.com/calendar/thai-2570.aspx",
+    "https://en.wikipedia.org/wiki/Yi_Peng_festival"
+   ],
+   "confidence": "high",
+   "needs_review": "2027 municipal dates estimated; confirm Lanna lantern terms (khom khwaen, khom fai, phang prathip) with Thai script from a Lanna source."
+  },
+  {
+   "id": "hmong_new_year",
+   "name": "Hmong New Year",
+   "thai": "ปีใหม่ม้ง",
+   "rtgs": "Pi Mai Mong",
+   "category": "ethnic_community",
+   "dates_2026_2027": [
+    {
+     "start": "2026-12-15",
+     "end": "2027-01-15",
+     "estimated": true,
+     "note": "Held village by village after harvest, mostly late December to early January; no single date. 2025/26 examples: Nan (Pa Klang) 20 Dec, Tak 20-26 Dec; a Chiang Mai city celebration was reported on 3 Jan 2025."
+    }
+   ],
+   "lunar_rule": "Follows the Hmong lunar calendar at the end of the harvest season; each village or network sets its own dates.",
+   "location": "Hmong villages in Chiang Mai (e.g. around Doi Pui), Nan, Tak, Chiang Rai and other highland areas",
+   "what_happens": "Community new-year festival with people in new traditional clothing, a ball-toss game in which young men and women face each other and chat (pov pob), sports and contests.",
+   "foods": [],
+   "etiquette": [
+    "Use 'Hmong' (self-designation); the Thai exonym 'แม้ว' (Maeo) is considered derogatory - Thai official usage is 'ม้ง' (Mong)",
+    "Ask before photographing people, especially in traditional clothes",
+    "Visitors join the ball toss only if invited"
+   ],
+   "alcohol_ban": false,
+   "source": "https://www.gt-rider.com/se-asia-motorcycling/threads/hmong-orange-new-year-festivals-2025-2026.16574/",
+   "extra_sources": [
+    "https://www.facebook.com/Chiangmaipostofficial/posts/hmong-new-year-festival-2025-celebrated-in-chiang-maitoday-january-3-2025-at-the/1010973131072015/"
+   ],
+   "confidence": "low",
+   "needs_review": "Dates come from a forum and a news post; 'Maeo' exonym note is widely known but not from a fetched source here - expert please confirm; confirm 'pov pob' spelling."
+  },
+  {
+   "id": "bo_sang_umbrella",
+   "name": "Bo Sang Umbrella and San Kamphaeng Crafts Festival",
+   "thai": "เทศกาลร่มบ่อสร้างและหัตถกรรมสันกำแพง",
+   "rtgs": "Thetsakan Rom Bo Sang lae Hatthakam San Kamphaeng",
+   "category": "crafts",
+   "dates_2026_2027": [
+    {
+     "start": "2026-01-16",
+     "end": "2026-01-18",
+     "estimated": false,
+     "note": "41st edition (past, for reference)"
+    },
+    {
+     "start": "2027-01-15",
+     "end": "2027-01-17",
+     "estimated": true,
+     "note": "Estimated: usually a Friday-Sunday in the third week of January"
+    }
+   ],
+   "lunar_rule": "Solar calendar; mid/third weekend of January (not lunar).",
+   "location": "Bo Sang village, Ton Pao subdistrict, San Kamphaeng district, Chiang Mai",
+   "what_happens": "Craft festival of the paper/cotton umbrella-making village: umbrella-painting and paper-making demonstrations, craft workshops, a local 'kad mueang' market with local food, a parade decorated with umbrellas and traditional dancers.",
+   "foods": [],
+   "etiquette": [
+    "Craft prices are negotiable politely; food prices are not",
+    "Workshops welcome visitors - ask before photographing artisans at work"
+   ],
+   "alcohol_ban": false,
+   "source": "https://www.naewna.com/lady/939493",
+   "extra_sources": [
+    "https://pimthaionline.net/?p=19543"
+   ],
+   "confidence": "medium",
+   "needs_review": "2027 dates estimated."
+  },
+  {
+   "id": "chinese_new_year",
+   "name": "Chinese New Year (Trut Chin)",
+   "thai": "ตรุษจีน",
+   "rtgs": "Trut Chin",
+   "category": "community",
+   "dates_2026_2027": [
+    {
+     "start": "2027-02-06",
+     "end": "2027-02-06",
+     "estimated": false,
+     "note": "New Year's Day; Thai-Chinese families observe wan chai (shopping day) and wan wai (offering day) just before"
+    }
+   ],
+   "lunar_rule": "Chinese lunisolar new year (new moon Jan 21-Feb 20).",
+   "location": "Chiang Mai: Warorot / Kad Luang market and the Chinatown area near the Ping River; Thai-Chinese communities everywhere",
+   "what_happens": "Thai-Chinese families make offerings to ancestors and deities, give red envelopes (ang pao), shops may close for a day or two; lion/dragon dances around Chinatown.",
+   "foods": [],
+   "etiquette": [
+    "Expect some Warorot-area shops to close on the day",
+    "Red and gold are auspicious; greet with good wishes rather than talk of misfortune"
+   ],
+   "alcohol_ban": false,
+   "source": "https://myhora.com/calendar/thai-2570.aspx",
+   "extra_sources": [
+    "https://blog.allonline.7eleven.co.th/seasonal/seasonal-chinese-new-year-2027/"
+   ],
+   "confidence": "medium",
+   "needs_review": "Not a public holiday in Thailand; confirm Chiang Mai Chinatown event details for 2027."
+  },
+  {
+   "id": "flower_festival",
+   "name": "Chiang Mai Flower Festival",
+   "thai": "มหกรรมไม้ดอกไม้ประดับจังหวัดเชียงใหม่",
+   "rtgs": "Mahakam Mai Dok Mai Pradap Changwat Chiang Mai",
+   "category": "civic_festival",
+   "dates_2026_2027": [
+    {
+     "start": "2026-02-13",
+     "end": "2026-02-15",
+     "estimated": false,
+     "note": "2026 edition (past; later than usual)"
+    },
+    {
+     "start": "2027-02-05",
+     "end": "2027-02-07",
+     "estimated": true,
+     "note": "Estimated from the 'first weekend of February' pattern; 2026 did not follow it, so confirm"
+    }
+   ],
+   "lunar_rule": "Solar calendar; traditionally first weekend of February, end of the cool season.",
+   "location": "Suan Buak Haad (Nong Buak Haad Public Park), SW corner of the old city; parade from Nawarat Bridge via Tha Phae Road",
+   "what_happens": "Flower-float parade (Saturday), flower exhibitions and competitions, Miss Flower Festival pageant, plant market. Featured flowers include chrysanthemums and damask roses.",
+   "foods": [],
+   "etiquette": [
+    "Parade stops often; do not step into the procession for photos",
+    "Park is packed at weekend evenings"
+   ],
+   "alcohol_ban": false,
+   "source": "https://thailand.go.th/event-detail/chiang-mai-flower-festival-2026",
+   "extra_sources": [
+    "https://en.wikipedia.org/wiki/Chiang_Mai_Flower_Festival"
+   ],
+   "confidence": "medium",
+   "needs_review": "2027 date estimated; overlaps Chinese New Year weekend 6 Feb 2027 so may shift."
+  },
+  {
+   "id": "makha_bucha",
+   "name": "Makha Bucha",
+   "thai": "วันมาฆบูชา",
+   "rtgs": "Wan Makha Bucha",
+   "category": "buddhist",
+   "dates_2026_2027": [
+    {
+     "start": "2027-02-21",
+     "end": "2027-02-21",
+     "estimated": false,
+     "note": "Sunday; substitute holiday Mon 22 Feb 2027"
+    }
+   ],
+   "lunar_rule": "Full moon of Central month 3 (month 4 in an intercalary-month year).",
+   "location": "All temples",
+   "what_happens": "Commemorates the assembly of 1,250 disciples. Morning merit-making, sermons, and evening candle-lit circumambulation of the temple hall (wian thian) three times.",
+   "foods": [],
+   "etiquette": [
+    "Alcohol sales banned all day (exempt: hotels, airport terminals, licensed entertainment venues)",
+    "Visitors may join wian thian quietly, walking clockwise, modestly dressed"
+   ],
+   "alcohol_ban": true,
+   "source": "https://myhora.com/calendar/thai-2570.aspx",
+   "extra_sources": [
+    "https://calendar.kapook.com/2570/holiday",
+    "https://www.nationthailand.com/blogs/news/general/40062977"
+   ],
+   "confidence": "high",
+   "needs_review": null
+  },
+  {
+   "id": "poy_sang_long",
+   "name": "Poy Sang Long (Shan / Tai Yai novice ordination)",
+   "thai": "ปอยส่างลอง",
+   "rtgs": "Poi Sang Long",
+   "category": "ethnic_community",
+   "dates_2026_2027": [
+    {
+     "start": "2026-03-31",
+     "end": "2026-04-03",
+     "estimated": false,
+     "note": "Mae Hong Son main event 2026 (past, for reference)"
+    },
+    {
+     "start": "2027-03-25",
+     "end": "2027-04-10",
+     "estimated": true,
+     "note": "Estimated window: late March-early April during school holidays; each temple sets its own dates"
+    }
+   ],
+   "lunar_rule": "Not a fixed lunar date; held in the hot-season school break, dates chosen per temple/community.",
+   "location": "Mae Hong Son (main), also Shan communities in Chiang Mai (e.g. Wat Pa Pao) and elsewhere",
+   "what_happens": "Three-day ceremony: boys (about 7-14) have heads shaved, are dressed as princes (sang long) in imitation of Prince Siddhartha, carried on relatives' shoulders so their feet do not touch the ground, paraded to temples, and ordained as novices on day three.",
+   "foods": [],
+   "etiquette": [
+    "Dress modestly",
+    "Do not block processions to take photos; ask before close-up photos of children and families",
+    "Self-designation is Tai (Shan speakers often say Tai; Thais say Tai Yai); 'Ngiao' is an older exonym some consider pejorative"
+   ],
+   "alcohol_ban": false,
+   "source": "https://www.tagthai.com/explore/events/p/poy-sang-long-festival",
+   "extra_sources": [
+    "https://en.wikipedia.org/wiki/Poy_Sang_Long"
+   ],
+   "confidence": "medium",
+   "needs_review": "2027 dates unknown; the 'Ngiao' exonym note is not from a fetched source - expert please verify."
+  },
+  {
+   "id": "songkran_pi_mai_mueang",
+   "name": "Songkran / Pi Mai Mueang (Lanna New Year)",
+   "thai": "ป๋าเวณีปี๋ใหม่เมือง / สงกรานต์",
+   "rtgs": "Pa-weni Pi Mai Mueang / Songkran",
+   "category": "lanna_festival",
+   "dates_2026_2027": [
+    {
+     "start": "2027-04-13",
+     "end": "2027-04-16",
+     "estimated": false,
+     "note": "Public holidays 13-15 Apr 2027; Lanna days: Sangkhan Long, Wan Nao, Wan Phaya Wan, Wan Pak Pi. Exact assignment of days follows the Lanna almanac and some years shifts by one day (sources show Sangkhan Long on 13 or 14 Apr)"
+    }
+   ],
+   "lunar_rule": "Solar (sun entering Aries). Lanna day names follow the annual Lanna almanac (pakkhatuen).",
+   "location": "Everywhere in the North; Chiang Mai old city moat and Tha Phae Gate for water play; temples for sand stupas and dam hua",
+   "what_happens": "Wan Sangkhan Long (สังขานต์ล่อง): old year leaves; firecrackers at dawn to drive off bad luck, house cleaning, bathing, new clothes. Wan Nao (วันเนา/วันเน่า): preparation day; do not quarrel or speak rudely or you will have bad luck all year; carry sand to temples and build sand chedis decorated with tung (paper/cloth flags). Wan Phaya Wan (วันพญาวัน): the true New Year; merit-making, bathing Buddha images, dam hua (ดำหัว) of elders - offering scented water with turmeric and som poi (ส้มป่อย), flowers, candles, asking forgiveness and receiving blessings; ไม้ค้ำศรี (bodhi-tree supports) offered. Wan Pak Pi (วันปากปี): start of the year; protective rites and destiny-extending candles.",
+   "foods": [
+    "laap (ลาบ)",
+    "kaeng khanun - jackfruit curry (แกงขนุน), eaten for prosperity (khanun sounds like 'support')"
+   ],
+   "etiquette": [
+    "Dam hua is a respectful ritual for elders, not water-fight play - kneel/lower yourself, offer the bowl with both hands",
+    "Do not throw water at monks, elders who are not playing, or people in uniform or carrying things",
+    "On Wan Nao avoid arguing or rude words - the app can mention this as a playful local taboo",
+    "Songkran is not an alcohol-ban day"
+   ],
+   "alcohol_ban": false,
+   "source": "https://thelibrary.mju.ac.th/?p=7514",
+   "extra_sources": [
+    "https://www.bangkokbiznews.com/lifestyle/art-living/1122353",
+    "https://calendar.kapook.com/2570/holiday"
+   ],
+   "confidence": "high",
+   "needs_review": "Sources disagree on whether Wan Nao is spelled เนา or เน่า and on day-to-date mapping (13-16 vs 14-16). 'Khanun = support' pun is common knowledge, not from the fetched page."
+  },
+  {
+   "id": "visakha_bucha",
+   "name": "Visakha Bucha",
+   "thai": "วันวิสาขบูชา",
+   "rtgs": "Wan Wisakha Bucha",
+   "category": "buddhist",
+   "dates_2026_2027": [
+    {
+     "start": "2027-05-20",
+     "end": "2027-05-20",
+     "estimated": false
+    }
+   ],
+   "lunar_rule": "Full moon of Central month 6 (month 7 in an intercalary-month year, e.g. 31 May 2026).",
+   "location": "All temples; in Chiang Mai many people walk up to Wat Phra That Doi Suthep the night before",
+   "what_happens": "Commemorates the Buddha's birth, enlightenment and passing. Merit-making, sermons and evening candle procession (wian thian).",
+   "foods": [],
+   "etiquette": [
+    "Alcohol sales banned all day (exemptions as above)"
+   ],
+   "alcohol_ban": true,
+   "source": "https://myhora.com/calendar/thai-2570.aspx",
+   "extra_sources": [
+    "https://www.nationthailand.com/blogs/news/general/40062977"
+   ],
+   "confidence": "high",
+   "needs_review": "Doi Suthep pilgrimage walk ('doen khuen doi') is well known but not sourced here."
+  },
+  {
+   "id": "inthakhin",
+   "name": "Inthakhin City Pillar Festival (Sai Khan Dok)",
+   "thai": "ประเพณีใส่ขันดอกบูชาเสาอินทขิล",
+   "rtgs": "Prapheni Sai Khan Dok Bucha Sao Inthakhin",
+   "category": "lanna_festival",
+   "dates_2026_2027": [
+    {
+     "start": "2026-05-13",
+     "end": "2026-05-19",
+     "estimated": false,
+     "note": "2026 (past; closing 20 May)"
+    },
+    {
+     "start": "2027-06-01",
+     "end": "2027-06-08",
+     "estimated": true,
+     "note": "Estimated from the lunar rule (starts ~12 days after the Visakha full moon of 20 May 2027). LOW confidence - confirm with Chiang Mai municipality"
+    }
+   ],
+   "lunar_rule": "'Duean paet khao, duean kao ok' (เดือน 8 เข้า เดือน 9 ออก): begins in the waning half of Lanna month 8 (= Central month 6) and ends at the start of Lanna month 9; about 7-8 days, late May-June.",
+   "location": "Wat Chedi Luang Worawihan, Chiang Mai old city (city pillar, Sao Inthakhin)",
+   "what_happens": "Chiang Mai people bring khan dok (bowls/cones of flowers), incense and candles to honour the city pillar for the city's stability and prosperity at the start of the rainy season; opening procession of the Phra Chao Saen Ha Buddha image; temple fair runs morning to midnight.",
+   "foods": [],
+   "etiquette": [
+    "Women are traditionally not allowed inside the city-pillar shrine; a local belief says it would weaken the protective yantra - follow signs and don't argue at the site",
+    "Dress modestly; flowers can be bought at the entrance"
+   ],
+   "alcohol_ban": false,
+   "source": "https://www.chiangmainews.co.th/news/3932998/",
+   "extra_sources": [
+    "https://www.chiangmainews.co.th/social/2863720/"
+   ],
+   "confidence": "medium",
+   "needs_review": "2027 dates estimated from lunar rule; expert please check the month-8/month-9 rule."
+  },
+  {
+   "id": "asalha_khao_phansa",
+   "name": "Asalha Bucha and Khao Phansa (Start of Buddhist Lent)",
+   "thai": "วันอาสาฬหบูชา / วันเข้าพรรษา",
+   "rtgs": "Wan Asanha Bucha / Wan Khao Phansa",
+   "category": "buddhist",
+   "dates_2026_2027": [
+    {
+     "start": "2027-07-18",
+     "end": "2027-07-19",
+     "estimated": false,
+     "note": "Asalha Bucha Sun 18 Jul; Khao Phansa Mon 19 Jul 2027"
+    }
+   ],
+   "lunar_rule": "Asalha Bucha: full moon of Central month 8 (8-8 in intercalary years); Khao Phansa: the next day, first waning day.",
+   "location": "All temples",
+   "what_happens": "Asalha Bucha marks the first sermon. Khao Phansa begins the 3-month rains retreat: people give candles (hae thian phansa) and bathing cloths to monks; many Thais give up alcohol or other habits for Lent.",
+   "foods": [],
+   "etiquette": [
+    "Two consecutive alcohol-ban days",
+    "Some locals pledge not to drink for the whole Lent - don't push drinks on them"
+   ],
+   "alcohol_ban": true,
+   "source": "https://myhora.com/calendar/thai-2570.aspx",
+   "extra_sources": [
+    "https://calendar.kapook.com/2570/holiday",
+    "https://www.nationthailand.com/news/general/40069132"
+   ],
+   "confidence": "high",
+   "needs_review": "'Giving up alcohol for Lent' custom is well known but not from a fetched source."
+  },
+  {
+   "id": "salak_yom_lamphun",
+   "name": "Salak Yom (Lamphun)",
+   "thai": "ประเพณีสลากย้อม",
+   "rtgs": "Prapheni Salak Yom",
+   "category": "lanna_festival",
+   "dates_2026_2027": [
+    {
+     "start": "2026-09-20",
+     "end": "2026-09-26",
+     "estimated": false,
+     "note": "2026 Lamphun city event; big procession 25 Sep 19:00"
+    },
+    {
+     "start": "2027-09-15",
+     "end": "2027-09-30",
+     "estimated": true,
+     "note": "Estimated: September, within the salak-offering season"
+    }
+   ],
+   "lunar_rule": "Part of the salakaphat (lot-drawn alms) season in Lanna month 12 (~Sept); province sets dates.",
+   "location": "Wat Phra That Hariphunchai, Lamphun",
+   "what_happens": "Unique Lamphun tradition with roots in the Yong people (related to the Tai Lue of Sipsongpanna): unmarried young women make and offer tall decorated salak trees (3-12 m) hung with offerings; believed to earn merit comparable to a man's ordination. Nightly lights and a procession of salak trees.",
+   "foods": [],
+   "etiquette": [
+    "Dress modestly at Wat Phra That Hariphunchai",
+    "Ask before photographing the women with their trees"
+   ],
+   "alcohol_ban": false,
+   "source": "https://mgronline.com/travel/detail/9690000091382",
+   "extra_sources": [
+    "https://www.lamphun.go.th/th/festivals/72/",
+    "https://lamphun.prd.go.th/th/content/category/detail/id/33/iid/421470"
+   ],
+   "confidence": "medium",
+   "needs_review": "2027 dates estimated."
+  },
+  {
+   "id": "tan_kuay_salak",
+   "name": "Tan Kuay Salak (lot-drawn alms baskets)",
+   "thai": "ประเพณีตานก๋วยสลาก",
+   "rtgs": "Tan Kuai Salak",
+   "category": "lanna_festival",
+   "dates_2026_2027": [
+    {
+     "start": "2026-09-15",
+     "end": "2026-10-26",
+     "estimated": true,
+     "note": "Season: each temple picks its own day, Sept-Oct"
+    },
+    {
+     "start": "2027-09-01",
+     "end": "2027-10-15",
+     "estimated": true,
+     "note": "Season estimate"
+    }
+   ],
+   "lunar_rule": "Lanna month 12 to Lanna month 2 (= Central months 10-12), roughly Sept-Oct, often before Ok Phansa; each temple chooses a day.",
+   "location": "Village and town temples across Chiang Mai, Lamphun, Lampang, Nan, Chiang Rai",
+   "what_happens": "Families prepare kuay salak (woven bamboo baskets) of food and daily necessities, write a salak slip naming a deceased relative, and monks draw lots to receive baskets; merit goes to the dead and goods help monks and the poor. Big decorated 'kuay chok' baskets may hold mirrors, combs, umbrellas.",
+   "foods": [
+    "khao san (uncooked rice)",
+    "khaep mu (pork crackling)",
+    "sai ua (Northern sausage)",
+    "steamed fish",
+    "dry foods, salt, garlic, chili, betel nut"
+   ],
+   "etiquette": [
+    "It is a merit ceremony for the dead - visitors welcome but keep quiet during chanting"
+   ],
+   "alcohol_ban": false,
+   "source": "https://www.silpa-mag.com/culture/article_38356",
+   "extra_sources": [
+    "https://www.chiangmainews.co.th/100lanna/3524260/"
+   ],
+   "confidence": "medium",
+   "needs_review": "Silpa article lists 'หมูหนึ่ง' - may be 'หมูนึ่ง' (steamed pork), check. No single festival date exists."
+  },
+  {
+   "id": "nan_boat_race",
+   "name": "Nan Traditional Long-boat Races",
+   "thai": "ประเพณีแข่งเรือจังหวัดน่าน",
+   "rtgs": "Prapheni Khaeng Ruea Changwat Nan",
+   "category": "lanna_festival",
+   "dates_2026_2027": [
+    {
+     "start": "2026-10-01",
+     "end": "2026-10-31",
+     "estimated": true,
+     "note": "Not yet found for 2026. 2024: 6-15 Sep; 2025: 10-19 Oct - dates vary widely"
+    },
+    {
+     "start": "2027-09-15",
+     "end": "2027-10-31",
+     "estimated": true,
+     "note": "Estimate"
+    }
+   ],
+   "lunar_rule": "Tied to salakaphat and royal kathin merit season around the end of Buddhist Lent; province sets dates.",
+   "location": "Nan River at the Northern Development Bridge (Saphan Phatthana Phak Nuea), Nan town",
+   "what_happens": "Races of long, narrow Nan boats with naga-style prows, part of merit-making for kathin/salak season; royal trophy.",
+   "foods": [],
+   "etiquette": [
+    "Nan is small; accommodation fills during race days"
+   ],
+   "alcohol_ban": false,
+   "source": "https://nan.prd.go.th/th/content/category/detail/id/9/iid/423968",
+   "extra_sources": [
+    "https://nan.prd.go.th/th/content/category/detail/id/9/iid/316921"
+   ],
+   "confidence": "low",
+   "needs_review": "Need official 2026/2027 dates from Nan province PR."
+  },
+  {
+   "id": "chiang_mai_design_week",
+   "name": "Chiang Mai Design Week",
+   "thai": "เทศกาลงานออกแบบเชียงใหม่",
+   "rtgs": "Thetsakan Ngan Okbaep Chiang Mai",
+   "category": "contemporary",
+   "dates_2026_2027": [
+    {
+     "start": "2026-12-05",
+     "end": "2026-12-13",
+     "estimated": true,
+     "note": "Estimated: usually 9 days in early-mid December; 2023: 2-10 Dec; 2024: 7-15 Dec"
+    },
+    {
+     "start": "2027-12-04",
+     "end": "2027-12-12",
+     "estimated": true,
+     "note": "Estimate"
+    }
+   ],
+   "lunar_rule": "Solar; early-mid December.",
+   "location": "Venues across Chiang Mai (old city, Nimman, Chang Moi/riverside); organised by the Creative Economy Agency (CEA)",
+   "what_happens": "Design and crafts festival (Chiang Mai is a UNESCO Creative City for crafts and folk art): exhibitions, markets, talks, installations.",
+   "foods": [],
+   "etiquette": [],
+   "alcohol_ban": false,
+   "source": "https://en.wikipedia.org/wiki/Chiang_Mai_Design_Week",
+   "extra_sources": [
+    "https://www.chiangmaidesignweek.com/en/cmdw2025"
+   ],
+   "confidence": "low",
+   "needs_review": "Thai name not from source; 2026 dates not found."
+  },
+  {
+   "id": "royal_national_days",
+   "name": "Royal and national public holidays (Oct 2026-Dec 2027)",
+   "thai": "วันหยุดราชการ",
+   "rtgs": "Wan Yut Ratchakan",
+   "category": "national",
+   "dates_2026_2027": [
+    {
+     "start": "2026-10-13",
+     "end": "2026-10-13",
+     "estimated": false,
+     "note": "King Bhumibol Memorial Day"
+    },
+    {
+     "start": "2026-10-23",
+     "end": "2026-10-23",
+     "estimated": false,
+     "note": "Chulalongkorn Day (Wan Piya Maharat)"
+    },
+    {
+     "start": "2026-12-05",
+     "end": "2026-12-05",
+     "estimated": false,
+     "note": "King Bhumibol's Birthday / National Day / Father's Day"
+    },
+    {
+     "start": "2026-12-10",
+     "end": "2026-12-10",
+     "estimated": false,
+     "note": "Constitution Day"
+    },
+    {
+     "start": "2026-12-31",
+     "end": "2026-12-31",
+     "estimated": false,
+     "note": "New Year's Eve"
+    },
+    {
+     "start": "2027-01-01",
+     "end": "2027-01-01",
+     "estimated": false
+    },
+    {
+     "start": "2027-04-06",
+     "end": "2027-04-06",
+     "estimated": false,
+     "note": "Chakri Memorial Day"
+    },
+    {
+     "start": "2027-06-03",
+     "end": "2027-06-03",
+     "estimated": false,
+     "note": "Queen Suthida's Birthday"
+    },
+    {
+     "start": "2027-07-28",
+     "end": "2027-07-28",
+     "estimated": false,
+     "note": "King Vajiralongkorn's Birthday"
+    },
+    {
+     "start": "2027-08-12",
+     "end": "2027-08-12",
+     "estimated": false,
+     "note": "Queen Mother's Birthday / Mother's Day"
+    },
+    {
+     "start": "2027-10-13",
+     "end": "2027-10-13",
+     "estimated": false
+    },
+    {
+     "start": "2027-10-23",
+     "end": "2027-10-23",
+     "estimated": false,
+     "note": "Substitute Mon 25 Oct"
+    },
+    {
+     "start": "2027-12-05",
+     "end": "2027-12-05",
+     "estimated": false,
+     "note": "Substitute Mon 6 Dec"
+    },
+    {
+     "start": "2027-12-10",
+     "end": "2027-12-10",
+     "estimated": false
+    },
+    {
+     "start": "2027-12-31",
+     "end": "2027-12-31",
+     "estimated": false
+    }
+   ],
+   "lunar_rule": "Fixed Gregorian dates; substitution days when on a weekend.",
+   "location": "Nationwide",
+   "what_happens": "Government offices and banks close; royal portraits, yellow (King) or blue (Queen Mother) decorations; ceremonies at city halls.",
+   "foods": [],
+   "etiquette": [
+    "Speak respectfully of the monarchy - lese-majeste (Criminal Code Art. 112) carries 3-15 years per count and applies to foreigners",
+    "Stand for the royal anthem (e.g. before films in cinemas)"
+   ],
+   "alcohol_ban": false,
+   "source": "https://calendar.kapook.com/2570/holiday",
+   "extra_sources": [
+    "https://en.wikipedia.org/wiki/L%C3%A8se-majest%C3%A9_in_Thailand"
+   ],
+   "confidence": "medium",
+   "needs_review": "2026 dates are the standard fixed dates (not separately verified for 2026 substitutions). Colour associations not from a fetched source."
+  },
+  {
+   "id": "weekly_markets",
+   "name": "Recurring weekly markets (Chiang Mai)",
+   "thai": "ถนนคนเดิน",
+   "rtgs": "Thanon Khon Doen (walking street)",
+   "category": "recurring",
+   "dates_2026_2027": [],
+   "lunar_rule": "Weekly. Sunday Walking Street: Ratchadamnoen Rd from Tha Phae Gate, ~16:00-23:00. Saturday Walking Street: Wua Lai Rd near Chiang Mai Gate, ~16:00-22:30. Peak 19:00-21:00. Markets may be cancelled on some holidays/major events.",
+   "location": "Chiang Mai old city (Sunday) and Wua Lai silver district (Saturday); daily markets such as Warorot (Kad Luang) near the river",
+   "what_happens": "Crafts, clothes, street food, live folk music, foot massage; Wua Lai is known for silverwork.",
+   "foods": [
+    "sai ua (Northern sausage)",
+    "khanom khrok (coconut pancakes)",
+    "roti sai mai",
+    "grilled skewers"
+   ],
+   "etiquette": [
+    "Bargain politely for crafts, not for food",
+    "Carry small notes",
+    "Stop and stand still if the national anthem plays (08:00/18:00 in some public places)",
+    "Temple courtyards along the route are active religious spaces"
+   ],
+   "alcohol_ban": false,
+   "source": "https://www.feel-chiang-mai.com/street-food-markets/chiang-mai-walking-streets-guide/",
+   "extra_sources": [],
+   "confidence": "medium",
+   "needs_review": "Anthem-at-18:00 note not from fetched source; other weekly markets (e.g. Jing Jai weekend market) not verified."
+  },
+  {
+   "id": "wan_phra",
+   "name": "Wan Phra (Buddhist holy days)",
+   "thai": "วันพระ",
+   "rtgs": "Wan Phra",
+   "category": "buddhist",
+   "dates_2026_2027": [
+    {
+     "start": "2026-10-03",
+     "end": "2026-10-03",
+     "estimated": false
+    },
+    {
+     "start": "2026-10-10",
+     "end": "2026-10-10",
+     "estimated": false
+    },
+    {
+     "start": "2026-10-18",
+     "end": "2026-10-18",
+     "estimated": false
+    },
+    {
+     "start": "2026-10-25",
+     "end": "2026-10-25",
+     "estimated": false
+    },
+    {
+     "start": "2026-11-02",
+     "end": "2026-11-02",
+     "estimated": false
+    },
+    {
+     "start": "2026-11-09",
+     "end": "2026-11-09",
+     "estimated": false
+    },
+    {
+     "start": "2026-11-16",
+     "end": "2026-11-16",
+     "estimated": false
+    },
+    {
+     "start": "2026-11-23",
+     "end": "2026-11-23",
+     "estimated": false
+    },
+    {
+     "start": "2026-12-01",
+     "end": "2026-12-01",
+     "estimated": false
+    },
+    {
+     "start": "2026-12-08",
+     "end": "2026-12-08",
+     "estimated": false
+    },
+    {
+     "start": "2026-12-16",
+     "end": "2026-12-16",
+     "estimated": false
+    },
+    {
+     "start": "2026-12-23",
+     "end": "2026-12-23",
+     "estimated": false
+    },
+    {
+     "start": "2026-12-31",
+     "end": "2026-12-31",
+     "estimated": false
+    }
+   ],
+   "lunar_rule": "8th and 15th day of each waxing and waning half-month (roughly weekly).",
+   "location": "All temples",
+   "what_happens": "Observance days: devout people go to the temple, keep precepts; some eat vegetarian. Not an alcohol-ban day by law (only the five major Buddhist days are).",
+   "foods": [],
+   "etiquette": [
+    "Expect elders at temples in white clothes in the morning"
+   ],
+   "alcohol_ban": false,
+   "source": "https://myhora.com/calendar/thai-2569.aspx",
+   "extra_sources": [],
+   "confidence": "high",
+   "needs_review": "2027 wan phra list not extracted."
+  }
+ ]
+}

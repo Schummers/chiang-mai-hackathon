@@ -1,0 +1,504 @@
+[
+  {
+    "name": "Phi (spirits) - general concept",
+    "thai": "ผี",
+    "roman": "phi",
+    "category": "spirits",
+    "description": "Umbrella term for spirits in Tai folk religion: household and village guardians (phi ruean / phi ban), town guardians (phi mueang), nature spirits of trees, mountains, forests and rivers, and malevolent ghosts. Co-exists with Theravada Buddhism rather than competing with it.",
+    "practised_by": "Widespread across Thai, Lao and other Tai communities; strongest in rural areas but spirit-related practice (shrines, offerings) is visible in Chiang Mai city too. Degree of belief varies by person, generation and village.",
+    "how_visitors_encounter": "Shrines at trees, junctions, businesses; offerings at market stalls; ghost stories in casual talk.",
+    "do": [
+      "Treat shrines and offerings as sacred objects",
+      "Listen respectfully if someone shares a spirit story"
+    ],
+    "dont": [
+      "Mock or 'debunk' spirit beliefs",
+      "Touch, move or eat offerings"
+    ],
+    "good_conversation_topic": {
+      "value": true,
+      "note": "Light ghost stories and 'do you have a spirit house?' are usually fine; avoid sounding dismissive. Frightening ghost talk at night may be unwelcome to some."
+    },
+    "source": "https://en.wikipedia.org/wiki/Tai_folk_religion",
+    "confidence": "high"
+  },
+  {
+    "name": "House / household spirits",
+    "thai": "ผีเรือน / ผีบ้าน",
+    "roman": "phi ruean / phi ban",
+    "category": "spirits",
+    "description": "Guardian spirits of the household (phi ruean) and village (phi ban) that receive regular or annual offerings in return for protection.",
+    "practised_by": "Many rural Northern households and villages; practice varies widely between families.",
+    "how_visitors_encounter": "Small shelves or shrines in homes, guesthouses and village entrances; annual village offering ceremonies.",
+    "do": [
+      "Ask before photographing a household shrine",
+      "Follow the host's lead"
+    ],
+    "dont": [
+      "Place feet, bags or rubbish on or near a shrine"
+    ],
+    "good_conversation_topic": {
+      "value": true,
+      "note": "Friendly if asked with curiosity; details of family rites may be private."
+    },
+    "source": "https://en.wikipedia.org/wiki/Tai_folk_religion",
+    "confidence": "medium"
+  },
+  {
+    "name": "Ancestral spirits (grandparent spirits)",
+    "thai": "ผีปู่ย่า",
+    "roman": "phi pu ya (Northern: phi pu nya)",
+    "category": "spirits",
+    "description": "Ancestral 'grandfather-grandmother' spirits regarded as protectors and moral overseers of a family. Kept via household altars or a spirit pillar/shrine (often described as at the south-east corner), with offerings of flowers, betel, cooked food and fruit. In Lanna culture the spirit lineage is linked to kin groups that worship the same spirits; people of the same spirit lineage traditionally should not marry. Northern pronunciation 'pu nya' (ny for central y) is from Kham Mueang sound correspondence - verify.",
+    "practised_by": "Thai, Lao and Mon communities; particularly strong in rural Northern Thailand. Less observed among younger urban people.",
+    "how_visitors_encounter": "Rarely directly; a host may mention 'paying respect to phi pu nya' before a wedding or when a new person (e.g. a partner) joins the household.",
+    "do": [
+      "If staying with a family, ask whether there is anything you should do or avoid in the house"
+    ],
+    "dont": [
+      "Enter a room with an ancestral shrine without permission"
+    ],
+    "good_conversation_topic": {
+      "value": false,
+      "note": "Family-internal and sometimes private; fine if the local person raises it."
+    },
+    "source": "https://en.wikipedia.org/wiki/Phi_Pu_Ya",
+    "confidence": "medium"
+  },
+  {
+    "name": "Spirit dance (phi mot / phi meng)",
+    "thai": "ฟ้อนผีมด ผีเม็ง",
+    "roman": "fon phi mot phi meng",
+    "category": "ritual",
+    "description": "Lanna ancestral spirit dance held in a temporary pavilion by members of the same spirit clan, led mainly by women; a medium dressed in old Mon-style attire may become possessed. Purposes include honouring ancestors, fulfilling vows to spirits (kae bon) and seeking help when someone is ill. Clan members who worship the same spirits must not marry each other.",
+    "practised_by": "Rural Northern Thai spirit clans (matrilineal kin); held in some villages, commonly around May-June.",
+    "how_visitors_encounter": "Might hear music from a village pavilion in the hot/early rainy season; occasionally shown in cultural performances.",
+    "do": [
+      "Watch from a distance unless invited",
+      "Ask before photographing a medium"
+    ],
+    "dont": [
+      "Treat it as a tourist show or join the dance uninvited"
+    ],
+    "good_conversation_topic": {
+      "value": false,
+      "note": "Interesting but family/clan-specific; let locals lead."
+    },
+    "source": "https://rituals.sac.or.th/en/detail.php?id=11",
+    "confidence": "medium"
+  },
+  {
+    "name": "Pu Sae Ya Sae offering (Liang Dong)",
+    "thai": "ปู่แสะย่าแสะ / เลี้ยงดง",
+    "roman": "Pu Sae Ya Sae / liang dong",
+    "category": "city_guardian_spirits",
+    "description": "Annual offering to Pu Sae and Ya Sae, guardian spirits of the Chiang Mai valley and Doi Suthep, linked to the Lawa people. Legend: cannibal giants tamed by the Buddha agreed to accept a yearly buffalo instead of humans. At the foot of Doi Kham in Mae Hia, a buffalo is sacrificed and a possessed medium eats raw meat; the aim is forest protection and good rains. Around May-June (full moon of the 9th Northern lunar month, which sources also give as the 7th, likely the central Thai count).",
+    "practised_by": "Mae Hia communities and descendants of the ritual lineage; thousands attend (over 3,000 reported in 2018). Contested by animal-rights activists and defended as heritage.",
+    "how_visitors_encounter": "News coverage, or attending the ceremony in Mae Hia around late May-June.",
+    "do": [
+      "If attending, dress modestly, stay back, follow organisers' instructions"
+    ],
+    "dont": [
+      "Voice animal-rights criticism to participants",
+      "Photograph the medium intrusively"
+    ],
+    "good_conversation_topic": {
+      "value": false,
+      "note": "Controversial (animal sacrifice); fine to ask neutrally if a local raises it, but avoid judgement."
+    },
+    "source": "https://en.wikipedia.org/wiki/Pu_Sae_and_Ya_Sae",
+    "confidence": "high"
+  },
+  {
+    "name": "Inthakhin city pillar",
+    "thai": "อินทขีล",
+    "roman": "Inthakhin",
+    "category": "city_guardian_spirits",
+    "description": "Chiang Mai's city pillar ('Indra's pillar'), said to be erected by King Mangrai at the city's founding in 1296 and moved to Wat Chedi Luang in 1800. Legend: Indra gave the Lawa a pillar for protection; people must keep venerating the replica for the city to prosper. The Inthakhin festival (Tam Bun Khan Dok) starts on the 12th waning day of the 6th lunar month and lasts eight days, with flower, candle and incense offerings.",
+    "practised_by": "Chiang Mai residents; the flower-offering festival draws large crowds (typically May-June).",
+    "how_visitors_encounter": "Visiting Wat Chedi Luang; flower-offering queues and fair during the festival.",
+    "do": [
+      "Buy and offer flowers during the festival if you wish",
+      "Respect the sign restricting entry"
+    ],
+    "dont": [
+      "Women: do not enter the pillar shrine (entry is prohibited to women)",
+      "Argue about the gender restriction with staff or worshippers"
+    ],
+    "good_conversation_topic": {
+      "value": true,
+      "note": "The festival and flower offering are friendly topics; the women's restriction is a sensitive debate - avoid pressing it."
+    },
+    "source": "https://en.wikipedia.org/wiki/Inthakhin_(pillar)",
+    "confidence": "high",
+    "verifier_note": "Wikipedia says '12th waning day of the 6th lunar month' without naming the calendar; locally the festival is usually described by the Northern count (8th month). Check the year's date."
+  },
+  {
+    "name": "Spirit houses",
+    "thai": "ศาลพระภูมิ / ศาลเจ้าที่ (Northern: หอผี)",
+    "roman": "san phra phum / san chao thi (Northern: ho phi)",
+    "category": "shrines_offerings",
+    "description": "Miniature shrines for the guardian spirit of the land, usually in an auspicious corner of a property, sometimes sited with a Brahmin priest's advice. Offerings: rice, bananas, coconuts, desserts, flowers, incense and, famously, red strawberry soda. Friendly spirits fed this way are believed to keep malign spirits away. 'Ho phi' is the Northern/general term for a spirit shrine (appears in Lanna ritual terminology).",
+    "practised_by": "Very common: most houses and businesses in Thailand, including Chiang Mai shops, condos and market stalls.",
+    "how_visitors_encounter": "At almost every shop, hotel, condo and market; vendors may place morning offerings before trading.",
+    "do": [
+      "Walk around, not through, offerings",
+      "Photograph discreetly"
+    ],
+    "dont": [
+      "Touch offerings or use a spirit house as a shelf/seat",
+      "Laugh at the red soda offering"
+    ],
+    "good_conversation_topic": {
+      "value": true,
+      "note": "A safe, friendly topic ('Why red soda?' is a light icebreaker)."
+    },
+    "source": "https://en.wikipedia.org/wiki/Spirit_house",
+    "confidence": "high"
+  },
+  {
+    "name": "Khwan (life essence) and soul-calling ceremony",
+    "thai": "ขวัญ / ฮ้องขวัญ / เรียกขวัญ / สู่ขวัญ",
+    "roman": "khwan / hong khwan (Northern) / riak khwan / su khwan",
+    "category": "khwan",
+    "description": "Khwan is a vital essence, traditionally 32 khwan in the body. Fright or trauma can make it leave (khwan hai / khwan bin), causing illness or anxiety. In the Lanna 'hong khwan' ceremony an elder (often called pu chan or ajarn) chants, using a baisi tray with flowers, rice, betel and candles, and ties white thread on the wrists. Held for sick people, accident survivors, children, newlyweds, monks, new homes, and to welcome guests or travellers.",
+    "practised_by": "Widely practised in Northern and Northeastern Thailand and Laos; common at weddings, ordinations and welcomes. Many young people take part as family tradition.",
+    "how_visitors_encounter": "Being invited to a welcome or farewell ceremony; seeing white threads on people's wrists.",
+    "do": [
+      "Hold out your hand(s) as the elder indicates, receive quietly, wai afterwards",
+      "Accept a blessing as an honour"
+    ],
+    "dont": [
+      "Refuse a wrist-tying blessing casually"
+    ],
+    "good_conversation_topic": {
+      "value": true,
+      "note": "Warm topic; asking about someone's wrist string is usually welcome."
+    },
+    "source": "https://www.naewna.com/likesara/347817",
+    "confidence": "high"
+  },
+  {
+    "name": "Sacred white thread on the wrist",
+    "thai": "สายสิญจน์ / ผูกข้อมือ (Northern: มัดมือ)",
+    "roman": "sai sin / phuk khomue (Northern: mat mue)",
+    "category": "khwan",
+    "description": "White cotton string tied round the wrist during khwan and Buddhist blessings to keep the khwan in the body. One source says wear it at least three days and let it come off naturally, never cutting or biting it off; practice varies.",
+    "practised_by": "Common across Thailand; seen on locals and foreigners after temple visits or ceremonies.",
+    "how_visitors_encounter": "A monk or elder ties one on you; vendors and hosts may notice it.",
+    "do": [
+      "Keep it on a few days",
+      "Untie or let it wear off"
+    ],
+    "dont": [
+      "Cut it off in front of the giver"
+    ],
+    "good_conversation_topic": {
+      "value": true,
+      "note": "Easy icebreaker."
+    },
+    "source": "https://thailanddiscovery.info/thai-culture-ceremony-to-return-a-soul/",
+    "confidence": "medium"
+  },
+  {
+    "name": "First sale of the day ('opening the bag')",
+    "thai": "เปิดถุง / ขายเปิดถุง (Northern: ลองหมาน)",
+    "roman": "poet thung (Northern term reported as 'long man' - verify)",
+    "category": "market_luck",
+    "description": "Many vendors believe the first sale sets the day's luck. The first customer's money may be tapped across the goods on the stall to invite more sales; the Northern term reported for this is ลองหมาน (romanisation and exact meaning need expert check). A related belief: if a pregnant woman browses without buying, sales may be poor that day.",
+    "practised_by": "Many market vendors across Thailand, including Chiang Mai; varies by vendor.",
+    "how_visitors_encounter": "Early-morning market shopping: the vendor may be keen to close the first sale, may give a small discount, and may wave the notes over the goods.",
+    "do": [
+      "If first customer, bargain gently and buy if you haggle",
+      "Smile if you see the money-tapping; it is a blessing"
+    ],
+    "dont": [
+      "Haggle hard and walk away as the first customer",
+      "Hand over money with the left hand or throw it"
+    ],
+    "good_conversation_topic": {
+      "value": true,
+      "note": "Good-natured: 'Am I your first sale? Good luck today!' is friendly. The pregnancy belief is not a small-talk topic."
+    },
+    "source": "https://cheechongruay.smartsme.co.th/content/25749/",
+    "confidence": "medium"
+  },
+  {
+    "name": "Nang Kwak (beckoning lady)",
+    "thai": "นางกวัก",
+    "roman": "Nang Kwak",
+    "category": "market_luck",
+    "description": "Benevolent female figure beckoning with one hand, believed to attract customers; patron of traders and shopkeepers.",
+    "practised_by": "Many shops and market stalls throughout Thailand.",
+    "how_visitors_encounter": "Small statues or images on shop shelves, often with offerings.",
+    "do": [
+      "Admire respectfully"
+    ],
+    "dont": [
+      "Handle the figure or its offerings"
+    ],
+    "good_conversation_topic": {
+      "value": true,
+      "note": "Friendly topic with shopkeepers."
+    },
+    "source": "https://en.wikipedia.org/wiki/Thai_folklore",
+    "confidence": "high"
+  },
+  {
+    "name": "Lanna auspicious days and times",
+    "thai": "วันดี / วันเสีย / วันจม / วันฟู / ยาม; ปฏิทินล้านนา มื้อจั๋นวันดี",
+    "roman": "wan di / wan sia / wan chom / wan fu / yam; Lanna calendar 'mue chan wan di'",
+    "category": "calendar_astrology",
+    "description": "Lanna astrology marks days as good (wan di), spoiled/inauspicious (wan sia), 'sinking' (wan chom) or 'rising' (wan fu); which weekday is which depends on the lunar month, and hours of the day (yam) also vary. People check the Lanna calendar or consult a knowledgeable elder before weddings, house building or other big undertakings. Chiang Mai University's arts & culture office publishes an annual Lanna calendar ('mue chan wan di'). Note: the Northern lunar month count runs about two months ahead of the central Thai count.",
+    "practised_by": "Many Northern families for major life events; older people and ritual specialists most knowledgeable.",
+    "how_visitors_encounter": "A host delays a move or ceremony for a 'good day'; wedding or house-warming dates chosen by the calendar.",
+    "do": [
+      "Accept schedule changes for auspicious timing graciously"
+    ],
+    "dont": [
+      "Push a local partner to act on a day they consider bad"
+    ],
+    "good_conversation_topic": {
+      "value": true,
+      "note": "Asking 'is today a good day?' is friendly; details belong to experts."
+    },
+    "source": "https://www.matichon.co.th/weekly/column/article_109027",
+    "confidence": "medium"
+  },
+  {
+    "name": "Colours of the day",
+    "thai": "สีประจำวัน",
+    "roman": "si pracham wan",
+    "category": "calendar_astrology",
+    "description": "Each weekday has a colour from Hindu astrology: Sun red, Mon yellow, Tue pink, Wed green, Thu orange, Fri light blue, Sat purple. Some people dress in the day's colour or their birth-day colour; yellow is associated with Mondays and the monarchy.",
+    "practised_by": "Widely known across Thailand; daily practice varies by individual.",
+    "how_visitors_encounter": "Colour-coded clothing, garlands, birth-day Buddha images at temples.",
+    "do": [
+      "Knowing your weekday of birth is a nice icebreaker"
+    ],
+    "dont": [
+      "Joke about the royal association of yellow"
+    ],
+    "good_conversation_topic": {
+      "value": true,
+      "note": "Safe and friendly; avoid royal commentary."
+    },
+    "source": "https://en.wikipedia.org/wiki/Colors_of_the_day_in_Thailand",
+    "confidence": "high"
+  },
+  {
+    "name": "Lucky number 9",
+    "thai": "เก้า",
+    "roman": "kao",
+    "category": "numbers",
+    "description": "Nine (kao) is widely considered lucky because it sounds like 'step forward / progress' (kao, ก้าว). People seek 9s in phone numbers and number plates; a plate with 9999 sold for over 11 million baht. (A travel source also links it to 'rice' - that is a different word, khao, and the claim is doubtful.)",
+    "practised_by": "Very common across Thailand.",
+    "how_visitors_encounter": "Prices ending in 9, phone number and plate pricing, gifts in nines.",
+    "do": [
+      "Enjoy it; offering 9 items or 99 baht in a playful spirit is fine"
+    ],
+    "dont": [],
+    "good_conversation_topic": {
+      "value": true,
+      "note": "Light, safe topic."
+    },
+    "source": "https://www.busaba.com/discovery/luckynine",
+    "confidence": "medium"
+  },
+  {
+    "name": "Northern 12-year animal cycle (elephant for pig)",
+    "thai": "ปีเกิด / สิบสองราศี; ปีกุน (Northern: ช้าง)",
+    "roman": "pi koet / sip song rasi; pi kun (elephant in Northern tradition)",
+    "category": "calendar_astrology",
+    "description": "The Thai 12-year animal cycle follows the Chinese one but with a naga for the dragon; in Northern Thailand the pig year is represented by an elephant. Many Northern Buddhists are reported to believe visiting the relic temple (phra that) linked to their birth year brings merit; Wat Ban Den has replicas of all twelve.",
+    "practised_by": "Widely known; birth-year temple pilgrimage is popular in the North.",
+    "how_visitors_encounter": "Zodiac animal statues at temples (e.g. Wat Ban Den, Doi Suthep), birth-year shrines.",
+    "do": [
+      "Ask 'what's your birth-year animal?' only if relaxed",
+      "Mention you are 'year of the elephant' if born in a pig year - a friendly Northern touch"
+    ],
+    "dont": [
+      "Ask an elder's exact age directly"
+    ],
+    "good_conversation_topic": {
+      "value": true,
+      "note": "Friendly; the elephant substitution is a nice local-knowledge conversation point."
+    },
+    "source": "https://www.thailandfoundation.or.th/culture_heritage/astrology-in-thailand-life-guidance-from-the-stars/",
+    "confidence": "high",
+    "verifier_note": "Thailand Foundation source confirms elephant-for-pig and naga-for-dragon only; the birth-year relic-temple (phra that pracham pi koet) claim is not in that source."
+  },
+  {
+    "name": "Fortune tellers",
+    "thai": "หมอดู",
+    "roman": "mo du",
+    "category": "fortune_telling",
+    "description": "Fortune tellers are everywhere, from cheap street readers to famous consultants; people ask about auspicious dates, names, love and business. Monks and astrologers may also advise on wedding, house or car-purchase dates. Some people change their name on astrological advice.",
+    "practised_by": "Widespread across generations and classes.",
+    "how_visitors_encounter": "Temple grounds and night markets; locals mentioning a new name or a 'good day'.",
+    "do": [
+      "If trying one, treat it as a respectful service"
+    ],
+    "dont": [
+      "Mock someone's name change or reading"
+    ],
+    "good_conversation_topic": {
+      "value": true,
+      "note": "Generally light; personal readings can be private."
+    },
+    "source": "https://www.thailandfoundation.or.th/culture_heritage/astrology-in-thailand-life-guidance-from-the-stars/",
+    "confidence": "medium"
+  },
+  {
+    "name": "Sacred tattoos",
+    "thai": "สักยันต์",
+    "roman": "sak yant",
+    "category": "protection",
+    "description": "Tattoos of script, geometric patterns and animals, given by an ajarn, believed to give protection. Recipients are typically asked to keep precepts (e.g. the five Buddhist precepts). Buddha or deity images placed low on the body are considered disrespectful; foreigners are advised to research before getting one. Thai authorities have previously discussed restricting religious tattoos on tourists.",
+    "practised_by": "Many Thai men and some women; also popular with foreigners.",
+    "how_visitors_encounter": "On vendors, drivers, security guards; tattoo studios offering sak yant.",
+    "do": [
+      "Compliment respectfully if appropriate"
+    ],
+    "dont": [
+      "Get a Buddha image below the waist or on legs/feet",
+      "Touch someone's tattoo"
+    ],
+    "good_conversation_topic": {
+      "value": true,
+      "note": "Can be okay if the wearer brings it up; meanings may be personal."
+    },
+    "source": "https://www.nationthailand.com/life/30260203",
+    "confidence": "medium"
+  },
+  {
+    "name": "Amulets",
+    "thai": "พระเครื่อง",
+    "roman": "phra khrueang",
+    "category": "protection",
+    "description": "Small Buddha images and yantra objects worn for protection from accident or illness, or for luck in love and business; yantra drawings also appear in shops, taxis and vehicles.",
+    "practised_by": "Very common, especially among men, drivers, traders.",
+    "how_visitors_encounter": "Amulet markets, stalls near temples, around necks of drivers and vendors.",
+    "do": [
+      "Handle amulets for sale carefully and above waist level"
+    ],
+    "dont": [
+      "Treat Buddha amulets as fashion items to hang on bags or put on the floor"
+    ],
+    "good_conversation_topic": {
+      "value": true,
+      "note": "Collectors often enjoy talking about amulets."
+    },
+    "source": "https://en.wikipedia.org/wiki/Thai_folklore",
+    "confidence": "high"
+  },
+  {
+    "name": "Merit-making and alms-giving",
+    "thai": "ทำบุญ / ตักบาตร",
+    "roman": "tham bun / tak bat",
+    "category": "merit_making",
+    "description": "Giving food and necessities to monks and temples to earn merit. Morning alms-giving: prepare clean food (ready-made sets are sold at markets), remove shoes, kneel or stand lower, stay quiet; women should not touch monks.",
+    "practised_by": "Common Buddhist practice across Thailand; many market vendors sell alms sets at dawn.",
+    "how_visitors_encounter": "Early mornings in Chiang Mai old city and markets; vendors offering tak bat sets.",
+    "do": [
+      "Dress modestly, remove shoes, be quiet",
+      "Buy a proper alms set from a local vendor"
+    ],
+    "dont": [
+      "Use flash or block monks' path",
+      "Women: hand directly to or touch a monk"
+    ],
+    "good_conversation_topic": {
+      "value": true,
+      "note": "Asking a vendor how to give alms is welcome."
+    },
+    "source": "https://thairanked.com/en/blogs/alms-giving-thailand-guide/",
+    "confidence": "medium"
+  },
+  {
+    "name": "No haircuts on Wednesday",
+    "thai": "ห้ามตัดผมวันพุธ",
+    "roman": "ham tat phom wan phut",
+    "category": "taboo",
+    "description": "Some people avoid haircuts on Wednesday and some barbers close that day. Explanations offered include royal haircut customs and barbers needing a weekly day off.",
+    "practised_by": "Widely known; some (not all) barbers close on Wednesdays.",
+    "how_visitors_encounter": "Barber shops closed on Wednesdays.",
+    "do": [
+      "Plan haircuts for other days"
+    ],
+    "dont": [],
+    "good_conversation_topic": {
+      "value": true,
+      "note": "Harmless, fun topic."
+    },
+    "source": "https://learnthaiwithmod.com/2012/05/thai-superstition-why-no-haircuts-on-wednesday/",
+    "confidence": "medium"
+  },
+  {
+    "name": "Everyday small taboos and omens",
+    "thai": "ความเชื่อ / ข้อห้าม",
+    "roman": "khwam chuea / kho ham",
+    "category": "taboo",
+    "description": "Commonly cited: pointing at a rainbow makes your finger fall off; a gecko call can be an omen; right eye twitching is bad luck, left is good; don't call a baby 'cute' directly (use น่ารักน่าชัง, na rak na chang); honking when passing shrines or dangerous bends. Whistling at night is often cited as calling spirits/snakes but no reliable source found.",
+    "practised_by": "Varies; many are half-jokingly known rather than strictly believed, especially by younger people.",
+    "how_visitors_encounter": "A local playfully stopping you from pointing at a rainbow or praising a baby.",
+    "do": [
+      "Go along with it good-naturedly",
+      "Say 'na rak na chang' for babies if you learn it"
+    ],
+    "dont": [
+      "Lecture people on superstition"
+    ],
+    "good_conversation_topic": {
+      "value": true,
+      "note": "Good light conversation, especially asking about local versions."
+    },
+    "source": "https://learnthaiwithmod.com/2013/10/10-common-thai-superstitions-and-beliefs/",
+    "confidence": "low"
+  },
+  {
+    "name": "Akha religion and village gates",
+    "thai": "อาข่า",
+    "roman": "Akha (self-designation); Akhazang / Akha Zang",
+    "category": "highland_beliefs",
+    "description": "The Akha Way (Akhazang) combines ancestor veneration and animism and guides everyday life. Carved wooden gates at village entrances mark the boundary between human and spirit realms. The four-day swing festival (Yehkuja), in late August, includes offerings to ancestors. The exonyms 'Ekaw' / 'Kaw' are considered derogatory by Akha - use 'Akha'. Visitor etiquette for the gates is widely reported as 'do not touch' but no authoritative source was opened.",
+    "practised_by": "Many Akha communities in Chiang Rai and Chiang Mai; many are now Christian or Buddhist, with practice varying by village.",
+    "how_visitors_encounter": "Trekking/village visits; Akha traders at markets.",
+    "do": [
+      "Use 'Akha'",
+      "Ask before photographing gates, swings or people"
+    ],
+    "dont": [
+      "Touch or walk through the spirit gate carelessly (widely advised, verify)",
+      "Say 'Ekaw'"
+    ],
+    "good_conversation_topic": {
+      "value": true,
+      "note": "Asking about the swing festival or food is friendly; avoid citizenship/legal status."
+    },
+    "source": "https://en.wikipedia.org/wiki/Akha_people",
+    "confidence": "medium"
+  },
+  {
+    "name": "Karen (Pgaz K'Nyau) spirit beliefs",
+    "thai": "ปกาเกอะญอ",
+    "roman": "Pgaz K'Nyau (self-designation of S'gaw Karen)",
+    "category": "highland_beliefs",
+    "description": "Traditional Karen belief includes k'la (a life principle that can wander and must be ritually secured), bgha (matrilineal ancestral spirit honoured through feasts led by the senior woman), and a Lord of Land and Water propitiated yearly. Pgaz K'Nyau communities keep sacred forests including 'de paw thoo' umbilical-cord forests, where a newborn's cord is hung on a tree and the child's soul is linked to it. Many Karen are also Buddhist or Christian.",
+    "practised_by": "Many Karen communities, especially in Mae Hong Son, Chiang Mai and Tak; practice varies.",
+    "how_visitors_encounter": "Community-based tourism, forest walks, markets selling Karen textiles.",
+    "do": [
+      "Use 'Pgaz K'Nyau' or 'Karen'",
+      "Ask before entering or cutting in forest areas"
+    ],
+    "dont": [
+      "Cut or damage trees in community forests"
+    ],
+    "good_conversation_topic": {
+      "value": true,
+      "note": "Forest conservation and weaving are friendly topics; avoid citizenship/land-rights disputes in small talk."
+    },
+    "source": "https://www.everyculture.com/East-Southeast-Asia/Karen-Religion-and-Expressive-Culture.html",
+    "confidence": "medium"
+  }
+]

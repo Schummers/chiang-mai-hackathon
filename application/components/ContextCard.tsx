@@ -4,11 +4,18 @@ import s from "./ContextCard.module.css";
 
 const SPICE_LABELS = ["Not spicy", "Mild", "Medium", "Hot"];
 
+function kicker(card: Card): string {
+  if (card.kind === "word") return "Kham Mueang · say it back";
+  if (card.kind === "moment") return "Today in Chiang Mai";
+  if (card.offGuide) return "Not in our local guide · based on your info";
+  return "Context · based on your info";
+}
+
 /** Full-width card in a third style: it belongs to neither voice. */
 export function ContextCard({ card }: { card: Card }) {
   return (
     <article className={s.card}>
-      <p className={s.kicker}>Context · based on your info</p>
+      <p className={s.kicker}>{kicker(card)}</p>
       <h3 className={s.name}>
         {card.name} {card.nameThai && <span className={s.thai}>{card.nameThai}</span>}
       </h3>

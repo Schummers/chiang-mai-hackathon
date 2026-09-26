@@ -12,7 +12,13 @@ export type Phase =
   /** `raw` is kept when transcription worked, so a retry only translates again. */
   | { kind: "error"; speaker: Speaker; reason: ErrorReason; raw?: string };
 
+export type CardKind = "dish" | "word" | "moment";
+
 export type ContextCard = {
+  /** What the card explains. Missing means "dish" (the mock and older cards). */
+  kind?: CardKind;
+  /** True when the model wrote it because the dish is not in the Context Pack. */
+  offGuide?: boolean;
   /** Dish or ingredient name in Latin script, e.g. "Khao Soi". */
   name: string;
   /** Thai name, e.g. "ข้าวซอย". */

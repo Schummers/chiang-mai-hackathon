@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Wireframes v2</title>
+<style>
+  :root { --bg:#e9e9e9; --ink:#111; --mid:#666; --soft:#bbb; --fill:#f1f1f1; --fill2:#dcdcdc; }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body { background:var(--bg); color:var(--ink); font:14px/1.4 -apple-system, system-ui, sans-serif; padding:24px 16px 64px; }
+  h1 { font-size:20px; margin-bottom:4px; }
+  h2 { font-size:17px; margin:36px 0 4px; }
+  .lede { color:var(--mid); max-width:820px; margin-bottom:18px; }
+  .row { display:flex; flex-wrap:wrap; gap:28px; }
+  .col { width:320px; max-width:100%; }
+  .label { font-weight:700; margin-bottom:8px; }
+  .label span { color:var(--mid); font-weight:400; }
+  .phone { width:320px; max-width:100%; height:660px; background:#fff; border:2px solid var(--ink); border-radius:36px; overflow:hidden; display:flex; flex-direction:column; position:relative; }
+  .top { display:flex; align-items:center; justify-content:space-between; padding:18px 16px 10px; border-bottom:1px solid var(--fill2); }
+  .ico { width:34px; height:34px; border-radius:50%; background:var(--fill); display:grid; place-items:center; font-size:15px; color:var(--mid); }
+  .lang { background:var(--fill); border-radius:20px; padding:6px 12px; font-weight:600; font-size:13px; }
+  .body { flex:1; overflow:hidden; padding:12px; display:flex; flex-direction:column; gap:8px; justify-content:flex-end; }
+  .bottom { padding:12px 16px 22px; border-top:1px solid var(--fill2); display:flex; align-items:center; justify-content:center; gap:10px; }
+  .mic { width:84px; height:84px; border-radius:50%; background:var(--ink); color:#fff; display:grid; place-items:center; font-size:28px; }
+  .pill { flex:1; border-radius:28px; padding:14px 8px; text-align:center; font-weight:700; }
+  .pill.me { background:var(--ink); color:#fff; }
+  .pill.them { background:#fff; border:2px solid var(--ink); }
+  .b { max-width:86%; padding:9px 12px; position:relative; }
+  .b.me { align-self:flex-end; background:var(--ink); color:#fff; border-radius:18px 18px 4px 18px; }
+  .b.them { align-self:flex-start; background:var(--fill2); border-radius:18px 18px 18px 4px; }
+  .b .sub { font-size:12.5px; opacity:.72; margin-top:5px; padding-top:5px; border-top:1px solid currentColor; }
+  .meta { display:flex; gap:12px; font-size:11.5px; color:var(--mid); }
+  .meta.r { align-self:flex-end; }
+  .card { align-self:flex-start; max-width:86%; border:2px solid var(--ink); border-radius:14px; padding:8px 10px; font-size:12.5px; }
+  .warn { border:1px dashed var(--ink); border-radius:8px; padding:4px 6px; margin-top:4px; }
+  .hint { flex:1; display:grid; place-items:center; text-align:center; color:var(--mid); padding:0 20px; }
+  .hint b { color:var(--ink); font-size:18px; display:block; margin-bottom:6px; }
+  .me-info { font-size:12px; border:1px dashed var(--soft); border-radius:14px; padding:4px 10px; color:var(--mid); }
+  .half { flex:1; display:flex; flex-direction:column; padding:10px 12px; gap:8px; justify-content:flex-end; }
+  .flip { transform:rotate(180deg); background:var(--fill); }
+  .divider { height:2px; background:var(--ink); }
+  .huge { font-size:28px; font-weight:700; line-height:1.25; }
+  .notes { margin-top:10px; font-size:12.5px; color:#333; padding-left:16px; }
+  .notes li { margin-bottom:4px; }
+  .box { background:#fff; border:1px solid var(--soft); border-radius:12px; padding:14px 16px; margin-top:32px; max-width:980px; }
+  .box h3 { font-size:15px; margin-bottom:6px; }
+  .box li { margin:4px 0 4px 18px; }
+  table { border-collapse:collapse; margin-top:6px; font-size:13px; }
+  td, th { border:1px solid var(--fill2); padding:6px 8px; text-align:left; vertical-align:top; }
+</style>
+</head>
+<body>
+<h1>Wireframes v2 : une vraie discussion</h1>
+<p class="lede">Retours v1 appliqués : pas de bouton « Montrer », pas de choix proposés, un fil de discussion avec toi d'un côté et le vendeur de l'autre. Trois directions pour l'écran de conversation, puis l'anatomie d'un message. Mêmes données partout : Khao Soi, allergie aux cacahuètes.</p>
+
+<h2>Accueil (commun aux trois directions)</h2>
+<div class="row">
+  <div class="col">
+    <div class="phone">
+      <div class="top"><div class="ico">☰</div><div class="lang">Français ⇄ ไทย</div><div class="ico">＋</div></div>
+      <div class="hint"><div><b>Dis ce que tu as en tête.</b>On le reformule proprement en thaï.<br><br>Donne du contexte si tu veux : où tu es, ce que tu vois, ce que tu cherches.</div></div>
+      <div class="bottom" style="flex-direction:column"><div class="mic">🎙</div><div class="me-info">👤 Mes infos</div></div>
+    </div>
+    <ul class="notes">
+      <li>« Mes infos » regroupe langue, allergies, épice et régime : un seul point d'entrée.</li>
+      <li>La phrase d'aide disparaît dès le premier message.</li>
+    </ul>
+  </div>
+</div>
+
+<h2>A. Messagerie <span style="font-weight:400;color:var(--mid)">(style iMessage, deux micros)</span></h2>
+<div class="row">
+  <div class="col">
+    <div class="label">A1. Ton message part</div>
+    <div class="phone">
+      <div class="top"><div class="ico">☰</div><div class="lang">Français ⇄ ไทย</div><div class="ico">＋</div></div>
+      <div class="body">
+        <div class="b me">C'est quoi ce plat ? C'est épicé ? Je suis allergique aux cacahuètes.
+          <div class="sub">จานนี้คืออะไรครับ เผ็ดไหมครับ ผมแพ้ถั่วลิสงครับ</div></div>
+        <div class="meta r"><span>🔊 lecture en cours…</span><span>✎ Modifier</span></div>
+      </div>
+      <div class="bottom"><div class="pill me">🎙 Moi</div><div class="pill them">🎙 กดแล้วพูด</div></div>
+    </div>
+    <ul class="notes">
+      <li>Le thaï est lu automatiquement dès qu'il arrive. Tu tournes le téléphone, c'est tout.</li>
+      <li>✎ Modifier : corriger le texte au clavier ou redire. Remplace « Faux ? Réenregistre ».</li>
+      <li>Deux micros : le tien, et celui du vendeur libellé en thaï (« appuie et parle »).</li>
+    </ul>
+  </div>
+  <div class="col">
+    <div class="label">A2. Le vendeur répond</div>
+    <div class="phone">
+      <div class="top"><div class="ico">☰</div><div class="lang">Français ⇄ ไทย</div><div class="ico">＋</div></div>
+      <div class="body">
+        <div class="b me">C'est quoi ce plat ? C'est épicé ? Je suis allergique aux cacahuètes.
+          <div class="sub">จานนี้คืออะไรครับ เผ็ดไหมครับ ผมแพ้ถั่วลิสงครับ</div></div>
+        <div class="b them">Khao soi au poulet. Un peu épicé, pas de cacahuètes.
+          <div class="sub">ข้าวซอยไก่ครับ เผ็ดนิดหน่อย ไม่มีถั่วลิสงครับ</div></div>
+        <div class="card"><b>Khao Soi</b> · soupe de nouilles au curry coco, spécialité de Chiang Mai. Poulet · épice ●●○○○
+          <div class="warn">⚠ Certains stands ajoutent des cacahuètes en garniture.</div></div>
+        <div class="meta"><span>▶ Écouter</span></div>
+      </div>
+      <div class="bottom"><div class="pill me">🎙 Moi</div><div class="pill them">🎙 กดแล้วพูด</div></div>
+    </div>
+    <ul class="notes">
+      <li>Dans chaque bulle : ta langue en gros, le thaï en petit. Toi à droite en noir, le vendeur à gauche en gris.</li>
+      <li>La fiche plat s'accroche sous la bulle comme une pièce jointe.</li>
+    </ul>
+  </div>
+</div>
+
+<h2>B. Face à face <span style="font-weight:400;color:var(--mid)">(écran coupé en deux, ta capture Apple Traduire)</span></h2>
+<div class="row">
+  <div class="col">
+    <div class="label">B1. Chacun sa moitié</div>
+    <div class="phone">
+      <div class="half flip">
+        <div class="b them">จานนี้คืออะไรครับ เผ็ดไหมครับ ผมแพ้ถั่วลิสงครับ</div>
+        <div class="b me">ข้าวซอยไก่ครับ เผ็ดนิดหน่อย ไม่มีถั่วลิสงครับ</div>
+        <div style="align-self:center" class="pill them">🎙 แตะเพื่อพูด</div>
+      </div>
+      <div class="divider"></div>
+      <div class="half">
+        <div class="b me">C'est quoi ce plat ? C'est épicé ? Allergique aux cacahuètes.</div>
+        <div class="b them">Khao soi au poulet. Un peu épicé, pas de cacahuètes.</div>
+        <div style="align-self:center" class="pill me">🎙 Parler</div>
+      </div>
+    </div>
+    <ul class="notes">
+      <li>La moitié du haut est à l'envers, tout en thaï : le vendeur lit sa moitié sans que tu tournes le téléphone.</li>
+      <li>Chacun ne voit que sa langue : aucune bulle bilingue.</li>
+      <li>Limite : ça marche sur une table, mal devant un étal quand tu tiens le téléphone. Et il n'y a pas de place pour la fiche plat.</li>
+    </ul>
+  </div>
+</div>
+
+<h2>C. Un seul micro <span style="font-weight:400;color:var(--mid)">(langue détectée, dernier message en géant)</span></h2>
+<div class="row">
+  <div class="col">
+    <div class="label">C1. Ton tour</div>
+    <div class="phone">
+      <div class="top"><div class="ico">☰</div><div class="lang">Français ⇄ ไทย</div><div class="ico">＋</div></div>
+      <div class="body">
+        <div class="b them" style="opacity:.5">Khao soi au poulet. Un peu épicé, pas de cacahuètes.</div>
+        <div class="b me" style="opacity:.5">Vous tenez ce stand depuis longtemps ?</div>
+        <div style="border-top:2px solid var(--ink);padding-top:10px">
+          <div class="small" style="font-size:11px;color:var(--mid)">Le vendeur dit :</div>
+          <div class="huge">Depuis 20 ans, c'était le stand de ma mère.</div>
+          <div style="color:var(--mid);margin-top:4px">20 ปีแล้วครับ เป็นร้านของแม่</div>
+        </div>
+      </div>
+      <div class="bottom"><div class="mic">🎙</div></div>
+    </div>
+    <ul class="notes">
+      <li>Un seul bouton pour les deux : l'app reconnaît qui parle (français ou thaï) et range la bulle du bon côté.</li>
+      <li>Le dernier message s'affiche en très gros, dans la langue de celui qui doit le lire. L'historique rétrécit au-dessus.</li>
+    </ul>
+  </div>
+  <div class="col">
+    <div class="label">C2. Tour du vendeur</div>
+    <div class="phone">
+      <div class="top"><div class="ico">☰</div><div class="lang">Français ⇄ ไทย</div><div class="ico">＋</div></div>
+      <div class="body">
+        <div class="b me" style="opacity:.5">C'est quoi ce plat ? C'est épicé ? Allergique aux cacahuètes.</div>
+        <div style="border-top:2px solid var(--ink);padding-top:10px">
+          <div class="huge">จานนี้คืออะไรครับ<br>เผ็ดไหมครับ<br>ผมแพ้ถั่วลิสงครับ</div>
+          <div style="color:var(--mid);margin-top:4px">🔊 · C'est quoi ce plat ? C'est épicé ? Allergique aux cacahuètes.</div>
+        </div>
+      </div>
+      <div class="bottom" style="flex-direction:column"><div class="mic">🎙</div><div style="font-size:12px;color:var(--mid)">แตะเพื่อพูด · Parler</div></div>
+    </div>
+    <ul class="notes">
+      <li>C'est le mode Montrer de la v1, mais automatique : pas d'écran à part, pas de bouton en plus.</li>
+      <li>Le moins de taps possible. Le risque : la détection se trompe sur une réponse très courte (« ครับ »).</li>
+    </ul>
+  </div>
+</div>
+
+<div class="box">
+  <h3>Anatomie d'un message</h3>
+  <table>
+    <tr><th>Élément</th><th>Ton message</th><th>Message du vendeur</th></tr>
+    <tr><td>Côté + couleur</td><td>Droite, noir</td><td>Gauche, gris</td></tr>
+    <tr><td>Texte principal</td><td>Version nettoyée dans ta langue</td><td>Traduction dans ta langue</td></tr>
+    <tr><td>Texte secondaire</td><td>Le thaï envoyé</td><td>Le thaï original</td></tr>
+    <tr><td>Audio</td><td>Thaï lu automatiquement, ▶ pour relire</td><td>▶ Écouter (dans ta langue)</td></tr>
+    <tr><td>Action</td><td>✎ Modifier</td><td>Rien</td></tr>
+    <tr><td>Pièce jointe</td><td>Aucune</td><td>Fiche plat dès qu'un plat ou un ingrédient est nommé</td></tr>
+    <tr><td>Masqué</td><td>Ta dictée brute, avec les hésitations</td><td>Rien</td></tr>
+  </table>
+</div>
+
+<div class="box">
+  <h3>À vérifier par le tech</h3>
+  <ul>
+    <li><b>Lecture automatique du thaï :</b> iOS bloque le son sans tap. Le tap sur le micro peut « débloquer » l'audio pour la suite de la session, c'est une astuce courante. À tester sur un iPhone : sans elle, A et C ont besoin d'un tap ▶.</li>
+    <li><b>Détection de la langue (C) :</b> la transcription peut détecter français ou thaï. Il faut mesurer la fiabilité sur des réponses d'un ou deux mots.</li>
+  </ul>
+</div>
+</body>
+</html>

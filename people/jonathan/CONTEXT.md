@@ -49,6 +49,7 @@ _Avoid_: Thai (when the distinction with Kham Mueang matters)
 ## Cards
 
 **Context Card**:
+_Superseded on 2026-09-27 by Move cards (see below): only the Allergy Flag stays informative._
 An informative, full-width card attached to a Turn that explains one Mention, with content copied from the Context Pack; at most one per Turn, none when there is no Mention. The only exceptions are the Moment card and the Off-guide dish card.
 _Avoid_: info card, tooltip, suggestion, follow-up question
 
@@ -79,3 +80,28 @@ _Avoid_: fun fact, tip, cultural note
 **Allergy Flag**:
 A warning on a Dish card that a Mention may conflict with My info; always a risk to check with the Vendor, never a guarantee.
 _Avoid_: allergy alert, safe/unsafe label
+
+## Moves (decided 2026-09-27)
+
+**Move**:
+A short phrase the Visitor says **themselves**, not translated by the app, at the right Stage of the conversation, to make the Vendor smile and open a real exchange. Hand-written, sourced and reviewed by a native speaker; lives in `people/jonathan/moves/moves.json`. The Context Pack knows what we talk about, Moves know what to do with it.
+_Avoid_: prompt, suggestion, template
+
+**Stage**:
+Where the conversation is: start, explore, decide, receive, pay, leave, or vendor-used-northern-word. Works at a market stall as well as a restaurant. Detected by the model on each Turn.
+_Avoid_: moment (taken by the Moment card), step, phase
+
+**Move card**:
+A card that carries one Move, with one action in one tap. Types: **Say it** (what you say in any case: hello, delicious, thank you), **Ask** (a question that deepens the exchange, the most powerful one), **Echo** (the Vendor used a Northern word, say it back). The Allergy Flag is the only informative card left.
+_Avoid_: context card, info card
+
+**Slot**:
+The hole in a Move filled from the Context Pack, e.g. `{dish}` in "Is {dish} your family recipe?".
+
+**Say it yourself**:
+A view opened from any of the Visitor's translated bubbles that teaches them to say it: Thai, syllable phonetics, normal and slow audio.
+_Avoid_: learn mode, pronunciation coach
+
+**Postcard**:
+An image made at the end of a conversation (photo of the dish, "Today I learned" word, the Vendor's reply verbatim, date, logo) that the Visitor saves to their phone's Photos.
+_Avoid_: memory (reserved for V2), recap, summary

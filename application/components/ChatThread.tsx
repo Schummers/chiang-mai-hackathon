@@ -6,12 +6,13 @@ import type { ConversationState } from "@/lib/engine/engine";
 import type { Message } from "@/lib/engine/types";
 import { Bubble, Row } from "./Bubble";
 import { ErrorState } from "./ErrorState";
+import { LogoMark } from "./Logo";
 import s from "./Chat.module.css";
 import screen from "./Screen.module.css";
 
 type Props = {
   state: ConversationState;
-  /** Shown under the greeting on an empty conversation (My info card). */
+  /** Shown under the greeting on an empty conversation (About you card). */
   intro?: React.ReactNode;
   /** Live content at the end of the thread (Listening card). */
   live?: React.ReactNode;
@@ -36,6 +37,7 @@ export function ChatThread({ state, intro, live, playingId, onSpeak, onRetry, on
     <section ref={ref} className={screen.chat} aria-live="polite">
       {empty && (
         <div className={screen.hello}>
+          <LogoMark size={56} />
           <b>Say what&apos;s on your mind.</b>
           <span>We&apos;ll turn it into clear Thai.</span>
         </div>

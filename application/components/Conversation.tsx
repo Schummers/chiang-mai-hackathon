@@ -14,6 +14,7 @@ import { ChatThread } from "./ChatThread";
 import { Dock } from "./Dock";
 import { OfflineBanner } from "./ErrorState";
 import { ListeningCard } from "./ListeningCard";
+import { Logo } from "./Logo";
 import { MyInfoCard, MyInfoPage, Toast } from "./MyInfo";
 import s from "./Screen.module.css";
 
@@ -31,7 +32,7 @@ export function Conversation() {
     const { info, changed } = mergeMyInfo(myInfoStore.get(), detected);
     if (!changed) return;
     myInfoStore.set(info);
-    setToast("Saved to My info");
+    setToast("Saved to About you");
     clearTimeout(toastTimer.current);
     toastTimer.current = setTimeout(() => setToast(null), 2500);
   };
@@ -103,6 +104,10 @@ export function Conversation() {
   };
 
   const { phase } = state;
+  // On an empty conversation, bring the About you card back; once talking, open the full page.
+  const openAboutYou = () =>
+    state.messages.length === 0 && phase.kind === "idle" ? setInfoCardClosed(false) : setInfoOpen(true);
+
   const live =
     phase.kind === "listening" ? (
       <ListeningCard
@@ -116,15 +121,15 @@ export function Conversation() {
   return (
     <main className={s.screen}>
       <header className={s.top}>
-        <button className={s.iconBtn} aria-label="My info" onClick={() => setInfoOpen(true)}>
-          <UserRound size={22} strokeWidth={2.1} />
-        </button>
-        <div className={s.brand}>
-          U Mueang <span className="th">อู้เมือง</span>
+        <Logo />
+        <div className={s.actions}>
+          <button className={s.iconBtn} aria-label="About you" onClick={openAboutYou}>
+            <UserRound size={20} strokeWidth={2.1} />
+          </button>
+          <button className={s.iconBtn} aria-label="New conversation" onClick={newConversation}>
+            <Plus size={20} strokeWidth={2.1} />
+          </button>
         </div>
-        <button className={s.iconBtn} aria-label="New conversation" onClick={newConversation}>
-          <Plus size={24} strokeWidth={2.1} />
-        </button>
       </header>
       {!online && <OfflineBanner />}
 
@@ -137,14 +142,28 @@ export function Conversation() {
         onDismissError={() => engine.dismissError()}
         intro={
           !infoCardClosed && (
-            <MyInfoCard info={myInfo} onOpen={() => setInfoOpen(true)} onClose={() => setInfoCardClosed(true)} />
+            <MyInfoCard
+              info={myInfo}
+              onOpen={() => setInfoOpen(true)}
+              onClose={() => setInfoCardClosed(true)}
+              language={language}
+              onLanguage={languageStore.set}
+            />
           )
         }
       />
 
       <Dock state={state} onTap={onTap} language={language} playingId={playingId} getLevel={getLevel} offline={!online} />
 
-      {infoOpen && <MyInfoPage info={myInfo} onChange={myInfoStore.set} onDone={() => setInfoOpen(false)} />}
+      {infoOpen && (
+        <MyInfoPage
+          info={myInfo}
+          onChange={myInfoStore.set}
+          onDone={() => setInfoOpen(false)}
+          language={language}
+          onLanguage={languageStore.set}
+        />
+      )}
       {toast && <Toast text={toast} />}
     </main>
   );

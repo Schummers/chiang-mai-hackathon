@@ -5,7 +5,7 @@ Updated 2026-09-27. Production: https://u-mueang.vercel.app (every push to `main
 ## Works
 
 - Full front-end on the mock: two mics, recording with auto-stop, bubbles, context card, speech, My info, language picker, errors and Retry (issues #2 to #11, closed).
-- Kratip design: tickets 01 and 02 applied, 03 to 05 in [`people/jonathan/tickets/kratip/`](../../people/jonathan/tickets/kratip/).
+- Kratip design: tickets 01 to 05 applied ([`people/jonathan/tickets/kratip/`](../../people/jonathan/tickets/kratip/)). The logo mark is still the placeholder SVG (`components/Logo.tsx`).
 
 ## In progress
 

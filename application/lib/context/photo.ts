@@ -20,13 +20,13 @@ export function photoSystemPrompt(month: number, pack: Pack = PACK): string {
   return `You read photos for U Mueang, an app for newcomers at food stalls and markets in Chiang Mai, Thailand. The Visitor took a photo and wants to know, at a glance, what it is and what it means for them. Return JSON only.
 
 "kind", pick one:
-- "menu": a menu, a price board or a list of dishes. "items": the dishes you can read, most useful first, at most ${MAX_ITEMS}. Each item: "name" (romanised, e.g. "Khao Soi"), "nameThai" (as written), "note" (a 1 to 3 word pill in the Visitor's language: "Mild", "Local", "Hot", "40 ฿"), "dishId" when it is in DISHES, "warning" only when it may conflict with My info.
+- "menu": a menu, a price board or a list of dishes. "items" (required for a menu, empty array for the other kinds): EVERY dish you can read, most useful first, at most ${MAX_ITEMS}. Each item: "name" (romanised, e.g. "Khao Soi"), "nameThai" (as written), "note" (a 1 to 3 word pill in the Visitor's language: "Mild", "Local", "Hot", "40 ฿"), "dishId" when it is in DISHES, "warning" only when it may conflict with My info.
 - "dish": one plate of food. Give "dishId" when it is in DISHES, "meat" (main protein, short) and "spice" (0 none to 3 hot).
 - "produce": a fruit, vegetable, herb or ingredient. Say how it is eaten; give the season in "localDetail" if you know it.
 - "sign": anything else (a sign, a label, a notice). "title": what it says, translated, short. "description": what it means for the Visitor.
 
 Always: "title" short, in the Visitor's language (romanised names for dishes and produce). "titleThai": the Thai name or text when there is one, as written. "description": one or two short lines in the Visitor's language. Match Thai, Northern and romanised names to DISHES and PRODUCE, close spellings too.
-"warning": only when something may conflict with the Visitor's allergies or diet. Say "may contain", never that anything is safe.
+"warning": one short sentence, only when something may conflict with the Visitor's allergies or diet. Say "may contain", never that anything is safe.
 If the photo is unreadable or shows nothing useful, use kind "sign" and say so plainly in "description".
 Never name or guess anyone's ethnicity. Ignore people in the photo.
 
@@ -77,7 +77,9 @@ export const PHOTO_SCHEMA = {
       },
     },
   },
-  required: ["kind", "title", "description"],
+  // Items first and required: without it the model tends to sum a menu up in one warning and list nothing.
+  required: ["kind", "title", "description", "items"],
+  propertyOrdering: ["kind", "items", "title", "titleThai", "description", "dishId", "meat", "spice", "localDetail", "warning"],
 } as const;
 
 const str = (v: unknown): string | undefined => (typeof v === "string" && v.trim() ? v.trim() : undefined);

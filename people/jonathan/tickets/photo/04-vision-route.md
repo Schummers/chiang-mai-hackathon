@@ -8,11 +8,11 @@
 
 **Blocked by:** 01.
 
-**Status:** ready-for-agent
+**Status:** in progress: waiting for 4 real photos and a production check
 
 - [ ] Route returns a valid `PhotoCard` for a menu, a dish, a fruit and a sign (4 real test photos, not committed if they show people)
-- [ ] 413 over 4 MB, 502 on provider failure or missing key, same as the other routes
+- [x] 413 over 4 MB, 502 on provider failure or missing key, same as the other routes
 - [ ] Answer lands in under ~6 s on the production URL for a menu photo
-- [ ] Image never stored or logged server-side
-- [ ] `docs/contract.md` lists the route, its errors and timeouts
-- [ ] `npm test` and `npm run build` green
+- [x] Image never stored or logged server-side
+- [x] `docs/contract.md` lists the route, its errors and timeouts
+- [x] `npm test` and `npm run build` green

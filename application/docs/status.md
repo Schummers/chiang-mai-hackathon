@@ -12,7 +12,7 @@ Updated 2026-09-27. Production: https://u-mueang.vercel.app (every push to `main
 ## In progress
 
 - **Moves** (grill closed 2026-09-27, see [moves.md](moves.md)): tickets in [`people/jonathan/tickets/moves/`](../../people/jonathan/tickets/moves/). 03 (home pitch) done; 01 (Moves data and Stage), 04 (Say it yourself) in progress; 02 (Move cards) starts when 01 lands; 05 and 06 (Postcard) after. Each ticket's Status line is the live state.
-- **Photo** (tickets in [`people/jonathan/tickets/photo/`](../../people/jonathan/tickets/photo/), branch `feature/photo`): 01 (engine, contract, mock menu card) 02 (dock button, photo in the thread, reading state) and 03 (photo card, four kinds, "Ask" still inert) done. iPhone Safari not checked.
+- **Photo** (tickets in [`people/jonathan/tickets/photo/`](../../people/jonathan/tickets/photo/), branch `feature/photo`): 01 (engine, contract, mock menu card) 02 (dock button, photo in the thread, reading state) 03 (photo card, four kinds, "Ask" still inert) and 04 (`/api/photo` on Gemini) done. 04 checked locally on generated Thai images only, not yet on real photos nor on the production URL (the branch is not on main, previews run the mock without the key). iPhone Safari not checked.
 - **Native review of the 45 Moves**: [`people/jonathan/moves/REVIEW.md`](../../people/jonathan/moves/REVIEW.md), to hand to Thai contacts the morning of 27/09.
 - **Demo readiness (#13)**: QR done ([`people/jonathan/demo/`](../../people/jonathan/demo/)). Missing: real iPhone and Android run, mock switch by URL flag, backup video.
 

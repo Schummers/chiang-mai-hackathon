@@ -28,7 +28,8 @@ Dock photo button (<input capture>, phone camera)
      -> URL.createObjectURL(image)                   local only, revoked on new conversation
      -> TurnService.readPhoto(image, { userLanguage, myInfo })
           mock: menu card (peanut flag from My info), then dish, fruit, sign in turn
-          api: not yet (ticket 04)
+          api: POST /api/photo -> Gemini vision, JSON schema PHOTO_SCHEMA (lib/context/photo.ts)
+               -> toPhotoCard: validated, dishes anchored in the Context Pack (allergen flags from the overlay)
   <- photo message (image + PhotoCard) added to the thread
 ```
 
@@ -47,6 +48,7 @@ Key idea: **the model only says what it recognised** (`mention`: a dish id, a wo
 |---|---|
 | `app/page.tsx` | Renders `<Conversation />`, nothing else. Touch it as little as possible. |
 | `app/api/transcribe/route.ts` | Audio -> raw text via Gemini flash-lite. Removes the spaces flash-lite puts between Thai words. |
+| `app/api/photo/route.ts` | Image -> `PhotoCard` via Gemini. The image is sent to Gemini only: never stored, never logged. |
 | `app/api/translate/route.ts` | Raw text + context -> `TranslateResult`. Adds the Moment card on the first Turn when nothing is mentioned. Date is Chiang Mai time (UTC+7). |
 | `app/globals.css` | Design tokens (Kratip). |
 | `components/Conversation.tsx` | The one screen: wires engine, My info, language, thread and dock. |
@@ -62,7 +64,7 @@ Key idea: **the model only says what it recognised** (`mention`: a dish id, a wo
 | `components/Logo.tsx` | Header logo (placeholder mark). |
 | `lib/engine/` | `types.ts` (contract, photo types included), `engine.ts` (state machine, voice and photo Turns), `turnService.ts` (mock or api picker), `mockTurnService.ts`. |
 | `lib/server/gemini.ts` | Gemini REST client, model names, fallback on 429/503. Server only. |
-| `lib/context/` | Context Pack (`pack.json`, `pack.ts`), hand-written `overlay.ts`, `cards.ts`, `prompt.ts`. |
+| `lib/context/` | Context Pack (`pack.json`, `pack.ts`), hand-written `overlay.ts`, `cards.ts`, `prompt.ts`, `photo.ts` (photo prompt, schema, validation). |
 | `lib/recorder.ts` | Mic capture, silence detection. |
 | `lib/cardFlag.ts` | Deterministic allergy keyword check on a card ("May contain peanuts"), and allergens the Vendor ruled out. |
 | `lib/photo.ts` | Downscale a camera photo before the read. |

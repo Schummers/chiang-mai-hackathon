@@ -13,7 +13,7 @@ interface TurnService {
 }
 ```
 
-`readPhoto` is implemented by the mock only: a menu card first, then a dish, a fruit and a sign in turn (`MOCK_PHOTO_CARDS`), so every card can be seen. The api client and its route come with photo ticket 04.
+`readPhoto`: in api mode it posts to `POST /api/photo`. The mock returns a menu card first, then a dish, a fruit and a sign in turn (`MOCK_PHOTO_CARDS`), so every card can be seen.
 
 Picked once by `NEXT_PUBLIC_TURN_SERVICE` in [`turnService.ts`](../lib/engine/turnService.ts): `mock` (default) or `api`. It is the only place that reads it.
 
@@ -22,6 +22,7 @@ Picked once by `NEXT_PUBLIC_TURN_SERVICE` in [`turnService.ts`](../lib/engine/tu
 | Route | Request | Response | Errors |
 |---|---|---|---|
 | `POST /api/transcribe` | FormData: `audio` (webm or mp4 blob, max 4 MB), `language` | `{ raw: string }`. Missing or empty audio returns `{ raw: "" }` with 200, same as no speech. The engine also drops sound tags (`<noise>`, `[Music]`, `(silence)`…) and treats what is left empty as no speech | 413 too large, 502 provider failed **or `GEMINI_API_KEY` missing** |
+| `POST /api/photo` | FormData: `image` (JPEG, the UI downscales to 1280px, max 4 MB), `language`, `myInfo` (JSON) | JSON `PhotoCard`. A malformed or empty model answer still returns 200 with a Sign card "Couldn't read this photo" | 400 no image, 413 too large, 502 provider failed **or `GEMINI_API_KEY` missing** |
 | `POST /api/translate` | JSON `TranslateInput` (`raw` cut to 2000 chars) | JSON `TranslateResult` | 400 empty raw, 502 provider failed or key missing, 500 on a malformed JSON body |
 
 `TranslateInput`: `{ raw, speaker: "you" | "vendor", userLanguage, myInfo, history: Message[] }`. The route keeps the last 6 Turns of history for the prompt.
@@ -60,7 +61,8 @@ Menu `items[].note` is a short pill label ("Mild ok", "Local"), not a sentence. 
 |---|---|
 | Engine, per service call (photo read included) | 15 s, then an error bubble with Retry (the Turn is kept) (`lib/engine/engine.ts`) |
 | Gemini request | 13 s total budget, fallback included. Main model gets 8 s, then one fallback to flash-lite on 429, 503 or timeout, with the time left (`lib/server/gemini.ts`) |
-| Vercel function | `maxDuration = 30` |
+| Vercel function | `maxDuration = 30` (all three routes) |
+| Photo read | same Gemini budget (13 s, main model 8 s then flash-lite). Measured locally on a menu image: ~2.3 s on `gemini-3.6-flash`, with rare stalls over 10 s on both models |
 | Recording | stop 1.5 s after the voice ends, 6 s if nobody speaks, 30 s cap (`lib/recorder.ts`); under 0.6 s dropped (`MIN_RECORDING_MS` in `components/Conversation.tsx`) |
 
 ## Env vars

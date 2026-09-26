@@ -90,6 +90,14 @@
   color: var(--accent);
 }
 
+/* Row of tools under the Visitor's bubble: Play again, Say it yourself. */
+.tools {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  column-gap: 8px;
+}
+
 /* Play tool (P1): wash when idle, solid speaker color while playing. */
 .tool {
   display: inline-flex;

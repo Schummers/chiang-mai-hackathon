@@ -1,11 +1,11 @@
 "use client";
 
 import { Snail, Speech, Volume2, X } from "lucide-react";
-import { useEffect, useRef, useState } from "react";
-import { createPortal } from "react-dom";
+import { useRef, useState } from "react";
 import type { Message } from "@/lib/engine/types";
-import { speak, stopSpeech } from "@/lib/speech";
+import { usePlayToggle } from "@/lib/usePlayToggle";
 import chat from "./Chat.module.css";
+import { Overlay } from "./Overlay";
 import s from "./SayItYourself.module.css";
 
 const SLOW_RATE = 0.6;
@@ -29,7 +29,7 @@ export function SayItTool({ message }: { message: Message }) {
         <Speech size={16} strokeWidth={2.1} aria-hidden />
         Say it yourself
       </button>
-      {open && createPortal(<SayItSheet message={message} onClose={() => setOpen(false)} />, document.body)}
+      {open && <SayItSheet message={message} onClose={() => setOpen(false)} />}
     </>
   );
 }
@@ -38,8 +38,7 @@ type Rate = "normal" | "slow";
 
 /** Teaches the Visitor to say their Thai: Thai big, syllable phonetics, meaning, normal and slow audio. No scoring (V2). */
 export function SayItSheet({ message, onClose }: { message: Message; onClose: () => void }) {
-  const [playing, setPlaying] = useState<Rate | null>(null);
-  const playingRef = useRef<Rate | null>(null);
+  const { playing, toggle } = usePlayToggle<Rate>();
   const startY = useRef<number | null>(null);
   const [drag, setDrag] = useState(0);
 
@@ -52,47 +51,12 @@ export function SayItSheet({ message, onClose }: { message: Message; onClose: ()
     ? thai.map((t, i) => ({ thai: t, roman: roman[i], meaning: meaning[i] }))
     : [{ thai: thai.join(" "), roman: roman.join(" "), meaning: meaning.join(" ") }];
 
-  const close = () => {
-    if (playingRef.current) stopSpeech();
-    onClose();
-  };
-
-  useEffect(() => {
-    const onKey = (e: KeyboardEvent) => e.key === "Escape" && close();
-    window.addEventListener("keydown", onKey);
-    return () => window.removeEventListener("keydown", onKey);
-  });
-
-  const play = (rate: Rate) => {
-    if (playingRef.current === rate) {
-      stopSpeech();
-      playingRef.current = null;
-      return setPlaying(null);
-    }
-    playingRef.current = rate;
-    setPlaying(rate);
-    speak(
-      thai.join(" "),
-      "th",
-      () => {
-        if (playingRef.current !== rate) return;
-        playingRef.current = null;
-        setPlaying(null);
-      },
-      rate === "slow" ? SLOW_RATE : undefined,
-    );
-  };
+  // Closing unmounts the sheet, and the voice stops with it.
+  const close = onClose;
+  const play = (rate: Rate) => toggle(rate, thai.join(" "), rate === "slow" ? SLOW_RATE : undefined);
 
   return (
-    // Portal events still bubble through the React tree: stop them here so they never reach the bubble (which plays on tap).
-    <div
-      className={s.overlay}
-      onClick={(e) => {
-        e.stopPropagation();
-        close();
-      }}
-      onKeyDown={(e) => e.stopPropagation()}
-    >
+    <Overlay className={s.overlay} onClose={close}>
       <div
         className={s.sheet}
         role="dialog"
@@ -145,6 +109,6 @@ export function SayItSheet({ message, onClose }: { message: Message; onClose: ()
           </button>
         </div>
       </div>
-    </div>
+    </Overlay>
   );
 }

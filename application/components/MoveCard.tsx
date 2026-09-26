@@ -1,14 +1,14 @@
 "use client";
 
 import { Expand, MessageCircleQuestion, Repeat, Speech, Volume2, X } from "lucide-react";
-import { useEffect, useRef, useState } from "react";
-import { createPortal } from "react-dom";
+import { useState } from "react";
 import type { MoveCard as Card, MoveType } from "@/lib/engine/types";
 import { moveLines } from "@/lib/moveCard";
-import { speak, stopSpeech } from "@/lib/speech";
+import { usePlayToggle } from "@/lib/usePlayToggle";
 import chat from "./Chat.module.css";
 import frame from "./ContextCard.module.css";
 import s from "./MoveCard.module.css";
+import { Overlay } from "./Overlay";
 
 const ICON: Record<MoveType, typeof Speech> = { say: Speech, ask: MessageCircleQuestion, echo: Repeat };
 
@@ -19,31 +19,10 @@ const ICON: Record<MoveType, typeof Speech> = { say: Speech, ask: MessageCircleQ
 export function MoveCard({ card, collapsed }: { card: Card; collapsed: boolean }) {
   const lines = moveLines(card);
   const Icon = ICON[card.type];
-  const [playing, setPlaying] = useState(false);
-  const playingRef = useRef(false);
+  const voice = usePlayToggle();
+  const playing = voice.playing !== null;
   const [showing, setShowing] = useState(false);
-
-  useEffect(
-    () => () => {
-      if (playingRef.current) stopSpeech();
-    },
-    [],
-  );
-
-  // speak() runs inside the tap handler: iOS only lets a page speak from a user gesture.
-  const play = () => {
-    if (playingRef.current) {
-      stopSpeech();
-      playingRef.current = false;
-      return setPlaying(false);
-    }
-    playingRef.current = true;
-    setPlaying(true);
-    speak(lines.speak, "th", () => {
-      playingRef.current = false;
-      setPlaying(false);
-    });
-  };
+  const play = () => voice.toggle("play", lines.speak);
 
   return (
     <article className={`${frame.frame} ${s.move}`} data-move={card.id}>
@@ -108,32 +87,15 @@ export function MoveCard({ card, collapsed }: { card: Card; collapsed: boolean }
           </>
         )}
       </div>
-      {showing && createPortal(<ShowVendor big={lines.big} small={lines.small} onClose={() => setShowing(false)} />, document.body)}
+      {showing && <ShowVendor big={lines.big} small={lines.small} onClose={() => setShowing(false)} />}
     </article>
   );
 }
 
 /** The Thai full screen, large type, for the Visitor to turn the phone to the Vendor. Tap anywhere or Escape closes. */
 function ShowVendor({ big, small, onClose }: { big: string; small: string | null; onClose: () => void }) {
-  useEffect(() => {
-    const onKey = (e: KeyboardEvent) => e.key === "Escape" && onClose();
-    window.addEventListener("keydown", onKey);
-    return () => window.removeEventListener("keydown", onKey);
-  }, [onClose]);
-
   return (
-    // Portal events still bubble through the React tree: stop them so they never reach the card (which plays on tap).
-    <div
-      className={s.vendor}
-      role="dialog"
-      aria-modal="true"
-      aria-label="Thai for the vendor"
-      onClick={(e) => {
-        e.stopPropagation();
-        onClose();
-      }}
-      onKeyDown={(e) => e.stopPropagation()}
-    >
+    <Overlay className={s.vendor} role="dialog" aria-modal="true" aria-label="Thai for the vendor" onClose={onClose}>
       <button type="button" className={s.close} aria-label="Close" autoFocus>
         <X size={24} strokeWidth={2.1} />
       </button>
@@ -145,6 +107,6 @@ function ShowVendor({ big, small, onClose }: { big: string; small: string | null
           {small}
         </p>
       )}
-    </div>
+    </Overlay>
   );
 }

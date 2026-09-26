@@ -45,6 +45,7 @@ Key idea: **the model only says what it recognised** (`mention`: a dish id, a wo
 | `components/ContextCard.tsx` | Allergy Flag card (dish card with spice meter and flag row). |
 | `components/SayItYourself.tsx` | "Say it yourself" on a Visitor bubble: phonetics per item, listen, slowly. |
 | `components/MoveCard.tsx` | Move card (Say it / Ask / Echo): tap to hear the Thai, "Show the vendor" full screen, collapses after the next Turn. Lines from `lib/moveCard.ts`. |
+| `components/Overlay.tsx` | Full-screen layer in a portal (Show the vendor, Say it yourself sheet): tap or Escape closes, events never reach the card underneath. |
 | `components/Dock.tsx` | Bottom bar with the two mics (Vendor left, Visitor right) and the language picker. |
 | `components/ListeningCard.tsx`, `Wave.tsx` | Live recording card and wave. |
 | `components/MyInfo.tsx` | Compact My info card and page (allergies, spice, diet). |
@@ -61,6 +62,7 @@ Key idea: **the model only says what it recognised** (`mention`: a dish id, a wo
 | `lib/cardFlag.ts` | Deterministic allergy keyword check on a card ("May contain peanuts"), and allergens the Vendor ruled out. |
 | `lib/useOnline.ts` | Online/offline status for the offline banner. |
 | `lib/speech.ts` | Browser text-to-speech (free, Thai voice built into iOS). |
+| `lib/usePlayToggle.ts` | Play / stop toggle on the browser voice, shared by the Move card and Say it yourself. |
 | `lib/language.ts`, `useLanguage.ts` | Visitor language list and saved choice. |
 | `lib/myInfo.ts`, `useMyInfo.ts` | My info model and saved value. |
 | `lib/storage.ts`, `phoneStore.ts` | Safe localStorage and a tiny shared store. |

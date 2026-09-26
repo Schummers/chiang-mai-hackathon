@@ -4,7 +4,6 @@ import { MoveCard } from "./MoveCard";
 import { PlayTool } from "./PlayTool";
 import { SayItTool } from "./SayItYourself";
 import s from "./Chat.module.css";
-import sayIt from "./SayItYourself.module.css";
 
 const THAI = /[฀-๿]/;
 
@@ -49,7 +48,7 @@ export function Bubble({ message, playing, onSpeak, latest = true }: { message: 
           <Items items={message.original} className={s.small} />
           {/* Your message was already read aloud once (Thai auto-play), so it offers "Play again". */}
           {yours ? (
-            <div className={sayIt.tools}>
+            <div className={s.tools}>
               <PlayTool playing={playing} again />
               <SayItTool message={message} />
             </div>

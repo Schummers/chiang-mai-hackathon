@@ -1,12 +1,5 @@
 /* Say it yourself: tool on the Visitor's bubble, then an L3 sheet (same shape as the About you page). */
 
-.tools {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  column-gap: 8px;
-}
-
 .toolBtn {
   position: relative;
   border: 0;

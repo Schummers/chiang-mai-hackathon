@@ -239,6 +239,18 @@ describe("conversation engine", () => {
     expect(fake.translates).toHaveLength(0);
   });
 
+  it.each(["<noise>", "[noise] <noise>", "(silence)", "[Music]"])("treats a non-speech tag like %s as nothing heard", async (tag) => {
+    const fake = controllableService();
+    const engine = new ConversationEngine({ service: fake.service });
+    engine.micTap("you");
+    const done = engine.stop("you", audio);
+    await flush();
+    fake.transcribes[0].resolve(tag);
+    await done;
+    expect(engine.getState().phase).toEqual({ kind: "error", speaker: "you", reason: "empty" });
+    expect(fake.translates).toHaveLength(0);
+  });
+
   it("shows a mic-denied error, and dismissing it gives the turn back to that speaker", () => {
     const engine = new ConversationEngine({ service: controllableService().service });
     engine.micTap("you");

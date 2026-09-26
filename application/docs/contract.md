@@ -18,7 +18,7 @@ Picked once by `NEXT_PUBLIC_TURN_SERVICE` in [`turnService.ts`](../lib/engine/tu
 
 | Route | Request | Response | Errors |
 |---|---|---|---|
-| `POST /api/transcribe` | FormData: `audio` (webm or mp4 blob, max 4 MB), `language` | `{ raw: string }`. Missing or empty audio returns `{ raw: "" }` with 200, same as no speech | 413 too large, 502 provider failed **or `GEMINI_API_KEY` missing** |
+| `POST /api/transcribe` | FormData: `audio` (webm or mp4 blob, max 4 MB), `language` | `{ raw: string }`. Missing or empty audio returns `{ raw: "" }` with 200, same as no speech. The engine also drops sound tags (`<noise>`, `[Music]`, `(silence)`…) and treats what is left empty as no speech | 413 too large, 502 provider failed **or `GEMINI_API_KEY` missing** |
 | `POST /api/translate` | JSON `TranslateInput` (`raw` cut to 2000 chars) | JSON `TranslateResult` | 400 empty raw, 502 provider failed or key missing, 500 on a malformed JSON body |
 
 `TranslateInput`: `{ raw, speaker: "you" | "vendor", userLanguage, myInfo, history: Message[] }`. The route keeps the last 6 Turns of history for the prompt.

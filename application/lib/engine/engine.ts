@@ -184,7 +184,7 @@ export class ConversationEngine {
 
     try {
       if (raw === undefined) {
-        raw = (await this.withTimeout(this.opts.service.transcribe(audio, speaker === "vendor" ? "th" : userLanguage))).trim();
+        raw = stripNonSpeech(await this.withTimeout(this.opts.service.transcribe(audio, speaker === "vendor" ? "th" : userLanguage)));
         if (stale()) return;
         if (!raw) return this.fail(speaker, "empty");
         this.dispatch({ type: "TRANSCRIBED", raw });
@@ -214,4 +214,11 @@ export class ConversationEngine {
     this.state = next;
     this.listeners.forEach((l) => l());
   }
+}
+
+/** Speech-to-text tags for sounds, not words (`<noise>`, `[Music]`, `(silence)`): never translate them. */
+const NON_SPEECH = /[<[(]\s*(noise|music|silence|inaudible|blank_audio|laughter|applause|sound)[^>\])]*[>\])]/gi;
+
+export function stripNonSpeech(raw: string) {
+  return raw.replace(NON_SPEECH, "").trim();
 }

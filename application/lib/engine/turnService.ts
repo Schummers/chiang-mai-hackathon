@@ -27,8 +27,11 @@ export function createApiTurnService(): TurnService {
   };
 }
 
-/** Picks the turn service from config (NEXT_PUBLIC_TURN_SERVICE). Mock unless "api". */
+/** Picks the turn service from config. Mock unless "api". */
 export function createTurnService(config: string | undefined): TurnService & { kind: TurnServiceKind } {
   if (config === "api") return { kind: "api", ...createApiTurnService() };
   return { kind: "mock", ...createMockTurnService() };
 }
+
+/** The one place that reads NEXT_PUBLIC_TURN_SERVICE: the UI never looks at the environment. */
+export const createTurnServiceFromEnv = () => createTurnService(process.env.NEXT_PUBLIC_TURN_SERVICE);

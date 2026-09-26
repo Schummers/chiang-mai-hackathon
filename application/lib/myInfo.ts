@@ -1,4 +1,5 @@
 import { EMPTY_MY_INFO, type Allergy, type Diet, type MyInfo, type Spice } from "./engine/types";
+import { browserStorage } from "./storage";
 
 const KEY = "u-mueang:my-info";
 
@@ -20,14 +21,6 @@ export const DIETS: { value: Diet; label: string }[] = [
   { value: "vegetarian", label: "Vegetarian" },
   { value: "halal", label: "Halal" },
 ];
-
-const browserStorage = (): Storage | undefined => {
-  try {
-    return typeof window === "undefined" ? undefined : window.localStorage;
-  } catch {
-    return undefined;
-  }
-};
 
 /** Stored on the phone only. Any storage problem means "no info", never a crash. */
 export function loadMyInfo(storage = browserStorage()): MyInfo {

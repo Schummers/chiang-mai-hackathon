@@ -76,19 +76,19 @@
 
 @keyframes pulse-you {
   0% {
-    box-shadow: 0 0 0 0 rgb(43 50 99 / 0.5);
+    box-shadow: 0 0 0 0 color-mix(in srgb, var(--you) 50%, transparent);
   }
   100% {
-    box-shadow: 0 0 0 16px rgb(43 50 99 / 0);
+    box-shadow: 0 0 0 16px color-mix(in srgb, var(--you) 0%, transparent);
   }
 }
 
 @keyframes pulse-them {
   0% {
-    box-shadow: 0 0 0 0 rgb(138 90 68 / 0.55);
+    box-shadow: 0 0 0 0 color-mix(in srgb, var(--them) 55%, transparent);
   }
   100% {
-    box-shadow: 0 0 0 16px rgb(138 90 68 / 0);
+    box-shadow: 0 0 0 16px color-mix(in srgb, var(--them) 0%, transparent);
   }
 }
 
@@ -104,8 +104,10 @@
 }
 
 .picker select {
+  /* The label stays 30px tall, the tappable select around it is 44px (DESIGN.md, touch targets). */
   position: absolute;
-  inset: 0;
+  inset: -7px 0;
+  height: 44px;
   opacity: 0;
   width: 100%;
   font-size: 16px; /* avoids the iOS zoom on focus */

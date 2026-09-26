@@ -1,25 +1,10 @@
 "use client";
 
-import { useSyncExternalStore } from "react";
 import type { UserLanguage } from "./engine/types";
 import { loadLanguage, saveLanguage } from "./language";
+import { createPhoneStore } from "./phoneStore";
 
-let current: UserLanguage | null = null;
-const listeners = new Set<() => void>();
+const { store, useValue } = createPhoneStore<UserLanguage>(loadLanguage, saveLanguage, "en");
 
-export const languageStore = {
-  get: (): UserLanguage => (current ??= loadLanguage()),
-  set(code: UserLanguage) {
-    current = code;
-    saveLanguage(code);
-    listeners.forEach((l) => l());
-  },
-  subscribe(listener: () => void) {
-    listeners.add(listener);
-    return () => listeners.delete(listener);
-  },
-};
-
-export function useLanguage(): UserLanguage {
-  return useSyncExternalStore(languageStore.subscribe, languageStore.get, () => "en");
-}
+export const languageStore = store;
+export const useLanguage = useValue;

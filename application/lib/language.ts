@@ -1,4 +1,5 @@
 import type { UserLanguage } from "./engine/types";
+import { browserStorage } from "./storage";
 
 export type Language = { code: UserLanguage; name: string; verb: string; stop: string };
 
@@ -15,14 +16,6 @@ export const LANGUAGES: Language[] = [
 const KEY = "u-mueang:language";
 
 export const findLanguage = (code: string): Language => LANGUAGES.find((l) => l.code === code) ?? LANGUAGES[0];
-
-const browserStorage = (): Storage | undefined => {
-  try {
-    return typeof window === "undefined" ? undefined : window.localStorage;
-  } catch {
-    return undefined;
-  }
-};
 
 export function loadLanguage(storage = browserStorage()): UserLanguage {
   try {

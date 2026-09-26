@@ -74,9 +74,17 @@ span.chip {
 }
 
 .chip.add {
+  position: relative;
   min-height: 36px;
   font-size: 14px;
   color: var(--you);
+}
+
+/* Same 36px look as the other chips, 44px of tappable area (DESIGN.md, touch targets). */
+.chip.add::before {
+  content: "";
+  position: absolute;
+  inset: -4px;
 }
 
 /* Full page: L3 sheet. */

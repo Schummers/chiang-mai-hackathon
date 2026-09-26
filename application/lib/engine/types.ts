@@ -9,8 +9,43 @@ export type Phase =
   | { kind: "idle"; nextTurn: Speaker }
   | { kind: "listening"; speaker: Speaker; startedAt: number }
   | { kind: "processing"; speaker: Speaker; raw?: string }
-  /** `raw` is kept when transcription worked, so a retry only translates again. */
-  | { kind: "error"; speaker: Speaker; reason: ErrorReason; raw?: string };
+  /** A photo is being read. `photo` is shown full width in the thread meanwhile. */
+  | { kind: "reading"; startedAt: number; photo: Photo }
+  /**
+   * `raw` is kept when transcription worked, so a retry only translates again.
+   * `photo` is kept when a photo read failed, so a retry reads the same image again.
+   */
+  | { kind: "error"; speaker: Speaker; reason: ErrorReason; raw?: string; photo?: Photo };
+
+/** A photo the Visitor took. `url` is a local object URL: the image is only ever sent to the read route. */
+export type Photo = { id: string; url: string };
+
+/** What a photo shows. "produce" covers fruit and ingredients, "sign" anything else. */
+export type PhotoKind = "menu" | "dish" | "produce" | "sign";
+
+export type PhotoMenuItem = {
+  name: string;
+  nameThai?: string;
+  /** Short line: what it is, e.g. "Pork curry, mild". */
+  note?: string;
+  /** Risk based on My info (About you). A flag to double-check, never a guarantee. */
+  warning?: string;
+};
+
+/** The card filled from a photo. Same fields as ContextCard where they fit. */
+export type PhotoCard = {
+  kind: PhotoKind;
+  /** Latin script, in the Visitor's language, e.g. "Khao Soi" or "Noodle stall menu". */
+  title: string;
+  titleThai?: string;
+  description: string;
+  /** Menu only: the dishes read on it, most useful first. */
+  items?: PhotoMenuItem[];
+  meat?: string;
+  spice?: 0 | 1 | 2 | 3;
+  localDetail?: string;
+  warning?: string;
+};
 
 export type CardKind = "dish" | "word" | "moment";
 
@@ -47,6 +82,8 @@ export type Message = {
   romanised?: string[];
   /** The Move offered under this Turn, if any. Kept so a Move is never offered twice. */
   move?: MoveCard | null;
+  /** Photo Turns only: the image and the card read from it. `translation` is empty, `original` holds the card title. */
+  photo?: { url: string; card: PhotoCard };
 };
 
 /** Where the conversation is, detected by the model on each Turn. */
@@ -113,10 +150,14 @@ export type TranslateResult = {
   move?: MoveCard | null;
 };
 
+export type ReadPhotoInput = { userLanguage: UserLanguage; myInfo: MyInfo };
+
 export interface TurnService {
   /** Audio to raw text. `language` is "th" for the vendor, the user language for you. */
   transcribe(audio: Blob, language: string): Promise<string>;
   translate(input: TranslateInput): Promise<TranslateResult>;
+  /** Image to card, in the Visitor's language. Optional: without it a photo fails as a network error. */
+  readPhoto?(image: Blob, input: ReadPhotoInput): Promise<PhotoCard>;
   /** Optional: called when the visitor starts a new conversation. */
   reset?(): void;
 }

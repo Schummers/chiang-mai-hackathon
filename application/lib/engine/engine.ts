@@ -4,6 +4,8 @@ import {
   type Message,
   type MyInfo,
   type Phase,
+  type Photo,
+  type PhotoCard,
   type Speaker,
   type TranslateResult,
   type TurnService,
@@ -23,7 +25,9 @@ export type EngineEvent =
   | { type: "TRANSCRIBED"; raw: string }
   | { type: "TRANSLATED"; id: string; result: TranslateResult }
   | { type: "FAILED"; speaker: Speaker; reason: ErrorReason; raw?: string }
-  | { type: "RETRY" }
+  | { type: "PHOTO"; photo: Photo; at: number }
+  | { type: "PHOTO_READ"; card: PhotoCard }
+  | { type: "RETRY"; at?: number }
   | { type: "CANCEL" }
   | { type: "DISMISS_ERROR" }
   | { type: "NEW_CONVERSATION" };
@@ -71,13 +75,35 @@ export function reduce(state: ConversationState, event: EngineEvent): Conversati
           },
         ],
       };
+    case "PHOTO":
+      if (phase.kind !== "idle" && phase.kind !== "error") return state;
+      return { ...state, phase: { kind: "reading", startedAt: event.at, photo: event.photo } };
+    case "PHOTO_READ":
+      if (phase.kind !== "reading") return state;
+      return {
+        ...state,
+        phase: { kind: "idle", nextTurn: "you" },
+        messages: [
+          ...state.messages,
+          {
+            id: phase.photo.id,
+            speaker: "you",
+            translation: [],
+            original: [event.card.title],
+            card: null,
+            photo: { url: phase.photo.url, card: event.card },
+          },
+        ],
+      };
     case "FAILED": {
       if (phase.kind === "idle") return state;
       const error = { kind: "error", speaker: event.speaker, reason: event.reason } as const;
+      if (phase.kind === "reading") return { ...state, phase: { ...error, photo: phase.photo } };
       return { ...state, phase: event.raw ? { ...error, raw: event.raw } : error };
     }
     case "RETRY":
       if (phase.kind !== "error" || phase.reason !== "network") return state;
+      if (phase.photo) return { ...state, phase: { kind: "reading", startedAt: event.at ?? 0, photo: phase.photo } };
       return {
         ...state,
         phase: phase.raw ? { kind: "processing", speaker: phase.speaker, raw: phase.raw } : { kind: "processing", speaker: phase.speaker },
@@ -100,6 +126,8 @@ export type EngineOptions = {
   onDetectedInfo?: (info: Partial<MyInfo>) => void;
   /** A final message was added to the thread. */
   onMessage?: (message: Message) => void;
+  /** Object URLs for photos. Defaults to the browser's URL.createObjectURL / revokeObjectURL. */
+  objectUrls?: { create(image: Blob): string; revoke(url: string): void };
   /** Each service call fails as a network error after this long (default 15 s). */
   timeoutMs?: number;
   now?: () => number;
@@ -124,7 +152,8 @@ export class ConversationEngine {
 
   /** Starts recording for this speaker if nobody is busy. Stopping is `stop()`, once the audio is ready. */
   micTap(speaker: Speaker) {
-    this.dispatch({ type: "MIC_TAP", speaker, at: (this.opts.now ?? Date.now)() });
+    if (this.state.phase.kind === "error") this.dropFailedPhoto();
+    this.dispatch({ type: "MIC_TAP", speaker, at: this.now() });
   }
 
   cancel() {
@@ -137,11 +166,14 @@ export class ConversationEngine {
   }
 
   dismissError() {
+    this.dropFailedPhoto();
     this.dispatch({ type: "DISMISS_ERROR" });
   }
 
   newConversation() {
     this.turn++;
+    this.photoUrls.forEach((url) => this.urls.revoke(url));
+    this.photoUrls.clear();
     this.opts.service.reset?.();
     this.dispatch({ type: "NEW_CONVERSATION" });
   }
@@ -155,15 +187,49 @@ export class ConversationEngine {
     await this.runTurn(++this.turn, speaker, audio);
   }
 
-  /** After a network error: same turn again, from the raw text if transcription had worked. */
+  /** The Visitor took a photo: read it at once into a card, no question needed. */
+  async photo(image: Blob): Promise<void> {
+    const { phase } = this.state;
+    if (phase.kind !== "idle" && phase.kind !== "error") return;
+    this.dropFailedPhoto();
+    const photo: Photo = { id: newId(), url: this.urls.create(image) };
+    this.photoUrls.add(photo.url);
+    this.lastImage = image;
+    this.dispatch({ type: "PHOTO", photo, at: this.now() });
+    await this.runRead(++this.turn, image);
+  }
+
+  /** After a network error: same turn again, from the raw text if transcription had worked, or the same photo. */
   async retry(): Promise<void> {
     const { phase } = this.state;
-    if (phase.kind !== "error" || phase.reason !== "network" || !this.lastAudio) return;
+    if (phase.kind !== "error" || phase.reason !== "network") return;
+    if (phase.photo) {
+      if (!this.lastImage) return;
+      this.dispatch({ type: "RETRY", at: this.now() });
+      return this.runRead(++this.turn, this.lastImage);
+    }
+    if (!this.lastAudio) return;
     this.dispatch({ type: "RETRY" });
     await this.runTurn(++this.turn, phase.speaker, this.lastAudio, phase.raw);
   }
 
   private lastAudio?: Blob;
+  private lastImage?: Blob;
+  /** Every photo URL of this conversation, revoked when it restarts. */
+  private photoUrls = new Set<string>();
+  private readonly now = () => (this.opts.now ?? Date.now)();
+
+  private get urls() {
+    return this.opts.objectUrls ?? { create: (image: Blob) => URL.createObjectURL(image), revoke: (url: string) => URL.revokeObjectURL(url) };
+  }
+
+  /** A photo whose read failed and that the Visitor gave up on: it never reaches the thread. */
+  private dropFailedPhoto() {
+    const { phase } = this.state;
+    if (phase.kind !== "error" || !phase.photo) return;
+    this.urls.revoke(phase.photo.url);
+    this.photoUrls.delete(phase.photo.url);
+  }
   /** Bumped whenever a turn starts, fails or the conversation restarts: an answer for an older turn is dropped. */
   private turn = 0;
 
@@ -207,6 +273,25 @@ export class ConversationEngine {
       if (result.detectedInfo) this.opts.onDetectedInfo?.(result.detectedInfo);
     } catch {
       if (!stale()) this.dispatch({ type: "FAILED", speaker, reason: "network", raw });
+    }
+  }
+
+  private async runRead(turn: number, image: Blob) {
+    const conversation = this.state.conversationId;
+    const stale = () => this.state.conversationId !== conversation || this.turn !== turn;
+    try {
+      const read = this.opts.service.readPhoto;
+      if (!read) throw new Error("readPhoto not supported");
+      const card = await this.withTimeout(
+        read.call(this.opts.service, image, {
+          userLanguage: this.opts.getUserLanguage?.() ?? "en",
+          myInfo: this.opts.getMyInfo?.() ?? EMPTY_MY_INFO,
+        }),
+      );
+      if (stale()) return;
+      this.dispatch({ type: "PHOTO_READ", card });
+    } catch {
+      if (!stale()) this.dispatch({ type: "FAILED", speaker: "you", reason: "network" });
     }
   }
 

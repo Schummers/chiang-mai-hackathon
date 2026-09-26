@@ -8,9 +8,12 @@ Source: [`lib/engine/types.ts`](../lib/engine/types.ts). If this page and the fi
 interface TurnService {
   transcribe(audio: Blob, language: string): Promise<string>; // "th" for the Vendor, the Visitor's language otherwise
   translate(input: TranslateInput): Promise<TranslateResult>;
+  readPhoto?(image: Blob, input: ReadPhotoInput): Promise<PhotoCard>; // photo Turn; missing = the read fails as a network error
   reset?(): void;                                              // new conversation
 }
 ```
+
+`readPhoto` is implemented by the mock only (a fixed menu card). The api client and its route come with photo ticket 04.
 
 Picked once by `NEXT_PUBLIC_TURN_SERVICE` in [`turnService.ts`](../lib/engine/turnService.ts): `mock` (default) or `api`. It is the only place that reads it.
 
@@ -36,13 +39,24 @@ Picked once by `NEXT_PUBLIC_TURN_SERVICE` in [`turnService.ts`](../lib/engine/tu
 
 `ContextCard`: `kind` (`dish` | `word` | `moment`, missing = dish), `offGuide`, `name`, `nameThai`, `description`, `meat`, `spice` (0 to 3), `localDetail`, `warning`. A warning is a risk to check, never a guarantee.
 
+## Photo Turn
+
+`engine.photo(image)` works from `idle` or `error`. The engine makes a local object URL, goes to `{ kind: "reading", startedAt, photo: { id, url } }` (show `photo.url` full width meanwhile), calls `readPhoto(image, { userLanguage, myInfo })`, then goes back to `idle` (next Turn: `you`) and adds a message.
+
+- Photo message: `speaker: "you"`, `translation: []`, `original: [card.title]` (what the history shows the model), `card: null`, `photo: { url, card: PhotoCard }`.
+- Failed or timed-out read: `{ kind: "error", speaker: "you", reason: "network", photo }`. `retry()` reads the same image again. Dismissing it, tapping a mic or taking another photo drops that photo and revokes its URL.
+- New conversation revokes every photo URL. A late read from an old conversation is ignored.
+- `onMessage` is not called for a photo (nothing to read aloud).
+
+`PhotoCard`: `kind` (`menu` | `dish` | `produce` | `sign`), `title`, `titleThai?`, `description`, `items?` (menu only: `name`, `nameThai?`, `note?`, `warning?` from My info), and the `ContextCard` fields that fit: `meat?`, `spice?`, `localDetail?`, `warning?`.
+
 `MyInfo`: `allergies` (peanuts, shellfish, gluten, other), `spice` (none, mild, thai-hot), `diet` (no-pork, vegetarian, halal), `speaker?` (`m` | `f`, the particle used in Moves, missing = `m`).
 
 ## Timeouts and limits
 
 | Where | Value |
 |---|---|
-| Engine, per service call | 15 s, then an error bubble with Retry (the Turn is kept) (`lib/engine/engine.ts`) |
+| Engine, per service call (photo read included) | 15 s, then an error bubble with Retry (the Turn is kept) (`lib/engine/engine.ts`) |
 | Gemini request | 13 s total budget, fallback included. Main model gets 8 s, then one fallback to flash-lite on 429, 503 or timeout, with the time left (`lib/server/gemini.ts`) |
 | Vercel function | `maxDuration = 30` |
 | Recording | stop 1.5 s after the voice ends, 6 s if nobody speaks, 30 s cap (`lib/recorder.ts`); under 0.6 s dropped (`MIN_RECORDING_MS` in `components/Conversation.tsx`) |

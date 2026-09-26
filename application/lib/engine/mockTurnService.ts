@@ -1,4 +1,4 @@
-import type { Speaker, TranslateResult, TurnService } from "./types";
+import type { MyInfo, PhotoCard, Speaker, TranslateResult, TurnService } from "./types";
 
 type ScriptTurn = { speaker: Speaker; raw: string; result: TranslateResult };
 
@@ -54,7 +54,32 @@ export const KHAO_SOI_SCRIPT: ScriptTurn[] = [
   },
 ];
 
-export type MockOptions = { transcribeMs?: number; translateMs?: number };
+/** The menu the mock "reads" from any photo. Warnings are added from My info by `mockMenuCard`. */
+const MOCK_MENU: PhotoCard = {
+  kind: "menu",
+  title: "Northern noodle stall menu",
+  titleThai: "ร้านข้าวซอย",
+  description: "A handwritten menu of Chiang Mai classics, noodles and curries.",
+  items: [
+    { name: "Khao Soi Gai", nameThai: "ข้าวซอยไก่", note: "Chicken curry noodle soup, a little spicy" },
+    { name: "Gaeng Hang Lay", nameThai: "แกงฮังเล", note: "Slow-cooked pork curry, sweet and mild" },
+    { name: "Nam Prik Ong", nameThai: "น้ำพริกอ่อง", note: "Pork and tomato chili dip with vegetables" },
+    { name: "Sai Oua", nameThai: "ไส้อั่ว", note: "Grilled herb sausage, pork" },
+  ],
+};
+
+/** Gaeng Hang Lay is often finished with peanuts: flag it when My info says peanuts. */
+export function mockMenuCard(myInfo: MyInfo): PhotoCard {
+  const peanuts = myInfo.allergies.includes("peanuts");
+  return {
+    ...MOCK_MENU,
+    items: MOCK_MENU.items!.map((item) =>
+      peanuts && item.name === "Gaeng Hang Lay" ? { ...item, warning: "Often topped with peanuts: ask the vendor." } : item,
+    ),
+  };
+}
+
+export type MockOptions = { transcribeMs?: number; translateMs?: number; readPhotoMs?: number };
 
 const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
 
@@ -64,7 +89,7 @@ function turnFor(speaker: Speaker, index: number): ScriptTurn {
 }
 
 /** Ignores the audio: returns the next scripted line for whoever is speaking. */
-export function createMockTurnService({ transcribeMs = 800, translateMs = 1500 }: MockOptions = {}): TurnService {
+export function createMockTurnService({ transcribeMs = 800, translateMs = 1500, readPhotoMs = 2000 }: MockOptions = {}): TurnService {
   // Turns each side has completed, so a failed turn replays the same line on retry.
   const done: Record<Speaker, number> = { you: 0, vendor: 0 };
   return {
@@ -78,6 +103,10 @@ export function createMockTurnService({ transcribeMs = 800, translateMs = 1500 }
       const index = history.filter((m) => m.speaker === speaker).length;
       done[speaker] = index + 1;
       return turnFor(speaker, index).result;
+    },
+    async readPhoto(_image, { myInfo }) {
+      await sleep(readPhotoMs);
+      return mockMenuCard(myInfo);
     },
     reset() {
       done.you = 0;

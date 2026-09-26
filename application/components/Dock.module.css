@@ -39,19 +39,18 @@
 }
 
 .them {
-  background: var(--them-wash);
-  color: var(--them);
+  background: var(--them);
+  color: var(--white);
   --pc: rgb(138 90 68 / 0.45);
 }
 
-/* Tapped: that button becomes Stop. */
+/* Tapped: that button becomes Stop, a darker shade of the same voice. The square icon and the verb carry the state. */
 .you.stop {
-  background: var(--ink);
+  background: #1b2045;
 }
 
 .them.stop {
-  background: var(--them);
-  color: var(--white);
+  background: #6b4230;
 }
 
 .verb {

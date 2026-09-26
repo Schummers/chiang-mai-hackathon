@@ -68,3 +68,8 @@
   color: var(--ink-2);
   font-size: 15px;
 }
+
+/* Content sits at the bottom of the chat, like a messenger. */
+.chat > :first-child {
+  margin-top: auto;
+}

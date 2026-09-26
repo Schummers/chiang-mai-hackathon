@@ -1,0 +1,75 @@
+.card {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 16px;
+  border-radius: 18px;
+  font-weight: 700;
+  font-size: 16px;
+  animation: enter 0.3s ease-out both;
+}
+
+.you {
+  background: var(--you-wash);
+  border-bottom-right-radius: 6px;
+  --accent: var(--you);
+}
+
+.them {
+  background: var(--them-wash);
+  border-bottom-left-radius: 6px;
+  --accent: var(--them);
+}
+
+.them .label {
+  font-family: var(--f-th);
+  font-weight: 600;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--accent);
+  animation: blink 1s infinite;
+}
+
+.wave {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  height: 28px;
+}
+
+.wave b {
+  width: 4px;
+  height: 4px;
+  border-radius: 2px;
+  background: var(--accent);
+  transition: height 60ms linear;
+}
+
+.time {
+  font-variant-numeric: tabular-nums;
+  font-weight: 500;
+  font-size: 14px;
+  color: var(--ink-2);
+  min-width: 32px;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0.2;
+  }
+}
+
+@keyframes enter {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}

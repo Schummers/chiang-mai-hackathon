@@ -392,7 +392,23 @@ describe("mock turn service (Khao Soi scenario)", () => {
     vi.useRealTimers();
   });
 
-  it("is the default turn service", () => {
+  it("api mode posts the photo, language and My info to /api/photo", async () => {
+    const card: PhotoCard = { kind: "sign", title: "No shoes", description: "Leave them outside." };
+    const fetchMock = vi.fn<(url: string, init: RequestInit) => Promise<Response>>(async () => Response.json(card));
+    vi.stubGlobal("fetch", fetchMock);
+    const myInfo: MyInfo = { allergies: ["peanuts"], spice: null, diet: [] };
+    const photo = new Blob(["jpeg"], { type: "image/jpeg" });
+    expect(await createTurnService("api").readPhoto!(photo, { userLanguage: "fr", myInfo })).toEqual(card);
+    const [url, init] = fetchMock.mock.calls[0];
+    const body = init.body as FormData;
+    expect(url).toBe("/api/photo");
+    expect(body.get("language")).toBe("fr");
+    expect(JSON.parse(String(body.get("myInfo")))).toEqual(myInfo);
+    expect(body.get("image")).toBeInstanceOf(Blob);
+    vi.unstubAllGlobals();
+  });
+
+    it("is the default turn service", () => {
     expect(createTurnService(undefined).kind).toBe("mock");
     expect(createTurnService("api").kind).toBe("api");
   });

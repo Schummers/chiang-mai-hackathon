@@ -1,0 +1,414 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Screen 6 Explorations</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:wght@400;500;700;800&family=Noto+Sans+Thai+Looped:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/lucide@0.460.0/dist/umd/lucide.min.js"></script>
+<style>
+  :root {
+    color-scheme: light;
+    --paper:#FAF9F6; --white:#FFFFFF; --ink:#1E2238;
+    --you:#2B3263; --you-wash:#ECEEF5; --them:#8A5A44; --them-wash:#F3ECE6;
+    --ink-2:rgb(30 34 56 / .70); --line:rgb(30 34 56 / .10); --line-2:rgb(30 34 56 / .18);
+    --f-lat:'Atkinson Hyperlegible Next', system-ui, sans-serif;
+    --f-th:'Noto Sans Thai Looped','Noto Sans Thai','Thonburi',sans-serif;
+    --sh-2:0 1px 2px rgb(30 34 56 / .06), 0 6px 16px -6px rgb(30 34 56 / .14);
+    --sh-3:0 -10px 30px -8px rgb(30 34 56 / .20);
+  }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body { background:var(--paper); color:var(--ink); font:16px/1.5 var(--f-lat); padding:40px 16px 96px; }
+  .th { font-family:var(--f-th); }
+  svg.lucide { stroke-width:2.1; width:1em; height:1em; flex:none; }
+  .page { max-width:1440px; margin:0 auto; }
+  header h1 { font-size:clamp(32px,5vw,56px); font-weight:800; letter-spacing:-.02em; line-height:1.02; }
+  header h1 .y { color:var(--you); } header h1 .t { color:var(--them); }
+  header p { color:var(--ink-2); max-width:70ch; margin-top:12px; font-size:17px; }
+  .grid { display:flex; flex-wrap:wrap; gap:48px 36px; margin-top:48px; }
+  .col { width:340px; max-width:100%; }
+  .tag { font-size:12px; font-weight:800; letter-spacing:.09em; text-transform:uppercase; color:var(--ink-2); }
+  .col h2 { font-size:22px; font-weight:800; letter-spacing:-.01em; margin:4px 0 14px; }
+  .why { margin-top:16px; font-size:14.5px; line-height:1.5; }
+  .why p { margin-bottom:8px; }
+  .why .cost { display:flex; gap:6px; align-items:center; font-weight:700; font-size:13px; border-top:2px solid var(--ink); padding-top:6px; }
+
+  /* ---------- phone shell ---------- */
+  .phone { position:relative; width:340px; max-width:100%; height:720px; background:var(--paper); border-radius:44px; box-shadow:0 0 0 10px var(--ink), 0 30px 60px -20px rgb(30 34 56 / .45); overflow:hidden; display:flex; flex-direction:column; margin:10px; }
+  .status { height:40px; flex:none; }
+  .top { display:flex; align-items:center; justify-content:space-between; padding:0 16px 10px; flex:none; }
+  .ib { width:40px; height:40px; border-radius:12px; display:grid; place-items:center; font-size:20px; color:var(--ink); }
+  .ctx { text-align:center; line-height:1.2; }
+  .ctx b { font-size:15px; font-weight:800; display:block; }
+  .ctx span { font-size:12px; color:var(--ink-2); display:inline-flex; gap:4px; align-items:center; }
+  .stream { flex:1; overflow:hidden; padding:8px 14px 12px; display:flex; flex-direction:column; justify-content:flex-end; gap:12px; }
+  .lbl { font-size:11px; font-weight:800; letter-spacing:.09em; text-transform:uppercase; display:flex; gap:6px; align-items:center; margin-bottom:4px; }
+  .lbl::before { content:""; width:7px; height:7px; border-radius:50%; background:currentColor; }
+  .lbl.y { color:var(--you); } .lbl.t { color:var(--them); }
+
+  /* standard dock */
+  .dock { display:flex; justify-content:space-between; align-items:flex-end; padding:12px 18px 26px; border-top:1px solid var(--line); flex:none; }
+  .mic { display:flex; flex-direction:column; align-items:center; gap:6px; font-size:12px; color:var(--ink-2); }
+  .mic i { width:60px; height:60px; border-radius:20px; display:grid; place-items:center; color:#fff; font-size:26px; font-style:normal; }
+  .mic.y i { background:var(--you); } .mic.t i { background:var(--them); }
+  .mic.dim { opacity:.4; }
+  .pulse i { animation:pulse 1.6s ease-out infinite; }
+  .mic.y.pulse i { --pc:rgb(43 50 99 / .45); } .mic.t.pulse i { --pc:rgb(138 90 68 / .45); }
+  @keyframes pulse { 0% { box-shadow:0 0 0 0 var(--pc); } 100% { box-shadow:0 0 0 18px transparent; } }
+
+  .heat { display:inline-flex; gap:2px; align-items:flex-end; }
+  .heat b { width:6px; height:11px; border-radius:2px; background:var(--line-2); }
+  .heat b.on { background:var(--ink); }
+  .facts { display:flex; flex-wrap:wrap; gap:6px 12px; font-size:13px; font-weight:700; margin-top:8px; }
+  .facts span { display:inline-flex; gap:5px; align-items:center; }
+
+  /* ========== 0. BASELINE ========== */
+  .b0 .me { align-self:flex-end; max-width:78%; background:var(--you-wash); border-radius:18px 18px 6px 18px; padding:10px 13px; opacity:.55; font-size:14px; }
+  .b0 .them { align-self:flex-start; max-width:86%; background:var(--them-wash); border-radius:18px 18px 18px 6px; padding:11px 14px; }
+  .b0 .them .tr { font-weight:500; font-size:16px; line-height:24px; }
+  .b0 .them .og { font-size:15px; color:var(--ink-2); border-top:1px solid var(--line); margin-top:8px; padding-top:6px; }
+  .b0 .card { background:var(--white); box-shadow:var(--sh-2); border-radius:14px; padding:12px 14px; }
+  .b0 .card h3 { font-size:17px; font-weight:800; } .b0 .card h3 .th { font-size:15px; font-weight:500; color:var(--ink-2); }
+  .b0 .card p { font-size:14px; color:var(--ink-2); line-height:20px; margin-top:2px; }
+
+  /* ========== 1. TIDE: whole screen belongs to whoever's turn it is ========== */
+  .p1 { transition:background .8s ease; }
+  .p1 .tide { position:absolute; left:0; right:0; bottom:0; height:250px; border-radius:36px 36px 0 0; transition:background .8s ease, height .8s cubic-bezier(.2,.8,.2,1); display:flex; flex-direction:column; align-items:center; justify-content:flex-end; padding-bottom:30px; }
+  .p1[data-turn="you"] .tide { background:var(--you-wash); }
+  .p1[data-turn="them"] .tide { background:var(--them-wash); height:290px; }
+  .p1 .turn { font-size:13px; font-weight:800; letter-spacing:.09em; text-transform:uppercase; margin-bottom:6px; transition:color .6s; }
+  .p1 .turnbig { font-size:26px; font-weight:800; letter-spacing:-.01em; margin-bottom:18px; text-align:center; line-height:1.15; }
+  .p1[data-turn="them"] .turnbig { font-family:var(--f-th); font-size:28px; font-weight:700; }
+  .p1 .bigmic { width:96px; height:96px; border-radius:32px; display:grid; place-items:center; color:#fff; font-size:38px; transition:background .6s; animation:pulse 1.8s ease-out infinite; }
+  .p1[data-turn="you"] .bigmic { background:var(--you); --pc:rgb(43 50 99 / .4); }
+  .p1[data-turn="them"] .bigmic { background:var(--them); --pc:rgb(138 90 68 / .4); }
+  .p1[data-turn="you"] .turn { color:var(--you); } .p1[data-turn="them"] .turn { color:var(--them); }
+  .p1 .other { position:absolute; bottom:40px; width:44px; height:44px; border-radius:14px; display:grid; place-items:center; font-size:20px; background:var(--white); box-shadow:var(--sh-2); transition:all .6s; }
+  .p1[data-turn="you"] .other { left:22px; color:var(--them); }
+  .p1[data-turn="them"] .other { right:22px; left:auto; color:var(--you); }
+  .p1 .stream { padding-bottom:270px; }
+  .p1[data-turn="them"] .stream { padding-bottom:310px; }
+  .p1 .them { align-self:flex-start; max-width:88%; background:var(--them-wash); border-radius:18px 18px 18px 6px; padding:11px 14px; font-weight:500; }
+  .p1 .them .og { font-size:14px; color:var(--ink-2); margin-top:6px; }
+  .p1 .mini { background:var(--white); box-shadow:var(--sh-2); border-radius:14px; padding:10px 12px; font-size:14px; display:flex; gap:10px; align-items:center; }
+  .p1 .mini b { font-weight:800; }
+  .toggle { margin-top:12px; font:700 13px var(--f-lat); border-radius:10px; padding:8px 12px; background:var(--white); box-shadow:inset 0 0 0 1.5px var(--line-2); color:var(--you); cursor:pointer; display:inline-flex; gap:6px; align-items:center; }
+
+  /* ========== 2. STAGE: one exchange, set like a poster ========== */
+  .p2 .ribbon { display:flex; gap:6px; padding:0 14px 8px; overflow:hidden; flex:none; }
+  .p2 .ribbon span { font-size:12px; font-weight:700; border-radius:999px; padding:4px 10px; white-space:nowrap; }
+  .p2 .ribbon .y { background:var(--you-wash); } .p2 .ribbon .t { background:var(--them-wash); }
+  .p2 .stage { flex:1; padding:14px 20px 0; display:flex; flex-direction:column; }
+  .p2 .q { font-size:14px; color:var(--ink-2); border-left:3px solid var(--you); padding-left:10px; }
+  .p2 .ans { margin-top:22px; }
+  .p2 .ans ol { list-style:none; }
+  .p2 .ans li { font-size:34px; line-height:1.08; font-weight:800; letter-spacing:-.02em; padding:10px 0; border-bottom:1px solid var(--line); display:flex; gap:12px; align-items:baseline; }
+  .p2 .ans li small { font-size:13px; font-weight:800; color:var(--them); width:18px; }
+  .p2 .orig { font-size:16px; color:var(--ink-2); margin-top:12px; padding-left:30px; }
+  .p2 .sheet { background:var(--white); box-shadow:var(--sh-3); border-radius:22px 22px 0 0; padding:10px 18px 14px; margin-top:auto; }
+  .p2 .grab { width:36px; height:4px; border-radius:2px; background:var(--line-2); margin:0 auto 10px; }
+  .p2 .sheet h3 { font-size:17px; font-weight:800; display:flex; justify-content:space-between; align-items:center; }
+  .p2 .sheet h3 .th { font-weight:500; font-size:15px; color:var(--ink-2); }
+  .p2 .dock { border-top:none; background:var(--white); padding-top:4px; }
+
+  /* ========== 3. WOVEN THREAD ========== */
+  .p3 .stream { position:relative; }
+  .p3 .spine { position:absolute; top:0; bottom:0; left:50%; width:14px; margin-left:-7px;
+    background:
+      repeating-linear-gradient(45deg, rgb(138 90 68 / .55) 0 4px, transparent 4px 8px),
+      repeating-linear-gradient(-45deg, rgb(43 50 99 / .35) 0 4px, transparent 4px 8px);
+    border-radius:7px; opacity:.6; }
+  .p3 .knot { position:relative; display:flex; }
+  .p3 .knot::after { content:""; position:absolute; top:18px; width:12px; height:12px; border-radius:4px; transform:rotate(45deg); }
+  .p3 .knot.me { justify-content:flex-end; } .p3 .knot.me::after { left:50%; margin-left:-6px; background:var(--you); }
+  .p3 .knot.t::after { left:50%; margin-left:-6px; background:var(--them); }
+  .p3 .knot > div { width:calc(50% - 16px); border-radius:16px; padding:10px 12px; font-size:14px; line-height:1.35; }
+  .p3 .knot.me > div { background:var(--you-wash); opacity:.6; }
+  .p3 .knot.t > div { background:var(--them-wash); font-size:15.5px; font-weight:500; }
+  .p3 .knot.t .og { font-size:13px; color:var(--ink-2); margin-top:4px; font-weight:400; }
+  .p3 .woven { position:relative; border-radius:16px; padding:3px;
+    background:
+      repeating-linear-gradient(45deg, var(--them) 0 5px, var(--paper) 5px 7px, var(--you) 7px 12px, var(--paper) 12px 14px); }
+  .p3 .woven > div { background:var(--white); border-radius:13px; padding:12px 14px; }
+  .p3 .woven h3 { font-size:17px; font-weight:800; } .p3 .woven h3 .th { font-weight:500; font-size:15px; color:var(--ink-2); }
+  .p3 .woven p { font-size:14px; color:var(--ink-2); line-height:20px; margin-top:2px; }
+
+  /* ========== 4. MARKET SLIP ========== */
+  .p4 .them { align-self:flex-start; max-width:86%; background:var(--them-wash); border-radius:18px 18px 18px 6px; padding:11px 14px; font-weight:500; }
+  .p4 .them .og { font-size:14px; color:var(--ink-2); margin-top:6px; }
+  .p4 .slip { position:relative; background:var(--white); box-shadow:var(--sh-2); border-radius:6px; padding:16px 16px 14px; transform:rotate(-1.2deg); margin:4px 4px 0;
+    -webkit-mask: radial-gradient(circle 7px at 0 62%, transparent 98%, #000) , radial-gradient(circle 7px at 100% 62%, transparent 98%, #000);
+    -webkit-mask-composite: source-in; mask-composite:intersect; }
+  .p4 .slip .no { font-size:11px; font-weight:800; letter-spacing:.12em; color:var(--ink-2); display:flex; justify-content:space-between; }
+  .p4 .slip h3 { font-family:var(--f-th); font-size:30px; font-weight:700; line-height:1.2; margin-top:4px; }
+  .p4 .slip .lat { font-size:18px; font-weight:800; margin-top:-2px; }
+  .p4 .slip p { font-size:14px; color:var(--ink-2); margin-top:4px; line-height:20px; }
+  .p4 .tear { border-top:2px dashed var(--line-2); margin:14px -16px 10px; }
+  .p4 .rows { font-size:14px; }
+  .p4 .rows div { display:flex; justify-content:space-between; padding:3px 0; }
+  .p4 .rows div span:first-child { color:var(--ink-2); }
+  .p4 .rows b { font-weight:800; display:inline-flex; gap:6px; align-items:center; }
+  .p4 .stamp { position:absolute; right:12px; top:10px; transform:rotate(9deg); border:2.5px solid var(--ink); color:var(--ink); border-radius:8px; padding:4px 8px; font-size:11px; font-weight:800; letter-spacing:.08em; text-align:center; line-height:1.25; opacity:.85; }
+  .p4 .stamp .th { font-size:12px; letter-spacing:0; }
+
+  /* ========== 5. READ-ALONG BUBBLE ========== */
+  .p5 .me { align-self:flex-end; max-width:92%; background:var(--you-wash); border-radius:18px 18px 6px 18px; padding:12px 14px 10px; }
+  .p5 .me ul { list-style:none; }
+  .p5 .me li { font-family:var(--f-th); font-size:21px; font-weight:600; line-height:1.4; padding:3px 6px; margin:0 -6px; border-radius:8px; color:rgb(30 34 56 / .35); transition:all .3s; }
+  .p5 .me li.done { color:var(--ink); }
+  .p5 .me li.now { color:var(--ink); background:var(--white); box-shadow:var(--sh-2); }
+  .p5 .me .og { font-size:13.5px; color:var(--ink-2); margin-top:8px; }
+  .p5 .scrub { display:flex; align-items:center; gap:10px; margin-top:10px; padding-top:10px; border-top:1px solid var(--line); }
+  .p5 .play { width:36px; height:36px; border-radius:12px; background:var(--you); color:#fff; display:grid; place-items:center; font-size:17px; flex:none; }
+  .p5 .wf { flex:1; display:flex; gap:2px; align-items:center; height:28px; }
+  .p5 .wf b { flex:1; border-radius:2px; background:var(--line-2); transition:background .2s; }
+  .p5 .wf b.on { background:var(--you); }
+  .p5 .hint { align-self:flex-start; font-size:13px; color:var(--them); font-weight:700; display:flex; gap:6px; align-items:center; }
+  .p5 .hint .th { font-size:15px; }
+
+  .reco { margin-top:64px; max-width:900px; border-top:2px solid var(--ink); padding-top:16px; }
+  .reco h2 { font-size:24px; font-weight:800; }
+  .reco table { width:100%; border-collapse:collapse; margin-top:12px; font-size:15px; }
+  .reco th, .reco td { text-align:left; padding:8px 10px 8px 0; border-bottom:1px solid var(--line); vertical-align:top; }
+  .reco th { font-size:12px; letter-spacing:.08em; text-transform:uppercase; color:var(--ink-2); }
+  @media (prefers-reduced-motion: reduce) { * { animation:none !important; transition:none !important; } }
+</style>
+</head>
+<body>
+<div class="page">
+<header>
+  <div class="tag">อู้เมือง · Screen 6 · Reply + context</div>
+  <h1><span class="y">Five ways</span> to make <span class="t">the same screen</span> unforgettable.</h1>
+  <p>Same content, same 7 colors, same fonts as DESIGN.md. Each direction pushes one idea. Cost = effort on top of the current app, the night before the demo.</p>
+</header>
+
+<div class="grid">
+
+  <!-- 0 BASELINE -->
+  <div class="col">
+    <div class="tag">Reference</div>
+    <h2>0 · DESIGN.md as is</h2>
+    <div class="phone b0">
+      <div class="status"></div>
+      <div class="top"><div class="ib"><i data-lucide="user-round"></i></div><div class="ctx"><b>Kad Luang market</b><span><i data-lucide="sliders-horizontal"></i>Peanut allergy · Mild</span></div><div class="ib"><i data-lucide="plus"></i></div></div>
+      <div class="stream">
+        <div class="me th">จานนี้คืออะไรครับ เผ็ดไหม…</div>
+        <div class="them">
+          <div class="lbl t">Vendor</div>
+          <div class="tr">Chicken khao soi. A little spicy. No peanuts.</div>
+          <div class="og th">ข้าวซอยไก่ครับ เผ็ดนิดหน่อย ไม่มีถั่วลิสงครับ</div>
+        </div>
+        <div class="card">
+          <h3>Khao soi <span class="th">ข้าวซอย</span></h3>
+          <p>Coconut curry noodle soup, crispy noodles on top. A Chiang Mai signature.</p>
+          <div class="facts"><span><i data-lucide="drumstick"></i>Chicken</span><span><span class="heat"><b class="on"></b><b></b><b></b></span>Mild</span><span><i data-lucide="check"></i>Vendor: no peanuts</span></div>
+        </div>
+      </div>
+      <div class="dock"><div class="mic t"><i><i data-lucide="mic"></i></i><span class="th">ไทย</span></div><div class="mic y pulse"><i><i data-lucide="mic"></i></i>English</div></div>
+    </div>
+    <div class="why"><p>Clean, correct, legible. But it reads like every chat app: nothing a juror remembers 10 minutes later.</p></div>
+  </div>
+
+  <!-- 1 TIDE -->
+  <div class="col">
+    <div class="tag">Direction 1 · turn-taking</div>
+    <h2>1 · The tide</h2>
+    <div class="phone p1" data-turn="you" id="tide">
+      <div class="status"></div>
+      <div class="top"><div class="ib"><i data-lucide="user-round"></i></div><div class="ctx"><b>Kad Luang market</b></div><div class="ib"><i data-lucide="plus"></i></div></div>
+      <div class="stream">
+        <div class="them">
+          <div class="lbl t">Vendor</div>
+          Chicken khao soi. A little spicy. No peanuts.
+          <div class="og th">ข้าวซอยไก่ครับ เผ็ดนิดหน่อย ไม่มีถั่วลิสงครับ</div>
+        </div>
+        <div class="mini"><i data-lucide="soup"></i><div><b>Khao soi</b> · chicken · mild<br><span style="color:var(--ink-2);font-size:13px">Tap for what it is</span></div></div>
+      </div>
+      <div class="tide">
+        <div class="turn" id="tideLbl">Your turn</div>
+        <div class="turnbig" id="tideBig">Ask a follow-up</div>
+        <div class="bigmic"><i data-lucide="mic"></i></div>
+        <div class="other" id="tideOther"><i data-lucide="mic"></i></div>
+      </div>
+    </div>
+    <button class="toggle" onclick="flip()"><i data-lucide="arrow-left-right"></i>Pass the turn</button>
+    <div class="why">
+      <p><b>Idea:</b> the bottom third of the screen is a wash that belongs to whoever should speak. When it's the vendor's turn, the tide rises in clay and says <span class="th">ตาคุณ พูดได้เลย</span> in huge Thai. Readable from arm's length, no reading required.</p>
+      <p>Pushes the core rule (color = who speaks) from the bubble to the whole screen. Directly attacks R2: the vendor doesn't reply because they don't know it's their turn.</p>
+      <span class="cost"><i data-lucide="timer"></i>Cost: S, one div + a CSS transition keyed on turn state</span>
+    </div>
+  </div>
+
+  <!-- 2 STAGE -->
+  <div class="col">
+    <div class="tag">Direction 2 · editorial</div>
+    <h2>2 · The stage</h2>
+    <div class="phone p2">
+      <div class="status"></div>
+      <div class="top"><div class="ib"><i data-lucide="user-round"></i></div><div class="ctx"><b>Kad Luang market</b></div><div class="ib"><i data-lucide="plus"></i></div></div>
+      <div class="ribbon"><span class="y">You · 3 questions</span><span class="t">Vendor · answered</span><span class="y">You · …</span></div>
+      <div class="stage">
+        <div class="q">You asked: what is it, is it spicy, any peanuts?</div>
+        <div class="ans">
+          <div class="lbl t">Vendor says</div>
+          <ol>
+            <li><small>1</small>Chicken khao soi</li>
+            <li><small>2</small>A little spicy</li>
+            <li><small>3</small>No peanuts</li>
+          </ol>
+          <div class="orig th">ข้าวซอยไก่ครับ เผ็ดนิดหน่อย ไม่มีถั่วลิสงครับ</div>
+        </div>
+        <div class="sheet">
+          <div class="grab"></div>
+          <h3>Khao soi <span class="th">ข้าวซอย</span></h3>
+          <div class="facts"><span><i data-lucide="drumstick"></i>Chicken</span><span><span class="heat"><b class="on"></b><b></b><b></b></span>Mild</span><span><i data-lucide="check"></i>Vendor: no peanuts</span></div>
+        </div>
+      </div>
+      <div class="dock"><div class="mic t"><i><i data-lucide="mic"></i></i><span class="th">ไทย</span></div><div class="mic y pulse"><i><i data-lucide="mic"></i></i>English</div></div>
+    </div>
+    <div class="why">
+      <p><b>Idea:</b> kill the chat log. Only the current exchange exists, set like a poster: answers at 34px, numbered to match your questions. History shrinks to a ribbon of chips at the top.</p>
+      <p>Answers 1-2-3 mirror questions 1-2-3: you see instantly which question got which answer. Huge from the back of the room on the demo screen.</p>
+      <span class="cost"><i data-lucide="timer"></i>Cost: M, a new layout, but the model already returns items</span>
+    </div>
+  </div>
+
+  <!-- 3 WOVEN -->
+  <div class="col">
+    <div class="tag">Direction 3 · brand</div>
+    <h2>3 · The woven thread</h2>
+    <div class="phone p3">
+      <div class="status"></div>
+      <div class="top"><div class="ib"><i data-lucide="user-round"></i></div><div class="ctx"><b>Kad Luang market</b></div><div class="ib"><i data-lucide="plus"></i></div></div>
+      <div class="stream">
+        <div class="spine"></div>
+        <div class="knot me"><div class="th">จานนี้คืออะไรครับ เผ็ดไหม มีถั่วลิสงไหม</div></div>
+        <div class="knot t"><div>Chicken khao soi. A little spicy. No peanuts.<div class="og th">ข้าวซอยไก่ครับ…</div></div></div>
+        <div class="woven"><div>
+          <h3>Khao soi <span class="th">ข้าวซอย</span></h3>
+          <p>Coconut curry noodle soup, crispy noodles on top.</p>
+          <div class="facts"><span><i data-lucide="drumstick"></i>Chicken</span><span><span class="heat"><b class="on"></b><b></b><b></b></span>Mild</span><span><i data-lucide="check"></i>Vendor: no peanuts</span></div>
+        </div></div>
+        <div class="knot me"><div style="opacity:.8">Ask: how long have you run this stall?</div></div>
+      </div>
+      <div class="dock"><div class="mic t"><i><i data-lucide="mic"></i></i><span class="th">ไทย</span></div><div class="mic y pulse"><i><i data-lucide="mic"></i></i>English</div></div>
+    </div>
+    <div class="why">
+      <p><b>Idea:</b> the logo's bamboo weave becomes the spine of the conversation. Each message is a knot, indigo or clay. The context card, which belongs to both, is <i>woven from both colors</i>.</p>
+      <p>The story in one image: two threads becoming one fabric. Great for slides and the opening shot. Weaker on legibility: bubbles are half-width.</p>
+      <span class="cost"><i data-lucide="timer"></i>Cost: S for the card border only, M for the full spine</span>
+    </div>
+  </div>
+
+  <!-- 4 SLIP -->
+  <div class="col">
+    <div class="tag">Direction 4 · tactile</div>
+    <h2>4 · The market slip</h2>
+    <div class="phone p4">
+      <div class="status"></div>
+      <div class="top"><div class="ib"><i data-lucide="user-round"></i></div><div class="ctx"><b>Kad Luang market</b></div><div class="ib"><i data-lucide="plus"></i></div></div>
+      <div class="stream">
+        <div class="them">
+          <div class="lbl t">Vendor</div>
+          Chicken khao soi. A little spicy. No peanuts.
+          <div class="og th">ข้าวซอยไก่ครับ เผ็ดนิดหน่อย ไม่มีถั่วลิสงครับ</div>
+        </div>
+        <div class="slip">
+          <div class="no"><span>DISH · 01 · KAD LUANG</span></div>
+          <h3>ข้าวซอยไก่</h3>
+          <div class="lat">Khao soi, chicken</div>
+          <p>Coconut curry noodle soup, crispy noodles on top.</p>
+          <div class="stamp">NO PEANUTS<br><span class="th">แม่ค้าบอก</span><br>SAID BY VENDOR</div>
+          <div class="tear"></div>
+          <div class="rows">
+            <div><span>Meat</span><b><i data-lucide="drumstick"></i>Chicken</b></div>
+            <div><span>Heat</span><b><span class="heat"><b class="on"></b><b></b><b></b></span>Mild</b></div>
+            <div><span>Your info</span><b><i data-lucide="check"></i>Fits you</b></div>
+            <div style="font-size:13px;color:var(--ink-2)">Peanuts: vendor's word. Chili paste varies.</div>
+          </div>
+        </div>
+      </div>
+      <div class="dock"><div class="mic t"><i><i data-lucide="mic"></i></i><span class="th">ไทย</span></div><div class="mic y pulse"><i><i data-lucide="mic"></i></i>English</div></div>
+    </div>
+    <div class="why">
+      <p><b>Idea:</b> the context card is an object, a torn market ticket with a Thai name printed big and an ink stamp. The stamp says <i>who</i> vouched ("said by vendor"): honest about R4 without a warning color.</p>
+      <p>The slip is also what you would <b>screenshot and show at the next stall</b>, or keep as a Memory (V2). An object people want to collect.</p>
+      <span class="cost"><i data-lucide="timer"></i>Cost: S, pure CSS on the existing card</span>
+    </div>
+  </div>
+
+  <!-- 5 READ-ALONG -->
+  <div class="col">
+    <div class="tag">Direction 5 · voice</div>
+    <h2>5 · Read-along</h2>
+    <div class="phone p5">
+      <div class="status"></div>
+      <div class="top"><div class="ib"><i data-lucide="user-round"></i></div><div class="ctx"><b>Kad Luang market</b></div><div class="ib"><i data-lucide="plus"></i></div></div>
+      <div class="stream">
+        <div class="me">
+          <div class="lbl y">You</div>
+          <ul id="ra">
+            <li>จานนี้คืออะไรครับ</li>
+            <li>เผ็ดไหมครับ</li>
+            <li>ผมแพ้ถั่วลิสง มีถั่วลิสงไหมครับ</li>
+          </ul>
+          <div class="og">What is it? Is it spicy? I'm allergic to peanuts: any in it?</div>
+          <div class="scrub"><div class="play"><i data-lucide="volume-2"></i></div><div class="wf" id="wf"></div></div>
+        </div>
+        <div class="hint"><i data-lucide="mic"></i><span class="th">ตาคุณ กดไมค์แล้วพูดได้เลย</span></div>
+      </div>
+      <div class="dock"><div class="mic t pulse"><i><i data-lucide="mic"></i></i><span class="th">ไทย</span></div><div class="mic y"><i><i data-lucide="mic"></i></i>English</div></div>
+    </div>
+    <div class="why">
+      <p><b>Idea:</b> while the Thai is spoken aloud, each line lights up in sync, karaoke-style, and the waveform fills. The vendor follows with their eyes and ears at once, then the hint hands them the mic.</p>
+      <p>Shown on screen 4 here (it's the moment it matters), but it applies to every bubble. Makes the "designed for the other side" argument visible in 3 seconds.</p>
+      <span class="cost"><i data-lucide="timer"></i>Cost: S, speechSynthesis gives an <code>onend</code> per utterance: speak line by line</span>
+    </div>
+  </div>
+
+</div>
+
+<div class="reco">
+  <h2>My pick for tomorrow</h2>
+  <table>
+    <tr><th>Take</th><th>Why</th><th>Cost</th></tr>
+    <tr><td><b>1 · Tide</b></td><td>Solves R2 visually, and it's the "wow" when the phone changes hands on stage.</td><td>S</td></tr>
+    <tr><td><b>5 · Read-along</b></td><td>Makes "designed for the vendor" obvious without explanation.</td><td>S</td></tr>
+    <tr><td><b>4 · Slip</b></td><td>Replaces the context card, gives the demo a memorable object.</td><td>S</td></tr>
+    <tr><td>Keep for later</td><td>2 · Stage (layout rewrite), 3 · Woven (slides and brand, not the app).</td><td>M</td></tr>
+  </table>
+</div>
+</div>
+
+<script>
+  lucide.createIcons();
+  // Tide toggle
+  function flip() {
+    const p = document.getElementById('tide');
+    const you = p.dataset.turn === 'you';
+    p.dataset.turn = you ? 'them' : 'you';
+    document.getElementById('tideLbl').textContent = you ? 'Vendor · ตาคุณ' : 'Your turn';
+    document.getElementById('tideBig').textContent = you ? 'กดแล้วพูดได้เลย' : 'Ask a follow-up';
+  }
+  // Read-along loop
+  const wf = document.getElementById('wf');
+  const N = 34;
+  for (let i = 0; i < N; i++) { const b = document.createElement('b'); b.style.height = (6 + Math.abs(Math.sin(i * 1.7) * 18) + (i % 3) * 2) + 'px'; wf.appendChild(b); }
+  const lis = [...document.querySelectorAll('#ra li')];
+  const bars = [...wf.children];
+  let t = 0;
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function tick() {
+    const step = t % 48; // 3 lines x 12 ticks + pause
+    const line = Math.floor(step / 12);
+    lis.forEach((li, i) => { li.className = i < line ? 'done' : i === line ? 'now' : ''; });
+    const fill = Math.min(N, Math.round((step / 36) * N));
+    bars.forEach((b, i) => b.classList.toggle('on', i < fill));
+    t++;
+  }
+  if (reduce) { lis.forEach(l => l.className = 'done'); } else { tick(); setInterval(tick, 180); }
+</script>
+</body>
+</html>

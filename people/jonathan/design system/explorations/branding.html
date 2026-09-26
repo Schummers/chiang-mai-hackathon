@@ -89,10 +89,11 @@
   /* ================= B · INDIGO NIGHT (dark chrome, lit paper) ================= */
   .B { background:#161A33; }
   .B .hd { display:flex; align-items:center; gap:10px; padding:0 16px 14px; color:#fff; }
-  .B .hd .wm b { font-size:22px; color:#fff; } .B .hd .wm span { font-size:10px; color:#E9B04A; }
+  .B .hd .wm b { font-size:22px; color:#fff; } .B .hd .wm span { font-size:10px; color:#D9B8A6; }
   .B .hd .sp { flex:1; }
   .B .ib { width:38px; height:38px; border-radius:12px; display:grid; place-items:center; font-size:19px; background:rgb(255 255 255 / .08); color:#fff; }
-  .B .sheet { flex:1; background:var(--paper); border-radius:30px 30px 0 0; display:flex; flex-direction:column; overflow:hidden; position:relative; }
+  .sa { background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .54 0 0 0 0 .35 0 0 0 0 .27 0 0 0 .07 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"); }
+  .B .sheet { flex:1; background-color:var(--paper); border-radius:30px 30px 0 0; display:flex; flex-direction:column; overflow:hidden; position:relative; }
   .B .sheet .stream { padding-top:14px; }
   .B .me { align-self:flex-end; max-width:80%; background:var(--you); color:#fff; opacity:.5; border-radius:18px 18px 6px 18px; padding:9px 13px; font-size:14px; }
   .B .them { align-self:flex-start; max-width:88%; background:var(--them-wash); border-radius:18px 18px 18px 6px; padding:12px 14px; }
@@ -100,13 +101,14 @@
   .B .them .og { font-size:14px; color:var(--ink-2); margin-top:6px; }
   .B .lbl.t { color:var(--them); }
   .B .card { background:var(--white); border-radius:16px; padding:0; box-shadow:var(--sh-2); overflow:hidden; }
-  .B .card .band { background:#E9B04A; color:#161A33; font-size:11px; font-weight:800; letter-spacing:.09em; text-transform:uppercase; padding:6px 14px; display:flex; gap:6px; align-items:center; }
+  .B .card .band { background:repeating-linear-gradient(45deg, var(--them) 0 5px, #9C6A52 5px 10px); color:#fff; font-size:11px; font-weight:800; letter-spacing:.09em; text-transform:uppercase; padding:6px 14px; display:flex; gap:6px; align-items:center; }
   .B .card .in { padding:10px 14px 12px; }
   .B .card h3 { font-size:17px; font-weight:800; } .B .card h3 .th { font-weight:500; font-size:15px; color:var(--ink-2); }
   .B .card p { font-size:14px; color:var(--ink-2); line-height:20px; }
   .B .dock { background:#161A33; }
   .B .mic.t { background:rgb(255 255 255 / .1); color:#fff; }
-  .B .mic.y { background:#E9B04A; color:#161A33; --pc:rgb(233 176 74 / .55); }
+  .B .mic.y { background:#fff; color:var(--you); --pc:rgb(255 255 255 / .45); }
+  .B .mic.t { background:var(--them); }
   .B .mid { color:#fff; } .B .mid .th { color:rgb(255 255 255 / .6); font-size:13px; }
 
   /* ================= C · KHAO SOI (warm ground, solid voices) ================= */
@@ -151,7 +153,7 @@
     <symbol id="mark" viewBox="0 0 64 64">
       <path d="M12 4h40a8 8 0 0 1 8 8v32a8 8 0 0 1-8 8H26l-12 10v-10h-2a8 8 0 0 1-8-8V12a8 8 0 0 1 8-8z" fill="url(#weave)" stroke="var(--rim, #2B3263)" stroke-width="3.5" stroke-linejoin="round"/>
       <path d="M32 10 L50 28 L32 46 L14 28 Z" fill="#fff"/>
-      <text x="32" y="36" text-anchor="middle" font-family="Noto Sans Thai Looped, Noto Sans Thai, Thonburi, sans-serif" font-weight="700" font-size="21" fill="var(--rim, #2B3263)">อู้</text>
+      <text x="32" y="36" text-anchor="middle" font-family="Noto Sans Thai Looped, Noto Sans Thai, Thonburi, sans-serif" font-weight="700" font-size="21" fill="#2B3263">อู้</text>
     </symbol>
   </defs>
 </svg>
@@ -165,7 +167,7 @@
 
 <div class="marks">
   <div class="markcard" style="background:var(--paper);box-shadow:inset 0 0 0 1px var(--line)"><svg width="56" height="56"><use href="#mark"/></svg><div class="wm"><b style="color:var(--you)">อู้เมือง</b><span style="color:var(--them)">U Mueang</span></div></div>
-  <div class="markcard" style="background:#161A33;--rim:#E9B04A;--weave:#8A5A44"><svg width="56" height="56"><use href="#mark"/></svg><div class="wm"><b style="color:#fff">อู้เมือง</b><span style="color:#E9B04A">U Mueang</span></div></div>
+  <div class="markcard" style="background:#161A33;--rim:#fff;--weave:#8A5A44"><svg width="56" height="56"><use href="#mark"/></svg><div class="wm"><b style="color:#fff">อู้เมือง</b><span style="color:#D9B8A6">U Mueang</span></div></div>
   <div class="markcard" style="background:#F5ECDD"><svg width="56" height="56"><use href="#mark"/></svg><div class="wm"><b style="color:var(--you)">อู้เมือง</b><span style="color:var(--them)">U Mueang</span></div></div>
 </div>
 
@@ -202,13 +204,13 @@
 
   <!-- B -->
   <div class="col">
-    <div class="eyebrow">Direction B · adds 1 color</div>
+    <div class="eyebrow">Direction B · Mor Hom night, no gold</div>
     <h2>Indigo night</h2>
-    <div class="sw"><i style="background:#161A33"></i><i style="background:#FAF9F6"></i><i style="background:#E9B04A"></i><i style="background:#8A5A44"></i><i style="background:#2B3263"></i></div>
+    <div class="sw"><i style="background:#161A33"></i><i style="background:#FAF9F6"></i><i style="background:#8A5A44"></i><i style="background:#2B3263"></i></div>
     <div class="phone B">
       <div class="status"></div>
-      <div class="hd"><svg width="34" height="34" style="--rim:#E9B04A"><use href="#mark"/></svg><div class="wm"><b>อู้เมือง</b><span>Kad Luang market</span></div><div class="sp"></div><div class="ib"><i data-lucide="user-round"></i></div><div class="ib"><i data-lucide="plus"></i></div></div>
-      <div class="sheet">
+      <div class="hd"><svg width="34" height="34" style="--rim:#fff"><use href="#mark"/></svg><div class="wm"><b>อู้เมือง</b><span>Kad Luang market</span></div><div class="sp"></div><div class="ib"><i data-lucide="user-round"></i></div><div class="ib"><i data-lucide="plus"></i></div></div>
+      <div class="sheet sa">
         <div class="stream">
           <div class="me th">จานนี้คืออะไรครับ เผ็ดไหม…</div>
           <div class="them">
@@ -229,8 +231,8 @@
       </div>
     </div>
     <div class="why">
-      <p><b>Bet:</b> the Chiang Mai night market. Deep indigo chrome (a darker <i>mor hom</i>), the chat is a lit paper sheet, and one marigold accent (lanterns, khao soi broth) marks only "your turn" and "what it is".</p>
-      <ul><li>Wow: the strongest on a projector. Instantly recognisable.</li><li>Chat stays light: sunlight legibility preserved.</li><li>Needs your OK for an 8th color (marigold #E9B04A).</li></ul>
+      <p><b>Bet:</b> the Chiang Mai night market, told with the logo's own story. Chrome in deep <i>Mor Hom</i> (the dyed cotton shirts), the chat is a sheet of <i>Sa</i> paper with a real fibre grain, and the woven clay band marks "what it is". Your mic is the only white thing on the dark bar.</p>
+      <ul><li>Wow: the strongest on a projector, still 100% palette.</li><li>No gold, no 8th color: consistent with the logo rationale.</li><li>Chat stays light: sunlight legibility preserved.</li></ul>
     </div>
   </div>
 
@@ -272,7 +274,7 @@
     <tr><td><b>Floating dock, 72px</b></td><td>Same 60px mics, bar ~35% shorter, the chat breathes behind it.</td></tr>
     <tr><td><b>No "English" under the mic</b></td><td>The language moves to My info (set once). The middle of the dock says whose turn it is instead: more useful.</td></tr>
     <tr><td><b>Logo in the header</b></td><td>Mark 34px + <span class="th">อู้เมือง</span> + context line. Redrawn in SVG (sharp, recolourable), fixes the "Uู Muang" typo.</td></tr>
-    <tr><td><b>My pick: B</b></td><td>It's a hackathon on a projector: B is the only one you recognise from the back of the room, and the chat stays light for real use.</td></tr>
+    <tr><td><b>My pick: B</b></td><td>Recognisable from the back of the room, and every choice maps to the logo story (Mor Hom, clay, weave, Sa paper). Easy line for the pitch.</td></tr>
   </table>
 </div>
 </div>

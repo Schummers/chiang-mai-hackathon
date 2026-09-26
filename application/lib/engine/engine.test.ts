@@ -4,7 +4,7 @@ import { createMockTurnService, KHAO_SOI_SCRIPT } from "./mockTurnService";
 import { createTurnService } from "./turnService";
 import { pickMove } from "@/lib/context/moves";
 import type { Mention } from "@/lib/context/cards";
-import type { Message, MoveCard, MyInfo, Stage, TranslateInput, TranslateResult, TurnService } from "./types";
+import type { AskPhotoInput, Message, MoveCard, MyInfo, PhotoCard, ReadPhotoInput, Stage, TranslateInput, TranslateResult, TurnService } from "./types";
 
 /** What the model would report on each scripted Turn of the mock: the Moves in the script must match. */
 const MOCK_PICK: { stage: Stage; mention: Mention }[] = [
@@ -433,8 +433,328 @@ describe("mock turn service (Khao Soi scenario)", () => {
     vi.useRealTimers();
   });
 
-  it("is the default turn service", () => {
+  it("api mode posts the photo, language and My info to /api/photo", async () => {
+    const card: PhotoCard = { kind: "sign", title: "No shoes", description: "Leave them outside." };
+    const fetchMock = vi.fn<(url: string, init: RequestInit) => Promise<Response>>(async () => Response.json(card));
+    vi.stubGlobal("fetch", fetchMock);
+    const myInfo: MyInfo = { allergies: ["peanuts"], spice: null, diet: [] };
+    const photo = new Blob(["jpeg"], { type: "image/jpeg" });
+    expect(await createTurnService("api").readPhoto!(photo, { userLanguage: "fr", myInfo })).toEqual(card);
+    const [url, init] = fetchMock.mock.calls[0];
+    const body = init.body as FormData;
+    expect(url).toBe("/api/photo");
+    expect(body.get("language")).toBe("fr");
+    expect(JSON.parse(String(body.get("myInfo")))).toEqual(myInfo);
+    expect(body.get("image")).toBeInstanceOf(Blob);
+    vi.unstubAllGlobals();
+  });
+
+    it("api mode posts a photo question to /api/photo/ask", async () => {
+    const fetchMock = vi.fn<(url: string, init: RequestInit) => Promise<Response>>(async () => Response.json({ answer: "Mild." }));
+    vi.stubGlobal("fetch", fetchMock);
+    const card: PhotoCard = { kind: "dish", title: "Khao Soi", description: "Curry noodles." };
+    const answer = await createTurnService("api").askPhoto!(new Blob(["jpeg"]), {
+      question: "is it spicy?",
+      card,
+      userLanguage: "en",
+      myInfo: { allergies: [], spice: null, diet: [] },
+    });
+    expect(answer).toBe("Mild.");
+    const [url, init] = fetchMock.mock.calls[0];
+    const body = init.body as FormData;
+    expect(url).toBe("/api/photo/ask");
+    expect(body.get("question")).toBe("is it spicy?");
+    expect(JSON.parse(String(body.get("card")))).toEqual(card);
+    vi.unstubAllGlobals();
+  });
+
+    it("is the default turn service", () => {
     expect(createTurnService(undefined).kind).toBe("mock");
     expect(createTurnService("api").kind).toBe("api");
+  });
+});
+
+// A turn service that reads photos only when the test says so, with fake object URLs.
+function photoService() {
+  const reads: { image: Blob; input: ReadPhotoInput; resolve: (c: PhotoCard) => void; reject: (e: Error) => void }[] = [];
+  const service: TurnService = {
+    ...controllableService().service,
+    readPhoto: (image, input) => new Promise((resolve, reject) => reads.push({ image, input, resolve, reject })),
+  };
+  let n = 0;
+  const revoked: string[] = [];
+  const objectUrls = { create: () => `blob:photo-${++n}`, revoke: (url: string) => void revoked.push(url) };
+  return { service, reads, objectUrls, revoked };
+}
+
+const image = new Blob(["jpeg"], { type: "image/jpeg" });
+const menuCard: PhotoCard = {
+  kind: "menu",
+  title: "Noodle stall menu",
+  description: "Four northern dishes.",
+  items: [{ name: "Gaeng Hang Lay", warning: "Often cooked with peanuts: ask." }],
+};
+
+describe("photo turn", () => {
+  it("goes idle -> reading -> idle and adds the photo with its card", async () => {
+    const fake = photoService();
+    const peanuts: MyInfo = { allergies: ["peanuts"], spice: null, diet: [] };
+    const engine = new ConversationEngine({
+      service: fake.service,
+      objectUrls: fake.objectUrls,
+      now: () => 500,
+      getMyInfo: () => peanuts,
+      getUserLanguage: () => "fr",
+    });
+    const done = engine.photo(image);
+    expect(engine.getState().phase).toMatchObject({ kind: "reading", startedAt: 500, photo: { url: "blob:photo-1" } });
+    expect(fake.reads[0].image).toBe(image);
+    expect(fake.reads[0].input).toEqual({ userLanguage: "fr", myInfo: peanuts });
+
+    fake.reads[0].resolve(menuCard);
+    await done;
+    expect(engine.getState().phase).toEqual({ kind: "idle", nextTurn: "you" });
+    expect(engine.getState().messages).toMatchObject([{ speaker: "you", card: null, photo: { url: "blob:photo-1", card: menuCard } }]);
+  });
+
+  it("ignores a photo while someone is recording or translating", () => {
+    const fake = photoService();
+    const engine = new ConversationEngine({ service: fake.service, objectUrls: fake.objectUrls });
+    engine.micTap("you");
+    engine.photo(image);
+    expect(engine.getState().phase).toMatchObject({ kind: "listening" });
+    expect(fake.reads).toHaveLength(0);
+  });
+
+  it("a failed read keeps the photo, and retry reads the same image again", async () => {
+    const fake = photoService();
+    const engine = new ConversationEngine({ service: fake.service, objectUrls: fake.objectUrls });
+    const first = engine.photo(image);
+    fake.reads[0].reject(new Error("502"));
+    await first;
+    expect(engine.getState().phase).toMatchObject({ kind: "error", speaker: "you", reason: "network", photo: { url: "blob:photo-1" } });
+
+    const again = engine.retry();
+    expect(engine.getState().phase).toMatchObject({ kind: "reading", photo: { url: "blob:photo-1" } });
+    expect(fake.reads[1].image).toBe(image);
+    fake.reads[1].resolve(menuCard);
+    await again;
+    expect(engine.getState().messages).toHaveLength(1);
+    expect(fake.revoked).toEqual([]);
+  });
+
+  it("gives up on a read that takes too long", async () => {
+    vi.useFakeTimers();
+    const fake = photoService();
+    const engine = new ConversationEngine({ service: fake.service, objectUrls: fake.objectUrls, timeoutMs: 1000 });
+    const done = engine.photo(image);
+    await vi.advanceTimersByTimeAsync(1000);
+    await done;
+    expect(engine.getState().phase).toMatchObject({ kind: "error", reason: "network", photo: { url: "blob:photo-1" } });
+  });
+
+  it("fails as a network error when the service cannot read photos", async () => {
+    const engine = new ConversationEngine({ service: controllableService().service, objectUrls: photoService().objectUrls });
+    await engine.photo(image);
+    expect(engine.getState().phase).toMatchObject({ kind: "error", reason: "network" });
+  });
+
+  it("dismissing a failed read drops the photo and frees its URL", async () => {
+    const fake = photoService();
+    const engine = new ConversationEngine({ service: fake.service, objectUrls: fake.objectUrls });
+    const done = engine.photo(image);
+    fake.reads[0].reject(new Error("502"));
+    await done;
+    engine.dismissError();
+    expect(engine.getState().phase).toEqual({ kind: "idle", nextTurn: "you" });
+    expect(engine.getState().messages).toEqual([]);
+    expect(fake.revoked).toEqual(["blob:photo-1"]);
+  });
+
+  it("a new conversation drops photos, frees their URLs and ignores a late read", async () => {
+    const fake = photoService();
+    const engine = new ConversationEngine({ service: fake.service, objectUrls: fake.objectUrls });
+    const first = engine.photo(image);
+    fake.reads[0].resolve(menuCard);
+    await first;
+    const late = engine.photo(image);
+
+    engine.newConversation();
+    expect(engine.getState().messages).toEqual([]);
+    expect(fake.revoked.sort()).toEqual(["blob:photo-1", "blob:photo-2"]);
+
+    fake.reads[1].resolve(menuCard);
+    await late;
+    expect(engine.getState().messages).toEqual([]);
+    expect(engine.getState().phase).toEqual({ kind: "idle", nextTurn: "you" });
+  });
+});
+
+// A service that reads a photo at once, then transcribes and answers questions when the test says so.
+function askService() {
+  const fake = controllableService();
+  const asks: { image: Blob; input: AskPhotoInput; resolve: (a: string) => void; reject: (e: Error) => void }[] = [];
+  const service: TurnService = {
+    ...fake.service,
+    readPhoto: async () => menuCard,
+    askPhoto: (image, input) => new Promise((resolve, reject) => asks.push({ image, input, resolve, reject })),
+  };
+  let n = 0;
+  const objectUrls = { create: () => `blob:photo-${++n}`, revoke: () => {} };
+  return { service, asks, transcribes: fake.transcribes, translates: fake.translates, objectUrls };
+}
+
+async function withReadPhoto(fake: ReturnType<typeof askService>, opts: Partial<ConstructorParameters<typeof ConversationEngine>[0]> = {}) {
+  const engine = new ConversationEngine({ service: fake.service, objectUrls: fake.objectUrls, getUserLanguage: () => "fr", ...opts });
+  await engine.photo(image);
+  return { engine, photoId: engine.getState().messages[0].id };
+}
+
+describe("ask about a photo", () => {
+  it("listens like Speak, then the app answers about that photo, with nothing for the vendor", async () => {
+    const fake = askService();
+    const onMessage = vi.fn();
+    const { engine, photoId } = await withReadPhoto(fake, { onMessage, now: () => 700 });
+
+    engine.askAboutPhoto(photoId);
+    expect(engine.getState().phase).toEqual({ kind: "listening", speaker: "you", startedAt: 700, about: photoId });
+
+    const done = engine.stop("you", audio);
+    expect(engine.getState().phase).toEqual({ kind: "processing", speaker: "you", about: photoId });
+    await flush();
+    expect(fake.transcribes[0].language).toBe("fr");
+    fake.transcribes[0].resolve("is it spicy?");
+    await flush();
+    expect(fake.asks[0].image).toBe(image);
+    expect(fake.asks[0].input).toMatchObject({ question: "is it spicy?", card: menuCard, userLanguage: "fr" });
+    expect(fake.translates).toHaveLength(0);
+
+    fake.asks[0].resolve("Only the Laab is hot.");
+    await done;
+    expect(engine.getState().phase).toEqual({ kind: "idle", nextTurn: "you" });
+    expect(engine.getState().messages[1]).toMatchObject({
+      speaker: "you",
+      translation: [],
+      original: ["is it spicy?"],
+      card: null,
+      about: photoId,
+      answer: "Only the Laab is hot.",
+    });
+    expect(onMessage).not.toHaveBeenCalled();
+  });
+
+  it("an empty recording gives the same hint as Speak", async () => {
+    const fake = askService();
+    const { engine, photoId } = await withReadPhoto(fake);
+    engine.askAboutPhoto(photoId);
+    const done = engine.stop("you", audio);
+    await flush();
+    fake.transcribes[0].resolve("  ");
+    await done;
+    expect(engine.getState().phase).toMatchObject({ kind: "error", speaker: "you", reason: "empty" });
+  });
+
+  it("a failed answer keeps the question: retry only asks again", async () => {
+    const fake = askService();
+    const { engine, photoId } = await withReadPhoto(fake);
+    engine.askAboutPhoto(photoId);
+    const first = engine.stop("you", audio);
+    await flush();
+    fake.transcribes[0].resolve("is it spicy?");
+    await flush();
+    fake.asks[0].reject(new Error("502"));
+    await first;
+    expect(engine.getState().phase).toEqual({ kind: "error", speaker: "you", reason: "network", raw: "is it spicy?", about: photoId });
+
+    const again = engine.retry();
+    expect(engine.getState().phase).toEqual({ kind: "processing", speaker: "you", raw: "is it spicy?", about: photoId });
+    await flush();
+    expect(fake.transcribes).toHaveLength(1);
+    fake.asks[1].resolve("Only the Laab is hot.");
+    await again;
+    expect(engine.getState().messages[1]).toMatchObject({ about: photoId, answer: "Only the Laab is hot." });
+  });
+
+  it("ignores a photo that is not in the thread, and asking while busy", async () => {
+    const fake = askService();
+    const { engine, photoId } = await withReadPhoto(fake);
+    engine.askAboutPhoto("nope");
+    expect(engine.getState().phase.kind).toBe("idle");
+    engine.micTap("vendor");
+    engine.askAboutPhoto(photoId);
+    expect(engine.getState().phase).toMatchObject({ kind: "listening", speaker: "vendor" });
+    expect(engine.getState().phase).not.toHaveProperty("about");
+  });
+
+  it("keeps photos and questions out of the history sent to translate: the first spoken Turn is still the first", async () => {
+    const fake = askService();
+    const { engine, photoId } = await withReadPhoto(fake);
+    engine.askAboutPhoto(photoId);
+    const asked = engine.stop("you", audio);
+    await flush();
+    fake.transcribes[0].resolve("is it spicy?");
+    await flush();
+    fake.asks[0].resolve("Mild.");
+    await asked;
+    await fullTurn(engine, fake as never, "you", reply());
+    expect(fake.translates[0].input.history).toEqual([]);
+  });
+
+  it("a failed read that is dismissed cannot be asked about", async () => {
+    const fake = askService();
+    fake.service.readPhoto = () => Promise.reject(new Error("502"));
+    const engine = new ConversationEngine({ service: fake.service, objectUrls: fake.objectUrls });
+    await engine.photo(image);
+    const phase = engine.getState().phase;
+    const failedId = phase.kind === "error" ? phase.photo!.id : "";
+    engine.dismissError();
+    engine.askAboutPhoto(failedId);
+    expect(engine.getState().phase.kind).toBe("idle");
+  });
+
+  it("Speak after a photo is still a normal Turn for the vendor", async () => {
+    const fake = askService();
+    const { engine } = await withReadPhoto(fake);
+    await fullTurn(engine, fake as never, "you", reply());
+    expect(fake.translates).toHaveLength(1);
+    expect(engine.getState().messages[1]).not.toHaveProperty("about");
+  });
+});
+
+describe("mock photo answers", () => {
+  it("answers about the card, in a line", async () => {
+    const service = createMockTurnService({ askPhotoMs: 0 });
+    const answer = await service.askPhoto!(image, { question: "what is good here?", card: menuCard, userLanguage: "en", myInfo: { allergies: [], spice: null, diet: [] } });
+    expect(answer).toBeTruthy();
+  });
+});
+
+describe("mock photo reading", () => {
+  it("returns a menu card with an item flagged for a peanut allergy", async () => {
+    vi.useFakeTimers();
+    const service = createMockTurnService({ readPhotoMs: 10 });
+    const read = service.readPhoto!(image, { userLanguage: "en", myInfo: { allergies: ["peanuts"], spice: null, diet: [] } });
+    await vi.advanceTimersByTimeAsync(10);
+    const card = await read;
+    expect(card.kind).toBe("menu");
+    expect(card.items!.some((i) => /peanut/i.test(i.warning ?? ""))).toBe(true);
+  });
+
+  it("then cycles through a dish, a fruit and a sign, and back to the menu", async () => {
+    const service = createMockTurnService({ readPhotoMs: 0 });
+    const input = { userLanguage: "en", myInfo: { allergies: [], spice: null, diet: [] } };
+    const kinds = [];
+    for (let i = 0; i < 5; i++) kinds.push((await service.readPhoto!(image, input)).kind);
+    expect(kinds).toEqual(["menu", "dish", "produce", "sign", "menu"]);
+    service.reset!();
+    expect((await service.readPhoto!(image, input)).kind).toBe("menu");
+  });
+
+  it("flags nothing when About you is empty", async () => {
+    vi.useFakeTimers();
+    const service = createMockTurnService({ readPhotoMs: 10 });
+    const read = service.readPhoto!(image, { userLanguage: "en", myInfo: { allergies: [], spice: null, diet: [] } });
+    await vi.advanceTimersByTimeAsync(10);
+    expect((await read).items!.every((i) => !i.warning)).toBe(true);
   });
 });

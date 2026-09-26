@@ -10,12 +10,12 @@
 
 **Blocked by:** 01.
 
-**Status:** ready-for-agent
+**Status:** done, except the iPhone check
 
-- [ ] Button matches `explorations/photo-button.html` variant 3, 44px touch target
-- [ ] Button never shows while the middle is narrating something else
-- [ ] Cancelling the camera leaves the app exactly as it was
-- [ ] Photo appears at once (before the read ends), full height, then shrinks when the card lands
-- [ ] Both mics muted and not tappable while reading
+- [x] Button matches `explorations/photo-button.html` variant 3, 44px touch target
+- [x] Button never shows while the middle is narrating something else
+- [x] Cancelling the camera leaves the app exactly as it was
+- [x] Photo appears at once (before the read ends), full height, then shrinks when the card lands
+- [x] Both mics muted and not tappable while reading
 - [ ] Works on iPhone Safari at the production URL
-- [ ] `npm test` and `npm run build` green
+- [x] `npm test` and `npm run build` green

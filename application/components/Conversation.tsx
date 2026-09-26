@@ -4,6 +4,7 @@ import { Plus, UserRound } from "lucide-react";
 import { useCallback, useRef, useState } from "react";
 import type { Message, MyInfo, Speaker } from "@/lib/engine/types";
 import { mergeMyInfo } from "@/lib/myInfo";
+import { downscale } from "@/lib/photo";
 import { Recorder } from "@/lib/recorder";
 import { speak, stopSpeech, unlockSpeech } from "@/lib/speech";
 import { useConversation } from "@/lib/useConversation";
@@ -79,21 +80,35 @@ export function Conversation() {
     await engine.stop(speaker, audio);
   };
 
-  const onTap = (speaker: Speaker) => {
+  /** Speak, or "Ask about this photo" (`about`): one logic, the same Listening card, the same Stop. */
+  const listen = (speaker: Speaker, about?: string) => {
     const { phase } = engine.getState();
-    if (phase.kind === "listening" && phase.speaker === speaker) return void finish(speaker);
+    if (phase.kind === "listening") {
+      // Speak (or Stop) ends any of your recordings; an Ask tool only ends the question about its own photo.
+      if (phase.speaker === speaker && (!about || about === phase.about)) void finish(speaker);
+      return;
+    }
 
     recorder.unlockAudio(); // must run inside the tap, for iOS
     stopSpeech();
     unlockSpeech();
     setInfoCardClosed(true);
-    engine.micTap(speaker);
+    if (about) engine.askAboutPhoto(about);
+    else engine.micTap(speaker);
     const now = engine.getState().phase;
     if (now.kind !== "listening" || now.speaker !== speaker) return;
     recorder.start({ onAutoStop: () => void finish(speaker) }).catch(() => {
       recorder.cancel();
       engine.fail(speaker, "mic-denied");
     });
+  };
+
+  const onTap = (speaker: Speaker) => listen(speaker);
+
+  const onPhoto = async (file: File) => {
+    stopSpeech();
+    setInfoCardClosed(true);
+    await engine.photo(await downscale(file));
   };
 
   const newConversation = () => {
@@ -113,6 +128,7 @@ export function Conversation() {
       <ListeningCard
         speaker={phase.speaker}
         startedAt={phase.startedAt}
+        about={phase.about ? state.messages.find((m) => m.id === phase.about)?.photo?.url : undefined}
         getLevel={getLevel}
         label={phase.speaker === "vendor" ? "กำลังฟัง" : "Listening"}
       />
@@ -142,6 +158,7 @@ export function Conversation() {
         onSpeak={toggleSpeech}
         onRetry={() => void engine.retry()}
         onDismissError={() => engine.dismissError()}
+        onAsk={(photoId) => listen("you", photoId)}
         intro={
           !infoCardClosed && (
             <MyInfoCard
@@ -155,7 +172,7 @@ export function Conversation() {
         }
       />
 
-      <Dock state={state} onTap={onTap} language={language} playingId={playingId} getLevel={getLevel} offline={!online} />
+      <Dock state={state} onTap={onTap} language={language} playingId={playingId} getLevel={getLevel} offline={!online} onPhoto={(file) => void onPhoto(file)} />
 
       {infoOpen && (
         <MyInfoPage

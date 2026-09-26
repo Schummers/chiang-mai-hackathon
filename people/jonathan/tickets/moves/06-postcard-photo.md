@@ -4,7 +4,7 @@
 
 **Blocked by:** 05
 
-**Status:** blocked, wireframe first
+**Status:** parked (2026-09-27), not a priority. Jonathan is not sure the Postcard is a good idea: brainstorm whether it earns its place before any build. Wireframe v1 exists: `people/jonathan/wireframes/postcard-v1.html`.
 
 - [ ] "Add a photo" step with `<input type="file" accept="image/*" capture="environment">`: opens the camera on a phone, no permission code of our own
 - [ ] Photo cropped to the Postcard ratio, text band at the bottom with enough contrast on any photo

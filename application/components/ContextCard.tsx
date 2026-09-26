@@ -18,7 +18,19 @@ function Label({ card }: { card: Card }) {
 }
 
 /** L2w context card (C2): the only thing framed by the weave, it belongs to both voices. `vendorSaid` is the reply it came with. */
-export function ContextCard({ card, vendorSaid = [] }: { card: Card; vendorSaid?: string[] }) {
+export function ContextCard({
+  card,
+  vendorSaid = [],
+  kicker,
+  children,
+}: {
+  card: Card;
+  vendorSaid?: string[];
+  /** Replaces the default label, e.g. "Dish" on a photo card. */
+  kicker?: React.ReactNode;
+  /** Tools at the bottom of the card, e.g. "Ask about this photo". */
+  children?: React.ReactNode;
+}) {
   const myInfo = useMyInfo();
   const { flag, vendorNo } = cardFlags(card, myInfo, vendorSaid);
   const facts = card.meat || card.spice !== undefined || vendorNo.length > 0;
@@ -27,7 +39,7 @@ export function ContextCard({ card, vendorSaid = [] }: { card: Card; vendorSaid?
     <article className={s.frame}>
       <div className={`${s.card} ${flag ? s.conflict : ""}`}>
         <p className={s.kicker}>
-          <Label card={card} />
+          {kicker ?? <Label card={card} />}
         </p>
         <h3 className={s.name}>
           {card.name} {card.nameThai && <span className={s.thai}>{card.nameThai}</span>}
@@ -70,6 +82,7 @@ export function ContextCard({ card, vendorSaid = [] }: { card: Card; vendorSaid?
             <OctagonX size={18} strokeWidth={2.1} /> {flag}
           </p>
         )}
+        {children}
       </div>
     </article>
   );

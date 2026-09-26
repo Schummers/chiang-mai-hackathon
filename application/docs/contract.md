@@ -8,9 +8,13 @@ Source: [`lib/engine/types.ts`](../lib/engine/types.ts). If this page and the fi
 interface TurnService {
   transcribe(audio: Blob, language: string): Promise<string>; // "th" for the Vendor, the Visitor's language otherwise
   translate(input: TranslateInput): Promise<TranslateResult>;
+  readPhoto?(image: Blob, input: ReadPhotoInput): Promise<PhotoCard>; // photo Turn; missing = the read fails as a network error
+  askPhoto?(image: Blob, input: AskPhotoInput): Promise<string>;       // question about a photo -> the app's answer
   reset?(): void;                                              // new conversation
 }
 ```
+
+`readPhoto`: in api mode it posts to `POST /api/photo`. The mock returns a menu card first, then a dish, a fruit and a sign in turn (`MOCK_PHOTO_CARDS`), so every card can be seen.
 
 Picked once by `NEXT_PUBLIC_TURN_SERVICE` in [`turnService.ts`](../lib/engine/turnService.ts): `mock` (default) or `api`. It is the only place that reads it.
 
@@ -19,6 +23,8 @@ Picked once by `NEXT_PUBLIC_TURN_SERVICE` in [`turnService.ts`](../lib/engine/tu
 | Route | Request | Response | Errors |
 |---|---|---|---|
 | `POST /api/transcribe` | FormData: `audio` (webm or mp4 blob, max 4 MB), `language` | `{ raw: string }`. Missing or empty audio returns `{ raw: "" }` with 200, same as no speech. The engine also drops sound tags (`<noise>`, `[Music]`, `(silence)`…) and treats what is left empty as no speech | 413 too large, 502 provider failed **or `GEMINI_API_KEY` missing** |
+| `POST /api/photo` | FormData: `image` (JPEG, the UI downscales to 1280px, max 4 MB), `language`, `myInfo` (JSON) | JSON `PhotoCard`. A malformed or empty model answer still returns 200 with a Sign card "Couldn't read this photo" | 400 no image, 413 too large, 502 provider failed **or `GEMINI_API_KEY` missing** |
+| `POST /api/photo/ask` | FormData: `image`, `question`, `card` (the `PhotoCard` JSON), `language`, `myInfo` (JSON) | `{ answer: string }`, one or two lines in the Visitor's language | 400 no image, no question or bad card, 413 too large, 502 provider failed, key missing or empty answer |
 | `POST /api/translate` | JSON `TranslateInput` (`raw` cut to 2000 chars) | JSON `TranslateResult` | 400 empty raw, 502 provider failed or key missing, 500 on a malformed JSON body |
 
 `TranslateInput`: `{ raw, speaker: "you" | "vendor", userLanguage, myInfo, history: Message[] }`. The route keeps the last 6 Turns of history for the prompt.
@@ -37,15 +43,33 @@ Picked once by `NEXT_PUBLIC_TURN_SERVICE` in [`turnService.ts`](../lib/engine/tu
 
 `ContextCard`: `kind` (`dish` | `word` | `moment`, missing = dish), `offGuide`, `name`, `nameThai`, `description`, `meat`, `spice` (0 to 3), `localDetail`, `warning`. A warning is a risk to check, never a guarantee.
 
+## Photo Turn
+
+`engine.photo(image)` works from `idle` or `error`. The engine makes a local object URL, goes to `{ kind: "reading", startedAt, photo: { id, url } }` (show `photo.url` full width meanwhile), calls `readPhoto(image, { userLanguage, myInfo })`, then goes back to `idle` (next Turn: `you`) and adds a message.
+
+- Photo message: `speaker: "you"`, `translation: []`, `original: [card.title]` (what the history shows the model), `card: null`, `photo: { url, card: PhotoCard }`.
+- Failed or timed-out read: `{ kind: "error", speaker: "you", reason: "network", photo }`. `retry()` reads the same image again. Dismissing it, tapping a mic or taking another photo drops that photo and revokes its URL.
+- New conversation revokes every photo URL. A late read from an old conversation is ignored.
+- `onMessage` is not called for a photo (nothing to read aloud).
+
+## Ask about this photo
+
+`engine.askAboutPhoto(photoId)` is `micTap("you")` with `about: photoId`: same Listening card, same Stop, same auto-stop, same errors. `about` rides on `listening`, `processing` and a network `error` (so `retry()` asks again from the kept transcript). On stop the engine transcribes in the Visitor's language, then calls `askPhoto(image, { question, card, userLanguage, myInfo })` instead of `translate`. Result: a message `{ speaker: "you", translation: [], original: [question], card: null, about, answer }`, next Turn `you`, no hand-off, `onMessage` not called (no Thai auto-play). Tapping Speak is still a normal Turn for the vendor. Photo and question messages are never sent in `history` to `/api/translate`: the vendor never heard them.
+
+Menu `items[].note` is a short pill label ("Mild ok", "Local"), not a sentence. A pill turns into a conflict only when `warning` names something in My info (the UI checks, see `lib/photoCard.ts`). A card with no title and no description, or a menu with no items, is shown as a Sign card "Couldn't read this photo".
+
+`PhotoCard`: `kind` (`menu` | `dish` | `produce` | `sign`), `title`, `titleThai?`, `description`, `items?` (menu only: `name`, `nameThai?`, `note?`, `warning?` from My info), and the `ContextCard` fields that fit: `meat?`, `spice?`, `localDetail?`, `warning?`.
+
 `MyInfo`: `allergies` (peanuts, shellfish, gluten, other), `spice` (none, mild, thai-hot), `diet` (no-pork, vegetarian, halal), `particle?` (`m` | `f`, the particle used in Moves, missing = `m`; `particleOf` normalises it and still reads the old key `speaker`).
 
 ## Timeouts and limits
 
 | Where | Value |
 |---|---|
-| Engine, per service call | 15 s, then an error bubble with Retry (the Turn is kept) (`lib/engine/engine.ts`) |
+| Engine, per service call (photo read included) | 15 s, then an error bubble with Retry (the Turn is kept) (`lib/engine/engine.ts`) |
 | Gemini request | 13 s total budget, fallback included. Main model gets 8 s, then one fallback to flash-lite on 429, 503 or timeout, with the time left (`lib/server/gemini.ts`) |
-| Vercel function | `maxDuration = 30` |
+| Vercel function | `maxDuration = 30` (all three routes) |
+| Photo read | same Gemini budget (13 s, main model 8 s then flash-lite). Measured locally on a menu image: ~2.3 s on `gemini-3.6-flash`, with rare stalls over 10 s on both models |
 | Recording | stop 1.5 s after the voice ends, 6 s if nobody speaks, 30 s cap (`lib/recorder.ts`); under 0.6 s dropped (`MIN_RECORDING_MS` in `components/Conversation.tsx`) |
 
 ## Env vars

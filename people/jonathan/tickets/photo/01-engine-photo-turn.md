@@ -12,12 +12,12 @@ Contract to add in `lib/engine/types.ts` (names can change, the shape should not
 
 **Blocked by:** none.
 
-**Status:** ready-for-agent
+**Status:** done
 
-- [ ] `engine.photo(image)` goes idle → reading → idle with a photo message holding its card
-- [ ] A failed or timed-out read gives an error phase with a retry that reads the same image again, no new photo needed
-- [ ] New conversation drops photos and revokes their object URLs
-- [ ] The mock returns a `menu` card with at least one item flagged from About you (peanuts)
-- [ ] Engine tests cover: success, failure + retry, stale result after a new conversation is ignored
-- [ ] `docs/contract.md` and `docs/architecture.md` updated in the same commit
-- [ ] `npm test` and `npm run build` green
+- [x] `engine.photo(image)` goes idle → reading → idle with a photo message holding its card
+- [x] A failed or timed-out read gives an error phase with a retry that reads the same image again, no new photo needed
+- [x] New conversation drops photos and revokes their object URLs
+- [x] The mock returns a `menu` card with at least one item flagged from About you (peanuts)
+- [x] Engine tests cover: success, failure + retry, stale result after a new conversation is ignored
+- [x] `docs/contract.md` and `docs/architecture.md` updated in the same commit
+- [x] `npm test` and `npm run build` green

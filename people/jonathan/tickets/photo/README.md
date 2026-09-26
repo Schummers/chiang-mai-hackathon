@@ -32,5 +32,5 @@ Shared context for every ticket:
 | 01 | [Engine: photo turn and contract](01-engine-photo-turn.md) | none | done |
 | 02 | [Dock button and photo in the thread](02-dock-button-and-photo.md) | 01 | done, iPhone not checked |
 | 03 | [Photo card, four kinds](03-photo-card.md) | 01 | done |
-| 04 | [Vision route on Gemini](04-vision-route.md) | 01 | done, real sign photo missing |
+| 04 | [Vision route on Gemini](04-vision-route.md) | 01 | done, 4.8 s on production for a real menu |
 | 05 | [Ask about this photo](05-ask-about-photo.md) | 02, 03, 04 | done, iPhone mic not checked |

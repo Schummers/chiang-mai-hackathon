@@ -49,14 +49,14 @@ export function ChatThread({ state, intro, live, playingId, onSpeak, onRetry, on
       )}
       {empty && intro}
 
-      {messages.map((m) =>
+      {messages.map((m, i) =>
         m.photo ? (
           <Fragment key={m.id}>
             <PhotoShot url={m.photo.url} read />
             <PhotoCard card={m.photo.card} />
           </Fragment>
         ) : (
-          <Bubble key={m.id} message={m} playing={playingId === m.id} onSpeak={() => onSpeak(m)} />
+          <Bubble key={m.id} message={m} playing={playingId === m.id} onSpeak={() => onSpeak(m)} latest={i === messages.length - 1} />
         ),
       )}
 

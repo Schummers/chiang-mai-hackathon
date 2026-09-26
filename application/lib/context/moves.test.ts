@@ -86,7 +86,19 @@ describe("pickMove, one per Stage", () => {
 describe("pickMove, Echo", () => {
   it("echoes the Vendor's Northern word, whatever the stage", () => {
     const move = pickMove("pay", none, oneTurn, { raw: "ซาวบาทเจ้า", speaker: "vendor" });
-    expect(move).toMatchObject({ id: "echo-sao", type: "echo", heard: "ซาวบาท", khamMueang: "ซาวบาทคับ" });
+    expect(move).toMatchObject({ id: "echo-sao", type: "echo", heard: "ซาว", khamMueang: "ซาวบาทคับ" });
+  });
+
+  it("says what the Vendor's word meant, from the Move's own note first", () => {
+    expect(pickMove("pay", none, oneTurn, { raw: "ซาวบาทเจ้า", speaker: "vendor" })?.heardMeaning).toBe("20");
+    expect(pickMove("pay", none, oneTurn, { raw: "สบายดีบ๋อ", speaker: "vendor" })?.heardMeaning).toBe("how are you?");
+  });
+
+  it("falls back to the pack for the meaning when the Move has no note", () => {
+    // echo-yindee's English has no "(...)": the false friend ยินดี gives "thank you".
+    expect(pickMove("pay", none, oneTurn, { raw: "ยินดีเจ้า", speaker: "vendor" })?.heardMeaning).toBe("thank you");
+    // The note of echo-lam is about ลำก่อ ("is it good?"); ลำ alone means delicious.
+    expect(pickMove("pay", none, oneTurn, { raw: "ลำขนาดเจ้า", speaker: "vendor" })?.heardMeaning).toBe("delicious");
   });
 
   it("never echoes the Visitor", () => {
@@ -97,6 +109,59 @@ describe("pickMove, Echo", () => {
     // ลำ in ลำไย (longan), กาด in ผักกาดดอง
     const move = pickMove("explore", none, oneTurn, { raw: "ลำไยกับผักกาดดองครับ", speaker: "vendor" });
     expect(move?.type).not.toBe("echo");
+  });
+});
+
+describe("pickMove, Echo hears whole words only", () => {
+  const echo = (raw: string) => pickMove("explore", none, oneTurn, { raw, speaker: "vendor" });
+
+  it.each([
+    ["ลำขนาดเจ้า", "echo-lam", "ลำ"],
+    ["ลำก่อ", "echo-lam", "ลำก่อ"],
+    ["ลำก่อเจ้า", "echo-lam", "ลำก่อ"],
+    ["ลำแต๊ๆ", "echo-lam", "ลำ"],
+    ["ลำนัก", "echo-lam", "ลำ"],
+    ["ลำๆ", "echo-lam", "ลำ"],
+    ["อร่อยลำ", "echo-lam", "ลำ"],
+    ["ซาวบาท", "echo-sao", "ซาว"],
+    ["ซาวบาทเจ้า", "echo-sao", "ซาว"],
+    ["ซาวห้า", "echo-sao", "ซาว"],
+    ["ซาวห้าบาทเจ้า", "echo-sao", "ซาว"],
+    ["หนึ่งร้อยซาวบาท", "echo-sao", "ซาว"],
+    ["ยินดีเจ้า", "echo-yindee", "ยินดีเจ้า"],
+    ["ยินดีจ๊าดนักเจ้า", "echo-yindee", "ยินดีจ๊าดนัก"],
+    ["กาดหลวง", "echo-kad-luang", "กาดหลวง"],
+    ["ไปกาดหลวงมาก่อ", "echo-kad-luang", "กาดหลวง"],
+    ["ไปกาดก่อ", "echo-kad-luang", "กาด"],
+    ["กิ๋นข้าวแล้วกาเจ้า", "echo-kin-khao", "กิ๋นข้าวแล้วกา"],
+    ["สบายดีบ๋อ", "echo-sabai-di-bo", "สบายดีบ๋อ"],
+    ["ข้าวนึ่งสองห่อ", "echo-khao-nueng", "ข้าวนึ่ง"],
+  ])("hears %s -> %s (%s)", (raw, id, heard) => {
+    expect(echo(raw)).toMatchObject({ id, type: "echo", heard });
+  });
+
+  it.each([
+    "อยู่ลำพูน",
+    "ลำบากเนาะ",
+    "แม่ลำบากนะ",
+    "ลำไยหวาน",
+    "ลำใยหวาน",
+    "ไปลำปาง",
+    "ลำตัวใหญ่",
+    "ลำก่อน",
+    "ซาวด์ดัง",
+    "ซาวน่าร้อน",
+    "ผักกาดดอง",
+    "หัวผักกาด",
+    "ผักกาดขาว",
+    "ยินดีต้อนรับ",
+    "เจ้าของร้าน",
+  ])("does not hear a trigger inside %s", (raw) => {
+    expect(echo(raw)?.type).not.toBe("echo");
+  });
+
+  it("shows the trigger that matched, not the surrounding word", () => {
+    expect(echo("ซาวบาท")).toMatchObject({ heard: "ซาว", heardMeaning: "20" });
   });
 });
 

@@ -1,8 +1,20 @@
-import type { Message, MyInfo, Speaker } from "@/lib/engine/types";
+import { STAGES, type Message, type MyInfo, type Speaker, type Stage } from "@/lib/engine/types";
 import { PACK, type Pack } from "./pack";
 
 /** Words a food conversation is likely to meet; the rest of the glossary stays out of the prompt. */
 const WORD_CATEGORIES = new Set(["greeting", "particle", "market", "question", "number", "food", "dish", "ingredient"]);
+
+/** What each Stage means, for the model. Typed on Stage so a new Stage cannot be left out. */
+const STAGE_MEANING: Record<Stage, string> = {
+  start: "greetings, nothing chosen yet",
+  explore: "looking, asking what things are",
+  decide: "choosing, ordering, spice level",
+  receive: "the food is handed over or being eaten",
+  pay: "price, money, change",
+  leave: "thanks, goodbye",
+  "vendor-used-northern-word": "the Vendor just used a Kham Mueang word from WORDS or FALSE FRIENDS, or a Northern price like ซาว",
+};
+const stageList = STAGES.map((s) => `${s} (${STAGE_MEANING[s]})`).join(", ");
 
 /** Stable part of the prompt (rules + catalog), identical for every Turn of a month so it can be cached. */
 export function systemPrompt(month: number, pack: Pack = PACK): string {
@@ -51,7 +63,7 @@ ${falseFriends}
 
 "detectedInfo": only what the Visitor says about themselves in this Turn (allergies: peanuts, shellfish, gluten, other; spice: none, mild, thai-hot; diet: no-pork, vegetarian, halal). Empty otherwise.
 
-"stage": where the conversation is after this Turn. One of: start (greetings, nothing chosen yet), explore (looking, asking what things are), decide (choosing, ordering, spice level), receive (the food is handed over or being eaten), pay (price, money, change), leave (thanks, goodbye), vendor-used-northern-word (the Vendor just used a Kham Mueang word from WORDS or FALSE FRIENDS, or a Northern price like ซาว). The first Turn of a conversation is always start.
+"stage": where the conversation is after this Turn. One of: ${stageList}. The first Turn of a conversation is always start.
 
 Never name or guess anyone's ethnicity. Avoid politics, the monarchy and income in anything you add.
 
@@ -136,7 +148,7 @@ export const TURN_SCHEMA = {
         diet: { type: "ARRAY", items: { type: "STRING", enum: ["no-pork", "vegetarian", "halal"] } },
       },
     },
-    stage: { type: "STRING", enum: ["start", "explore", "decide", "receive", "pay", "leave", "vendor-used-northern-word"] },
+    stage: { type: "STRING", enum: STAGES },
   },
   required: ["original", "translation", "mention", "stage"],
 } as const;

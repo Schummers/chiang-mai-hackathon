@@ -64,60 +64,6 @@ export function dishCard(id: string, mention: Mention, myInfo: MyInfo, pack: Pac
   };
 }
 
-const MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
-
-export function produceCard(id: string, pack: Pack = PACK): ContextCard | null {
-  const p = pack.produce.find((x) => x.id === id);
-  if (!p) return null;
-  const months = p.months.map((m) => MONTHS[m - 1]).join(", ");
-  return {
-    kind: "dish",
-    name: p.english.charAt(0).toUpperCase() + p.english.slice(1),
-    nameThai: p.thai ?? undefined,
-    description: p.eatenIn.length ? `Eaten here: ${p.eatenIn.slice(0, 2).join("; ")}.` : `A Northern ${p.category}.`,
-    localDetail: [p.thaiNorthern && `Northern name: ${p.thaiNorthern}.`, months && `In season: ${months}.`]
-      .filter(Boolean)
-      .join(" "),
-  };
-}
-
-export function wordCard(thai: string, pack: Pack = PACK): ContextCard | null {
-  const key = thai.trim();
-  const ff = pack.falseFriends.find((f) => key.startsWith(f.thai.split(" ")[0]));
-  const w = pack.words.find((x) => x.thai === key) ?? pack.words.find((x) => key.includes(x.thai) || x.thai.includes(key));
-  if (ff) {
-    return {
-      kind: "word",
-      name: w?.roman ?? ff.thai,
-      nameThai: key,
-      description: `Here in the North: ${ff.meaningHere}. In Bangkok Thai: ${ff.meaningCentral}.`,
-      localDetail: w?.note ?? "Say it back to the vendor: it is their language, not the textbook one.",
-    };
-  }
-  if (!w) return null;
-  return {
-    kind: "word",
-    name: w.roman,
-    nameThai: w.thai,
-    description: `Kham Mueang for "${w.english}". Central Thai: ${w.centralThai}.`,
-    localDetail: w.note ?? "Say it back to the vendor: it is their language, not the textbook one.",
-  };
-}
-
-/** False friends too common to card: เจ้า ends most Northern sentences, ส้ม sits in dish names. */
-const TOO_COMMON = new Set(["เจ้า", "ส้ม"]);
-
-/** Backstop when the model misses it: a false friend the Vendor said, as a Word card. */
-export function falseFriendCard(raw: string, pack: Pack = PACK): ContextCard | null {
-  const ff = pack.falseFriends
-    .map((f) => f.thai.split(" ")[0])
-    .find((base) => !TOO_COMMON.has(base) && raw.includes(base));
-  if (!ff) return null;
-  const at = raw.indexOf(ff);
-  const heard = raw.slice(at).split(/\s/)[0];
-  return wordCard(heard, pack);
-}
-
 /** Off-guide dish: only exists to carry an allergy or diet flag. */
 export function offGuideCard(mention: Mention, myInfo: MyInfo): ContextCard | null {
   if (!mention.name) return null;
@@ -133,14 +79,11 @@ export function offGuideCard(mention: Mention, myInfo: MyInfo): ContextCard | nu
   };
 }
 
+/** The dish behind a Mention, flag or not. Produce and word cards are retired: Moves replace them. */
 export function cardFor(mention: Mention, myInfo: MyInfo, pack: Pack = PACK): ContextCard | null {
   switch (mention.kind) {
     case "dish":
       return mention.id ? (dishCard(mention.id, mention, myInfo, pack) ?? offGuideCard(mention, myInfo)) : null;
-    case "produce":
-      return mention.id ? produceCard(mention.id, pack) : null;
-    case "word":
-      return mention.id ? wordCard(mention.id, pack) : null;
     case "offguide":
       return offGuideCard(mention, myInfo);
     default:
@@ -148,23 +91,8 @@ export function cardFor(mention: Mention, myInfo: MyInfo, pack: Pack = PACK): Co
   }
 }
 
-const fmt = (iso: string) => {
-  const [, m, d] = iso.split("-").map(Number);
-  return `${d} ${MONTHS[m - 1]}`;
-};
-
-/** Moment card for the first Turn: today's season, then the next festival. `today` is YYYY-MM-DD. */
-export function momentCard(today: string, pack: Pack = PACK): ContextCard {
-  const month = Number(today.slice(5, 7));
-  const m = pack.months.find((x) => x.month === month)!;
-  const next = pack.festivals.find((f) => f.end >= today && f.id !== "wan_phra");
-  const season = m.season.charAt(0).toUpperCase() + m.season.slice(1);
-  return {
-    kind: "moment",
-    name: `${season} season in Chiang Mai`,
-    description: `${m.talk} Around ${m.highC}° by day, ${m.lowC}° at night.`,
-    localDetail: next
-      ? `${next.start <= today ? "Now" : `Next, ${fmt(next.start)}`}: ${next.name}${next.alcoholBan ? " (no alcohol sold that day)" : ""}.`
-      : undefined,
-  };
+/** The only card left on the thread: the Allergy Flag, a dish card that carries an allergy or diet warning. */
+export function flagCard(mention: Mention, myInfo: MyInfo, pack: Pack = PACK): ContextCard | null {
+  const card = cardFor(mention, myInfo, pack);
+  return card?.warning ? card : null;
 }

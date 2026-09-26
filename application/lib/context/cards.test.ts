@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 import { EMPTY_MY_INFO, type MyInfo } from "@/lib/engine/types";
-import { cardFor, falseFriendCard, momentCard, wordCard } from "./cards";
+import { cardFor, flagCard } from "./cards";
 import { systemPrompt } from "./prompt";
 
 const peanuts: MyInfo = { ...EMPTY_MY_INFO, allergies: ["peanuts"] };
@@ -44,28 +44,23 @@ describe("cardFor", () => {
   });
 });
 
-describe("wordCard", () => {
-  it("explains the false friend ยินดี as thank you", () => {
-    const card = wordCard("ยินดีเจ้า");
-    expect(card?.kind).toBe("word");
-    expect(card?.description).toMatch(/thank you/);
+describe("flagCard: the only card left on the thread is the Allergy Flag", () => {
+  it("shows a dish card only when it carries an allergy or diet flag", () => {
+    expect(flagCard({ kind: "dish", id: "kaeng-hang-le" }, EMPTY_MY_INFO)).toBeNull();
+    expect(flagCard({ kind: "dish", id: "kaeng-hang-le" }, peanuts)).toMatchObject({ name: "Kaeng Hang Le", warning: expect.stringMatching(/Peanuts/) });
+    expect(flagCard({ kind: "dish", id: "sai-ua" }, { ...EMPTY_MY_INFO, diet: ["no-pork"] })?.warning).toMatch(/no-pork/);
   });
 
-  it("explains a glossary word", () => {
-    expect(wordCard("เต้าใด")?.description).toMatch(/how much/i);
+  it("keeps the off-guide dish only when it carries a flag", () => {
+    const mention = { kind: "offguide" as const, name: "Gaeng som pla", warning: "Shrimp paste is common in this curry." };
+    expect(flagCard(mention, EMPTY_MY_INFO)).toBeNull();
+    expect(flagCard(mention, { ...EMPTY_MY_INFO, allergies: ["shellfish"] })).toMatchObject({ offGuide: true });
   });
 
-  it("returns null for a word outside the pack", () => {
-    expect(wordCard("xyz")).toBeNull();
-  });
-});
-
-describe("momentCard", () => {
-  it("describes late September as the rainy season with a festival", () => {
-    const card = momentCard("2026-09-27");
-    expect(card.kind).toBe("moment");
-    expect(card.name).toMatch(/Rainy/);
-    expect(card.localDetail).toBeTruthy();
+  it("never shows produce or word cards (retired, Moves replace them)", () => {
+    expect(flagCard({ kind: "produce", id: "mangosteen" }, peanuts)).toBeNull();
+    expect(flagCard({ kind: "word", id: "ยินดีเจ้า" }, peanuts)).toBeNull();
+    expect(cardFor({ kind: "word", id: "ยินดีเจ้า" }, peanuts)).toBeNull();
   });
 });
 
@@ -75,15 +70,5 @@ describe("systemPrompt", () => {
     expect(sept).toContain("kaeng-hang-le");
     expect(sept).toContain("ยินดี");
     expect(sept.length).toBeLessThan(40_000);
-  });
-});
-
-describe("falseFriendCard", () => {
-  it("catches ยินดี in a Vendor sentence", () => {
-    expect(falseFriendCard("ยินดีเจ้า ซาวห้าบาทเจ้า")).toMatchObject({ kind: "word", nameThai: "ยินดีเจ้า" });
-  });
-
-  it("ignores เจ้า and ส้ม, which are everywhere", () => {
-    expect(falseFriendCard("แกงส้มเจ้า")).toBeNull();
   });
 });

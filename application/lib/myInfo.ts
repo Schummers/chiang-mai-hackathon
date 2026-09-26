@@ -28,19 +28,25 @@ export const PARTICLES: { value: Particle; label: string }[] = [
   { value: "f", label: "Woman (kha)" },
 ];
 
-export const particleOf = (info: MyInfo): Particle => (info.speaker === "f" ? "f" : "m");
+/**
+ * The one place a particle is normalised: anything but "f" is "m". Also reads `speaker`, the key's old name
+ * (before 2026-09-27), from phones that saved My info then and clients that still send it.
+ */
+export function particleOf(info: (Partial<MyInfo> & { speaker?: unknown }) | null | undefined): Particle {
+  return (info?.particle ?? info?.speaker) === "f" ? "f" : "m";
+}
 
 /** Stored on the phone only. Any storage problem means "no info", never a crash. */
 export function loadMyInfo(storage = browserStorage()): MyInfo {
   try {
     const raw = storage?.getItem(KEY);
     if (!raw) return EMPTY_MY_INFO;
-    const parsed = JSON.parse(raw) as Partial<MyInfo>;
+    const parsed = JSON.parse(raw) as Partial<MyInfo> & { speaker?: unknown };
     return {
       allergies: Array.isArray(parsed.allergies) ? parsed.allergies : [],
       spice: parsed.spice ?? null,
       diet: Array.isArray(parsed.diet) ? parsed.diet : [],
-      ...(parsed.speaker === "f" && { speaker: "f" as const }),
+      ...(particleOf(parsed) === "f" && { particle: "f" as const }),
     };
   } catch {
     return EMPTY_MY_INFO;
@@ -63,7 +69,7 @@ export function mergeMyInfo(current: MyInfo, detected: Partial<MyInfo>): { info:
     allergies: union(current.allergies, detected.allergies),
     spice: detected.spice ?? current.spice,
     diet: union(current.diet, detected.diet),
-    ...(current.speaker && { speaker: current.speaker }),
+    ...(current.particle && { particle: current.particle }),
   };
   return { info, changed: JSON.stringify(info) !== JSON.stringify(current) };
 }

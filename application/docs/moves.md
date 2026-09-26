@@ -15,7 +15,7 @@ The Context Pack knows **what** we talk about (dishes, produce, Northern words).
 ## How a Move card is chosen
 
 1. The Visitor or the Vendor speaks; `/api/translate` returns the translation, the existing `mention` (dish, produce, word) and a **Stage**: start, explore, decide, receive, pay, leave, vendor-used-northern-word. The first Turn is always start.
-2. Code, not the model, picks at most one Move: an **Echo** when the Vendor's raw transcript contains one of its `trigger` words; otherwise a Move of that Stage, **Ask** preferred over **Say it** from explore on; never the same Move twice in a conversation.
+2. Code, not the model, picks at most one Move: an **Echo** when the Vendor's raw transcript contains one of its `trigger` words **as a whole word** (cut with `Intl.Segmenter("th")`: the trigger starts a segment, is not inside an ordinary word such as ลำพูน, ลำบาก, ลำไย, ผักกาด or a pack name, and is followed by nothing, a particle or number (ลำก่อ, ซาวห้า, กาดหลวง) or a segment boundary for multi-word triggers); otherwise a Move of that Stage, **Ask** preferred over **Say it** from explore on; never the same Move twice in a conversation.
 3. The Slot is filled from the Context Pack entry of the Mention (`{dish}` gets its Thai and romanised names). A Move whose Slot cannot be filled is skipped.
 4. The particle variant (`m` or `f`) comes from My info.
 5. An allergy conflict wins: that Turn shows the Allergy Flag card, not a Move.
@@ -25,7 +25,11 @@ The model never writes card text. It only reports the Stage and the Mention, as 
 ## On screen
 
 - **Say it**: what you say in any case (hello, delicious, thank you). **Ask**: a question that deepens the exchange, the strongest card. **Echo**: the Vendor used a Northern word, here is what it means, say it back.
-- Kham Mueang big when present, Central Thai small below, romanised, then English. One tap plays the Thai (browser voice, `lib/speech.ts`) so the Visitor says it; "show the vendor" shows the Thai full screen.
+- Kham Mueang big when present, Central Thai small below, romanised of the big line, then English. One tap on the card plays the big line (browser voice, `lib/speech.ts`, called inside the tap for iOS) so the Visitor says it; "Show the vendor" shows the Thai full screen (tap anywhere or Escape to close).
+- **Echo** adds a line on top, "Vendor said ซาว = 20" (`MoveCard.heard` is the trigger that matched, shortened to the Move's quoted word when the trigger only adds to it: ซาวบาท shows ซาว; `MoveCard.heardMeaning`: the Move's own `(= ...)` note when the Vendor said the quoted word, else the pack glossary), and its English is only the reply ("Twenty baht!").
+- Code: `components/MoveCard.tsx` lays out `moveLines()` from `lib/moveCard.ts`. It sits in the context card's slot (same woven frame, width and entry animation) and collapses to one line (label + Thai) once a newer Turn lands. Playful Moves get no special style.
+- The card slot shows the Allergy Flag **or** a Move, never both. Dish, Word and Moment cards are retired: `/api/translate` only sends a card when it carries an allergy or diet warning (`flagCard` in `lib/context/cards.ts`).
+- The mock turn service (demo backup) carries Moves: Say it (hello), the Allergy Flag, Ask (how do you eat khao soi?), Say it (delicious), Say it (how much), then an Echo on ซาว. The mock always uses the `m` particle.
 - The "thank you" Move at Stage leave also opens the **Postcard** (ticket 05).
 - **Say it yourself** is separate: a control on any Visitor bubble that teaches that sentence (phonetics, listen, slowly), ticket 04.
 

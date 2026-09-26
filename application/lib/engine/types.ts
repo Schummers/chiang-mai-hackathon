@@ -86,8 +86,12 @@ export type Message = {
   photo?: { url: string; card: PhotoCard };
 };
 
-/** Where the conversation is, detected by the model on each Turn. */
-export type Stage = "start" | "explore" | "decide" | "receive" | "pay" | "leave" | "vendor-used-northern-word";
+/**
+ * Where the conversation is, detected by the model on each Turn. The one list of Stages: the type, the prompt prose
+ * and the Gemini schema enum all derive from it.
+ */
+export const STAGES = ["start", "explore", "decide", "receive", "pay", "leave", "vendor-used-northern-word"] as const;
+export type Stage = (typeof STAGES)[number];
 
 /** Polite particle variant of a Move: "m" ends with ครับ/คับ, "f" with ค่ะ/เจ้า. */
 export type Particle = "m" | "f";
@@ -109,6 +113,8 @@ export type MoveCard = {
   tone?: "playful";
   /** Echo only: the Northern word the Vendor said. */
   heard?: string;
+  /** Echo only: what that word means, e.g. "20" for ซาว. From the Move's note, else the pack. */
+  heardMeaning?: string;
 };
 
 export type Allergy = "peanuts" | "shellfish" | "gluten" | "other";
@@ -120,7 +126,7 @@ export type MyInfo = {
   spice: Spice | null;
   diet: Diet[];
   /** Particle the Visitor speaks with in Moves. Missing means "m". */
-  speaker?: Particle;
+  particle?: Particle;
 };
 
 export const EMPTY_MY_INFO: MyInfo = { allergies: [], spice: null, diet: [] };

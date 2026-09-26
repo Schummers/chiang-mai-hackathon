@@ -2,7 +2,7 @@ import type { MyInfo, PhotoCard, Speaker, TranslateResult, TurnService } from ".
 
 type ScriptTurn = { speaker: Speaker; raw: string; result: TranslateResult };
 
-/** The Khao Soi exchange from the wireframes, replayed in order and then looped. */
+/** The Khao Soi exchange from the wireframes, replayed in order and then looped. Moves match what pickMove gives (engine.test.ts). */
 export const KHAO_SOI_SCRIPT: ScriptTurn[] = [
   {
     speaker: "you",
@@ -13,6 +13,16 @@ export const KHAO_SOI_SCRIPT: ScriptTurn[] = [
       romanised: ["jaan níi kuu à-rai kráp", "phèt mǎi kráp", "phǒm pháe thùa-lí-sǒng, mii thùa-lí-sǒng mǎi kráp"],
       card: null,
       detectedInfo: { allergies: ["peanuts"] },
+      stage: "start",
+      move: {
+        id: "say-hello",
+        type: "say",
+        stage: "start",
+        english: "Hello",
+        centralThai: "สวัสดีครับ",
+        khamMueang: "สะหวัดดีคับ",
+        romanised: { central: "sa-wat-dee khrap", khamMueang: "sa-wat-dee khap" },
+      },
     },
   },
   {
@@ -31,6 +41,9 @@ export const KHAO_SOI_SCRIPT: ScriptTurn[] = [
         localDetail: "Locals squeeze in lime and stir in the chili paste to taste.",
         warning: "The vendor says no peanuts. Toppings vary between stalls: double-check the chili paste.",
       },
+      // The Allergy Flag wins: no Move on this Turn.
+      stage: "explore",
+      move: null,
     },
   },
   {
@@ -41,15 +54,77 @@ export const KHAO_SOI_SCRIPT: ScriptTurn[] = [
       original: ["How long have you had this stall?"],
       romanised: ["ráan níi pòet maa naan kâe nǎi láew kráp"],
       card: null,
+      stage: "explore",
+      move: {
+        id: "ask-how-to-eat",
+        type: "ask",
+        stage: "explore",
+        english: "How do you eat khao soi?",
+        centralThai: "ข้าวซอย กินยังไงครับ",
+        khamMueang: null,
+        romanised: { central: "khao soi kin yang-ngai khrap", khamMueang: null },
+      },
     },
   },
   {
     speaker: "vendor",
-    raw: "ยี่สิบปีแล้วครับ เป็นร้านของแม่ผม",
+    raw: "ยี่สิบปีแล้วครับ เป็นร้านของแม่ผม ได้แล้วครับ",
     result: {
-      translation: ["20 years now. It was my mother's stall."],
-      original: ["ยี่สิบปีแล้วครับ เป็นร้านของแม่ผม"],
+      translation: ["20 years now. It was my mother's stall.", "Here you go."],
+      original: ["ยี่สิบปีแล้วครับ เป็นร้านของแม่ผม ได้แล้วครับ"],
       card: null,
+      stage: "receive",
+      move: {
+        id: "say-delicious",
+        type: "say",
+        stage: "receive",
+        english: "Delicious!",
+        centralThai: "อร่อยครับ",
+        khamMueang: "ลำคับ",
+        romanised: { central: "a-roi khrap", khamMueang: "lam khap" },
+      },
+    },
+  },
+  {
+    speaker: "you",
+    raw: "mm so good. okay how much do I owe you?",
+    result: {
+      translation: ["อร่อยมากครับ", "เท่าไหร่ครับ"],
+      original: ["So good!", "How much is it?"],
+      romanised: ["a-ròi mâak kráp", "thâo-rài kráp"],
+      card: null,
+      stage: "pay",
+      move: {
+        id: "say-how-much-all",
+        type: "say",
+        stage: "pay",
+        english: "How much for everything?",
+        centralThai: "ทั้งหมดเท่าไหร่ครับ",
+        khamMueang: "ตึงหมดนี่เต่าใดคับ",
+        romanised: { central: "thang mot thao-rai khrap", khamMueang: "tueng mot nee tao dai khap" },
+      },
+    },
+  },
+  {
+    // ซาว is Kham Mueang for 20: the Echo card explains it and invites the Visitor to say it back.
+    speaker: "vendor",
+    raw: "ซาวคับ",
+    result: {
+      translation: ["Twenty."],
+      original: ["ซาวคับ"],
+      card: null,
+      stage: "pay",
+      move: {
+        id: "echo-sao",
+        type: "echo",
+        stage: "vendor-used-northern-word",
+        english: "Vendor says a price with 'ซาว' (= 20) -> repeat it: 'Twenty baht!'",
+        centralThai: "ยี่สิบบาทครับ",
+        khamMueang: "ซาวบาทคับ",
+        romanised: { central: "yee-sip baat khrap", khamMueang: "sao baat khap" },
+        heard: "ซาว",
+        heardMeaning: "20",
+      },
     },
   },
 ];

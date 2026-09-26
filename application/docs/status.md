@@ -11,14 +11,15 @@ Updated 2026-09-27. Production: https://u-mueang.vercel.app (every push to `main
 
 ## In progress
 
-- **Moves** (grill closed 2026-09-27, see [moves.md](moves.md)): tickets in [`people/jonathan/tickets/moves/`](../../people/jonathan/tickets/moves/). 03 (home pitch) done; 01 (Moves data and Stage), 04 (Say it yourself) in progress; 02 (Move cards) starts when 01 lands; 05 and 06 (Postcard) after. Each ticket's Status line is the live state.
+- **Moves** (grill closed 2026-09-27, see [moves.md](moves.md)): tickets in [`people/jonathan/tickets/moves/`](../../people/jonathan/tickets/moves/). 01 (Moves data and Stage), 02 (Move cards on the thread), 03 (home pitch) and 04 (Say it yourself) done; 05 and 06 (Postcard) next. Informative cards (Dish, Word, Moment) are gone from the thread; only the Allergy Flag stays. The mock shows Say it, Ask and an Echo on ซาว. Move card audio on the first tap is not yet checked on a real iPhone. Each ticket's Status line is the live state.
 - **Photo** (tickets in [`people/jonathan/tickets/photo/`](../../people/jonathan/tickets/photo/), branch `feature/photo`): 01 (engine, contract, mock menu card) 02 (dock button, photo in the thread, reading state) 03 (photo card, four kinds, "Ask" still inert) and 04 (`/api/photo` on Gemini) done. 04 checked locally on generated Thai images only, not yet on real photos nor on the production URL (the branch is not on main, previews run the mock without the key). iPhone Safari not checked.
 - **Native review of the 45 Moves**: [`people/jonathan/moves/REVIEW.md`](../../people/jonathan/moves/REVIEW.md), to hand to Thai contacts the morning of 27/09.
 - **Demo readiness (#13)**: QR done ([`people/jonathan/demo/`](../../people/jonathan/demo/)). Missing: real iPhone and Android run, mock switch by URL flag, backup video.
 
 ## Not verified
 
-- Nothing tested on a real phone yet (mic, Thai auto-play on iOS, Thai voice on Android).
+- Nothing tested on a real phone yet (mic, Thai auto-play on iOS, Thai voice on Android, Move card audio on the first tap in iOS Safari).
+- Move cards in api mode (real Stage from Gemini): checked only through unit tests and the mock, not end to end.
 - Vendor-side Thai texts to be checked by a Thai teammate (see `components/ErrorState.tsx`).
 - Real back-end end to end in the UI, on a real phone, with a real Northern accent and market noise (only macOS synthetic voices so far).
 - `lib/context/overlay.ts`: meat, spice and allergens of 10 demo dishes written from memory, to review with a Thai teammate.

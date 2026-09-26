@@ -4,7 +4,7 @@
 
 **Blocked by:** 05
 
-**Status:** ready-for-agent
+**Status:** blocked, wireframe first
 
 - [ ] "Add a photo" step with `<input type="file" accept="image/*" capture="environment">`: opens the camera on a phone, no permission code of our own
 - [ ] Photo cropped to the Postcard ratio, text band at the bottom with enough contrast on any photo

@@ -19,7 +19,8 @@ Narrow problem, precise user, a tool that works in 30 seconds beats an ambitious
 |---|---|---|
 | `people/<name>/` | Personal research, notes, collected data, experiments | Only that person |
 | `prd/` | `PRD.md`, the single shared product doc | Only the PRD owner (see `prd/CLAUDE.md`) |
-| `prototype/` | The web app (Vite + React + TypeScript) | Anyone, carefully (see `prototype/CLAUDE.md`) |
+| `application/` | The web app (Next.js App Router + TypeScript, on Vercel) | Anyone, carefully (see `application/CLAUDE.md`) |
+| `prototype/` | Old Vite prototype, frozen (fate TBD by the tech lead) | Nobody, do not build on it |
 
 Team folders: `jonathan`, `max`, `benji`, `sunny`, `luke`.
 
@@ -31,7 +32,7 @@ Team folders: `jonathan`, `max`, `benji`, `sunny`, `luke`.
 ## Where you may write
 
 - By default, **only in `people/<name>/`** of your human.
-- In `prototype/` only when your human explicitly asks to work on the app.
+- In `application/` only when your human explicitly asks to work on the app.
 - Never in another person's folder. Reading it is fine and encouraged.
 - To propose something for the PRD, write it in `people/<name>/prd-input.md` and tell the PRD owner.
 
@@ -52,4 +53,4 @@ git push
 
 ## Public repo, no secrets
 
-This repo is **public**. Never commit API keys, tokens, `.env` files, passwords, personal data (phone numbers, emails, addresses of real people) or raw screenshots containing them. Keys go in `prototype/.env.local`, which is gitignored.
+This repo is **public**. Never commit API keys, tokens, `.env` files, passwords, personal data (phone numbers, emails, addresses of real people) or raw screenshots containing them. Keys go in `application/.env.local`, which is gitignored, and in Vercel env vars.

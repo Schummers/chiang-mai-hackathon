@@ -1,3 +1,7 @@
+# Prototype (frozen)
+
+**This Vite prototype is frozen.** The real app now lives in `application/` (Next.js, see `application/CLAUDE.md`). Do not build new features here. Whether this folder is deleted is decided by the tech lead (TBD).
+
 # Prototype — Web App
 
 Vite + React 19 + TypeScript. Read the root `CLAUDE.md` first.

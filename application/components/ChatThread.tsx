@@ -1,12 +1,13 @@
 "use client";
 
 import { Languages } from "lucide-react";
-import { useEffect, useRef } from "react";
+import { Fragment, useEffect, useRef } from "react";
 import type { ConversationState } from "@/lib/engine/engine";
 import type { Message } from "@/lib/engine/types";
 import { Bubble, Row } from "./Bubble";
 import { ErrorState } from "./ErrorState";
 import { LogoMark } from "./Logo";
+import { PhotoCard } from "./PhotoCard";
 import { PhotoShot } from "./PhotoShot";
 import s from "./Chat.module.css";
 import screen from "./Screen.module.css";
@@ -50,7 +51,10 @@ export function ChatThread({ state, intro, live, playingId, onSpeak, onRetry, on
 
       {messages.map((m) =>
         m.photo ? (
-          <PhotoShot key={m.id} url={m.photo.url} read />
+          <Fragment key={m.id}>
+            <PhotoShot url={m.photo.url} read />
+            <PhotoCard card={m.photo.card} />
+          </Fragment>
         ) : (
           <Bubble key={m.id} message={m} playing={playingId === m.id} onSpeak={() => onSpeak(m)} />
         ),

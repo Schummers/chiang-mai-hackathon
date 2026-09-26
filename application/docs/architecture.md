@@ -27,7 +27,7 @@ Dock photo button (<input capture>, phone camera)
   -> ConversationEngine.photo(image)                 idle | error -> reading -> idle | error
      -> URL.createObjectURL(image)                   local only, revoked on new conversation
      -> TurnService.readPhoto(image, { userLanguage, myInfo })
-          mock: fixed menu card, peanut flag from My info
+          mock: menu card (peanut flag from My info), then dish, fruit, sign in turn
           api: not yet (ticket 04)
   <- photo message (image + PhotoCard) added to the thread
 ```
@@ -56,6 +56,7 @@ Key idea: **the model only says what it recognised** (`mention`: a dish id, a wo
 | `components/ListeningCard.tsx`, `Wave.tsx` | Live recording card and wave. |
 | `components/MyInfo.tsx` | Compact My info card and page (allergies, spice, diet). |
 | `components/ErrorState.tsx` | Retry, mic denied, too short, offline. Vendor-side texts in Thai. |
+| `components/PhotoCard.tsx` | Woven card that answers a photo: menu, dish (reuses `ContextCard`), fruit / ingredient, sign. "Ask about this photo" at the bottom. |
 | `components/PhotoShot.tsx` | Your photo in the thread: full while reading, 70px strip once read. |
 | `components/PlayTool.tsx` | Play icon at the bottom of a message. |
 | `components/Logo.tsx` | Header logo (placeholder mark). |
@@ -65,6 +66,7 @@ Key idea: **the model only says what it recognised** (`mention`: a dish id, a wo
 | `lib/recorder.ts` | Mic capture, silence detection. |
 | `lib/cardFlag.ts` | Deterministic allergy keyword check on a card ("May contain peanuts"), and allergens the Vendor ruled out. |
 | `lib/photo.ts` | Downscale a camera photo before the read. |
+| `lib/photoCard.ts` | Menu rows (About you conflicts first, 5 max) and the "Couldn't read this photo" fallback. |
 | `lib/useOnline.ts` | Online/offline status for the offline banner. |
 | `lib/speech.ts` | Browser text-to-speech (free, Thai voice built into iOS). |
 | `lib/language.ts`, `useLanguage.ts` | Visitor language list and saved choice. |

@@ -13,7 +13,7 @@ interface TurnService {
 }
 ```
 
-`readPhoto` is implemented by the mock only (a fixed menu card). The api client and its route come with photo ticket 04.
+`readPhoto` is implemented by the mock only: a menu card first, then a dish, a fruit and a sign in turn (`MOCK_PHOTO_CARDS`), so every card can be seen. The api client and its route come with photo ticket 04.
 
 Picked once by `NEXT_PUBLIC_TURN_SERVICE` in [`turnService.ts`](../lib/engine/turnService.ts): `mock` (default) or `api`. It is the only place that reads it.
 
@@ -47,6 +47,8 @@ Picked once by `NEXT_PUBLIC_TURN_SERVICE` in [`turnService.ts`](../lib/engine/tu
 - Failed or timed-out read: `{ kind: "error", speaker: "you", reason: "network", photo }`. `retry()` reads the same image again. Dismissing it, tapping a mic or taking another photo drops that photo and revokes its URL.
 - New conversation revokes every photo URL. A late read from an old conversation is ignored.
 - `onMessage` is not called for a photo (nothing to read aloud).
+
+Menu `items[].note` is a short pill label ("Mild ok", "Local"), not a sentence. A pill turns into a conflict only when `warning` names something in My info (the UI checks, see `lib/photoCard.ts`). A card with no title and no description, or a menu with no items, is shown as a Sign card "Couldn't read this photo".
 
 `PhotoCard`: `kind` (`menu` | `dish` | `produce` | `sign`), `title`, `titleThai?`, `description`, `items?` (menu only: `name`, `nameThai?`, `note?`, `warning?` from My info), and the `ContextCard` fields that fit: `meat?`, `spice?`, `localDetail?`, `warning?`.
 

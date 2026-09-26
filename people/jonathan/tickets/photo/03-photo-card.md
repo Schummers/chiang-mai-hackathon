@@ -13,10 +13,10 @@ Bottom of every card: an "Ask about this photo" tool, same style as Play (34px, 
 
 **Blocked by:** 01.
 
-**Status:** ready-for-agent
+**Status:** done
 
-- [ ] Four kinds render per the table and `explorations/photo-flow-v2.html`
-- [ ] Menu conflicts come from About you and sit at the top; never red, never struck through
-- [ ] A read with nothing useful shows a Sign / other card saying so, never an empty card
-- [ ] Card slides in like the context card (0.4s, reduced motion off)
-- [ ] `npm test` and `npm run build` green
+- [x] Four kinds render per the table and `explorations/photo-flow-v2.html`
+- [x] Menu conflicts come from About you and sit at the top; never red, never struck through
+- [x] A read with nothing useful shows a Sign / other card saying so, never an empty card
+- [x] Card slides in like the context card (0.4s, reduced motion off)
+- [x] `npm test` and `npm run build` green

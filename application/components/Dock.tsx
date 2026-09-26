@@ -1,6 +1,6 @@
 "use client";
 
-import { ArrowLeft, ArrowRight, Languages, Mic, Square } from "lucide-react";
+import { ArrowLeft, ArrowRight, Camera, Languages, Mic, ScanSearch, Square } from "lucide-react";
 import type { ConversationState } from "@/lib/engine/engine";
 import type { Speaker, UserLanguage } from "@/lib/engine/types";
 import { findLanguage } from "@/lib/language";
@@ -17,21 +17,24 @@ type Props = {
   getLevel: () => number;
   /** Offline: both mics are disabled. */
   offline?: boolean;
+  /** The Visitor picked a photo with the phone's camera. Cancelling the camera never calls it. */
+  onPhoto?: (file: File) => void;
 };
 
 /** K1 floating dock: vendor square left, yours right, the middle narrates the state (K3 / K4 / K5). */
-export function Dock({ state, onTap, language, playingId, getLevel, offline = false }: Props) {
+export function Dock({ state, onTap, language, playingId, getLevel, offline = false, onPhoto }: Props) {
   const { phase, messages } = state;
   const { verb: yourVerb, stop: yourStop } = findLanguage(language);
   const last = messages[messages.length - 1];
 
   // Hand-off: after your Thai has played (or right away if audio is blocked), and after the vendor's reply.
+  // Not after a photo: nothing was said to the vendor.
   const handoff =
-    phase.kind === "idle" && last && !(last.speaker === "you" && playingId === last.id) ? phase.nextTurn : null;
+    phase.kind === "idle" && last && !last.photo && !(last.speaker === "you" && playingId === last.id) ? phase.nextTurn : null;
 
   const mic = (speaker: Speaker) => {
     const recording = phase.kind === "listening" && phase.speaker === speaker;
-    const disabled = offline || phase.kind === "processing" || (phase.kind === "listening" && !recording);
+    const disabled = offline || phase.kind === "processing" || phase.kind === "reading" || (phase.kind === "listening" && !recording);
     // Whose turn it is: after a message, and after "didn't catch that" for the one who has to speak again.
     const pulse =
       (phase.kind === "idle" && phase.nextTurn === speaker && messages.length > 0) ||
@@ -64,6 +67,12 @@ export function Dock({ state, onTap, language, playingId, getLevel, offline = fa
         <Languages size={18} strokeWidth={2.1} /> Translating…
       </span>
     );
+  } else if (phase.kind === "reading") {
+    middle = (
+      <span className={d.state}>
+        <ScanSearch size={18} strokeWidth={2.1} /> Reading the photo…
+      </span>
+    );
   } else if (handoff === "vendor") {
     middle = (
       <span className={`${d.state} ${d.themText} ${d.handoff}`} lang="th">
@@ -82,7 +91,24 @@ export function Dock({ state, onTap, language, playingId, getLevel, offline = fa
     <footer className={d.dock}>
       {mic("vendor")}
       <div className={d.middle} aria-live="polite">
-        {middle}
+        {middle ??
+          (phase.kind === "idle" && onPhoto && !offline && (
+            // A label, not a button + click(): opens the camera reliably on iOS.
+            <label className={d.photo}>
+              <Camera size={20} strokeWidth={2.1} /> Photo
+              <input
+                type="file"
+                accept="image/*"
+                capture="environment"
+                className={d.file}
+                onChange={(e) => {
+                  const file = e.target.files?.[0];
+                  e.target.value = ""; // the same photo can be picked again
+                  if (file) onPhoto(file);
+                }}
+              />
+            </label>
+          ))}
       </div>
       {mic("you")}
     </footer>

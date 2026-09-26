@@ -22,7 +22,8 @@ Dock (mic tap)
 ### Photo Turn
 
 ```
-Photo button (ticket 02)
+Dock photo button (<input capture>, phone camera)
+  -> downscale to 1280px JPEG 0.8 (lib/photo.ts)
   -> ConversationEngine.photo(image)                 idle | error -> reading -> idle | error
      -> URL.createObjectURL(image)                   local only, revoked on new conversation
      -> TurnService.readPhoto(image, { userLanguage, myInfo })
@@ -51,10 +52,11 @@ Key idea: **the model only says what it recognised** (`mention`: a dish id, a wo
 | `components/Conversation.tsx` | The one screen: wires engine, My info, language, thread and dock. |
 | `components/ChatThread.tsx`, `Bubble.tsx` | Messages: translation big, original small, bullets when several items, tap the card to play. |
 | `components/ContextCard.tsx` | Dish / word / moment card, spice meter, allergy flag. |
-| `components/Dock.tsx` | Bottom bar with the two mics (Vendor left, Visitor right) and the language picker. |
+| `components/Dock.tsx` | Bottom bar with the two mics (Vendor left, Visitor right); the middle narrates the state, or shows the Photo button at rest. |
 | `components/ListeningCard.tsx`, `Wave.tsx` | Live recording card and wave. |
 | `components/MyInfo.tsx` | Compact My info card and page (allergies, spice, diet). |
 | `components/ErrorState.tsx` | Retry, mic denied, too short, offline. Vendor-side texts in Thai. |
+| `components/PhotoShot.tsx` | Your photo in the thread: full while reading, 70px strip once read. |
 | `components/PlayTool.tsx` | Play icon at the bottom of a message. |
 | `components/Logo.tsx` | Header logo (placeholder mark). |
 | `lib/engine/` | `types.ts` (contract, photo types included), `engine.ts` (state machine, voice and photo Turns), `turnService.ts` (mock or api picker), `mockTurnService.ts`. |
@@ -62,6 +64,7 @@ Key idea: **the model only says what it recognised** (`mention`: a dish id, a wo
 | `lib/context/` | Context Pack (`pack.json`, `pack.ts`), hand-written `overlay.ts`, `cards.ts`, `prompt.ts`. |
 | `lib/recorder.ts` | Mic capture, silence detection. |
 | `lib/cardFlag.ts` | Deterministic allergy keyword check on a card ("May contain peanuts"), and allergens the Vendor ruled out. |
+| `lib/photo.ts` | Downscale a camera photo before the read. |
 | `lib/useOnline.ts` | Online/offline status for the offline banner. |
 | `lib/speech.ts` | Browser text-to-speech (free, Thai voice built into iOS). |
 | `lib/language.ts`, `useLanguage.ts` | Visitor language list and saved choice. |

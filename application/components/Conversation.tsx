@@ -4,6 +4,7 @@ import { Plus, UserRound } from "lucide-react";
 import { useCallback, useRef, useState } from "react";
 import type { Message, MyInfo, Speaker } from "@/lib/engine/types";
 import { mergeMyInfo } from "@/lib/myInfo";
+import { downscale } from "@/lib/photo";
 import { Recorder } from "@/lib/recorder";
 import { speak, stopSpeech, unlockSpeech } from "@/lib/speech";
 import { useConversation } from "@/lib/useConversation";
@@ -96,6 +97,12 @@ export function Conversation() {
     });
   };
 
+  const onPhoto = async (file: File) => {
+    stopSpeech();
+    setInfoCardClosed(true);
+    await engine.photo(await downscale(file));
+  };
+
   const newConversation = () => {
     recorder.cancel();
     stopSpeech();
@@ -155,7 +162,7 @@ export function Conversation() {
         }
       />
 
-      <Dock state={state} onTap={onTap} language={language} playingId={playingId} getLevel={getLevel} offline={!online} />
+      <Dock state={state} onTap={onTap} language={language} playingId={playingId} getLevel={getLevel} offline={!online} onPhoto={(file) => void onPhoto(file)} />
 
       {infoOpen && (
         <MyInfoPage

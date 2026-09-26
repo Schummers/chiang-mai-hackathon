@@ -8,6 +8,7 @@ type ErrorPhase = Extract<Phase, { kind: "error" }>;
 // Vendor-side texts are in Thai (to be checked by a Thai teammate).
 const TEXT = {
   network: { you: "Connection problem. Your message is kept.", vendor: "เชื่อมต่อไม่ได้ ข้อความยังอยู่" },
+  photo: "Couldn't read the photo. It's kept.",
   retry: { you: "Retry", vendor: "ลองอีกครั้ง" },
   empty: { you: "Didn't catch that, tap and try again.", vendor: "ไม่ได้ยินครับ กดไมค์แล้วพูดอีกครั้ง" },
 };
@@ -52,7 +53,7 @@ export function ErrorState({ phase, onRetry, onDismiss }: { phase: ErrorPhase; o
       <div className={`${s.failed} ${who === "you" ? s.you : s.them}`} role="alert">
         {phase.raw && <p className={s.raw}>{phase.raw}</p>}
         <p className={s.line} lang={th}>
-          <WifiOff size={16} strokeWidth={2.1} /> {TEXT.network[who]}
+          <WifiOff size={16} strokeWidth={2.1} /> {phase.photo ? TEXT.photo : TEXT.network[who]}
         </p>
         <button className={s.retry} onClick={onRetry} lang={th}>
           <RotateCcw size={16} strokeWidth={2.4} /> {TEXT.retry[who]}

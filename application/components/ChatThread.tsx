@@ -7,6 +7,7 @@ import type { Message } from "@/lib/engine/types";
 import { Bubble, Row } from "./Bubble";
 import { ErrorState } from "./ErrorState";
 import { LogoMark } from "./Logo";
+import { PhotoShot } from "./PhotoShot";
 import s from "./Chat.module.css";
 import screen from "./Screen.module.css";
 
@@ -47,9 +48,16 @@ export function ChatThread({ state, intro, live, playingId, onSpeak, onRetry, on
       )}
       {empty && intro}
 
-      {messages.map((m) => (
-        <Bubble key={m.id} message={m} playing={playingId === m.id} onSpeak={() => onSpeak(m)} />
-      ))}
+      {messages.map((m) =>
+        m.photo ? (
+          <PhotoShot key={m.id} url={m.photo.url} read />
+        ) : (
+          <Bubble key={m.id} message={m} playing={playingId === m.id} onSpeak={() => onSpeak(m)} />
+        ),
+      )}
+
+      {phase.kind === "reading" && <PhotoShot key={phase.photo.id} url={phase.photo.url} read={false} />}
+      {phase.kind === "error" && phase.photo && <PhotoShot key={phase.photo.id} url={phase.photo.url} read={false} />}
 
       {live}
 

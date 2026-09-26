@@ -21,7 +21,7 @@ Narrow problem, precise user, a tool that works in 30 seconds beats an ambitious
 | `prd/` | `PRD.md`, the single shared product doc | Only the PRD owner (see `prd/CLAUDE.md`) |
 | `prototype/` | The web app (Vite + React + TypeScript) | Anyone, carefully (see `prototype/CLAUDE.md`) |
 
-Team folders: `pierre-d`, `max`, `benji`, `sunny`, `luke`.
+Team folders: `jonathan`, `max`, `benji`, `sunny`, `luke`.
 
 ## First thing in every session
 

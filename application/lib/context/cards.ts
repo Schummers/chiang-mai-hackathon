@@ -104,6 +104,20 @@ export function wordCard(thai: string, pack: Pack = PACK): ContextCard | null {
   };
 }
 
+/** False friends too common to card: เจ้า ends most Northern sentences, ส้ม sits in dish names. */
+const TOO_COMMON = new Set(["เจ้า", "ส้ม"]);
+
+/** Backstop when the model misses it: a false friend the Vendor said, as a Word card. */
+export function falseFriendCard(raw: string, pack: Pack = PACK): ContextCard | null {
+  const ff = pack.falseFriends
+    .map((f) => f.thai.split(" ")[0])
+    .find((base) => !TOO_COMMON.has(base) && raw.includes(base));
+  if (!ff) return null;
+  const at = raw.indexOf(ff);
+  const heard = raw.slice(at).split(/\s/)[0];
+  return wordCard(heard, pack);
+}
+
 /** Off-guide dish: only exists to carry an allergy or diet flag. */
 export function offGuideCard(mention: Mention, myInfo: MyInfo): ContextCard | null {
   if (!mention.name) return null;

@@ -1,4 +1,4 @@
-import { cardFor, momentCard, type Mention } from "@/lib/context/cards";
+import { cardFor, falseFriendCard, momentCard, type Mention } from "@/lib/context/cards";
 import { systemPrompt, TURN_SCHEMA, turnPrompt } from "@/lib/context/prompt";
 import type { MyInfo, TranslateInput, TranslateResult } from "@/lib/engine/types";
 import { generate, TURN_MODEL } from "@/lib/server/gemini";
@@ -44,8 +44,11 @@ export async function POST(req: Request) {
 
   const original = turn.original?.filter(Boolean) ?? [];
   const translation = turn.translation?.filter(Boolean) ?? [];
-  // The Moment card opens the conversation when the first Turn names nothing.
-  const card = cardFor(turn.mention ?? { kind: "none" }, myInfo) ?? (history.length === 0 ? momentCard(date) : null);
+  // Then a false friend the Vendor said, then the Moment card to open a conversation that names nothing.
+  const card =
+    cardFor(turn.mention ?? { kind: "none" }, myInfo) ??
+    (input.speaker === "vendor" ? falseFriendCard(raw) : null) ??
+    (history.length === 0 ? momentCard(date) : null);
 
   const detected = turn.detectedInfo ?? {};
   const detectedInfo: Partial<MyInfo> = {

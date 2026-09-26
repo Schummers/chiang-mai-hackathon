@@ -88,13 +88,20 @@ export function turnPrompt(raw: string, speaker: Speaker, userLanguage: string, 
     .slice(-6)
     .map((m) => `${m.speaker === "you" ? "Visitor" : "Vendor"}: ${m.original.join(" / ")}`)
     .join("\n");
-  return `Visitor's language: ${languageName(userLanguage)}
+  const lang = languageName(userLanguage);
+  const target =
+    speaker === "you"
+      ? `Write "original" in ${lang} and "translation" in Central Thai.`
+      : `Write "original" in Thai and "translation" in ${lang}, not in English unless ${lang} is English.`;
+  return `Visitor's language: ${lang}
 My info: ${info || "nothing saved"}
 Conversation so far:
 ${past || "(this is the first Turn)"}
 
 Now speaking: ${speaker === "you" ? "the Visitor" : "the Vendor"}
-Raw transcript: ${raw}`;
+Raw transcript: ${raw}
+
+${target}`;
 }
 
 /** Gemini response schema (OpenAPI subset). */

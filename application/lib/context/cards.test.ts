@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 import { EMPTY_MY_INFO, type MyInfo } from "@/lib/engine/types";
-import { cardFor, momentCard, wordCard } from "./cards";
+import { cardFor, falseFriendCard, momentCard, wordCard } from "./cards";
 import { systemPrompt } from "./prompt";
 
 const peanuts: MyInfo = { ...EMPTY_MY_INFO, allergies: ["peanuts"] };
@@ -75,5 +75,15 @@ describe("systemPrompt", () => {
     expect(sept).toContain("kaeng-hang-le");
     expect(sept).toContain("ยินดี");
     expect(sept.length).toBeLessThan(40_000);
+  });
+});
+
+describe("falseFriendCard", () => {
+  it("catches ยินดี in a Vendor sentence", () => {
+    expect(falseFriendCard("ยินดีเจ้า ซาวห้าบาทเจ้า")).toMatchObject({ kind: "word", nameThai: "ยินดีเจ้า" });
+  });
+
+  it("ignores เจ้า and ส้ม, which are everywhere", () => {
+    expect(falseFriendCard("แกงส้มเจ้า")).toBeNull();
   });
 });

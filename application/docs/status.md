@@ -26,5 +26,4 @@ Updated 2026-09-27. Production: https://u-mueang.vercel.app (every push to `main
 - No rate limit on `/api/*`: anyone with the URL spends the Gemini free quota, and the app stops (429) when it runs out. The fallback model uses the same key.
 - Cards are in English whatever the Visitor's language (the pack is English).
 - Gemini free tier: Google may use the requests to improve its models.
-- Timeout mismatch: Gemini fallback can take up to 24 s, the engine stops at 15 s (see [contract.md](contract.md)).
 - Falling back to the mock needs a Vercel env change and a redeploy (see [contract.md](contract.md)).

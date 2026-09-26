@@ -4,6 +4,7 @@ One line each, newest first. Status: **done** (settled) or **open** (to confirm,
 
 | Date | Decision | Why | Status |
 |---|---|---|---|
+| 2026-09-27 | Gemini runs on one 13 s budget: 8 s for the main model, the rest for a flash-lite fallback (also on timeout) | The engine stops at 15 s; before, a fallback could take 24 s and never reach the UI | done |
 | 2026-09-27 | Cards, back-end and value added reopened for a grill | Jonathan not convinced yet; see `people/jonathan/handoff-cards-grill.md` | open, jonathan |
 | 2026-09-27 | Two Gemini calls (transcribe, then Turn), not one audio-to-JSON call | Keeps the raw transcript first (D4), keeps a path to on-device models, no contract change; costs ~1 s | done |
 | 2026-09-27 | Our Gemini key server-side, not bring-your-own-key | "Usable right now" means scan the QR and it works | done |

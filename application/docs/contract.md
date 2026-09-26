@@ -38,11 +38,9 @@ Picked once by `NEXT_PUBLIC_TURN_SERVICE` in [`turnService.ts`](../lib/engine/tu
 | Where | Value |
 |---|---|
 | Engine, per service call | 15 s, then an error bubble with Retry (the Turn is kept) (`lib/engine/engine.ts`) |
-| Gemini call | 12 s abort, then one fallback to flash-lite on 429 or 503 only (a timeout does not fall back) (`lib/server/gemini.ts`) |
+| Gemini request | 13 s total budget, fallback included. Main model gets 8 s, then one fallback to flash-lite on 429, 503 or timeout, with the time left (`lib/server/gemini.ts`) |
 | Vercel function | `maxDuration = 30` |
 | Recording | stop 1.5 s after the voice ends, 6 s if nobody speaks, 30 s cap (`lib/recorder.ts`); under 0.6 s dropped (`MIN_RECORDING_MS` in `components/Conversation.tsx`) |
-
-Known gap: a slow 429/503 plus the fallback can take up to 24 s on the server, but the engine gives up at 15 s, so that fallback never reaches the UI.
 
 ## Env vars
 

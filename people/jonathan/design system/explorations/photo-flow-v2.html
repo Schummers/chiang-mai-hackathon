@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Photo flow v2</title>
+<style>
+:root{--paper:#faf9f6;--white:#fff;--ink:#1e2238;--you:#2b3263;--you-dk:#1b2045;--them:#8a5a44;--you-wash:#eceef5;--ink-2:rgb(30 34 56/.7);--line:rgb(30 34 56/.1);--line-2:rgb(30 34 56/.18);--sh:0 1px 2px rgb(30 34 56/.06),0 6px 16px -6px rgb(30 34 56/.14);--sh-dock:0 10px 30px -10px rgb(30 34 56/.3),0 0 0 1px var(--line);--weave:repeating-linear-gradient(45deg,var(--them) 0 5px,var(--paper) 5px 7px,var(--you) 7px 12px,var(--paper) 12px 14px)}
+*{box-sizing:border-box;margin:0}
+body{background:#ecebe6;color:var(--ink);font-family:system-ui,-apple-system,sans-serif;padding:24px 16px}
+h1{font-size:20px;font-weight:800;margin-bottom:4px}
+h3{font-size:15px;font-weight:800;margin:28px 0 10px}
+.lede{color:var(--ink-2);font-size:14px;margin-bottom:12px;max-width:960px;line-height:1.45}
+.rules{font-size:13px;line-height:1.5;max-width:960px;margin:0 0 20px 18px}
+.rules b{font-weight:800}
+.row{display:flex;flex-wrap:wrap;gap:22px}
+.step{width:290px}
+.n{display:inline-grid;place-items:center;width:22px;height:22px;border-radius:50%;background:var(--ink);color:#fff;font-size:12px;font-weight:800;margin-right:6px}
+.step h2{font-size:14px;font-weight:800;margin-bottom:4px;display:flex;align-items:center}
+.step p{font-size:12.5px;color:var(--ink-2);margin-bottom:10px;min-height:52px;line-height:1.4}
+.phone{position:relative;height:560px;border-radius:28px;background:var(--paper);box-shadow:0 0 0 1px var(--line-2);overflow:hidden}
+.head{display:flex;justify-content:space-between;align-items:center;padding:14px}
+.logo{font-weight:800;font-size:15px}
+.sq{width:32px;height:32px;border-radius:10px;background:var(--white);box-shadow:var(--sh);display:inline-block;margin-left:6px}
+.chat{position:absolute;left:12px;right:12px;bottom:100px;display:flex;flex-direction:column;gap:10px}
+/* Your photo: no stroke, no card. The image itself, your corner shape, one badge. */
+.shot{align-self:flex-end;width:calc(100% - 60px);height:130px;border-radius:16px;border-bottom-right-radius:6px;position:relative;background:repeating-linear-gradient(135deg,#d6cfc3 0 8px,#e6e0d6 8px 16px);box-shadow:var(--sh)}
+.shot.sm{height:70px}
+.badge{position:absolute;left:8px;bottom:8px;display:inline-flex;align-items:center;gap:5px;height:24px;padding:0 9px;border-radius:999px;background:var(--you);color:#fff;font-size:11px;font-weight:800}
+.bub{align-self:flex-end;width:calc(100% - 60px);background:var(--white);border-radius:16px;border-bottom-right-radius:6px;padding:12px 14px;box-shadow:inset -3px 0 0 var(--you),0 0 0 1.5px rgb(43 50 99/.28),var(--sh);font-size:14px}
+.about{display:inline-flex;align-items:center;gap:6px;font-size:11px;font-weight:800;color:var(--ink-2);margin-bottom:8px}
+.thumb{width:22px;height:22px;border-radius:6px;background:repeating-linear-gradient(135deg,#d6cfc3 0 4px,#e6e0d6 4px 8px)}
+.listen{color:var(--you);font-weight:700;font-size:14px}
+.big{font-weight:700;font-size:15px}
+.small{margin-top:6px;padding-top:6px;border-top:1px solid var(--line);color:var(--ink-2);font-size:12px}
+.frame{padding:3px;border-radius:16px;background:var(--weave)}
+.card{background:var(--white);border-radius:13px;padding:12px 14px}
+.kick{font-size:10px;font-weight:800;letter-spacing:.09em;text-transform:uppercase;color:var(--ink-2);margin-bottom:6px}
+.name{font-weight:800;font-size:15px}
+.desc{font-size:12px;color:var(--ink-2);margin-top:2px;line-height:1.4}
+.dish{display:flex;justify-content:space-between;align-items:center;font-size:13px;padding:5px 0;border-top:1px solid var(--line)}
+.dish:first-of-type{border-top:0}
+.dish b{font-weight:800}
+.th{color:var(--ink-2);font-size:12px}
+.flag{font-size:11px;font-weight:800;background:var(--ink);color:#fff;border-radius:999px;padding:2px 8px}
+.ok{font-size:11px;font-weight:800;color:var(--you);background:var(--you-wash);border-radius:999px;padding:2px 8px}
+.tool{display:inline-flex;align-items:center;gap:6px;height:34px;margin-top:10px;padding:0 12px;border-radius:10px;font-size:13px;font-weight:700;color:var(--you);background:var(--you-wash)}
+.dock{position:absolute;left:10px;right:10px;bottom:14px;height:72px;padding:0 8px;border-radius:24px;background:var(--white);box-shadow:var(--sh-dock);display:flex;align-items:center;gap:8px}
+.mic{width:56px;height:56px;border-radius:16px;display:grid;place-items:center;color:#fff;font-size:10px;font-weight:800;flex:none}
+.mic.v{background:var(--them)}.mic.y{background:var(--you)}.mic.stop{background:var(--you-dk)}
+.mic.off{background:var(--paper);color:var(--line-2);box-shadow:inset 0 0 0 1.5px var(--line)}
+.mid{flex:1;display:flex;justify-content:center;align-items:center;gap:6px;font-size:12px;font-weight:700;color:var(--ink-2);white-space:nowrap}
+.mid.you{color:var(--you)}
+.cam{width:44px;height:44px;border-radius:12px;background:var(--white);box-shadow:inset 0 0 0 1.5px var(--line-2);display:grid;place-items:center}
+.wave{letter-spacing:1px}
+.same{margin-top:8px;font-size:11.5px;font-weight:700;color:var(--you);background:var(--you-wash);border-radius:10px;padding:6px 9px;line-height:1.35}
+.types{display:flex;flex-wrap:wrap;gap:16px}
+.types .frame{width:230px}
+.q{max-width:960px;background:var(--white);border-radius:14px;padding:14px 16px;box-shadow:var(--sh);font-size:13.5px;line-height:1.5}
+.q li{margin:6px 0 6px 18px}
+.q b{font-weight:800}
+</style></head><body>
+<h1>Photo : A + B fusionnés, v2</h1>
+<p class="lede">La photo est lue tout de suite (A). La question passe par un bouton dans la carte (B), mais ce bouton ne fait rien de spécial : il se comporte exactement comme Speak. Une seule logique pour tout l'écran.</p>
+<ul class="rules">
+<li><b>Le milieu du dock narre toujours</b> : caméra au repos, "Reading the photo…" pendant l'analyse (même forme que "Translating…"), onde + timer pendant l'écoute.</li>
+<li><b>L'écoute vit toujours au même endroit</b> : une carte Listening normale dans le fil + Speak qui devient Stop. Jamais dans la photo.</li>
+<li><b>Ce que tu envoies = à droite, forme "toi"</b>. Ce que l'app sait = carte tissée. La photo est une image nue, coin "toi", un badge indigo. Pas de cadre, pas de stroke.</li>
+</ul>
+
+<div class="row">
+<div class="step"><h2><span class="n">1</span>Au repos</h2><p>Caméra au milieu du dock, contour 1.5px comme les boutons ghost.</p>
+<div class="phone"><div class="head"><span class="logo">อู้เมือง</span><span><i class="sq"></i><i class="sq"></i></span></div>
+<div class="dock"><div class="mic v">พูด</div><div class="mid"><div class="cam">📷</div></div><div class="mic y">SPEAK</div></div></div></div>
+
+<div class="step"><h2><span class="n">2</span>Photo prise, lecture</h2><p>La photo arrive à droite, image nue avec badge. Le milieu dit "Reading the photo…", les deux micros grisés, comme pendant une traduction.</p>
+<div class="phone"><div class="head"><span class="logo">อู้เมือง</span><span><i class="sq"></i><i class="sq"></i></span></div>
+<div class="chat"><div class="shot"><span class="badge">📷 Photo</span></div></div>
+<div class="dock"><div class="mic v off">พูด</div><div class="mid">🔍 Reading the photo…</div><div class="mic y off">SPEAK</div></div></div></div>
+
+<div class="step"><h2><span class="n">3</span>La carte se remplit</h2><p>Carte tissée (voix de l'app). Le kicker dit ce qui a été reconnu. En bas, "Ask about this photo", style Play.</p>
+<div class="phone"><div class="head"><span class="logo">อู้เมือง</span><span><i class="sq"></i><i class="sq"></i></span></div>
+<div class="chat"><div class="shot sm"><span class="badge">📷 Photo</span></div>
+<div class="frame"><div class="card"><div class="kick">📋 Menu · 12 dishes</div>
+<div class="dish"><span><b>Khao soi</b> <span class="th">ข้าวซอย</span></span><span class="ok">Mild ok</span></div>
+<div class="dish"><span><b>Sai oua</b> <span class="th">ไส้อั่ว</span></span><span class="ok">Local</span></div>
+<div class="dish"><span><b>Som tam</b> <span class="th">ส้มตำ</span></span><span class="flag">Peanuts</span></div>
+<span class="tool">🎙 Ask about this photo</span></div></div></div>
+<div class="dock"><div class="mic v">พูด</div><div class="mid"><div class="cam">📷</div></div><div class="mic y">SPEAK</div></div></div></div>
+
+<div class="step"><h2><span class="n">4</span>Tap "Ask about this photo"</h2><p>Exactement comme taper Speak : carte Listening normale, onde au milieu, Speak devient Stop. Seul ajout : une ligne "About this photo" avec la vignette.</p>
+<div class="phone"><div class="head"><span class="logo">อู้เมือง</span><span><i class="sq"></i><i class="sq"></i></span></div>
+<div class="chat"><div class="frame"><div class="card"><div class="kick">📋 Menu · 12 dishes</div><div class="dish"><span><b>Khao soi</b></span><span class="ok">Mild ok</span></div></div></div>
+<div class="bub"><div class="about"><i class="thumb"></i>About this photo</div><div class="listen">🎙 Listening <span class="wave">▂▅▃▆▂▄</span> 0:03</div></div></div>
+<div class="dock"><div class="mic v off">พูด</div><div class="mid you"><span class="wave">▂▅▃▆▂▄▃</span> 0:03</div><div class="mic y stop">■ STOP</div></div></div>
+<div class="same">Même geste, même endroit, même dock que Speak. Rien de nouveau à apprendre.</div></div>
+</div>
+
+<h3>La carte s'adapte à ce qui est sur la photo</h3>
+<div class="types">
+<div class="frame"><div class="card"><div class="kick">🍜 Dish</div><div class="name">Khao soi <span class="th">ข้าวซอย</span></div><div class="desc">Curry noodle soup, crispy noodles on top. Mild to medium.</div><span class="tool">🎙 Ask about this photo</span></div></div>
+<div class="frame"><div class="card"><div class="kick">🥭 Fruit / ingredient</div><div class="name">Longan <span class="th">ลำไย</span></div><div class="desc">Sweet, peel and eat. Chiang Mai's fruit, in season Jul to Sep.</div><span class="tool">🎙 Ask about this photo</span></div></div>
+<div class="frame"><div class="card"><div class="kick">🪧 Sign / other</div><div class="name">"No shoes inside"</div><div class="desc">Temple rule: leave your shoes at the steps.</div><span class="tool">🎙 Ask about this photo</span></div></div>
+</div>
+
+<h3>À trancher (3 questions dans le chat)</h3>
+<div class="q"><ol>
+<li><b>Qui répond à "Ask about this photo" ?</b> L'app (carte tissée, dans ta langue) ou le vendeur (traduit en thaï, comme Speak) ?</li>
+<li><b>Taille de la photo dans le fil</b> : pleine largeur puis réduite quand la carte arrive (écrans 2 → 3), ou vignette tout de suite ?</li>
+<li><b>Types de carte</b> : Menu, Dish, Fruit / ingredient, Sign / other. Il en manque, ou c'est trop ?</li>
+</ol></div>
+</body></html>

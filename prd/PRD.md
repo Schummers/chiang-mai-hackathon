@@ -1,10 +1,11 @@
 # PRD
 
-**Owner**: jonathan. **Status**: draft v0.2, 2026-09-26 (design decided, wireframes v4). **Challenge**: 02, Navigate Chiang Mai's cultural layers ([brief](hackathon-brief.md)).
+**Owner**: jonathan. **Status**: draft v0.3, 2026-09-27 (Moves: cards that give you something to say). **Challenge**: 02, Navigate Chiang Mai's cultural layers ([brief](hackathon-brief.md)).
 **Working name**: TBD (branding workstream).
 
-> A translator that explains, and that is designed for both people in the conversation.
-> You ramble in your own language about what you want at the market or the restaurant, the app turns it into a clear Thai message, explains what the answer actually means, and helps the Thai person reply.
+> **Don't just order. Make the vendor smile.**
+> Say what's on your mind, in your language, messy and all: the app turns it into clear Thai. Then, at the right moment, it hands you the few words to say yourself, in the vendor's own Northern Thai, that turn a transaction into a real exchange.
+> Tagline for the jury: *ChatGPT speaks for you. We make you speak their language.*
 
 ## Problem
 
@@ -44,10 +45,14 @@ The result: the exchange stops at the first question, when it could have become 
 
 The first question the jury will ask. Our answer has to be **visible in the demo**, not only in the prompt:
 
-1. **Designed for the other side.** The vendor has their own mic button, labelled in Thai, which pulses when it's their turn. Your message is played aloud in Thai and shown big, in bullets, one per question. Nobody else designs for the person who receives the phone.
-2. **Explains, not only translates.** When a dish or ingredient comes up, a card says what it is, which meat, how spicy, and flags your allergies.
-3. **Local context.** Northern Thai dishes, a Kham Mueang dictionary, date and season, your saved info (allergies, spice, diet).
-4. **Cheap enough to be free.** Small models and browser text-to-speech, not a premium voice agent.
+Revised 2026-09-27 after a grill: "explains" and "cheap" do not hold, ChatGPT explains too and the jury does not score price.
+
+1. **Say what's on your mind.** Ramble, hesitate, change your mind: we keep what you mean and turn it into short, clear Thai. Google Translate needs a clean sentence; we remove that friction. This is why we are a better translator.
+2. **We make you speak, not only translate you.** Move cards give you, at the right moment, a phrase to say yourself (hello, "is this your family recipe?", a Northern word the vendor just used), in Kham Mueang when we have it, with phonetics and audio. "Say it yourself" teaches any of your translated sentences. The moment a vendor hears a foreigner speak their language is what nobody else designs for.
+3. **Designed for the other side.** The vendor has their own mic, labelled in Thai.
+4. **Verified local context.** Hand-written Moves reviewed by native speakers, filled from Luke's Context Pack; the model picks, the code writes, nothing is invented on stage.
+
+Not our fight: live simultaneous interpreting. Reformulating needs the whole sentence, so it is always turn by turn; speed is where Google and ChatGPT are strongest.
 
 ## Core flow
 
@@ -58,7 +63,9 @@ One stable screen: a chat on top, an action bar at the bottom with only two butt
 3. **Working on it**: your raw transcript appears at once, with a light running around it, while the model cleans, structures, enriches (dishes, dictionary, My info) and translates to Central Thai.
 4. **Ready**: the bubble turns into the final message: Thai big and bold, your language small underneath, bullets when there are several questions. The Thai plays aloud. The vendor's mic starts pulsing.
 5. **The vendor speaks**: same pattern on the left, in grey and in Thai.
-6. **Reply**: your language big, Thai original small. A full-width context card (third style) explains any dish or ingredient named, and flags allergy risks. Your mic pulses, the conversation goes on.
+6. **Reply**: your language big, Thai original small. Your mic pulses, the conversation goes on.
+7. **A Move card** (at most one per Turn) gives you something to say at this Stage of the conversation: **Say it**, **Ask** or **Echo**. One tap plays it so you say it yourself; "show the vendor" is the fallback. An allergy risk still shows as an informative card and wins over any Move.
+8. **Leaving**: the "thank you" Move opens a **Postcard** (photo of the dish, the word you learned, the vendor's reply verbatim) that you save to your phone's Photos.
 
 Every message has a 🔊 button outside the bubble, on its inner side. Rule: **big = translation, small = original**.
 
@@ -73,12 +80,16 @@ Every message has a 🔊 button outside the bubble, on its inner side. Rule: **b
 - Mobile web app, no install, no account, opened from a QR code.
 - Dictation only, both sides, Thai fixed as the other language.
 - Chat thread with bilingual bubbles, bullets, 🔊 on every message.
-- Context card for dishes and ingredients, allergy flagged as a risk, never guaranteed.
+- Move cards (Say it, Ask, Echo) from `people/jonathan/moves/moves.json`, native-reviewed; allergy flagged as a risk, never guaranteed.
+- "Say it yourself" on your bubbles: phonetics, listen, listen slowly.
+- Postcard saved to Photos, optional photo of the dish.
 - My info stored on the phone, sent with every request.
 
 **Out (later)**
 - Gamification, levels, social features.
-- **Memories (delight, V2 first)**: at the end of a good exchange, the app offers to save a memory, a short verbatim of the conversation (e.g. "20 years, it was my mother's stall"). The list of your memories opens from 👤 at the top left. It is the end goal made visible: a real cultural exchange, not a transaction.
+- Live simultaneous mode and streaming output (decided 2026-09-27: not our differentiator).
+- Pronunciation scoring for "Say it yourself".
+- **Memories (delight, V2 first; the Postcard is its V1 in the camera roll)**: at the end of a good exchange, the app offers to save a memory, a short verbatim of the conversation (e.g. "20 years, it was my mother's stall"). The list of your memories opens from 👤 at the top left. It is the end goal made visible: a real cultural exchange, not a transaction.
 - Restaurants uploading their own menu (two-sided market, impossible to prove in a weekend).
 - **Nearby places as context (V2 candidate)**: at opening, the My info card gains a "Near you" row with 3 place chips (browser geolocation + Google Places API (New) Nearby Search, called from a Next.js route, key server-side). Tap one and it feeds the engine (place type, dishes mentioned in reviews, rating), or ignore it and just talk (no new screen, keeps D2). Findings: no menu in the Google API, only up to 5 reviews, so an LLM extracts the dishes mentioned and the UI says "Often mentioned", never "Menu". Cost: zero LLM tokens for the list, about 1.5k tokens to read the reviews; the data itself is paid per call (roughly 30 to 40 USD per 1,000 after a monthly free quota), about 1 to 2 USD per daily active user per month at scale, and Google's terms limit caching. Free alternative: OpenStreetMap, without reviews. For a demo: dedicated capped key, and a `?at=<place>` override because stage GPS points at the venue.
 - On-device models, offline mode, native iOS/Android apps.
@@ -132,8 +143,8 @@ Every message has a 🔊 button outside the bubble, on its inner side. Rule: **b
 | Criterion | How we score |
 |---|---|
 | Day-one impact (x2) | The jury opens it from a QR code and uses it in the room, no install, no account. |
-| Product | One button to start, one button to show. The Thai person replies by tapping. |
-| Idea | A translator that explains, and designs for both people. |
+| Product | Ramble into one button; one tap on a card and you say it yourself. |
+| Idea | Don't just order, make the vendor smile: the app makes you speak their language. |
 | Demo | Open on a real verbatim, then a live market scene, then the QR code. |
 
 ## Demo script (4 to 6 min)
@@ -141,7 +152,7 @@ Every message has a 🔊 button outside the bubble, on its inner side. Rule: **b
 Draft, to refine once the flow works.
 
 1. **Problem (45 s)**: a real verbatim from our interviews, the curry stall situation.
-2. **Live scene (2 min 30)**: brain dump at a "stall", Thai played aloud, the vendor answers on their mic, context card with the allergy flag, one more exchange.
-3. **Why it's different (45 s)**: designed for both sides, explains, local context.
+2. **Live scene (2 min 30)**: brain dump at a "stall", Thai played aloud, the vendor answers on their mic, an Ask card ("is this your family recipe?"), the Visitor says it, the vendor smiles; an Echo on ซาว; thank you and the Postcard.
+3. **Why it's different (45 s)**: ChatGPT speaks for you, we make you speak their language.
 4. **Try it now (30 s)**: QR code on screen.
 5. **Next (30 s)**: Thai-initiated flow, more scenes, on-device models.

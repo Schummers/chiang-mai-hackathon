@@ -11,7 +11,8 @@ Updated 2026-09-27. Production: https://u-mueang.vercel.app (every push to `main
 
 ## In progress
 
-- **Cards and back-end under review**: Jonathan is not convinced yet by the value added, the use of the pack and the cultural exchange. Grill input: [`people/jonathan/handoff-cards-grill.md`](../../people/jonathan/handoff-cards-grill.md). Before the demo only small changes.
+- **Moves** (grill closed 2026-09-27, see [moves.md](moves.md)): tickets in [`people/jonathan/tickets/moves/`](../../people/jonathan/tickets/moves/). 03 (home pitch) done; 01 (Moves data and Stage), 04 (Say it yourself) in progress; 02 (Move cards) starts when 01 lands; 05 and 06 (Postcard) after. Each ticket's Status line is the live state.
+- **Native review of the 45 Moves**: [`people/jonathan/moves/REVIEW.md`](../../people/jonathan/moves/REVIEW.md), to hand to Thai contacts the morning of 27/09.
 - **Demo readiness (#13)**: QR done ([`people/jonathan/demo/`](../../people/jonathan/demo/)). Missing: real iPhone and Android run, mock switch by URL flag, backup video.
 
 ## Not verified

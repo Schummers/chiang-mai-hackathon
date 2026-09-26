@@ -7,6 +7,7 @@ For teammates and their agents. Read this page first, then only the file you nee
 | [architecture.md](architecture.md) | How a Turn flows through the app, what each folder and file does |
 | [contract.md](contract.md) | The UI <-> back-end contract: types, API routes, env vars, timeouts |
 | [context-pack.md](context-pack.md) | How Luke's Lanna data becomes cards and prompt context |
+| [moves.md](moves.md) | Moves: the phrases the Visitor says themselves, how a Move card is chosen and filled |
 | [decisions.md](decisions.md) | What was decided, why, and what is still open |
 | [status.md](status.md) | What works, what is mocked, what is missing or unverified |
 
@@ -24,6 +25,8 @@ These docs point to sources, they do not copy them. When two places disagree, th
 | Visuals (Kratip direction, tokens, components) | [`people/jonathan/design system/DESIGN.md`](../../people/jonathan/design%20system/DESIGN.md) | jonathan |
 | Screen flow (wins over DESIGN.md on flow) | [`people/jonathan/wireframes/v5.html`](../../people/jonathan/wireframes/v5.html) | jonathan |
 | Design tickets in progress | [`people/jonathan/tickets/kratip/`](../../people/jonathan/tickets/kratip/) | jonathan |
+| Moves tickets (cards, Say it yourself, Postcard) | [`people/jonathan/tickets/moves/`](../../people/jonathan/tickets/moves/) | jonathan |
+| Moves data and native review sheet | [`people/jonathan/moves/`](../../people/jonathan/moves/) (`moves.json`, `REVIEW.md`) | jonathan |
 | Lanna local knowledge (raw data, sources, confidence) | [`people/luke/lanna-context/`](../../people/luke/lanna-context/) | luke |
 | UI <-> back-end types | [`lib/engine/types.ts`](../lib/engine/types.ts) | anyone, with care |
 | Front-end handoff (history) | [`people/jonathan/handoff-frontend.md`](../../people/jonathan/handoff-frontend.md) | jonathan |

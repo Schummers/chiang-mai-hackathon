@@ -134,6 +134,14 @@ describe("conversation engine", () => {
     expect(onDetectedInfo).toHaveBeenCalledWith({ allergies: ["peanuts"] });
   });
 
+  it("announces each new message, e.g. to read it aloud", async () => {
+    const fake = controllableService();
+    const onMessage = vi.fn();
+    const engine = new ConversationEngine({ service: fake.service, onMessage });
+    await fullTurn(engine, fake, "you", reply());
+    expect(onMessage).toHaveBeenCalledWith(expect.objectContaining({ speaker: "you", translation: ["จานนี้คืออะไรครับ"] }));
+  });
+
   it("shows a network error when transcription fails, and the same speaker can retry", async () => {
     const fake = controllableService();
     const engine = new ConversationEngine({ service: fake.service });

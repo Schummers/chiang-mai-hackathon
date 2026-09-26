@@ -1,5 +1,6 @@
 import type { Message, Speaker } from "@/lib/engine/types";
 import { ContextCard } from "./ContextCard";
+import { SpeakerButton } from "./SpeakerButton";
 import s from "./Chat.module.css";
 
 const THAI = /[฀-๿]/;
@@ -23,7 +24,7 @@ export function Row({ speaker, children }: { speaker: Speaker; children: React.R
 }
 
 /** Big = translation (what the reader of this bubble reads), small = original (what was said). */
-export function Bubble({ message }: { message: Message }) {
+export function Bubble({ message, playing, onSpeak }: { message: Message; playing: boolean; onSpeak: () => void }) {
   return (
     <>
       <Row speaker={message.speaker}>
@@ -31,6 +32,7 @@ export function Bubble({ message }: { message: Message }) {
           <Items items={message.translation} className={s.big} />
           <Items items={message.original} className={s.small} />
         </div>
+        <SpeakerButton playing={playing} onClick={onSpeak} />
       </Row>
       {message.card && <ContextCard card={message.card} />}
     </>

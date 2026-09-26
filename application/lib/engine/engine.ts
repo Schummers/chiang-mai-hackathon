@@ -87,6 +87,8 @@ export type EngineOptions = {
   getMyInfo?: () => MyInfo;
   getUserLanguage?: () => UserLanguage;
   onDetectedInfo?: (info: Partial<MyInfo>) => void;
+  /** A final message was added to the thread. */
+  onMessage?: (message: Message) => void;
   now?: () => number;
 };
 
@@ -154,6 +156,7 @@ export class ConversationEngine {
       });
       if (stale()) return;
       this.dispatch({ type: "TRANSLATED", id: newId(), result });
+      this.opts.onMessage?.(this.state.messages[this.state.messages.length - 1]);
       if (result.detectedInfo) this.opts.onDetectedInfo?.(result.detectedInfo);
     } catch {
       if (!stale()) this.fail(speaker, "network");

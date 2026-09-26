@@ -2,9 +2,10 @@
 
 import { Plus, UserRound } from "lucide-react";
 import { useCallback, useRef, useState } from "react";
-import type { MyInfo, Speaker } from "@/lib/engine/types";
+import type { Message, MyInfo, Speaker } from "@/lib/engine/types";
 import { mergeMyInfo } from "@/lib/myInfo";
 import { Recorder } from "@/lib/recorder";
+import { speak, stopSpeech, unlockSpeech } from "@/lib/speech";
 import { useConversation } from "@/lib/useConversation";
 import { myInfoStore, useMyInfo } from "@/lib/useMyInfo";
 import { ActionBar } from "./ActionBar";
@@ -30,7 +31,33 @@ export function Conversation() {
     toastTimer.current = setTimeout(() => setToast(null), 2500);
   };
 
-  const { engine, state } = useConversation({ getMyInfo: myInfoStore.get, onDetectedInfo });
+  const userLanguage = "en";
+  const [playingId, setPlayingId] = useState<string | null>(null);
+  const playingRef = useRef<string | null>(null);
+
+  const toggleSpeech = (message: Message) => {
+    if (playingRef.current === message.id) {
+      stopSpeech();
+      playingRef.current = null;
+      return setPlayingId(null);
+    }
+    playingRef.current = message.id;
+    setPlayingId(message.id);
+    // Your messages are read in Thai for the vendor, the vendor's in your language.
+    speak(message.translation.join(" "), message.speaker === "you" ? "th" : userLanguage, () => {
+      if (playingRef.current !== message.id) return;
+      playingRef.current = null;
+      setPlayingId(null);
+    });
+  };
+
+  const { engine, state } = useConversation({
+    getMyInfo: myInfoStore.get,
+    getUserLanguage: () => userLanguage,
+    onDetectedInfo,
+    // Auto-play your Thai message so you only have to turn the phone.
+    onMessage: (m) => m.speaker === "you" && toggleSpeech(m),
+  });
   const [recorder] = useState(() => new Recorder());
   const getLevel = useCallback(() => recorder.level, [recorder]);
 
@@ -46,6 +73,8 @@ export function Conversation() {
     if (phase.kind === "listening" && phase.speaker === speaker) return void finish(speaker);
 
     recorder.unlockAudio(); // must run inside the tap, for iOS
+    stopSpeech();
+    unlockSpeech();
     setInfoCardClosed(true);
     engine.micTap(speaker);
     const now = engine.getState().phase;
@@ -58,6 +87,7 @@ export function Conversation() {
 
   const newConversation = () => {
     recorder.cancel();
+    stopSpeech();
     engine.newConversation();
     setInfoCardClosed(false);
   };
@@ -90,6 +120,8 @@ export function Conversation() {
       <ChatThread
         state={state}
         live={live}
+        playingId={playingId}
+        onSpeak={toggleSpeech}
         intro={
           !infoCardClosed && (
             <MyInfoCard info={myInfo} onOpen={() => setInfoOpen(true)} onClose={() => setInfoCardClosed(true)} />

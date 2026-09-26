@@ -2,6 +2,7 @@
 
 import { useEffect, useRef } from "react";
 import type { ConversationState } from "@/lib/engine/engine";
+import type { Message } from "@/lib/engine/types";
 import { Bubble, Row } from "./Bubble";
 import s from "./Chat.module.css";
 import screen from "./Screen.module.css";
@@ -12,9 +13,11 @@ type Props = {
   intro?: React.ReactNode;
   /** Live content at the end of the thread (Listening card). */
   live?: React.ReactNode;
+  playingId: string | null;
+  onSpeak: (message: Message) => void;
 };
 
-export function ChatThread({ state, intro, live }: Props) {
+export function ChatThread({ state, intro, live, playingId, onSpeak }: Props) {
   const { phase, messages } = state;
   const ref = useRef<HTMLElement>(null);
   const empty = messages.length === 0 && phase.kind === "idle";
@@ -36,7 +39,7 @@ export function ChatThread({ state, intro, live }: Props) {
       {empty && intro}
 
       {messages.map((m) => (
-        <Bubble key={m.id} message={m} />
+        <Bubble key={m.id} message={m} playing={playingId === m.id} onSpeak={() => onSpeak(m)} />
       ))}
 
       {live}

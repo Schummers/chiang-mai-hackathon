@@ -85,6 +85,9 @@ Every message has a 🔊 button outside the bubble, on its inner side. Rule: **b
 - Thai-initiated flow (the "Later" user above).
 - Non-food scenes (barber, pharmacy, transport).
 - Typing, photo input, scene chip, suggested replies for the vendor, suggested follow-up questions (dropped during the design session, V2 candidates).
+- **One mic with automatic language detection**: a single button for both people, the app detects French/English vs Thai and places the bubble on the right side. Fewer taps, but detection is unreliable on very short replies ("ครับ").
+- **Karaoke highlight**: the Thai text is highlighted word by word while it plays, so the vendor can follow along.
+- **Live transcription**: show the words while you speak, instead of transcribing after Stop. Needs a streaming speech-to-text provider.
 
 ## Design decisions (session 2026-09-26)
 

@@ -20,7 +20,7 @@
   background: var(--weave-bg);
 }
 
-/* Frosted header: floats over the chat, older messages slide under it, blurred and out of the way. */
+/* Header floats over the chat with no background: the weave stays the same everywhere. */
 .topWrap {
   position: absolute;
   z-index: 10;
@@ -34,13 +34,7 @@
   align-items: center;
   justify-content: space-between;
   gap: 12px;
-  padding: calc(env(safe-area-inset-top) + 10px) 14px 22px;
-  background: rgb(250 249 246 / 0.7);
-  -webkit-backdrop-filter: blur(12px);
-  backdrop-filter: blur(12px);
-  /* The bottom fades out: no hard edge, no line. */
-  -webkit-mask-image: linear-gradient(to bottom, #000 calc(100% - 16px), transparent);
-  mask-image: linear-gradient(to bottom, #000 calc(100% - 16px), transparent);
+  padding: calc(env(safe-area-inset-top) + 10px) 14px 10px;
 }
 
 .actions {
@@ -75,8 +69,11 @@
   flex: 1;
   overflow-y: auto;
   overscroll-behavior: contain;
-  /* Top: room for the frosted header. Bottom: the floating dock, 80 tall + 18 from the bottom + 12 of air. */
-  padding: calc(env(safe-area-inset-top) + 76px) 14px calc(env(safe-area-inset-bottom) + 110px);
+  /* Top: room for the header and its fade. Bottom: the floating dock, 80 tall + 18 from the bottom + 12 of air. */
+  padding: calc(env(safe-area-inset-top) + 96px) 14px calc(env(safe-area-inset-bottom) + 110px);
+  /* Older messages dissolve into the weave before they reach the header: no band, no hard edge. */
+  -webkit-mask-image: linear-gradient(to bottom, transparent calc(env(safe-area-inset-top) + 58px), #000 calc(env(safe-area-inset-top) + 92px));
+  mask-image: linear-gradient(to bottom, transparent calc(env(safe-area-inset-top) + 58px), #000 calc(env(safe-area-inset-top) + 92px));
   display: flex;
   flex-direction: column;
   gap: 12px;
@@ -84,7 +81,7 @@
 
 /* Session start (S2): centered, in the upper third, not glued to the header. */
 .chat > .hello:first-child {
-  margin: max(16px, 9dvh) 0 8px;
+  margin: max(0px, calc(9dvh - 20px)) 0 8px;
   display: flex;
   flex-direction: column;
   align-items: center;

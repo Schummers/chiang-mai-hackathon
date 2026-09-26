@@ -120,6 +120,7 @@ export function Conversation() {
 
   return (
     <main className={s.screen}>
+      <div className={s.topWrap}>
       <header className={s.top}>
         <Logo />
         <div className={s.actions}>
@@ -132,6 +133,7 @@ export function Conversation() {
         </div>
       </header>
       {!online && <OfflineBanner />}
+      </div>
 
       <ChatThread
         state={state}

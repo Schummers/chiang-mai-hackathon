@@ -1,30 +1,15 @@
-import { PHOTO_SCHEMA, photoSystemPrompt, photoUserPrompt, toPhotoCard } from "@/lib/context/photo";
-import type { MyInfo } from "@/lib/engine/types";
+import { parseMyInfo, PHOTO_MAX_BYTES, PHOTO_SCHEMA, photoSystemPrompt, photoUserPrompt, toPhotoCard } from "@/lib/context/photo";
 import { generate, TURN_MODEL } from "@/lib/server/gemini";
 
 export const maxDuration = 30;
 
-const MAX_BYTES = 4 * 1024 * 1024;
-
-function parseMyInfo(raw: FormDataEntryValue | null): MyInfo {
-  try {
-    const v = JSON.parse(String(raw ?? "{}")) as Partial<MyInfo>;
-    return {
-      allergies: Array.isArray(v.allergies) ? v.allergies : [],
-      spice: v.spice ?? null,
-      diet: Array.isArray(v.diet) ? v.diet : [],
-    };
-  } catch {
-    return { allergies: [], spice: null, diet: [] };
-  }
-}
 
 /** POST FormData { image, language, myInfo } -> PhotoCard. The image is only passed to Gemini: never stored, never logged. */
 export async function POST(req: Request) {
   const form = await req.formData();
   const image = form.get("image");
   if (!(image instanceof Blob) || image.size === 0) return Response.json({ error: "no image" }, { status: 400 });
-  if (image.size > MAX_BYTES) return Response.json({ error: "image too large" }, { status: 413 });
+  if (image.size > PHOTO_MAX_BYTES) return Response.json({ error: "image too large" }, { status: 413 });
 
   const language = String(form.get("language") ?? "en");
   const myInfo = parseMyInfo(form.get("myInfo"));

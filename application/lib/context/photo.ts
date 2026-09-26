@@ -6,6 +6,8 @@ import { languageName } from "./prompt";
 
 const KINDS: PhotoKind[] = ["menu", "dish", "produce", "sign"];
 const MAX_ITEMS = 20;
+/** Upload cap of both photo routes, same as audio. */
+export const PHOTO_MAX_BYTES = 4 * 1024 * 1024;
 
 /** Stable part of the photo prompt: rules + the pack's dishes and in-season produce, to anchor what is recognised. */
 export function photoSystemPrompt(month: number, pack: Pack = PACK): string {
@@ -146,3 +148,35 @@ export function toPhotoCard(raw: unknown, myInfo: MyInfo, pack: Pack = PACK): Ph
   if (warning) card.warning = warning;
   return card;
 }
+
+/** My info sent as a JSON form field. Anything malformed means nothing saved. */
+export function parseMyInfo(raw: unknown): MyInfo {
+  try {
+    const v = JSON.parse(String(raw ?? "{}")) as Partial<MyInfo>;
+    return {
+      allergies: Array.isArray(v.allergies) ? v.allergies : [],
+      spice: v.spice ?? null,
+      diet: Array.isArray(v.diet) ? v.diet : [],
+    };
+  } catch {
+    return { allergies: [], spice: null, diet: [] };
+  }
+}
+
+/** "Ask about this photo": the question, with the card already read, answered by the app (not the vendor). */
+export function askPrompt(question: string, card: PhotoCard, userLanguage: string, myInfo: MyInfo): string {
+  const items = card.items?.length ? `\nItems read: ${card.items.map((i) => [i.name, i.nameThai, i.note].filter(Boolean).join(" ")).join("; ")}` : "";
+  return `${photoUserPrompt(userLanguage, myInfo)}
+
+What the photo was read as (${card.kind}): ${card.title}${card.titleThai ? ` (${card.titleThai})` : ""}. ${card.description}${items}
+
+The Visitor asks about this photo: "${question.slice(0, 500)}"
+
+Answer as the app, not as the vendor, in "answer": one or two short sentences in the Visitor's language, from what you see in the photo. Keep Thai names as written. For allergies or diet, say "may contain" and suggest asking the vendor, never that something is safe. If the photo cannot tell, say so and suggest what to ask the vendor.`;
+}
+
+export const ASK_SCHEMA = {
+  type: "OBJECT",
+  properties: { answer: { type: "STRING" } },
+  required: ["answer"],
+} as const;

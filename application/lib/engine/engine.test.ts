@@ -443,6 +443,25 @@ describe("mock turn service (Khao Soi scenario)", () => {
     vi.unstubAllGlobals();
   });
 
+    it("api mode posts a photo question to /api/photo/ask", async () => {
+    const fetchMock = vi.fn<(url: string, init: RequestInit) => Promise<Response>>(async () => Response.json({ answer: "Mild." }));
+    vi.stubGlobal("fetch", fetchMock);
+    const card: PhotoCard = { kind: "dish", title: "Khao Soi", description: "Curry noodles." };
+    const answer = await createTurnService("api").askPhoto!(new Blob(["jpeg"]), {
+      question: "is it spicy?",
+      card,
+      userLanguage: "en",
+      myInfo: { allergies: [], spice: null, diet: [] },
+    });
+    expect(answer).toBe("Mild.");
+    const [url, init] = fetchMock.mock.calls[0];
+    const body = init.body as FormData;
+    expect(url).toBe("/api/photo/ask");
+    expect(body.get("question")).toBe("is it spicy?");
+    expect(JSON.parse(String(body.get("card")))).toEqual(card);
+    vi.unstubAllGlobals();
+  });
+
     it("is the default turn service", () => {
     expect(createTurnService(undefined).kind).toBe("mock");
     expect(createTurnService("api").kind).toBe("api");

@@ -49,7 +49,7 @@ _Avoid_: Thai (when the distinction with Kham Mueang matters)
 ## Cards
 
 **Context Card**:
-An informative, full-width card attached to a Turn that explains one Mention, with content copied from the Context Pack, never written by the model; at most one per Turn, none when there is no Mention.
+An informative, full-width card attached to a Turn that explains one Mention, with content copied from the Context Pack; at most one per Turn, none when there is no Mention. The only exceptions are the Moment card and the Off-guide dish card.
 _Avoid_: info card, tooltip, suggestion, follow-up question
 
 **Card Type**:
@@ -60,12 +60,16 @@ _Avoid_: category
 A Context Card for a dish or ingredient: what it is, main meat, spice level, and an Allergy Flag when My info calls for one.
 _Avoid_: food card, menu card
 
+**Off-guide dish card**:
+A minimal Dish card written by the model for a dish missing from the Context Pack, which exists only to carry an Allergy Flag and says it is not from the local guide.
+_Avoid_: fallback card, generated card
+
 **Word card**:
 A Context Card for a Kham Mueang word or false friend heard in the conversation, with its meaning in Central Thai and in the Visitor's language.
 _Avoid_: dictionary card, translation card
 
 **Moment card**:
-A Context Card for what makes today particular: the season, the weather or a festival.
+A Context Card for what makes today particular (the season, the weather, the next festival), attached once to the first Turn of a conversation without waiting for a Mention.
 _Avoid_: event card, season card
 
 **Local detail**:

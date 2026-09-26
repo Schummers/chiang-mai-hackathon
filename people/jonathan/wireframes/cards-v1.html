@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Context Cards v1</title>
+<style>
+  :root { --ink:#111; --mid:#666; --soft:#999; --line:#ddd; --card:#f7f7f7; --bg:#fff; --warn:#111; }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--bg); color:var(--ink); font:15px/1.45 -apple-system, "Helvetica Neue", Arial, sans-serif; }
+  main { max-width:1100px; margin:0 auto; padding:24px 16px 64px; }
+  h1 { font-size:26px; margin:0 0 4px; }
+  h2 { font-size:19px; margin:40px 0 8px; border-top:2px solid var(--ink); padding-top:14px; }
+  h3 { font-size:14px; margin:0 0 8px; text-transform:uppercase; letter-spacing:.05em; color:var(--mid); }
+  p.lead { color:var(--mid); margin:0 0 16px; max-width:720px; }
+  .note { color:var(--mid); font-size:13px; }
+  table { border-collapse:collapse; width:100%; font-size:14px; margin:8px 0; }
+  th, td { text-align:left; padding:8px 10px; border-bottom:1px solid var(--line); vertical-align:top; }
+  th { font-size:12px; text-transform:uppercase; letter-spacing:.04em; color:var(--mid); }
+  td.n { font-variant-numeric:tabular-nums; font-weight:700; white-space:nowrap; }
+  tr.total td { border-top:2px solid var(--ink); font-weight:700; }
+  .scroll { overflow-x:auto; }
+  .kpis { display:grid; grid-template-columns:repeat(auto-fit, minmax(160px, 1fr)); gap:10px; margin:16px 0; }
+  .kpi { border:2px solid var(--ink); border-radius:12px; padding:12px; }
+  .kpi b { display:block; font-size:28px; line-height:1.1; }
+  .kpi span { font-size:12px; color:var(--mid); }
+
+  .grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(300px, 1fr)); gap:20px; }
+  .phone { border:2px solid var(--ink); border-radius:22px; padding:14px 12px; background:#fff; }
+  .bubble { max-width:82%; border-radius:14px; padding:8px 11px; margin:0 0 10px; }
+  .bubble.vendor { background:#eee; }
+  .bubble .big { font-weight:700; font-size:15px; }
+  .bubble .small { font-size:12px; color:var(--mid); }
+
+  /* the Context Card: third style, full width */
+  .cc { background:var(--card); border:2px solid var(--ink); border-radius:14px; padding:10px 12px; font-size:13px; }
+  .cc .type { font-size:10px; text-transform:uppercase; letter-spacing:.08em; color:var(--mid); }
+  .cc .title { font-size:16px; font-weight:800; margin:2px 0 0; }
+  .cc .th { font-size:13px; color:var(--mid); font-weight:400; margin-left:6px; }
+  .cc .desc { margin:6px 0 0; }
+  .cc .tags { display:flex; flex-wrap:wrap; gap:6px; margin-top:8px; }
+  .cc .tag { border:1px solid var(--ink); border-radius:999px; padding:1px 8px; font-size:11px; }
+  .cc .local { margin-top:8px; padding-top:8px; border-top:1px dashed var(--soft); }
+  .cc .local b { font-size:10px; text-transform:uppercase; letter-spacing:.06em; }
+  .cc .flag { margin-top:8px; border:2px solid var(--warn); border-radius:10px; padding:6px 8px; font-weight:700; }
+  .cc .flag span { font-weight:400; display:block; font-size:12px; }
+  .cc .src { margin-top:6px; font-size:10px; color:var(--soft); }
+  .cc.compact { display:flex; align-items:center; gap:8px; padding:8px 10px; }
+  .cc.compact .title { font-size:14px; margin:0; }
+  .cc.compact .one { color:var(--mid); flex:1; }
+  .cc.compact .chev { font-weight:700; }
+  .cc .word { font-size:22px; font-weight:800; }
+  .cc .pair { display:grid; grid-template-columns:auto 1fr; gap:2px 10px; margin-top:6px; }
+  .cc .pair i { font-style:normal; color:var(--mid); font-size:11px; text-transform:uppercase; letter-spacing:.04em; padding-top:2px; }
+  .cc.dashed { border-style:dashed; }
+
+  .fmt { font-size:12px; color:var(--mid); margin:10px 0 0; }
+  .fmt b { color:var(--ink); }
+  ul.notes { margin:8px 0 0; padding-left:18px; font-size:13px; color:var(--mid); }
+  .reco { border-left:4px solid var(--ink); padding:8px 12px; margin:12px 0; background:var(--card); }
+</style>
+</head>
+<body>
+<main>
+  <h1>Context Cards v1</h1>
+  <p class="lead">How many cards Luke's Context Pack can produce, and three formats for each Card Type. Scene: Warorot Market, Saturday 26 September 2026. Grayscale wireframes, same style as v5.</p>
+
+  <h2>1. How many cards?</h2>
+  <div class="kpis">
+    <div class="kpi"><b>~306</b><span>distinct cards the pack can produce (Trusted entries only)</span></div>
+    <div class="kpi"><b>~220</b><span>possible today at Warorot, in September</span></div>
+    <div class="kpi"><b>1</b><span>card max per Turn, so a 6-Turn chat shows 3 to 5</span></div>
+    <div class="kpi"><b>5</b><span>cards to hand-check for the demo</span></div>
+  </div>
+
+  <div class="scroll">
+  <table>
+    <tr><th>Card Type</th><th>Source in the pack</th><th>Trusted</th><th>Today (Sept)</th><th>Example</th></tr>
+    <tr><td>Dish</td><td>northern_dishes.json</td><td class="n">35 / 37</td><td class="n">35</td><td>แกงฮังเล kaeng hang le, ข้าวซอย khao soi, น้ำพริกหนุ่ม</td></tr>
+    <tr><td>Dish (produce)</td><td>seasonal_produce.json</td><td class="n">51 / 68</td><td class="n">26</td><td>Fruit 22, wild mushrooms, forest vegetables, insects</td></tr>
+    <tr><td>Word</td><td>kham_mueang_glossary.json</td><td class="n">186 / 187</td><td class="n">~150</td><td>เต้าใด how much, แปง expensive, ซาว twenty</td></tr>
+    <tr><td>Word (false friend)</td><td>sound_correspondences.json</td><td class="n">6</td><td class="n">6</td><td>ยินดี = thank you (not "you're welcome")</td></tr>
+    <tr><td>Moment (season)</td><td>climate_by_month.json</td><td class="n">12</td><td class="n">1</td><td>Rainy season, Ping River flood peak</td></tr>
+    <tr><td>Moment (festival)</td><td>festival_calendar.json</td><td class="n">16 / 19</td><td class="n">1 to 2</td><td>Ok Phansa 26 Oct (alcohol ban), Yi Peng 23 Nov</td></tr>
+    <tr><td>Dish outside the pack</td><td>written by the model</td><td class="n">unlimited</td><td class="n">n/a</td><td>Only the Allergy Flag, marked "not in our local guide"</td></tr>
+    <tr class="total"><td>Total</td><td></td><td class="n">~306</td><td class="n">~220</td><td></td></tr>
+  </table>
+  </div>
+  <p class="note">"Trusted" means high or medium confidence. The Word row keeps the 19 "dish" entries of the glossary out of the count on the day, because a Dish card wins over a Word card. Not counted: <b>lanna_dict_full.json</b> (1,502 entries with Thai-only glosses and no confidence score, used to understand the Vendor but never shown), plus etiquette, norms, beliefs and ethnic groups, which are excluded by decision.</p>
+
+  <div class="reco"><b>Is that a lot?</b> For a user it is not: they will see 3 to 5 cards per conversation, and the model's job is to pick one out of ~220. For the demo it is too many to check, so we script one scene and have a Thai teammate check <b>5 cards</b>: kaeng hang le, nam phrik num, ยินดีเจ้า, เต้าใด, the rain Moment.</div>
+
+  <h2>2. Three formats</h2>
+  <p class="lead">The same content in three densities. Choose one format for all three types, to keep the chat consistent.</p>
+  <table>
+    <tr><th>Format</th><th>What shows</th><th>Good for</th><th>Cost</th></tr>
+    <tr><td><b>A. Compact</b></td><td>One line, tap to open</td><td>Keeps the chat clean, the conversation stays in focus</td><td>The Allergy Flag cannot hide behind a tap, so it breaks the pattern</td></tr>
+    <tr><td><b>B. Standard</b></td><td>Title, Thai name, 1 to 2 lines, tags, Local detail</td><td>Readable in 3 s at a stall, shows the pack on stage</td><td>Takes about a third of the screen</td></tr>
+    <tr><td><b>C. Rich</b></td><td>B plus ingredients, source, "ask them" line</td><td>Shows the depth of the pack to the jury</td><td>Too long at a stall, it looks like a web page</td></tr>
+  </table>
+
+  <h2>3. Dish card</h2>
+  <p class="note">Vendor: "This one is kaeng hang le, pork curry, there are peanuts on top." My info: peanut allergy.</p>
+  <div class="grid">
+    <div class="phone">
+      <h3>A. Compact</h3>
+      <div class="bubble vendor"><div class="big">This one is kaeng hang le, pork curry, with peanuts on top.</div><div class="small">อันนี้แกงฮังเลเจ้า หมูสามชั้น โรยถั่วลิสง</div></div>
+      <div class="cc compact"><span class="title">Kaeng hang le</span><span class="one">Burmese-style pork curry</span><span class="chev">›</span></div>
+      <div class="cc flag" style="margin-top:6px;border:2px solid var(--ink);border-radius:10px;padding:6px 8px;font-weight:700;font-size:13px;background:var(--card)">⚠ Peanuts: may contain. Ask the vendor.</div>
+      <p class="fmt">The flag has to come out of the card, so there are two blocks.</p>
+    </div>
+    <div class="phone">
+      <h3>B. Standard</h3>
+      <div class="bubble vendor"><div class="big">This one is kaeng hang le, pork curry, with peanuts on top.</div><div class="small">อันนี้แกงฮังเลเจ้า หมูสามชั้น โรยถั่วลิสง</div></div>
+      <div class="cc">
+        <div class="type">Dish</div>
+        <div class="title">Kaeng hang le<span class="th">แกงฮังเล</span></div>
+        <div class="desc">Rich pork belly curry with ginger, tamarind and pickled garlic. Eaten with plain rice, not sticky rice.</div>
+        <div class="tags"><span class="tag">Pork</span><span class="tag">Spice ●○○</span></div>
+        <div class="flag">⚠ Peanuts: sometimes added<span>A risk to check with the vendor, not a guarantee.</span></div>
+        <div class="local"><b>Local detail</b><br>Named after the Burmese "hin lay". Cooked for festivals, merit-making and weddings.</div>
+      </div>
+    </div>
+    <div class="phone">
+      <h3>C. Rich</h3>
+      <div class="cc">
+        <div class="type">Dish · high confidence</div>
+        <div class="title">Kaeng hang le<span class="th">แกงฮังเล · kaeng hang le</span></div>
+        <div class="desc">Rich pork belly curry with ginger, tamarind and pickled garlic. Eaten with plain rice, not sticky rice.</div>
+        <div class="tags"><span class="tag">Pork</span><span class="tag">Spice ●○○</span><span class="tag">Curry</span><span class="tag">Year-round</span></div>
+        <div class="flag">⚠ Peanuts: sometimes added<span>A risk to check with the vendor, not a guarantee.</span></div>
+        <div class="pair"><i>In it</i><span>pork belly, hang le powder, ginger, pickled garlic, tamarind</span></div>
+        <div class="local"><b>Local detail</b><br>Named after the Burmese "hin lay". Cooked for festivals, merit-making and weddings.</div>
+        <div class="local"><b>Ask them</b><br>"Do you make it for festivals too?"</div>
+        <div class="src">Source: Wikipedia, CMU Lanna food</div>
+      </div>
+    </div>
+  </div>
+
+  <h2>4. Word card</h2>
+  <p class="note">The vendor says "ยินดีเจ้า" as you pay. Standard Thai reads it as "you're welcome".</p>
+  <div class="grid">
+    <div class="phone">
+      <h3>A. Compact</h3>
+      <div class="bubble vendor"><div class="big">Thank you!</div><div class="small">ยินดีเจ้า</div></div>
+      <div class="cc compact"><span class="title">ยินดีเจ้า</span><span class="one">Northern "thank you"</span><span class="chev">›</span></div>
+    </div>
+    <div class="phone">
+      <h3>B. Standard</h3>
+      <div class="bubble vendor"><div class="big">Thank you!</div><div class="small">ยินดีเจ้า</div></div>
+      <div class="cc">
+        <div class="type">Kham Mueang word</div>
+        <div class="word">ยินดีเจ้า <span class="th">yin-di jao</span></div>
+        <div class="pair"><i>Here</i><span><b>Thank you</b></span><i>Bangkok</i><span>Glad, you're welcome</span></div>
+        <div class="local"><b>Local detail</b><br>"เจ้า" is the polite Northern ending, like ค่ะ/ครับ. Say "ยินดีเจ้า" back and see how they react.</div>
+      </div>
+    </div>
+    <div class="phone">
+      <h3>C. Rich</h3>
+      <div class="cc">
+        <div class="type">Kham Mueang word · false friend</div>
+        <div class="word">ยินดีเจ้า <span class="th">yin-di jao</span></div>
+        <div class="pair"><i>Here</i><span><b>Thank you</b></span><i>Bangkok</i><span>Glad, you're welcome</span><i>Central Thai</i><span>ขอบคุณค่ะ</span></div>
+        <div class="local"><b>Local detail</b><br>"เจ้า" is the polite Northern ending, like ค่ะ/ครับ. Say "ยินดีเจ้า" back and see how they react.</div>
+        <div class="local"><b>Ask them</b><br>"How do you say 'delicious' in kham mueang?"</div>
+        <div class="src">Source: chiangmai.siamdot.com · 🔊 hear it</div>
+      </div>
+    </div>
+  </div>
+
+  <h2>5. Moment card</h2>
+  <p class="note">Attached to the first Turn of the conversation, even without a Mention (decision Q2).</p>
+  <div class="grid">
+    <div class="phone">
+      <h3>A. Compact</h3>
+      <div class="cc compact"><span class="title">☂ Rainy season</span><span class="one">Ping River flood peak</span><span class="chev">›</span></div>
+    </div>
+    <div class="phone">
+      <h3>B. Standard</h3>
+      <div class="cc">
+        <div class="type">Today in Chiang Mai</div>
+        <div class="title">Rainy season, flood watch</div>
+        <div class="desc">September is the wettest month (~15 rainy days). Ping River floods tend to peak late Sept to early Oct; in 2024 they reached the Night Bazaar, next to this market.</div>
+        <div class="local"><b>Next</b><br>Ok Phansa, 26 Oct: end of Buddhist Lent, no alcohol sold that day.</div>
+      </div>
+    </div>
+    <div class="phone">
+      <h3>C. Rich</h3>
+      <div class="cc">
+        <div class="type">Today in Chiang Mai · Sat 26 Sept</div>
+        <div class="title">Rainy season, flood watch</div>
+        <div class="tags"><span class="tag">32° / 24°</span><span class="tag">82% humidity</span><span class="tag">Lanna month 12</span></div>
+        <div class="desc">September is the wettest month (~15 rainy days). Ping River floods tend to peak late Sept to early Oct; in 2024 they reached the Night Bazaar, next to this market.</div>
+        <div class="local"><b>Next</b><br>Ok Phansa, 26 Oct: end of Buddhist Lent, no alcohol sold that day.</div>
+        <div class="local"><b>Ask them</b><br>"Did the 2024 flood reach your stall?"</div>
+      </div>
+    </div>
+  </div>
+
+  <h2>6. Dish outside the pack</h2>
+  <p class="note">The Vendor names a dish that is not among the 37. Decision Q1: a minimal card written by the model, which only exists to carry the flag.</p>
+  <div class="grid">
+    <div class="phone">
+      <h3>B. Standard, minimal</h3>
+      <div class="bubble vendor"><div class="big">This is gaeng som pla, fish sour curry.</div><div class="small">อันนี้แกงส้มปลาเจ้า</div></div>
+      <div class="cc dashed">
+        <div class="type">Dish · not in our local guide</div>
+        <div class="title">Gaeng som pla<span class="th">แกงส้มปลา</span></div>
+        <div class="flag">⚠ Fish, possibly shrimp paste<span>Shellfish is in your info. Ask the vendor.</span></div>
+      </div>
+      <p class="fmt">Dashed border means it comes from the model, not the pack.</p>
+    </div>
+  </div>
+
+  <h2>7. My recommendation</h2>
+  <div class="reco"><b>B. Standard for all three types.</b> It is the only format that fits the Allergy Flag inside the card, reads in 3 s, and shows the pack on stage. C is too long for a stall, and its "Ask them" line brings back the follow-up question we just dropped. A breaks as soon as there is a flag.</div>
+  <ul class="notes">
+    <li>Data checked on 2026-09-26 against people/luke/lanna-context. Kaeng hang le "sometimes peanuts" comes from the pack itself, which makes it the right dish for the allergy moment in the demo.</li>
+    <li>The Vendor's Thai line in the bubbles is illustrative. It has to be checked by a Thai teammate.</li>
+  </ul>
+</main>
+</body>
+</html>

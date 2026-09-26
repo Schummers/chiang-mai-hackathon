@@ -4,6 +4,7 @@ import { Languages } from "lucide-react";
 import { useEffect, useRef } from "react";
 import type { ConversationState } from "@/lib/engine/engine";
 import type { Message } from "@/lib/engine/types";
+import { PITCH } from "@/lib/pitch";
 import { Bubble, Row } from "./Bubble";
 import { ErrorState } from "./ErrorState";
 import { LogoMark } from "./Logo";
@@ -38,7 +39,7 @@ export function ChatThread({ state, intro, live, playingId, onSpeak, onRetry, on
       {empty && (
         <div className={screen.hello}>
           <LogoMark size={56} />
-          <p className={screen.brand}>Don&apos;t just order. Make the vendor smile.</p>
+          <p className={screen.brand}>{PITCH}</p>
           <b>Say what&apos;s on your mind.</b>
           <span>We&apos;ll turn it into clear Thai.</span>
           {/* Hint wording is a draft, final call is Jonathan's (ticket 03). */}

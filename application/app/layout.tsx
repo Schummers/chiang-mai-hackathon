@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Atkinson_Hyperlegible_Next, Noto_Sans_Thai_Looped } from "next/font/google";
+import { PITCH as pitch } from "@/lib/pitch";
 import "./globals.css";
 
 const atkinson = Atkinson_Hyperlegible_Next({
@@ -14,7 +15,6 @@ const thai = Noto_Sans_Thai_Looped({
   weight: ["400", "500", "600", "700"],
 });
 
-const pitch = "Don't just order. Make the vendor smile.";
 const promise = "Say what's on your mind. We'll turn it into clear Thai.";
 
 export const metadata: Metadata = {

@@ -1,2 +1,10 @@
-/** The pitch, shown on the empty home screen and in the page metadata. One place, so a wording change is one line. */
-export const PITCH = "Don't just order. Make the vendor smile.";
+/**
+ * The home screen's two lines, also the page description and the shared-link text (Open Graph, Twitter).
+ * One place, so a wording change is one edit.
+ */
+export const HOME = {
+  title: "Say it however it comes.",
+  subtitle: "We make it clear Thai, and teach you a few words to say yourself.",
+};
+
+export const PITCH = `${HOME.title} ${HOME.subtitle}`;

@@ -13,3 +13,5 @@
 - [x] `npm run build` green
 
 **Note:** the hint shipped as "Ramble, hesitate, change your mind. We keep what you mean." as a draft; the final wording is Jonathan's call (one string in `components/ChatThread.tsx`). Checked at 375x812: no scroll.
+
+**Update 2026-09-27:** home copy replaced by two lines, "Say it however it comes." / "We make it clear Thai, and teach you a few words to say yourself." (`HOME` in `lib/pitch.ts`, also the page description and Open Graph/Twitter text). The brand line and the hint are gone; "Don't just order. Make the vendor smile." is no longer in the app, the pitch is TBD. Re-checked in the browser at 375x812 with the mock service: empty state with the About you card fits, no scroll (document and chat both at 812 px). The About you page also fits at 375x812, Done pinned at the bottom.

@@ -60,7 +60,7 @@ Key idea: **the model only says what it recognised** (`mention`: a dish id, a wo
 | `lib/moveCard.ts` | `moveLines()`: the lines a Move card shows (big, small, romanised, English, Echo "ซาว = 20"). |
 | `lib/recorder.ts` | Mic capture, silence detection. |
 | `lib/cardFlag.ts` | Deterministic allergy keyword check on a card ("May contain peanuts"), and allergens the Vendor ruled out. |
-| `lib/pitch.ts` | The pitch line, shared by the home screen and the page metadata. |
+| `lib/pitch.ts` | The home screen's title and subtitle, also the page description and shared-link text. |
 | `lib/useOnline.ts` | Online/offline status for the offline banner. |
 | `lib/speech.ts` | Browser text-to-speech (free, Thai voice built into iOS). |
 | `lib/sayIt.ts` | `sayItRows()`: Thai, phonetics and meaning per item, aligned by index; a missing phonetic gives no line, never a merge. |

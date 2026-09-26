@@ -4,10 +4,12 @@
 
 **Blocked by:** None, can start immediately.
 
-**Status:** ready-for-agent
+**Status:** done
 
-- [ ] Empty state: brand line "Don't just order. Make the vendor smile." above the existing two lines
-- [ ] One short hint under them, e.g. "Ramble, hesitate, change your mind. We keep what you mean." (final wording to Jonathan)
-- [ ] `app/layout.tsx` description and Open Graph text use the same line, so the shared link says it too
-- [ ] Nothing else on the screen moves; fits a 375 px wide phone without scrolling
-- [ ] `npm run build` green
+- [x] Empty state: brand line "Don't just order. Make the vendor smile." above the existing two lines
+- [x] One short hint under them, e.g. "Ramble, hesitate, change your mind. We keep what you mean." (final wording to Jonathan)
+- [x] `app/layout.tsx` description and Open Graph text use the same line, so the shared link says it too
+- [x] Nothing else on the screen moves; fits a 375 px wide phone without scrolling
+- [x] `npm run build` green
+
+**Note:** the hint shipped as "Ramble, hesitate, change your mind. We keep what you mean." as a draft; the final wording is Jonathan's call (one string in `components/ChatThread.tsx`). Checked at 375x812: no scroll.

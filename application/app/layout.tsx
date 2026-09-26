@@ -14,9 +14,22 @@ const thai = Noto_Sans_Thai_Looped({
   weight: ["400", "500", "600", "700"],
 });
 
+const pitch = "Don't just order. Make the vendor smile.";
+const promise = "Say what's on your mind. We'll turn it into clear Thai.";
+
 export const metadata: Metadata = {
   title: "U Mueang · อู้เมือง",
-  description: "Talk with a Thai vendor: speak freely, we turn it into clear Thai.",
+  description: `${pitch} ${promise}`,
+  openGraph: {
+    title: "U Mueang · อู้เมือง",
+    description: pitch,
+    type: "website",
+  },
+  twitter: {
+    card: "summary",
+    title: "U Mueang · อู้เมือง",
+    description: pitch,
+  },
 };
 
 export const viewport: Viewport = {

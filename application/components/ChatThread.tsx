@@ -38,8 +38,11 @@ export function ChatThread({ state, intro, live, playingId, onSpeak, onRetry, on
       {empty && (
         <div className={screen.hello}>
           <LogoMark size={56} />
+          <p className={screen.brand}>Don&apos;t just order. Make the vendor smile.</p>
           <b>Say what&apos;s on your mind.</b>
           <span>We&apos;ll turn it into clear Thai.</span>
+          {/* Hint wording is a draft, final call is Jonathan's (ticket 03). */}
+          <p className={screen.hint}>Ramble, hesitate, change your mind. We keep what you mean.</p>
         </div>
       )}
       {empty && intro}

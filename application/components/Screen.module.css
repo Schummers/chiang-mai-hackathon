@@ -106,6 +106,22 @@
   line-height: 20px;
 }
 
+/* Product line above the promise (ticket 03). */
+.hello .brand {
+  margin: 0 0 10px;
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 700;
+}
+
+.hello .hint {
+  margin: 12px 0 0;
+  max-width: 300px;
+  color: var(--ink-2);
+  font-size: 14px;
+  line-height: 20px;
+}
+
 /* Content sits at the bottom of the chat, like a messenger. */
 .chat > :first-child {
   margin-top: auto;

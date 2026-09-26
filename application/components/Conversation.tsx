@@ -83,7 +83,11 @@ export function Conversation() {
   /** Speak, or "Ask about this photo" (`about`): one logic, the same Listening card, the same Stop. */
   const listen = (speaker: Speaker, about?: string) => {
     const { phase } = engine.getState();
-    if (phase.kind === "listening" && phase.speaker === speaker) return void finish(speaker);
+    if (phase.kind === "listening") {
+      // Speak (or Stop) ends any of your recordings; an Ask tool only ends the question about its own photo.
+      if (phase.speaker === speaker && (!about || about === phase.about)) void finish(speaker);
+      return;
+    }
 
     recorder.unlockAudio(); // must run inside the tap, for iOS
     stopSpeech();

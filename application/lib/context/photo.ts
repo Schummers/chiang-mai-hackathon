@@ -1,5 +1,5 @@
 import type { MyInfo, PhotoCard, PhotoKind, PhotoMenuItem } from "@/lib/engine/types";
-import { UNREADABLE_TITLE } from "@/lib/photoCard";
+import { UNREADABLE_CARD } from "@/lib/photoCard";
 import { dishCard } from "./cards";
 import { PACK, type Pack } from "./pack";
 import { languageName } from "./prompt";
@@ -91,11 +91,7 @@ const thai = (v: unknown): string | undefined => {
   return s && /[\u0E00-\u0E7F]/.test(s) ? s : undefined;
 };
 
-const UNREADABLE: PhotoCard = {
-  kind: "sign",
-  title: UNREADABLE_TITLE,
-  description: "Try again closer, with more light, or ask the vendor.",
-};
+const UNREADABLE = UNREADABLE_CARD;
 
 /** Warning to show: the pack's allergens first (deterministic), the model's only when My info has something to conflict with. */
 function warningFor(dishId: string | undefined, modelWarning: string | undefined, myInfo: MyInfo, pack: Pack) {

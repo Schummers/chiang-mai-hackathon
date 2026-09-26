@@ -2,7 +2,8 @@ import type { Allergy, ContextCard, MyInfo } from "./engine/types";
 
 type Known = Exclude<Allergy, "other">;
 
-const WORDS: Record<Known, RegExp> = {
+/** Words that name each known allergen in a warning. Shared with the photo menu rows (lib/photoCard.ts). */
+export const ALLERGEN_WORDS: Record<Known, RegExp> = {
   peanuts: /peanut/i,
   shellfish: /shellfish|shrimp|prawn|crab/i,
   gluten: /gluten|wheat/i,
@@ -24,13 +25,13 @@ export function cardFlags(card: ContextCard, myInfo: MyInfo, vendorSaid: string[
   const mine = myInfo.allergies.filter(known);
   const said = vendorSaid.join(" \n");
   const vendorNo = mine
-    .filter((a) => new RegExp(`\\b(no|without)\\b[^.\\n]*(${WORDS[a].source})`, "i").test(said))
+    .filter((a) => new RegExp(`\\b(no|without)\\b[^.\\n]*(${ALLERGEN_WORDS[a].source})`, "i").test(said))
     .map((a) => NAME[a]);
 
   const warning = card.warning?.trim();
   if (!warning) return { flag: null, vendorNo };
 
-  const allergen = mine.find((a) => WORDS[a].test(warning));
+  const allergen = mine.find((a) => ALLERGEN_WORDS[a].test(warning));
   if (allergen) return { flag: vendorNo.includes(NAME[allergen]) ? null : `May contain ${NAME[allergen]}`, vendorNo };
   if (/diet/i.test(warning)) return { flag: "May not fit your diet", vendorNo };
   // A model warning with no known allergen: its first sentence, still in the flag style.

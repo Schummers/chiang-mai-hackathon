@@ -680,6 +680,32 @@ describe("ask about a photo", () => {
     expect(engine.getState().phase).not.toHaveProperty("about");
   });
 
+  it("keeps photos and questions out of the history sent to translate: the first spoken Turn is still the first", async () => {
+    const fake = askService();
+    const { engine, photoId } = await withReadPhoto(fake);
+    engine.askAboutPhoto(photoId);
+    const asked = engine.stop("you", audio);
+    await flush();
+    fake.transcribes[0].resolve("is it spicy?");
+    await flush();
+    fake.asks[0].resolve("Mild.");
+    await asked;
+    await fullTurn(engine, fake as never, "you", reply());
+    expect(fake.translates[0].input.history).toEqual([]);
+  });
+
+  it("a failed read that is dismissed cannot be asked about", async () => {
+    const fake = askService();
+    fake.service.readPhoto = () => Promise.reject(new Error("502"));
+    const engine = new ConversationEngine({ service: fake.service, objectUrls: fake.objectUrls });
+    await engine.photo(image);
+    const phase = engine.getState().phase;
+    const failedId = phase.kind === "error" ? phase.photo!.id : "";
+    engine.dismissError();
+    engine.askAboutPhoto(failedId);
+    expect(engine.getState().phase.kind).toBe("idle");
+  });
+
   it("Speak after a photo is still a normal Turn for the vendor", async () => {
     const fake = askService();
     const { engine } = await withReadPhoto(fake);

@@ -27,6 +27,17 @@ type Props = {
   onAsk?: (photoId: string) => void;
 };
 
+/** A question about a photo and the app's answer. The photo is always in the thread: it is only dropped with the conversation. */
+function PhotoTurn({ message, photo }: { message: Message; photo?: Message["photo"] }) {
+  if (!photo) return null;
+  return (
+    <>
+      <PhotoQuestion question={message.original[0]} url={photo.url} />
+      {message.answer && <PhotoAnswer answer={message.answer} card={photo.card} url={photo.url} />}
+    </>
+  );
+}
+
 export function ChatThread({ state, intro, live, playingId, onSpeak, onRetry, onDismissError, onAsk }: Props) {
   const { phase, messages } = state;
   const ref = useRef<HTMLElement>(null);
@@ -61,10 +72,7 @@ export function ChatThread({ state, intro, live, playingId, onSpeak, onRetry, on
             <PhotoCard card={m.photo.card} onAsk={onAsk && (() => onAsk(m.id))} />
           </Fragment>
         ) : m.about ? (
-          <Fragment key={m.id}>
-            <PhotoQuestion question={m.original[0]} url={photoOf(m.about)?.url ?? ""} />
-            {m.answer && photoOf(m.about) && <PhotoAnswer answer={m.answer} card={photoOf(m.about)!.card} url={photoOf(m.about)!.url} />}
-          </Fragment>
+          <PhotoTurn key={m.id} message={m} photo={photoOf(m.about)} />
         ) : (
           <Bubble key={m.id} message={m} playing={playingId === m.id} onSpeak={() => onSpeak(m)} latest={i === messages.length - 1} />
         ),

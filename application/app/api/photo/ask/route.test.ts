@@ -40,6 +40,8 @@ describe("POST /api/photo/ask", () => {
   it("400 without an image or a question", async () => {
     expect((await POST(request({ image: null }))).status).toBe(400);
     expect((await POST(request({ question: "  " }))).status).toBe(400);
+    expect((await POST(request({ card: "null" }))).status).toBe(400);
+    expect((await POST(request({ card: "{}" }))).status).toBe(400);
   });
 
   it("413 over 4 MB", async () => {

@@ -12,10 +12,13 @@ export async function POST(req: Request) {
   if (!(image instanceof Blob) || image.size === 0 || !question) return Response.json({ error: "no image or question" }, { status: 400 });
   if (image.size > PHOTO_MAX_BYTES) return Response.json({ error: "image too large" }, { status: 413 });
 
-  let card: PhotoCard;
+  let card: PhotoCard | null = null;
   try {
-    card = JSON.parse(String(form.get("card") ?? "")) as PhotoCard;
+    card = JSON.parse(String(form.get("card") ?? "")) as PhotoCard | null;
   } catch {
+    // Handled just below.
+  }
+  if (!card || typeof card !== "object" || typeof card.kind !== "string" || typeof card.title !== "string") {
     return Response.json({ error: "bad card" }, { status: 400 });
   }
   const language = String(form.get("language") ?? "en");

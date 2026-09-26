@@ -259,6 +259,7 @@ export class ConversationEngine {
     if (phase.kind !== "error" || !phase.photo) return;
     this.urls.revoke(phase.photo.url);
     this.photoUrls.delete(phase.photo.url);
+    this.images.delete(phase.photo.id);
   }
   /** Bumped whenever a turn starts, fails or the conversation restarts: an answer for an older turn is dropped. */
   private turn = 0;
@@ -296,7 +297,8 @@ export class ConversationEngine {
           speaker,
           userLanguage,
           myInfo: this.opts.getMyInfo?.() ?? EMPTY_MY_INFO,
-          history: this.state.messages,
+          // Photos and questions about them were never said to the vendor: they stay out of the conversation.
+          history: this.state.messages.filter((m) => !m.photo && !m.about),
         }),
       );
       if (stale()) return;

@@ -1,0 +1,1348 @@
+{
+ "meta": {
+  "topic": "Northern Thai cooking foundations: sticky rice, nam phrik num, nam phrik ong, nam phrik nam pu, khaep mu",
+  "retrieved": "2026-09-26",
+  "tone_note": "Tones are Chiang Mai Northern Thai values (24 low-rising, 21 low-falling, 44ʔ high-level glottal, 33 mid, 42 high-falling, 45 high-rising) DERIVED by applying the Chiang Mai tone-box correspondences (Wikipedia 'Northern Thai language') to the etymological Thai spelling. Not checked against a native-speaker recording; treat as a guide.",
+  "taste_score_note": "0-5 scores are an editorial estimate synthesised from the source descriptions, not measured."
+ },
+ "recipes": [
+  {
+   "id": "khao_nueng",
+   "name_th": "ข้าวเหนียวนึ่ง",
+   "name_kham_mueang_th": "ข้าวนึ่ง (เข้านึ่ง)",
+   "name_roman": "khao nueng",
+   "name_en": "Steamed sticky rice, Lanna style",
+   "pronunciation": {
+    "syllables": [
+     {
+      "th": "ข้าว",
+      "roman": "khao",
+      "tone": "44ʔ"
+     },
+     {
+      "th": "นึ่ง",
+      "roman": "nueng",
+      "tone": "42"
+     }
+    ],
+    "tip_en": "Say 'khao' short and clipped, then 'nueng' falling. Central Thai says ข้าวเหนียว khao niao; in the North the everyday word is ข้าวนึ่ง ('steamed rice'). Tones are Chiang Mai Northern Thai values (24 low-rising, 21 low-falling, 44ʔ high-level glottal, 33 mid, 42 high-falling, 45 high-rising) DERIVED by applying the Chiang Mai tone-box correspondences (Wikipedia 'Northern Thai language') to the etymological Thai spelling. Not checked against a native-speaker recording; treat as a guide."
+   },
+   "origin_province": [
+    "ทั่วภาคเหนือ / all of northern Thailand"
+   ],
+   "season": "all year (new-crop rice after the Oct-Dec harvest is prized)",
+   "occasion": "every meal",
+   "serves": "4 (home scale: 500 g raw rice); CMU's household scale is 2 litres of raw rice",
+   "description_th": "ข้าวเหนียวนึ่งเป็นอาหารหลักของคนล้านนาทุกมื้อ ต้องหม่า (แช่) ข้าวก่อนนึ่งในไหเข้า/หวด นึ่งจนเม็ดข้าวนุ่มไม่ติดมือ แล้วพลิกไล่ไอน้ำ เก็บในก่องข้าวให้อุ่นทั้งวัน",
+   "description_en": "The staple of every Lanna meal. Rice is soaked (หม่า), steamed in a wooden or woven steamer over boiling water, turned out to release steam, then kept warm in a woven rice box all day.",
+   "ingredients": [
+    {
+     "name_th": "ข้าวเหนียว",
+     "name_kham_mueang_th": "ข้าวนึ่ง (ดิบ)",
+     "roman": "khao niao",
+     "name_en": "Thai glutinous (sticky) rice",
+     "qty_metric": "500 g (CMU: 2 L)",
+     "role": "main",
+     "where_to_buy_th": "ร้านข้าวสาร ตลาดวโรรส/ตลาดต้นลำไย หรือซูเปอร์มาร์เก็ต",
+     "where_to_buy_en": "Warorot (Kad Luang) / Ton Lamyai (opposite Warorot) rice shops, or any supermarket (5 kg sacks)",
+     "how_to_choose_en": "Opaque, chalky-white long grains; 'new rice' (ข้าวใหม่) cooks softer and needs shorter soaking. Sacks often name the variety (e.g. สันป่าตอง).",
+     "substitute_abroad_en": "Thai 'glutinous' or 'sweet' rice from Asian grocers. NOT jasmine, sushi or risotto rice.",
+     "pronunciation_roman": "khao niao"
+    },
+    {
+     "name_th": "น้ำ",
+     "name_kham_mueang_th": "น้ำ",
+     "roman": "nam",
+     "name_en": "Water",
+     "qty_metric": "about 3 L in the pot (CMU) + soaking water",
+     "role": "steam",
+     "where_to_buy_th": "",
+     "where_to_buy_en": "",
+     "how_to_choose_en": "",
+     "substitute_abroad_en": "",
+     "pronunciation_roman": ""
+    }
+   ],
+   "equipment": [
+    {
+     "name_th": "หวด / ไหนึ่งข้าว",
+     "kham_mueang_th": "ไหเข้า",
+     "name_en": "Conical woven-bamboo or wooden sticky-rice steamer",
+     "substitute_en": "A metal steamer basket or sieve lined with muslin/cheesecloth"
+    },
+    {
+     "name_th": "หม้อนึ่งข้าวเหนียว (หม้อทรงสูงปากแคบ)",
+     "kham_mueang_th": "หม้อ",
+     "name_en": "Tall narrow-mouthed pot",
+     "substitute_en": "Any pot the basket sits snugly on"
+    },
+    {
+     "name_th": "ผ้าชุบน้ำพันรอยต่อ",
+     "kham_mueang_th": "",
+     "name_en": "Strip of wet cloth to seal pot and steamer",
+     "substitute_en": "Wet tea towel"
+    },
+    {
+     "name_th": "ถาด / กระด้ง และไม้พาย",
+     "kham_mueang_th": "",
+     "name_en": "Tray and wooden paddle for turning the rice",
+     "substitute_en": "Large plate + wooden spoon"
+    },
+    {
+     "name_th": "ก่องข้าว / กระติ๊บ",
+     "kham_mueang_th": "ก่องข้าว",
+     "name_en": "Woven lidded rice box",
+     "substitute_en": "Insulated lunch box lined with a clean cloth"
+    }
+   ],
+   "prep_ahead_en": "Soak the rice: overnight is traditional (CMU says 2-3 hours to overnight); for new-crop rice Wongnai found 1 hour gave the best texture, and old rice needs longer.",
+   "steps": [
+    {
+     "n": 1,
+     "th": "ล้างข้าวเหนียวหลายน้ำจนน้ำใส",
+     "en": "Rinse the rice in several changes of water, rubbing gently, until the water runs clear.",
+     "time_min": 5,
+     "sensory_cue_en": "Water goes from milky to almost clear; rice smells clean.",
+     "tip_en": "CMU: rinse 'until the water runs clear and smells fresh'."
+    },
+    {
+     "n": 2,
+     "th": "หม่า (แช่) ข้าวในน้ำให้ท่วม 1-3 ชั่วโมง หรือข้ามคืน",
+     "en": "Soak (หม่า) the rice covered by a few cm of water: 1-3 h for new rice, overnight for older rice.",
+     "time_min": 180,
+     "sensory_cue_en": "A grain crushes easily between fingernails and is opaque white right through.",
+     "tip_en": "Over-soaking new rice makes grains fragile and mushy (Wongnai test)."
+    },
+    {
+     "n": 3,
+     "th": "ต้มน้ำในหม้อให้เดือด ชุบหวดให้เปียก เทข้าวที่สะเด็ดน้ำแล้วลงหวด",
+     "en": "Bring about 3 L water to a boil. Wet the steamer basket, drain the rice and spread it in the basket.",
+     "time_min": 5,
+     "sensory_cue_en": "Rice sits loosely, not packed down.",
+     "tip_en": "Wet basket = rice won't stick to it (CMU)."
+    },
+    {
+     "n": 4,
+     "th": "วางหวดบนหม้อ พันรอยต่อด้วยผ้าชุบน้ำ ปิดฝา นึ่งประมาณ 20 นาที",
+     "en": "Set the basket on the pot, seal the joint with a wet cloth strip, cover and steam about 20 minutes. If using a Lao/Isan-style open cone, flip the rice mass over once halfway.",
+     "time_min": 20,
+     "sensory_cue_en": "Steam comes up through the rice; grains turn glossy and translucent.",
+     "tip_en": "The water must not touch the rice."
+    },
+    {
+     "n": 5,
+     "th": "ชิมดู ข้าวสุกเมื่อนุ่ม ไม่มีไตแข็ง และไม่ติดมือ",
+     "en": "Test: grains are soft with no hard centre, and a pinch does not stick to your damp hand.",
+     "time_min": 1,
+     "sensory_cue_en": "Chewy-soft, translucent, sweet smell.",
+     "tip_en": "If hard-centred, sprinkle a little water and steam 5 more minutes."
+    },
+    {
+     "n": 6,
+     "th": "พรมน้ำบนถาดเล็กน้อย เทข้าวลง ใช้ไม้พายพลิกกลับไปมาเพื่อไล่ไอน้ำ",
+     "en": "Sprinkle a little water on a tray, tip the rice out and turn/fold it with a wooden paddle several times to let steam escape.",
+     "time_min": 2,
+     "sensory_cue_en": "Clouds of steam; surface loses its wet sheen.",
+     "tip_en": "This stops the rice from going soggy (CMU)."
+    },
+    {
+     "n": 7,
+     "th": "เก็บใส่ก่องข้าวที่รองผ้าขาว ปิดฝา",
+     "en": "Pack loosely into a woven rice box lined with a white cloth; close the lid.",
+     "time_min": 1,
+     "sensory_cue_en": "Stays warm and soft for hours.",
+     "tip_en": "Traditionally rice is steamed once, in the morning, for the whole day (Matichon)."
+    }
+   ],
+   "taste_profile": {
+    "sour": 0,
+    "salty": 0,
+    "spicy": 0,
+    "sweet": 1,
+    "bitter": 0,
+    "umami": 0,
+    "scores_note": "0-5 scores are an editorial estimate synthesised from the source descriptions, not measured.",
+    "texture_en": "Chewy, springy, sticky enough to hold a ball but not wet.",
+    "description_th": "รสจืดหวานอ่อนๆ เหนียวนุ่ม เป็นตัวพาน้ำพริกและกับข้าว",
+    "description_en": "Neutral and faintly sweet; the vehicle for salty-spicy dips and meats.",
+    "kham_mueang_taste_words": [
+     {
+      "th": "ตั๋ง",
+      "roman": "tang",
+      "en": "sticky (Chiang Rai source glosses ตั๋ง = เหนียว)"
+     }
+    ]
+   },
+   "how_to_eat": {
+    "th": "ใช้มือขวาหยิบข้าวจากก่องข้าวทีละน้อย ปั้นเป็นก้อนพอคำ ใช้จิ้มน้ำพริกหรือหยิบกับข้าวเข้าปาก",
+    "en": "Take a small piece from the shared basket with your right hand, squeeze it into a bite-size ball, use it to dip into chilli dip or pinch up meat and vegetables.",
+    "with_what": [
+     "น้ำพริกหนุ่ม",
+     "น้ำพริกอ่อง",
+     "ลาบ",
+     "ไส้อั่ว",
+     "แคบหมู",
+     "แกง"
+    ],
+    "when_eaten": "every meal: ข้าวงาย / ข้าวตอน / ข้าวแลง",
+    "sharing_etiquette_en": "One rice basket is shared around the circle; close the lid between helpings so it stays warm; let elders start first."
+   },
+   "food_safety_en": "Cooked rice left warm for many hours can grow Bacillus cereus; eat within the day, refrigerate leftovers and re-steam until piping hot.",
+   "common_mistakes_foreigners_en": [
+    "Boiling sticky rice in a rice cooker with water like jasmine rice (it turns to paste)",
+    "Not soaking long enough (hard white centres)",
+    "Letting boiling water touch the rice",
+    "Leaving it in the steamer after cooking (soggy)",
+    "Rolling rice into a big ball in the palm and putting it back in the shared basket"
+   ],
+   "useful_phrases": [
+    {
+     "kham_mueang_th": "เอาข้าวนึ่งเพิ่มเจ้า",
+     "roman": "ao khao nueng poem jao",
+     "central_th": "ขอข้าวเหนียวเพิ่มค่ะ",
+     "en": "More sticky rice, please",
+     "when": "at a restaurant",
+     "confidence": "low",
+     "sources": []
+    },
+    {
+     "kham_mueang_th": "ข้าวนึ่งกระติ๊บนึ่ง",
+     "roman": "khao nueng kratip nueng",
+     "central_th": "ข้าวเหนียวหนึ่งกระติ๊บ",
+     "en": "One basket of sticky rice",
+     "when": "ordering (นึ่ง = one in Kham Mueang)",
+     "confidence": "low",
+     "sources": [
+      "https://www.trueplookpanya.com/learning/detail/25566"
+     ]
+    }
+   ],
+   "cultural_notes_th": "ภาชนะนึ่งของล้านนาเรียกไหเข้า ทำจากไม้สัก ไม้ซ้อ ไม้ขนุน กระบอกไม้ไผ่ หรือไม้ไผ่สาน ก้นมีตาดไหเจาะรู การวัดความสูงไหใช้นิ้วโป้งไล่จากก้นถึงปากพร้อมนับ 'อิ่ม-อยาก' ให้จบที่ 'อิ่ม' ข้าวเหนียวยังใช้ในพิธีเรียกขวัญ",
+   "cultural_notes_en": "The Lanna steamer is the ไหเข้า (hai khao), carved from teak or other wood, made from a bamboo tube, or woven like the Isan หวด, with a perforated board (ตาดไห) in its base. A folk sizing custom counts 'full-hungry' (อิ่ม-อยาก) thumb-widths from base to rim, hoping to end on 'full'. Sticky rice also appears in soul-calling (เรียกขวัญ) rites.",
+   "sources": [
+    "https://lannainfo.library.cmu.ac.th/en_lannafood/detail_lannafood.php?id_food=185",
+    "https://www.matichon.co.th/weekly/column/article_439845",
+    "https://www.wongnai.com/food-tips/how-long-to-soak-sticky-rice-in-water",
+    "https://accl.cmu.ac.th/Knowledge/details/2548",
+    "https://www.thammculture.com/thai-culture-through-the-lens-of-glutinous-rice/",
+    "https://www.blockdit.com/posts/6924195d8c42c444de906162"
+   ],
+   "confidence": "high",
+   "needs_expert_review": [
+    "Useful phrases are assembled, not quoted; check with a Chiang Mai speaker."
+   ]
+  },
+  {
+   "id": "nam_phrik_num",
+   "name_th": "น้ำพริกหนุ่ม",
+   "name_kham_mueang_th": "น้ำพริกหนุ่ม (น้ำพิกหนุ่ม)",
+   "name_roman": "nam phrik num",
+   "name_en": "Roasted green chilli dip",
+   "pronunciation": {
+    "syllables": [
+     {
+      "th": "น้ำ",
+      "roman": "nam",
+      "tone": "45"
+     },
+     {
+      "th": "พริก",
+      "roman": "phik",
+      "tone": "45"
+     },
+     {
+      "th": "หนุ่ม",
+      "roman": "num",
+      "tone": "21"
+     }
+    ],
+    "tip_en": "Northerners usually drop the r in พริก ('phik'). หนุ่ม = young. Tones are Chiang Mai Northern Thai values (24 low-rising, 21 low-falling, 44ʔ high-level glottal, 33 mid, 42 high-falling, 45 high-rising) DERIVED by applying the Chiang Mai tone-box correspondences (Wikipedia 'Northern Thai language') to the etymological Thai spelling. Not checked against a native-speaker recording; treat as a guide."
+   },
+   "origin_province": [
+    "เชียงใหม่",
+    "ทั่วภาคเหนือ"
+   ],
+   "season": "all year",
+   "occasion": "everyday; khantok dinners; the classic Chiang Mai souvenir",
+   "serves": "4 as a dip",
+   "description_th": "น้ำพริกเหนือขึ้นชื่อ ทำจากพริกหนุ่ม หอมแดง กระเทียมย่างไฟ ลอกเปลือก โขลกพอหยาบ ปรุงด้วยเกลือ บางสูตรใส่ปลาร้า กะปิห่อใบตองเผา น้ำปลา หรือปลาแห้ง กินกับผักนึ่ง ผักสด แคบหมู และข้าวนึ่ง",
+   "description_en": "The signature northern dip: long green chillies, shallots and garlic roasted until soft and blistered, peeled, pounded coarsely and seasoned simply with salt. Variants add fermented fish, banana-leaf-roasted shrimp paste, fish sauce or dried fish. Smoky, salty-sweet, only mildly hot.",
+   "ingredients": [
+    {
+     "name_th": "พริกหนุ่ม",
+     "name_kham_mueang_th": "พริกหนุ่ม",
+     "roman": "phrik num",
+     "name_en": "Long green northern chillies",
+     "qty_metric": "5 (CMU) to 10-15 (Baan Lae Suan) chillies",
+     "role": "main",
+     "where_to_buy_th": "แผงผักตลาดต้นลำไย / กาดเมืองใหม่ / กาดเช้า",
+     "where_to_buy_en": "Ton Lamyai (opposite Warorot) or Muang Mai wholesale market by the Ping River vegetable stalls; any morning market",
+     "how_to_choose_en": "Firm, glossy, pale yellow-green, straight and long; no soft spots.",
+     "substitute_abroad_en": "Anaheim, Hungarian wax or long Turkish green peppers (+1 jalapeño for heat).",
+     "pronunciation_roman": "phik num"
+    },
+    {
+     "name_th": "หอมแดง",
+     "name_kham_mueang_th": "",
+     "roman": "hom daeng",
+     "name_en": "Shallots",
+     "qty_metric": "5 (CMU)",
+     "role": "sweetness/body",
+     "where_to_buy_th": "ตลาดต้นลำไย",
+     "where_to_buy_en": "Ton Lamyai (opposite Warorot)",
+     "how_to_choose_en": "Small, firm, dry skins.",
+     "substitute_abroad_en": "Small shallots",
+     "pronunciation_roman": "hom daeng"
+    },
+    {
+     "name_th": "กระเทียมไทย",
+     "name_kham_mueang_th": "",
+     "roman": "krathiam",
+     "name_en": "Thai garlic",
+     "qty_metric": "8 cloves (CMU)",
+     "role": "aroma",
+     "where_to_buy_th": "ตลาดต้นลำไย",
+     "where_to_buy_en": "Ton Lamyai (opposite Warorot)",
+     "how_to_choose_en": "Small-cloved Thai garlic.",
+     "substitute_abroad_en": "Garlic, fewer cloves",
+     "pronunciation_roman": "krathiam"
+    },
+    {
+     "name_th": "เกลือ",
+     "name_kham_mueang_th": "เกลือ",
+     "roman": "kluea",
+     "name_en": "Salt",
+     "qty_metric": "¼ tsp (CMU) to 1 tsp",
+     "role": "seasoning",
+     "where_to_buy_th": "",
+     "where_to_buy_en": "any shop",
+     "how_to_choose_en": "",
+     "substitute_abroad_en": "Sea salt",
+     "pronunciation_roman": "kluea"
+    },
+    {
+     "name_th": "ผักชี (หอมป้อม), ต้นหอม",
+     "name_kham_mueang_th": "หอมป้อม, ต้นหอม",
+     "roman": "hom pom, ton hom",
+     "name_en": "Coriander leaf and spring onion, chopped",
+     "qty_metric": "½ Tbsp each (CMU)",
+     "role": "garnish",
+     "where_to_buy_th": "ตลาดต้นลำไย",
+     "where_to_buy_en": "Ton Lamyai (opposite Warorot)",
+     "how_to_choose_en": "Perky, not wilted.",
+     "substitute_abroad_en": "Same",
+     "pronunciation_roman": "hom pom"
+    },
+    {
+     "name_th": "ปลาร้า / กะปิห่อใบตองเผา / น้ำปลา / ปลาแห้ง (ไม่บังคับ)",
+     "name_kham_mueang_th": "ปลาฮ้า",
+     "roman": "pla ha / kapi / nam pla",
+     "name_en": "Optional umami: fermented fish, roasted shrimp paste, fish sauce or dried fish",
+     "qty_metric": "to taste (≈1 tsp)",
+     "role": "optional umami",
+     "where_to_buy_th": "ตลาดวโรรส",
+     "where_to_buy_en": "Warorot (Kad Luang)",
+     "how_to_choose_en": "For raw use choose cooked/bottled pla ra sauce.",
+     "substitute_abroad_en": "Fish sauce or a little anchovy paste",
+     "pronunciation_roman": ""
+    }
+   ],
+   "equipment": [
+    {
+     "name_th": "ครกดินเผา / ครกหิน กับสาก",
+     "kham_mueang_th": "ครก",
+     "name_en": "Mortar and pestle (clay or granite)",
+     "substitute_en": "Heavy granite mortar; a small food processor on pulse (texture will be smoother)"
+    },
+    {
+     "name_th": "เตาถ่าน หรือกระทะเหล็ก",
+     "kham_mueang_th": "เตาถ่าน",
+     "name_en": "Charcoal grill, or a dry cast-iron pan",
+     "substitute_en": "Gas flame, grill pan, or oven broiler"
+    },
+    {
+     "name_th": "ไม้เสียบ / ตะแกรงย่าง",
+     "kham_mueang_th": "",
+     "name_en": "Skewers or grill rack",
+     "substitute_en": "Tongs"
+    }
+   ],
+   "prep_ahead_en": "Nothing to soak. Start the sticky rice first; steam or blanch the side vegetables while the chillies roast.",
+   "steps": [
+    {
+     "n": 1,
+     "th": "ย่างพริกหนุ่ม หอมแดง กระเทียม บนเตาถ่านจนสุกนิ่ม",
+     "en": "Roast the whole chillies, unpeeled shallots and garlic over charcoal (or in a dry pan) until soft, turning often.",
+     "time_min": 12,
+     "sensory_cue_en": "Chilli skins blister and char in patches and the chillies go limp; shallots/garlic give when squeezed; smoky-sweet smell.",
+     "tip_en": "Charcoal gives the best aroma (CMU). In a pan, Baan Lae Suan adds a splash of water to spread heat."
+    },
+    {
+     "n": 2,
+     "th": "ลอกเปลือกไหม้ออก",
+     "en": "Peel off the burnt skins of chillies, shallots and garlic. Pull out seeds if you want it milder.",
+     "time_min": 5,
+     "sensory_cue_en": "Flesh is soft and bright green underneath; a few black flecks are fine.",
+     "tip_en": "Seeds hold most of the heat (CMU tip)."
+    },
+    {
+     "n": 3,
+     "th": "โขลกหอม กระเทียม กับเกลือก่อน แล้วใส่พริกโขลกพอหยาบ",
+     "en": "Pound the shallots and garlic with the salt, then add the chillies and pound just until broken down and roughly combined.",
+     "time_min": 5,
+     "sensory_cue_en": "A coarse, juicy, pale-green mash with visible chilli strands, not a smooth purée.",
+     "tip_en": "The101 describes the texture as pounded only roughly ('ตำพอโผละเผละ')."
+    },
+    {
+     "n": 4,
+     "th": "ปรุงรส ใส่ปลาร้าหรือน้ำปลาตามชอบ ชิม",
+     "en": "Season: taste and adjust salt; add the optional fermented fish, roasted shrimp paste or fish sauce.",
+     "time_min": 2,
+     "sensory_cue_en": "Salty first, then sweet-smoky, then gentle heat.",
+     "tip_en": "Traditional versions don't use lime; one Wongnai recipe adds 2 Tbsp lime juice. That is a modern variation."
+    },
+    {
+     "n": 5,
+     "th": "ตักใส่ถ้วย โรยผักชี ต้นหอม",
+     "en": "Spoon into a bowl, scatter coriander and spring onion.",
+     "time_min": 1,
+     "sensory_cue_en": "",
+     "tip_en": ""
+    }
+   ],
+   "taste_profile": {
+    "sour": 0,
+    "salty": 3,
+    "spicy": 2,
+    "sweet": 2,
+    "bitter": 0,
+    "umami": 2,
+    "scores_note": "0-5 scores are an editorial estimate synthesised from the source descriptions, not measured.",
+    "texture_en": "Coarse, soft, juicy mash.",
+    "description_th": "เค็ม หวานจากหอมกระเทียมเผา กลิ่นหอมย่างไฟ เผ็ดไม่มาก",
+    "description_en": "Salty, sweet and balanced with a prominent roasted aroma; not very hot (Michelin).",
+    "kham_mueang_taste_words": [
+     {
+      "th": "ลำ",
+      "roman": "lam",
+      "en": "delicious"
+     },
+     {
+      "th": "เผ็ดหน้อยเดียว",
+      "roman": "phet noi diao",
+      "en": "only a little spicy (assembled phrase)"
+     }
+    ]
+   },
+   "how_to_eat": {
+    "th": "ปั้นข้าวนึ่งจิ้มน้ำพริกหนุ่ม กินกับผักนึ่ง ผักสด แคบหมู ไส้อั่ว",
+    "en": "Dip a ball of sticky rice, a steamed vegetable or a piece of pork crackling into it.",
+    "with_what": [
+     "ข้าวนึ่ง",
+     "ผักนึ่ง/ผักลวก (e.g. cabbage, long beans, pumpkin, eggplant)",
+     "ผักสด (cucumber)",
+     "แคบหมู",
+     "ไส้อั่ว",
+     "ไข่ต้ม"
+    ],
+    "when_eaten": "any meal; picnics; khantok",
+    "sharing_etiquette_en": "One bowl in the middle for everyone; dip, don't spoon it onto your rice pile; don't double-dip a bitten piece of crackling."
+   },
+   "food_safety_en": "Uncooked fermented fish (ปลาร้าดิบ) can carry parasites (liver fluke); use cooked/bottled pasteurised pla ra. Keep made dip refrigerated and eat within a few days.",
+   "common_mistakes_foreigners_en": [
+    "Blending it smooth",
+    "Peeling chillies before they are fully soft (skins won't come off, raw taste)",
+    "Adding sugar or lime by default",
+    "Expecting it to be fiery; heat depends on the chillies",
+    "Using bell peppers (no heat, too watery)"
+   ],
+   "useful_phrases": [
+    {
+     "kham_mueang_th": "น้ำพริกหนุ่มขีดนึ่งเจ้า",
+     "roman": "nam phik num khit nueng jao",
+     "central_th": "น้ำพริกหนุ่มหนึ่งขีด (100 กรัม) ค่ะ",
+     "en": "100 g of nam phrik num, please",
+     "when": "at a Kad Luang stall (ขีด = 100 g)",
+     "confidence": "low",
+     "sources": []
+    },
+    {
+     "kham_mueang_th": "เผ็ดก่อเจ้า",
+     "roman": "phet ko jao",
+     "central_th": "เผ็ดไหมคะ",
+     "en": "Is it spicy?",
+     "when": "before buying",
+     "confidence": "low",
+     "sources": []
+    },
+    {
+     "kham_mueang_th": "ใส่ปลาฮ้าก่อ",
+     "roman": "sai pla ha ko",
+     "central_th": "ใส่ปลาร้าไหม",
+     "en": "Does it have fermented fish?",
+     "when": "for vegetarians / fish-sauce avoiders; Sri Phan's version at Kad Luang has none",
+     "confidence": "low",
+     "sources": [
+      "https://www.wongnai.com/food-tips/green-chili-dip-nam-prick-noom-chiangmai"
+     ]
+    }
+   ],
+   "cultural_notes_th": "น้ำพริกหนุ่มเป็นของฝากยอดนิยมจากเชียงใหม่ ร้านดังในกาดหลวงมีสูตรต่างกัน เช่น ใส่ปลาร้า ปลาแห้ง หรือไม่ใส่เลย มักคู่กับแคบหมูเหมือนชาร์กูเตอรีของตะวันตก",
+   "cultural_notes_en": "A top Chiang Mai souvenir. The four long-running Kad Luang makers differ: Damrong adds fermented fish; Naem Boon Sri and Je Hong add dried fish; Sri Phan uses only chilli, garlic and seasoning (vegetarian-friendly). Around 200 baht/kg (Wongnai, date unknown). The nam phrik num + pork crackling pairing is called inseparable (Michelin).",
+   "sources": [
+    "https://lannainfo.library.cmu.ac.th/en_lannafood/detail_lannafood.php?id_food=172",
+    "https://www.wongnai.com/recipes/northern-thai-green-chilli-dip",
+    "https://kindeeyuudee.baanlaesuan.com/easy-cooking/nam-prik-num/",
+    "https://guide.michelin.com/th/th/article/features/iconic-dishes-what-is-nam-phrik-num",
+    "https://www.the101.world/kab-khoa-kab-khaek-47/",
+    "https://www.wongnai.com/food-tips/green-chili-dip-nam-prick-noom-chiangmai"
+   ],
+   "confidence": "high",
+   "needs_expert_review": [
+    "Market phrases are assembled from Kham Mueang vocabulary, not quoted; check with a vendor.",
+    "Prices from Wongnai may be outdated."
+   ]
+  },
+  {
+   "id": "nam_phrik_ong",
+   "name_th": "น้ำพริกอ่อง",
+   "name_kham_mueang_th": "น้ำพริกอ่อง (น้ำพริกบะเขือส้ม)",
+   "name_roman": "nam phrik ong",
+   "name_en": "Northern pork and tomato chilli dip",
+   "pronunciation": {
+    "syllables": [
+     {
+      "th": "น้ำ",
+      "roman": "nam",
+      "tone": "45"
+     },
+     {
+      "th": "พริก",
+      "roman": "phik",
+      "tone": "45"
+     },
+     {
+      "th": "อ่อง",
+      "roman": "ong",
+      "tone": "21"
+     }
+    ],
+    "tip_en": "อ่อง is low-falling: 'ong' with a dip. Some sellers call it น้ำพริกมะเขือส้ม (tomato chilli dip). Tones are Chiang Mai Northern Thai values (24 low-rising, 21 low-falling, 44ʔ high-level glottal, 33 mid, 42 high-falling, 45 high-rising) DERIVED by applying the Chiang Mai tone-box correspondences (Wikipedia 'Northern Thai language') to the etymological Thai spelling. Not checked against a native-speaker recording; treat as a guide."
+   },
+   "origin_province": [
+    "เชียงใหม่",
+    "ทั่วภาคเหนือ"
+   ],
+   "season": "all year",
+   "occasion": "everyday; khantok; picnics",
+   "serves": "4-6 as a dip",
+   "description_th": "น้ำพริกสีส้มแดงจากพริกแห้งและมะเขือส้ม ผัดเครื่องพริกกับหมูสับแล้วใส่มะเขือเทศ ผัดเคี่ยวจนน้ำงวด 'อ่อง' ในภาษาเหนือหมายถึงการผัดเคี่ยวให้น้ำค่อยๆ งวดลง รสเปรี้ยว เค็ม เผ็ด หวานกลมกล่อม",
+   "description_en": "A reddish, chunky dip of dried-chilli paste fried with minced pork and small sour tomatoes, simmered until the liquid reduces. Chiang Mai News glosses อ่อง as a way of stir-frying and simmering a chilli dip until it slowly reduces. Sour, salty, spicy and slightly sweet (CMU); milder than most dips.",
+   "ingredients": [
+    {
+     "name_th": "หมูสับติดมัน",
+     "name_kham_mueang_th": "จิ๊นหมูสับ",
+     "roman": "mu sap",
+     "name_en": "Minced pork with some fat",
+     "qty_metric": "400 g (CMU)",
+     "role": "main",
+     "where_to_buy_th": "แผงหมูตลาดต้นลำไย หรือตลาดวโรรส (บอกให้สับให้)",
+     "where_to_buy_en": "Ton Lamyai (opposite Warorot) or Warorot (Kad Luang) pork stalls (ask them to mince)",
+     "how_to_choose_en": "Fresh pink meat, a little white fat.",
+     "substitute_abroad_en": "Pork mince 15-20% fat",
+     "pronunciation_roman": "mu sap"
+    },
+    {
+     "name_th": "มะเขือเทศลูกเล็ก / มะเขือส้ม",
+     "name_kham_mueang_th": "บะเขือส้ม",
+     "roman": "ba khuea som",
+     "name_en": "Small sour tomatoes / cherry tomatoes",
+     "qty_metric": "200 g (CMU); Wongnai uses 20 cherry tomatoes",
+     "role": "main / sourness",
+     "where_to_buy_th": "แผงผัก ตลาดต้นลำไย กาดเมืองใหม่",
+     "where_to_buy_en": "Ton Lamyai (opposite Warorot) / Muang Mai wholesale market by the Ping River",
+     "how_to_choose_en": "Ripe red-orange, tart; local ones are thumb-tip-size.",
+     "substitute_abroad_en": "Cherry tomatoes (+ squeeze of lime if very sweet)",
+     "pronunciation_roman": "ba khuea som"
+    },
+    {
+     "name_th": "พริกแห้งเม็ดเล็ก",
+     "name_kham_mueang_th": "พริกแห้ง",
+     "roman": "phik haeng",
+     "name_en": "Dried bird's-eye chillies (soaked)",
+     "qty_metric": "20 g (CMU); Wongnai uses 5 large",
+     "role": "heat/colour",
+     "where_to_buy_th": "ร้านของแห้ง ตลาดวโรรส",
+     "where_to_buy_en": "Warorot (Kad Luang) dry-goods stalls",
+     "how_to_choose_en": "Bright red, not dusty-brown; soak 10 min in warm water.",
+     "substitute_abroad_en": "Dried Thai chillies; for milder use guajillo",
+     "pronunciation_roman": "phik haeng"
+    },
+    {
+     "name_th": "หอมแดง",
+     "name_kham_mueang_th": "",
+     "roman": "hom daeng",
+     "name_en": "Shallots",
+     "qty_metric": "5 g as printed by CMU (many cooks use 2-5 shallots)",
+     "role": "paste",
+     "where_to_buy_th": "ตลาดต้นลำไย",
+     "where_to_buy_en": "Ton Lamyai (opposite Warorot)",
+     "how_to_choose_en": "Firm",
+     "substitute_abroad_en": "Shallots",
+     "pronunciation_roman": ""
+    },
+    {
+     "name_th": "กระเทียม",
+     "name_kham_mueang_th": "",
+     "roman": "krathiam",
+     "name_en": "Garlic",
+     "qty_metric": "10 cloves",
+     "role": "paste",
+     "where_to_buy_th": "ตลาดต้นลำไย",
+     "where_to_buy_en": "Ton Lamyai (opposite Warorot)",
+     "how_to_choose_en": "Firm",
+     "substitute_abroad_en": "Garlic",
+     "pronunciation_roman": ""
+    },
+    {
+     "name_th": "กะปิ",
+     "name_kham_mueang_th": "กะปิ",
+     "roman": "kapi",
+     "name_en": "Shrimp paste",
+     "qty_metric": "1 Tbsp (CMU); Wongnai ½ Tbsp",
+     "role": "umami",
+     "where_to_buy_th": "ตลาดวโรรส",
+     "where_to_buy_en": "Warorot (Kad Luang)",
+     "how_to_choose_en": "Fragrant, purple-brown, not dried out.",
+     "substitute_abroad_en": "Shrimp paste / belacan",
+     "pronunciation_roman": "kapi"
+    },
+    {
+     "name_th": "ถั่วเน่าแข็บ (ไม่บังคับ)",
+     "name_kham_mueang_th": "ถั่วเน่าแข็บ",
+     "roman": "thua nao khaep",
+     "name_en": "Fermented soybean disc, toasted (optional, traditional)",
+     "qty_metric": "1 disc",
+     "role": "umami",
+     "where_to_buy_th": "ร้านเครื่องปรุงเหนือ ตลาดวโรรส",
+     "where_to_buy_en": "Warorot (Kad Luang)",
+     "how_to_choose_en": "Thin, dry, not mouldy; toast before pounding.",
+     "substitute_abroad_en": "A teaspoon of miso",
+     "pronunciation_roman": "thua nao khaep"
+    },
+    {
+     "name_th": "เกลือ",
+     "name_kham_mueang_th": "เกลือ",
+     "roman": "kluea",
+     "name_en": "Salt",
+     "qty_metric": "½ tsp",
+     "role": "seasoning",
+     "where_to_buy_th": "",
+     "where_to_buy_en": "any shop",
+     "how_to_choose_en": "",
+     "substitute_abroad_en": "",
+     "pronunciation_roman": ""
+    },
+    {
+     "name_th": "น้ำมันพืช",
+     "name_kham_mueang_th": "น้ำมัน",
+     "roman": "nam man",
+     "name_en": "Vegetable oil",
+     "qty_metric": "2 Tbsp",
+     "role": "frying",
+     "where_to_buy_th": "",
+     "where_to_buy_en": "any shop",
+     "how_to_choose_en": "",
+     "substitute_abroad_en": "",
+     "pronunciation_roman": ""
+    },
+    {
+     "name_th": "น้ำเปล่า",
+     "name_kham_mueang_th": "น้ำ",
+     "roman": "nam",
+     "name_en": "Water",
+     "qty_metric": "about ½ cup (Wongnai)",
+     "role": "simmer",
+     "where_to_buy_th": "",
+     "where_to_buy_en": "",
+     "how_to_choose_en": "",
+     "substitute_abroad_en": "",
+     "pronunciation_roman": ""
+    },
+    {
+     "name_th": "ผักชี ต้นหอม",
+     "name_kham_mueang_th": "หอมป้อม ต้นหอม",
+     "roman": "hom pom, ton hom",
+     "name_en": "Chopped coriander & spring onion",
+     "qty_metric": "1 Tbsp each",
+     "role": "garnish",
+     "where_to_buy_th": "ตลาดต้นลำไย",
+     "where_to_buy_en": "Ton Lamyai (opposite Warorot)",
+     "how_to_choose_en": "",
+     "substitute_abroad_en": "",
+     "pronunciation_roman": ""
+    }
+   ],
+   "equipment": [
+    {
+     "name_th": "ครกดินเผา / ครกหิน กับสาก",
+     "kham_mueang_th": "ครก",
+     "name_en": "Mortar and pestle (clay or granite)",
+     "substitute_en": "Heavy granite mortar; a small food processor on pulse (texture will be smoother)"
+    },
+    {
+     "name_th": "กระทะ",
+     "kham_mueang_th": "หม้อ / กระทะ",
+     "name_en": "Wok or heavy pan",
+     "substitute_en": "Frying pan"
+    },
+    {
+     "name_th": "ตะหลิว",
+     "kham_mueang_th": "",
+     "name_en": "Spatula",
+     "substitute_en": "Wooden spoon"
+    }
+   ],
+   "prep_ahead_en": "Soak dried chillies 10 min in warm water. Toast the soybean disc (if using) over a low flame until pale and crumbly. Steam sticky rice; steam or blanch vegetables.",
+   "steps": [
+    {
+     "n": 1,
+     "th": "โขลกพริกแห้ง หอมแดง กระเทียม เกลือ กะปิ (และถั่วเน่า) ให้ละเอียด",
+     "en": "Pound drained chillies with salt, then shallots, garlic, shrimp paste (and toasted soybean disc) to a fine paste.",
+     "time_min": 10,
+     "sensory_cue_en": "Smooth, brick-red, sticky paste; strong garlicky-shrimp smell.",
+     "tip_en": "Pound hard, dry ingredients first, wet ones last."
+    },
+    {
+     "n": 2,
+     "th": "ตั้งกระทะใส่น้ำมัน ผัดเครื่องพริกไฟกลางจนหอม",
+     "en": "Heat oil over medium heat and fry the paste, stirring.",
+     "time_min": 3,
+     "sensory_cue_en": "Paste darkens slightly, oil turns orange, raw garlic smell becomes toasty.",
+     "tip_en": "Don't let it scorch."
+    },
+    {
+     "n": 3,
+     "th": "ใส่หมูสับ ผัดจนเกือบสุก",
+     "en": "Add the pork, breaking it up, and fry until almost cooked.",
+     "time_min": 5,
+     "sensory_cue_en": "No pink left; pork coated red.",
+     "tip_en": ""
+    },
+    {
+     "n": 4,
+     "th": "ใส่มะเขือเทศ (ผ่าครึ่งหรือบุบ) และน้ำเล็กน้อย ผัดเคี่ยวจนมะเขือเทศเละ น้ำขลุกขลิก",
+     "en": "Add halved or crushed tomatoes and a little water; stir and simmer until the tomatoes collapse and the mixture is thick with just a little liquid.",
+     "time_min": 12,
+     "sensory_cue_en": "Tomatoes burst and melt into a chunky red sauce; surface glistens with orange oil; bubbling slows ('อ่อง').",
+     "tip_en": "This slow reduction is the 'ong' step."
+    },
+    {
+     "n": 5,
+     "th": "ชิม ปรุงเกลือ (หรือน้ำปลา) ตามชอบ ตักใส่ถ้วย โรยผักชี ต้นหอม",
+     "en": "Taste, adjust salt (or fish sauce; some add a pinch of sugar). Serve topped with coriander and spring onion.",
+     "time_min": 2,
+     "sensory_cue_en": "Balanced sour-salty-spicy with a touch of sweetness.",
+     "tip_en": "Wongnai: skip sugar if you don't like sweet."
+    }
+   ],
+   "taste_profile": {
+    "sour": 3,
+    "salty": 3,
+    "spicy": 2,
+    "sweet": 1,
+    "bitter": 0,
+    "umami": 4,
+    "scores_note": "0-5 scores are an editorial estimate synthesised from the source descriptions, not measured.",
+    "texture_en": "Chunky meat-and-tomato relish, thick, a little oily.",
+    "description_th": "เปรี้ยว เค็ม เผ็ด หวานรวมกัน สีแดงจากพริกแห้งและมะเขือเทศ",
+    "description_en": "Sour, salty, spicy and sweet combined (CMU); like a spicy, funky Bolognese.",
+    "kham_mueang_taste_words": [
+     {
+      "th": "ส้ม",
+      "roman": "som",
+      "en": "sour"
+     },
+     {
+      "th": "ลำขนาด",
+      "roman": "lam khanat",
+      "en": "really delicious"
+     }
+    ]
+   },
+   "how_to_eat": {
+    "th": "กินกับผักสดหรือผักต้ม แคบหมู และข้าวนึ่ง หรือคลุกข้าวสวยร้อนๆ",
+    "en": "Scoop with a ball of sticky rice, cucumber, blanched cabbage or long beans, or pork crackling; can also be mixed into hot jasmine rice.",
+    "with_what": [
+     "ข้าวนึ่ง",
+     "ผักสด (แตงกวา, ถั่วฝักยาว)",
+     "ผักต้ม/ผักนึ่ง",
+     "แคบหมู"
+    ],
+    "when_eaten": "lunch or dinner; khantok",
+    "sharing_etiquette_en": "Shared bowl; take a scoop onto your vegetable or rice ball rather than eating from the spoon."
+   },
+   "food_safety_en": "Cook pork through (no pink). Refrigerate leftovers; reheat until bubbling. Keeps 2-3 days chilled.",
+   "common_mistakes_foreigners_en": [
+    "Adding too much water so it becomes a soup",
+    "Using large watery salad tomatoes without reducing",
+    "Adding coconut milk (not northern)",
+    "Burning the paste on high heat"
+   ],
+   "useful_phrases": [
+    {
+     "kham_mueang_th": "น้ำพริกอ่องมีก่อเจ้า",
+     "roman": "nam phik ong mi ko jao",
+     "central_th": "มีน้ำพริกอ่องไหมคะ",
+     "en": "Do you have nam phrik ong?",
+     "when": "at a stall",
+     "confidence": "low",
+     "sources": []
+    },
+    {
+     "kham_mueang_th": "บ่ใส่น้ำต้านเจ้า",
+     "roman": "bo sai nam tan jao",
+     "central_th": "ไม่ใส่น้ำตาลค่ะ",
+     "en": "No sugar, please",
+     "when": "ordering",
+     "confidence": "low",
+     "sources": []
+    }
+   ],
+   "cultural_notes_th": "มีเรื่องเล่า (ไม่ยืนยัน) ว่าชื่อน้ำพริกอ่องมาจากชายชาวพม่าชื่อ 'อ้วงม้วง' ผู้คิดสูตร ครัวดั้งเดิมบางบ้านใส่ถั่วเน่าหรือปลาร้า",
+   "cultural_notes_en": "One Thai retailer's blog tells a legend that the name comes from a Burmese man called 'Uang Muang' who created it; treat as folklore, unverified. Traditional home versions may add toasted fermented soybean disc (Chiang Mai News) or fermented fish (Vanusnun).",
+   "sources": [
+    "https://lannainfo.library.cmu.ac.th/en_lannafood/detail_lannafood.php?id_food=174",
+    "https://www.wongnai.com/recipes/thai-northen-style-chilli-relish",
+    "https://www.chiangmainews.co.th/page/archives/483972/",
+    "https://vanusnun.com/en/blogs/articles/tomatothaichilipaste",
+    "https://www.khaosod.co.th/technologychaoban/how-to/tips/article_170154"
+   ],
+   "confidence": "high",
+   "needs_expert_review": [
+    "Name-origin legend is from a commercial blog only.",
+    "CMU's '5 g shallots' may be a typo for 5 shallots.",
+    "Phrases assembled; น้ำต้าน as Kham Mueang for sugar is unsourced."
+   ]
+  },
+  {
+   "id": "nam_phrik_nam_pu",
+   "name_th": "น้ำพริกน้ำปู๋",
+   "name_kham_mueang_th": "น้ำพริกน้ำปู๋",
+   "name_roman": "nam phrik nam pu",
+   "name_en": "Chilli dip with northern crab paste",
+   "pronunciation": {
+    "syllables": [
+     {
+      "th": "น้ำ",
+      "roman": "nam",
+      "tone": "45"
+     },
+     {
+      "th": "พริก",
+      "roman": "phik",
+      "tone": "45"
+     },
+     {
+      "th": "น้ำ",
+      "roman": "nam",
+      "tone": "45"
+     },
+     {
+      "th": "ปู๋",
+      "roman": "pu",
+      "tone": "24"
+     }
+    ],
+    "tip_en": "ปู๋ rises (low-rising 24); Northerners write the ๋ to show that. Tones are Chiang Mai Northern Thai values (24 low-rising, 21 low-falling, 44ʔ high-level glottal, 33 mid, 42 high-falling, 45 high-rising) DERIVED by applying the Chiang Mai tone-box correspondences (Wikipedia 'Northern Thai language') to the etymological Thai spelling. Not checked against a native-speaker recording; treat as a guide."
+   },
+   "origin_province": [
+    "เชียงราย",
+    "ลำปาง",
+    "น่าน",
+    "พะเยา",
+    "แพร่"
+   ],
+   "season": "all year from stored paste; new paste made Sept-Oct",
+   "occasion": "home meals, especially with bamboo shoots in the rainy season",
+   "serves": "2-4",
+   "description_th": "น้ำพริกข้นเกือบแห้ง ทำจากพริกสด กระเทียม หอมแดง ตะไคร้ โขลกแล้วใส่น้ำปู๋ ซึ่งเป็นเครื่องปรุงจากปูนาตำกับสมุนไพร คั้นกรองแล้วเคี่ยวจนดำข้น กินกับหน่อไม้ต้ม ผักลวก ไข่ต้ม แคบหมู",
+   "description_en": "A thick, almost dry dip: fresh chillies, garlic, shallots and lemongrass pounded, then mixed with nam pu, the black paste made by pounding rice-field crabs with herbs, straining and simmering down for a day. Intense, earthy, salty.",
+   "ingredients": [
+    {
+     "name_th": "น้ำปู๋",
+     "name_kham_mueang_th": "น้ำปู๋",
+     "roman": "nam pu",
+     "name_en": "Northern crab paste",
+     "qty_metric": "1 Tbsp (CMU; start with 1-2 tsp)",
+     "role": "main umami",
+     "where_to_buy_th": "ร้านเครื่องปรุงเหนือ ตลาดวโรรส (กระปุกเล็ก)",
+     "where_to_buy_en": "Warorot (Kad Luang) northern condiment stalls (small jars)",
+     "how_to_choose_en": "Glossy black, thick; ask where it's from (Nan, Chiang Rai, Lampang are known) and when made.",
+     "substitute_abroad_en": "No true substitute; tiny amount of shrimp paste + dark soy",
+     "pronunciation_roman": "nam pu"
+    },
+    {
+     "name_th": "พริกขี้หนูสด (หรือพริกหนุ่มเผา)",
+     "name_kham_mueang_th": "พริกขี้หนู",
+     "roman": "phik khi nu",
+     "name_en": "Fresh bird's-eye chillies (or roasted phrik num for a milder version)",
+     "qty_metric": "20 bird chillies (CMU) / 7 roasted phrik num (Wongnai)",
+     "role": "heat",
+     "where_to_buy_th": "ตลาดต้นลำไย",
+     "where_to_buy_en": "Ton Lamyai (opposite Warorot)",
+     "how_to_choose_en": "Firm, shiny",
+     "substitute_abroad_en": "Thai bird chillies",
+     "pronunciation_roman": ""
+    },
+    {
+     "name_th": "กระเทียม",
+     "name_kham_mueang_th": "",
+     "roman": "krathiam",
+     "name_en": "Garlic",
+     "qty_metric": "10 cloves (CMU)",
+     "role": "aroma",
+     "where_to_buy_th": "ตลาดต้นลำไย",
+     "where_to_buy_en": "Ton Lamyai (opposite Warorot)",
+     "how_to_choose_en": "",
+     "substitute_abroad_en": "Garlic",
+     "pronunciation_roman": ""
+    },
+    {
+     "name_th": "หอมแดง",
+     "name_kham_mueang_th": "",
+     "roman": "hom daeng",
+     "name_en": "Shallots",
+     "qty_metric": "5 (CMU)",
+     "role": "sweetness",
+     "where_to_buy_th": "ตลาดต้นลำไย",
+     "where_to_buy_en": "Ton Lamyai (opposite Warorot)",
+     "how_to_choose_en": "",
+     "substitute_abroad_en": "Shallots",
+     "pronunciation_roman": ""
+    },
+    {
+     "name_th": "ตะไคร้ซอย",
+     "name_kham_mueang_th": "ไคร้",
+     "roman": "takhrai",
+     "name_en": "Lemongrass, thinly sliced",
+     "qty_metric": "1 Tbsp (CMU)",
+     "role": "freshness",
+     "where_to_buy_th": "ตลาดต้นลำไย",
+     "where_to_buy_en": "Ton Lamyai (opposite Warorot)",
+     "how_to_choose_en": "Fat, pale, fragrant stalks",
+     "substitute_abroad_en": "Lemongrass",
+     "pronunciation_roman": ""
+    },
+    {
+     "name_th": "เกลือ",
+     "name_kham_mueang_th": "เกลือ",
+     "roman": "kluea",
+     "name_en": "Salt",
+     "qty_metric": "½ tsp (CMU)",
+     "role": "seasoning",
+     "where_to_buy_th": "",
+     "where_to_buy_en": "",
+     "how_to_choose_en": "",
+     "substitute_abroad_en": "",
+     "pronunciation_roman": ""
+    },
+    {
+     "name_th": "น้ำปลา / น้ำอุ่น (ไม่บังคับ)",
+     "name_kham_mueang_th": "",
+     "roman": "nam pla",
+     "name_en": "Fish sauce / a little warm water (optional)",
+     "qty_metric": "to taste",
+     "role": "adjust",
+     "where_to_buy_th": "",
+     "where_to_buy_en": "",
+     "how_to_choose_en": "",
+     "substitute_abroad_en": "",
+     "pronunciation_roman": ""
+    }
+   ],
+   "equipment": [
+    {
+     "name_th": "ครกดินเผา / ครกหิน กับสาก",
+     "kham_mueang_th": "ครก",
+     "name_en": "Mortar and pestle (clay or granite)",
+     "substitute_en": "Heavy granite mortar; a small food processor on pulse (texture will be smoother)"
+    },
+    {
+     "name_th": "กระทะ (ถ้าคั่ว)",
+     "kham_mueang_th": "",
+     "name_en": "Dry pan (for the roasted version)",
+     "substitute_en": "Any heavy pan"
+    }
+   ],
+   "prep_ahead_en": "For the roasted version (Cookpad/Wongnai), dry-roast garlic, shallots and chillies until lightly charred first.",
+   "steps": [
+    {
+     "n": 1,
+     "th": "โขลกเกลือ ตะไคร้ กระเทียม หอมแดง ให้ละเอียด",
+     "en": "Pound salt, lemongrass, garlic and shallots to a fine paste.",
+     "time_min": 6,
+     "sensory_cue_en": "Fibrous lemongrass fully broken; fragrant, pale paste.",
+     "tip_en": "Salt helps grind the lemongrass."
+    },
+    {
+     "n": 2,
+     "th": "ใส่พริก โขลกต่อ",
+     "en": "Add the chillies and keep pounding.",
+     "time_min": 3,
+     "sensory_cue_en": "Chilli broken into small flecks; sharp chilli smell (keep face back).",
+     "tip_en": "Wash hands after; don't touch eyes."
+    },
+    {
+     "n": 3,
+     "th": "ใส่น้ำปู๋ โขลกเบาๆ ให้เข้ากัน",
+     "en": "Add the crab paste and pound lightly to combine.",
+     "time_min": 2,
+     "sensory_cue_en": "Dip turns dark grey-black and thick, almost dry.",
+     "tip_en": "Add warm water a few drops at a time only if too stiff."
+    },
+    {
+     "n": 4,
+     "th": "ชิม ปรุงน้ำปลาถ้าไม่เค็มพอ ตักใส่ถ้วย",
+     "en": "Taste; add fish sauce if not salty enough. Spoon into a bowl.",
+     "time_min": 1,
+     "sensory_cue_en": "Very salty-earthy first, then chilli heat, herbal finish.",
+     "tip_en": "Nam pu is strong: underseason first."
+    }
+   ],
+   "taste_profile": {
+    "sour": 0,
+    "salty": 4,
+    "spicy": 4,
+    "sweet": 0,
+    "bitter": 1,
+    "umami": 5,
+    "scores_note": "0-5 scores are an editorial estimate synthesised from the source descriptions, not measured.",
+    "texture_en": "Thick, sticky, nearly dry paste.",
+    "description_th": "เค็ม นัว หอมกลิ่นปูนาและสมุนไพร เผ็ด",
+    "description_en": "Deeply savoury, earthy crab-and-herb aroma, salty and hot.",
+    "kham_mueang_taste_words": [
+     {
+      "th": "เก็ม",
+      "roman": "kem",
+      "en": "salty"
+     },
+     {
+      "th": "เผ็ด",
+      "roman": "phet",
+      "en": "spicy"
+     }
+    ]
+   },
+   "how_to_eat": {
+    "th": "กินกับหน่อไม้ต้ม ผักลวก เช่น แครอท กะหล่ำปลี ไข่ต้ม แคบหมู และข้าวนึ่ง",
+    "en": "A little goes a long way: dab it on boiled bamboo shoots, blanched cabbage/carrot, boiled egg or pork crackling, with sticky rice.",
+    "with_what": [
+     "หน่อไม้ต้ม",
+     "ผักลวก",
+     "ไข่ต้ม",
+     "แคบหมู",
+     "ข้าวนึ่ง"
+    ],
+    "when_eaten": "home meals; rainy season with fresh bamboo shoots",
+    "sharing_etiquette_en": "Shared small bowl; take tiny amounts."
+   },
+   "food_safety_en": "Nam pu is long-simmered, but it is made from field crabs; buy from a reputable seller, keep sealed and refrigerated after opening. Bamboo shoots must be boiled well before eating.",
+   "common_mistakes_foreigners_en": [
+    "Using too much nam pu",
+    "Confusing น้ำปู๋ with Central Thai crab-meat dips (น้ำพริกปู)",
+    "Eating bamboo shoots raw"
+   ],
+   "useful_phrases": [
+    {
+     "kham_mueang_th": "น้ำปู๋มาจากไหนเจ้า",
+     "roman": "nam pu ma jak nai jao",
+     "central_th": "น้ำปูมาจากที่ไหนคะ",
+     "en": "Where is this crab paste from?",
+     "when": "choosing a jar",
+     "confidence": "low",
+     "sources": []
+    },
+    {
+     "kham_mueang_th": "ใส่น้ำปู๋หน้อยเดียว",
+     "roman": "sai nam pu noi diao",
+     "central_th": "ใส่น้ำปูนิดเดียว",
+     "en": "Just a little crab paste",
+     "when": "ordering",
+     "confidence": "low",
+     "sources": []
+    }
+   ],
+   "cultural_notes_th": "น้ำปูทำปีละครั้งในฤดูฝน ช่วงกันยายน-ตุลาคม เมื่อปูนาตัวโต ชาวบ้านจับปูมาตำกับใบตะไคร้ ใบขมิ้น (บางถิ่นใส่ใบฝรั่งหรือใบมะกอก) คั้นกรอง หมักคืนหนึ่ง แล้วเคี่ยวไฟอ่อนจนดำข้น",
+   "cultural_notes_en": "Nam pu is made once a year in the rainy season (about Sept-Oct) when field crabs are fully grown: crabs are pounded with lemongrass and turmeric leaves (some areas add guava or hog-plum leaves), squeezed, strained, rested overnight, and simmered on low heat for a long time until black and thick. It belongs to the family of fermented/concentrated seasonings like shrimp paste.",
+   "sources": [
+    "https://lannainfo.library.cmu.ac.th/en_lannafood/detail_lannafood.php?id_food=163",
+    "https://www.wongnai.com/recipes/ugc/d3003d6dd98c43c28afadc2245a71dc7",
+    "https://cookpad.com/th/recipes/16454331",
+    "https://www.maenoicurry.com/en/article/20/%E0%B8%99%E0%B9%89%E0%B8%B3%E0%B8%9B%E0%B8%B9%E0%B8%84%E0%B8%B7%E0%B8%AD%E0%B8%AD%E0%B8%B0%E0%B9%84%E0%B8%A3",
+    "https://www.namnuntawan.com/index.php?route=information/information&information_id=29"
+   ],
+   "confidence": "medium",
+   "needs_expert_review": [
+    "Province list for nam pu fame is from a Chiang Rai shop and a curry-paste maker.",
+    "Phrases assembled."
+   ]
+  },
+  {
+   "id": "khaep_mu",
+   "name_th": "แคบหมู",
+   "name_kham_mueang_th": "แคบหมู",
+   "name_roman": "khaep mu",
+   "name_en": "Northern pork cracklings: buying, serving (and the traditional method)",
+   "pronunciation": {
+    "syllables": [
+     {
+      "th": "แคบ",
+      "roman": "kaep",
+      "tone": "42"
+     },
+     {
+      "th": "หมู",
+      "roman": "mu",
+      "tone": "24"
+     }
+    ],
+    "tip_en": "Northern ค is unaspirated, so it sounds closer to 'gaep'. Tones are Chiang Mai Northern Thai values (24 low-rising, 21 low-falling, 44ʔ high-level glottal, 33 mid, 42 high-falling, 45 high-rising) DERIVED by applying the Chiang Mai tone-box correspondences (Wikipedia 'Northern Thai language') to the etymological Thai spelling. Not checked against a native-speaker recording; treat as a guide."
+   },
+   "origin_province": [
+    "เชียงใหม่",
+    "ทั่วภาคเหนือ"
+   ],
+   "season": "all year",
+   "occasion": "side dish with dips; snack; khantok; souvenir",
+   "serves": "a 100-200 g bag serves 4 as a side",
+   "description_th": "แคบ ในภาษาเหนือหมายถึงหนังหรือมันสัตว์ที่เจียวจนกรอบ แคบหมูมีทั้งไร้มัน ติดมัน และมันล้วน กินคู่กับน้ำพริกหนุ่ม น้ำพริกอ่อง ขนมจีนน้ำเงี้ยว หรือกินเล่น ส่วนใหญ่คนเหนือซื้อจากร้านเจ้าประจำ",
+   "description_en": "แคบ = animal skin/fat rendered until crisp. Styles: ไร้มัน (skin only, airy), ติดมัน (skin with a layer of fat and meat, rich and crunchy), มันล้วน (all fat). Most Northerners buy it from a favourite shop rather than make it; the CMU method is given for reference.",
+   "ingredients": [
+    {
+     "name_th": "แคบหมูสำเร็จรูป",
+     "name_kham_mueang_th": "แคบหมู",
+     "roman": "khaep mu",
+     "name_en": "Ready-made pork cracklings",
+     "qty_metric": "100-200 g",
+     "role": "main (buying)",
+     "where_to_buy_th": "ร้านแคบหมูในตลาดวโรรส เช่น ดำรง เจ๊หงษ์ ศรีพรรณ แหนมบุญศรี และตลาดต้นพยอม",
+     "where_to_buy_en": "Warorot (Kad Luang) (Wongnai names Damrong, Je Hong, Sri Phan, Naem Boon Sri); Ton Phayom market; airport/souvenir shops",
+     "how_to_choose_en": "Freshly fried that day, pale golden, light for its size, no stale oil smell; ask to taste. ติดมัน for dips and sai ua, ไร้มัน for noodles or lighter eating.",
+     "substitute_abroad_en": "Chicharrón or pork scratchings (UK).",
+     "pronunciation_roman": "khaep mu"
+    },
+    {
+     "name_th": "หนังหมู (สำหรับทำเอง)",
+     "name_kham_mueang_th": "หนังหมู",
+     "roman": "nang mu",
+     "name_en": "Pork skin with minimal fat (for making)",
+     "qty_metric": "2 kg (CMU)",
+     "role": "main (making)",
+     "where_to_buy_th": "แผงหมูตลาดต้นลำไย",
+     "where_to_buy_en": "Ton Lamyai (opposite Warorot) pork stalls",
+     "how_to_choose_en": "CMU: skin from the back or thigh, must smell fresh.",
+     "substitute_abroad_en": "Pork rind from a butcher",
+     "pronunciation_roman": ""
+    },
+    {
+     "name_th": "ซีอิ๊วดำ",
+     "name_kham_mueang_th": "",
+     "roman": "si-io dam",
+     "name_en": "Dark (black) soy sauce",
+     "qty_metric": "½ Tbsp (CMU)",
+     "role": "colour/marinade",
+     "where_to_buy_th": "",
+     "where_to_buy_en": "any shop",
+     "how_to_choose_en": "",
+     "substitute_abroad_en": "Dark soy sauce",
+     "pronunciation_roman": ""
+    },
+    {
+     "name_th": "เกลือ",
+     "name_kham_mueang_th": "",
+     "roman": "kluea",
+     "name_en": "Salt",
+     "qty_metric": "1 tsp",
+     "role": "seasoning",
+     "where_to_buy_th": "",
+     "where_to_buy_en": "",
+     "how_to_choose_en": "",
+     "substitute_abroad_en": "",
+     "pronunciation_roman": ""
+    },
+    {
+     "name_th": "น้ำมันหมู",
+     "name_kham_mueang_th": "น้ำมันหมู",
+     "roman": "nam man mu",
+     "name_en": "Pork lard",
+     "qty_metric": "2 kg (CMU)",
+     "role": "frying",
+     "where_to_buy_th": "ตลาดต้นลำไย / ตลาดวโรรส",
+     "where_to_buy_en": "Ton Lamyai (opposite Warorot) / Warorot (Kad Luang)",
+     "how_to_choose_en": "",
+     "substitute_abroad_en": "Lard or high-smoke-point oil",
+     "pronunciation_roman": ""
+    }
+   ],
+   "equipment": [
+    {
+     "name_th": "กระทะใบใหญ่",
+     "kham_mueang_th": "",
+     "name_en": "Large deep wok",
+     "substitute_en": "Heavy deep pot"
+    },
+    {
+     "name_th": "กระบอง/ตะแกรงตัก",
+     "kham_mueang_th": "",
+     "name_en": "Spider strainer",
+     "substitute_en": "Slotted spoon"
+    },
+    {
+     "name_th": "ภาชนะปิดสนิท",
+     "kham_mueang_th": "",
+     "name_en": "Airtight container",
+     "substitute_en": "Jar/zip bag"
+    }
+   ],
+   "prep_ahead_en": "If buying: nothing. If making (CMU method), cut skin into 1 × 6 inch strips and marinate 10 minutes in dark soy.",
+   "steps": [
+    {
+     "n": 1,
+     "th": "(ซื้อ) เลือกแบบ ติดมัน หรือ ไร้มัน ขอชิม",
+     "en": "(Buying) Choose ติดมัน or ไร้มัน and ask to taste a piece; buy by the bag or weight.",
+     "time_min": 5,
+     "sensory_cue_en": "Shatters audibly; clean porky flavour.",
+     "tip_en": "Buy on the day you'll eat it; it softens in humidity."
+    },
+    {
+     "n": 2,
+     "th": "(ทำเอง) หั่นหนังหมูเป็นชิ้น 1x6 นิ้ว หมักซีอิ๊วดำ 10 นาที",
+     "en": "(Making, CMU) Cut skin into 1 × 6 inch pieces; marinate with dark soy 10 minutes.",
+     "time_min": 10,
+     "sensory_cue_en": "Evenly tan.",
+     "tip_en": ""
+    },
+    {
+     "n": 3,
+     "th": "ใส่น้ำมันหมูลงกระทะ ไฟอ่อนมาก เจียวหนังหมู 30 นาที",
+     "en": "Put the skin in melted lard over very low heat for about 30 minutes.",
+     "time_min": 30,
+     "sensory_cue_en": "Skin tightens and stretches taut; small steady bubbles.",
+     "tip_en": "Low heat dries the skin without browning."
+    },
+    {
+     "n": 4,
+     "th": "ตักขึ้นสะเด็ดน้ำมัน พักให้เย็น 10 นาที",
+     "en": "Lift out, drain and cool 10 minutes.",
+     "time_min": 10,
+     "sensory_cue_en": "Skin looks translucent and leathery.",
+     "tip_en": ""
+    },
+    {
+     "n": 5,
+     "th": "ทอดในน้ำมันร้อนจัดจนพองกรอบเหลือง",
+     "en": "Fry in very hot oil until puffed, crisp and golden.",
+     "time_min": 5,
+     "sensory_cue_en": "Loud crackling as pieces puff up to double size; golden-brown.",
+     "tip_en": "Stand back: hot fat spits violently."
+    },
+    {
+     "n": 6,
+     "th": "พักให้เย็น เก็บในภาชนะปิดสนิท",
+     "en": "Cool completely and store airtight.",
+     "time_min": 15,
+     "sensory_cue_en": "Stays crisp.",
+     "tip_en": "CMU: raw skin keeps up to 15 days refrigerated."
+    }
+   ],
+   "taste_profile": {
+    "sour": 0,
+    "salty": 2,
+    "spicy": 0,
+    "sweet": 0,
+    "bitter": 0,
+    "umami": 3,
+    "scores_note": "0-5 scores are an editorial estimate synthesised from the source descriptions, not measured.",
+    "texture_en": "ไร้มัน: airy, shattering; ติดมัน: crunchy skin with a chewy-rich fat layer.",
+    "description_th": "กรอบ มัน เค็มเล็กน้อย ช่วยตัดเผ็ดของน้ำพริก",
+    "description_en": "Crunchy, rich and lightly salty; balances the heat of the dips.",
+    "kham_mueang_taste_words": [
+     {
+      "th": "มัน",
+      "roman": "man",
+      "en": "rich/fatty (also 'tasty-rich')"
+     },
+     {
+      "th": "ลำ",
+      "roman": "lam",
+      "en": "delicious"
+     }
+    ]
+   },
+   "how_to_eat": {
+    "th": "ใช้แคบหมูตักน้ำพริกหนุ่มหรือน้ำพริกอ่องกิน กินกับข้าวนึ่ง ผักนึ่ง ไส้อั่ว หรือโรยขนมจีนน้ำเงี้ยว",
+    "en": "Use a piece like a chip to scoop nam phrik num or ong, alternate with sticky rice and vegetables; crumble over khanom jin nam ngiao.",
+    "with_what": [
+     "น้ำพริกหนุ่ม",
+     "น้ำพริกอ่อง",
+     "ข้าวนึ่ง",
+     "ผักนึ่ง",
+     "ไส้อั่ว",
+     "ขนมจีนน้ำเงี้ยว"
+    ],
+    "when_eaten": "any meal; snack",
+    "sharing_etiquette_en": "Put the bag or plate in the middle; don't double-dip a bitten piece into the shared dip."
+   },
+   "food_safety_en": "Deep-frying in large volumes of hot lard is dangerous (splatter, fire); never leave unattended, keep a lid nearby. Rich and fatty: eat in moderation.",
+   "common_mistakes_foreigners_en": [
+    "Buying hard, un-puffed rinds meant for cooking",
+    "Storing opened bags unsealed (goes soft in humid Chiang Mai)",
+    "Frying wet skin (violent spitting)"
+   ],
+   "useful_phrases": [
+    {
+     "kham_mueang_th": "เอาแคบหมูติดมันถุงนึ่งเจ้า",
+     "roman": "ao khaep mu tit man thung nueng jao",
+     "central_th": "เอาแคบหมูติดมันหนึ่งถุงค่ะ",
+     "en": "One bag of pork crackling with fat, please",
+     "when": "at a Kad Luang stall",
+     "confidence": "low",
+     "sources": []
+    },
+    {
+     "kham_mueang_th": "แคบหมูไร้มันมีก่อ",
+     "roman": "khaep mu rai man mi ko",
+     "central_th": "มีแคบหมูไร้มันไหม",
+     "en": "Do you have fatless crackling?",
+     "when": "at a stall",
+     "confidence": "low",
+     "sources": []
+    },
+    {
+     "kham_mueang_th": "ขอจิมหน้อยได้ก่อเจ้า",
+     "roman": "kho jim noi dai ko jao",
+     "central_th": "ขอชิมหน่อยได้ไหมคะ",
+     "en": "May I taste a bit?",
+     "when": "before buying",
+     "confidence": "low",
+     "sources": []
+    }
+   ],
+   "cultural_notes_th": "แคบหมูกับไส้อั่วเป็น 'คู่ผัวตัวเมีย' เพราะสมัยก่อนเมื่อล้มหมูจะได้ทั้งหนังมาทำแคบและเนื้อ/ไส้มาทำไส้อั่ว ร้านแคบหมูในกาดหลวงบางร้านเปิดมากว่า 30 ปี",
+   "cultural_notes_en": "Khaep mu and sai ua are called a married couple ('คู่ผัวตัวเมีย') because both came from the same pig slaughter: skin for crackling, meat and intestine for sausage. Some Kad Luang crackling shops have operated for 30+ years. Wongnai's commercial method (boil skin 3 h, sun-dry, season, fry 2 h at medium then 50 min low) differs from CMU's lard method.",
+   "sources": [
+    "https://lannainfo.library.cmu.ac.th/en_lannafood/detail_lannafood.php?id_food=194",
+    "https://www.wongnai.com/food-tips/pork-rinds-cm",
+    "https://www.reviewchiangmai.com/cab-moo-sai-oua/",
+    "https://www.chiangmaihomeguide.com/warorot-market-kad-luang/",
+    "https://cooking.kapook.com/view87003.html"
+   ],
+   "confidence": "high",
+   "needs_expert_review": [
+    "CMU English page advises skin from a '4 year-old pig' while Wongnai says 6-month-old; likely a translation error on one side.",
+    "Phrases assembled."
+   ]
+  }
+ ]
+}

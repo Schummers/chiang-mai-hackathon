@@ -1,0 +1,3369 @@
+{
+ "meta": {
+  "topic": "Northern Thai (Lanna) curries and soups — แกง/จอ/ต้ม/อ่อม — Thai-language sources",
+  "retrieved": "2026-09-26",
+  "tone_method_note": "Tones are DERIVED (not from a recorded pronunciation dictionary) with the Chiang Mai tone-box mapping used across this dataset: high/mid class live unmarked=24 low-rising; low class live unmarked=33 mid; high/mid class + mai ek or dead syllable=21 low-falling; low class + mai ek or dead long=42 high-falling; high/mid class + mai tho=44ʔ high-level-glottal; low class + mai tho or dead short=45 high-rising. Northern spellings with ๋/๊ (แก๋ง, กิ๋น, จิ๊น, โฮ๊ะ) are read as sound hints. Low confidence; needs a native Chiang Mai speaker check. Nan, Phrae, Lampang and Chiang Rai contours differ.",
+  "lanna_soup_categories": {
+   "source": "https://lannakadee.cmu.ac.th/area1/food/type.php",
+   "note_en": "Definitions from CMU's Lanna food-naming database (ฐานข้อมูลคำเรียกชื่ออาหารล้านนา), paraphrased.",
+   "items": [
+    {
+     "th": "แกง (แก๋ง)",
+     "roman": "kaeng",
+     "def_th": "อาหารประเภทน้ำ ปริมาณน้ำแกงใกล้เคียงกับส่วนประกอบในหม้อ",
+     "def_en": "Wet dish where the liquid is about equal to the solids.",
+     "example_th": "แกงอ่อมไก่"
+    },
+    {
+     "th": "ต้ม",
+     "roman": "tom",
+     "def_th": "อาหารน้ำที่อาจรสจืด คล้ายแกงจืดภาคกลาง",
+     "def_en": "Brothy dish, can be mild, like Central Thai kaeng jued.",
+     "example_th": ""
+    },
+    {
+     "th": "จอ",
+     "roman": "jo",
+     "def_th": "อาหารมีน้ำคล้ายแกง แต่ไม่ใส่เครื่องแกงโขลกละเอียด",
+     "def_en": "Curry-like broth WITHOUT a finely pounded paste.",
+     "example_th": "ผักกาดจอ"
+    },
+    {
+     "th": "อ่อม",
+     "roman": "om",
+     "def_th": "อาหารชั้นดีของล้านนา แกงที่ใช้เนื้อสัตว์เป็นหลัก เคี่ยวไฟอ่อนนานจนเปื่อย",
+     "def_en": "Premium Lanna meat curry, simmered low and long.",
+     "example_th": "แกงอ่อมไก่, แกงอ่อมปลา"
+    },
+    {
+     "th": "อุ๊ก",
+     "roman": "uk",
+     "def_th": "วิธีทำอาหารชนิดเดียวกับฮุ่ม",
+     "def_en": "Same method as 'hum' (braise in little liquid).",
+     "example_th": "อุ๊กไก่"
+    },
+    {
+     "th": "อ็อก",
+     "roman": "ok",
+     "def_th": "คำเรียกของชาวลำปาง คล้ายอุ๊ก/อุ๊บ น้ำแกงขลุกขลิก",
+     "def_en": "Lampang term; like uk with a thick, scant sauce.",
+     "example_th": "อ็อกหมู, อ็อกไก่"
+    },
+    {
+     "th": "มอก",
+     "roman": "mok",
+     "def_th": "ชื่อเฉพาะ เท่าที่พบมีชนิดเดียวคือ มอกปู",
+     "def_en": "Specific name; only known example is mok pu (crab).",
+     "example_th": "มอกปู"
+    }
+   ]
+  },
+  "technique_curry_paste_mortar": {
+   "th": [
+    "ใช้ครกหินและสาก หั่นวัตถุดิบเป็นชิ้นเล็ก/ซอยบางก่อนโขลก",
+    "แช่พริกแห้งจนนุ่ม (กรีดเอาเม็ดออกถ้าไม่อยากเผ็ดมาก) โขลกกับเกลือก่อน เกลือช่วยให้พริกละเอียดและดูดความชื้น",
+    "ใส่สมุนไพรที่น้ำน้อย (ข่า ตะไคร้ ขมิ้น รากผักชี) ต่อมา",
+    "ใส่ของที่ฉ่ำน้ำ (หอมแดง กระเทียม) ทีหลัง เพื่อไม่ให้กระเด็นเข้าตา",
+    "ใส่กะปิ/ปลาร้าสุดท้าย เพราะถ้าใส่ก่อนจะโขลกยาก",
+    "โขลกจนเนื้อเนียนเข้ากัน สำหรับแกงเหนือบางชนิด (แกงผักหวาน) โขลกพอหยาบ",
+    "แกงเหนือส่วนใหญ่ใช้น้ำ ไม่ใช้กะทิ"
+   ],
+   "en": [
+    "Use a heavy granite mortar; slice everything small/thin first.",
+    "Soak dried chillies until soft (slit and de-seed for less heat); pound them with salt FIRST — salt acts as an abrasive and absorbs moisture.",
+    "Next add low-moisture aromatics: galangal, lemongrass, turmeric, coriander root.",
+    "Then juicy ingredients — shallots, garlic — later, so the paste doesn't splash into your eyes.",
+    "Shrimp paste / pla ra go in LAST; added early they make pounding harder.",
+    "Pound until smooth and uniform; some Northern curries (phak wan) use a deliberately coarse paste.",
+    "Northern curries are water-based — no coconut milk. Richness comes from pork fat, bones, fermented seasonings (kapi, pla ra, thua nao, nam pu) and long simmering."
+   ],
+   "sources": [
+    "https://api2.krua.co/cooking_post/thai-curr-paste-for-beginner/",
+    "https://www.wongnai.com/food-tips/how-to-pound-curry-paste",
+    "https://krua.co/food_story/kang-care-kai"
+   ]
+  },
+  "markets_note_en": "Where-to-buy entries are general guidance (not sourced per item): Warorot/Kad Luang for dried spices, hang lay powder and ferments; Ton Lamyai (across the road) and Muang Mai (wholesale, early morning) for fresh herbs, veg and meat; every neighbourhood morning market (กาดเช้า) has a curry-paste seller who pounds fresh pastes to order.",
+  "general_kham_mueang_food_words": [
+   {
+    "th": "กิ๋น",
+    "roman": "kin",
+    "tone": "24 (derived)",
+    "central_th": "กิน",
+    "en": "eat",
+    "sources": [
+     "https://www.chiangrai108.com/artsculture/10392/"
+    ]
+   },
+   {
+    "th": "ยะ",
+    "roman": "ya",
+    "central_th": "ทำ",
+    "en": "make/do/cook",
+    "sources": [
+     "https://www.chiangrai108.com/artsculture/10392/"
+    ]
+   },
+   {
+    "th": "ลำ",
+    "roman": "lam",
+    "tone": "33 (derived)",
+    "central_th": "อร่อย",
+    "en": "delicious",
+    "sources": [
+     "https://www.chiangrai108.com/artsculture/10392/"
+    ]
+   },
+   {
+    "th": "จ๊าดลำ",
+    "roman": "chat lam",
+    "central_th": "อร่อยมาก",
+    "en": "very delicious",
+    "sources": [
+     "https://www.chiangrai108.com/artsculture/10392/"
+    ]
+   },
+   {
+    "th": "แก๋ง",
+    "roman": "kaeng",
+    "tone": "24 (derived)",
+    "central_th": "แกง",
+    "en": "curry",
+    "sources": [
+     "https://www.openbase.in.th/node/6566",
+     "https://www.wongnai.com/food-tips/top-35-must-try-northern-thai-dishes"
+    ]
+   },
+   {
+    "th": "จิ๊น",
+    "roman": "jin",
+    "central_th": "เนื้อ(สัตว์)",
+    "en": "meat",
+    "sources": [
+     "https://www.gotoknow.org/posts/421377"
+    ]
+   },
+   {
+    "th": "ใบบ่ะขูด",
+    "roman": "bai ba-khut",
+    "central_th": "ใบมะกรูด",
+    "en": "kaffir lime leaf",
+    "sources": [
+     "https://www.gotoknow.org/posts/421377"
+    ]
+   },
+   {
+    "th": "ไส้ปุ๋มอุมอาม",
+    "roman": "sai pum um am",
+    "central_th": "เครื่องใน",
+    "en": "assorted offal",
+    "sources": [
+     "https://www.gotoknow.org/posts/421377"
+    ]
+   },
+   {
+    "th": "ข้าวนึ่ง",
+    "roman": "khao nueng",
+    "central_th": "ข้าวเหนียว",
+    "en": "sticky rice (lit. 'steamed rice')",
+    "sources": [],
+    "confidence": "medium (common usage, not sourced this round)"
+   }
+  ]
+ },
+ "recipes": [
+  {
+   "id": "kaeng_hang_lay",
+   "name_th": "แกงฮังเล",
+   "name_kham_mueang_th": "แก๋งฮังเล (อ่าน แก๋งฮังแล)",
+   "name_roman": "kaeng hang le (Northern: kaeng hang lae)",
+   "name_en": "Hang lay — Northern Burmese-influenced pork curry",
+   "pronunciation": {
+    "syllables": [
+     {
+      "th": "แก๋ง",
+      "roman": "kaeng",
+      "tone": "24",
+      "derived": true
+     },
+     {
+      "th": "ฮัง",
+      "roman": "hang",
+      "tone": "33",
+      "derived": true
+     },
+     {
+      "th": "เล/แล",
+      "roman": "le / lae",
+      "tone": "33",
+      "derived": true
+     }
+    ],
+    "tip_en": "Northerners say 'kaeng' with a rising tone and often end with 'lae' (as in 'lair' without the r) rather than 'lay'. OpenBase lists the reading as แก๋งฮังแล. Tones are DERIVED (not from a recorded pronunciation dictionary) with the Chiang Mai tone-box mapping used across this dataset: high/mid class live unmarked=24 low-rising; low class live unmarked=33 mid; high/mid class + mai ek or dead syllable=21 low-falling; low class + mai ek or dead long=42 high-falling; high/mid class + mai tho=44ʔ high-level-glottal; low class + mai tho or dead short=45 high-rising. Northern spellings with ๋/๊ (แก๋ง, กิ๋น, จิ๊น, โฮ๊ะ) are read as sound hints. Low confidence; needs a native Chiang Mai speaker check. Nan, Phrae, Lampang and Chiang Rai contours differ."
+   },
+   "origin_province": [
+    "เชียงใหม่ Chiang Mai",
+    "ลำปาง Lampang",
+    "แม่ฮ่องสอน Mae Hong Son",
+    "เชียงราย Chiang Rai (เชียงแสน Chiang Saen style)",
+    "พะเยา Phayao",
+    "น่าน Nan"
+   ],
+   "season": "All year",
+   "occasion": "Merit-making (งานบุญ), funerals and other big gatherings; khan tok dinners; also everyday market curry",
+   "serves": "5–6 (with sticky rice)",
+   "description_th": "แกงหมูรสเปรี้ยว-หวาน-เค็มกลมกล่อม เคี่ยวนานจนหมูเปื่อยนุ่ม ใส่ผงฮังเล ขิงซอย กระเทียม น้ำมะขามเปียก ไม่ใส่กะทิ ชื่อมาจากภาษาพม่า 'ฮินเล/ฮิงเล' ('ฮิน' แปลว่าแกง) เชื่อกันว่าได้รับอิทธิพลจากพม่าและไทใหญ่ แกงฮังเลเชียงใหม่มักรสหวานนำ ส่วนเชียงราย พะเยา น่าน มักใส่ถั่วลิสง และแบบเชียงแสนใส่ถั่วฝักยาว พริกสด หน่อไม้ดอง",
+   "description_en": "A slow-braised pork curry (no coconut milk) that is sour, sweet and salty in balance, perfumed with hang lay spice powder, shredded ginger, whole garlic and tamarind. The name is thought to come from Burmese 'hin le'/'hing le' — 'hin' meaning curry — and Thai sources describe it as Burmese- and Shan (Tai Yai)-influenced. Chiang Mai versions lean sweeter; Chiang Rai, Phayao and Nan often add peanuts; the Chiang Saen style adds long beans, fresh chillies and pickled bamboo shoot.",
+   "ingredients": [
+    {
+     "name_th": "พริกแห้งเม็ดใหญ่",
+     "name_kham_mueang_th": "พริกแห้ง",
+     "roman": "phrik haeng",
+     "name_en": "Large dried red chillies (soaked, seeds out for less heat)",
+     "qty_metric": "5–10 pods (10–15 g)",
+     "role": "heat, colour",
+     "where_to_buy_th": "กาดหลวง (ตลาดวโรรส) ร้านเครื่องเทศ/ของแห้ง หรือร้านพริกแกงในตลาดสด",
+     "where_to_buy_en": "Warorot (Kad Luang) spice & dried-goods stalls, or the curry-paste vendor (แม่ค้าพริกแกง) in any wet market",
+     "how_to_choose_en": "Deep red, brittle, no mould.",
+     "substitute_abroad_en": "Any mild dried red chilli (e.g. guajillo) + a few dried bird's-eye for heat.",
+     "pronunciation_roman": "phrik haeng"
+    },
+    {
+     "name_th": "ข่า",
+     "name_kham_mueang_th": "ข่า",
+     "roman": "kha",
+     "name_en": "Galangal, sliced",
+     "qty_metric": "1 Tbsp (~5 g)",
+     "role": "paste: piney heat",
+     "where_to_buy_th": "ตลาดต้นลำไย / ตลาดเมืองใหม่ แผงผักสมุนไพร หรือแม่ค้าผักพื้นบ้านในกาดเช้า",
+     "where_to_buy_en": "Ton Lamyai or Muang Mai market herb/vegetable stalls, or the village-veg sellers at any morning market (กาดเช้า)",
+     "how_to_choose_en": "Young, pinkish, firm.",
+     "substitute_abroad_en": "Frozen galangal; ginger is NOT a good swap here.",
+     "pronunciation_roman": "kha"
+    },
+    {
+     "name_th": "เกลือ",
+     "name_kham_mueang_th": "เกลือ",
+     "roman": "kluea",
+     "name_en": "Salt (coarse/sea salt)",
+     "qty_metric": "1 tsp",
+     "role": "abrasive for pounding, seasoning",
+     "where_to_buy_th": "กาดหลวง (ตลาดวโรรส) ร้านเครื่องเทศ/ของแห้ง หรือร้านพริกแกงในตลาดสด",
+     "where_to_buy_en": "Warorot (Kad Luang) spice & dried-goods stalls, or the curry-paste vendor (แม่ค้าพริกแกง) in any wet market",
+     "how_to_choose_en": "Coarse sea salt grinds chillies best.",
+     "substitute_abroad_en": "Any coarse salt.",
+     "pronunciation_roman": "kluea"
+    },
+    {
+     "name_th": "ตะไคร้",
+     "name_kham_mueang_th": "ตะไคร้",
+     "roman": "takhrai",
+     "name_en": "Lemongrass (lower stalk, thinly sliced)",
+     "qty_metric": "1–2 stalks",
+     "role": "citrus aroma",
+     "where_to_buy_th": "ตลาดต้นลำไย / ตลาดเมืองใหม่ แผงผักสมุนไพร หรือแม่ค้าผักพื้นบ้านในกาดเช้า",
+     "where_to_buy_en": "Ton Lamyai or Muang Mai market herb/vegetable stalls, or the village-veg sellers at any morning market (กาดเช้า)",
+     "how_to_choose_en": "Firm, pale, fragrant when scratched.",
+     "substitute_abroad_en": "Frozen lemongrass from Asian grocers.",
+     "pronunciation_roman": "takhrai"
+    },
+    {
+     "name_th": "หอมแดง",
+     "name_kham_mueang_th": "หอมแดง",
+     "roman": "hom daeng",
+     "name_en": "Thai shallots",
+     "qty_metric": "3–5 bulbs",
+     "role": "sweet aromatic body",
+     "where_to_buy_th": "ตลาดต้นลำไย / ตลาดเมืองใหม่ แผงผักสมุนไพร หรือแม่ค้าผักพื้นบ้านในกาดเช้า",
+     "where_to_buy_en": "Ton Lamyai or Muang Mai market herb/vegetable stalls, or the village-veg sellers at any morning market (กาดเช้า)",
+     "how_to_choose_en": "Small, firm, purple-red.",
+     "substitute_abroad_en": "Small French shallots.",
+     "pronunciation_roman": "hom daeng"
+    },
+    {
+     "name_th": "กระเทียม",
+     "name_kham_mueang_th": "กระเทียม",
+     "roman": "krathiam",
+     "name_en": "Thai garlic (small cloves)",
+     "qty_metric": "5–10 cloves",
+     "role": "aroma",
+     "where_to_buy_th": "ตลาดต้นลำไย / ตลาดเมืองใหม่ แผงผักสมุนไพร หรือแม่ค้าผักพื้นบ้านในกาดเช้า",
+     "where_to_buy_en": "Ton Lamyai or Muang Mai market herb/vegetable stalls, or the village-veg sellers at any morning market (กาดเช้า)",
+     "how_to_choose_en": "Small pinkish Thai cloves are more pungent.",
+     "substitute_abroad_en": "Regular garlic, use ~2/3 amount.",
+     "pronunciation_roman": "krathiam"
+    },
+    {
+     "name_th": "กะปิ",
+     "name_kham_mueang_th": "กะปิ",
+     "roman": "kapi",
+     "name_en": "Shrimp paste",
+     "qty_metric": "1 tsp",
+     "role": "salty-umami depth",
+     "where_to_buy_th": "กาดหลวง/ต้นลำไย แผงของหมักพื้นเมือง (ถั่วเน่า น้ำปู๋ ปลาร้า)",
+     "where_to_buy_en": "Warorot/Ton Lamyai stalls selling Northern ferments (thua nao discs, nam pu, pla ra)",
+     "how_to_choose_en": "Purple-grey, firm, smells strongly of shrimp — that is normal.",
+     "substitute_abroad_en": "Any Thai/Malay belacan-type shrimp paste.",
+     "pronunciation_roman": "kapi"
+    },
+    {
+     "name_th": "หมูสามชั้น",
+     "name_kham_mueang_th": "หมูสามชั้น",
+     "roman": "mu sam chan",
+     "name_en": "Pork belly, 2x2 in (5 cm) cubes",
+     "qty_metric": "500 g",
+     "role": "fat and richness",
+     "where_to_buy_th": "แผงหมูในตลาดต้นลำไย ตลาดเมืองใหม่ หรือกาดใกล้บ้าน (ไปเช้า)",
+     "where_to_buy_en": "Pork butchers at Ton Lamyai, Muang Mai or your neighbourhood market — go early morning",
+     "how_to_choose_en": "Even layers of fat and lean, skin on.",
+     "substitute_abroad_en": "Any pork belly.",
+     "pronunciation_roman": "mu sam chan"
+    },
+    {
+     "name_th": "หมูสันคอ / สันนอก",
+     "name_kham_mueang_th": "จิ๊นหมู",
+     "roman": "mu san kho",
+     "name_en": "Pork neck or loin, cubed",
+     "qty_metric": "500 g – 1 kg",
+     "role": "lean meat",
+     "where_to_buy_th": "แผงหมูในตลาดต้นลำไย ตลาดเมืองใหม่ หรือกาดใกล้บ้าน (ไปเช้า)",
+     "where_to_buy_en": "Pork butchers at Ton Lamyai, Muang Mai or your neighbourhood market — go early morning",
+     "how_to_choose_en": "Neck (สันคอ) stays juicier after long braising.",
+     "substitute_abroad_en": "Pork shoulder.",
+     "pronunciation_roman": "mu san kho"
+    },
+    {
+     "name_th": "ผงฮังเล",
+     "name_kham_mueang_th": "ผงฮังเล",
+     "roman": "phong hang le",
+     "name_en": "Hang lay spice powder (masala-style blend)",
+     "qty_metric": "10 g (1–2 sachets)",
+     "role": "signature warm-spice aroma",
+     "where_to_buy_th": "กาดหลวง (ตลาดวโรรส) ร้านเครื่องเทศ/ของแห้ง หรือร้านพริกแกงในตลาดสด",
+     "where_to_buy_en": "Warorot (Kad Luang) spice & dried-goods stalls, or the curry-paste vendor (แม่ค้าพริกแกง) in any wet market",
+     "how_to_choose_en": "Sold in small sachets at Warorot; smell it — it should be warm and clove-y.",
+     "substitute_abroad_en": "Mild Indian curry powder or garam masala + a pinch of turmeric (Mae Fah Luang Univ. recipe allows ผงกะหรี่).",
+     "pronunciation_roman": "phong hang le"
+    },
+    {
+     "name_th": "ขิงอ่อนซอย",
+     "name_kham_mueang_th": "ขิง",
+     "roman": "khing",
+     "name_en": "Young ginger, julienned",
+     "qty_metric": "50 g (~1/2 cup)",
+     "role": "fresh bite",
+     "where_to_buy_th": "ตลาดต้นลำไย / ตลาดเมืองใหม่ แผงผักสมุนไพร หรือแม่ค้าผักพื้นบ้านในกาดเช้า",
+     "where_to_buy_en": "Ton Lamyai or Muang Mai market herb/vegetable stalls, or the village-veg sellers at any morning market (กาดเช้า)",
+     "how_to_choose_en": "Young ginger has thin pink-tinged skin.",
+     "substitute_abroad_en": "Regular ginger, cut finer.",
+     "pronunciation_roman": "khing"
+    },
+    {
+     "name_th": "กระเทียมแกะเปลือก (ทั้งกลีบ)",
+     "name_kham_mueang_th": "กระเทียม",
+     "roman": "krathiam",
+     "name_en": "Whole peeled garlic cloves (or pickled garlic)",
+     "qty_metric": "50 g",
+     "role": "sweet mellow garlic",
+     "where_to_buy_th": "ตลาดต้นลำไย / ตลาดเมืองใหม่ แผงผักสมุนไพร หรือแม่ค้าผักพื้นบ้านในกาดเช้า",
+     "where_to_buy_en": "Ton Lamyai or Muang Mai market herb/vegetable stalls, or the village-veg sellers at any morning market (กาดเช้า)",
+     "how_to_choose_en": "Small Thai cloves.",
+     "substitute_abroad_en": "Any garlic; pickled garlic adds tang.",
+     "pronunciation_roman": "krathiam"
+    },
+    {
+     "name_th": "น้ำมะขามเปียก",
+     "name_kham_mueang_th": "น้ำบ่ะขาม",
+     "roman": "nam makham piak",
+     "name_en": "Tamarind water",
+     "qty_metric": "3 Tbsp (~45 g)",
+     "role": "sourness",
+     "where_to_buy_th": "กาดหลวง (ตลาดวโรรส) ร้านเครื่องเทศ/ของแห้ง หรือร้านพริกแกงในตลาดสด",
+     "where_to_buy_en": "Warorot (Kad Luang) spice & dried-goods stalls, or the curry-paste vendor (แม่ค้าพริกแกง) in any wet market",
+     "how_to_choose_en": "Buy pulp blocks; dissolve in warm water, strain.",
+     "substitute_abroad_en": "Tamarind concentrate (use less).",
+     "pronunciation_roman": "nam makham piak"
+    },
+    {
+     "name_th": "ซีอิ๊วดำ",
+     "name_kham_mueang_th": "ซีอิ๊วดำ",
+     "roman": "si-iu dam",
+     "name_en": "Dark sweet soy sauce",
+     "qty_metric": "1 Tbsp",
+     "role": "colour and caramel note",
+     "where_to_buy_th": "กาดหลวง (ตลาดวโรรส) ร้านเครื่องเทศ/ของแห้ง หรือร้านพริกแกงในตลาดสด",
+     "where_to_buy_en": "Warorot (Kad Luang) spice & dried-goods stalls, or the curry-paste vendor (แม่ค้าพริกแกง) in any wet market",
+     "how_to_choose_en": "Thick, molasses-like.",
+     "substitute_abroad_en": "Chinese dark soy + a little sugar.",
+     "pronunciation_roman": "si-iu dam"
+    },
+    {
+     "name_th": "น้ำตาลอ้อย / น้ำตาลปี๊บ",
+     "name_kham_mueang_th": "น้ำอ้อย",
+     "roman": "nam tan oi",
+     "name_en": "Cane or palm sugar",
+     "qty_metric": "to taste (some cooks use much more)",
+     "role": "sweetness",
+     "where_to_buy_th": "กาดหลวง (ตลาดวโรรส) ร้านเครื่องเทศ/ของแห้ง หรือร้านพริกแกงในตลาดสด",
+     "where_to_buy_en": "Warorot (Kad Luang) spice & dried-goods stalls, or the curry-paste vendor (แม่ค้าพริกแกง) in any wet market",
+     "how_to_choose_en": "Dark cane sugar blocks give depth.",
+     "substitute_abroad_en": "Brown sugar.",
+     "pronunciation_roman": "nam tan oi"
+    },
+    {
+     "name_th": "ถั่วลิสงคั่ว (ถ้าชอบ)",
+     "name_kham_mueang_th": "ถั่วดิน",
+     "roman": "thua lisong",
+     "name_en": "Roasted peanuts (optional, Chiang Rai/Nan style)",
+     "qty_metric": "2 Tbsp",
+     "role": "crunch",
+     "where_to_buy_th": "กาดหลวง (ตลาดวโรรส) ร้านเครื่องเทศ/ของแห้ง หรือร้านพริกแกงในตลาดสด",
+     "where_to_buy_en": "Warorot (Kad Luang) spice & dried-goods stalls, or the curry-paste vendor (แม่ค้าพริกแกง) in any wet market",
+     "how_to_choose_en": "",
+     "substitute_abroad_en": "Any unsalted roasted peanuts.",
+     "pronunciation_roman": "thua lisong"
+    }
+   ],
+   "equipment": [
+    {
+     "name_th": "ครกหินและสาก",
+     "kham_mueang_th": "ครก, สาก",
+     "name_en": "Granite mortar and pestle",
+     "substitute_en": "Small blender with 1–2 Tbsp water (texture less fine, aroma less bright)."
+    },
+    {
+     "name_th": "หม้อก้นหนา",
+     "kham_mueang_th": "หม้อ",
+     "name_en": "Heavy pot",
+     "substitute_en": "Dutch oven or slow cooker."
+    }
+   ],
+   "prep_ahead_en": "Marinate the pork in paste + hang lay powder for at least 1 hour (overnight in fridge is fine). Hang lay tastes better the next day.",
+   "steps": [
+    {
+     "n": 1,
+     "th": "โขลกเกลือกับพริกแห้งที่แช่น้ำจนนุ่มให้ละเอียด ใส่ข่า ตะไคร้ แล้วหอมแดง กระเทียม สุดท้ายใส่กะปิ โขลกจนเนียน",
+     "en": "Pound salt with soaked dried chillies until fine; add galangal and lemongrass, then shallots and garlic, and shrimp paste last. Pound to a smooth paste.",
+     "time_min": 15,
+     "sensory_cue_en": "Paste turns brick-red and glossy with no visible fibres; smell is sharp and sweet.",
+     "tip_en": "Dry/hard ingredients first, wet ones later so the paste does not splash (Krua.co, Wongnai tips)."
+    },
+    {
+     "n": 2,
+     "th": "หั่นหมูชิ้นสี่เหลี่ยมราว 2 นิ้ว เคล้าซีอิ๊วดำ แล้วเคล้าพริกแกงกับผงฮังเล หมักอย่างน้อย 1 ชั่วโมง",
+     "en": "Cut the pork into ~5 cm cubes, toss with dark soy, then rub in the paste and hang lay powder. Marinate at least 1 hour.",
+     "time_min": 60,
+     "sensory_cue_en": "Meat is evenly stained red-brown.",
+     "tip_en": ""
+    },
+    {
+     "n": 3,
+     "th": "ตั้งหม้อ ผัดหมูที่หมักจนเนื้อตึงและหอม เติมน้ำพอท่วม",
+     "en": "Stir the marinated pork in a hot pot until it firms up and smells toasty; add water just to cover.",
+     "time_min": 10,
+     "sensory_cue_en": "Fat starts to render; spices smell roasted, not raw.",
+     "tip_en": "Northern curries are water-based — no coconut milk."
+    },
+    {
+     "n": 4,
+     "th": "เคี่ยวไฟอ่อนราว 1–2 ชั่วโมง จนหมูเปื่อยนุ่ม เติมน้ำได้ทีละน้อย",
+     "en": "Simmer gently 1–2 hours until the pork is fork-tender, topping up with a little water if needed.",
+     "time_min": 90,
+     "sensory_cue_en": "Surface shows a layer of red oil; pork belly fat is translucent and wobbly.",
+     "tip_en": ""
+    },
+    {
+     "n": 5,
+     "th": "ใส่ขิงซอย กระเทียมทั้งกลีบ ปรุงด้วยน้ำมะขามเปียก น้ำตาล (น้ำปลาถ้าจำเป็น) เคี่ยวต่อราว 15 นาที ใส่ถั่วลิสงถ้าชอบ",
+     "en": "Add ginger and whole garlic; season with tamarind, sugar (and fish sauce if needed). Simmer ~15 min more; add peanuts if using.",
+     "time_min": 15,
+     "sensory_cue_en": "Sauce is thick, glossy, dark red-brown; taste is sour-sweet-salty with no single flavour dominating.",
+     "tip_en": "Taste and adjust gradually; Chiang Mai families like it sweeter."
+    }
+   ],
+   "taste_profile": {
+    "sour": 3,
+    "salty": 3,
+    "spicy": 1,
+    "sweet": 3,
+    "bitter": 0,
+    "umami": 4,
+    "texture_en": "Very tender pork in a thick, oily, clinging sauce; crunchy ginger.",
+    "description_th": "เปรี้ยว หวาน เค็ม กลมกล่อม ไม่เผ็ดมาก หอมเครื่องเทศและขิง",
+    "description_en": "Rich, mellow sour-sweet-salty, only mildly hot, warm-spiced with fresh ginger bite.",
+    "kham_mueang_taste_words": [
+     {
+      "th": "ลำ",
+      "roman": "lam",
+      "en": "delicious"
+     },
+     {
+      "th": "จ๊าดลำ",
+      "roman": "chat lam",
+      "en": "really delicious"
+     },
+     {
+      "th": "ส้ม",
+      "roman": "som",
+      "en": "sour"
+     }
+    ]
+   },
+   "how_to_eat": {
+    "th": "ปั้นข้าวเหนียวจิ้มน้ำแกงหรือหยิบหมูกินกับข้าวเหนียว ในขันโตกกินร่วมกับน้ำพริกหนุ่ม น้ำพริกอ่อง แคบหมู ผักนึ่ง",
+    "en": "Roll a small ball of sticky rice with your fingers and dip it in the sauce or use it to pick up pork. On a khan tok tray it sits with nam phrik num, nam phrik ong, pork rinds and steamed vegetables.",
+    "with_what": "Sticky rice (ข้าวนึ่ง) by hand; pork crackling (แคบหมู); steamed/fresh veg (ผักนึ่ง ผักสด)",
+    "when_eaten": "Lunch/dinner, festivals, merit-making feasts",
+    "sharing_etiquette_en": "Curry is served in a shared bowl in the middle; take a little at a time with your own spoon or sticky rice, and don't pick through the bowl for the best pieces."
+   },
+   "food_safety_en": "Cooked well; reheat thoroughly. Keeps 2–3 days refrigerated.",
+   "common_mistakes_foreigners_en": [
+    "Adding coconut milk (it's a water-based curry)",
+    "Using lean meat only — it dries out; belly is essential",
+    "Rushing the braise",
+    "Substituting galangal with ginger in the paste",
+    "Dumping all the sugar at once"
+   ],
+   "useful_phrases": [
+    {
+     "kham_mueang_th": "มีแก๋งฮังเลก่อ",
+     "roman": "mi kaeng hang lae ko",
+     "central_th": "มีแกงฮังเลไหม",
+     "en": "Do you have hang lay curry?",
+     "when": "At a market curry stall"
+    },
+    {
+     "kham_mueang_th": "ลำขนาด",
+     "roman": "lam kha-naat",
+     "central_th": "อร่อยมาก",
+     "en": "Very delicious!",
+     "when": "Complimenting the cook"
+    },
+    {
+     "kham_mueang_th": "เอาข้าวนึ่งถุงนึ่ง",
+     "roman": "ao khao nueng thung nueng",
+     "central_th": "เอาข้าวเหนียวถุงหนึ่ง",
+     "en": "One bag of sticky rice, please",
+     "when": "Buying sticky rice"
+    }
+   ],
+   "cultural_notes_th": "เดิมเป็นแกงประจำงานบุญและงานศพที่ทำปริมาณมาก ต้องใช้แรงคนและเวลาเคี่ยวนาน สะท้อนประวัติศาสตร์การค้าขายไม้สักและการอพยพของพม่า–ไทใหญ่ในล้านนา",
+   "cultural_notes_en": "Traditionally a festival and funeral curry cooked in huge pots after slaughtering a pig, requiring many hands and long simmering. Its Burmese/Shan roots reflect centuries of exchange between Lanna, Burma and Shan State.",
+   "sources": [
+    "https://krua.co/food_story/hang-lay-curry",
+    "https://cooking.kapook.com/view272817.html",
+    "https://sites.google.com/mfu.ac.th/chiangrai/traditional/foods/gang-hunglay",
+    "https://www.wongnai.com/recipes/hunglay-curry",
+    "https://www.openbase.in.th/node/6566",
+    "https://api2.krua.co/cooking_post/thai-curr-paste-for-beginner/",
+    "https://www.wongnai.com/food-tips/how-to-pound-curry-paste"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "kaeng_khae",
+   "name_th": "แกงแค",
+   "name_kham_mueang_th": "แก๋งแค",
+   "name_roman": "kaeng khae",
+   "name_en": "Kaeng khae — Northern mixed forest-vegetable curry",
+   "pronunciation": {
+    "syllables": [
+     {
+      "th": "แก๋ง",
+      "roman": "kaeng",
+      "tone": "24",
+      "derived": true
+     },
+     {
+      "th": "แค",
+      "roman": "khae",
+      "tone": "33",
+      "derived": true
+     }
+    ],
+    "tip_en": "'khae' with an aspirated k and a flat mid tone. Tones are DERIVED (not from a recorded pronunciation dictionary) with the Chiang Mai tone-box mapping used across this dataset: high/mid class live unmarked=24 low-rising; low class live unmarked=33 mid; high/mid class + mai ek or dead syllable=21 low-falling; low class + mai ek or dead long=42 high-falling; high/mid class + mai tho=44ʔ high-level-glottal; low class + mai tho or dead short=45 high-rising. Northern spellings with ๋/๊ (แก๋ง, กิ๋น, จิ๊น, โฮ๊ะ) are read as sound hints. Low confidence; needs a native Chiang Mai speaker check. Nan, Phrae, Lampang and Chiang Rai contours differ."
+   },
+   "origin_province": [
+    "ทั่วภาคเหนือ All Northern provinces",
+    "แพร่ Phrae",
+    "เชียงราย Chiang Rai",
+    "เชียงใหม่ Chiang Mai"
+   ],
+   "season": "All year; the vegetable mix changes with the season",
+   "occasion": "Everyday home curry",
+   "serves": "2–4",
+   "description_th": "แกงผักรวมหลายชนิด ใช้ผักแคหรือใบชะพลูชูกลิ่น ไม่ใส่กะทิ น้ำน้อย ใส่ไก่ กบ หรือปลาแห้ง พริกแกงมีมะแขว่นและปลาร้า คนเฒ่าคนแก่ถือว่าเป็นแกงปรับสมดุลร่างกาย",
+   "description_en": "A thin, herbal, peppery curry crammed with many local vegetables — the leaf of cha phlu (wild betel) and 'phak khae' lead the aroma. No coconut milk and not much water. Protein can be chicken, grilled frog or dried fish. The paste uses makhwaen (Northern prickly ash) and pla ra. Elders regard it as a 'balancing' dish.",
+   "ingredients": [
+    {
+     "name_th": "พริกแห้ง",
+     "name_kham_mueang_th": "พริกแห้ง",
+     "roman": "phrik haeng",
+     "name_en": "Dried chillies",
+     "qty_metric": "4–6 pods",
+     "role": "heat",
+     "where_to_buy_th": "กาดหลวง (ตลาดวโรรส) ร้านเครื่องเทศ/ของแห้ง หรือร้านพริกแกงในตลาดสด",
+     "where_to_buy_en": "Warorot (Kad Luang) spice & dried-goods stalls, or the curry-paste vendor (แม่ค้าพริกแกง) in any wet market",
+     "how_to_choose_en": "",
+     "substitute_abroad_en": "Dried red chillies.",
+     "pronunciation_roman": "phrik haeng"
+    },
+    {
+     "name_th": "กระเทียม",
+     "name_kham_mueang_th": "กระเทียม",
+     "roman": "krathiam",
+     "name_en": "Garlic",
+     "qty_metric": "7–10 cloves",
+     "role": "aroma",
+     "where_to_buy_th": "ตลาดต้นลำไย / ตลาดเมืองใหม่ แผงผักสมุนไพร หรือแม่ค้าผักพื้นบ้านในกาดเช้า",
+     "where_to_buy_en": "Ton Lamyai or Muang Mai market herb/vegetable stalls, or the village-veg sellers at any morning market (กาดเช้า)",
+     "how_to_choose_en": "",
+     "substitute_abroad_en": "Garlic.",
+     "pronunciation_roman": "krathiam"
+    },
+    {
+     "name_th": "ตะไคร้ซอย",
+     "name_kham_mueang_th": "ตะไคร้",
+     "roman": "takhrai",
+     "name_en": "Lemongrass, sliced",
+     "qty_metric": "1 stalk",
+     "role": "aroma",
+     "where_to_buy_th": "ตลาดต้นลำไย / ตลาดเมืองใหม่ แผงผักสมุนไพร หรือแม่ค้าผักพื้นบ้านในกาดเช้า",
+     "where_to_buy_en": "Ton Lamyai or Muang Mai market herb/vegetable stalls, or the village-veg sellers at any morning market (กาดเช้า)",
+     "how_to_choose_en": "",
+     "substitute_abroad_en": "Frozen lemongrass.",
+     "pronunciation_roman": "takhrai"
+    },
+    {
+     "name_th": "ข่า",
+     "name_kham_mueang_th": "ข่า",
+     "roman": "kha",
+     "name_en": "Galangal",
+     "qty_metric": "3 slices",
+     "role": "aroma",
+     "where_to_buy_th": "ตลาดต้นลำไย / ตลาดเมืองใหม่ แผงผักสมุนไพร หรือแม่ค้าผักพื้นบ้านในกาดเช้า",
+     "where_to_buy_en": "Ton Lamyai or Muang Mai market herb/vegetable stalls, or the village-veg sellers at any morning market (กาดเช้า)",
+     "how_to_choose_en": "",
+     "substitute_abroad_en": "Frozen galangal.",
+     "pronunciation_roman": "kha"
+    },
+    {
+     "name_th": "มะแขว่น",
+     "name_kham_mueang_th": "บ่ะแขว่น",
+     "roman": "makhwaen",
+     "name_en": "Makhwaen (Zanthoxylum) seeds, toasted",
+     "qty_metric": "1–2 tsp",
+     "role": "signature numbing citrus aroma",
+     "where_to_buy_th": "กาดหลวง (ตลาดวโรรส) ร้านเครื่องเทศ/ของแห้ง หรือร้านพริกแกงในตลาดสด",
+     "where_to_buy_en": "Warorot (Kad Luang) spice & dried-goods stalls, or the curry-paste vendor (แม่ค้าพริกแกง) in any wet market",
+     "how_to_choose_en": "Small dark husks; very fragrant when crushed.",
+     "substitute_abroad_en": "Sichuan pepper (use less).",
+     "pronunciation_roman": "makhwaen"
+    },
+    {
+     "name_th": "เกลือ",
+     "name_kham_mueang_th": "เกลือ",
+     "roman": "kluea",
+     "name_en": "Salt",
+     "qty_metric": "1 tsp",
+     "role": "pounding abrasive",
+     "where_to_buy_th": "กาดหลวง (ตลาดวโรรส) ร้านเครื่องเทศ/ของแห้ง หรือร้านพริกแกงในตลาดสด",
+     "where_to_buy_en": "Warorot (Kad Luang) spice & dried-goods stalls, or the curry-paste vendor (แม่ค้าพริกแกง) in any wet market",
+     "how_to_choose_en": "",
+     "substitute_abroad_en": "Sea salt.",
+     "pronunciation_roman": "kluea"
+    },
+    {
+     "name_th": "ปลาร้าสับ",
+     "name_kham_mueang_th": "ปลาฮ้า",
+     "roman": "pla ra",
+     "name_en": "Fermented fish, chopped",
+     "qty_metric": "1 Tbsp",
+     "role": "funk, salt, depth",
+     "where_to_buy_th": "กาดหลวง/ต้นลำไย แผงของหมักพื้นเมือง (ถั่วเน่า น้ำปู๋ ปลาร้า)",
+     "where_to_buy_en": "Warorot/Ton Lamyai stalls selling Northern ferments (thua nao discs, nam pu, pla ra)",
+     "how_to_choose_en": "Buy cooked/pasteurised if unsure.",
+     "substitute_abroad_en": "Extra fish sauce + a little anchovy paste.",
+     "pronunciation_roman": "pla ra"
+    },
+    {
+     "name_th": "ไก่ (สับชิ้น)",
+     "name_kham_mueang_th": "จิ๊นไก่",
+     "roman": "kai",
+     "name_en": "Chicken on the bone (village chicken ideal), chopped",
+     "qty_metric": "300–400 g",
+     "role": "protein",
+     "where_to_buy_th": "แผงหมูในตลาดต้นลำไย ตลาดเมืองใหม่ หรือกาดใกล้บ้าน (ไปเช้า)",
+     "where_to_buy_en": "Pork butchers at Ton Lamyai, Muang Mai or your neighbourhood market — go early morning",
+     "how_to_choose_en": "ไก่บ้าน (free-range) has more flavour and firmer texture.",
+     "substitute_abroad_en": "Chicken thighs.",
+     "pronunciation_roman": "kai"
+    },
+    {
+     "name_th": "ใบชะพลู",
+     "name_kham_mueang_th": "ใบชะพลู (บางแหล่งเรียกรวมกับผักแค — ต้องตรวจสอบ)",
+     "roman": "bai cha phlu",
+     "name_en": "Wild betel leaf (Piper sarmentosum)",
+     "qty_metric": "1 handful",
+     "role": "defining peppery aroma",
+     "where_to_buy_th": "ตลาดต้นลำไย / ตลาดเมืองใหม่ แผงผักสมุนไพร หรือแม่ค้าผักพื้นบ้านในกาดเช้า",
+     "where_to_buy_en": "Ton Lamyai or Muang Mai market herb/vegetable stalls, or the village-veg sellers at any morning market (กาดเช้า)",
+     "how_to_choose_en": "Glossy, heart-shaped, unblemished.",
+     "substitute_abroad_en": "Betel leaf from Vietnamese grocers (lá lốt).",
+     "pronunciation_roman": "bai cha phlu"
+    },
+    {
+     "name_th": "มะเขือเปราะ, มะเขือพวง",
+     "name_kham_mueang_th": "บ่ะเขือ",
+     "roman": "makhuea",
+     "name_en": "Thai round eggplant; pea eggplant",
+     "qty_metric": "10 + 10–20",
+     "role": "body, bitterness",
+     "where_to_buy_th": "ตลาดต้นลำไย / ตลาดเมืองใหม่ แผงผักสมุนไพร หรือแม่ค้าผักพื้นบ้านในกาดเช้า",
+     "where_to_buy_en": "Ton Lamyai or Muang Mai market herb/vegetable stalls, or the village-veg sellers at any morning market (กาดเช้า)",
+     "how_to_choose_en": "Firm, glossy, no soft spots.",
+     "substitute_abroad_en": "Small eggplants.",
+     "pronunciation_roman": "makhuea"
+    },
+    {
+     "name_th": "ถั่วฝักยาว",
+     "name_kham_mueang_th": "ถั่วฝักยาว",
+     "roman": "thua fak yao",
+     "name_en": "Long beans, 4 cm pieces",
+     "qty_metric": "2–3 pods",
+     "role": "crunch",
+     "where_to_buy_th": "ตลาดต้นลำไย / ตลาดเมืองใหม่ แผงผักสมุนไพร หรือแม่ค้าผักพื้นบ้านในกาดเช้า",
+     "where_to_buy_en": "Ton Lamyai or Muang Mai market herb/vegetable stalls, or the village-veg sellers at any morning market (กาดเช้า)",
+     "how_to_choose_en": "",
+     "substitute_abroad_en": "Green beans.",
+     "pronunciation_roman": "thua fak yao"
+    },
+    {
+     "name_th": "ใบพริก, ผักชีฝรั่ง, ชะอม, ตำลึง, ยอดดีปลี, ผักคราด, ดอกแค, เห็ดลม ฯลฯ",
+     "name_kham_mueang_th": "ผักแก๋งแค",
+     "roman": "various",
+     "name_en": "Mixed greens: chilli leaves, sawtooth coriander, cha-om (acacia), ivy gourd tips, long-pepper shoots, para cress, sesbania flowers, wild mushrooms — whatever is in season",
+     "qty_metric": "2–3 cups total",
+     "role": "herbal complexity",
+     "where_to_buy_th": "ตลาดต้นลำไย / ตลาดเมืองใหม่ แผงผักสมุนไพร หรือแม่ค้าผักพื้นบ้านในกาดเช้า",
+     "where_to_buy_en": "Ton Lamyai/Muang Mai veg sellers often sell a ready-bundled 'ผักแกงแค' mix",
+     "how_to_choose_en": "Fresh and not wilted; mixed bundles are fine.",
+     "substitute_abroad_en": "Spinach, chard, green beans, Thai basil, any peppery greens.",
+     "pronunciation_roman": "various"
+    },
+    {
+     "name_th": "น้ำปลา",
+     "name_kham_mueang_th": "น้ำปลา",
+     "roman": "nam pla",
+     "name_en": "Fish sauce",
+     "qty_metric": "to taste",
+     "role": "salt",
+     "where_to_buy_th": "กาดหลวง (ตลาดวโรรส) ร้านเครื่องเทศ/ของแห้ง หรือร้านพริกแกงในตลาดสด",
+     "where_to_buy_en": "Warorot (Kad Luang) spice & dried-goods stalls, or the curry-paste vendor (แม่ค้าพริกแกง) in any wet market",
+     "how_to_choose_en": "",
+     "substitute_abroad_en": "Fish sauce.",
+     "pronunciation_roman": "nam pla"
+    }
+   ],
+   "equipment": [
+    {
+     "name_th": "ครก",
+     "kham_mueang_th": "ครก",
+     "name_en": "Mortar and pestle",
+     "substitute_en": "Mini chopper"
+    },
+    {
+     "name_th": "หม้อ",
+     "kham_mueang_th": "หม้อ",
+     "name_en": "Pot",
+     "substitute_en": "Any saucepan"
+    }
+   ],
+   "prep_ahead_en": "Wash and sort vegetables into 'hard' (eggplants, beans), 'medium' and 'soft leaves/herbs' piles before cooking.",
+   "steps": [
+    {
+     "n": 1,
+     "th": "ใส่เกลือกับพริกแห้งลงครกก่อน โขลกให้แหลก ใส่ข่า ตะไคร้ กระเทียม มะแขว่น โขลกให้ละเอียด แล้วใส่ปลาร้าคลุกให้เข้ากัน",
+     "en": "Pound salt and dried chillies first, then galangal, lemongrass, garlic and makhwaen; finally mix in the pla ra.",
+     "time_min": 12,
+     "sensory_cue_en": "Fragrant, slightly coarse paste; makhwaen gives a citrus-pine smell.",
+     "tip_en": "Too much makhwaen overwhelms (Krua.co)."
+    },
+    {
+     "n": 2,
+     "th": "ผัดพริกแกงกับไก่ในหม้อ (ไม่ต้องใส่น้ำมัน ไก่มีมันในตัว) จนหอม",
+     "en": "Stir-fry the paste with the chicken in the pot (no oil needed — chicken fat is enough) until fragrant.",
+     "time_min": 5,
+     "sensory_cue_en": "Chicken turns opaque; paste smells toasted.",
+     "tip_en": ""
+    },
+    {
+     "n": 3,
+     "th": "เติมน้ำราว 600 มล. ต้มจนไก่สุก",
+     "en": "Add ~600 ml water and simmer until the chicken is cooked.",
+     "time_min": 15,
+     "sensory_cue_en": "Clear, reddish broth.",
+     "tip_en": "Keep broth scant — it's not a soup."
+    },
+    {
+     "n": 4,
+     "th": "ใส่ผักแข็งก่อน (มะเขือ) ตามด้วยถั่วฝักยาว สุดท้ายผักใบและสมุนไพร (ใบพริก ชะพลู ชะอม ผักชีฝรั่ง) ต้มต่อ 1–2 นาที",
+     "en": "Add hard veg first (eggplants), then beans, and finally the leafy greens and herbs; cook 1–2 minutes more.",
+     "time_min": 8,
+     "sensory_cue_en": "Leaves just wilted and bright green.",
+     "tip_en": ""
+    },
+    {
+     "n": 5,
+     "th": "ชิมและปรุงด้วยน้ำปลา ยกลงเปิดฝาแง้มไว้ไม่ให้ผักเละ",
+     "en": "Taste, adjust with fish sauce, and take off the heat with the lid ajar so the greens don't overcook.",
+     "time_min": 1,
+     "sensory_cue_en": "",
+     "tip_en": ""
+    }
+   ],
+   "taste_profile": {
+    "sour": 0,
+    "salty": 3,
+    "spicy": 3,
+    "sweet": 0,
+    "bitter": 2,
+    "umami": 3,
+    "texture_en": "Thin, herbal broth packed with vegetables of different textures.",
+    "description_th": "เผ็ด เค็ม หอมสมุนไพร ขมนิดๆ ชาลิ้นจากมะแขว่น",
+    "description_en": "Peppery, salty, herbal and slightly bitter, with a numbing citrus note from makhwaen.",
+    "kham_mueang_taste_words": [
+     {
+      "th": "ลำ",
+      "roman": "lam",
+      "en": "delicious"
+     },
+     {
+      "th": "เผ็ด",
+      "roman": "phet",
+      "en": "spicy"
+     }
+    ]
+   },
+   "how_to_eat": {
+    "th": "กินกับข้าวเหนียว ซดน้ำแกง มักกินคู่กับน้ำพริกและของทอด",
+    "en": "Eat with sticky rice; sip the broth. Often paired with a nam phrik and something fried/grilled.",
+    "with_what": "Sticky rice; grilled fish or pork; nam phrik",
+    "when_eaten": "Everyday lunch/dinner",
+    "sharing_etiquette_en": "Shared bowl in the centre; take a spoonful to your own plate or dip sticky rice."
+   },
+   "food_safety_en": "If using wild mushrooms (เห็ดลม etc.), buy from established market sellers only. Use cooked/bottled pla ra if unsure of the source.",
+   "common_mistakes_foreigners_en": [
+    "Too much water — it becomes a bland soup",
+    "Adding all vegetables at once",
+    "Leaving out cha phlu leaf",
+    "Over-using makhwaen"
+   ],
+   "useful_phrases": [
+    {
+     "kham_mueang_th": "ผักแก๋งแคมีก่อ",
+     "roman": "phak kaeng khae mi ko",
+     "central_th": "มีผักแกงแคไหม",
+     "en": "Do you have kaeng khae vegetables?",
+     "when": "At a vegetable stall"
+    }
+   ],
+   "cultural_notes_th": "แต่ละบ้านใช้ผักตามฤดูกาลที่หาได้รอบบ้าน ผักหลายชนิดให้คุณค่าต่างกัน คนเฒ่าคนแก่ถือว่าแกงเป็นอาหารปรับสมดุล",
+   "cultural_notes_en": "Each household uses whatever grows around the house that season; variety is the point. Elders treat it as food that keeps the body in balance.",
+   "sources": [
+    "https://www.matichon.co.th/weekly/column/article_184162",
+    "https://krua.co/food_story/kang-care-kai",
+    "https://sites.google.com/mfu.ac.th/chiangrai/traditional/foods/gang-khae",
+    "https://www.wongnai.com/food-tips/top-35-must-try-northern-thai-dishes"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "kaeng_ho",
+   "name_th": "แกงโฮะ",
+   "name_kham_mueang_th": "แก๋งโฮ๊ะ",
+   "name_roman": "kaeng ho",
+   "name_en": "Kaeng ho — 'combined' curry stir-fried from leftover curries",
+   "pronunciation": {
+    "syllables": [
+     {
+      "th": "แก๋ง",
+      "roman": "kaeng",
+      "tone": "24",
+      "derived": true
+     },
+     {
+      "th": "โฮ๊ะ",
+      "roman": "ho",
+      "tone": "45",
+      "derived": true
+     }
+    ],
+    "tip_en": "'ho' is short and high, cut off sharply — like a quick 'hoh!'. Tones are DERIVED (not from a recorded pronunciation dictionary) with the Chiang Mai tone-box mapping used across this dataset: high/mid class live unmarked=24 low-rising; low class live unmarked=33 mid; high/mid class + mai ek or dead syllable=21 low-falling; low class + mai ek or dead long=42 high-falling; high/mid class + mai tho=44ʔ high-level-glottal; low class + mai tho or dead short=45 high-rising. Northern spellings with ๋/๊ (แก๋ง, กิ๋น, จิ๊น, โฮ๊ะ) are read as sound hints. Low confidence; needs a native Chiang Mai speaker check. Nan, Phrae, Lampang and Chiang Rai contours differ."
+   },
+   "origin_province": [
+    "เชียงใหม่ Chiang Mai",
+    "ทั่วภาคเหนือ All North"
+   ],
+   "season": "After festivals and temple feasts; all year",
+   "occasion": "Day after merit-making at the temple (แกงโฮะวัด), weddings, funerals; now also cooked fresh",
+   "serves": "Flexible",
+   "description_th": "'โฮะ' แปลว่ารวม แกงโฮะคือการนำแกงที่เหลือจากงานบุญ เช่น แกงฮังเล แกงวุ้นเส้น ห่อนึ่ง มาเคี่ยวรวมกันในกระทะ ใส่ผัก (ถั่วฝักยาว มะเขือ ชะอม ตำลึง ใบโกศล) และตะไคร้ ใบมะกรูดซอย จนแกงแห้ง",
+   "description_en": "'Ho' means 'to combine'. Kaeng ho takes leftover festival curries — hang lay, glass-noodle curry, steamed curries — and cooks them down together in a wok with fresh vegetables, lemongrass and shredded kaffir lime leaf until almost dry. A no-waste dish that became a favourite in its own right.",
+   "ingredients": [
+    {
+     "name_th": "แกงฮังเลเหลือ",
+     "name_kham_mueang_th": "แก๋งฮังเล",
+     "roman": "kaeng hang lae",
+     "name_en": "Leftover hang lay curry",
+     "qty_metric": "2 cups",
+     "role": "base flavour",
+     "where_to_buy_th": "ร้านแกงถุงในตลาด",
+     "where_to_buy_en": "Any market curry stall sells bagged hang lay",
+     "how_to_choose_en": "",
+     "substitute_abroad_en": "Your own leftover hang lay",
+     "pronunciation_roman": "kaeng hang lae"
+    },
+    {
+     "name_th": "แกงวุ้นเส้น / วุ้นเส้นแช่น้ำ",
+     "name_kham_mueang_th": "แก๋งวุ้นเส้น",
+     "roman": "kaeng wun sen",
+     "name_en": "Leftover glass-noodle curry or soaked glass noodles",
+     "qty_metric": "1 cup",
+     "role": "body",
+     "where_to_buy_th": "กาดหลวง (ตลาดวโรรส) ร้านเครื่องเทศ/ของแห้ง หรือร้านพริกแกงในตลาดสด",
+     "where_to_buy_en": "Warorot (Kad Luang) spice & dried-goods stalls, or the curry-paste vendor (แม่ค้าพริกแกง) in any wet market",
+     "how_to_choose_en": "",
+     "substitute_abroad_en": "Mung-bean glass noodles",
+     "pronunciation_roman": "kaeng wun sen"
+    },
+    {
+     "name_th": "หน่อไม้ดอง",
+     "name_kham_mueang_th": "หน่อส้ม",
+     "roman": "no mai dong",
+     "name_en": "Pickled bamboo shoot",
+     "qty_metric": "1/2 cup",
+     "role": "sourness",
+     "where_to_buy_th": "กาดหลวง/ต้นลำไย แผงของหมักพื้นเมือง (ถั่วเน่า น้ำปู๋ ปลาร้า)",
+     "where_to_buy_en": "Warorot/Ton Lamyai stalls selling Northern ferments (thua nao discs, nam pu, pla ra)",
+     "how_to_choose_en": "Pale, sour smell, no slime.",
+     "substitute_abroad_en": "Jarred pickled bamboo shoot",
+     "pronunciation_roman": "no mai dong"
+    },
+    {
+     "name_th": "ถั่วฝักยาว มะเขือพวง มะเขือเปราะ ชะอม ตำลึง ใบโกศล",
+     "name_kham_mueang_th": "",
+     "roman": "various",
+     "name_en": "Long beans, pea & round eggplant, cha-om, ivy gourd leaves, croton-type 'bai koson' leaves",
+     "qty_metric": "2–3 cups",
+     "role": "freshness",
+     "where_to_buy_th": "ตลาดต้นลำไย / ตลาดเมืองใหม่ แผงผักสมุนไพร หรือแม่ค้าผักพื้นบ้านในกาดเช้า",
+     "where_to_buy_en": "Ton Lamyai or Muang Mai market herb/vegetable stalls, or the village-veg sellers at any morning market (กาดเช้า)",
+     "how_to_choose_en": "",
+     "substitute_abroad_en": "Green beans, eggplant, spinach",
+     "pronunciation_roman": "various"
+    },
+    {
+     "name_th": "ตะไคร้ ใบมะกรูดซอยฝอย",
+     "name_kham_mueang_th": "ตะไคร้ ใบบ่ะขูด",
+     "roman": "takhrai, bai makrut",
+     "name_en": "Lemongrass and finely shredded kaffir lime leaf",
+     "qty_metric": "2 stalks, 5 leaves",
+     "role": "freshens leftovers",
+     "where_to_buy_th": "ตลาดต้นลำไย / ตลาดเมืองใหม่ แผงผักสมุนไพร หรือแม่ค้าผักพื้นบ้านในกาดเช้า",
+     "where_to_buy_en": "Ton Lamyai or Muang Mai market herb/vegetable stalls, or the village-veg sellers at any morning market (กาดเช้า)",
+     "how_to_choose_en": "",
+     "substitute_abroad_en": "Frozen lime leaves",
+     "pronunciation_roman": "takhrai, bai makrut"
+    },
+    {
+     "name_th": "พริกแห้งทอด / พริกสด",
+     "name_kham_mueang_th": "พริก",
+     "roman": "phrik",
+     "name_en": "Fried dried chillies or fresh chillies",
+     "qty_metric": "to taste",
+     "role": "heat",
+     "where_to_buy_th": "กาดหลวง (ตลาดวโรรส) ร้านเครื่องเทศ/ของแห้ง หรือร้านพริกแกงในตลาดสด",
+     "where_to_buy_en": "Warorot (Kad Luang) spice & dried-goods stalls, or the curry-paste vendor (แม่ค้าพริกแกง) in any wet market",
+     "how_to_choose_en": "",
+     "substitute_abroad_en": "",
+     "pronunciation_roman": "phrik"
+    }
+   ],
+   "equipment": [
+    {
+     "name_th": "กระทะใบบัวใหญ่",
+     "kham_mueang_th": "กระทะ",
+     "name_en": "Large wok",
+     "substitute_en": "Wide deep frying pan"
+    }
+   ],
+   "prep_ahead_en": "Collect leftover curries (must have been kept cold and be fresh — 1 day old max).",
+   "steps": [
+    {
+     "n": 1,
+     "th": "ตั้งกระทะใบบัวใหญ่ เทแกงที่เหลือทั้งหมดลงไปเคี่ยว",
+     "en": "Heat a large wok and tip in all the leftover curries; bring to a bubbling simmer.",
+     "time_min": 5,
+     "sensory_cue_en": "Everything boiling hot throughout.",
+     "tip_en": "Reboiling well is the food-safety point of this dish."
+    },
+    {
+     "n": 2,
+     "th": "ใส่หน่อไม้ดองและวุ้นเส้น คนให้เข้ากัน",
+     "en": "Add pickled bamboo and glass noodles; stir.",
+     "time_min": 3,
+     "sensory_cue_en": "",
+     "tip_en": ""
+    },
+    {
+     "n": 3,
+     "th": "ใส่ผักแข็งก่อน แล้วผักใบ เคี่ยวจนแกงแห้ง ผักสุก วุ้นเส้นนิ่ม",
+     "en": "Add hard vegetables then leafy ones; stir-simmer until the liquid is mostly absorbed, veg cooked and noodles soft.",
+     "time_min": 10,
+     "sensory_cue_en": "Almost dry, glossy mixture; noodles translucent.",
+     "tip_en": ""
+    },
+    {
+     "n": 4,
+     "th": "โรยตะไคร้ ใบมะกรูดซอย พริก คลุกแล้วยกลง",
+     "en": "Scatter lemongrass, shredded lime leaf and chillies; toss and serve.",
+     "time_min": 1,
+     "sensory_cue_en": "A burst of citrus aroma over the stewed curry.",
+     "tip_en": "Krua.co notes lemongrass and lime leaf mask any 'stale' smell."
+    }
+   ],
+   "taste_profile": {
+    "sour": 2,
+    "salty": 3,
+    "spicy": 2,
+    "sweet": 2,
+    "bitter": 1,
+    "umami": 4,
+    "texture_en": "Dry-ish stir-fried stew with noodles and mixed veg.",
+    "description_th": "เข้มข้น เปรี้ยวหวานเค็ม หอมตะไคร้ใบมะกรูด",
+    "description_en": "Dense, sour-sweet-salty, perfumed with lemongrass and lime leaf.",
+    "kham_mueang_taste_words": [
+     {
+      "th": "ลำ",
+      "roman": "lam",
+      "en": "delicious"
+     }
+    ]
+   },
+   "how_to_eat": {
+    "th": "กินกับข้าวเหนียว",
+    "en": "With sticky rice, picked up with the fingers.",
+    "with_what": "Sticky rice; fresh vegetables",
+    "when_eaten": "Morning after a festival or temple feast",
+    "sharing_etiquette_en": "Temple kaeng ho is shared among helpers — accepting some is accepting a share in the merit."
+   },
+   "food_safety_en": "Only combine leftovers that were refrigerated and are no more than a day old; bring everything to a full boil. In hot weather, unrefrigerated party leftovers can spoil fast.",
+   "common_mistakes_foreigners_en": [
+    "Thinking it's a 'soup' — it should be almost dry",
+    "Using spoiled leftovers",
+    "Skipping the lemongrass/lime leaf finish"
+   ],
+   "useful_phrases": [
+    {
+     "kham_mueang_th": "โฮ๊ะกั๋น",
+     "roman": "ho kan",
+     "central_th": "รวมกัน",
+     "en": "Mix/combine together",
+     "when": "Describing the dish"
+    }
+   ],
+   "cultural_notes_th": "แกงโฮะวัดเป็นแกงแห่งความสามัคคี อาหารที่ถวายพระถูกแจกจ่ายกลับคืนมาในนามแกงโฮะวัด สะท้อนภูมิปัญญาไม่ทิ้งอาหาร",
+   "cultural_notes_en": "'Temple kaeng ho' is called a curry of togetherness: food offered to monks is redistributed back to the community in a new form. It embodies Lanna thrift.",
+   "sources": [
+    "https://krua.co/food_story/kangho"
+   ],
+   "confidence": "medium"
+  },
+  {
+   "id": "kaeng_khanun",
+   "name_th": "แกงขนุน",
+   "name_kham_mueang_th": "แก๋งบ่าหนุน / แก๋งบะหนุน",
+   "name_roman": "kaeng khanun (Northern: kaeng ba-nun)",
+   "name_en": "Young jackfruit curry (auspicious New Year curry)",
+   "pronunciation": {
+    "syllables": [
+     {
+      "th": "แก๋ง",
+      "roman": "kaeng",
+      "tone": "24",
+      "derived": true
+     },
+     {
+      "th": "บ่า",
+      "roman": "ba",
+      "tone": "21",
+      "derived": true
+     },
+     {
+      "th": "หนุน",
+      "roman": "nun",
+      "tone": "24",
+      "derived": true
+     }
+    ],
+    "tip_en": "'Ba-nun' — in Kham Mueang the fruit is บ่าหนุน; 'nun' (หนุน) also means 'to support', hence the good-luck pun. Tones are DERIVED (not from a recorded pronunciation dictionary) with the Chiang Mai tone-box mapping used across this dataset: high/mid class live unmarked=24 low-rising; low class live unmarked=33 mid; high/mid class + mai ek or dead syllable=21 low-falling; low class + mai ek or dead long=42 high-falling; high/mid class + mai tho=44ʔ high-level-glottal; low class + mai tho or dead short=45 high-rising. Northern spellings with ๋/๊ (แก๋ง, กิ๋น, จิ๊น, โฮ๊ะ) are read as sound hints. Low confidence; needs a native Chiang Mai speaker check. Nan, Phrae, Lampang and Chiang Rai contours differ."
+   },
+   "origin_province": [
+    "ทั่วภาคเหนือ All North",
+    "เชียงราย Chiang Rai",
+    "เชียงใหม่ Chiang Mai"
+   ],
+   "season": "Especially on วันปากปี๋ / วันพญาวัน during Pi Mai Mueang (Songkran, mid-April); young jackfruit available much of the year",
+   "occasion": "Lanna New Year, weddings (blessing), family gatherings",
+   "serves": "4",
+   "description_th": "แกงขนุนอ่อนกับกระดูกหมูหรือปลาแห้ง ใส่มะเขือส้ม ชะอม ใบชะพลู เชื่อกันว่ากินในวันปากปี๋/วันพญาวันแล้วจะมีสิ่งเกื้อหนุนจุนเจือตลอดปี เพราะ 'หนุน' แปลว่าค้ำจุน",
+   "description_en": "Young (green) jackfruit simmered with pork ribs or dried fish in a garlicky chilli-shrimp-paste broth, finished with small sour tomatoes, cha-om and wild betel leaf. Many Northerners eat it on the Lanna New Year 'head of the year' day because 'nun' (from ba-nun, jackfruit) also means 'to prop up/support' — so the year ahead is supported.",
+   "ingredients": [
+    {
+     "name_th": "ขนุนอ่อน",
+     "name_kham_mueang_th": "บ่าหนุนอ่อน",
+     "roman": "khanun on",
+     "name_en": "Young green jackfruit, peeled, cut in chunks",
+     "qty_metric": "300 g",
+     "role": "main vegetable",
+     "where_to_buy_th": "ตลาดต้นลำไย / ตลาดเมืองใหม่ แผงผักสมุนไพร หรือแม่ค้าผักพื้นบ้านในกาดเช้า",
+     "where_to_buy_en": "Market vegetable sellers sell it pre-peeled and cut, often in water",
+     "how_to_choose_en": "Firm, pale; pre-cut pieces kept in water.",
+     "substitute_abroad_en": "Canned young green jackfruit in brine (rinse well).",
+     "pronunciation_roman": "khanun on"
+    },
+    {
+     "name_th": "กระดูกหมูอ่อน / ซี่โครงหมู",
+     "name_kham_mueang_th": "จิ๊นหมู",
+     "roman": "kraduk mu",
+     "name_en": "Pork soft-bone ribs",
+     "qty_metric": "300 g",
+     "role": "broth and protein",
+     "where_to_buy_th": "แผงหมูในตลาดต้นลำไย ตลาดเมืองใหม่ หรือกาดใกล้บ้าน (ไปเช้า)",
+     "where_to_buy_en": "Pork butchers at Ton Lamyai, Muang Mai or your neighbourhood market — go early morning",
+     "how_to_choose_en": "",
+     "substitute_abroad_en": "Pork spare ribs.",
+     "pronunciation_roman": "kraduk mu"
+    },
+    {
+     "name_th": "พริกแห้งเม็ดใหญ่",
+     "name_kham_mueang_th": "พริกแห้ง",
+     "roman": "phrik haeng",
+     "name_en": "Large dried red chillies (soaked, seeds out for less heat)",
+     "qty_metric": "5–10 pods (10–15 g)",
+     "role": "heat, colour",
+     "where_to_buy_th": "กาดหลวง (ตลาดวโรรส) ร้านเครื่องเทศ/ของแห้ง หรือร้านพริกแกงในตลาดสด",
+     "where_to_buy_en": "Warorot (Kad Luang) spice & dried-goods stalls, or the curry-paste vendor (แม่ค้าพริกแกง) in any wet market",
+     "how_to_choose_en": "Deep red, brittle, no mould.",
+     "substitute_abroad_en": "Any mild dried red chilli (e.g. guajillo) + a few dried bird's-eye for heat.",
+     "pronunciation_roman": "phrik haeng"
+    },
+    {
+     "name_th": "เกลือ",
+     "name_kham_mueang_th": "เกลือ",
+     "roman": "kluea",
+     "name_en": "Salt (coarse/sea salt)",
+     "qty_metric": "1 tsp",
+     "role": "abrasive for pounding, seasoning",
+     "where_to_buy_th": "กาดหลวง (ตลาดวโรรส) ร้านเครื่องเทศ/ของแห้ง หรือร้านพริกแกงในตลาดสด",
+     "where_to_buy_en": "Warorot (Kad Luang) spice & dried-goods stalls, or the curry-paste vendor (แม่ค้าพริกแกง) in any wet market",
+     "how_to_choose_en": "Coarse sea salt grinds chillies best.",
+     "substitute_abroad_en": "Any coarse salt.",
+     "pronunciation_roman": "kluea"
+    },
+    {
+     "name_th": "หอมแดง",
+     "name_kham_mueang_th": "หอมแดง",
+     "roman": "hom daeng",
+     "name_en": "Thai shallots",
+     "qty_metric": "3–5 bulbs",
+     "role": "sweet aromatic body",
+     "where_to_buy_th": "ตลาดต้นลำไย / ตลาดเมืองใหม่ แผงผักสมุนไพร หรือแม่ค้าผักพื้นบ้านในกาดเช้า",
+     "where_to_buy_en": "Ton Lamyai or Muang Mai market herb/vegetable stalls, or the village-veg sellers at any morning market (กาดเช้า)",
+     "how_to_choose_en": "Small, firm, purple-red.",
+     "substitute_abroad_en": "Small French shallots.",
+     "pronunciation_roman": "hom daeng"
+    },
+    {
+     "name_th": "กระเทียม",
+     "name_kham_mueang_th": "กระเทียม",
+     "roman": "krathiam",
+     "name_en": "Thai garlic (small cloves)",
+     "qty_metric": "5–10 cloves",
+     "role": "aroma",
+     "where_to_buy_th": "ตลาดต้นลำไย / ตลาดเมืองใหม่ แผงผักสมุนไพร หรือแม่ค้าผักพื้นบ้านในกาดเช้า",
+     "where_to_buy_en": "Ton Lamyai or Muang Mai market herb/vegetable stalls, or the village-veg sellers at any morning market (กาดเช้า)",
+     "how_to_choose_en": "Small pinkish Thai cloves are more pungent.",
+     "substitute_abroad_en": "Regular garlic, use ~2/3 amount.",
+     "pronunciation_roman": "krathiam"
+    },
+    {
+     "name_th": "กะปิ",
+     "name_kham_mueang_th": "กะปิ",
+     "roman": "kapi",
+     "name_en": "Shrimp paste",
+     "qty_metric": "1 tsp",
+     "role": "salty-umami depth",
+     "where_to_buy_th": "กาดหลวง/ต้นลำไย แผงของหมักพื้นเมือง (ถั่วเน่า น้ำปู๋ ปลาร้า)",
+     "where_to_buy_en": "Warorot/Ton Lamyai stalls selling Northern ferments (thua nao discs, nam pu, pla ra)",
+     "how_to_choose_en": "Purple-grey, firm, smells strongly of shrimp — that is normal.",
+     "substitute_abroad_en": "Any Thai/Malay belacan-type shrimp paste.",
+     "pronunciation_roman": "kapi"
+    },
+    {
+     "name_th": "มะเขือเทศลูกเล็ก / มะเขือส้ม",
+     "name_kham_mueang_th": "บ่ะเขือส้ม",
+     "roman": "makhuea som",
+     "name_en": "Small sour tomatoes",
+     "qty_metric": "50 g",
+     "role": "sourness",
+     "where_to_buy_th": "ตลาดต้นลำไย / ตลาดเมืองใหม่ แผงผักสมุนไพร หรือแม่ค้าผักพื้นบ้านในกาดเช้า",
+     "where_to_buy_en": "Ton Lamyai or Muang Mai market herb/vegetable stalls, or the village-veg sellers at any morning market (กาดเช้า)",
+     "how_to_choose_en": "Small, very tart local tomatoes.",
+     "substitute_abroad_en": "Cherry tomatoes + a squeeze of lime.",
+     "pronunciation_roman": "makhuea som"
+    },
+    {
+     "name_th": "ชะอม",
+     "name_kham_mueang_th": "ผักหละ",
+     "roman": "cha-om",
+     "name_en": "Cha-om (Acacia pennata) shoots",
+     "qty_metric": "1 bunch",
+     "role": "aroma",
+     "where_to_buy_th": "ตลาดต้นลำไย / ตลาดเมืองใหม่ แผงผักสมุนไพร หรือแม่ค้าผักพื้นบ้านในกาดเช้า",
+     "where_to_buy_en": "Ton Lamyai or Muang Mai market herb/vegetable stalls, or the village-veg sellers at any morning market (กาดเช้า)",
+     "how_to_choose_en": "Tender tips; beware thorns on stems.",
+     "substitute_abroad_en": "Omit, or a few basil leaves.",
+     "pronunciation_roman": "cha-om"
+    },
+    {
+     "name_th": "ใบชะพลู",
+     "name_kham_mueang_th": "ใบชะพลู",
+     "roman": "bai cha phlu",
+     "name_en": "Wild betel leaf",
+     "qty_metric": "1 bunch",
+     "role": "peppery aroma",
+     "where_to_buy_th": "ตลาดต้นลำไย / ตลาดเมืองใหม่ แผงผักสมุนไพร หรือแม่ค้าผักพื้นบ้านในกาดเช้า",
+     "where_to_buy_en": "Ton Lamyai or Muang Mai market herb/vegetable stalls, or the village-veg sellers at any morning market (กาดเช้า)",
+     "how_to_choose_en": "",
+     "substitute_abroad_en": "Lá lốt from Vietnamese grocers.",
+     "pronunciation_roman": "bai cha phlu"
+    }
+   ],
+   "equipment": [
+    {
+     "name_th": "ครก",
+     "kham_mueang_th": "ครก",
+     "name_en": "Mortar and pestle",
+     "substitute_en": "Mini chopper"
+    },
+    {
+     "name_th": "หม้อ",
+     "kham_mueang_th": "หม้อ",
+     "name_en": "Pot",
+     "substitute_en": "Saucepan"
+    }
+   ],
+   "prep_ahead_en": "If cutting jackfruit yourself, oil your knife and hands — the sap is extremely sticky. Keep cut pieces in water.",
+   "steps": [
+    {
+     "n": 1,
+     "th": "โขลกเกลือ พริกแห้ง กระเทียม หอมแดง กะปิ ให้ละเอียด",
+     "en": "Pound salt, dried chillies, garlic, shallots and shrimp paste to a paste.",
+     "time_min": 10,
+     "sensory_cue_en": "Smooth brick-red paste.",
+     "tip_en": ""
+    },
+    {
+     "n": 2,
+     "th": "ต้มน้ำ ~800 มล. ให้เดือด ละลายพริกแกง ใส่กระดูกหมู เคี่ยวจนนุ่ม",
+     "en": "Boil ~800 ml water, dissolve the paste, add pork ribs and simmer until tender.",
+     "time_min": 40,
+     "sensory_cue_en": "Ribs meat pulls from bone.",
+     "tip_en": ""
+    },
+    {
+     "n": 3,
+     "th": "ใส่ขนุนอ่อน ต้มจนนุ่ม",
+     "en": "Add the jackfruit and cook until tender.",
+     "time_min": 15,
+     "sensory_cue_en": "Jackfruit pierces easily; texture like artichoke heart.",
+     "tip_en": ""
+    },
+    {
+     "n": 4,
+     "th": "ใส่มะเขือส้ม ชะอม ใบชะพลู ปรุงรส ปิดไฟ ไม่ปิดฝาทันที",
+     "en": "Add tomatoes, cha-om and cha phlu; season; turn off the heat and leave uncovered so herbs don't stew.",
+     "time_min": 3,
+     "sensory_cue_en": "Leaves just wilted.",
+     "tip_en": "iKasalong tip: don't cover right away."
+    }
+   ],
+   "taste_profile": {
+    "sour": 2,
+    "salty": 3,
+    "spicy": 2,
+    "sweet": 1,
+    "bitter": 0,
+    "umami": 3,
+    "texture_en": "Meaty, fibrous jackfruit in thin brothy curry.",
+    "description_th": "เค็ม เผ็ดอ่อนๆ เปรี้ยวมะเขือส้ม หอมชะอม",
+    "description_en": "Savoury, gently hot, tangy from small tomatoes, with cha-om's distinctive aroma.",
+    "kham_mueang_taste_words": [
+     {
+      "th": "ลำ",
+      "roman": "lam",
+      "en": "delicious"
+     },
+     {
+      "th": "ส้ม",
+      "roman": "som",
+      "en": "sour"
+     }
+    ]
+   },
+   "how_to_eat": {
+    "th": "ครอบครัวนั่งล้อมวงกินกับข้าวเหนียวในวันปากปี๋",
+    "en": "Eaten with sticky rice, ideally with family gathered together on New Year's 'head of the year' day.",
+    "with_what": "Sticky rice",
+    "when_eaten": "Lanna New Year (mid-April), weddings, everyday",
+    "sharing_etiquette_en": "Wishing elders well and eating together is part of the point; offer the first serving to elders."
+   },
+   "food_safety_en": "Cha-om has an unusual sulphurous smell — normal. Wash jackfruit sap off skin with oil, not water.",
+   "common_mistakes_foreigners_en": [
+    "Using ripe (sweet) jackfruit",
+    "Getting jackfruit sap on the knife and board without oiling",
+    "Covering the pot after adding herbs"
+   ],
+   "useful_phrases": [
+    {
+     "kham_mueang_th": "กิ๋นแก๋งบ่าหนุน ปี๋นี้จะมีคนหนุน",
+     "roman": "kin kaeng ba-nun pi ni ja mi khon nun",
+     "central_th": "กินแกงขนุน ปีนี้จะมีคนค้ำจุน",
+     "en": "Eat jackfruit curry and this year someone will support you",
+     "when": "Explaining the New Year custom (paraphrase of the belief — low confidence wording)"
+    }
+   ],
+   "cultural_notes_th": "ความเชื่อเรื่องคำพ้อง 'หนุน' = ค้ำจุน ทำให้เป็นแกงมงคลของวันปากปี๋/วันพญาวัน และงานแต่งงาน",
+   "cultural_notes_en": "The pun ba-nun / nun ('support') makes it an auspicious dish for Lanna New Year and weddings. This is a widely shared custom but practice varies by family.",
+   "sources": [
+    "https://www.dailynews.co.th/news/3348034/",
+    "https://ikasalong.com/5-step-kaeng-khanun/",
+    "https://www.wongnai.com/recipes/spicy-jackfruit-soup"
+   ],
+   "confidence": "medium"
+  },
+  {
+   "id": "kaeng_phak_wan",
+   "name_th": "แกงผักหวาน (ไข่มดแดง)",
+   "name_kham_mueang_th": "แก๋งผักหวาน",
+   "name_roman": "kaeng phak wan (sai khai mot daeng)",
+   "name_en": "Wild sweet-leaf curry, often with red-ant eggs",
+   "pronunciation": {
+    "syllables": [
+     {
+      "th": "แก๋ง",
+      "roman": "kaeng",
+      "tone": "24",
+      "derived": true
+     },
+     {
+      "th": "ผัก",
+      "roman": "phak",
+      "tone": "21",
+      "derived": true
+     },
+     {
+      "th": "หวาน",
+      "roman": "wan",
+      "tone": "24",
+      "derived": true
+     }
+    ],
+    "tip_en": "'Phak' is short and low; 'wan' rises. 'Phak wan' literally 'sweet vegetable'. Tones are DERIVED (not from a recorded pronunciation dictionary) with the Chiang Mai tone-box mapping used across this dataset: high/mid class live unmarked=24 low-rising; low class live unmarked=33 mid; high/mid class + mai ek or dead syllable=21 low-falling; low class + mai ek or dead long=42 high-falling; high/mid class + mai tho=44ʔ high-level-glottal; low class + mai tho or dead short=45 high-rising. Northern spellings with ๋/๊ (แก๋ง, กิ๋น, จิ๊น, โฮ๊ะ) are read as sound hints. Low confidence; needs a native Chiang Mai speaker check. Nan, Phrae, Lampang and Chiang Rai contours differ."
+   },
+   "origin_province": [
+    "ทั่วภาคเหนือ All North (also Isan)"
+   ],
+   "season": "Hot season (roughly Feb–Apr) when ผักหวานป่า shoots and red-ant eggs appear",
+   "occasion": "Seasonal home cooking",
+   "serves": "3–4",
+   "description_th": "แกงยอดผักหวานป่ากับไข่มดแดง ใส่มะเขือเทศและเห็ดตามชอบ พริกแกงโขลกหยาบจากพริก ตะไคร้ ข่าอ่อน กะปิหรือปลาร้า หอมแดง กระเทียม ภาคเหนือบางบ้านใส่ปลาแห้งหรือวุ้นเส้น",
+   "description_en": "Young shoots of phak wan pa (Melientha suavis, a wild forest tree — NOT sweet-potato leaf) cooked in a light chilli broth with red-ant eggs, tomato and sometimes mushrooms. The paste is coarsely pounded. Some Northern homes use dried/grilled fish or glass noodles instead of ant eggs.",
+   "ingredients": [
+    {
+     "name_th": "ยอดผักหวานป่า",
+     "name_kham_mueang_th": "ผักหวาน",
+     "roman": "phak wan pa",
+     "name_en": "Phak wan pa shoots (Melientha suavis)",
+     "qty_metric": "200–300 g",
+     "role": "main green, sweet-nutty",
+     "where_to_buy_th": "ตลาดต้นลำไย / ตลาดเมืองใหม่ แผงผักสมุนไพร หรือแม่ค้าผักพื้นบ้านในกาดเช้า",
+     "where_to_buy_en": "Ton Lamyai or Muang Mai market herb/vegetable stalls, or the village-veg sellers at any morning market (กาดเช้า)",
+     "how_to_choose_en": "Tender tips that snap cleanly.",
+     "substitute_abroad_en": "Young spinach or pea shoots (different flavour).",
+     "pronunciation_roman": "phak wan pa"
+    },
+    {
+     "name_th": "ไข่มดแดง",
+     "name_kham_mueang_th": "ไข่มดส้ม",
+     "roman": "khai mot daeng",
+     "name_en": "Red weaver-ant eggs/larvae",
+     "qty_metric": "100 g",
+     "role": "creamy-sour pops",
+     "where_to_buy_th": "ตลาดต้นลำไย / ตลาดเมืองใหม่ แผงผักสมุนไพร หรือแม่ค้าผักพื้นบ้านในกาดเช้า",
+     "where_to_buy_en": "Seasonal sellers at morning markets, sold in banana-leaf packets or bags",
+     "how_to_choose_en": "Clean white-cream eggs, few adult ants.",
+     "substitute_abroad_en": "Omit, or use dried fish.",
+     "pronunciation_roman": "khai mot daeng"
+    },
+    {
+     "name_th": "พริกสดหรือพริกแห้ง",
+     "name_kham_mueang_th": "พริก",
+     "roman": "phrik",
+     "name_en": "Fresh or dried chillies",
+     "qty_metric": "5–8",
+     "role": "heat",
+     "where_to_buy_th": "กาดหลวง (ตลาดวโรรส) ร้านเครื่องเทศ/ของแห้ง หรือร้านพริกแกงในตลาดสด",
+     "where_to_buy_en": "Warorot (Kad Luang) spice & dried-goods stalls, or the curry-paste vendor (แม่ค้าพริกแกง) in any wet market",
+     "how_to_choose_en": "",
+     "substitute_abroad_en": "",
+     "pronunciation_roman": "phrik"
+    },
+    {
+     "name_th": "ตะไคร้, ข่าอ่อน",
+     "name_kham_mueang_th": "ตะไคร้, ข่า",
+     "roman": "takhrai, kha on",
+     "name_en": "Lemongrass, young galangal",
+     "qty_metric": "1 stalk, 3 slices",
+     "role": "aroma",
+     "where_to_buy_th": "ตลาดต้นลำไย / ตลาดเมืองใหม่ แผงผักสมุนไพร หรือแม่ค้าผักพื้นบ้านในกาดเช้า",
+     "where_to_buy_en": "Ton Lamyai or Muang Mai market herb/vegetable stalls, or the village-veg sellers at any morning market (กาดเช้า)",
+     "how_to_choose_en": "",
+     "substitute_abroad_en": "",
+     "pronunciation_roman": "takhrai, kha on"
+    },
+    {
+     "name_th": "หอมแดง กระเทียม",
+     "name_kham_mueang_th": "หอมแดง กระเทียม",
+     "roman": "hom daeng, krathiam",
+     "name_en": "Shallots, garlic",
+     "qty_metric": "3 + 5",
+     "role": "aroma",
+     "where_to_buy_th": "ตลาดต้นลำไย / ตลาดเมืองใหม่ แผงผักสมุนไพร หรือแม่ค้าผักพื้นบ้านในกาดเช้า",
+     "where_to_buy_en": "Ton Lamyai or Muang Mai market herb/vegetable stalls, or the village-veg sellers at any morning market (กาดเช้า)",
+     "how_to_choose_en": "",
+     "substitute_abroad_en": "",
+     "pronunciation_roman": "hom daeng, krathiam"
+    },
+    {
+     "name_th": "กะปิ หรือ ปลาร้า",
+     "name_kham_mueang_th": "กะปิ / ปลาฮ้า",
+     "roman": "kapi / pla ra",
+     "name_en": "Shrimp paste or fermented fish",
+     "qty_metric": "1 tsp–1 Tbsp",
+     "role": "umami",
+     "where_to_buy_th": "กาดหลวง/ต้นลำไย แผงของหมักพื้นเมือง (ถั่วเน่า น้ำปู๋ ปลาร้า)",
+     "where_to_buy_en": "Warorot/Ton Lamyai stalls selling Northern ferments (thua nao discs, nam pu, pla ra)",
+     "how_to_choose_en": "",
+     "substitute_abroad_en": "Anchovy paste",
+     "pronunciation_roman": "kapi / pla ra"
+    },
+    {
+     "name_th": "มะเขือเทศ, เห็ด (ถ้าชอบ)",
+     "name_kham_mueang_th": "บ่ะเขือส้ม",
+     "roman": "makhuea thet",
+     "name_en": "Tomatoes; mushrooms (optional)",
+     "qty_metric": "2; handful",
+     "role": "sour, body",
+     "where_to_buy_th": "ตลาดต้นลำไย / ตลาดเมืองใหม่ แผงผักสมุนไพร หรือแม่ค้าผักพื้นบ้านในกาดเช้า",
+     "where_to_buy_en": "Ton Lamyai or Muang Mai market herb/vegetable stalls, or the village-veg sellers at any morning market (กาดเช้า)",
+     "how_to_choose_en": "",
+     "substitute_abroad_en": "",
+     "pronunciation_roman": "makhuea thet"
+    },
+    {
+     "name_th": "น้ำปลา",
+     "name_kham_mueang_th": "น้ำปลา",
+     "roman": "nam pla",
+     "name_en": "Fish sauce",
+     "qty_metric": "to taste",
+     "role": "salt",
+     "where_to_buy_th": "กาดหลวง (ตลาดวโรรส) ร้านเครื่องเทศ/ของแห้ง หรือร้านพริกแกงในตลาดสด",
+     "where_to_buy_en": "Warorot (Kad Luang) spice & dried-goods stalls, or the curry-paste vendor (แม่ค้าพริกแกง) in any wet market",
+     "how_to_choose_en": "",
+     "substitute_abroad_en": "",
+     "pronunciation_roman": "nam pla"
+    }
+   ],
+   "equipment": [
+    {
+     "name_th": "ครก",
+     "kham_mueang_th": "ครก",
+     "name_en": "Mortar and pestle",
+     "substitute_en": "Mini chopper"
+    },
+    {
+     "name_th": "หม้อ",
+     "kham_mueang_th": "หม้อ",
+     "name_en": "Pot",
+     "substitute_en": "Saucepan"
+    }
+   ],
+   "prep_ahead_en": "Pick over phak wan, discarding tough stems. Rinse ant eggs gently in a sieve and pick out adult ants.",
+   "steps": [
+    {
+     "n": 1,
+     "th": "โขลกพริกแกงพอหยาบ",
+     "en": "Pound the paste ingredients coarsely.",
+     "time_min": 5,
+     "sensory_cue_en": "Rough paste with visible bits.",
+     "tip_en": ""
+    },
+    {
+     "n": 2,
+     "th": "ต้มน้ำให้เดือด ใส่พริกแกง รอเดือดอีกครั้ง",
+     "en": "Boil water, add the paste, return to the boil.",
+     "time_min": 5,
+     "sensory_cue_en": "Reddish, fragrant broth.",
+     "tip_en": ""
+    },
+    {
+     "n": 3,
+     "th": "ใส่ผักหวานจนสุก",
+     "en": "Add phak wan and cook until tender.",
+     "time_min": 4,
+     "sensory_cue_en": "Leaves deep green and soft.",
+     "tip_en": ""
+    },
+    {
+     "n": 4,
+     "th": "ใส่ไข่มดแดง เห็ด มะเขือเทศ ปรุงด้วยน้ำปลา",
+     "en": "Add ant eggs, mushrooms and tomato; season with fish sauce.",
+     "time_min": 3,
+     "sensory_cue_en": "Eggs turn opaque white.",
+     "tip_en": "Don't boil the eggs long or they toughen."
+    }
+   ],
+   "taste_profile": {
+    "sour": 2,
+    "salty": 3,
+    "spicy": 2,
+    "sweet": 2,
+    "bitter": 0,
+    "umami": 3,
+    "texture_en": "Soft greens, eggs that pop, light broth.",
+    "description_th": "หวานผัก เปรี้ยวไข่มดแดง เผ็ดเล็กน้อย",
+    "description_en": "Naturally sweet greens, a mild sour tang from ant eggs, gentle heat.",
+    "kham_mueang_taste_words": [
+     {
+      "th": "หวาน",
+      "roman": "wan",
+      "en": "sweet"
+     },
+     {
+      "th": "ลำ",
+      "roman": "lam",
+      "en": "delicious"
+     }
+    ]
+   },
+   "how_to_eat": {
+    "th": "กินกับข้าวเหนียว ซดน้ำแกงร้อนๆ",
+    "en": "With sticky rice; sip the hot broth.",
+    "with_what": "Sticky rice (ข้าวนึ่ง) by hand",
+    "when_eaten": "Hot season meals",
+    "sharing_etiquette_en": "Shared bowl."
+   },
+   "food_safety_en": "Buy phak wan pa from market sellers rather than foraging — misidentifying wild plants is a general risk (no specific look-alike verified in this research round). Anyone with shellfish/insect allergy should avoid ant eggs.",
+   "common_mistakes_foreigners_en": [
+    "Confusing phak wan pa with phak wan ban (Sauropus) or sweet-potato leaves",
+    "Over-cooking ant eggs"
+   ],
+   "useful_phrases": [
+    {
+     "kham_mueang_th": "ผักหวานมีก่อเจ้า",
+     "roman": "phak wan mi ko jao",
+     "central_th": "มีผักหวานไหมคะ",
+     "en": "Do you have phak wan?",
+     "when": "Market (เจ้า = polite particle, female & increasingly general)"
+    }
+   ],
+   "cultural_notes_th": "เป็นแกงตามฤดูกาลหน้าแล้ง เมื่อผักหวานป่าแตกยอดและมดแดงวางไข่",
+   "cultural_notes_en": "A marker of the hot season, when phak wan pa sprouts and weaver ants lay eggs; foraged foods are prized and pricey.",
+   "sources": [
+    "https://cooking.kapook.com/view289376.html"
+   ],
+   "confidence": "medium"
+  },
+  {
+   "id": "jor_phak_kad",
+   "name_th": "จอผักกาด",
+   "name_kham_mueang_th": "จอผักกาด / ผักกาดจอ",
+   "name_roman": "jo phak kat",
+   "name_en": "Jor phak kad — mustard-green soup with fermented soybean and tamarind",
+   "pronunciation": {
+    "syllables": [
+     {
+      "th": "จอ",
+      "roman": "jo",
+      "tone": "24",
+      "derived": true
+     },
+     {
+      "th": "ผัก",
+      "roman": "phak",
+      "tone": "21",
+      "derived": true
+     },
+     {
+      "th": "กาด",
+      "roman": "kat",
+      "tone": "21",
+      "derived": true
+     }
+    ],
+    "tip_en": "'Jo' rhymes with 'jaw' (long o), rising tone. Tones are DERIVED (not from a recorded pronunciation dictionary) with the Chiang Mai tone-box mapping used across this dataset: high/mid class live unmarked=24 low-rising; low class live unmarked=33 mid; high/mid class + mai ek or dead syllable=21 low-falling; low class + mai ek or dead long=42 high-falling; high/mid class + mai tho=44ʔ high-level-glottal; low class + mai tho or dead short=45 high-rising. Northern spellings with ๋/๊ (แก๋ง, กิ๋น, จิ๊น, โฮ๊ะ) are read as sound hints. Low confidence; needs a native Chiang Mai speaker check. Nan, Phrae, Lampang and Chiang Rai contours differ."
+   },
+   "origin_province": [
+    "เชียงใหม่ Chiang Mai",
+    "ลำปาง Lampang",
+    "ทั่วภาคเหนือ All North"
+   ],
+   "season": "Cool season (Nov–Feb) when flowering mustard greens (ผักกาดจ้อน/ผักกาดดอก) are plentiful",
+   "occasion": "Everyday",
+   "serves": "2–3",
+   "description_th": "'จอ' คืออาหารประเภทมีน้ำคล้ายแกงแต่ไม่ใส่เครื่องแกงโขลกละเอียด จอผักกาดใช้ผักกาดที่กำลังออกดอก ต้มกับกระดูกหมู ปรุงด้วยกะปิ ถั่วเน่าแผ่น น้ำมะขามเปียก โรยกระเทียมเจียวและพริกแห้งทอด",
+   "description_en": "'Jo' is a Lanna category: a brothy dish like a curry but without a finely pounded paste (CMU's Lanna food-naming database gives ผักกาดจอ as its example). Flowering mustard greens simmered with pork ribs, seasoned with shrimp paste, toasted fermented-soybean discs (thua nao) and tamarind, topped with fried garlic and fried dried chillies.",
+   "ingredients": [
+    {
+     "name_th": "ผักกาดจ้อน / ผักกาดกวางตุ้งมีดอก",
+     "name_kham_mueang_th": "ผักกาดจอ",
+     "roman": "phak kat",
+     "name_en": "Flowering mustard / choy sum with flower buds, 5 cm lengths",
+     "qty_metric": "300 g (2 big cups)",
+     "role": "main vegetable",
+     "where_to_buy_th": "ตลาดต้นลำไย / ตลาดเมืองใหม่ แผงผักสมุนไพร หรือแม่ค้าผักพื้นบ้านในกาดเช้า",
+     "where_to_buy_en": "Ton Lamyai or Muang Mai market herb/vegetable stalls, or the village-veg sellers at any morning market (กาดเช้า)",
+     "how_to_choose_en": "Stalks with yellow buds just opening; crisp.",
+     "substitute_abroad_en": "Choy sum or rapini.",
+     "pronunciation_roman": "phak kat"
+    },
+    {
+     "name_th": "ซี่โครงหมูอ่อน",
+     "name_kham_mueang_th": "จิ๊นหมู",
+     "roman": "si khrong mu",
+     "name_en": "Pork baby ribs (or belly)",
+     "qty_metric": "300–500 g",
+     "role": "broth",
+     "where_to_buy_th": "แผงหมูในตลาดต้นลำไย ตลาดเมืองใหม่ หรือกาดใกล้บ้าน (ไปเช้า)",
+     "where_to_buy_en": "Pork butchers at Ton Lamyai, Muang Mai or your neighbourhood market — go early morning",
+     "how_to_choose_en": "",
+     "substitute_abroad_en": "Pork ribs.",
+     "pronunciation_roman": "si khrong mu"
+    },
+    {
+     "name_th": "หอมแดง กระเทียม",
+     "name_kham_mueang_th": "หอมแดง กระเทียม",
+     "roman": "hom daeng, krathiam",
+     "name_en": "Shallots and garlic",
+     "qty_metric": "3 Tbsp + 3 Tbsp",
+     "role": "aroma",
+     "where_to_buy_th": "ตลาดต้นลำไย / ตลาดเมืองใหม่ แผงผักสมุนไพร หรือแม่ค้าผักพื้นบ้านในกาดเช้า",
+     "where_to_buy_en": "Ton Lamyai or Muang Mai market herb/vegetable stalls, or the village-veg sellers at any morning market (กาดเช้า)",
+     "how_to_choose_en": "",
+     "substitute_abroad_en": "",
+     "pronunciation_roman": "hom daeng, krathiam"
+    },
+    {
+     "name_th": "กะปิ",
+     "name_kham_mueang_th": "กะปิ",
+     "roman": "kapi",
+     "name_en": "Shrimp paste",
+     "qty_metric": "1 Tbsp",
+     "role": "umami",
+     "where_to_buy_th": "กาดหลวง/ต้นลำไย แผงของหมักพื้นเมือง (ถั่วเน่า น้ำปู๋ ปลาร้า)",
+     "where_to_buy_en": "Warorot/Ton Lamyai stalls selling Northern ferments (thua nao discs, nam pu, pla ra)",
+     "how_to_choose_en": "",
+     "substitute_abroad_en": "Belacan",
+     "pronunciation_roman": "kapi"
+    },
+    {
+     "name_th": "ถั่วเน่าแผ่น (ปิ้ง)",
+     "name_kham_mueang_th": "ถั่วเน่าแข็บ",
+     "roman": "thua nao",
+     "name_en": "Dried fermented-soybean discs, toasted and crumbled",
+     "qty_metric": "2 discs",
+     "role": "funky depth (Northern umami)",
+     "where_to_buy_th": "กาดหลวง/ต้นลำไย แผงของหมักพื้นเมือง (ถั่วเน่า น้ำปู๋ ปลาร้า)",
+     "where_to_buy_en": "Warorot/Ton Lamyai stalls selling Northern ferments (thua nao discs, nam pu, pla ra)",
+     "how_to_choose_en": "Dry, brown, thin discs; toast over flame until fragrant.",
+     "substitute_abroad_en": "1 tsp miso or doenjang.",
+     "pronunciation_roman": "thua nao"
+    },
+    {
+     "name_th": "น้ำมะขามเปียก",
+     "name_kham_mueang_th": "น้ำบ่ะขาม",
+     "roman": "nam makham",
+     "name_en": "Tamarind water",
+     "qty_metric": "3 Tbsp",
+     "role": "sour",
+     "where_to_buy_th": "กาดหลวง (ตลาดวโรรส) ร้านเครื่องเทศ/ของแห้ง หรือร้านพริกแกงในตลาดสด",
+     "where_to_buy_en": "Warorot (Kad Luang) spice & dried-goods stalls, or the curry-paste vendor (แม่ค้าพริกแกง) in any wet market",
+     "how_to_choose_en": "",
+     "substitute_abroad_en": "Tamarind concentrate",
+     "pronunciation_roman": "nam makham"
+    },
+    {
+     "name_th": "กระเทียมเจียว, พริกแห้งทอด",
+     "name_kham_mueang_th": "",
+     "roman": "krathiam jiao, phrik haeng thot",
+     "name_en": "Fried garlic, fried dried chillies",
+     "qty_metric": "garnish",
+     "role": "crunch, aroma",
+     "where_to_buy_th": "กาดหลวง (ตลาดวโรรส) ร้านเครื่องเทศ/ของแห้ง หรือร้านพริกแกงในตลาดสด",
+     "where_to_buy_en": "Warorot (Kad Luang) spice & dried-goods stalls, or the curry-paste vendor (แม่ค้าพริกแกง) in any wet market",
+     "how_to_choose_en": "",
+     "substitute_abroad_en": "",
+     "pronunciation_roman": "krathiam jiao, phrik haeng thot"
+    }
+   ],
+   "equipment": [
+    {
+     "name_th": "ครก",
+     "kham_mueang_th": "ครก",
+     "name_en": "Mortar and pestle",
+     "substitute_en": "Mini chopper"
+    },
+    {
+     "name_th": "หม้อ",
+     "kham_mueang_th": "หม้อ",
+     "name_en": "Pot",
+     "substitute_en": "Saucepan"
+    }
+   ],
+   "prep_ahead_en": "Toast thua nao discs over a flame/in a dry pan; fry garlic and chillies for garnish.",
+   "steps": [
+    {
+     "n": 1,
+     "th": "โขลกหอมแดง กระเทียม กับกะปิ (และถั่วเน่าปิ้ง) ให้ละเอียด",
+     "en": "Pound shallots, garlic and shrimp paste (and toasted thua nao) together.",
+     "time_min": 5,
+     "sensory_cue_en": "Grey-brown pungent paste.",
+     "tip_en": ""
+    },
+    {
+     "n": 2,
+     "th": "ต้มน้ำ ใส่ซี่โครงหมู ต้มจนนุ่ม",
+     "en": "Boil water and simmer the ribs until tender.",
+     "time_min": 30,
+     "sensory_cue_en": "Clear broth; meat tender.",
+     "tip_en": ""
+    },
+    {
+     "n": 3,
+     "th": "ใส่เครื่องที่โขลก ใส่ผักกาด ปรุงด้วยน้ำมะขามเปียก ต้มพอผักสุก",
+     "en": "Stir in the paste, add the mustard greens, season with tamarind; cook just until greens soften.",
+     "time_min": 5,
+     "sensory_cue_en": "Greens bright and just tender; broth murky and sour-savoury.",
+     "tip_en": "Don't overcook — the greens turn bitter and khaki."
+    },
+    {
+     "n": 4,
+     "th": "ตักใส่ชาม โรยกระเทียมเจียวและพริกแห้งทอด",
+     "en": "Ladle into bowls; top with fried garlic and fried dried chillies.",
+     "time_min": 1,
+     "sensory_cue_en": "",
+     "tip_en": ""
+    }
+   ],
+   "taste_profile": {
+    "sour": 3,
+    "salty": 3,
+    "spicy": 1,
+    "sweet": 0,
+    "bitter": 1,
+    "umami": 4,
+    "texture_en": "Soupy with tender-crisp greens.",
+    "description_th": "เค็ม เปรี้ยว นัว กลิ่นกะปิถั่วเน่า",
+    "description_en": "Salty, sour and deeply savoury with a funky fermented-soy/shrimp note.",
+    "kham_mueang_taste_words": [
+     {
+      "th": "ส้ม",
+      "roman": "som",
+      "en": "sour"
+     },
+     {
+      "th": "ลำ",
+      "roman": "lam",
+      "en": "delicious"
+     }
+    ]
+   },
+   "how_to_eat": {
+    "th": "ซดน้ำร้อนๆ กินกับข้าวเหนียวและน้ำพริก แคบหมู",
+    "en": "Sip hot with sticky rice, a nam phrik and pork rinds.",
+    "with_what": "Sticky rice (ข้าวนึ่ง) by hand; pork rinds (แคบหมู)",
+    "when_eaten": "Cool-season meals",
+    "sharing_etiquette_en": "Shared bowl; everyone spoons their own."
+   },
+   "food_safety_en": "No special issues. Thua nao is fermented but dried and toasted.",
+   "common_mistakes_foreigners_en": [
+    "Pounding a full curry paste — jo uses only a light shallot/garlic/kapi mix",
+    "Overcooking the greens",
+    "Skipping the sour tamarind"
+   ],
+   "useful_phrases": [
+    {
+     "kham_mueang_th": "ผักกาดจอ ซดน้ำฮ้อนๆ ลำแต๊",
+     "roman": "phak kat jo sot nam hon hon lam tae",
+     "central_th": "จอผักกาด ซดน้ำร้อนๆ อร่อยจริง",
+     "en": "Hot jo phak kad soup is really tasty",
+     "when": "Small talk"
+    }
+   ],
+   "cultural_notes_th": "จอเป็นหนึ่งในหมวดอาหารล้านนา (แกง/ต้ม/จอ/อ่อม/อุ๊ก/อ็อก/มอก) ตามฐานข้อมูลคำเรียกชื่ออาหารล้านนา มช.",
+   "cultural_notes_en": "Jo is one of the Lanna soup categories (kaeng, tom, jo, om, uk, ok, mok) listed in CMU's Lanna food-naming database — knowing these words helps read a Northern menu.",
+   "sources": [
+    "https://www.wongnai.com/recipes/baby-pork-ribs-with-chinese-broccoli-soup",
+    "https://lannakadee.cmu.ac.th/area1/food/type.php",
+    "https://www.wongnai.com/food-tips/top-35-must-try-northern-thai-dishes"
+   ],
+   "confidence": "medium"
+  },
+  {
+   "id": "kaeng_het_thop",
+   "name_th": "แกงเห็ดเผาะ (แกงเห็ดถอบ) ใส่ยอดมะขาม",
+   "name_kham_mueang_th": "แก๋งเห็ดถอบ",
+   "name_roman": "kaeng het thop / kaeng het pho",
+   "name_en": "Wild earthstar-mushroom curry with young tamarind leaves",
+   "pronunciation": {
+    "syllables": [
+     {
+      "th": "แก๋ง",
+      "roman": "kaeng",
+      "tone": "24",
+      "derived": true
+     },
+     {
+      "th": "เห็ด",
+      "roman": "het",
+      "tone": "21",
+      "derived": true
+     },
+     {
+      "th": "ถอบ",
+      "roman": "thop",
+      "tone": "21",
+      "derived": true
+     }
+    ],
+    "tip_en": "Northerners call the mushroom เห็ดถอบ (het thop); Central Thais say เห็ดเผาะ (het pho — 'pop' mushroom, for the crunch). Tones are DERIVED (not from a recorded pronunciation dictionary) with the Chiang Mai tone-box mapping used across this dataset: high/mid class live unmarked=24 low-rising; low class live unmarked=33 mid; high/mid class + mai ek or dead syllable=21 low-falling; low class + mai ek or dead long=42 high-falling; high/mid class + mai tho=44ʔ high-level-glottal; low class + mai tho or dead short=45 high-rising. Northern spellings with ๋/๊ (แก๋ง, กิ๋น, จิ๊น, โฮ๊ะ) are read as sound hints. Low confidence; needs a native Chiang Mai speaker check. Nan, Phrae, Lampang and Chiang Rai contours differ."
+   },
+   "origin_province": [
+    "ทั่วภาคเหนือ All North (and Isan)"
+   ],
+   "season": "Early rainy season, about May–July only (once a year)",
+   "occasion": "Seasonal treat; pricey in the market",
+   "serves": "3–4",
+   "description_th": "เห็ดถอบหรือเห็ดเผาะเป็นเห็ดป่าทรงกลมคล้ายกระดุม เกิดใต้ต้นไม้ใหญ่ในป่าเต็งรัง/ป่าสักช่วงต้นฤดูฝน แกงแบบล้านนาไม่ใส่กะทิ ใช้พริกแกงจากพริกแห้ง ข่า/ขมิ้น ตะไคร้ กระเทียม กะปิ เกลือ ใส่ยอดมะขามอ่อนให้เปรี้ยว",
+   "description_en": "Het thop are round, button-like wild earthstar mushrooms (Astraeus) that appear under large trees for a few weeks at the start of the rains. The Lanna version is a clear chilli-paste curry (no coconut) soured with young tamarind leaves; the mushrooms pop crunchily between the teeth.",
+   "ingredients": [
+    {
+     "name_th": "เห็ดถอบ/เห็ดเผาะ",
+     "name_kham_mueang_th": "เห็ดถอบ",
+     "roman": "het thop",
+     "name_en": "Earthstar mushrooms (fresh or brined)",
+     "qty_metric": "300 g fresh / 100 g brined",
+     "role": "main",
+     "where_to_buy_th": "ตลาดต้นลำไย / ตลาดเมืองใหม่ แผงผักสมุนไพร หรือแม่ค้าผักพื้นบ้านในกาดเช้า",
+     "where_to_buy_en": "Seasonal sellers at every morning market in May–July; jars/brined bags year-round",
+     "how_to_choose_en": "Firm, round, no root-like stalk, skin smooth or with fine white fuzz — see safety.",
+     "substitute_abroad_en": "Canned het pho from Asian grocers.",
+     "pronunciation_roman": "het thop"
+    },
+    {
+     "name_th": "ยอดมะขามอ่อน (และดอก)",
+     "name_kham_mueang_th": "ยอดบ่ะขาม",
+     "roman": "yot makham",
+     "name_en": "Young tamarind leaves (and flowers)",
+     "qty_metric": "2 cups",
+     "role": "sourness",
+     "where_to_buy_th": "ตลาดต้นลำไย / ตลาดเมืองใหม่ แผงผักสมุนไพร หรือแม่ค้าผักพื้นบ้านในกาดเช้า",
+     "where_to_buy_en": "Ton Lamyai or Muang Mai market herb/vegetable stalls, or the village-veg sellers at any morning market (กาดเช้า)",
+     "how_to_choose_en": "Pale green-bronze fresh tips.",
+     "substitute_abroad_en": "Sorrel or a squeeze of lime at the end.",
+     "pronunciation_roman": "yot makham"
+    },
+    {
+     "name_th": "พริกแห้ง",
+     "name_kham_mueang_th": "พริกแห้ง",
+     "roman": "phrik haeng",
+     "name_en": "Dried chillies",
+     "qty_metric": "5",
+     "role": "heat",
+     "where_to_buy_th": "กาดหลวง (ตลาดวโรรส) ร้านเครื่องเทศ/ของแห้ง หรือร้านพริกแกงในตลาดสด",
+     "where_to_buy_en": "Warorot (Kad Luang) spice & dried-goods stalls, or the curry-paste vendor (แม่ค้าพริกแกง) in any wet market",
+     "how_to_choose_en": "",
+     "substitute_abroad_en": "",
+     "pronunciation_roman": "phrik haeng"
+    },
+    {
+     "name_th": "ข่าซอย / ขมิ้นสด",
+     "name_kham_mueang_th": "ข่า / ขมิ้น",
+     "roman": "kha / khamin",
+     "name_en": "Galangal (or fresh turmeric)",
+     "qty_metric": "1 Tbsp",
+     "role": "aroma",
+     "where_to_buy_th": "ตลาดต้นลำไย / ตลาดเมืองใหม่ แผงผักสมุนไพร หรือแม่ค้าผักพื้นบ้านในกาดเช้า",
+     "where_to_buy_en": "Ton Lamyai or Muang Mai market herb/vegetable stalls, or the village-veg sellers at any morning market (กาดเช้า)",
+     "how_to_choose_en": "",
+     "substitute_abroad_en": "",
+     "pronunciation_roman": "kha / khamin"
+    },
+    {
+     "name_th": "ตะไคร้ซอย",
+     "name_kham_mueang_th": "ตะไคร้",
+     "roman": "takhrai",
+     "name_en": "Lemongrass",
+     "qty_metric": "1 Tbsp",
+     "role": "aroma",
+     "where_to_buy_th": "ตลาดต้นลำไย / ตลาดเมืองใหม่ แผงผักสมุนไพร หรือแม่ค้าผักพื้นบ้านในกาดเช้า",
+     "where_to_buy_en": "Ton Lamyai or Muang Mai market herb/vegetable stalls, or the village-veg sellers at any morning market (กาดเช้า)",
+     "how_to_choose_en": "",
+     "substitute_abroad_en": "",
+     "pronunciation_roman": "takhrai"
+    },
+    {
+     "name_th": "กระเทียม",
+     "name_kham_mueang_th": "กระเทียม",
+     "roman": "krathiam",
+     "name_en": "Garlic",
+     "qty_metric": "4 cloves",
+     "role": "aroma",
+     "where_to_buy_th": "ตลาดต้นลำไย / ตลาดเมืองใหม่ แผงผักสมุนไพร หรือแม่ค้าผักพื้นบ้านในกาดเช้า",
+     "where_to_buy_en": "Ton Lamyai or Muang Mai market herb/vegetable stalls, or the village-veg sellers at any morning market (กาดเช้า)",
+     "how_to_choose_en": "",
+     "substitute_abroad_en": "",
+     "pronunciation_roman": "krathiam"
+    },
+    {
+     "name_th": "กะปิ, เกลือ",
+     "name_kham_mueang_th": "กะปิ, เกลือ",
+     "roman": "kapi, kluea",
+     "name_en": "Shrimp paste, salt",
+     "qty_metric": "1 Tbsp, 1 tsp",
+     "role": "salt/umami",
+     "where_to_buy_th": "กาดหลวง/ต้นลำไย แผงของหมักพื้นเมือง (ถั่วเน่า น้ำปู๋ ปลาร้า)",
+     "where_to_buy_en": "Warorot/Ton Lamyai stalls selling Northern ferments (thua nao discs, nam pu, pla ra)",
+     "how_to_choose_en": "",
+     "substitute_abroad_en": "",
+     "pronunciation_roman": "kapi, kluea"
+    }
+   ],
+   "equipment": [
+    {
+     "name_th": "ครก",
+     "kham_mueang_th": "ครก",
+     "name_en": "Mortar and pestle",
+     "substitute_en": "Mini chopper"
+    },
+    {
+     "name_th": "หม้อ",
+     "kham_mueang_th": "หม้อ",
+     "name_en": "Pot",
+     "substitute_en": "Saucepan"
+    },
+    {
+     "name_th": "ภาชนะมีฝาสำหรับเขย่าล้าง",
+     "kham_mueang_th": "",
+     "name_en": "Lidded container for shake-washing",
+     "substitute_en": "Colander under running water"
+    }
+   ],
+   "prep_ahead_en": "Wash thoroughly: put in water in a lidded container and shake repeatedly, changing water, until no soil remains (Kapook). Check EVERY mushroom (see safety). Some cooks pre-boil with salt.",
+   "steps": [
+    {
+     "n": 1,
+     "th": "โขลกพริกแห้ง ข่า ตะไคร้ กระเทียม กะปิ เกลือ ให้ละเอียด",
+     "en": "Pound dried chilli, galangal/turmeric, lemongrass, garlic, shrimp paste and salt to a paste.",
+     "time_min": 8,
+     "sensory_cue_en": "",
+     "tip_en": ""
+    },
+    {
+     "n": 2,
+     "th": "ต้มน้ำให้เดือด ใส่พริกแกงและเห็ด เคี่ยวราว 15 นาที",
+     "en": "Boil water, add paste and mushrooms; simmer about 15 minutes.",
+     "time_min": 15,
+     "sensory_cue_en": "Mushrooms darken; broth turns earthy.",
+     "tip_en": ""
+    },
+    {
+     "n": 3,
+     "th": "ใส่ยอดมะขามอ่อน ปิดไฟ",
+     "en": "Add young tamarind leaves and turn off the heat.",
+     "time_min": 1,
+     "sensory_cue_en": "Fresh sour smell.",
+     "tip_en": ""
+    }
+   ],
+   "taste_profile": {
+    "sour": 3,
+    "salty": 3,
+    "spicy": 3,
+    "sweet": 0,
+    "bitter": 0,
+    "umami": 4,
+    "texture_en": "Crunchy-popping mushroom shells with a soft centre in thin broth.",
+    "description_th": "เผ็ด เค็ม เปรี้ยวยอดมะขาม เห็ดกรุบ",
+    "description_en": "Hot, salty, bright-sour; mushrooms crunch then yield.",
+    "kham_mueang_taste_words": [
+     {
+      "th": "ลำ",
+      "roman": "lam",
+      "en": "delicious"
+     },
+     {
+      "th": "ส้ม",
+      "roman": "som",
+      "en": "sour"
+     }
+    ]
+   },
+   "how_to_eat": {
+    "th": "กินกับข้าวเหนียว",
+    "en": "With sticky rice. Bite the mushroom to hear the 'pop'.",
+    "with_what": "Sticky rice (ข้าวนึ่ง) by hand",
+    "when_eaten": "Rainy-season meals",
+    "sharing_etiquette_en": "Expensive — don't hog the mushrooms from the shared bowl."
+   },
+   "food_safety_en": "WILD MUSHROOM WARNING. Thai Department of Medical Sciences and provincial PR offices warn of a toxic look-alike, เห็ดก้อนฝุ่น / เห็ดไข่หงส์ (Scleroderma, e.g. S. citrinum). Signs of the poisonous one: a root-like stalk/base, rough scaly skin, may change colour when cut; edible het thop has no root and smooth skin (sometimes with fine white fuzz). Symptoms (nausea, vomiting, diarrhoea, dizziness, breathing difficulty) can start 1–3 h after eating. Folk tests (silver spoon, cooking with rice, onion colour) do NOT work (HRDI, Dailynews expert). If poisoned: go to hospital immediately, bring a sample; Thai emergency number 1669. Only buy from established market sellers; never forage yourself.",
+   "common_mistakes_foreigners_en": [
+    "Not washing out all the grit",
+    "Buying from roadside foragers without checking",
+    "Adding coconut milk (that's a Central/other style)"
+   ],
+   "useful_phrases": [
+    {
+     "kham_mueang_th": "เห็ดถอบกิโลเต้าใด",
+     "roman": "het thop kilo tao dai",
+     "central_th": "เห็ดเผาะกิโลละเท่าไร",
+     "en": "How much per kilo for het thop?",
+     "when": "Market — prices spike early in the season"
+    }
+   ],
+   "cultural_notes_th": "เห็ดถอบเป็นของป่าตามฤดูกาลที่ชาวบ้านเก็บขาย ราคาสูงต้นฤดู ชาวบ้านบางแห่งจุดไฟเผาป่าเพื่อหาเห็ด ซึ่งเป็นประเด็นสิ่งแวดล้อมที่ถกเถียงกัน",
+   "cultural_notes_en": "A prized seasonal forest food and cash income for villagers. The practice of burning forest floor to make mushrooms easier to find is linked to the North's haze debate (context note; not from this round's cited sources).",
+   "sources": [
+    "https://www.khaosod.co.th/technologychaoban/featured/article_284384",
+    "https://www.wongnai.com/recipes/earthstar-mushroom-soup",
+    "https://cooking.kapook.com/view281312.html",
+    "https://www.thaipbs.or.th/news/content/341528",
+    "https://uttaradit.prd.go.th/th/content/page/index/id/189954",
+    "https://www.dailynews.co.th/news/3504781/",
+    "https://www.hrdi.or.th/articles/Detail/20"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "kaeng_no_mai",
+   "name_th": "แกงหน่อไม้สด (ใส่น้ำปู๋)",
+   "name_kham_mueang_th": "แก๋งหน่อ / แก๋งหน่อไม้",
+   "name_roman": "kaeng no (mai)",
+   "name_en": "Fresh bamboo-shoot curry, Northern style (often with nam pu crab paste)",
+   "pronunciation": {
+    "syllables": [
+     {
+      "th": "แก๋ง",
+      "roman": "kaeng",
+      "tone": "24",
+      "derived": true
+     },
+     {
+      "th": "หน่อ",
+      "roman": "no",
+      "tone": "21",
+      "derived": true
+     },
+     {
+      "th": "ไม้",
+      "roman": "mai",
+      "tone": "45",
+      "derived": true
+     }
+    ],
+    "tip_en": "Northerners often just say แก๋งหน่อ 'kaeng no'. Tones are DERIVED (not from a recorded pronunciation dictionary) with the Chiang Mai tone-box mapping used across this dataset: high/mid class live unmarked=24 low-rising; low class live unmarked=33 mid; high/mid class + mai ek or dead syllable=21 low-falling; low class + mai ek or dead long=42 high-falling; high/mid class + mai tho=44ʔ high-level-glottal; low class + mai tho or dead short=45 high-rising. Northern spellings with ๋/๊ (แก๋ง, กิ๋น, จิ๊น, โฮ๊ะ) are read as sound hints. Low confidence; needs a native Chiang Mai speaker check. Nan, Phrae, Lampang and Chiang Rai contours differ."
+   },
+   "origin_province": [
+    "ทั่วภาคเหนือ All North",
+    "น่าน Nan (nam pu)",
+    "พะเยา Phayao",
+    "เชียงราย Chiang Rai"
+   ],
+   "season": "Rainy season (about Jun–Sep) when fresh shoots come up",
+   "occasion": "Everyday",
+   "serves": "4",
+   "description_th": "แกงหน่อไม้สดนิยมทำหน้าฝน ใส่น้ำปู๋ (น้ำปูที่ทำจากปูนาตำกรองแล้วเคี่ยวจนเหนียวดำ) ตามชอบ ใส่เนื้อสัตว์ เช่น หมู ไก่ หรือปลา พร้อมผักพื้นบ้าน",
+   "description_en": "A rainy-season curry of fresh bamboo shoots in chilli broth. Many Northern cooks add nam pu (น้ำปู๋) — a black, sticky paste made by pounding rice-field crabs, straining and boiling the juice down for hours — which gives an earthy, briny depth. Pork, chicken or fish and local greens complete it.",
+   "ingredients": [
+    {
+     "name_th": "หน่อไม้สด (ต้มแล้ว)",
+     "name_kham_mueang_th": "หน่อ",
+     "roman": "no mai sot",
+     "name_en": "Fresh bamboo shoots, peeled, sliced, PRE-BOILED",
+     "qty_metric": "400 g",
+     "role": "main",
+     "where_to_buy_th": "ตลาดต้นลำไย / ตลาดเมืองใหม่ แผงผักสมุนไพร หรือแม่ค้าผักพื้นบ้านในกาดเช้า",
+     "where_to_buy_en": "Market veg sellers in rainy season — often sold already boiled/sliced",
+     "how_to_choose_en": "Pale, sweet-smelling; if raw, must be boiled.",
+     "substitute_abroad_en": "Canned/vacuum bamboo shoots (rinse & boil).",
+     "pronunciation_roman": "no mai sot"
+    },
+    {
+     "name_th": "น้ำปู๋",
+     "name_kham_mueang_th": "น้ำปู๋",
+     "roman": "nam pu",
+     "name_en": "Nam pu (rice-field crab paste)",
+     "qty_metric": "1–2 Tbsp (to taste)",
+     "role": "earthy umami",
+     "where_to_buy_th": "กาดหลวง/ต้นลำไย แผงของหมักพื้นเมือง (ถั่วเน่า น้ำปู๋ ปลาร้า)",
+     "where_to_buy_en": "Warorot/Ton Lamyai stalls selling Northern ferments (thua nao discs, nam pu, pla ra)",
+     "how_to_choose_en": "Thick, black, glossy; sold in small jars/bags.",
+     "substitute_abroad_en": "Omit; add a little shrimp paste + fish sauce.",
+     "pronunciation_roman": "nam pu"
+    },
+    {
+     "name_th": "พริกแห้งเม็ดใหญ่",
+     "name_kham_mueang_th": "พริกแห้ง",
+     "roman": "phrik haeng",
+     "name_en": "Large dried red chillies (soaked, seeds out for less heat)",
+     "qty_metric": "5–10 pods (10–15 g)",
+     "role": "heat, colour",
+     "where_to_buy_th": "กาดหลวง (ตลาดวโรรส) ร้านเครื่องเทศ/ของแห้ง หรือร้านพริกแกงในตลาดสด",
+     "where_to_buy_en": "Warorot (Kad Luang) spice & dried-goods stalls, or the curry-paste vendor (แม่ค้าพริกแกง) in any wet market",
+     "how_to_choose_en": "Deep red, brittle, no mould.",
+     "substitute_abroad_en": "Any mild dried red chilli (e.g. guajillo) + a few dried bird's-eye for heat.",
+     "pronunciation_roman": "phrik haeng"
+    },
+    {
+     "name_th": "เกลือ",
+     "name_kham_mueang_th": "เกลือ",
+     "roman": "kluea",
+     "name_en": "Salt (coarse/sea salt)",
+     "qty_metric": "1 tsp",
+     "role": "abrasive for pounding, seasoning",
+     "where_to_buy_th": "กาดหลวง (ตลาดวโรรส) ร้านเครื่องเทศ/ของแห้ง หรือร้านพริกแกงในตลาดสด",
+     "where_to_buy_en": "Warorot (Kad Luang) spice & dried-goods stalls, or the curry-paste vendor (แม่ค้าพริกแกง) in any wet market",
+     "how_to_choose_en": "Coarse sea salt grinds chillies best.",
+     "substitute_abroad_en": "Any coarse salt.",
+     "pronunciation_roman": "kluea"
+    },
+    {
+     "name_th": "ตะไคร้",
+     "name_kham_mueang_th": "ตะไคร้",
+     "roman": "takhrai",
+     "name_en": "Lemongrass (lower stalk, thinly sliced)",
+     "qty_metric": "1–2 stalks",
+     "role": "citrus aroma",
+     "where_to_buy_th": "ตลาดต้นลำไย / ตลาดเมืองใหม่ แผงผักสมุนไพร หรือแม่ค้าผักพื้นบ้านในกาดเช้า",
+     "where_to_buy_en": "Ton Lamyai or Muang Mai market herb/vegetable stalls, or the village-veg sellers at any morning market (กาดเช้า)",
+     "how_to_choose_en": "Firm, pale, fragrant when scratched.",
+     "substitute_abroad_en": "Frozen lemongrass from Asian grocers.",
+     "pronunciation_roman": "takhrai"
+    },
+    {
+     "name_th": "หอมแดง",
+     "name_kham_mueang_th": "หอมแดง",
+     "roman": "hom daeng",
+     "name_en": "Thai shallots",
+     "qty_metric": "3–5 bulbs",
+     "role": "sweet aromatic body",
+     "where_to_buy_th": "ตลาดต้นลำไย / ตลาดเมืองใหม่ แผงผักสมุนไพร หรือแม่ค้าผักพื้นบ้านในกาดเช้า",
+     "where_to_buy_en": "Ton Lamyai or Muang Mai market herb/vegetable stalls, or the village-veg sellers at any morning market (กาดเช้า)",
+     "how_to_choose_en": "Small, firm, purple-red.",
+     "substitute_abroad_en": "Small French shallots.",
+     "pronunciation_roman": "hom daeng"
+    },
+    {
+     "name_th": "กระเทียม",
+     "name_kham_mueang_th": "กระเทียม",
+     "roman": "krathiam",
+     "name_en": "Thai garlic (small cloves)",
+     "qty_metric": "5–10 cloves",
+     "role": "aroma",
+     "where_to_buy_th": "ตลาดต้นลำไย / ตลาดเมืองใหม่ แผงผักสมุนไพร หรือแม่ค้าผักพื้นบ้านในกาดเช้า",
+     "where_to_buy_en": "Ton Lamyai or Muang Mai market herb/vegetable stalls, or the village-veg sellers at any morning market (กาดเช้า)",
+     "how_to_choose_en": "Small pinkish Thai cloves are more pungent.",
+     "substitute_abroad_en": "Regular garlic, use ~2/3 amount.",
+     "pronunciation_roman": "krathiam"
+    },
+    {
+     "name_th": "หมู/ไก่",
+     "name_kham_mueang_th": "จิ๊นหมู/จิ๊นไก่",
+     "roman": "mu / kai",
+     "name_en": "Pork or chicken",
+     "qty_metric": "300 g",
+     "role": "protein",
+     "where_to_buy_th": "แผงหมูในตลาดต้นลำไย ตลาดเมืองใหม่ หรือกาดใกล้บ้าน (ไปเช้า)",
+     "where_to_buy_en": "Pork butchers at Ton Lamyai, Muang Mai or your neighbourhood market — go early morning",
+     "how_to_choose_en": "",
+     "substitute_abroad_en": "",
+     "pronunciation_roman": "mu / kai"
+    },
+    {
+     "name_th": "ผักพื้นบ้าน (ชะอม ใบแมงลัก ฯลฯ)",
+     "name_kham_mueang_th": "ผักหละ ฯลฯ",
+     "roman": "",
+     "name_en": "Local greens (cha-om, lemon basil etc.)",
+     "qty_metric": "1 cup",
+     "role": "aroma",
+     "where_to_buy_th": "ตลาดต้นลำไย / ตลาดเมืองใหม่ แผงผักสมุนไพร หรือแม่ค้าผักพื้นบ้านในกาดเช้า",
+     "where_to_buy_en": "Ton Lamyai or Muang Mai market herb/vegetable stalls, or the village-veg sellers at any morning market (กาดเช้า)",
+     "how_to_choose_en": "",
+     "substitute_abroad_en": "Basil",
+     "pronunciation_roman": ""
+    }
+   ],
+   "equipment": [
+    {
+     "name_th": "ครก",
+     "kham_mueang_th": "ครก",
+     "name_en": "Mortar and pestle",
+     "substitute_en": "Mini chopper"
+    },
+    {
+     "name_th": "หม้อ",
+     "kham_mueang_th": "หม้อ",
+     "name_en": "Pot",
+     "substitute_en": "Saucepan"
+    }
+   ],
+   "prep_ahead_en": "Boil sliced fresh bamboo shoots in plenty of water, lid off, and discard the water (repeat if bitter). For bottled/tinned (ปี๊บ) shoots, boil at least 30 minutes before use (botulism advice).",
+   "steps": [
+    {
+     "n": 1,
+     "th": "ต้มหน่อไม้สดทิ้งน้ำ",
+     "en": "Boil the bamboo shoots and drain (see prep).",
+     "time_min": 20,
+     "sensory_cue_en": "Bitterness and sharp smell reduced.",
+     "tip_en": "Lid off lets volatile cyanogenic compounds escape."
+    },
+    {
+     "n": 2,
+     "th": "โขลกพริกแกง",
+     "en": "Pound the paste.",
+     "time_min": 8,
+     "sensory_cue_en": "",
+     "tip_en": ""
+    },
+    {
+     "n": 3,
+     "th": "ต้มน้ำ ละลายพริกแกง ใส่เนื้อสัตว์จนสุก",
+     "en": "Boil water, dissolve paste, cook the meat.",
+     "time_min": 15,
+     "sensory_cue_en": "",
+     "tip_en": ""
+    },
+    {
+     "n": 4,
+     "th": "ใส่หน่อไม้และน้ำปู๋ เคี่ยวให้เข้ากัน",
+     "en": "Add bamboo shoots and nam pu; simmer to blend.",
+     "time_min": 10,
+     "sensory_cue_en": "Broth turns dark and thick.",
+     "tip_en": "Add nam pu gradually — it's strong."
+    },
+    {
+     "n": 5,
+     "th": "ใส่ผักสมุนไพร ปรุงรส ยกลง",
+     "en": "Add greens, adjust seasoning, serve.",
+     "time_min": 2,
+     "sensory_cue_en": "",
+     "tip_en": ""
+    }
+   ],
+   "taste_profile": {
+    "sour": 0,
+    "salty": 3,
+    "spicy": 3,
+    "sweet": 1,
+    "bitter": 1,
+    "umami": 5,
+    "texture_en": "Crunchy shoots in a thick dark broth.",
+    "description_th": "เผ็ด เค็ม นัว กลิ่นน้ำปู๋",
+    "description_en": "Hot, salty, very savoury, with nam pu's earthy, rice-paddy aroma.",
+    "kham_mueang_taste_words": [
+     {
+      "th": "ลำ",
+      "roman": "lam",
+      "en": "delicious"
+     }
+    ]
+   },
+   "how_to_eat": {
+    "th": "กินกับข้าวเหนียว",
+    "en": "With sticky rice.",
+    "with_what": "Sticky rice (ข้าวนึ่ง) by hand",
+    "when_eaten": "Rainy season",
+    "sharing_etiquette_en": "Shared bowl."
+   },
+   "food_safety_en": "Fresh bamboo shoots contain cyanogenic glycosides — always boil (lid off) and discard water. Tinned/bottled bamboo (หน่อไม้ปี๊บ) has caused botulism outbreaks in Thailand; boil at least 30 minutes before eating (Doctor.or.th / health authorities). Nam pu is boiled for hours; buy from reputable sellers.",
+   "common_mistakes_foreigners_en": [
+    "Using raw bamboo shoots unboiled",
+    "Too much nam pu",
+    "Expecting it to taste like Isan แกงหน่อไม้ใบย่านาง (green, with yanang leaf)"
+   ],
+   "useful_phrases": [
+    {
+     "kham_mueang_th": "ใส่น้ำปู๋ก่อ",
+     "roman": "sai nam pu ko",
+     "central_th": "ใส่น้ำปูไหม",
+     "en": "Is there nam pu in it?",
+     "when": "Asking at a curry stall"
+    }
+   ],
+   "cultural_notes_th": "น้ำปู๋เป็นภูมิปัญญาถนอมอาหารจากปูนาช่วงฤดูทำนา เก็บไว้กินได้นาน",
+   "cultural_notes_en": "Nam pu is a rice-farming-season preserve made from crabs caught in paddies — food knowledge tied to the agricultural calendar.",
+   "sources": [
+    "https://food.trueid.net/detail/1aPyAMJR9m7X",
+    "https://www.gotoknow.org/posts/458338",
+    "https://www.doctor.or.th/article/detail/1439"
+   ],
+   "confidence": "medium"
+  },
+  {
+   "id": "kaeng_phak_hueat",
+   "name_th": "แกงผักเฮือด",
+   "name_kham_mueang_th": "แก๋งผักเฮือด (บางถิ่น ผักฮี้ / ผักเฮียด)",
+   "name_roman": "kaeng phak hueat",
+   "name_en": "Young fig-leaf (phak hueat) curry",
+   "pronunciation": {
+    "syllables": [
+     {
+      "th": "แก๋ง",
+      "roman": "kaeng",
+      "tone": "24",
+      "derived": true
+     },
+     {
+      "th": "ผัก",
+      "roman": "phak",
+      "tone": "21",
+      "derived": true
+     },
+     {
+      "th": "เฮือด",
+      "roman": "hueat",
+      "tone": "42",
+      "derived": true
+     }
+    ],
+    "tip_en": "'hueat' has the Thai 'uea' diphthong (like 'oo-uh') and a falling tone. Tones are DERIVED (not from a recorded pronunciation dictionary) with the Chiang Mai tone-box mapping used across this dataset: high/mid class live unmarked=24 low-rising; low class live unmarked=33 mid; high/mid class + mai ek or dead syllable=21 low-falling; low class + mai ek or dead long=42 high-falling; high/mid class + mai tho=44ʔ high-level-glottal; low class + mai tho or dead short=45 high-rising. Northern spellings with ๋/๊ (แก๋ง, กิ๋น, จิ๊น, โฮ๊ะ) are read as sound hints. Low confidence; needs a native Chiang Mai speaker check. Nan, Phrae, Lampang and Chiang Rai contours differ."
+   },
+   "origin_province": [
+    "ทั่วภาคเหนือ All North"
+   ],
+   "season": "Late cool season into hot season when the deciduous tree pushes new shoots (sources: ~Oct–Jan / late cool season)",
+   "occasion": "Seasonal everyday",
+   "serves": "3–4",
+   "description_th": "ผักเฮือดเป็นไม้ยืนต้นผลัดใบตระกูลเดียวกับต้นไทร (มีชื่อถิ่นว่า โพไทร ไทรเลียบ ผักไกร ผักเลียบ ผักไฮ) ยอดอ่อนรสเปรี้ยวอมฝาด นำมาแกงกับหมู พริกแกงจากพริก หอมแดง กระเทียม กะปิ ปลาร้า ใส่มะเขือเทศ",
+   "description_en": "Phak hueat is the young shoot of a deciduous fig-family tree (Ficus sp.; local names include pho sai, sai liap, phak krai). The tips are slightly sour-astringent and are simmered with pork or pork bones in a simple paste of chilli, shallot, garlic, shrimp paste and pla ra, with tomatoes. Other regions have the tree but, per one Thai source, only the North cooks it this way.",
+   "ingredients": [
+    {
+     "name_th": "ยอดผักเฮือด",
+     "name_kham_mueang_th": "ผักเฮือด",
+     "roman": "phak hueat",
+     "name_en": "Young phak hueat shoots (Ficus)",
+     "qty_metric": "300 g",
+     "role": "main green; sour-astringent",
+     "where_to_buy_th": "ตลาดต้นลำไย / ตลาดเมืองใหม่ แผงผักสมุนไพร หรือแม่ค้าผักพื้นบ้านในกาดเช้า",
+     "where_to_buy_en": "Ton Lamyai or Muang Mai market herb/vegetable stalls, or the village-veg sellers at any morning market (กาดเช้า)",
+     "how_to_choose_en": "Soft pinkish-green new shoots.",
+     "substitute_abroad_en": "No real substitute; young fig or sorrel leaves as a rough idea.",
+     "pronunciation_roman": "phak hueat"
+    },
+    {
+     "name_th": "กระดูกหมู / หมู",
+     "name_kham_mueang_th": "จิ๊นหมู",
+     "roman": "kraduk mu",
+     "name_en": "Pork bones or pork",
+     "qty_metric": "300 g",
+     "role": "broth",
+     "where_to_buy_th": "แผงหมูในตลาดต้นลำไย ตลาดเมืองใหม่ หรือกาดใกล้บ้าน (ไปเช้า)",
+     "where_to_buy_en": "Pork butchers at Ton Lamyai, Muang Mai or your neighbourhood market — go early morning",
+     "how_to_choose_en": "",
+     "substitute_abroad_en": "",
+     "pronunciation_roman": "kraduk mu"
+    },
+    {
+     "name_th": "พริกแห้ง",
+     "name_kham_mueang_th": "พริกแห้ง",
+     "roman": "phrik haeng",
+     "name_en": "Dried chillies",
+     "qty_metric": "10",
+     "role": "heat",
+     "where_to_buy_th": "กาดหลวง (ตลาดวโรรส) ร้านเครื่องเทศ/ของแห้ง หรือร้านพริกแกงในตลาดสด",
+     "where_to_buy_en": "Warorot (Kad Luang) spice & dried-goods stalls, or the curry-paste vendor (แม่ค้าพริกแกง) in any wet market",
+     "how_to_choose_en": "",
+     "substitute_abroad_en": "",
+     "pronunciation_roman": "phrik haeng"
+    },
+    {
+     "name_th": "กระเทียม, หอมแดง",
+     "name_kham_mueang_th": "กระเทียม, หอมแดง",
+     "roman": "",
+     "name_en": "Garlic 5 cloves; shallot 1",
+     "qty_metric": "5 + 1",
+     "role": "aroma",
+     "where_to_buy_th": "ตลาดต้นลำไย / ตลาดเมืองใหม่ แผงผักสมุนไพร หรือแม่ค้าผักพื้นบ้านในกาดเช้า",
+     "where_to_buy_en": "Ton Lamyai or Muang Mai market herb/vegetable stalls, or the village-veg sellers at any morning market (กาดเช้า)",
+     "how_to_choose_en": "",
+     "substitute_abroad_en": "",
+     "pronunciation_roman": ""
+    },
+    {
+     "name_th": "กะปิ, ปลาร้า",
+     "name_kham_mueang_th": "กะปิ, ปลาฮ้า",
+     "roman": "kapi, pla ra",
+     "name_en": "Shrimp paste; fermented fish",
+     "qty_metric": "1 Tbsp each",
+     "role": "umami",
+     "where_to_buy_th": "กาดหลวง/ต้นลำไย แผงของหมักพื้นเมือง (ถั่วเน่า น้ำปู๋ ปลาร้า)",
+     "where_to_buy_en": "Warorot/Ton Lamyai stalls selling Northern ferments (thua nao discs, nam pu, pla ra)",
+     "how_to_choose_en": "",
+     "substitute_abroad_en": "",
+     "pronunciation_roman": "kapi, pla ra"
+    },
+    {
+     "name_th": "มะเขือเทศ",
+     "name_kham_mueang_th": "บ่ะเขือส้ม",
+     "roman": "makhuea thet",
+     "name_en": "Tomatoes",
+     "qty_metric": "2–3",
+     "role": "sour",
+     "where_to_buy_th": "ตลาดต้นลำไย / ตลาดเมืองใหม่ แผงผักสมุนไพร หรือแม่ค้าผักพื้นบ้านในกาดเช้า",
+     "where_to_buy_en": "Ton Lamyai or Muang Mai market herb/vegetable stalls, or the village-veg sellers at any morning market (กาดเช้า)",
+     "how_to_choose_en": "",
+     "substitute_abroad_en": "",
+     "pronunciation_roman": "makhuea thet"
+    }
+   ],
+   "equipment": [
+    {
+     "name_th": "ครก",
+     "kham_mueang_th": "ครก",
+     "name_en": "Mortar and pestle",
+     "substitute_en": "Mini chopper"
+    },
+    {
+     "name_th": "หม้อ",
+     "kham_mueang_th": "หม้อ",
+     "name_en": "Pot",
+     "substitute_en": "Saucepan"
+    }
+   ],
+   "prep_ahead_en": "Pick the tender tips; some cooks steam them first to reduce astringency (Mae Noi).",
+   "steps": [
+    {
+     "n": 1,
+     "th": "โขลกพริก กระเทียม หอมแดง กะปิ ปลาร้า",
+     "en": "Pound chillies, garlic, shallot, shrimp paste and pla ra.",
+     "time_min": 8,
+     "sensory_cue_en": "",
+     "tip_en": ""
+    },
+    {
+     "n": 2,
+     "th": "ต้มน้ำ ใส่พริกแกงและหมู ต้มจนสุก",
+     "en": "Boil water with the paste and pork until cooked.",
+     "time_min": 20,
+     "sensory_cue_en": "",
+     "tip_en": ""
+    },
+    {
+     "n": 3,
+     "th": "ใส่ผักเฮือดและมะเขือเทศ ต้มจนนุ่ม ปรุงรส",
+     "en": "Add phak hueat and tomatoes; cook until tender; season.",
+     "time_min": 8,
+     "sensory_cue_en": "Leaves turn olive and soft.",
+     "tip_en": ""
+    }
+   ],
+   "taste_profile": {
+    "sour": 3,
+    "salty": 3,
+    "spicy": 3,
+    "sweet": 0,
+    "bitter": 1,
+    "umami": 3,
+    "texture_en": "Soft leaves in a thin broth.",
+    "description_th": "เปรี้ยวอมฝาด เผ็ด เค็ม",
+    "description_en": "Sour-astringent, hot and salty — a 'green' taste.",
+    "kham_mueang_taste_words": [
+     {
+      "th": "ส้ม",
+      "roman": "som",
+      "en": "sour"
+     },
+     {
+      "th": "ฝาด",
+      "roman": "fat",
+      "en": "astringent"
+     }
+    ]
+   },
+   "how_to_eat": {
+    "th": "กินกับข้าวเหนียว",
+    "en": "With sticky rice.",
+    "with_what": "Sticky rice (ข้าวนึ่ง) by hand",
+    "when_eaten": "Seasonal",
+    "sharing_etiquette_en": "Shared bowl."
+   },
+   "food_safety_en": "Buy from market sellers who know the plant.",
+   "common_mistakes_foreigners_en": [
+    "Using mature leaves (too tough and astringent)"
+   ],
+   "useful_phrases": [
+    {
+     "kham_mueang_th": "ผักเฮือดออกแล้วก่อ",
+     "roman": "phak hueat ok laeo ko",
+     "central_th": "ผักเฮือดออกแล้วหรือยัง",
+     "en": "Is phak hueat in season yet?",
+     "when": "Market"
+    }
+   ],
+   "cultural_notes_th": "เป็นผักตามฤดูกาลที่บอกการเปลี่ยนฤดูของล้านนา",
+   "cultural_notes_en": "A seasonal marker vegetable; its name varies by district (ผักฮี้, ผักเฮียด).",
+   "sources": [
+    "https://www.gotoknow.org/posts/506041",
+    "https://www.maenoicurry.com/en/article/98/%E0%B8%A2%E0%B8%B3%E0%B8%9C%E0%B8%B1%E0%B8%81%E0%B9%80%E0%B8%AE%E0%B8%B7%E0%B8%AD%E0%B8%94",
+    "https://cookpad.com/th/recipes/6617421"
+   ],
+   "confidence": "medium"
+  },
+  {
+   "id": "kaeng_om_nuea",
+   "name_th": "แกงอ่อม (แบบเหนือ)",
+   "name_kham_mueang_th": "แก๋งอ่อม / อ่อมจิ๊น",
+   "name_roman": "kaeng om",
+   "name_en": "Kaeng om — Northern slow-simmered offal & meat curry",
+   "pronunciation": {
+    "syllables": [
+     {
+      "th": "แก๋ง",
+      "roman": "kaeng",
+      "tone": "24",
+      "derived": true
+     },
+     {
+      "th": "อ่อม",
+      "roman": "om",
+      "tone": "21",
+      "derived": true
+     }
+    ],
+    "tip_en": "'om' is short-ish and low — not the yoga 'om'. Tones are DERIVED (not from a recorded pronunciation dictionary) with the Chiang Mai tone-box mapping used across this dataset: high/mid class live unmarked=24 low-rising; low class live unmarked=33 mid; high/mid class + mai ek or dead syllable=21 low-falling; low class + mai ek or dead long=42 high-falling; high/mid class + mai tho=44ʔ high-level-glottal; low class + mai tho or dead short=45 high-rising. Northern spellings with ๋/๊ (แก๋ง, กิ๋น, จิ๊น, โฮ๊ะ) are read as sound hints. Low confidence; needs a native Chiang Mai speaker check. Nan, Phrae, Lampang and Chiang Rai contours differ."
+   },
+   "origin_province": [
+    "ทั่วภาคเหนือ All North",
+    "แพร่ Phrae"
+   ],
+   "season": "All year; cooler months popular",
+   "occasion": "Weekend cooking, after a pig/cow slaughter, drinking food (กับแกล้ม)",
+   "serves": "4–6",
+   "description_th": "'อ่อม' คือการเคี่ยวเนื้อสัตว์ด้วยไฟอ่อนนานๆ จนเปื่อยยุ่ย ถือเป็นอาหารชั้นดีของล้านนา แกงอ่อมเหนือเน้นเนื้อและเครื่องใน (เอ็น ตับ ไส้ กระดูกอ่อน) ใส่เลือด ข่า ตะไคร้ รากผักชี ใบมะกรูด ใช้พริกแกงที่มีเครื่องเทศแบบพริกลาบ ต่างจากแกงอ่อมอีสานที่เน้นผัก",
+   "description_en": "'Om' means simmering meat over a low flame for a long time until it falls apart; CMU's Lanna food-naming database calls it a premium Lanna dish. The Northern version is meat- and offal-led (tendon, liver, intestine, cartilage) with blood, galangal, lemongrass, coriander root and kaffir lime leaf, using a spiced paste similar to larb spice — unlike the vegetable-heavy Isan kaeng om.",
+   "ingredients": [
+    {
+     "name_th": "เนื้อและเครื่องในหมูหรือวัว (เอ็น ตับ ไส้ กระดูกอ่อน)",
+     "name_kham_mueang_th": "จิ๊น ไส้ปุ๋มอุมอาม",
+     "roman": "khrueang nai",
+     "name_en": "Pork or beef meat and offal (tendon, liver, intestines, cartilage), cleaned",
+     "qty_metric": "1 kg",
+     "role": "main",
+     "where_to_buy_th": "แผงหมูในตลาดต้นลำไย ตลาดเมืองใหม่ หรือกาดใกล้บ้าน (ไปเช้า)",
+     "where_to_buy_en": "Pork butchers at Ton Lamyai, Muang Mai or your neighbourhood market — go early morning",
+     "how_to_choose_en": "Very fresh, clean-smelling offal; ask the butcher to clean intestines.",
+     "substitute_abroad_en": "Beef shin + tendon + a little liver.",
+     "pronunciation_roman": "khrueang nai"
+    },
+    {
+     "name_th": "เลือดหมู",
+     "name_kham_mueang_th": "เลือด",
+     "roman": "lueat",
+     "name_en": "Pork blood (optional)",
+     "qty_metric": "1/2 cup",
+     "role": "body, colour",
+     "where_to_buy_th": "แผงหมูในตลาดต้นลำไย ตลาดเมืองใหม่ หรือกาดใกล้บ้าน (ไปเช้า)",
+     "where_to_buy_en": "Pork butchers at Ton Lamyai, Muang Mai or your neighbourhood market — go early morning",
+     "how_to_choose_en": "Buy cooked/set blood if unsure.",
+     "substitute_abroad_en": "Omit.",
+     "pronunciation_roman": "lueat"
+    },
+    {
+     "name_th": "พริกแกงอ่อม / พริกลาบ + พริกแกงพื้นฐาน",
+     "name_kham_mueang_th": "พริกแก๋ง",
+     "roman": "phrik kaeng om",
+     "name_en": "Om curry paste (dried chilli, shallot, garlic, lemongrass, galangal, kapi) plus warm spices/prik laab",
+     "qty_metric": "3–4 Tbsp",
+     "role": "flavour",
+     "where_to_buy_th": "กาดหลวง (ตลาดวโรรส) ร้านเครื่องเทศ/ของแห้ง หรือร้านพริกแกงในตลาดสด",
+     "where_to_buy_en": "Warorot/wet-market curry-paste sellers sell ready 'พริกแกงอ่อม'",
+     "how_to_choose_en": "",
+     "substitute_abroad_en": "Make base paste + 1 tsp larb spice.",
+     "pronunciation_roman": "phrik kaeng om"
+    },
+    {
+     "name_th": "ข่า (แว่น), ตะไคร้ (ท่อน), รากผักชี",
+     "name_kham_mueang_th": "ข่า ตะไคร้ รากผักชี",
+     "roman": "",
+     "name_en": "Galangal slices, lemongrass lengths, coriander root",
+     "qty_metric": "1 head, 3 stalks, 3 roots",
+     "role": "aroma",
+     "where_to_buy_th": "ตลาดต้นลำไย / ตลาดเมืองใหม่ แผงผักสมุนไพร หรือแม่ค้าผักพื้นบ้านในกาดเช้า",
+     "where_to_buy_en": "Ton Lamyai or Muang Mai market herb/vegetable stalls, or the village-veg sellers at any morning market (กาดเช้า)",
+     "how_to_choose_en": "",
+     "substitute_abroad_en": "",
+     "pronunciation_roman": ""
+    },
+    {
+     "name_th": "ใบมะกรูด",
+     "name_kham_mueang_th": "ใบบ่ะขูด",
+     "roman": "bai makrut",
+     "name_en": "Kaffir lime leaves, torn",
+     "qty_metric": "5",
+     "role": "removes offal smell",
+     "where_to_buy_th": "ตลาดต้นลำไย / ตลาดเมืองใหม่ แผงผักสมุนไพร หรือแม่ค้าผักพื้นบ้านในกาดเช้า",
+     "where_to_buy_en": "Ton Lamyai or Muang Mai market herb/vegetable stalls, or the village-veg sellers at any morning market (กาดเช้า)",
+     "how_to_choose_en": "",
+     "substitute_abroad_en": "Frozen lime leaves",
+     "pronunciation_roman": "bai makrut"
+    },
+    {
+     "name_th": "ผักชี ต้นหอม ผักชีฝรั่ง",
+     "name_kham_mueang_th": "ผักหอมป้อม (ผักชี), ผักหอมเป (ผักชีฝรั่ง) — ต้องตรวจสอบ",
+     "roman": "",
+     "name_en": "Coriander, spring onion, sawtooth coriander to finish",
+     "qty_metric": "garnish",
+     "role": "freshness",
+     "where_to_buy_th": "ตลาดต้นลำไย / ตลาดเมืองใหม่ แผงผักสมุนไพร หรือแม่ค้าผักพื้นบ้านในกาดเช้า",
+     "where_to_buy_en": "Ton Lamyai or Muang Mai market herb/vegetable stalls, or the village-veg sellers at any morning market (กาดเช้า)",
+     "how_to_choose_en": "",
+     "substitute_abroad_en": "",
+     "pronunciation_roman": ""
+    }
+   ],
+   "equipment": [
+    {
+     "name_th": "ครก",
+     "kham_mueang_th": "ครก",
+     "name_en": "Mortar and pestle",
+     "substitute_en": "Mini chopper"
+    },
+    {
+     "name_th": "หม้อ",
+     "kham_mueang_th": "หม้อ",
+     "name_en": "Pot",
+     "substitute_en": "Saucepan"
+    }
+   ],
+   "prep_ahead_en": "Clean offal thoroughly (salt/flour rub, rinse); par-boil intestines. Budget 2+ hours for simmering tendon.",
+   "steps": [
+    {
+     "n": 1,
+     "th": "ผัดพริกแกงกับน้ำมันจนหอม ใส่เนื้อและเครื่องใน ข่า ตะไคร้ รากผักชี ผัดจนสุก",
+     "en": "Fry the paste in a little oil until fragrant; add meat/offal, galangal, lemongrass and coriander root; stir until cooked on the outside.",
+     "time_min": 10,
+     "sensory_cue_en": "Paste smells toasted; meat coated red.",
+     "tip_en": ""
+    },
+    {
+     "n": 2,
+     "th": "เติมน้ำ ต้มให้เดือด ใส่เลือด เคี่ยวไฟอ่อนจนเอ็นเปื่อย",
+     "en": "Add water, bring to the boil, add blood, then simmer on LOW until the tendon is soft.",
+     "time_min": 120,
+     "sensory_cue_en": "Broth darkens and thickens; tendon translucent and yielding.",
+     "tip_en": "This low, long simmer is what 'om' means."
+    },
+    {
+     "n": 3,
+     "th": "ปรุงด้วยเกลือ ใส่ใบมะกรูด พริก โรยผักชี ต้นหอม",
+     "en": "Season with salt, add lime leaves and chillies; finish with herbs.",
+     "time_min": 3,
+     "sensory_cue_en": "",
+     "tip_en": ""
+    }
+   ],
+   "taste_profile": {
+    "sour": 0,
+    "salty": 3,
+    "spicy": 4,
+    "sweet": 0,
+    "bitter": 2,
+    "umami": 5,
+    "texture_en": "Soft tendon, chewy offal in a dark, thick broth.",
+    "description_th": "เผ็ด เค็ม หอมเครื่องเทศ ขมนิดๆ จากเครื่องใน",
+    "description_en": "Hot, deeply meaty and spiced, with a slight bitterness from offal/bile in some versions.",
+    "kham_mueang_taste_words": [
+     {
+      "th": "ลำ",
+      "roman": "lam",
+      "en": "delicious"
+     },
+     {
+      "th": "เผ็ด",
+      "roman": "phet",
+      "en": "spicy"
+     }
+    ]
+   },
+   "how_to_eat": {
+    "th": "กินกับข้าวเหนียว หรือราดข้าวเส้น",
+    "en": "With sticky rice; Mae Noi notes it also works over rice noodles.",
+    "with_what": "Sticky rice (ข้าวนึ่ง) by hand; fresh herbs",
+    "when_eaten": "Lunch/dinner; with drinks",
+    "sharing_etiquette_en": "Shared bowl; it's polite to try a bit of the offal if offered."
+   },
+   "food_safety_en": "Offal and blood must be very fresh and cooked thoroughly. Streptococcus suis infection from undercooked pork/blood is a known risk in Northern Thailand — never eat raw blood versions. (General public-health knowledge; not from this round's sources.)",
+   "common_mistakes_foreigners_en": [
+    "Boiling hard instead of gentle simmering",
+    "Confusing with Isan kaeng om (dill, veg-heavy)",
+    "Poorly cleaned intestines"
+   ],
+   "useful_phrases": [
+    {
+     "kham_mueang_th": "อ่อมจิ๊น",
+     "roman": "om jin",
+     "central_th": "แกงอ่อมเนื้อ",
+     "en": "Meat 'om' curry",
+     "when": "Ordering"
+    }
+   ],
+   "cultural_notes_th": "คำว่า 'อ่อม' ในกำเมืองยังใช้เปรียบว่าทำอะไรชักช้าเยิ่นเย้อ",
+   "cultural_notes_en": "In Kham Mueang, 'om' is also used figuratively for dawdling or dragging something out — a nice example of cooking vocabulary in daily speech.",
+   "sources": [
+    "https://www.maenoicurry.com/en/article/105/%E0%B9%81%E0%B8%81%E0%B8%87%E0%B8%AD%E0%B9%88%E0%B8%AD%E0%B8%A1%E0%B8%AB%E0%B8%A1%E0%B8%B9-%E0%B9%80%E0%B8%AB%E0%B8%99%E0%B8%B7%E0%B8%AD",
+    "https://www.gotoknow.org/posts/421377",
+    "https://lannakadee.cmu.ac.th/area1/food/type.php"
+   ],
+   "confidence": "medium"
+  },
+  {
+   "id": "tom_som_pla",
+   "name_th": "ต้มส้มปลา",
+   "name_kham_mueang_th": "ต้มส้มป๋า",
+   "name_roman": "tom som pla",
+   "name_en": "Sour fish soup with young tamarind and tomato",
+   "pronunciation": {
+    "syllables": [
+     {
+      "th": "ต้ม",
+      "roman": "tom",
+      "tone": "44ʔ",
+      "derived": true
+     },
+     {
+      "th": "ส้ม",
+      "roman": "som",
+      "tone": "44ʔ",
+      "derived": true
+     },
+     {
+      "th": "ปลา/ป๋า",
+      "roman": "pa",
+      "tone": "24",
+      "derived": true
+     }
+    ],
+    "tip_en": "Northerners often drop the l: ปลา → 'pa'. 'Som' in Kham Mueang is simply 'sour'. Tones are DERIVED (not from a recorded pronunciation dictionary) with the Chiang Mai tone-box mapping used across this dataset: high/mid class live unmarked=24 low-rising; low class live unmarked=33 mid; high/mid class + mai ek or dead syllable=21 low-falling; low class + mai ek or dead long=42 high-falling; high/mid class + mai tho=44ʔ high-level-glottal; low class + mai tho or dead short=45 high-rising. Northern spellings with ๋/๊ (แก๋ง, กิ๋น, จิ๊น, โฮ๊ะ) are read as sound hints. Low confidence; needs a native Chiang Mai speaker check. Nan, Phrae, Lampang and Chiang Rai contours differ."
+   },
+   "origin_province": [
+    "ทั่วภาคเหนือ All North (sour fish soups are pan-Thai; Northern attribution low confidence)"
+   ],
+   "season": "All year; young tamarind in cool season",
+   "occasion": "Everyday",
+   "serves": "3–4",
+   "description_th": "'ต้ม' ในล้านนาหมายถึงอาหารน้ำที่อาจรสจืดคล้ายแกงจืด ต้มส้มปลาใช้ปลาน้ำจืด ต้มกับมะขามอ่อน มะเขือเทศ หอมแดง พริกแห้ง ตะไคร้ ปรุงด้วยเกลือ น้ำปลา ขมิ้น โรยต้นหอม ใบแมงลัก",
+   "description_en": "In Lanna naming, 'tom' is a brothy dish that may be mild like Central 'kaeng jued'. This sour fish soup simmers freshwater fish with young tamarind pods, sour tomatoes, whole shallots, dried chilli and lemongrass, seasoned with salt, fish sauce and a little turmeric, and finished with spring onion and lemon basil. NOTE: recipe from a user-contributed Thai source; a specifically Lanna 'tom som' tradition was not confirmed this round.",
+   "ingredients": [
+    {
+     "name_th": "ปลาน้ำจืด (ปลานิล ปลาช่อน ฯลฯ)",
+     "name_kham_mueang_th": "ป๋า",
+     "roman": "pla",
+     "name_en": "Freshwater fish (tilapia, snakehead...), cut in pieces",
+     "qty_metric": "500 g",
+     "role": "main",
+     "where_to_buy_th": "แผงปลาในตลาดเมืองใหม่/ต้นลำไย",
+     "where_to_buy_en": "Fish stalls at Muang Mai or Ton Lamyai",
+     "how_to_choose_en": "Clear eyes, red gills, firm.",
+     "substitute_abroad_en": "Any firm white fish.",
+     "pronunciation_roman": "pla"
+    },
+    {
+     "name_th": "มะขามอ่อน",
+     "name_kham_mueang_th": "บ่ะขามอ่อน",
+     "roman": "makham on",
+     "name_en": "Young green tamarind pods, cracked",
+     "qty_metric": "1–2 pods",
+     "role": "sour",
+     "where_to_buy_th": "ตลาดต้นลำไย / ตลาดเมืองใหม่ แผงผักสมุนไพร หรือแม่ค้าผักพื้นบ้านในกาดเช้า",
+     "where_to_buy_en": "Ton Lamyai or Muang Mai market herb/vegetable stalls, or the village-veg sellers at any morning market (กาดเช้า)",
+     "how_to_choose_en": "",
+     "substitute_abroad_en": "Tamarind water.",
+     "pronunciation_roman": "makham on"
+    },
+    {
+     "name_th": "มะเขือเทศลูกเล็ก",
+     "name_kham_mueang_th": "บ่ะเขือส้ม",
+     "roman": "makhuea thet",
+     "name_en": "Small sour tomatoes, halved",
+     "qty_metric": "4–5",
+     "role": "sour/colour",
+     "where_to_buy_th": "ตลาดต้นลำไย / ตลาดเมืองใหม่ แผงผักสมุนไพร หรือแม่ค้าผักพื้นบ้านในกาดเช้า",
+     "where_to_buy_en": "Ton Lamyai or Muang Mai market herb/vegetable stalls, or the village-veg sellers at any morning market (กาดเช้า)",
+     "how_to_choose_en": "",
+     "substitute_abroad_en": "Cherry tomatoes.",
+     "pronunciation_roman": "makhuea thet"
+    },
+    {
+     "name_th": "หอมแดง พริกแห้ง ตะไคร้",
+     "name_kham_mueang_th": "",
+     "roman": "",
+     "name_en": "Whole shallots, dried chillies, bruised lemongrass",
+     "qty_metric": "3–4, 4–5, 1",
+     "role": "aroma",
+     "where_to_buy_th": "ตลาดต้นลำไย / ตลาดเมืองใหม่ แผงผักสมุนไพร หรือแม่ค้าผักพื้นบ้านในกาดเช้า",
+     "where_to_buy_en": "Ton Lamyai or Muang Mai market herb/vegetable stalls, or the village-veg sellers at any morning market (กาดเช้า)",
+     "how_to_choose_en": "",
+     "substitute_abroad_en": "",
+     "pronunciation_roman": ""
+    },
+    {
+     "name_th": "เกลือ น้ำปลา ขมิ้นผง",
+     "name_kham_mueang_th": "",
+     "roman": "",
+     "name_en": "Salt 1 tsp, fish sauce 1 Tbsp, turmeric 1/2 tsp",
+     "qty_metric": "",
+     "role": "seasoning",
+     "where_to_buy_th": "กาดหลวง (ตลาดวโรรส) ร้านเครื่องเทศ/ของแห้ง หรือร้านพริกแกงในตลาดสด",
+     "where_to_buy_en": "Warorot (Kad Luang) spice & dried-goods stalls, or the curry-paste vendor (แม่ค้าพริกแกง) in any wet market",
+     "how_to_choose_en": "",
+     "substitute_abroad_en": "",
+     "pronunciation_roman": ""
+    },
+    {
+     "name_th": "ต้นหอม ใบแมงลัก",
+     "name_kham_mueang_th": "",
+     "roman": "ton hom, bai maeng lak",
+     "name_en": "Spring onion, lemon basil",
+     "qty_metric": "garnish",
+     "role": "fresh aroma",
+     "where_to_buy_th": "ตลาดต้นลำไย / ตลาดเมืองใหม่ แผงผักสมุนไพร หรือแม่ค้าผักพื้นบ้านในกาดเช้า",
+     "where_to_buy_en": "Ton Lamyai or Muang Mai market herb/vegetable stalls, or the village-veg sellers at any morning market (กาดเช้า)",
+     "how_to_choose_en": "",
+     "substitute_abroad_en": "Thai basil.",
+     "pronunciation_roman": "ton hom, bai maeng lak"
+    }
+   ],
+   "equipment": [
+    {
+     "name_th": "หม้อ",
+     "kham_mueang_th": "หม้อ",
+     "name_en": "Pot",
+     "substitute_en": "Saucepan"
+    }
+   ],
+   "prep_ahead_en": "Clean and cut fish; small fish can stay whole.",
+   "steps": [
+    {
+     "n": 1,
+     "th": "ต้มน้ำกับตะไคร้ทุบ มะขามอ่อน มะเขือเทศ หอมแดงทั้งหัว จนมะเขือเทศออกสีและมะขามนุ่ม",
+     "en": "Boil water with lemongrass, tamarind, tomatoes and whole shallots until the tomatoes colour the broth and the tamarind softens.",
+     "time_min": 10,
+     "sensory_cue_en": "Pinkish, tart-smelling broth.",
+     "tip_en": ""
+    },
+    {
+     "n": 2,
+     "th": "ใส่ปลา ปรุงด้วยเกลือ น้ำปลา ขมิ้น",
+     "en": "Add fish; season with salt, fish sauce and turmeric.",
+     "time_min": 8,
+     "sensory_cue_en": "Fish flakes when pressed.",
+     "tip_en": "Don't stir hard or the fish breaks."
+    },
+    {
+     "n": 3,
+     "th": "ชิม โรยต้นหอม ใบแมงลัก",
+     "en": "Taste; finish with spring onion and basil.",
+     "time_min": 1,
+     "sensory_cue_en": "",
+     "tip_en": ""
+    }
+   ],
+   "taste_profile": {
+    "sour": 4,
+    "salty": 3,
+    "spicy": 1,
+    "sweet": 1,
+    "bitter": 0,
+    "umami": 3,
+    "texture_en": "Clear sour broth, flaky fish.",
+    "description_th": "เปรี้ยวนำ เค็มตาม หอมตะไคร้",
+    "description_en": "Sour-led, lightly salty, fresh.",
+    "kham_mueang_taste_words": [
+     {
+      "th": "ส้ม",
+      "roman": "som",
+      "en": "sour"
+     }
+    ]
+   },
+   "how_to_eat": {
+    "th": "ซดร้อนๆ กับข้าวเหนียวหรือข้าวสวย",
+    "en": "Sip hot with sticky or steamed rice.",
+    "with_what": "Sticky rice (ข้าวนึ่ง) by hand",
+    "when_eaten": "Everyday",
+    "sharing_etiquette_en": "Shared bowl; watch for bones."
+   },
+   "food_safety_en": "Freshwater fish must be fully cooked (liver fluke risk in raw freshwater fish).",
+   "common_mistakes_foreigners_en": [
+    "Boiling fish too long",
+    "Stirring vigorously"
+   ],
+   "useful_phrases": [
+    {
+     "kham_mueang_th": "ส้มแต๊",
+     "roman": "som tae",
+     "central_th": "เปรี้ยวจริง",
+     "en": "Really sour!",
+     "when": "Tasting"
+    }
+   ],
+   "cultural_notes_th": "",
+   "cultural_notes_en": "",
+   "sources": [
+    "https://cookpad.com/th/recipes/15964706",
+    "https://lannakadee.cmu.ac.th/area1/food/type.php"
+   ],
+   "confidence": "low"
+  },
+  {
+   "id": "kaeng_kradang",
+   "name_th": "แกงกระด้าง",
+   "name_kham_mueang_th": "แก๋งกะด้าง / หมูกระด้าง / หมูหนาว (แกงตุ๋ง)",
+   "name_roman": "kaeng kradang",
+   "name_en": "Kaeng kradang — jellied pork-trotter curry set by the winter cold",
+   "pronunciation": {
+    "syllables": [
+     {
+      "th": "แก๋ง",
+      "roman": "kaeng",
+      "tone": "24",
+      "derived": true
+     },
+     {
+      "th": "กะ",
+      "roman": "ka",
+      "tone": "21",
+      "derived": true
+     },
+     {
+      "th": "ด้าง",
+      "roman": "dang",
+      "tone": "44ʔ",
+      "derived": true
+     }
+    ],
+    "tip_en": "Northerners say 'ka-dang' (not 'kra-'). Tones are DERIVED (not from a recorded pronunciation dictionary) with the Chiang Mai tone-box mapping used across this dataset: high/mid class live unmarked=24 low-rising; low class live unmarked=33 mid; high/mid class + mai ek or dead syllable=21 low-falling; low class + mai ek or dead long=42 high-falling; high/mid class + mai tho=44ʔ high-level-glottal; low class + mai tho or dead short=45 high-rising. Northern spellings with ๋/๊ (แก๋ง, กิ๋น, จิ๊น, โฮ๊ะ) are read as sound hints. Low confidence; needs a native Chiang Mai speaker check. Nan, Phrae, Lampang and Chiang Rai contours differ."
+   },
+   "origin_province": [
+    "เชียงใหม่ Chiang Mai",
+    "เชียงราย Chiang Rai",
+    "แม่ฮ่องสอน Mae Hong Son",
+    "ลำพูน Lamphun",
+    "ลำปาง Lampang",
+    "แพร่ Phrae",
+    "น่าน Nan"
+   ],
+   "season": "Cold season only (Dec–Jan) — the cold night air is the 'setting agent'",
+   "occasion": "Winter breakfast; sold in slices at morning markets",
+   "serves": "6–8",
+   "description_th": "แกงตีนหมู ขาหมู (บางครัวใช้หน้ากากหมู) ที่อุดมด้วยเจลาติน เคี่ยวนาน แล้วตั้งทิ้งไว้ข้ามคืนในอากาศหนาวจัดจนน้ำแกงแข็งตัวเป็นวุ้นธรรมชาติ แบบเชียงใหม่ใช้พริกไทยขาว กระเทียม รากผักชี แบบเชียงรายใช้พริกแห้ง ข่า ตะไคร้ กะปิ",
+   "description_en": "Pork trotters and legs (some kitchens use the pig's face meat) are singed, scraped, boned and simmered for hours, then left out overnight in the winter cold until the broth sets into a natural jelly. Krua.co calls cold air the key 'ingredient'. Chiang Mai style seasons with white pepper, garlic and coriander root; Chiang Rai style uses a paste of dried chilli, galangal, lemongrass and shrimp paste.",
+   "ingredients": [
+    {
+     "name_th": "ขาหมู ตีนหมู (หรือหน้ากากหมู)",
+     "name_kham_mueang_th": "ขาหมู ตี๋นหมู",
+     "roman": "kha mu, tin mu",
+     "name_en": "Pork legs & trotters (or face/mask meat)",
+     "qty_metric": "1.5–2 kg",
+     "role": "gelatin + meat",
+     "where_to_buy_th": "แผงหมูในตลาดต้นลำไย ตลาดเมืองใหม่ หรือกาดใกล้บ้าน (ไปเช้า)",
+     "where_to_buy_en": "Pork butchers at Ton Lamyai, Muang Mai or your neighbourhood market — go early morning",
+     "how_to_choose_en": "Ask the butcher to cut trotters into pieces; skin-on is essential.",
+     "substitute_abroad_en": "Pig's feet + pork hock; add unflavoured gelatin if your climate is warm.",
+     "pronunciation_roman": "kha mu, tin mu"
+    },
+    {
+     "name_th": "พริกไทยขาว กระเทียม รากผักชี (แบบเชียงใหม่)",
+     "name_kham_mueang_th": "",
+     "roman": "",
+     "name_en": "White pepper, garlic, coriander root (Chiang Mai style)",
+     "qty_metric": "1 tsp, 1 head, 3 roots",
+     "role": "seasoning",
+     "where_to_buy_th": "กาดหลวง (ตลาดวโรรส) ร้านเครื่องเทศ/ของแห้ง หรือร้านพริกแกงในตลาดสด",
+     "where_to_buy_en": "Warorot (Kad Luang) spice & dried-goods stalls, or the curry-paste vendor (แม่ค้าพริกแกง) in any wet market",
+     "how_to_choose_en": "",
+     "substitute_abroad_en": "",
+     "pronunciation_roman": ""
+    },
+    {
+     "name_th": "พริกแห้ง ข่า ตะไคร้ กะปิ (แบบเชียงราย)",
+     "name_kham_mueang_th": "",
+     "roman": "",
+     "name_en": "Dried chilli, galangal, lemongrass, shrimp paste (Chiang Rai style)",
+     "qty_metric": "paste ~3 Tbsp",
+     "role": "seasoning",
+     "where_to_buy_th": "กาดหลวง (ตลาดวโรรส) ร้านเครื่องเทศ/ของแห้ง หรือร้านพริกแกงในตลาดสด",
+     "where_to_buy_en": "Warorot (Kad Luang) spice & dried-goods stalls, or the curry-paste vendor (แม่ค้าพริกแกง) in any wet market",
+     "how_to_choose_en": "",
+     "substitute_abroad_en": "",
+     "pronunciation_roman": ""
+    },
+    {
+     "name_th": "เกลือ น้ำปลา",
+     "name_kham_mueang_th": "",
+     "roman": "",
+     "name_en": "Salt, fish sauce",
+     "qty_metric": "to taste",
+     "role": "seasoning",
+     "where_to_buy_th": "กาดหลวง (ตลาดวโรรส) ร้านเครื่องเทศ/ของแห้ง หรือร้านพริกแกงในตลาดสด",
+     "where_to_buy_en": "Warorot (Kad Luang) spice & dried-goods stalls, or the curry-paste vendor (แม่ค้าพริกแกง) in any wet market",
+     "how_to_choose_en": "",
+     "substitute_abroad_en": "",
+     "pronunciation_roman": ""
+    },
+    {
+     "name_th": "ต้นหอม ผักชี",
+     "name_kham_mueang_th": "",
+     "roman": "",
+     "name_en": "Spring onion, coriander",
+     "qty_metric": "garnish",
+     "role": "",
+     "where_to_buy_th": "ตลาดต้นลำไย / ตลาดเมืองใหม่ แผงผักสมุนไพร หรือแม่ค้าผักพื้นบ้านในกาดเช้า",
+     "where_to_buy_en": "Ton Lamyai or Muang Mai market herb/vegetable stalls, or the village-veg sellers at any morning market (กาดเช้า)",
+     "how_to_choose_en": "",
+     "substitute_abroad_en": "",
+     "pronunciation_roman": ""
+    }
+   ],
+   "equipment": [
+    {
+     "name_th": "หม้อใหญ่",
+     "kham_mueang_th": "หม้อ",
+     "name_en": "Large pot",
+     "substitute_en": "Stockpot"
+    },
+    {
+     "name_th": "ถาด/ชามสำหรับพักให้แข็ง",
+     "kham_mueang_th": "",
+     "name_en": "Trays or bowls to set the jelly",
+     "substitute_en": "Refrigerator if nights are not cold"
+    }
+   ],
+   "prep_ahead_en": "Singe off hairs over flame and scrape the skin clean; this takes time.",
+   "steps": [
+    {
+     "n": 1,
+     "th": "เผาขนหมู ขูดให้สะอาด เลาะกระดูก หั่นชิ้น",
+     "en": "Singe and scrape the trotters/legs clean, debone and cut into pieces.",
+     "time_min": 30,
+     "sensory_cue_en": "Skin smooth and pale-gold, no hairs.",
+     "tip_en": ""
+    },
+    {
+     "n": 2,
+     "th": "โขลกเครื่องปรุงตามแบบที่เลือก",
+     "en": "Pound the seasoning for your chosen style (CM: pepper-garlic-coriander root; CR: chilli paste).",
+     "time_min": 8,
+     "sensory_cue_en": "",
+     "tip_en": ""
+    },
+    {
+     "n": 3,
+     "th": "ต้มหมูกับเครื่องปรุง เคี่ยวไฟอ่อนนานหลายชั่วโมงจนหนังเปื่อย",
+     "en": "Simmer the pork with the seasoning on low for several hours until the skin is very soft.",
+     "time_min": 180,
+     "sensory_cue_en": "Broth becomes sticky — fingers stick together when you touch a drop.",
+     "tip_en": "Stickiness = enough gelatin to set."
+    },
+    {
+     "n": 4,
+     "th": "ปรุงรส ตักใส่ถาด ตั้งไว้ข้ามคืนในที่อากาศหนาว",
+     "en": "Season, pour into trays/bowls and leave overnight in the cold air.",
+     "time_min": 480,
+     "sensory_cue_en": "By morning it is set into a firm, amber jelly.",
+     "tip_en": "In warm weather use the fridge."
+    },
+    {
+     "n": 5,
+     "th": "ตัดเป็นชิ้น โรยต้นหอม ผักชี",
+     "en": "Cut into slices; top with herbs.",
+     "time_min": 2,
+     "sensory_cue_en": "",
+     "tip_en": ""
+    }
+   ],
+   "taste_profile": {
+    "sour": 0,
+    "salty": 3,
+    "spicy": 2,
+    "sweet": 0,
+    "bitter": 0,
+    "umami": 4,
+    "texture_en": "Cold, wobbly jelly with soft skin and meat — melts on hot sticky rice.",
+    "description_th": "เค็ม หอมพริกไทย/พริกแกง วุ้นเย็นละลายในปาก",
+    "description_en": "Savoury and peppery (or chilli-spiced), a cool jelly that melts on hot rice.",
+    "kham_mueang_taste_words": [
+     {
+      "th": "ลำ",
+      "roman": "lam",
+      "en": "delicious"
+     }
+    ]
+   },
+   "how_to_eat": {
+    "th": "กินกับข้าวเหนียวนึ่งร้อนๆ เป็นอาหารเช้าหน้าหนาว",
+    "en": "With piping-hot sticky rice as a winter breakfast; the heat of the rice melts the jelly.",
+    "with_what": "Hot sticky rice",
+    "when_eaten": "Winter mornings",
+    "sharing_etiquette_en": "Bought by the slice at the market and shared at breakfast."
+   },
+   "food_safety_en": "Keep cold; once set, it should stay chilled and be eaten within a couple of days. Do not leave outside overnight in warm weather.",
+   "common_mistakes_foreigners_en": [
+    "Expecting it to set in warm weather without a fridge",
+    "Removing too much skin (the gelatin source)"
+   ],
+   "useful_phrases": [
+    {
+     "kham_mueang_th": "หนาวแล้ว มีแก๋งกะด้างก่อ",
+     "roman": "nao laeo mi kaeng ka-dang ko",
+     "central_th": "หนาวแล้ว มีแกงกระด้างไหม",
+     "en": "It's cold now — any kaeng kradang?",
+     "when": "Market, winter mornings"
+    }
+   ],
+   "cultural_notes_th": "เป็นเมนูแห่งฤดูกาลที่ใช้ลมหนาวเป็นวัตถุดิบ krua.co เปรียบกับอาหารเจลาตินของเวียดนามและจีน",
+   "cultural_notes_en": "Truly seasonal: without the cold it doesn't exist traditionally. Krua.co compares it with Vietnamese and Chinese jellied-pork dishes.",
+   "sources": [
+    "https://krua.co/food_story/kangkradang/",
+    "https://www.wongnai.com/food-tips/top-35-must-try-northern-thai-dishes"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "yam_jin_kai",
+   "name_th": "ยำจิ๊นไก่",
+   "name_kham_mueang_th": "ยำจิ๊นไก่",
+   "name_roman": "yam jin kai",
+   "name_en": "Yam jin kai — Northern spiced chicken soup (a 'yam' that is not a salad)",
+   "pronunciation": {
+    "syllables": [
+     {
+      "th": "ยำ",
+      "roman": "yam",
+      "tone": "33",
+      "derived": true
+     },
+     {
+      "th": "จิ๊น",
+      "roman": "jin",
+      "tone": "45",
+      "derived": true
+     },
+     {
+      "th": "ไก่",
+      "roman": "kai",
+      "tone": "21",
+      "derived": true
+     }
+    ],
+    "tip_en": "จิ๊น (jin) is Kham Mueang for 'meat'. Tones are DERIVED (not from a recorded pronunciation dictionary) with the Chiang Mai tone-box mapping used across this dataset: high/mid class live unmarked=24 low-rising; low class live unmarked=33 mid; high/mid class + mai ek or dead syllable=21 low-falling; low class + mai ek or dead long=42 high-falling; high/mid class + mai tho=44ʔ high-level-glottal; low class + mai tho or dead short=45 high-rising. Northern spellings with ๋/๊ (แก๋ง, กิ๋น, จิ๊น, โฮ๊ะ) are read as sound hints. Low confidence; needs a native Chiang Mai speaker check. Nan, Phrae, Lampang and Chiang Rai contours differ."
+   },
+   "origin_province": [
+    "ทั่วภาคเหนือ All North"
+   ],
+   "season": "All year",
+   "occasion": "After a สู่ขวัญ (khwan-calling) ceremony — the ritual chicken becomes this meal",
+   "serves": "4",
+   "description_th": "แม้ชื่อว่ายำ แต่เป็นอาหารมีน้ำมาก สีแดงเข้มคล้ายแกง ต้มไก่บ้านทั้งตัวจากพิธีสู่ขวัญ ฉีกเนื้อ ผสมพริกลาบ มะแขว่น น้ำต้มไก่ ปรุงด้วยเกลือ น้ำปลา ใส่ต้นหอม ผักชี สะระแหน่",
+   "description_en": "Despite the name 'yam', it's a soupy, dark-red, curry-like dish. A whole village chicken — often the one used in a khwan-calling (สู่ขวัญ) ceremony — is boiled, shredded and mixed with larb spice (prik laab), makhwaen and the broth, then finished with spring onion, coriander and mint. This is the closest Northern analogue to a 'tom yam'.",
+   "ingredients": [
+    {
+     "name_th": "ไก่บ้านทั้งตัว",
+     "name_kham_mueang_th": "จิ๊นไก่",
+     "roman": "kai ban",
+     "name_en": "Whole free-range village chicken",
+     "qty_metric": "1 bird (~1.2 kg)",
+     "role": "main + broth",
+     "where_to_buy_th": "แผงหมูในตลาดต้นลำไย ตลาดเมืองใหม่ หรือกาดใกล้บ้าน (ไปเช้า)",
+     "where_to_buy_en": "Pork butchers at Ton Lamyai, Muang Mai or your neighbourhood market — go early morning",
+     "how_to_choose_en": "Village chicken (ไก่บ้าน) is leaner and firmer.",
+     "substitute_abroad_en": "Free-range chicken.",
+     "pronunciation_roman": "kai ban"
+    },
+    {
+     "name_th": "พริกลาบ",
+     "name_kham_mueang_th": "พริกลาบ",
+     "roman": "phrik laap",
+     "name_en": "Northern larb spice powder",
+     "qty_metric": "2–3 Tbsp",
+     "role": "spice",
+     "where_to_buy_th": "กาดหลวง (ตลาดวโรรส) ร้านเครื่องเทศ/ของแห้ง หรือร้านพริกแกงในตลาดสด",
+     "where_to_buy_en": "Warorot (Kad Luang) spice & dried-goods stalls, or the curry-paste vendor (แม่ค้าพริกแกง) in any wet market",
+     "how_to_choose_en": "",
+     "substitute_abroad_en": "See larb dataset for recipe.",
+     "pronunciation_roman": "phrik laap"
+    },
+    {
+     "name_th": "มะแขว่น",
+     "name_kham_mueang_th": "บ่ะแขว่น",
+     "roman": "makhwaen",
+     "name_en": "Makhwaen, toasted and ground",
+     "qty_metric": "1 tsp",
+     "role": "numbing aroma",
+     "where_to_buy_th": "กาดหลวง (ตลาดวโรรส) ร้านเครื่องเทศ/ของแห้ง หรือร้านพริกแกงในตลาดสด",
+     "where_to_buy_en": "Warorot (Kad Luang) spice & dried-goods stalls, or the curry-paste vendor (แม่ค้าพริกแกง) in any wet market",
+     "how_to_choose_en": "",
+     "substitute_abroad_en": "Sichuan pepper.",
+     "pronunciation_roman": "makhwaen"
+    },
+    {
+     "name_th": "ต้นหอม ผักชี สะระแหน่",
+     "name_kham_mueang_th": "ผักหอม",
+     "roman": "",
+     "name_en": "Spring onion, coriander, mint",
+     "qty_metric": "1 cup",
+     "role": "fresh finish",
+     "where_to_buy_th": "ตลาดต้นลำไย / ตลาดเมืองใหม่ แผงผักสมุนไพร หรือแม่ค้าผักพื้นบ้านในกาดเช้า",
+     "where_to_buy_en": "Ton Lamyai or Muang Mai market herb/vegetable stalls, or the village-veg sellers at any morning market (กาดเช้า)",
+     "how_to_choose_en": "",
+     "substitute_abroad_en": "",
+     "pronunciation_roman": ""
+    },
+    {
+     "name_th": "เกลือ น้ำปลา",
+     "name_kham_mueang_th": "",
+     "roman": "",
+     "name_en": "Salt, fish sauce",
+     "qty_metric": "to taste",
+     "role": "",
+     "where_to_buy_th": "กาดหลวง (ตลาดวโรรส) ร้านเครื่องเทศ/ของแห้ง หรือร้านพริกแกงในตลาดสด",
+     "where_to_buy_en": "Warorot (Kad Luang) spice & dried-goods stalls, or the curry-paste vendor (แม่ค้าพริกแกง) in any wet market",
+     "how_to_choose_en": "",
+     "substitute_abroad_en": "",
+     "pronunciation_roman": ""
+    }
+   ],
+   "equipment": [
+    {
+     "name_th": "ครก",
+     "kham_mueang_th": "ครก",
+     "name_en": "Mortar and pestle",
+     "substitute_en": "Mini chopper"
+    },
+    {
+     "name_th": "หม้อ",
+     "kham_mueang_th": "หม้อ",
+     "name_en": "Pot",
+     "substitute_en": "Saucepan"
+    }
+   ],
+   "prep_ahead_en": "Boil the chicken whole until cooked; reserve the broth.",
+   "steps": [
+    {
+     "n": 1,
+     "th": "ต้มไก่ทั้งตัวจนสุก เก็บน้ำต้ม",
+     "en": "Boil the whole chicken until cooked; keep the broth.",
+     "time_min": 45,
+     "sensory_cue_en": "Juices run clear; broth golden.",
+     "tip_en": ""
+    },
+    {
+     "n": 2,
+     "th": "ฉีกเนื้อไก่ ผสมพริกลาบ มะแขว่น",
+     "en": "Shred the meat and mix with prik laab and makhwaen.",
+     "time_min": 10,
+     "sensory_cue_en": "Meat evenly coated red.",
+     "tip_en": ""
+    },
+    {
+     "n": 3,
+     "th": "เติมน้ำต้มไก่ ต้มให้เดือด ปรุงเกลือ น้ำปลา",
+     "en": "Add broth, bring to the boil, season.",
+     "time_min": 5,
+     "sensory_cue_en": "Dark red, fragrant, soupy.",
+     "tip_en": ""
+    },
+    {
+     "n": 4,
+     "th": "ใส่ผักหอม ยกลง",
+     "en": "Add herbs and serve.",
+     "time_min": 1,
+     "sensory_cue_en": "",
+     "tip_en": ""
+    }
+   ],
+   "taste_profile": {
+    "sour": 0,
+    "salty": 3,
+    "spicy": 4,
+    "sweet": 0,
+    "bitter": 1,
+    "umami": 4,
+    "texture_en": "Shredded chicken in spiced broth.",
+    "description_th": "เผ็ดร้อน หอมเครื่องเทศพริกลาบ ชามะแขว่น",
+    "description_en": "Hot, warm-spiced, tingling from makhwaen.",
+    "kham_mueang_taste_words": [
+     {
+      "th": "ลำ",
+      "roman": "lam",
+      "en": "delicious"
+     },
+     {
+      "th": "เผ็ด",
+      "roman": "phet",
+      "en": "spicy"
+     }
+    ]
+   },
+   "how_to_eat": {
+    "th": "นั่งล้อมวงกินร่วมกับผู้เฒ่าผู้แก่หลังพิธี",
+    "en": "Eaten sitting together in a circle with elders after the ceremony, with sticky rice.",
+    "with_what": "Sticky rice (ข้าวนึ่ง) by hand",
+    "when_eaten": "After khwan-calling ceremonies; any time",
+    "sharing_etiquette_en": "Let elders start; the meal is part of the blessing."
+   },
+   "food_safety_en": "Cook chicken fully.",
+   "common_mistakes_foreigners_en": [
+    "Expecting a salad from the word 'yam'"
+   ],
+   "useful_phrases": [
+    {
+     "kham_mueang_th": "ยำจิ๊นไก่",
+     "roman": "yam jin kai",
+     "central_th": "ต้มไก่ใส่พริกลาบ (โดยประมาณ)",
+     "en": "Northern spiced chicken soup",
+     "when": "Ordering"
+    }
+   ],
+   "cultural_notes_th": "สู่ขวัญคือพิธีเรียกขวัญที่เชื่อว่าออกจากร่างเพราะตกใจหรือเดินทาง ไก่ที่ใช้ในพิธีกลายเป็นอาหารร่วมกัน",
+   "cultural_notes_en": "Su khwan is a ceremony to call back a person's khwan (life essence), believed by many to wander after fright or travel; the ceremonial chicken becomes shared food.",
+   "sources": [
+    "https://krua.co/food_story/northern-thai-style-spicy-chicken-soup"
+   ],
+   "confidence": "medium"
+  }
+ ]
+}

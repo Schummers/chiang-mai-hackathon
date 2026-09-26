@@ -1,0 +1,4548 @@
+{
+ "meta": {
+  "topic": "Northern Thai (Lanna) noodles, rice dishes, snacks, desserts and drinks - Thai-language sources",
+  "retrieved": "2026-09-26",
+  "tone_method_note": "Tones are DERIVED from spelling with the Chiang Mai tone-box mapping used across this dataset (high/mid class live unmarked=24 low-rising; low class live unmarked=33 mid; high/mid + mai ek or dead=21 low-falling; low + mai ek or dead long=42 high-falling; high/mid + mai tho=44ʔ high-level-glottal; low + mai tho or dead short=45 high-rising; Northern ๋ on a mid-class consonant read as 24, ๊ read as 45). Not from a recorded dictionary: needs a native Chiang Mai speaker check. Nan, Phrae, Lampang and Chiang Rai contours differ.",
+  "markets_note_en": "where_to_buy fields are general Chiang Mai guidance, not sourced per item: Warorot (Kad Luang) for dried goods, curry pastes, thua nao, dried kapok flowers, nam oi, miang, khao taen; Ton Lamyai and neighbourhood morning markets (kat chao) for fresh noodles, herbs, banana leaves, coconut; Muang Mai wholesale market (pre-dawn) for meat, bones, blood and bulk vegetables.",
+  "taste_scores_note": "0-5 taste scores are editorial estimates for app display, not measured or sourced.",
+  "sensitivity_notes_en": [
+   "'Ngiao' (เงี้ยว) is an old Thai exonym for the Shan people; considered impolite for people today - use 'Tai Yai' (ไทใหญ่) or 'Tai' (ไต). The dish name 'nam ngiao' is used normally.",
+   "Khao soi is presented in Thai sources as a Yunnanese Muslim (Chin Haw / Haw) and Shan dish later adapted in Chiang Mai; Muslim shops are halal (no pork).",
+   "Beliefs/rituals (tan khao mai, hing fai phra jao) are practised by many Northern Buddhists with local variation."
+  ],
+  "blocked_or_failed_sources": [
+   "lannakadee.cmu.ac.th (proxy 403)",
+   "archives.mju.ac.th (proxy 403)",
+   "accl.cmu.ac.th (blocked)",
+   "lannainfo.library.cmu.ac.th (content not rendered)",
+   "pantip.com (redirect to contact page)",
+   "phayao.go.th and openbase.in.th (403)",
+   "okmd.or.th (404)",
+   "m-culture.go.th Lampang page (404)",
+   "toke-tong.com (timeout)",
+   "chiangmaipress.com (timeout)",
+   "mcot.net (no content)",
+   "thai.tourismthailand.org and maenoicurry.com (URL too long for fetcher)"
+  ],
+  "other_sweets_brief": [
+   {
+    "name_th": "ขนมลิ้นหมา / ข้าวหนมเปี่ยง",
+    "roman": "khanom lin ma / khao nom piang",
+    "en": "'Dog's tongue' - black sticky-rice flour dough wrapped flat in leaf and steamed; eaten with coconut and sugar",
+    "sources": [
+     "https://www.lannapost.net/2021/09/blog-post_15.html",
+     "https://www.chiangmainews.co.th/page/archives/587453/"
+    ],
+    "confidence": "medium"
+   },
+   {
+    "name_th": "ขนมวง / เข้ามูนข่วย",
+    "roman": "khanom wong",
+    "en": "Tai Yai-origin fried sticky-rice rings coated in sesame and glazed with palm syrup (Lanna Post); Chiang Mai News version uses banana or pumpkin in the dough",
+    "sources": [
+     "https://www.lannapost.net/2021/09/blog-post_15.html",
+     "https://www.chiangmainews.co.th/page/archives/587453/"
+    ],
+    "confidence": "medium"
+   },
+   {
+    "name_th": "ขนมตายลืม",
+    "roman": "khanom tai luem",
+    "en": "Very soft salty rice-flour sweet like khanom kluea, made for children, the sick and elderly",
+    "sources": [
+     "https://www.chiangmainews.co.th/page/archives/587453/"
+    ],
+    "confidence": "medium"
+   },
+   {
+    "name_th": "ขนมกล้วย",
+    "roman": "khanom kluai",
+    "en": "Ripe banana, rice flour, coconut and sugar steamed in cone-shaped leaf parcels",
+    "sources": [
+     "https://www.chiangmainews.co.th/page/archives/587453/"
+    ],
+    "confidence": "medium"
+   },
+   {
+    "name_th": "ข้าวปั้น / ขนมมี้ปัน (ลำปาง)",
+    "roman": "khao pan",
+    "en": "Lampang cup-shaped Chinese-influenced sweet with syrup, salted pork and fried garlic (Lanna Post) - details unverified",
+    "sources": [
+     "https://www.lannapost.net/2021/09/blog-post_15.html"
+    ],
+    "confidence": "low"
+   },
+   {
+    "name_th": "ข้าวจี่",
+    "roman": "khao ji",
+    "en": "Grilled sticky-rice patties offered with khao lam at tan khao mai (4th Northern month)",
+    "sources": [
+     "https://today.line.me/th/v3/article/GgWNP5Q"
+    ],
+    "confidence": "medium"
+   }
+  ]
+ },
+ "recipes": [
+  {
+   "id": "khao_soi_gai_chiang_mai",
+   "name_th": "ข้าวซอยไก่",
+   "name_kham_mueang_th": "เข้าซอยไก่",
+   "name_roman": "khao soi kai",
+   "name_en": "Khao soi - Chiang Mai coconut curry noodles with chicken",
+   "pronunciation": {
+    "syllables": [
+     {
+      "th": "เข้า",
+      "roman": "khao",
+      "tone": "44ʔ",
+      "derived": true
+     },
+     {
+      "th": "ซอย",
+      "roman": "soi",
+      "tone": "33",
+      "derived": true
+     },
+     {
+      "th": "ไก่",
+      "roman": "kai",
+      "tone": "21",
+      "derived": true
+     }
+    ],
+    "tip_en": "Lanna writing and speech use short 'เข้า' for rice (Matichon Weekly, 'เข้าใหม่' column), so locals often say a clipped 'khao', not a long Central 'khâao'. 'Soi' = 'cut' (strands cut from a sheet). Tones derived - see meta.tone_method_note; low confidence."
+   },
+   "origin_province": [
+    "เชียงใหม่ Chiang Mai",
+    "เชียงราย Chiang Rai",
+    "แม่ฮ่องสอน Mae Hong Son"
+   ],
+   "season": "All year; locals say it hits hardest in the cool season (Nov-Feb)",
+   "occasion": "Everyday lunch; a Chiang Mai 'must eat' for visitors",
+   "serves": "4-5",
+   "description_th": "ก๋วยเตี๋ยวน้ำแกงกะทิ ใส่เครื่องเทศ (ขมิ้น ผงกะหรี่ ลูกผักชี) ราดบนเส้นลวก โรยเส้นทอดกรอบ กินกับหอมแดง ผักกาดดอง มะนาว และพริกผัดน้ำมัน คำว่า 'ซอย' มาจากภาษาไทใหญ่ แปลว่า 'ตัด' หมายถึงแป้งที่ตัดเป็นเส้น ข้าวซอยเดิมเป็นอาหารของชาวจีนฮ่อมุสลิม (จีนยูนนาน) และชาวไทใหญ่ ในยุคแรกไม่ใส่กะทิ ต่อมาราว พ.ศ. 2485 'นายปั๋น' ลูกจ้างคนเมืองในร้านข้าวซอยฮ่อ ปรับสูตรใส่กะทิจนกลายเป็นข้าวซอยเชียงใหม่ที่รู้จักทุกวันนี้ ร้านข้าวซอยอิสลามรอบมัสยิดบ้านฮ่อ (ถนนเจริญประเทศ) ยังขายข้าวซอยเนื้อ/ไก่แบบฮาลาล",
+   "description_en": "Noodles in a spiced coconut curry (turmeric, curry powder, coriander seed), topped with a nest of crisp fried noodles and eaten with shallots, pickled mustard greens, lime and chilli fried in oil. 'Soi' comes from Shan (Tai Yai) and means 'to cut' - strands cut from a sheet of dough. Thai sources describe khao soi as a dish of the Yunnanese Muslim Chin Haw and the Shan; early versions had no coconut milk. Around 1942 a Northern Thai worker called 'Nai Pan' in a Haw khao soi shop added coconut cream, and that became the Chiang Mai style (Bangkok Biz News). Halal beef and chicken khao soi is still sold around the Ban Haw mosque off Charoen Prathet Road.",
+   "ingredients": [
+    {
+     "name_th": "พริกแห้งเม็ดใหญ่",
+     "name_kham_mueang_th": "",
+     "roman": "phrik haeng",
+     "name_en": "large dried red chillies, soaked",
+     "qty_metric": "10 pods",
+     "role": "paste - colour and heat",
+     "where_to_buy_th": "กาดหลวง (ตลาดวโรรส) ร้านของแห้ง/พริกแกง",
+     "where_to_buy_en": "Warorot (Kad Luang) dried-goods and curry-paste stalls, ground floor and the lanes around it",
+     "how_to_choose_en": "Deep red, supple, not dusty; slit and de-seed for less heat",
+     "substitute_abroad_en": "Guajillo or Kashmiri chillies",
+     "pronunciation_roman": "phrik haeng"
+    },
+    {
+     "name_th": "หอมแดง",
+     "name_kham_mueang_th": "",
+     "roman": "hom daeng",
+     "name_en": "shallots",
+     "qty_metric": "10 small (about 80 g)",
+     "role": "paste - sweetness",
+     "where_to_buy_th": "ตลาดต้นลำไย ฝั่งตรงข้ามกาดหลวง / กาดเช้าใกล้บ้าน",
+     "where_to_buy_en": "Ton Lamyai market (across the road from Warorot) or any neighbourhood morning market (kat chao)",
+     "how_to_choose_en": "Small, firm, purple-red",
+     "substitute_abroad_en": "Banana shallots",
+     "pronunciation_roman": "hom daeng"
+    },
+    {
+     "name_th": "กระเทียมไทย",
+     "name_kham_mueang_th": "",
+     "roman": "krathiam",
+     "name_en": "Thai garlic",
+     "qty_metric": "10 cloves",
+     "role": "paste",
+     "where_to_buy_th": "ตลาดต้นลำไย ฝั่งตรงข้ามกาดหลวง / กาดเช้าใกล้บ้าน",
+     "where_to_buy_en": "Ton Lamyai market (across the road from Warorot) or any neighbourhood morning market (kat chao)",
+     "how_to_choose_en": "",
+     "substitute_abroad_en": "Ordinary garlic",
+     "pronunciation_roman": "krathiam"
+    },
+    {
+     "name_th": "ขมิ้นชัน",
+     "name_kham_mueang_th": "",
+     "roman": "khamin",
+     "name_en": "fresh turmeric",
+     "qty_metric": "2 thumbs (about 20 g)",
+     "role": "paste - colour",
+     "where_to_buy_th": "ตลาดต้นลำไย ฝั่งตรงข้ามกาดหลวง / กาดเช้าใกล้บ้าน",
+     "where_to_buy_en": "Ton Lamyai market (across the road from Warorot) or any neighbourhood morning market (kat chao)",
+     "how_to_choose_en": "",
+     "substitute_abroad_en": "1 tsp turmeric powder",
+     "pronunciation_roman": "khamin"
+    },
+    {
+     "name_th": "ข่า",
+     "name_kham_mueang_th": "",
+     "roman": "kha",
+     "name_en": "galangal",
+     "qty_metric": "5 slices",
+     "role": "paste - aroma",
+     "where_to_buy_th": "ตลาดต้นลำไย ฝั่งตรงข้ามกาดหลวง / กาดเช้าใกล้บ้าน",
+     "where_to_buy_en": "Ton Lamyai market (across the road from Warorot) or any neighbourhood morning market (kat chao)",
+     "how_to_choose_en": "",
+     "substitute_abroad_en": "Frozen galangal; do not use ginger 1:1",
+     "pronunciation_roman": "kha"
+    },
+    {
+     "name_th": "ตะไคร้ซอย",
+     "name_kham_mueang_th": "",
+     "roman": "takhrai",
+     "name_en": "lemongrass, sliced",
+     "qty_metric": "2 tbsp",
+     "role": "paste",
+     "where_to_buy_th": "ตลาดต้นลำไย ฝั่งตรงข้ามกาดหลวง / กาดเช้าใกล้บ้าน",
+     "where_to_buy_en": "Ton Lamyai market (across the road from Warorot) or any neighbourhood morning market (kat chao)",
+     "how_to_choose_en": "",
+     "substitute_abroad_en": "",
+     "pronunciation_roman": "takhrai"
+    },
+    {
+     "name_th": "ผิวมะกรูด",
+     "name_kham_mueang_th": "บ่ะขูด (ใบบ่ะขูด = ใบมะกรูด)",
+     "roman": "phio makrut",
+     "name_en": "makrut lime zest",
+     "qty_metric": "zest of 1 lime",
+     "role": "paste",
+     "where_to_buy_th": "ตลาดต้นลำไย ฝั่งตรงข้ามกาดหลวง / กาดเช้าใกล้บ้าน",
+     "where_to_buy_en": "Ton Lamyai market (across the road from Warorot) or any neighbourhood morning market (kat chao)",
+     "how_to_choose_en": "",
+     "substitute_abroad_en": "Zest of a regular lime + 2 makrut leaves",
+     "pronunciation_roman": "phio makrut"
+    },
+    {
+     "name_th": "กะปิ",
+     "name_kham_mueang_th": "",
+     "roman": "kapi",
+     "name_en": "shrimp paste",
+     "qty_metric": "3 tbsp",
+     "role": "paste - umami/salt",
+     "where_to_buy_th": "กาดหลวง (ตลาดวโรรส) ร้านของแห้ง/พริกแกง",
+     "where_to_buy_en": "Warorot (Kad Luang) dried-goods and curry-paste stalls, ground floor and the lanes around it",
+     "how_to_choose_en": "",
+     "substitute_abroad_en": "Any Thai/Malay shrimp paste (belacan)",
+     "pronunciation_roman": "kapi"
+    },
+    {
+     "name_th": "ผงกะหรี่",
+     "name_kham_mueang_th": "",
+     "roman": "phong kari",
+     "name_en": "Thai/Indian-style curry powder",
+     "qty_metric": "1 tbsp",
+     "role": "spice",
+     "where_to_buy_th": "ซูเปอร์มาร์เก็ต/ร้านสะดวกซื้อ หรือร้านโชห่วยในกาด",
+     "where_to_buy_en": "Supermarket (Rimping, Tops, Big C, Makro) or the grocery stall in any market",
+     "how_to_choose_en": "",
+     "substitute_abroad_en": "",
+     "pronunciation_roman": "phong kari"
+    },
+    {
+     "name_th": "น้ำตาลปี๊บ",
+     "name_kham_mueang_th": "",
+     "roman": "namtan pip",
+     "name_en": "palm sugar",
+     "qty_metric": "2 tbsp",
+     "role": "balance",
+     "where_to_buy_th": "ตลาดต้นลำไย ฝั่งตรงข้ามกาดหลวง / กาดเช้าใกล้บ้าน",
+     "where_to_buy_en": "Ton Lamyai market (across the road from Warorot) or any neighbourhood morning market (kat chao)",
+     "how_to_choose_en": "",
+     "substitute_abroad_en": "",
+     "pronunciation_roman": "namtan pip"
+    },
+    {
+     "name_th": "น่องไก่",
+     "name_kham_mueang_th": "ไก่",
+     "roman": "nong kai",
+     "name_en": "chicken drumsticks / whole legs",
+     "qty_metric": "1 kg",
+     "role": "protein",
+     "where_to_buy_th": "ตลาดเมืองใหม่ (ค้าส่ง ตีสองถึงเช้า) หรือกาดเช้า",
+     "where_to_buy_en": "Muang Mai wholesale market (roughly 2am to morning) or any morning market",
+     "how_to_choose_en": "Bone-in legs; ask the vendor to chop in two",
+     "substitute_abroad_en": "Beef shin for khao soi nuea (Muslim shops)",
+     "pronunciation_roman": "nong kai"
+    },
+    {
+     "name_th": "กะทิ",
+     "name_kham_mueang_th": "",
+     "roman": "kathi",
+     "name_en": "coconut milk",
+     "qty_metric": "750 ml (3 cups)",
+     "role": "broth",
+     "where_to_buy_th": "ตลาดต้นลำไย ฝั่งตรงข้ามกาดหลวง / กาดเช้าใกล้บ้าน",
+     "where_to_buy_en": "Ton Lamyai market (across the road from Warorot) or any neighbourhood morning market (kat chao)",
+     "how_to_choose_en": "Freshly pressed from the coconut stall if you can - thick first-press for frying the paste",
+     "substitute_abroad_en": "",
+     "pronunciation_roman": "kathi"
+    },
+    {
+     "name_th": "เส้นข้าวซอย",
+     "name_kham_mueang_th": "",
+     "roman": "sen khao soi",
+     "name_en": "fresh khao soi noodles (flat yellow noodles)",
+     "qty_metric": "500 g",
+     "role": "noodle",
+     "where_to_buy_th": "กาดหลวง (ตลาดวโรรส) ร้านของแห้ง/พริกแกง",
+     "where_to_buy_en": "Warorot (Kad Luang) dried-goods and curry-paste stalls, ground floor and the lanes around it",
+     "how_to_choose_en": "Soft, loose, lightly dusted; buy extra for frying",
+     "substitute_abroad_en": "Fresh flat egg noodles (Chinese-style)",
+     "pronunciation_roman": "sen khao soi"
+    },
+    {
+     "name_th": "น้ำมันพืช",
+     "name_kham_mueang_th": "",
+     "roman": "nam man phuet",
+     "name_en": "vegetable oil",
+     "qty_metric": "250 ml",
+     "role": "frying crisp noodles",
+     "where_to_buy_th": "ซูเปอร์มาร์เก็ต/ร้านสะดวกซื้อ หรือร้านโชห่วยในกาด",
+     "where_to_buy_en": "Supermarket (Rimping, Tops, Big C, Makro) or the grocery stall in any market",
+     "how_to_choose_en": "",
+     "substitute_abroad_en": "",
+     "pronunciation_roman": "nam man phuet"
+    },
+    {
+     "name_th": "หอมแดง ผักกาดดอง มะนาว ผักชี ต้นหอม",
+     "name_kham_mueang_th": "",
+     "roman": "khrueang kiang",
+     "name_en": "to serve: shallots, pickled mustard greens, lime, coriander, spring onion",
+     "qty_metric": "a side plate per person",
+     "role": "garnish",
+     "where_to_buy_th": "ตลาดต้นลำไย ฝั่งตรงข้ามกาดหลวง / กาดเช้าใกล้บ้าน",
+     "where_to_buy_en": "Ton Lamyai market (across the road from Warorot) or any neighbourhood morning market (kat chao)",
+     "how_to_choose_en": "",
+     "substitute_abroad_en": "Any pickled mustard (Chinese suan cai)",
+     "pronunciation_roman": "khrueang kiang"
+    },
+    {
+     "name_th": "พริกผัดน้ำมัน",
+     "name_kham_mueang_th": "",
+     "roman": "phrik phat nam man",
+     "name_en": "chilli fried in oil",
+     "qty_metric": "to taste",
+     "role": "condiment",
+     "where_to_buy_th": "กาดหลวง (ตลาดวโรรส) ร้านของแห้ง/พริกแกง",
+     "where_to_buy_en": "Warorot (Kad Luang) dried-goods and curry-paste stalls, ground floor and the lanes around it",
+     "how_to_choose_en": "",
+     "substitute_abroad_en": "",
+     "pronunciation_roman": "phrik phat nam man"
+    }
+   ],
+   "equipment": [
+    {
+     "name_th": "ครกหินและสาก",
+     "kham_mueang_th": "",
+     "name_en": "granite mortar and pestle",
+     "substitute_en": "Blender with a splash of oil (paste will be less fragrant)"
+    },
+    {
+     "name_th": "หม้อ",
+     "kham_mueang_th": "",
+     "name_en": "heavy pot",
+     "substitute_en": ""
+    },
+    {
+     "name_th": "กระทะ",
+     "kham_mueang_th": "",
+     "name_en": "wok for crisp noodles",
+     "substitute_en": ""
+    },
+    {
+     "name_th": "กระชอน",
+     "kham_mueang_th": "",
+     "name_en": "wire strainer / spider",
+     "substitute_en": ""
+    }
+   ],
+   "prep_ahead_en": "Soak dried chillies 20 min. Pound the paste (20-30 min) or buy fresh khao soi paste at Warorot. Paste keeps 1 week chilled.",
+   "steps": [
+    {
+     "n": 1,
+     "th": "โขลกเครื่องแกงข้าวซอยให้ละเอียด",
+     "en": "Pound chillies with a pinch of salt first, then galangal, lemongrass, turmeric, zest, then shallot and garlic, and shrimp paste last.",
+     "time_min": 25,
+     "sensory_cue_en": "A smooth, brick-red paste smelling of garlic and galangal.",
+     "tip_en": "Salt acts as an abrasive; wet ingredients go in last so the paste doesn't splash."
+    },
+    {
+     "n": 2,
+     "th": "ตั้งกะทิ 1 ถ้วยให้เดือด",
+     "en": "Boil 1 cup of the thickest coconut milk until it splits and oil shows.",
+     "time_min": 5,
+     "sensory_cue_en": "Bubbles turn glossy; little pools of oil appear on the surface.",
+     "tip_en": ""
+    },
+    {
+     "n": 3,
+     "th": "ผัดเครื่องแกงจนหอม",
+     "en": "Fry the paste in the cracked coconut cream.",
+     "time_min": 5,
+     "sensory_cue_en": "Aroma shifts from raw garlic to toasty; oil turns orange-red.",
+     "tip_en": "Keep heat medium; scorched paste goes bitter."
+    },
+    {
+     "n": 4,
+     "th": "ละลายผงกะหรี่กับน้ำเล็กน้อยแล้วใส่",
+     "en": "Stir in curry powder slurried with a little water.",
+     "time_min": 2,
+     "sensory_cue_en": "Colour deepens to ochre; smells of cumin and coriander.",
+     "tip_en": ""
+    },
+    {
+     "n": 5,
+     "th": "ใส่ไก่ คลุกให้เข้ากัน เติมน้ำ น้ำตาล และกะทิที่เหลือ เคี่ยวจนไก่นุ่ม",
+     "en": "Add the chicken, coat it well, add water to cover, palm sugar and the rest of the coconut milk. Simmer until tender.",
+     "time_min": 40,
+     "sensory_cue_en": "Meat pulls from the bone; broth is orange with a red oil sheen.",
+     "tip_en": "Season with fish sauce or salt at the end; Muslim shops use soy sauce."
+    },
+    {
+     "n": 6,
+     "th": "ทอดเส้นข้าวซอยบางส่วนจนกรอบ",
+     "en": "Deep-fry small loose nests of noodles until golden.",
+     "time_min": 5,
+     "sensory_cue_en": "Loud crackle, then quiet once crisp; golden, not brown.",
+     "tip_en": ""
+    },
+    {
+     "n": 7,
+     "th": "ลวกเส้นในน้ำเดือดประมาณ 1 นาที แล้วน็อคน้ำเย็น",
+     "en": "Blanch fresh noodles about 1 minute, refresh in cold water, drain.",
+     "time_min": 3,
+     "sensory_cue_en": "Noodles just soft, still springy.",
+     "tip_en": ""
+    },
+    {
+     "n": 8,
+     "th": "ใส่เส้นในชาม ราดน้ำแกง วางไก่ โรยเส้นกรอบ ผักชี ต้นหอม",
+     "en": "Noodles in a bowl, ladle over curry and a chicken piece, top with crisp noodles, coriander and spring onion.",
+     "time_min": 2,
+     "sensory_cue_en": "Crisp nest sits on top; curry pools around it.",
+     "tip_en": ""
+    }
+   ],
+   "taste_profile": {
+    "sour": 1,
+    "salty": 3,
+    "spicy": 2,
+    "sweet": 2,
+    "bitter": 0,
+    "umami": 4,
+    "rating_note": "editorial estimate",
+    "texture_en": "Silky soft noodles under crunchy fried ones; rich, slightly thick broth; tender chicken.",
+    "description_th": "มัน หอมเครื่องเทศ เค็มนำ หวานปลาย เปรี้ยวจากมะนาวและผักกาดดองที่ปรุงเอง",
+    "description_en": "Rich and fragrant, salty-led with a sweet finish; you add sour (lime, pickles), heat (chilli oil) and crunch (shallot) yourself.",
+    "kham_mueang_taste_words": [
+     {
+      "th": "ลำ",
+      "roman": "lam",
+      "en": "delicious",
+      "sources": [
+       "https://www.trueplookpanya.com/learning/detail/25566",
+       "https://www.chiangrai108.com/artsculture/10392/"
+      ]
+     },
+     {
+      "th": "ลำขนาด",
+      "roman": "lam khanat",
+      "en": "super tasty",
+      "sources": [
+       "https://cookpad.com/th/recipes/16454331"
+      ]
+     },
+     {
+      "th": "เก็ม",
+      "roman": "kem",
+      "en": "salty (Northern unaspirated k)",
+      "sources": [
+       "https://www.gotoknow.org/posts/551347"
+      ]
+     },
+     {
+      "th": "ส้ม",
+      "roman": "som",
+      "en": "sour",
+      "sources": [
+       "https://www.trueplookpanya.com/learning/detail/25566"
+      ]
+     }
+    ]
+   },
+   "how_to_eat": {
+    "th": "บีบมะนาว ใส่ผักกาดดองและหอมแดงตามชอบ เติมพริกผัด คนให้เข้ากัน กินด้วยช้อนและตะเกียบ",
+    "en": "Squeeze lime, add pickled greens and shallot, spoon in chilli oil, stir. Eat with chopsticks and a spoon; drink the broth from the spoon, not by lifting the bowl.",
+    "with_what": "Side plate of shallot, pickled mustard greens, lime; chilli fried in oil; iced tea",
+    "when_eaten": "Breakfast to late lunch; many famous shops sell out by 2-3 pm",
+    "sharing_etiquette_en": "Single-serve bowl - not shared. Condiments on the table are communal: take with the spoon provided."
+   },
+   "food_safety_en": "Cooked dish - low risk. Keep coconut curry hot or chill it quickly; coconut milk sours fast in the heat.",
+   "common_mistakes_foreigners_en": [
+    "Blending the paste raw and skipping the frying step - tastes raw and flat.",
+    "Adding all the coconut milk at once - fry the paste in cracked coconut cream first.",
+    "Frying noodles too dark - they go bitter.",
+    "Forgetting the condiments; the dish is designed to be finished at the table."
+   ],
+   "useful_phrases": [
+    {
+     "kham_mueang_th": "เข้าซอยไก่ ถ้วยนึ่งเจ้า",
+     "roman": "khao soi kai thuai nueng jao",
+     "central_th": "ข้าวซอยไก่ ถ้วยหนึ่งค่ะ",
+     "en": "One chicken khao soi, please",
+     "when": "Ordering",
+     "sources": [],
+     "confidence": "low"
+    },
+    {
+     "kham_mueang_th": "เอา...เจ้า / เอา...ครับ",
+     "roman": "ao ... jao / khrap",
+     "central_th": "เอา...ค่ะ/ครับ",
+     "en": "I'll take ...",
+     "when": "Ordering at a stall; เจ้า is the Northern polite particle (mostly used by women; men usually say ครับ).",
+     "sources": [
+      "https://www.fixconcern.com/order-food-in-northern-languages/"
+     ]
+    },
+    {
+     "kham_mueang_th": "บ่เผ็ดเน้อ",
+     "roman": "bo phet noe",
+     "central_th": "ไม่เผ็ดนะ",
+     "en": "Not spicy, OK?",
+     "when": "Before the vendor adds chilli.",
+     "sources": [
+      "https://www.trueplookpanya.com/learning/detail/25566"
+     ]
+    },
+    {
+     "kham_mueang_th": "ลำขนาดเจ้า",
+     "roman": "lam khanat jao",
+     "central_th": "อร่อยมากค่ะ",
+     "en": "It's really delicious!",
+     "when": "Complimenting the cook - always welcome.",
+     "sources": [
+      "https://cookpad.com/th/recipes/16454331"
+     ]
+    }
+   ],
+   "cultural_notes_th": "ข้าวซอยเป็นผลของหลายวัฒนธรรม: เส้นแบบไทใหญ่ เครื่องเทศแบบอินเดีย/พม่า กะทิแบบไทย วิธีทำแบบยูนนาน (กรุงเทพธุรกิจ) ข้าวซอยของชาวไทเขินเชียงตุงเป็นน้ำใส ไม่ใส่กะทิ (ศิลปวัฒนธรรม)",
+   "cultural_notes_en": "Thai writers call khao soi a bowl of many cultures - Shan noodles, Indian/Burmese spices, Thai coconut, Yunnanese technique (Bangkok Biz News). Across the border in Kengtung the Tai Khuen khao soi is a clear broth with no coconut (Silpa-Mag). Muslim shops near Ban Haw mosque sell halal versions - no pork, and be respectful around prayer times.",
+   "sources": [
+    "https://www.bangkokbiznews.com/lifestyle/1019738",
+    "https://www.reviewchiangmai.com/how-to-make-khao-soi/",
+    "https://www.thairath.co.th/lifestyle/food/2467371",
+    "https://www.reviewchiangmai.com/7-islam-curry-noodle/",
+    "https://www.silpa-mag.com/from-the-fingertip/article_91242",
+    "https://www.matichon.co.th/weekly/column/article_77100"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "khanom_jin_nam_ngiao",
+   "name_th": "ขนมจีนน้ำเงี้ยว",
+   "name_kham_mueang_th": "ขนมเส้นน้ำเงี้ยว (ไทใหญ่: เข้าเส้นน้ำหมากเขือส้ม)",
+   "name_roman": "khanom jin nam ngiao (Northern: khanom sen nam ngiao)",
+   "name_en": "Rice noodles in Northern tomato-pork broth with blood and dried kapok flowers",
+   "pronunciation": {
+    "syllables": [
+     {
+      "th": "ขะ",
+      "roman": "kha",
+      "tone": "21",
+      "derived": true
+     },
+     {
+      "th": "หนม",
+      "roman": "nom",
+      "tone": "24",
+      "derived": true
+     },
+     {
+      "th": "เส้น",
+      "roman": "sen",
+      "tone": "44ʔ",
+      "derived": true
+     },
+     {
+      "th": "น้ำ",
+      "roman": "nam",
+      "tone": "45",
+      "derived": true
+     },
+     {
+      "th": "เงี้ยว",
+      "roman": "ngiao",
+      "tone": "45",
+      "derived": true
+     }
+    ],
+    "tip_en": "Northerners usually say 'khanom sen' for fresh rice noodles rather than Central 'khanom jin'. 'Ngiao' starts with the 'ng' of 'singer'. Tones derived - see meta.tone_method_note; low confidence."
+   },
+   "origin_province": [
+    "เชียงใหม่ Chiang Mai",
+    "เชียงราย Chiang Rai",
+    "แพร่ Phrae",
+    "แม่ฮ่องสอน Mae Hong Son"
+   ],
+   "season": "All year; dried kapok flowers (ดอกงิ้ว) are gathered in February and stored",
+   "occasion": "Everyday breakfast/lunch; cooked in big pots for merit-making and funerals",
+   "serves": "8-10",
+   "description_th": "น้ำแกงรสเค็ม เผ็ด เปรี้ยวจากมะเขือส้ม ใส่กระดูกหมู หมูสับ เลือด และดอกงิ้วแห้ง เครื่องแกงมีพริกแห้ง หอม กระเทียม ขมิ้น เกลือ กะปิ และถั่วเน่า กินกับขนมเส้น (ขนมจีน) ถั่วงอก ผักกาดดอง กระเทียมเจียว แคบหมู ชื่อ 'น้ำเงี้ยว' มาจากชาวไทใหญ่ ซึ่งคนไทยภาคเหนือในอดีตเรียกว่า 'เงี้ยว' ชาวไทใหญ่เองเรียกน้ำแกงนี้ว่า 'น้ำหมากเขือส้ม' (น้ำมะเขือเทศ)",
+   "description_en": "A salty, spicy, tomato-sour broth of pork bones, minced pork, cubes of blood and dried kapok (red cotton tree) flowers, built on a paste of dried chilli, shallot, garlic, turmeric, salt, shrimp paste and fermented soybean (thua nao). Ladled over fresh rice noodles with bean sprouts, pickled greens, fried garlic and pork crackling. The name refers to the Shan (Tai Yai) people, who were historically called 'Ngiao' by Northern Thais; Shan speakers themselves call the broth 'nam mak khuea som' - tomato broth.",
+   "ingredients": [
+    {
+     "name_th": "พริกแกงน้ำเงี้ยว (พริกแห้ง หอม กระเทียม ขมิ้น เกลือ กะปิ ถั่วเน่า)",
+     "name_kham_mueang_th": "",
+     "roman": "phrik kaeng nam ngiao",
+     "name_en": "nam ngiao paste (dried chilli, shallot, garlic, turmeric, salt, shrimp paste, fermented soybean)",
+     "qty_metric": "250 g ready-made, or pound your own",
+     "role": "base",
+     "where_to_buy_th": "กาดหลวง (ตลาดวโรรส) ร้านของแห้ง/พริกแกง",
+     "where_to_buy_en": "Warorot (Kad Luang) dried-goods and curry-paste stalls, ground floor and the lanes around it",
+     "how_to_choose_en": "Market paste sold by weight from big trays; ask for 'phrik nam ngiao'",
+     "substitute_abroad_en": "Pound: 15 dried chillies, 10 shallots, 1 head garlic, 1 thumb turmeric, 1 tsp salt, 1 tbsp shrimp paste, 2 discs thua nao",
+     "pronunciation_roman": "phrik kaeng nam ngiao"
+    },
+    {
+     "name_th": "ถั่วเน่าแข็บ",
+     "name_kham_mueang_th": "ถั่วเน่าแข็บ",
+     "roman": "thua nao khaep",
+     "name_en": "dried fermented soybean discs",
+     "qty_metric": "2 discs, toasted and crumbled",
+     "role": "umami",
+     "where_to_buy_th": "กาดหลวง (ตลาดวโรรส) ร้านของแห้ง/พริกแกง",
+     "where_to_buy_en": "Warorot (Kad Luang) dried-goods and curry-paste stalls, ground floor and the lanes around it",
+     "how_to_choose_en": "Thin, dry, brown discs; toast over a flame until fragrant",
+     "substitute_abroad_en": "1 tbsp Korean doenjang or Japanese miso (different but close in role)",
+     "pronunciation_roman": "thua nao khaep"
+    },
+    {
+     "name_th": "กระดูกซี่โครงหมู",
+     "name_kham_mueang_th": "",
+     "roman": "kraduk mu",
+     "name_en": "pork spare ribs / bones",
+     "qty_metric": "400 g",
+     "role": "stock",
+     "where_to_buy_th": "ตลาดเมืองใหม่ (ค้าส่ง ตีสองถึงเช้า) หรือกาดเช้า",
+     "where_to_buy_en": "Muang Mai wholesale market (roughly 2am to morning) or any morning market",
+     "how_to_choose_en": "",
+     "substitute_abroad_en": "",
+     "pronunciation_roman": "kraduk mu"
+    },
+    {
+     "name_th": "หมูสับ (ติดมัน)",
+     "name_kham_mueang_th": "จิ๊นหมู",
+     "roman": "mu sap",
+     "name_en": "minced pork with some fat",
+     "qty_metric": "400 g",
+     "role": "body",
+     "where_to_buy_th": "ตลาดเมืองใหม่ (ค้าส่ง ตีสองถึงเช้า) หรือกาดเช้า",
+     "where_to_buy_en": "Muang Mai wholesale market (roughly 2am to morning) or any morning market",
+     "how_to_choose_en": "",
+     "substitute_abroad_en": "",
+     "pronunciation_roman": "mu sap"
+    },
+    {
+     "name_th": "เลือดหมูหรือเลือดไก่ (ก้อน)",
+     "name_kham_mueang_th": "",
+     "roman": "lueat",
+     "name_en": "set pork or chicken blood",
+     "qty_metric": "1 block (about 300 g), cubed",
+     "role": "texture",
+     "where_to_buy_th": "ตลาดเมืองใหม่ (ค้าส่ง ตีสองถึงเช้า) หรือกาดเช้า",
+     "where_to_buy_en": "Muang Mai wholesale market (roughly 2am to morning) or any morning market",
+     "how_to_choose_en": "Buy same-day, firm, dark maroon; keep cold",
+     "substitute_abroad_en": "Leave out, or use firm tofu",
+     "pronunciation_roman": "lueat"
+    },
+    {
+     "name_th": "มะเขือส้ม / มะเขือเทศลูกเล็ก",
+     "name_kham_mueang_th": "บ่ะเขือส้ม",
+     "roman": "makhuea som",
+     "name_en": "small sour local tomatoes",
+     "qty_metric": "300-500 g (or 2 large tomatoes)",
+     "role": "sourness",
+     "where_to_buy_th": "ตลาดต้นลำไย ฝั่งตรงข้ามกาดหลวง / กาดเช้าใกล้บ้าน",
+     "where_to_buy_en": "Ton Lamyai market (across the road from Warorot) or any neighbourhood morning market (kat chao)",
+     "how_to_choose_en": "Small, very red, sour cherry-type tomatoes",
+     "substitute_abroad_en": "Cherry tomatoes + squeeze of lime",
+     "pronunciation_roman": "makhuea som"
+    },
+    {
+     "name_th": "ดอกงิ้วแห้ง",
+     "name_kham_mueang_th": "ดอกงิ้ว",
+     "roman": "dok ngio",
+     "name_en": "dried kapok (red cotton tree) flower stamens",
+     "qty_metric": "1/2 cup, soaked",
+     "role": "texture/earthy note",
+     "where_to_buy_th": "กาดหลวง (ตลาดวโรรส) ร้านของแห้ง/พริกแกง",
+     "where_to_buy_en": "Warorot (Kad Luang) dried-goods and curry-paste stalls, ground floor and the lanes around it",
+     "how_to_choose_en": "Brown dried bundles of stamens (the pistil is removed)",
+     "substitute_abroad_en": "Omit, or dried day-lily buds (golden needles) - Thai home cooks sometimes use these (Wongnai UGC)",
+     "pronunciation_roman": "dok ngio"
+    },
+    {
+     "name_th": "รากผักชี",
+     "name_kham_mueang_th": "",
+     "roman": "rak phak chi",
+     "name_en": "coriander roots",
+     "qty_metric": "5, bruised",
+     "role": "aroma",
+     "where_to_buy_th": "ตลาดต้นลำไย ฝั่งตรงข้ามกาดหลวง / กาดเช้าใกล้บ้าน",
+     "where_to_buy_en": "Ton Lamyai market (across the road from Warorot) or any neighbourhood morning market (kat chao)",
+     "how_to_choose_en": "",
+     "substitute_abroad_en": "",
+     "pronunciation_roman": "rak phak chi"
+    },
+    {
+     "name_th": "น้ำปลา / เกลือ",
+     "name_kham_mueang_th": "",
+     "roman": "nam pla",
+     "name_en": "fish sauce / salt",
+     "qty_metric": "to taste (about 2 tbsp + 1 tsp)",
+     "role": "seasoning",
+     "where_to_buy_th": "ซูเปอร์มาร์เก็ต/ร้านสะดวกซื้อ หรือร้านโชห่วยในกาด",
+     "where_to_buy_en": "Supermarket (Rimping, Tops, Big C, Makro) or the grocery stall in any market",
+     "how_to_choose_en": "",
+     "substitute_abroad_en": "",
+     "pronunciation_roman": "nam pla"
+    },
+    {
+     "name_th": "ขนมเส้น (ขนมจีน)",
+     "name_kham_mueang_th": "ขนมเส้น",
+     "roman": "khanom sen",
+     "name_en": "fresh fermented rice noodles",
+     "qty_metric": "1.5-2 kg",
+     "role": "noodle",
+     "where_to_buy_th": "ตลาดต้นลำไย ฝั่งตรงข้ามกาดหลวง / กาดเช้าใกล้บ้าน",
+     "where_to_buy_en": "Ton Lamyai market (across the road from Warorot) or any neighbourhood morning market (kat chao)",
+     "how_to_choose_en": "Bought fresh each morning in bundles (หัว); should smell faintly sour-clean, not off",
+     "substitute_abroad_en": "Dried thin rice vermicelli or Vietnamese bun",
+     "pronunciation_roman": "khanom sen"
+    },
+    {
+     "name_th": "ถั่วงอก ผักกาดดอง ผักกาดขาวซอย มะนาว ผักชี ต้นหอม กระเทียมเจียว พริกทอด แคบหมู",
+     "name_kham_mueang_th": "",
+     "roman": "phak kiang",
+     "name_en": "to serve: bean sprouts, pickled mustard, shredded cabbage, lime, coriander, spring onion, fried garlic, fried dried chilli, pork crackling",
+     "qty_metric": "a platter",
+     "role": "garnish",
+     "where_to_buy_th": "ตลาดต้นลำไย ฝั่งตรงข้ามกาดหลวง / กาดเช้าใกล้บ้าน",
+     "where_to_buy_en": "Ton Lamyai market (across the road from Warorot) or any neighbourhood morning market (kat chao)",
+     "how_to_choose_en": "",
+     "substitute_abroad_en": "",
+     "pronunciation_roman": "phak kiang"
+    }
+   ],
+   "equipment": [
+    {
+     "name_th": "หม้อใบใหญ่",
+     "kham_mueang_th": "",
+     "name_en": "large stockpot",
+     "substitute_en": ""
+    },
+    {
+     "name_th": "กระทะ",
+     "kham_mueang_th": "",
+     "name_en": "wok",
+     "substitute_en": ""
+    },
+    {
+     "name_th": "ครก",
+     "kham_mueang_th": "",
+     "name_en": "mortar",
+     "substitute_en": "Blender"
+    }
+   ],
+   "prep_ahead_en": "Soak dried kapok flowers 15-30 min and snip off hard bases. Toast thua nao discs over a flame. Make or buy paste.",
+   "steps": [
+    {
+     "n": 1,
+     "th": "ต้มน้ำ ใส่รากผักชีและซี่โครงหมู ช้อนฟองออก เคี่ยวไฟอ่อน",
+     "en": "Boil water with coriander roots and ribs, skim the scum, simmer gently.",
+     "time_min": 30,
+     "sensory_cue_en": "Clear broth, no grey foam.",
+     "tip_en": ""
+    },
+    {
+     "n": 2,
+     "th": "ผัดพริกแกงกับน้ำมัน ใส่หมูสับ ถั่วเน่าป่น ผัดจนหอม",
+     "en": "In a wok fry the paste in oil, add minced pork and crumbled thua nao, fry until fragrant and the pork is cooked.",
+     "time_min": 8,
+     "sensory_cue_en": "Smells deeply savoury, slightly funky from the thua nao; oil turns red.",
+     "tip_en": ""
+    },
+    {
+     "n": 3,
+     "th": "ใส่มะเขือส้มผัดจนนิ่ม",
+     "en": "Add tomatoes and fry until they collapse.",
+     "time_min": 5,
+     "sensory_cue_en": "Tomatoes slump and turn jammy.",
+     "tip_en": ""
+    },
+    {
+     "n": 4,
+     "th": "เทส่วนผสมลงหม้อน้ำซุป เคี่ยวไฟอ่อน",
+     "en": "Tip everything into the stock and simmer low.",
+     "time_min": 30,
+     "sensory_cue_en": "Broth turns orange-red with a layer of red oil.",
+     "tip_en": ""
+    },
+    {
+     "n": 5,
+     "th": "ใส่ดอกงิ้วและเลือด ปรุงด้วยน้ำปลา เกลือ เคี่ยวต่อ",
+     "en": "Add soaked kapok flowers and blood cubes; season with fish sauce and salt; simmer 10 more minutes.",
+     "time_min": 10,
+     "sensory_cue_en": "Blood firms and turns brown right through; flowers soften.",
+     "tip_en": ""
+    },
+    {
+     "n": 6,
+     "th": "ชิม ปรับรส ตักราดขนมเส้น โรยกระเทียมเจียว ผักชี ต้นหอม",
+     "en": "Taste and adjust; ladle over noodles, top with fried garlic, coriander, spring onion.",
+     "time_min": 3,
+     "sensory_cue_en": "Salty-spicy with a clean tomato sourness.",
+     "tip_en": ""
+    }
+   ],
+   "taste_profile": {
+    "sour": 3,
+    "salty": 4,
+    "spicy": 3,
+    "sweet": 1,
+    "bitter": 0,
+    "umami": 5,
+    "rating_note": "editorial estimate",
+    "texture_en": "Slippery soft noodles, silky blood cubes, chewy-soft kapok flowers, crunchy sprouts and crackling.",
+    "description_th": "เค็ม เผ็ด เปรี้ยวมะเขือส้ม หอมถั่วเน่า",
+    "description_en": "Salty and spicy with bright tomato sourness and a deep fermented-soy savour.",
+    "kham_mueang_taste_words": [
+     {
+      "th": "เก็ม",
+      "roman": "kem",
+      "en": "salty (Northern unaspirated k)",
+      "sources": [
+       "https://www.gotoknow.org/posts/551347"
+      ]
+     },
+     {
+      "th": "เผ็ด",
+      "roman": "phet",
+      "en": "spicy-hot",
+      "sources": []
+     },
+     {
+      "th": "ส้ม",
+      "roman": "som",
+      "en": "sour",
+      "sources": [
+       "https://www.trueplookpanya.com/learning/detail/25566"
+      ]
+     },
+     {
+      "th": "ลำ",
+      "roman": "lam",
+      "en": "delicious",
+      "sources": [
+       "https://www.trueplookpanya.com/learning/detail/25566",
+       "https://www.chiangrai108.com/artsculture/10392/"
+      ]
+     }
+    ]
+   },
+   "how_to_eat": {
+    "th": "ใส่ถั่วงอก ผักกาดดอง บีบมะนาว เติมพริกทอด หักแคบหมูลงในชาม คลุกเส้นกับน้ำแกง",
+    "en": "Pile on raw bean sprouts and pickled greens, squeeze lime, crumble in fried chilli and pork crackling, then toss noodles in the broth.",
+    "with_what": "Raw bean sprouts, pickled mustard, shredded cabbage, lime, fried dried chilli, pork crackling (แคบหมู) or crisp buffalo skin (หนังปอง)",
+    "when_eaten": "Morning to lunch; at temple fairs and funerals from big pots",
+    "sharing_etiquette_en": "Individual bowls; at merit-making the host serves you - accept, and say 'lam khanat'."
+   },
+   "food_safety_en": "Blood must be cooked through (no pink/red centre) - buy it fresh the same day and keep it cold. Thua nao is safe when bought from market vendors; toast before use. Leftover broth: reboil before eating.",
+   "common_mistakes_foreigners_en": [
+    "Thinking 'dok ngio' means dill or lily - it is the dried stamen of the red cotton (kapok) tree flower.",
+    "Skipping the thua nao - it gives the Northern depth; shrimp paste alone tastes more Central.",
+    "Using the exonym 'Ngiao' for Shan people in conversation - fine in the dish name, but say 'Tai Yai' (ไทใหญ่) for the people."
+   ],
+   "useful_phrases": [
+    {
+     "kham_mueang_th": "ขนมเส้นน้ำเงี้ยว ใส่เลือดเน้อ / บ่ใส่เลือดเน้อ",
+     "roman": "khanom sen nam ngiao sai lueat noe / bo sai lueat noe",
+     "central_th": "ขนมจีนน้ำเงี้ยว ใส่เลือดนะ / ไม่ใส่เลือดนะ",
+     "en": "Nam ngiao, with blood / without blood please",
+     "when": "Ordering",
+     "sources": [],
+     "confidence": "low"
+    },
+    {
+     "kham_mueang_th": "เอา...เจ้า / เอา...ครับ",
+     "roman": "ao ... jao / khrap",
+     "central_th": "เอา...ค่ะ/ครับ",
+     "en": "I'll take ...",
+     "when": "Ordering at a stall; เจ้า is the Northern polite particle (mostly used by women; men usually say ครับ).",
+     "sources": [
+      "https://www.fixconcern.com/order-food-in-northern-languages/"
+     ]
+    },
+    {
+     "kham_mueang_th": "บ่เผ็ดเน้อ",
+     "roman": "bo phet noe",
+     "central_th": "ไม่เผ็ดนะ",
+     "en": "Not spicy, OK?",
+     "when": "Before the vendor adds chilli.",
+     "sources": [
+      "https://www.trueplookpanya.com/learning/detail/25566"
+     ]
+    },
+    {
+     "kham_mueang_th": "ลำขนาดเจ้า",
+     "roman": "lam khanat jao",
+     "central_th": "อร่อยมากค่ะ",
+     "en": "It's really delicious!",
+     "when": "Complimenting the cook - always welcome.",
+     "sources": [
+      "https://cookpad.com/th/recipes/16454331"
+     ]
+    }
+   ],
+   "cultural_notes_th": "คำว่า 'เงี้ยว' เป็นคำที่คนไทยเคยใช้เรียกชาวไทใหญ่ (ชาน) ปัจจุบันถือว่าไม่สุภาพเมื่อใช้เรียกคน ควรใช้ 'ไทใหญ่' หรือ 'ไต' แต่ชื่ออาหาร 'น้ำเงี้ยว' ยังใช้กันทั่วไป ดอกงิ้วบานเดือนกุมภาพันธ์ ผู้เฒ่าเก็บดอกที่ร่วง เอาเกสรตัวเมีย ('ขี้ตา') และฝักออก เหลือแต่เกสรสีน้ำตาลไปตากแห้ง ใช้ในน้ำเงี้ยว แกงแค แกงบอน ดอกงิ้วบานยังเป็นสัญญาณว่าลูกหลานจะกลับบ้านช่วงสงกรานต์",
+   "cultural_notes_en": "'Ngiao' is the old Thai exonym for the Shan (Tai Yai) people and is considered impolite when used for people today; say 'Tai Yai' or 'Tai' (their own name). The dish name 'nam ngiao' is used normally. Kapok flowers bloom in February; elders gather fallen flowers, remove the pistil (called 'khi ta') and pods, and sun-dry the brown stamens for nam ngiao, kaeng khae and kaeng bon. In Nan, the blossoms are said to signal that children working away will soon come home for Songkran.",
+   "sources": [
+    "https://www.pim.in.th/one-dish-food/919-khanom-jin-nam-ngiao",
+    "https://www.khaosod.co.th/sentangsedtee/howto-biz/food-recipes/article_23065",
+    "https://www.manoottangwai.com/red-cotton-tree-flowers-dried-nan/",
+    "https://www.khanomjeen.com/article/205/%E0%B8%95%E0%B8%B3%E0%B8%99%E0%B8%B2%E0%B8%99%E0%B8%99%E0%B9%89%E0%B8%B3%E0%B9%80%E0%B8%87%E0%B8%B5%E0%B9%89%E0%B8%A2%E0%B8%A7",
+    "https://www.wongnai.com/recipes/ugc/efcc060954d84db4a31065540a7b0c01",
+    "https://guide.michelin.com/th/th/article/features/10-northern-thai-dishes-you-should-know"
+   ],
+   "confidence": "high",
+   "needs_expert_review": [
+    "Shan name เข้าเส้นน้ำหมากเขือส้ม is from one commercial site"
+   ]
+  },
+  {
+   "id": "khao_soi_noi",
+   "name_th": "ข้าวซอยน้อย",
+   "name_kham_mueang_th": "เข้าซอยน้อย (ข้าวซอยน้อยลอยน้ำ)",
+   "name_roman": "khao soi noi",
+   "name_en": "Khao soi noi - Shan steamed rice-flour sheets ('Tai Yai pizza')",
+   "pronunciation": {
+    "syllables": [
+     {
+      "th": "เข้า",
+      "roman": "khao",
+      "tone": "44ʔ",
+      "derived": true
+     },
+     {
+      "th": "ซอย",
+      "roman": "soi",
+      "tone": "33",
+      "derived": true
+     },
+     {
+      "th": "น้อย",
+      "roman": "noi",
+      "tone": "45",
+      "derived": true
+     }
+    ],
+    "tip_en": "'Noi' = small. Tones derived - see meta.tone_method_note; low confidence."
+   },
+   "origin_province": [
+    "เชียงราย (แม่สาย) Chiang Rai - Mae Sai",
+    "แม่ฮ่องสอน Mae Hong Son"
+   ],
+   "season": "All year",
+   "occasion": "Street snack or light meal",
+   "serves": "3-4 (about 10 sheets)",
+   "description_th": "อาหารไทใหญ่ ทำจากแป้งข้าวเจ้าผสมน้ำ เทบาง ๆ ในถาดกลม นำถาดไปลอยในน้ำเดือด/นึ่งจนแป้งใส แบบธรรมดากินกับน้ำจิ้ม แบบ 'ทรงเครื่อง' ใส่พริกส้ม พริกคั่วน้ำมัน กระเทียมเจียว ถั่วลิสงตำ งา ซีอิ๊ว หมูสับ ผัก ไข่ แล้วนึ่งอีกครั้ง ได้ฉายา 'พิซซ่าไทใหญ่'",
+   "description_en": "A Shan (Tai Yai) dish: a thin rice-flour batter poured into a round tray, which is floated on boiling water (or steamed) until the sheet turns translucent. Plain sheets are rolled and dipped; the 'song khrueang' (loaded) version adds pickled chilli, chilli roasted in oil, fried garlic, crushed peanuts, sesame, soy sauce, minced pork, vegetables and egg, then cooks again. Nicknamed 'Tai Yai pizza'.",
+   "ingredients": [
+    {
+     "name_th": "แป้งข้าวเจ้า",
+     "name_kham_mueang_th": "",
+     "roman": "paeng khao jao",
+     "name_en": "rice flour",
+     "qty_metric": "500 g",
+     "role": "sheet",
+     "where_to_buy_th": "ซูเปอร์มาร์เก็ต/ร้านสะดวกซื้อ หรือร้านโชห่วยในกาด",
+     "where_to_buy_en": "Supermarket (Rimping, Tops, Big C, Makro) or the grocery stall in any market",
+     "how_to_choose_en": "",
+     "substitute_abroad_en": "Any non-glutinous rice flour (not glutinous)",
+     "pronunciation_roman": "paeng khao jao"
+    },
+    {
+     "name_th": "น้ำเปล่า",
+     "name_kham_mueang_th": "",
+     "roman": "nam",
+     "name_en": "water, room temperature",
+     "qty_metric": "1,400-1,500 ml",
+     "role": "batter",
+     "where_to_buy_th": "ตลาดต้นลำไย ฝั่งตรงข้ามกาดหลวง / กาดเช้าใกล้บ้าน",
+     "where_to_buy_en": "Ton Lamyai market (across the road from Warorot) or any neighbourhood morning market (kat chao)",
+     "how_to_choose_en": "Add gradually - too much water = soft sheet that sticks; too little = hard",
+     "substitute_abroad_en": "",
+     "pronunciation_roman": "nam"
+    },
+    {
+     "name_th": "เกลือ น้ำมัน",
+     "name_kham_mueang_th": "",
+     "roman": "kluea, nam man",
+     "name_en": "salt, a little oil",
+     "qty_metric": "1 tsp salt, 1 tbsp oil",
+     "role": "seasoning",
+     "where_to_buy_th": "ซูเปอร์มาร์เก็ต/ร้านสะดวกซื้อ หรือร้านโชห่วยในกาด",
+     "where_to_buy_en": "Supermarket (Rimping, Tops, Big C, Makro) or the grocery stall in any market",
+     "how_to_choose_en": "",
+     "substitute_abroad_en": "",
+     "pronunciation_roman": "kluea, nam man"
+    },
+    {
+     "name_th": "น้ำมันหมู",
+     "name_kham_mueang_th": "",
+     "roman": "nam man mu",
+     "name_en": "pork lard (vendors use back fat)",
+     "qty_metric": "for greasing trays",
+     "role": "anti-stick",
+     "where_to_buy_th": "ตลาดเมืองใหม่ (ค้าส่ง ตีสองถึงเช้า) หรือกาดเช้า",
+     "where_to_buy_en": "Muang Mai wholesale market (roughly 2am to morning) or any morning market",
+     "how_to_choose_en": "",
+     "substitute_abroad_en": "Neutral oil",
+     "pronunciation_roman": "nam man mu"
+    },
+    {
+     "name_th": "ผักชี",
+     "name_kham_mueang_th": "",
+     "roman": "phak chi",
+     "name_en": "coriander",
+     "qty_metric": "1 bunch, chopped",
+     "role": "topping",
+     "where_to_buy_th": "ตลาดต้นลำไย ฝั่งตรงข้ามกาดหลวง / กาดเช้าใกล้บ้าน",
+     "where_to_buy_en": "Ton Lamyai market (across the road from Warorot) or any neighbourhood morning market (kat chao)",
+     "how_to_choose_en": "",
+     "substitute_abroad_en": "",
+     "pronunciation_roman": "phak chi"
+    },
+    {
+     "name_th": "หมูสับผัด",
+     "name_kham_mueang_th": "",
+     "roman": "mu sap",
+     "name_en": "minced pork, stir-fried",
+     "qty_metric": "200 g",
+     "role": "topping",
+     "where_to_buy_th": "ตลาดเมืองใหม่ (ค้าส่ง ตีสองถึงเช้า) หรือกาดเช้า",
+     "where_to_buy_en": "Muang Mai wholesale market (roughly 2am to morning) or any morning market",
+     "how_to_choose_en": "",
+     "substitute_abroad_en": "",
+     "pronunciation_roman": "mu sap"
+    },
+    {
+     "name_th": "ไข่ไก่",
+     "name_kham_mueang_th": "",
+     "roman": "khai",
+     "name_en": "eggs",
+     "qty_metric": "3-4",
+     "role": "topping",
+     "where_to_buy_th": "ตลาดต้นลำไย ฝั่งตรงข้ามกาดหลวง / กาดเช้าใกล้บ้าน",
+     "where_to_buy_en": "Ton Lamyai market (across the road from Warorot) or any neighbourhood morning market (kat chao)",
+     "how_to_choose_en": "",
+     "substitute_abroad_en": "",
+     "pronunciation_roman": "khai"
+    },
+    {
+     "name_th": "ถั่วฝักยาว/กะหล่ำปลีซอย",
+     "name_kham_mueang_th": "",
+     "roman": "kalam pli",
+     "name_en": "shredded cabbage or chopped long beans",
+     "qty_metric": "1 cup",
+     "role": "topping",
+     "where_to_buy_th": "ตลาดต้นลำไย ฝั่งตรงข้ามกาดหลวง / กาดเช้าใกล้บ้าน",
+     "where_to_buy_en": "Ton Lamyai market (across the road from Warorot) or any neighbourhood morning market (kat chao)",
+     "how_to_choose_en": "",
+     "substitute_abroad_en": "",
+     "pronunciation_roman": "kalam pli"
+    },
+    {
+     "name_th": "พริกส้ม พริกคั่วน้ำมัน กระเทียมเจียว ถั่วลิสงตำ งาตำ ซีอิ๊ว",
+     "name_kham_mueang_th": "",
+     "roman": "phrik som, phrik khua nam man",
+     "name_en": "pickled chilli, chilli roasted in oil, fried garlic, crushed peanuts, crushed sesame, soy sauce",
+     "qty_metric": "to taste",
+     "role": "seasoning",
+     "where_to_buy_th": "กาดหลวง (ตลาดวโรรส) ร้านของแห้ง/พริกแกง",
+     "where_to_buy_en": "Warorot (Kad Luang) dried-goods and curry-paste stalls, ground floor and the lanes around it",
+     "how_to_choose_en": "",
+     "substitute_abroad_en": "",
+     "pronunciation_roman": "phrik som, phrik khua nam man"
+    }
+   ],
+   "equipment": [
+    {
+     "name_th": "ถาดอะลูมิเนียมกลมตื้น",
+     "kham_mueang_th": "",
+     "name_en": "shallow round aluminium trays (15-20 cm)",
+     "substitute_en": "Pie tins or a flat plate in a steamer"
+    },
+    {
+     "name_th": "หม้อหรือกระทะใบกว้างใส่น้ำเดือด",
+     "kham_mueang_th": "",
+     "name_en": "wide pan of boiling water",
+     "substitute_en": "Steamer"
+    },
+    {
+     "name_th": "ไม้พาย",
+     "kham_mueang_th": "",
+     "name_en": "spatula to peel sheet",
+     "substitute_en": ""
+    }
+   ],
+   "prep_ahead_en": "Mix batter; rest 30 min. Prepare toppings.",
+   "steps": [
+    {
+     "n": 1,
+     "th": "ผสมแป้งกับน้ำทีละน้อย คนให้ละลาย ใส่เกลือ น้ำมันเล็กน้อย",
+     "en": "Whisk flour with water added gradually until smooth; add salt and a little oil.",
+     "time_min": 5,
+     "sensory_cue_en": "Thin cream consistency, no lumps.",
+     "tip_en": ""
+    },
+    {
+     "n": 2,
+     "th": "ทาน้ำมันหมูในถาด เทแป้งให้ทั่วถาดบาง ๆ",
+     "en": "Grease a tray with lard; pour in a thin layer of batter.",
+     "time_min": 1,
+     "sensory_cue_en": "Batter just covers the base.",
+     "tip_en": "Too little batter = sheet tears; too much = thick and undercooked."
+    },
+    {
+     "n": 3,
+     "th": "ลอยถาดในน้ำเดือด 1-2 นาที จนแป้งสุกใส",
+     "en": "Float the tray on boiling water 1-2 minutes until set.",
+     "time_min": 2,
+     "sensory_cue_en": "White turns translucent and glossy, edges lift.",
+     "tip_en": ""
+    },
+    {
+     "n": 4,
+     "th": "(ทรงเครื่อง) ใส่เครื่องปรุง ผัก หมู ไข่ แล้วเทแป้งทับ ลอยน้ำอีก 2 นาที",
+     "en": "(Loaded) add seasonings, vegetables, pork and egg into the tray with the batter, float again about 2 minutes.",
+     "time_min": 3,
+     "sensory_cue_en": "Egg set, toppings glued into the sheet.",
+     "tip_en": ""
+    },
+    {
+     "n": 5,
+     "th": "แคะแผ่นออก ม้วนหรือพับ กินร้อน ๆ",
+     "en": "Peel out, roll or fold, eat hot.",
+     "time_min": 1,
+     "sensory_cue_en": "Soft, slightly elastic sheet.",
+     "tip_en": ""
+    }
+   ],
+   "taste_profile": {
+    "sour": 2,
+    "salty": 3,
+    "spicy": 2,
+    "sweet": 1,
+    "bitter": 0,
+    "umami": 3,
+    "rating_note": "editorial estimate",
+    "texture_en": "Soft, slippery, slightly chewy rice sheet with nutty crunch from peanuts and sesame.",
+    "description_th": "เค็มหอมซีอิ๊ว เปรี้ยวเผ็ดจากพริกส้ม ถั่วงามัน",
+    "description_en": "Savoury-soy, tangy-hot from pickled chilli, nutty from peanut and sesame.",
+    "kham_mueang_taste_words": [
+     {
+      "th": "ลำ",
+      "roman": "lam",
+      "en": "delicious",
+      "sources": [
+       "https://www.trueplookpanya.com/learning/detail/25566",
+       "https://www.chiangrai108.com/artsculture/10392/"
+      ]
+     },
+     {
+      "th": "ส้ม",
+      "roman": "som",
+      "en": "sour",
+      "sources": [
+       "https://www.trueplookpanya.com/learning/detail/25566"
+      ]
+     },
+     {
+      "th": "เผ็ด",
+      "roman": "phet",
+      "en": "spicy-hot",
+      "sources": []
+     }
+    ]
+   },
+   "how_to_eat": {
+    "th": "กินร้อน ๆ ทันทีที่แคะจากถาด จิ้มน้ำจิ้มหรือพริกส้ม",
+    "en": "Eat immediately, hot from the tray, dipping in the sauce or pickled chilli.",
+    "with_what": "Pickled chilli, chilli oil; Shan-style dipping sauce with fermented soybean",
+    "when_eaten": "Afternoon snack / breakfast at Mae Sai markets",
+    "sharing_etiquette_en": "Street food - one plate each."
+   },
+   "food_safety_en": "Hot tray and steam - use tongs. Egg topping should be fully set.",
+   "common_mistakes_foreigners_en": [
+    "Using glutinous rice flour - it won't set into a clean sheet.",
+    "Pouring batter too thick.",
+    "Confusing it with Chiang Mai khao soi noodle curry - unrelated dish."
+   ],
+   "useful_phrases": [
+    {
+     "kham_mueang_th": "เอา...เจ้า / เอา...ครับ",
+     "roman": "ao ... jao / khrap",
+     "central_th": "เอา...ค่ะ/ครับ",
+     "en": "I'll take ...",
+     "when": "Ordering at a stall; เจ้า is the Northern polite particle (mostly used by women; men usually say ครับ).",
+     "sources": [
+      "https://www.fixconcern.com/order-food-in-northern-languages/"
+     ]
+    },
+    {
+     "kham_mueang_th": "บ่เผ็ดเน้อ",
+     "roman": "bo phet noe",
+     "central_th": "ไม่เผ็ดนะ",
+     "en": "Not spicy, OK?",
+     "when": "Before the vendor adds chilli.",
+     "sources": [
+      "https://www.trueplookpanya.com/learning/detail/25566"
+     ]
+    },
+    {
+     "kham_mueang_th": "อันนี้กี่บาทเจ้า",
+     "roman": "an ni ki bat jao",
+     "central_th": "อันนี้กี่บาทคะ",
+     "en": "How much is this?",
+     "when": "Buying snacks and sweets at the market.",
+     "sources": [
+      "https://northspace.life/%E0%B8%A0%E0%B8%B2%E0%B8%A9%E0%B8%B2%E0%B9%80%E0%B8%AB%E0%B8%99%E0%B8%B7%E0%B8%AD/"
+     ]
+    }
+   ],
+   "cultural_notes_th": "ครัว.co ระบุว่าเป็นอาหารชาติพันธุ์ไทใหญ่ ร้านดังอยู่ที่แม่สาย",
+   "cultural_notes_en": "Krua.co describes it as a Tai Yai dish; the best-known stalls are in Mae Sai on the Myanmar border. Sources name the Shan as 'Tai Yai'; use that name.",
+   "sources": [
+    "https://krua.co/food_story/kaosoinoi/",
+    "https://www.brandthink.me/content/sauce-khao-soi-noi",
+    "https://www.tiktok.com/@byployprapa/video/7456961803856186625",
+    "https://www.tiktok.com/@byployprapa/video/7446206366533831953"
+   ],
+   "confidence": "medium",
+   "needs_expert_review": [
+    "Batter ratio from a Tai Yai vendor's social video (not an institution)"
+   ]
+  },
+  {
+   "id": "khao_phan_phak",
+   "name_th": "ข้าวพันผัก",
+   "name_kham_mueang_th": "เข้าพันผัก / ข้าวปัน (แพร่)",
+   "name_roman": "khao phan phak",
+   "name_en": "Khao phan phak - steamed rice-sheet rolls with egg and vegetables",
+   "pronunciation": {
+    "syllables": [
+     {
+      "th": "เข้า",
+      "roman": "khao",
+      "tone": "44ʔ",
+      "derived": true
+     },
+     {
+      "th": "พัน",
+      "roman": "phan",
+      "tone": "33",
+      "derived": true
+     },
+     {
+      "th": "ผัก",
+      "roman": "phak",
+      "tone": "21",
+      "derived": true
+     }
+    ],
+    "tip_en": "'Phan' = to wrap/roll. In Phrae people also say 'khao pan'. Tones derived - see meta.tone_method_note; low confidence."
+   },
+   "origin_province": [
+    "อุตรดิตถ์ (ลับแล) Uttaradit - Laplae",
+    "แพร่ Phrae (e.g. near Phra That Cho Hae)"
+   ],
+   "season": "All year",
+   "occasion": "Breakfast / snack; also cooked at temple fairs",
+   "serves": "about 12 rolls",
+   "description_th": "แผ่นแป้งข้าวเจ้าที่ละเลงบนผ้าขาวบางขึงปากหม้อนึ่ง ใส่ไข่และผักหลายชนิด (กะหล่ำ ผักบุ้ง คะน้า ถั่วงอก ผักชี แครอท วุ้นเส้น) แล้วพับห่อเป็นชิ้นสี่เหลี่ยมด้วยไม้พายไม้ไผ่ โรยกระเทียมเจียวและกากหมู ราดหรือจิ้มน้ำจิ้ม คล้ายข้าวเกรียบปากหม้อภาคกลางแต่แผ่นใหญ่และหนากว่า ต้นตำรับที่รู้จักคืออำเภอลับแล จ.อุตรดิตถ์ และมีขายที่แพร่",
+   "description_en": "A rice-flour batter spread on cloth stretched over a steaming pot; egg and a mix of vegetables (cabbage, morning glory, kale, bean sprouts, coriander, carrot, glass noodles) go on while it cooks, then it is folded into a rectangle with a bamboo paddle and topped with fried garlic and pork cracklings, with a sweet-sour-spicy dipping sauce. Like Central Thai 'khao kriap pak mo' but larger and thicker. Best known from Laplae district, Uttaradit (a Lower-Northern province bordering Phrae); also sold in Phrae.",
+   "ingredients": [
+    {
+     "name_th": "แป้งข้าวเจ้า",
+     "name_kham_mueang_th": "",
+     "roman": "paeng khao jao",
+     "name_en": "rice flour",
+     "qty_metric": "300 g",
+     "role": "sheet",
+     "where_to_buy_th": "ซูเปอร์มาร์เก็ต/ร้านสะดวกซื้อ หรือร้านโชห่วยในกาด",
+     "where_to_buy_en": "Supermarket (Rimping, Tops, Big C, Makro) or the grocery stall in any market",
+     "how_to_choose_en": "",
+     "substitute_abroad_en": "",
+     "pronunciation_roman": "paeng khao jao"
+    },
+    {
+     "name_th": "น้ำ",
+     "name_kham_mueang_th": "",
+     "roman": "nam",
+     "name_en": "water",
+     "qty_metric": "about 600-700 ml",
+     "role": "batter",
+     "where_to_buy_th": "ตลาดต้นลำไย ฝั่งตรงข้ามกาดหลวง / กาดเช้าใกล้บ้าน",
+     "where_to_buy_en": "Ton Lamyai market (across the road from Warorot) or any neighbourhood morning market (kat chao)",
+     "how_to_choose_en": "Batter should be like thin pouring cream",
+     "substitute_abroad_en": "",
+     "pronunciation_roman": "nam"
+    },
+    {
+     "name_th": "ไข่ไก่",
+     "name_kham_mueang_th": "",
+     "roman": "khai",
+     "name_en": "eggs",
+     "qty_metric": "6",
+     "role": "filling",
+     "where_to_buy_th": "ตลาดต้นลำไย ฝั่งตรงข้ามกาดหลวง / กาดเช้าใกล้บ้าน",
+     "where_to_buy_en": "Ton Lamyai market (across the road from Warorot) or any neighbourhood morning market (kat chao)",
+     "how_to_choose_en": "",
+     "substitute_abroad_en": "",
+     "pronunciation_roman": "khai"
+    },
+    {
+     "name_th": "กะหล่ำปลี ผักบุ้ง คะน้า ถั่วงอก แครอท ผักชี",
+     "name_kham_mueang_th": "",
+     "roman": "phak",
+     "name_en": "cabbage, morning glory, kale, bean sprouts, carrot, coriander (shredded)",
+     "qty_metric": "500 g mixed",
+     "role": "filling",
+     "where_to_buy_th": "ตลาดเมืองใหม่ (ค้าส่ง ตีสองถึงเช้า) หรือกาดเช้า",
+     "where_to_buy_en": "Muang Mai wholesale market (roughly 2am to morning) or any morning market",
+     "how_to_choose_en": "",
+     "substitute_abroad_en": "",
+     "pronunciation_roman": "phak"
+    },
+    {
+     "name_th": "วุ้นเส้น",
+     "name_kham_mueang_th": "",
+     "roman": "wun sen",
+     "name_en": "glass noodles, soaked",
+     "qty_metric": "50 g",
+     "role": "filling",
+     "where_to_buy_th": "ซูเปอร์มาร์เก็ต/ร้านสะดวกซื้อ หรือร้านโชห่วยในกาด",
+     "where_to_buy_en": "Supermarket (Rimping, Tops, Big C, Makro) or the grocery stall in any market",
+     "how_to_choose_en": "",
+     "substitute_abroad_en": "",
+     "pronunciation_roman": "wun sen"
+    },
+    {
+     "name_th": "กระเทียมเจียว กากหมู",
+     "name_kham_mueang_th": "",
+     "roman": "krathiam jiao, kak mu",
+     "name_en": "fried garlic and pork cracklings, with salt and pepper",
+     "qty_metric": "1/2 cup",
+     "role": "topping",
+     "where_to_buy_th": "กาดหลวง (ตลาดวโรรส) ร้านของแห้ง/พริกแกง",
+     "where_to_buy_en": "Warorot (Kad Luang) dried-goods and curry-paste stalls, ground floor and the lanes around it",
+     "how_to_choose_en": "",
+     "substitute_abroad_en": "",
+     "pronunciation_roman": "krathiam jiao, kak mu"
+    },
+    {
+     "name_th": "น้ำซุปไก่ ซอสพริก ซอสปรุงรส น้ำส้มสายชู น้ำตาลมะพร้าว งาคั่ว",
+     "name_kham_mueang_th": "",
+     "roman": "nam jim",
+     "name_en": "sauce: chicken stock, chilli sauce, seasoning sauce, vinegar, coconut sugar, toasted sesame",
+     "qty_metric": "about 1 cup",
+     "role": "dipping sauce",
+     "where_to_buy_th": "ซูเปอร์มาร์เก็ต/ร้านสะดวกซื้อ หรือร้านโชห่วยในกาด",
+     "where_to_buy_en": "Supermarket (Rimping, Tops, Big C, Makro) or the grocery stall in any market",
+     "how_to_choose_en": "",
+     "substitute_abroad_en": "",
+     "pronunciation_roman": "nam jim"
+    }
+   ],
+   "equipment": [
+    {
+     "name_th": "หม้อนึ่ง/ลังถึงใหญ่",
+     "kham_mueang_th": "",
+     "name_en": "large pot or steamer",
+     "substitute_en": ""
+    },
+    {
+     "name_th": "ผ้าขาวบางและเชือก",
+     "kham_mueang_th": "",
+     "name_en": "muslin cloth and string, tied taut over the pot mouth (some cloths have a 1-2 inch steam hole)",
+     "substitute_en": ""
+    },
+    {
+     "name_th": "ไม้พายไม้ไผ่แบน",
+     "kham_mueang_th": "",
+     "name_en": "flat bamboo paddle",
+     "substitute_en": "Thin spatula"
+    },
+    {
+     "name_th": "ฝาครอบ",
+     "kham_mueang_th": "",
+     "name_en": "domed lid",
+     "substitute_en": ""
+    }
+   ],
+   "prep_ahead_en": "Tie the cloth drum-tight over the pot and bring water to a rolling boil. Shred vegetables. Make the sauce.",
+   "steps": [
+    {
+     "n": 1,
+     "th": "ผสมแป้งกับน้ำ พักไว้",
+     "en": "Mix flour and water into a thin batter; rest.",
+     "time_min": 15,
+     "sensory_cue_en": "Smooth, runny.",
+     "tip_en": ""
+    },
+    {
+     "n": 2,
+     "th": "ตักแป้งละเลงบนผ้าเป็นวงบาง ๆ ปิดฝา",
+     "en": "Ladle batter onto the cloth and spread in a thin circle; cover.",
+     "time_min": 1,
+     "sensory_cue_en": "Batter clouds white within seconds.",
+     "tip_en": ""
+    },
+    {
+     "n": 3,
+     "th": "ตอกไข่ลงบนแผ่นแป้ง เกลี่ย ใส่ผัก ปิดฝานึ่งประมาณ 30 วินาที-1 นาที",
+     "en": "Crack an egg onto the sheet, spread it, add vegetables; cover and steam about 30 s-1 min.",
+     "time_min": 1,
+     "sensory_cue_en": "Egg sets, vegetables wilt slightly, sheet goes translucent.",
+     "tip_en": ""
+    },
+    {
+     "n": 4,
+     "th": "ใช้ไม้พายพับแผ่นเป็นสี่เหลี่ยม ยกขึ้นจาน",
+     "en": "Fold the sheet over the filling into a rectangle with the bamboo paddle and lift off.",
+     "time_min": 1,
+     "sensory_cue_en": "Sheet releases cleanly from the cloth.",
+     "tip_en": "Wet the paddle; brush the cloth with a little oil if sticking."
+    },
+    {
+     "n": 5,
+     "th": "โรยกระเทียมเจียวกากหมู ราดน้ำจิ้ม",
+     "en": "Top with garlic-crackling mix and spoon over sauce.",
+     "time_min": 1,
+     "sensory_cue_en": "Glossy, garlicky.",
+     "tip_en": ""
+    }
+   ],
+   "taste_profile": {
+    "sour": 2,
+    "salty": 2,
+    "spicy": 1,
+    "sweet": 2,
+    "bitter": 0,
+    "umami": 3,
+    "rating_note": "editorial estimate",
+    "texture_en": "Soft chewy sheet, tender-crisp vegetables, crunchy garlic and pork crackling.",
+    "description_th": "นุ่ม หอมกระเทียม น้ำจิ้มเปรี้ยวหวานเผ็ดเล็กน้อย",
+    "description_en": "Mild and soft; the sauce brings sweet-sour-light heat.",
+    "kham_mueang_taste_words": [
+     {
+      "th": "ลำ",
+      "roman": "lam",
+      "en": "delicious",
+      "sources": [
+       "https://www.trueplookpanya.com/learning/detail/25566",
+       "https://www.chiangrai108.com/artsculture/10392/"
+      ]
+     },
+     {
+      "th": "หวาน",
+      "roman": "wan",
+      "en": "sweet",
+      "sources": []
+     },
+     {
+      "th": "ส้ม",
+      "roman": "som",
+      "en": "sour",
+      "sources": [
+       "https://www.trueplookpanya.com/learning/detail/25566"
+      ]
+     }
+    ]
+   },
+   "how_to_eat": {
+    "th": "กินร้อน ๆ ด้วยช้อนส้อม ราดน้ำจิ้มหรือจิ้ม",
+    "en": "Eat hot with spoon and fork; sauce poured over or on the side.",
+    "with_what": "Dipping sauce; chilli flakes",
+    "when_eaten": "Breakfast, afternoon snack",
+    "sharing_etiquette_en": "Usually ordered per plate; fine to share at the table."
+   },
+   "food_safety_en": "Steam burns - keep face away when lifting the lid. Eggs should be fully set.",
+   "common_mistakes_foreigners_en": [
+    "Cloth not taut - batter pools and tears.",
+    "Too much filling - the sheet can't fold."
+   ],
+   "useful_phrases": [
+    {
+     "kham_mueang_th": "เอา...เจ้า / เอา...ครับ",
+     "roman": "ao ... jao / khrap",
+     "central_th": "เอา...ค่ะ/ครับ",
+     "en": "I'll take ...",
+     "when": "Ordering at a stall; เจ้า is the Northern polite particle (mostly used by women; men usually say ครับ).",
+     "sources": [
+      "https://www.fixconcern.com/order-food-in-northern-languages/"
+     ]
+    },
+    {
+     "kham_mueang_th": "อันนี้กี่บาทเจ้า",
+     "roman": "an ni ki bat jao",
+     "central_th": "อันนี้กี่บาทคะ",
+     "en": "How much is this?",
+     "when": "Buying snacks and sweets at the market.",
+     "sources": [
+      "https://northspace.life/%E0%B8%A0%E0%B8%B2%E0%B8%A9%E0%B8%B2%E0%B9%80%E0%B8%AB%E0%B8%99%E0%B8%B7%E0%B8%AD/"
+     ]
+    },
+    {
+     "kham_mueang_th": "ลำขนาดเจ้า",
+     "roman": "lam khanat jao",
+     "central_th": "อร่อยมากค่ะ",
+     "en": "It's really delicious!",
+     "when": "Complimenting the cook - always welcome.",
+     "sources": [
+      "https://cookpad.com/th/recipes/16454331"
+     ]
+    }
+   ],
+   "cultural_notes_th": "วารสารเมืองโบราณเล่าว่าลับแลมีขนมจากแผ่นแป้งนึ่งหลายอย่าง คือ ข้าวแคบ (แผ่นแป้งนึ่งตากแห้ง) ข้าวพันผัก และหมี่พัน (ข้าวแคบห่อเส้นหมี่) เป็นภูมิปัญญาที่สืบทอดหลายชั่วคน",
+   "cultural_notes_en": "Muang Boran Journal describes a family of Laplae steamed-sheet foods: khao khaep (sheets sun-dried on bamboo racks), khao phan phak, and mi phan (khao khaep wrapped around seasoned rice vermicelli), made by families over generations.",
+   "sources": [
+    "https://cheewajit.com/healthy-food/recipe/208958.html",
+    "https://www.muangboranjournal.com/post/khao-khab-Laplae",
+    "https://www.wongnai.com/restaurants/1216998UQ-%E0%B8%82%E0%B9%89%E0%B8%B2%E0%B8%A7%E0%B8%9E%E0%B8%B1%E0%B8%99%E0%B8%9C%E0%B8%B1%E0%B8%81-%E0%B8%8A%E0%B9%88%E0%B8%AD%E0%B9%81%E0%B8%AE"
+   ],
+   "confidence": "medium",
+   "needs_expert_review": [
+    "Phrae name 'ข้าวปัน' seen only in a Pantip thread title (page blocked)",
+    "Batter quantity is an estimate; the A Cuisine recipe gives components but quantities were not extracted"
+   ]
+  },
+  {
+   "id": "khanom_jin_nam_yoi_phrae",
+   "name_th": "ขนมจีนน้ำย้อย (ขนมจีนน้ำหมู/น้ำใส + น้ำพริกน้ำย้อย)",
+   "name_kham_mueang_th": "ขนมเส้นน้ำย้อย",
+   "name_roman": "khanom jin nam yoi (Phrae: khanom sen nam yoi)",
+   "name_en": "Phrae rice noodles tossed with dry chilli-crackling relish, with clear pork broth",
+   "pronunciation": {
+    "syllables": [
+     {
+      "th": "ขะ",
+      "roman": "kha",
+      "tone": "21",
+      "derived": true
+     },
+     {
+      "th": "หนม",
+      "roman": "nom",
+      "tone": "24",
+      "derived": true
+     },
+     {
+      "th": "เส้น",
+      "roman": "sen",
+      "tone": "44ʔ",
+      "derived": true
+     },
+     {
+      "th": "น้ำ",
+      "roman": "nam",
+      "tone": "45",
+      "derived": true
+     },
+     {
+      "th": "ย้อย",
+      "roman": "yoi",
+      "tone": "45",
+      "derived": true
+     }
+    ],
+    "tip_en": "'Yoi' = to drip. Phrae people call their town 'เมืองแป้' (Mueang Pae). Tones derived - see meta.tone_method_note; low confidence."
+   },
+   "origin_province": [
+    "แพร่ (อำเภอลอง) Phrae - Long district"
+   ],
+   "season": "All year",
+   "occasion": "Breakfast/lunch; Phrae specialty",
+   "serves": "4",
+   "description_th": "'น้ำพริกน้ำย้อย' คือน้ำพริกแห้งจากอำเภอลอง จ.แพร่ ทำจากพริกป่น กระเทียมเจียว หอมแดงเจียว และกากหมู ที่มาของชื่อเล่ากันว่า เวลาตักขนมเส้นที่เพิ่งลวกขึ้นมายังมีน้ำหยด 'ย้อย' อยู่ คนแพร่กินโดยคลุกขนมเส้นกับน้ำพริกน้ำย้อย แล้วซดน้ำหมู (น้ำใส) ที่ต้มจากกระดูกหมู ใส่มะเขือส้ม เลือด ปรุงด้วยน้ำปลา",
+   "description_en": "'Nam phrik nam yoi' is a dry relish from Long district, Phrae: chilli powder, fried garlic, fried shallot and pork cracklings. The name is said to come from the water still dripping ('yoi') off freshly blanched noodles. Phrae people toss the noodles with the relish, and drink a clear pork-bone broth ('nam mu' / 'nam sai') with small tomatoes and blood, seasoned with fish sauce - Krua.co notes Phrae's fish-sauce habit differs from the thua-nao style of the upper North.",
+   "ingredients": [
+    {
+     "name_th": "หมูติดมัน/มันแข็งหั่นชิ้น (ทำกากหมู)",
+     "name_kham_mueang_th": "ขี้แคบ / กากหมู",
+     "roman": "kak mu",
+     "name_en": "pork back fat / fatty pork, cubed (for cracklings)",
+     "qty_metric": "1 kg (yields ~300 g crackling)",
+     "role": "relish",
+     "where_to_buy_th": "ตลาดเมืองใหม่ (ค้าส่ง ตีสองถึงเช้า) หรือกาดเช้า",
+     "where_to_buy_en": "Muang Mai wholesale market (roughly 2am to morning) or any morning market",
+     "how_to_choose_en": "",
+     "substitute_abroad_en": "Ready-made pork scratchings, chopped",
+     "pronunciation_roman": "kak mu"
+    },
+    {
+     "name_th": "หอมแดงซอย",
+     "name_kham_mueang_th": "",
+     "roman": "hom daeng",
+     "name_en": "shallots, thinly sliced",
+     "qty_metric": "200 g",
+     "role": "relish",
+     "where_to_buy_th": "ตลาดต้นลำไย ฝั่งตรงข้ามกาดหลวง / กาดเช้าใกล้บ้าน",
+     "where_to_buy_en": "Ton Lamyai market (across the road from Warorot) or any neighbourhood morning market (kat chao)",
+     "how_to_choose_en": "",
+     "substitute_abroad_en": "",
+     "pronunciation_roman": "hom daeng"
+    },
+    {
+     "name_th": "กระเทียมไทยทุบ",
+     "name_kham_mueang_th": "",
+     "roman": "krathiam",
+     "name_en": "Thai garlic, pounded",
+     "qty_metric": "100 g",
+     "role": "relish",
+     "where_to_buy_th": "ตลาดต้นลำไย ฝั่งตรงข้ามกาดหลวง / กาดเช้าใกล้บ้าน",
+     "where_to_buy_en": "Ton Lamyai market (across the road from Warorot) or any neighbourhood morning market (kat chao)",
+     "how_to_choose_en": "",
+     "substitute_abroad_en": "",
+     "pronunciation_roman": "krathiam"
+    },
+    {
+     "name_th": "พริกป่น",
+     "name_kham_mueang_th": "",
+     "roman": "phrik pon",
+     "name_en": "chilli powder (roasted)",
+     "qty_metric": "2 1/2 tbsp",
+     "role": "relish - heat",
+     "where_to_buy_th": "กาดหลวง (ตลาดวโรรส) ร้านของแห้ง/พริกแกง",
+     "where_to_buy_en": "Warorot (Kad Luang) dried-goods and curry-paste stalls, ground floor and the lanes around it",
+     "how_to_choose_en": "",
+     "substitute_abroad_en": "",
+     "pronunciation_roman": "phrik pon"
+    },
+    {
+     "name_th": "น้ำตาล เกลือ",
+     "name_kham_mueang_th": "",
+     "roman": "namtan, kluea",
+     "name_en": "sugar, salt",
+     "qty_metric": "2 tbsp sugar, 1/4 tsp salt",
+     "role": "seasoning",
+     "where_to_buy_th": "ซูเปอร์มาร์เก็ต/ร้านสะดวกซื้อ หรือร้านโชห่วยในกาด",
+     "where_to_buy_en": "Supermarket (Rimping, Tops, Big C, Makro) or the grocery stall in any market",
+     "how_to_choose_en": "",
+     "substitute_abroad_en": "",
+     "pronunciation_roman": "namtan, kluea"
+    },
+    {
+     "name_th": "กระดูกซี่โครง/กระดูกขาหมู",
+     "name_kham_mueang_th": "",
+     "roman": "kraduk mu",
+     "name_en": "pork ribs and leg bones",
+     "qty_metric": "800 g",
+     "role": "broth",
+     "where_to_buy_th": "ตลาดเมืองใหม่ (ค้าส่ง ตีสองถึงเช้า) หรือกาดเช้า",
+     "where_to_buy_en": "Muang Mai wholesale market (roughly 2am to morning) or any morning market",
+     "how_to_choose_en": "",
+     "substitute_abroad_en": "",
+     "pronunciation_roman": "kraduk mu"
+    },
+    {
+     "name_th": "ข่า ตะไคร้ รากผักชี หอมแดง",
+     "name_kham_mueang_th": "",
+     "roman": "kha, takhrai",
+     "name_en": "galangal, lemongrass, coriander root, shallot",
+     "qty_metric": "a handful",
+     "role": "broth aromatics",
+     "where_to_buy_th": "ตลาดต้นลำไย ฝั่งตรงข้ามกาดหลวง / กาดเช้าใกล้บ้าน",
+     "where_to_buy_en": "Ton Lamyai market (across the road from Warorot) or any neighbourhood morning market (kat chao)",
+     "how_to_choose_en": "",
+     "substitute_abroad_en": "",
+     "pronunciation_roman": "kha, takhrai"
+    },
+    {
+     "name_th": "มะเขือส้ม",
+     "name_kham_mueang_th": "บ่ะเขือส้ม",
+     "roman": "makhuea som",
+     "name_en": "small sour tomatoes",
+     "qty_metric": "10-12",
+     "role": "broth",
+     "where_to_buy_th": "ตลาดต้นลำไย ฝั่งตรงข้ามกาดหลวง / กาดเช้าใกล้บ้าน",
+     "where_to_buy_en": "Ton Lamyai market (across the road from Warorot) or any neighbourhood morning market (kat chao)",
+     "how_to_choose_en": "",
+     "substitute_abroad_en": "Cherry tomatoes",
+     "pronunciation_roman": "makhuea som"
+    },
+    {
+     "name_th": "เลือดหมู",
+     "name_kham_mueang_th": "",
+     "roman": "lueat mu",
+     "name_en": "set pork blood",
+     "qty_metric": "200 g",
+     "role": "broth",
+     "where_to_buy_th": "ตลาดเมืองใหม่ (ค้าส่ง ตีสองถึงเช้า) หรือกาดเช้า",
+     "where_to_buy_en": "Muang Mai wholesale market (roughly 2am to morning) or any morning market",
+     "how_to_choose_en": "",
+     "substitute_abroad_en": "",
+     "pronunciation_roman": "lueat mu"
+    },
+    {
+     "name_th": "น้ำปลา",
+     "name_kham_mueang_th": "",
+     "roman": "nam pla",
+     "name_en": "fish sauce",
+     "qty_metric": "to taste",
+     "role": "seasoning",
+     "where_to_buy_th": "ซูเปอร์มาร์เก็ต/ร้านสะดวกซื้อ หรือร้านโชห่วยในกาด",
+     "where_to_buy_en": "Supermarket (Rimping, Tops, Big C, Makro) or the grocery stall in any market",
+     "how_to_choose_en": "",
+     "substitute_abroad_en": "",
+     "pronunciation_roman": "nam pla"
+    },
+    {
+     "name_th": "ขนมเส้น",
+     "name_kham_mueang_th": "ขนมเส้น",
+     "roman": "khanom sen",
+     "name_en": "fresh rice noodles",
+     "qty_metric": "800 g",
+     "role": "noodle",
+     "where_to_buy_th": "ตลาดต้นลำไย ฝั่งตรงข้ามกาดหลวง / กาดเช้าใกล้บ้าน",
+     "where_to_buy_en": "Ton Lamyai market (across the road from Warorot) or any neighbourhood morning market (kat chao)",
+     "how_to_choose_en": "",
+     "substitute_abroad_en": "",
+     "pronunciation_roman": "khanom sen"
+    },
+    {
+     "name_th": "ผักสด ผักลวก มะนาว ผักดอง ต้นหอม ผักชี กระเทียม",
+     "name_kham_mueang_th": "",
+     "roman": "phak kiang",
+     "name_en": "fresh and blanched vegetables, lime, pickles, spring onion, coriander, raw garlic",
+     "qty_metric": "platter",
+     "role": "sides",
+     "where_to_buy_th": "ตลาดต้นลำไย ฝั่งตรงข้ามกาดหลวง / กาดเช้าใกล้บ้าน",
+     "where_to_buy_en": "Ton Lamyai market (across the road from Warorot) or any neighbourhood morning market (kat chao)",
+     "how_to_choose_en": "",
+     "substitute_abroad_en": "",
+     "pronunciation_roman": "phak kiang"
+    }
+   ],
+   "equipment": [
+    {
+     "name_th": "กระทะ",
+     "kham_mueang_th": "",
+     "name_en": "wok",
+     "substitute_en": ""
+    },
+    {
+     "name_th": "หม้อ",
+     "kham_mueang_th": "",
+     "name_en": "stockpot",
+     "substitute_en": ""
+    },
+    {
+     "name_th": "กระดาษซับน้ำมัน",
+     "kham_mueang_th": "",
+     "name_en": "paper towels",
+     "substitute_en": ""
+    }
+   ],
+   "prep_ahead_en": "Render cracklings (can be made days ahead; keep airtight).",
+   "steps": [
+    {
+     "n": 1,
+     "th": "หั่นหมูเป็นชิ้น ใส่กระทะกับน้ำเล็กน้อย เคี่ยวจนน้ำมันออกและหนังพองกรอบ",
+     "en": "Cut pork fat into cubes, cook in a wok with a splash of water until the fat renders and pieces puff and crisp.",
+     "time_min": 30,
+     "sensory_cue_en": "Sizzle turns from wet bubbling to a dry crackle; pieces golden and airy.",
+     "tip_en": "Keep lard for frying garlic and shallot."
+    },
+    {
+     "n": 2,
+     "th": "เจียวกระเทียมจนเหลือง ตักพักซับน้ำมัน",
+     "en": "Fry garlic in the lard until golden; drain.",
+     "time_min": 5,
+     "sensory_cue_en": "Light gold and nutty - pull before it browns.",
+     "tip_en": ""
+    },
+    {
+     "n": 3,
+     "th": "เจียวหอมแดงจนเหลืองกรอบ",
+     "en": "Fry shallots until golden-crisp; drain.",
+     "time_min": 8,
+     "sensory_cue_en": "Stops bubbling hard when moisture is gone.",
+     "tip_en": ""
+    },
+    {
+     "n": 4,
+     "th": "คลุกกากหมู กระเทียม หอม กับพริกป่น น้ำตาล เกลือ",
+     "en": "Toss cracklings (chopped), garlic and shallots with chilli powder, sugar and salt.",
+     "time_min": 3,
+     "sensory_cue_en": "Loose, crunchy, red-flecked relish.",
+     "tip_en": ""
+    },
+    {
+     "n": 5,
+     "th": "ผัดเครื่องหอมจนเหลือง ใส่กระดูก ผัด เติมน้ำ ต้ม ช้อนฟอง ใส่เกลือ เคี่ยว 30 นาที",
+     "en": "Broth: fry aromatics golden, add bones and stir, add water, boil, skim, salt, simmer 30 min.",
+     "time_min": 40,
+     "sensory_cue_en": "Clear, golden broth.",
+     "tip_en": ""
+    },
+    {
+     "n": 6,
+     "th": "ปรุงน้ำปลา ใส่มะเขือส้มและเลือด",
+     "en": "Season with fish sauce; add tomatoes and blood cubes and simmer until blood is cooked.",
+     "time_min": 10,
+     "sensory_cue_en": "Tomatoes just split; blood firm and brown throughout.",
+     "tip_en": ""
+    },
+    {
+     "n": 7,
+     "th": "ตักขนมเส้นลวกใส่จาน โรยน้ำพริกน้ำย้อย คลุก กินคู่กับน้ำซุป",
+     "en": "Put noodles on a plate still dripping, spoon relish over and toss; serve broth in a side bowl.",
+     "time_min": 2,
+     "sensory_cue_en": "Relish clings to damp noodles.",
+     "tip_en": ""
+    }
+   ],
+   "taste_profile": {
+    "sour": 1,
+    "salty": 3,
+    "spicy": 3,
+    "sweet": 2,
+    "bitter": 0,
+    "umami": 3,
+    "rating_note": "editorial estimate",
+    "texture_en": "Crunchy, fatty cracklings against soft noodles; light clear broth.",
+    "description_th": "เผ็ด เค็ม หวานนิด ๆ หอมกระเทียมหอมเจียว มันกรุบจากกากหมู",
+    "description_en": "Hot, salty, a little sweet, rich with fried garlic and shallot; the broth cleans the palate.",
+    "kham_mueang_taste_words": [
+     {
+      "th": "เผ็ด",
+      "roman": "phet",
+      "en": "spicy-hot",
+      "sources": []
+     },
+     {
+      "th": "เก็ม",
+      "roman": "kem",
+      "en": "salty (Northern unaspirated k)",
+      "sources": [
+       "https://www.gotoknow.org/posts/551347"
+      ]
+     },
+     {
+      "th": "ลำ",
+      "roman": "lam",
+      "en": "delicious",
+      "sources": [
+       "https://www.trueplookpanya.com/learning/detail/25566",
+       "https://www.chiangrai108.com/artsculture/10392/"
+      ]
+     }
+    ]
+   },
+   "how_to_eat": {
+    "th": "คลุกขนมจีนกับน้ำพริกน้ำย้อย บีบมะนาว กินกับผักและกระเทียมสด ซดน้ำหมู",
+    "en": "Toss noodles with the relish, squeeze lime, eat with fresh veg and a bite of raw garlic, sip broth between mouthfuls.",
+    "with_what": "Clear pork broth, fresh herbs, blanched veg, lime, pickles",
+    "when_eaten": "Morning to lunch",
+    "sharing_etiquette_en": "Veg platter is shared; noodle plates individual."
+   },
+   "food_safety_en": "Blood must be fully cooked. Hot lard spatters - dry pork before frying.",
+   "common_mistakes_foreigners_en": [
+    "Pouring broth onto the noodles - in Phrae the relish-tossed noodles and broth are eaten side by side.",
+    "Burning the garlic - it turns bitter within seconds."
+   ],
+   "useful_phrases": [
+    {
+     "kham_mueang_th": "เอา...เจ้า / เอา...ครับ",
+     "roman": "ao ... jao / khrap",
+     "central_th": "เอา...ค่ะ/ครับ",
+     "en": "I'll take ...",
+     "when": "Ordering at a stall; เจ้า is the Northern polite particle (mostly used by women; men usually say ครับ).",
+     "sources": [
+      "https://www.fixconcern.com/order-food-in-northern-languages/"
+     ]
+    },
+    {
+     "kham_mueang_th": "บ่เผ็ดเน้อ",
+     "roman": "bo phet noe",
+     "central_th": "ไม่เผ็ดนะ",
+     "en": "Not spicy, OK?",
+     "when": "Before the vendor adds chilli.",
+     "sources": [
+      "https://www.trueplookpanya.com/learning/detail/25566"
+     ]
+    },
+    {
+     "kham_mueang_th": "ลำขนาดเจ้า",
+     "roman": "lam khanat jao",
+     "central_th": "อร่อยมากค่ะ",
+     "en": "It's really delicious!",
+     "when": "Complimenting the cook - always welcome.",
+     "sources": [
+      "https://cookpad.com/th/recipes/16454331"
+     ]
+    }
+   ],
+   "cultural_notes_th": "ครัว.co ตั้งข้อสังเกตว่าการใช้น้ำปลาของแพร่อาจได้รับอิทธิพลจากอุตรดิตถ์ สุโขทัย พิษณุโลก หรือกลุ่มคนลาวที่อพยพมา ขณะที่ล้านนาตอนบนนิยมถั่วเน่า",
+   "cultural_notes_en": "Krua.co suggests Phrae's fish-sauce preference may reflect neighbours (Uttaradit, Sukhothai, Phitsanulok) or Lao settlers, whereas the upper North favours fermented soybean.",
+   "sources": [
+    "https://krua.co/food_story/kanomjean-namyoi-phare/",
+    "https://www.wongnai.com/recipes/ugc/8165efb6eefd4aaba437b4f5925b8fe5",
+    "https://www.wongnai.com/news/pan-sen-rice-vermicelli-long-phrae-chiangmai"
+   ],
+   "confidence": "medium"
+  },
+  {
+   "id": "khao_ram_fuen",
+   "name_th": "ข้าวแรมฟืน",
+   "name_kham_mueang_th": "เข้าแรมฟืน / ข้าวฟืน (ไทใหญ่: ถั่วพูอุ่น/โถ่พูอุ่น สำหรับแบบอุ่น)",
+   "name_roman": "khao raem fuen",
+   "name_en": "Khao raem fuen - set rice/pea-flour jelly with savoury toppings",
+   "pronunciation": {
+    "syllables": [
+     {
+      "th": "เข้า",
+      "roman": "khao",
+      "tone": "44ʔ",
+      "derived": true
+     },
+     {
+      "th": "แรม",
+      "roman": "raem",
+      "tone": "33",
+      "derived": true
+     },
+     {
+      "th": "ฟืน",
+      "roman": "fuen",
+      "tone": "33",
+      "derived": true
+     }
+    ],
+    "tip_en": "Northern speakers often say 'haem' for แรม (Northern ร often -> ฮ) - unverified for this word. Tones derived - see meta.tone_method_note; low confidence."
+   },
+   "origin_province": [
+    "เชียงราย (แม่สาย) Chiang Rai - Mae Sai",
+    "แม่ฮ่องสอน Mae Hong Son",
+    "ตาก Tak"
+   ],
+   "season": "All year; the warm version is loved in the cool season",
+   "occasion": "Market snack / light meal",
+   "serves": "6",
+   "description_th": "อาหารของชาวไทลื้อ ไทเขิน ไทใหญ่ และจีนยูนนาน ทำจากข้าวหรือถั่ว (ถั่วลันเตา ถั่วลิสง ถั่วเหลือง) โม่ กรอง แล้วกวนกับน้ำปูนใสบนเตาฟืนจนสุกข้น เทใส่ถาดทิ้งไว้ค้างคืนให้เซ็ตตัว ชื่ออาจมาจาก 'ข้าวแรมคืน' หรือจากคำจีน 'เหลียงเฝิ่น' (凉粉) กินได้หลายแบบ: ข้าวฟืนน้ำ ข้าวฟืนยำ ข้าวฟืนทอด และข้าวฟืนอุ่น (ถั่วพูอุ่น) ที่เป็นแป้งเหลวร้อน ๆ สีเหลือง",
+   "description_en": "A food of the Tai Lue, Tai Khuen, Tai Yai and Yunnanese Chinese: rice or pulses (yellow pea, peanut, soy) are ground, strained and stirred with limewater over a wood fire until thick, then left overnight in trays to set. The name may come from 'khao raem khuen' ('overnight rice') or from Chinese liang fen (凉粉). Served as 'khao fuen nam' (cubes in broth), 'khao fuen yam' (tossed salad), fried, or warm ('thua phu un') - a hot, yellow, porridge-like version.",
+   "ingredients": [
+    {
+     "name_th": "แป้งถั่วลันเตา (หรือแป้งข้าวเจ้า)",
+     "name_kham_mueang_th": "",
+     "roman": "paeng thua lanta",
+     "name_en": "yellow pea flour (or rice flour)",
+     "qty_metric": "200 g",
+     "role": "base",
+     "where_to_buy_th": "กาดหลวง (ตลาดวโรรส) ร้านของแห้ง/พริกแกง",
+     "where_to_buy_en": "Warorot (Kad Luang) dried-goods and curry-paste stalls, ground floor and the lanes around it",
+     "how_to_choose_en": "Pale yellow, fine",
+     "substitute_abroad_en": "Chickpea (gram) flour gives a similar yellow jelly - not identical",
+     "pronunciation_roman": "paeng thua lanta"
+    },
+    {
+     "name_th": "น้ำปูนใส",
+     "name_kham_mueang_th": "น้ำปูน",
+     "roman": "nam pun sai",
+     "name_en": "food-grade limewater (clear liquid off slaked lime paste)",
+     "qty_metric": "about 1 litre (with water)",
+     "role": "setting/texture",
+     "where_to_buy_th": "กาดหลวง (ตลาดวโรรส) ร้านของแห้ง/พริกแกง",
+     "where_to_buy_en": "Warorot (Kad Luang) dried-goods and curry-paste stalls, ground floor and the lanes around it",
+     "how_to_choose_en": "Use the clear top layer only, from edible red/white lime sold for betel or desserts",
+     "substitute_abroad_en": "Water plus a pinch of salt; texture softer",
+     "pronunciation_roman": "nam pun sai"
+    },
+    {
+     "name_th": "ถั่วลิสงคั่วป่น",
+     "name_kham_mueang_th": "",
+     "roman": "thua lisong",
+     "name_en": "roasted peanuts, crushed",
+     "qty_metric": "1/2 cup",
+     "role": "topping",
+     "where_to_buy_th": "ตลาดต้นลำไย ฝั่งตรงข้ามกาดหลวง / กาดเช้าใกล้บ้าน",
+     "where_to_buy_en": "Ton Lamyai market (across the road from Warorot) or any neighbourhood morning market (kat chao)",
+     "how_to_choose_en": "",
+     "substitute_abroad_en": "",
+     "pronunciation_roman": "thua lisong"
+    },
+    {
+     "name_th": "พริกคั่วน้ำมัน",
+     "name_kham_mueang_th": "",
+     "roman": "phrik khua nam man",
+     "name_en": "chilli roasted in oil",
+     "qty_metric": "to taste",
+     "role": "topping",
+     "where_to_buy_th": "กาดหลวง (ตลาดวโรรส) ร้านของแห้ง/พริกแกง",
+     "where_to_buy_en": "Warorot (Kad Luang) dried-goods and curry-paste stalls, ground floor and the lanes around it",
+     "how_to_choose_en": "",
+     "substitute_abroad_en": "",
+     "pronunciation_roman": "phrik khua nam man"
+    },
+    {
+     "name_th": "ถั่วเน่า",
+     "name_kham_mueang_th": "",
+     "roman": "thua nao",
+     "name_en": "fermented soybean (paste or disc, toasted)",
+     "qty_metric": "2 tbsp",
+     "role": "topping",
+     "where_to_buy_th": "กาดหลวง (ตลาดวโรรส) ร้านของแห้ง/พริกแกง",
+     "where_to_buy_en": "Warorot (Kad Luang) dried-goods and curry-paste stalls, ground floor and the lanes around it",
+     "how_to_choose_en": "",
+     "substitute_abroad_en": "",
+     "pronunciation_roman": "thua nao"
+    },
+    {
+     "name_th": "น้ำมะขาม/น้ำซุปเปรี้ยวหวาน หรือน้ำมะเขือส้ม",
+     "name_kham_mueang_th": "",
+     "roman": "nam makham",
+     "name_en": "sweet-sour tamarind or tomato broth",
+     "qty_metric": "500 ml",
+     "role": "sauce",
+     "where_to_buy_th": "ตลาดต้นลำไย ฝั่งตรงข้ามกาดหลวง / กาดเช้าใกล้บ้าน",
+     "where_to_buy_en": "Ton Lamyai market (across the road from Warorot) or any neighbourhood morning market (kat chao)",
+     "how_to_choose_en": "",
+     "substitute_abroad_en": "",
+     "pronunciation_roman": "nam makham"
+    },
+    {
+     "name_th": "ขิงซอย กระเทียม ซีอิ๊ว ผักชี ต้นหอม ถั่วงอก ผักกาดดอง",
+     "name_kham_mueang_th": "",
+     "roman": "khing, phak chi",
+     "name_en": "shredded ginger, garlic, soy sauce, coriander, spring onion, bean sprouts, pickled greens",
+     "qty_metric": "to serve",
+     "role": "garnish",
+     "where_to_buy_th": "ตลาดต้นลำไย ฝั่งตรงข้ามกาดหลวง / กาดเช้าใกล้บ้าน",
+     "where_to_buy_en": "Ton Lamyai market (across the road from Warorot) or any neighbourhood morning market (kat chao)",
+     "how_to_choose_en": "",
+     "substitute_abroad_en": "",
+     "pronunciation_roman": "khing, phak chi"
+    }
+   ],
+   "equipment": [
+    {
+     "name_th": "หม้อก้นหนา",
+     "kham_mueang_th": "",
+     "name_en": "heavy pot",
+     "substitute_en": ""
+    },
+    {
+     "name_th": "ไม้พายไม้",
+     "kham_mueang_th": "",
+     "name_en": "wooden paddle for constant stirring",
+     "substitute_en": ""
+    },
+    {
+     "name_th": "ถาด",
+     "kham_mueang_th": "",
+     "name_en": "tray or baking dish to set",
+     "substitute_en": ""
+    }
+   ],
+   "prep_ahead_en": "Must set overnight (or at least 4-6 h). Make the tamarind/tomato broth in advance.",
+   "steps": [
+    {
+     "n": 1,
+     "th": "ละลายแป้งกับน้ำปูนใสและน้ำ กรอง",
+     "en": "Whisk the flour into limewater and water; strain.",
+     "time_min": 5,
+     "sensory_cue_en": "Thin, lump-free liquid.",
+     "tip_en": ""
+    },
+    {
+     "n": 2,
+     "th": "ตั้งไฟกลาง กวนตลอดจนข้นเหนียวและสุก",
+     "en": "Cook over medium heat, stirring constantly, until thick, glossy and cooked.",
+     "time_min": 20,
+     "sensory_cue_en": "Goes from milky to translucent-glossy; paddle leaves a trail.",
+     "tip_en": "Stop stirring and it scorches on the base."
+    },
+    {
+     "n": 3,
+     "th": "เทใส่ถาด พักค้างคืนให้เซ็ต",
+     "en": "Pour into a tray; leave overnight to set.",
+     "time_min": 480,
+     "sensory_cue_en": "Firm, sliceable jelly.",
+     "tip_en": ""
+    },
+    {
+     "n": 4,
+     "th": "หั่นเป็นเส้น/ชิ้น ใส่ชาม ราดน้ำซุป โรยเครื่อง",
+     "en": "Cut into strips or cubes; add broth and toppings.",
+     "time_min": 5,
+     "sensory_cue_en": "Wobbly cubes glossed with red chilli oil.",
+     "tip_en": ""
+    },
+    {
+     "n": 5,
+     "th": "(แบบอุ่น) ตักแป้งที่กวนร้อน ๆ ใส่ถ้วยทันที โรยถั่ว พริก ซีอิ๊ว ผักชี",
+     "en": "(Warm version) serve the freshly cooked hot mixture straight into bowls with peanuts, chilli oil, soy and coriander.",
+     "time_min": 2,
+     "sensory_cue_en": "Pourable, steaming yellow porridge.",
+     "tip_en": ""
+    }
+   ],
+   "taste_profile": {
+    "sour": 3,
+    "salty": 2,
+    "spicy": 3,
+    "sweet": 2,
+    "bitter": 0,
+    "umami": 3,
+    "rating_note": "editorial estimate",
+    "texture_en": "Cool, soft, wobbly jelly; nutty peanuts; slippery broth.",
+    "description_th": "เปรี้ยว เผ็ด หวาน หอมถั่วและพริกคั่ว",
+    "description_en": "Sour, spicy and sweet with toasted peanut and chilli oil.",
+    "kham_mueang_taste_words": [
+     {
+      "th": "ส้ม",
+      "roman": "som",
+      "en": "sour",
+      "sources": [
+       "https://www.trueplookpanya.com/learning/detail/25566"
+      ]
+     },
+     {
+      "th": "เผ็ด",
+      "roman": "phet",
+      "en": "spicy-hot",
+      "sources": []
+     },
+     {
+      "th": "หวาน",
+      "roman": "wan",
+      "en": "sweet",
+      "sources": []
+     },
+     {
+      "th": "ลำ",
+      "roman": "lam",
+      "en": "delicious",
+      "sources": [
+       "https://www.trueplookpanya.com/learning/detail/25566",
+       "https://www.chiangrai108.com/artsculture/10392/"
+      ]
+     }
+    ]
+   },
+   "how_to_eat": {
+    "th": "คนให้เครื่องปรุงเข้ากัน กินด้วยช้อน",
+    "en": "Stir everything together and eat with a spoon.",
+    "with_what": "Bean sprouts, pickled greens, peanuts, chilli oil, fermented soybean",
+    "when_eaten": "Morning or afternoon snack at Mae Sai / Mae Hong Son markets",
+    "sharing_etiquette_en": "Individual bowls."
+   },
+   "food_safety_en": "Use only food-grade edible lime; use the clear water, never the paste. Keep set jelly refrigerated if not eaten the same day.",
+   "common_mistakes_foreigners_en": [
+    "Not stirring constantly - lumps and burning.",
+    "Eating it expecting a sweet dessert - it's savoury-tangy.",
+    "Using construction lime - never."
+   ],
+   "useful_phrases": [
+    {
+     "kham_mueang_th": "เอา...เจ้า / เอา...ครับ",
+     "roman": "ao ... jao / khrap",
+     "central_th": "เอา...ค่ะ/ครับ",
+     "en": "I'll take ...",
+     "when": "Ordering at a stall; เจ้า is the Northern polite particle (mostly used by women; men usually say ครับ).",
+     "sources": [
+      "https://www.fixconcern.com/order-food-in-northern-languages/"
+     ]
+    },
+    {
+     "kham_mueang_th": "บ่เผ็ดเน้อ",
+     "roman": "bo phet noe",
+     "central_th": "ไม่เผ็ดนะ",
+     "en": "Not spicy, OK?",
+     "when": "Before the vendor adds chilli.",
+     "sources": [
+      "https://www.trueplookpanya.com/learning/detail/25566"
+     ]
+    },
+    {
+     "kham_mueang_th": "อันนี้กี่บาทเจ้า",
+     "roman": "an ni ki bat jao",
+     "central_th": "อันนี้กี่บาทคะ",
+     "en": "How much is this?",
+     "when": "Buying snacks and sweets at the market.",
+     "sources": [
+      "https://northspace.life/%E0%B8%A0%E0%B8%B2%E0%B8%A9%E0%B8%B2%E0%B9%80%E0%B8%AB%E0%B8%99%E0%B8%B7%E0%B8%AD/"
+     ]
+    }
+   ],
+   "cultural_notes_th": "มติชนสุดสัปดาห์ระบุชื่อเรียกอื่น ๆ คือ ข้าวแรมคืน เข้าฟืนโถ่ หรือโถ่ฟู และว่าอาหารนี้มาจากสิบสองปันนา แล้วกลายเป็นของขึ้นชื่ออำเภอแม่สาย",
+   "cultural_notes_en": "Matichon Weekly lists alternative names (khao raem khuen, khao fuen tho, tho fu) and traces the dish to Sipsong Panna (Xishuangbanna) before it became a Mae Sai signature. Krua.co notes a Mae Hong Son friend calls the warm version 'tho phu un' in Tai Yai style ('tho phu' relates to 'tofu', not winged beans).",
+   "sources": [
+    "https://krua.co/food_story/khao-ram-fuen/",
+    "https://www.matichon.co.th/weekly/column/article_196503"
+   ],
+   "confidence": "medium",
+   "needs_expert_review": [
+    "Flour:liquid quantities are a working ratio (sources give method, not grams)",
+    "Pronunciation note about ร->ฮ is unverified for this word"
+   ]
+  },
+  {
+   "id": "khanom_pat",
+   "name_th": "ขนมปาด",
+   "name_kham_mueang_th": "ข้าวหนมปาด / ขนมปาด",
+   "name_roman": "khanom pat",
+   "name_en": "Khanom pat - Lanna palm-sugar, coconut and rice-flour slab",
+   "pronunciation": {
+    "syllables": [
+     {
+      "th": "ขะ",
+      "roman": "kha",
+      "tone": "21",
+      "derived": true
+     },
+     {
+      "th": "หนม",
+      "roman": "nom",
+      "tone": "24",
+      "derived": true
+     },
+     {
+      "th": "ปาด",
+      "roman": "pat",
+      "tone": "21",
+      "derived": true
+     }
+    ],
+    "tip_en": "'Pat' = to spread/smooth flat (the mixture is spread into a slab). Older Northerners say 'khao nom' (ข้าวหนม) for sweets. Tones derived - see meta.tone_method_note; low confidence."
+   },
+   "origin_province": [
+    "ลำปาง Lampang",
+    "พะเยา Phayao",
+    "เชียงใหม่ Chiang Mai",
+    "ทั่วล้านนา across Lanna"
+   ],
+   "season": "Festivals; Songkran, ordinations, housewarmings",
+   "occasion": "Auspicious merit-making (งานบวช ขึ้นบ้านใหม่); a higher-status offering because it is laborious",
+   "serves": "a 20 x 20 cm tray (about 25 pieces)",
+   "description_th": "ขนมกวนของล้านนา ทำจากแป้งข้าวเหนียวผสมแป้งข้าวเจ้าเล็กน้อย กวนกับกะทิ น้ำตาลปี๊บ/น้ำอ้อย และมะพร้าวคั่ว จนเหนียวข้น เทปาดเป็นแผ่นบาง โรยงาขาว ทิ้งให้เย็นแล้วตัดชิ้น นิยมทำในงานมงคล เช่น งานบวช งานขึ้นบ้านใหม่ ต้องใช้แรงกวนมาก จึงเป็นขนมที่ทำร่วมกันในหมู่เครือญาติ",
+   "description_en": "A stirred Lanna sweet: glutinous rice flour with a little rice flour is cooked with coconut milk, palm or cane sugar and toasted grated coconut until thick and sticky, spread ('pat') into a thin slab, sprinkled with white sesame, cooled and cut. Made for auspicious events such as ordinations and housewarmings; it takes a lot of stirring, so relatives make it together.",
+   "ingredients": [
+    {
+     "name_th": "มะพร้าวขูด (ตากแดด 1 วัน แล้วคั่ว)",
+     "name_kham_mueang_th": "",
+     "roman": "maphrao khut",
+     "name_en": "grated coconut, sun-dried a day then toasted",
+     "qty_metric": "700 g",
+     "role": "body/flavour",
+     "where_to_buy_th": "ตลาดต้นลำไย ฝั่งตรงข้ามกาดหลวง / กาดเช้าใกล้บ้าน",
+     "where_to_buy_en": "Ton Lamyai market (across the road from Warorot) or any neighbourhood morning market (kat chao)",
+     "how_to_choose_en": "Freshly grated mature coconut from the market coconut stall",
+     "substitute_abroad_en": "Unsweetened desiccated coconut, toasted",
+     "pronunciation_roman": "maphrao khut"
+    },
+    {
+     "name_th": "น้ำตาลปี๊บ / น้ำอ้อย",
+     "name_kham_mueang_th": "น้ำอ้อย",
+     "roman": "namtan pip / nam oi",
+     "name_en": "palm sugar or Northern cane sugar blocks (nam oi)",
+     "qty_metric": "800-900 g",
+     "role": "sweetness/colour",
+     "where_to_buy_th": "กาดหลวง (ตลาดวโรรส) ร้านของแห้ง/พริกแกง",
+     "where_to_buy_en": "Warorot (Kad Luang) dried-goods and curry-paste stalls, ground floor and the lanes around it",
+     "how_to_choose_en": "",
+     "substitute_abroad_en": "Jaggery or panela",
+     "pronunciation_roman": "namtan pip / nam oi"
+    },
+    {
+     "name_th": "หัวกะทิ",
+     "name_kham_mueang_th": "",
+     "roman": "hua kathi",
+     "name_en": "coconut cream",
+     "qty_metric": "100 ml + extra to stop sticking",
+     "role": "richness",
+     "where_to_buy_th": "ตลาดต้นลำไย ฝั่งตรงข้ามกาดหลวง / กาดเช้าใกล้บ้าน",
+     "where_to_buy_en": "Ton Lamyai market (across the road from Warorot) or any neighbourhood morning market (kat chao)",
+     "how_to_choose_en": "",
+     "substitute_abroad_en": "",
+     "pronunciation_roman": "hua kathi"
+    },
+    {
+     "name_th": "แป้งข้าวเหนียว",
+     "name_kham_mueang_th": "",
+     "roman": "paeng khao niao",
+     "name_en": "glutinous rice flour",
+     "qty_metric": "550 g",
+     "role": "binding/chew",
+     "where_to_buy_th": "ซูเปอร์มาร์เก็ต/ร้านสะดวกซื้อ หรือร้านโชห่วยในกาด",
+     "where_to_buy_en": "Supermarket (Rimping, Tops, Big C, Makro) or the grocery stall in any market",
+     "how_to_choose_en": "",
+     "substitute_abroad_en": "",
+     "pronunciation_roman": "paeng khao niao"
+    },
+    {
+     "name_th": "แป้งข้าวเจ้า",
+     "name_kham_mueang_th": "",
+     "roman": "paeng khao jao",
+     "name_en": "rice flour",
+     "qty_metric": "50 g",
+     "role": "structure",
+     "where_to_buy_th": "ซูเปอร์มาร์เก็ต/ร้านสะดวกซื้อ หรือร้านโชห่วยในกาด",
+     "where_to_buy_en": "Supermarket (Rimping, Tops, Big C, Makro) or the grocery stall in any market",
+     "how_to_choose_en": "",
+     "substitute_abroad_en": "",
+     "pronunciation_roman": "paeng khao jao"
+    },
+    {
+     "name_th": "งาขาว",
+     "name_kham_mueang_th": "",
+     "roman": "nga khao",
+     "name_en": "white sesame",
+     "qty_metric": "2 tbsp, toasted",
+     "role": "topping",
+     "where_to_buy_th": "กาดหลวง (ตลาดวโรรส) ร้านของแห้ง/พริกแกง",
+     "where_to_buy_en": "Warorot (Kad Luang) dried-goods and curry-paste stalls, ground floor and the lanes around it",
+     "how_to_choose_en": "",
+     "substitute_abroad_en": "",
+     "pronunciation_roman": "nga khao"
+    }
+   ],
+   "equipment": [
+    {
+     "name_th": "กระทะทองเหลือง/กระทะใหญ่",
+     "kham_mueang_th": "",
+     "name_en": "brass pan or large heavy wok",
+     "substitute_en": ""
+    },
+    {
+     "name_th": "ไม้พายไม้",
+     "kham_mueang_th": "",
+     "name_en": "long wooden paddle",
+     "substitute_en": ""
+    },
+    {
+     "name_th": "ถาด",
+     "kham_mueang_th": "",
+     "name_en": "tray lined with banana leaf",
+     "substitute_en": "Baking paper"
+    }
+   ],
+   "prep_ahead_en": "Toast coconut. Steam the flours until cooked (Lampang method) or mix to a batter.",
+   "steps": [
+    {
+     "n": 1,
+     "th": "นึ่งแป้งข้าวเหนียวกับแป้งข้าวเจ้าจนสุก",
+     "en": "Steam the two flours (spread thin on a cloth) until cooked.",
+     "time_min": 20,
+     "sensory_cue_en": "Flour clumps and turns slightly translucent.",
+     "tip_en": ""
+    },
+    {
+     "n": 2,
+     "th": "เคี่ยวกะทิให้มัน ใส่น้ำตาลปี๊บ และมะพร้าวคั่ว",
+     "en": "Reduce coconut cream until oily, add palm sugar and toasted coconut.",
+     "time_min": 15,
+     "sensory_cue_en": "Dark caramel colour, smells of toffee and coconut.",
+     "tip_en": ""
+    },
+    {
+     "n": 3,
+     "th": "ใส่แป้งที่นึ่งแล้ว กวนไปเรื่อย ๆ เติมกะทิทีละน้อยกันติด",
+     "en": "Add the steamed flour and stir continuously, adding splashes of coconut cream so it doesn't stick.",
+     "time_min": 40,
+     "sensory_cue_en": "Mass becomes glossy, pulls away from the pan in one lump.",
+     "tip_en": "This is a two-person job - swap stirrers."
+    },
+    {
+     "n": 4,
+     "th": "เทปาดลงถาดให้เป็นแผ่นบาง โรยงา พักให้เย็นสนิท",
+     "en": "Spread into the tray in a thin even layer, scatter sesame, cool completely.",
+     "time_min": 60,
+     "sensory_cue_en": "Firm but tender slab.",
+     "tip_en": ""
+    },
+    {
+     "n": 5,
+     "th": "ตัดเป็นชิ้นสี่เหลี่ยม",
+     "en": "Cut into squares or diamonds.",
+     "time_min": 5,
+     "sensory_cue_en": "Clean cuts with an oiled knife.",
+     "tip_en": ""
+    }
+   ],
+   "taste_profile": {
+    "sour": 0,
+    "salty": 1,
+    "spicy": 0,
+    "sweet": 4,
+    "bitter": 0,
+    "umami": 0,
+    "rating_note": "editorial estimate",
+    "texture_en": "Dense, soft-chewy, with toasted coconut bits.",
+    "description_th": "หวานมัน หอมมะพร้าวคั่วและน้ำตาลปี๊บ",
+    "description_en": "Sweet and rich, toasty coconut and caramel.",
+    "kham_mueang_taste_words": [
+     {
+      "th": "หวาน",
+      "roman": "wan",
+      "en": "sweet",
+      "sources": []
+     },
+     {
+      "th": "ลำ",
+      "roman": "lam",
+      "en": "delicious",
+      "sources": [
+       "https://www.trueplookpanya.com/learning/detail/25566",
+       "https://www.chiangrai108.com/artsculture/10392/"
+      ]
+     },
+     {
+      "th": "ลำขนาด",
+      "roman": "lam khanat",
+      "en": "super tasty",
+      "sources": [
+       "https://cookpad.com/th/recipes/16454331"
+      ]
+     }
+    ]
+   },
+   "how_to_eat": {
+    "th": "กินเป็นของว่างกับน้ำชา หรือถวายพระในงานบุญ",
+    "en": "Eat as a snack with tea; offered to monks at merit-making.",
+    "with_what": "Hot tea or plain water",
+    "when_eaten": "Festivals, ceremonies",
+    "sharing_etiquette_en": "Offered on trays; take one piece at a time. Offerings to monks come before guests eat."
+   },
+   "food_safety_en": "Molten sugar mixture burns badly - long sleeves, long paddle. Keeps about 2 weeks unrefrigerated per the community recipe (glutinous flour helps).",
+   "common_mistakes_foreigners_en": [
+    "Stopping stirring - scorches in seconds.",
+    "Cutting while warm - it smears."
+   ],
+   "useful_phrases": [
+    {
+     "kham_mueang_th": "อันนี้กี่บาทเจ้า",
+     "roman": "an ni ki bat jao",
+     "central_th": "อันนี้กี่บาทคะ",
+     "en": "How much is this?",
+     "when": "Buying snacks and sweets at the market.",
+     "sources": [
+      "https://northspace.life/%E0%B8%A0%E0%B8%B2%E0%B8%A9%E0%B8%B2%E0%B9%80%E0%B8%AB%E0%B8%99%E0%B8%B7%E0%B8%AD/"
+     ]
+    },
+    {
+     "kham_mueang_th": "ลำขนาดเจ้า",
+     "roman": "lam khanat jao",
+     "central_th": "อร่อยมากค่ะ",
+     "en": "It's really delicious!",
+     "when": "Complimenting the cook - always welcome.",
+     "sources": [
+      "https://cookpad.com/th/recipes/16454331"
+     ]
+    }
+   ],
+   "cultural_notes_th": "สูตรของศูนย์การเรียนรู้ชุมชน (ศกร.) ตำบลวังผาง ใช้มะพร้าวตากแดดแล้วคั่ว แป้งข้าวเหนียวช่วยให้เก็บได้นานราว 2 สัปดาห์ ขนมล้านนา 'รสชาติที่แท้จริงคือความร่วมไม้ร่วมมือของเครือญาติ' (เชียงใหม่นิวส์)",
+   "cultural_notes_en": "A community learning-centre recipe (NFE Wang Phang subdistrict) sun-dries and toasts the coconut; glutinous flour lets it keep ~2 weeks. Chiang Mai News writes that the real taste of Lanna sweets is 'the cooperation of relatives' who make them together.",
+   "sources": [
+    "https://sites.google.com/dei.ac.th/nfe-wangpang/%E0%B8%AD%E0%B8%B2%E0%B8%8A%E0%B8%9E/%E0%B8%82%E0%B8%99%E0%B8%A1%E0%B8%9B%E0%B8%B2%E0%B8%94%E0%B9%82%E0%B8%9A%E0%B8%A3%E0%B8%B2%E0%B8%93",
+    "https://www.lannapost.net/2021/09/blog-post_15.html",
+    "https://www.chiangmainews.co.th/page/archives/587453/"
+   ],
+   "confidence": "medium",
+   "needs_expert_review": [
+    "Quantities scaled 1/10 from a commercial Lampang community recipe",
+    "Province of the Wang Phang recipe: page summary said Lampang, but Wang Phang subdistrict is in Lamphun (Wiang Nong Long) - verify"
+   ]
+  },
+  {
+   "id": "khanom_jok",
+   "name_th": "ขนมเทียน",
+   "name_kham_mueang_th": "ขนมจ๊อก / ข้าวหนมจ็อก (บางถิ่นเรียกขนมนมสาว)",
+   "name_roman": "khanom jok",
+   "name_en": "Khanom jok - pyramid banana-leaf parcels of sticky dough with coconut filling",
+   "pronunciation": {
+    "syllables": [
+     {
+      "th": "ขะ",
+      "roman": "kha",
+      "tone": "21",
+      "derived": true
+     },
+     {
+      "th": "หนม",
+      "roman": "nom",
+      "tone": "24",
+      "derived": true
+     },
+     {
+      "th": "จ๊อก",
+      "roman": "jok",
+      "tone": "45",
+      "derived": true
+     }
+    ],
+    "tip_en": "Written both จ๊อก and จ็อก; 'jok' refers to a pointed, gathered shape. Tones derived - see meta.tone_method_note; low confidence."
+   },
+   "origin_province": [
+    "ทั่วล้านนา across Lanna"
+   ],
+   "season": "Songkran (Pi Mai Mueang, mid-April) and merit-making",
+   "occasion": "Songkran offerings, temple merit-making",
+   "serves": "about 25 parcels",
+   "description_th": "ขนมที่คนภาคกลางเรียกขนมเทียน ทางเหนือเรียกขนมจ๊อก ทำจากแป้งข้าวเหนียวนวดกับน้ำ (บางสูตรผสมน้ำตาล/น้ำอ้อย) ห่อไส้มะพร้าวขูดผัดน้ำอ้อย บางครั้งใส่ถั่วหรืองา ห่อใบตองเป็นทรงกรวยแหลม แล้วนึ่งจนสุก นิยมทำในเทศกาลสงกรานต์และงานบุญมาแต่โบราณ",
+   "description_en": "Known in Central Thai as khanom thian; in the North it is khanom jok. Glutinous rice flour kneaded with water (sometimes with sugar), wrapped around a filling of grated coconut cooked with cane sugar (sometimes peanut or sesame), folded into a pointed banana-leaf pyramid and steamed. Traditional for Songkran and merit-making.",
+   "ingredients": [
+    {
+     "name_th": "แป้งข้าวเหนียว",
+     "name_kham_mueang_th": "",
+     "roman": "paeng khao niao",
+     "name_en": "glutinous rice flour",
+     "qty_metric": "500 g",
+     "role": "dough",
+     "where_to_buy_th": "ซูเปอร์มาร์เก็ต/ร้านสะดวกซื้อ หรือร้านโชห่วยในกาด",
+     "where_to_buy_en": "Supermarket (Rimping, Tops, Big C, Makro) or the grocery stall in any market",
+     "how_to_choose_en": "",
+     "substitute_abroad_en": "",
+     "pronunciation_roman": "paeng khao niao"
+    },
+    {
+     "name_th": "น้ำตาลมะพร้าว / น้ำอ้อย",
+     "name_kham_mueang_th": "น้ำอ้อย",
+     "roman": "namtan",
+     "name_en": "coconut or cane sugar (dough)",
+     "qty_metric": "optional, up to 350 g for a sweet dough",
+     "role": "sweetness",
+     "where_to_buy_th": "กาดหลวง (ตลาดวโรรส) ร้านของแห้ง/พริกแกง",
+     "where_to_buy_en": "Warorot (Kad Luang) dried-goods and curry-paste stalls, ground floor and the lanes around it",
+     "how_to_choose_en": "",
+     "substitute_abroad_en": "",
+     "pronunciation_roman": "namtan"
+    },
+    {
+     "name_th": "น้ำ",
+     "name_kham_mueang_th": "",
+     "roman": "nam",
+     "name_en": "water",
+     "qty_metric": "300-400 ml",
+     "role": "dough",
+     "where_to_buy_th": "ตลาดต้นลำไย ฝั่งตรงข้ามกาดหลวง / กาดเช้าใกล้บ้าน",
+     "where_to_buy_en": "Ton Lamyai market (across the road from Warorot) or any neighbourhood morning market (kat chao)",
+     "how_to_choose_en": "",
+     "substitute_abroad_en": "",
+     "pronunciation_roman": "nam"
+    },
+    {
+     "name_th": "มะพร้าวขูด",
+     "name_kham_mueang_th": "",
+     "roman": "maphrao khut",
+     "name_en": "grated coconut",
+     "qty_metric": "300 g",
+     "role": "filling",
+     "where_to_buy_th": "ตลาดต้นลำไย ฝั่งตรงข้ามกาดหลวง / กาดเช้าใกล้บ้าน",
+     "where_to_buy_en": "Ton Lamyai market (across the road from Warorot) or any neighbourhood morning market (kat chao)",
+     "how_to_choose_en": "",
+     "substitute_abroad_en": "",
+     "pronunciation_roman": "maphrao khut"
+    },
+    {
+     "name_th": "น้ำอ้อย / น้ำตาลปี๊บ",
+     "name_kham_mueang_th": "น้ำอ้อย",
+     "roman": "nam oi",
+     "name_en": "cane sugar blocks or palm sugar (filling)",
+     "qty_metric": "150 g",
+     "role": "filling",
+     "where_to_buy_th": "กาดหลวง (ตลาดวโรรส) ร้านของแห้ง/พริกแกง",
+     "where_to_buy_en": "Warorot (Kad Luang) dried-goods and curry-paste stalls, ground floor and the lanes around it",
+     "how_to_choose_en": "",
+     "substitute_abroad_en": "",
+     "pronunciation_roman": "nam oi"
+    },
+    {
+     "name_th": "เกลือ",
+     "name_kham_mueang_th": "",
+     "roman": "kluea",
+     "name_en": "salt",
+     "qty_metric": "pinch",
+     "role": "balance",
+     "where_to_buy_th": "ซูเปอร์มาร์เก็ต/ร้านสะดวกซื้อ หรือร้านโชห่วยในกาด",
+     "where_to_buy_en": "Supermarket (Rimping, Tops, Big C, Makro) or the grocery stall in any market",
+     "how_to_choose_en": "",
+     "substitute_abroad_en": "",
+     "pronunciation_roman": "kluea"
+    },
+    {
+     "name_th": "ใบตอง",
+     "name_kham_mueang_th": "ใบตอง",
+     "roman": "bai tong",
+     "name_en": "banana leaves, wiped and softened",
+     "qty_metric": "about 25 pieces 15x20 cm",
+     "role": "wrapper",
+     "where_to_buy_th": "ตลาดต้นลำไย ฝั่งตรงข้ามกาดหลวง / กาดเช้าใกล้บ้าน",
+     "where_to_buy_en": "Ton Lamyai market (across the road from Warorot) or any neighbourhood morning market (kat chao)",
+     "how_to_choose_en": "Unbroken, supple leaves; pass over a flame to soften",
+     "substitute_abroad_en": "Frozen banana leaves from Asian shops",
+     "pronunciation_roman": "bai tong"
+    },
+    {
+     "name_th": "น้ำมันพืช",
+     "name_kham_mueang_th": "",
+     "roman": "nam man",
+     "name_en": "oil",
+     "qty_metric": "for greasing leaves",
+     "role": "anti-stick",
+     "where_to_buy_th": "ซูเปอร์มาร์เก็ต/ร้านสะดวกซื้อ หรือร้านโชห่วยในกาด",
+     "where_to_buy_en": "Supermarket (Rimping, Tops, Big C, Makro) or the grocery stall in any market",
+     "how_to_choose_en": "",
+     "substitute_abroad_en": "",
+     "pronunciation_roman": "nam man"
+    }
+   ],
+   "equipment": [
+    {
+     "name_th": "ลังถึง/หม้อนึ่ง",
+     "kham_mueang_th": "",
+     "name_en": "steamer",
+     "substitute_en": ""
+    },
+    {
+     "name_th": "กรรไกร",
+     "kham_mueang_th": "",
+     "name_en": "scissors to trim leaves",
+     "substitute_en": ""
+    }
+   ],
+   "prep_ahead_en": "Cook the filling and let it cool. Rest the dough (aroimak suggests at least 4 hours).",
+   "steps": [
+    {
+     "n": 1,
+     "th": "ผัดมะพร้าวกับน้ำอ้อยและเกลือจนเหนียว พักให้เย็น ปั้นเป็นก้อน",
+     "en": "Cook coconut with cane sugar and salt until sticky; cool and roll into small balls.",
+     "time_min": 20,
+     "sensory_cue_en": "Glossy brown, holds a shape.",
+     "tip_en": ""
+    },
+    {
+     "n": 2,
+     "th": "นวดแป้งกับน้ำ (และน้ำตาล) จนนุ่มปั้นได้",
+     "en": "Knead flour with water (and sugar) to a soft, mouldable dough; rest.",
+     "time_min": 10,
+     "sensory_cue_en": "Like soft playdough, not sticky.",
+     "tip_en": ""
+    },
+    {
+     "n": 3,
+     "th": "ห่อไส้ด้วยแป้ง",
+     "en": "Wrap each filling ball in a piece of dough.",
+     "time_min": 15,
+     "sensory_cue_en": "Smooth balls, no cracks.",
+     "tip_en": ""
+    },
+    {
+     "n": 4,
+     "th": "ทาน้ำมันใบตอง ม้วนเป็นกรวย ใส่ขนม พับปิดเป็นทรงจ๊อกแหลม",
+     "en": "Oil the leaf, roll into a cone, drop in the ball, fold the flap over to make a pointed pyramid.",
+     "time_min": 20,
+     "sensory_cue_en": "Tight parcel with a sharp tip.",
+     "tip_en": ""
+    },
+    {
+     "n": 5,
+     "th": "นึ่งไฟแรงจนสุก",
+     "en": "Steam over rolling boil until cooked.",
+     "time_min": 40,
+     "sensory_cue_en": "Dough turns translucent through the leaf; parcels feel soft.",
+     "tip_en": ""
+    }
+   ],
+   "taste_profile": {
+    "sour": 0,
+    "salty": 1,
+    "spicy": 0,
+    "sweet": 4,
+    "bitter": 0,
+    "umami": 0,
+    "rating_note": "editorial estimate",
+    "texture_en": "Soft, stretchy, chewy dough with a moist coconut centre; banana-leaf aroma.",
+    "description_th": "หวาน หอมใบตองและมะพร้าว แป้งเหนียวนุ่ม",
+    "description_en": "Sweet, fragrant with banana leaf and coconut.",
+    "kham_mueang_taste_words": [
+     {
+      "th": "หวาน",
+      "roman": "wan",
+      "en": "sweet",
+      "sources": []
+     },
+     {
+      "th": "ลำ",
+      "roman": "lam",
+      "en": "delicious",
+      "sources": [
+       "https://www.trueplookpanya.com/learning/detail/25566",
+       "https://www.chiangrai108.com/artsculture/10392/"
+      ]
+     },
+     {
+      "th": "ลำขนาด",
+      "roman": "lam khanat",
+      "en": "super tasty",
+      "sources": [
+       "https://cookpad.com/th/recipes/16454331"
+      ]
+     }
+    ]
+   },
+   "how_to_eat": {
+    "th": "แกะใบตองแล้วกินได้เลย",
+    "en": "Unwrap and eat; don't eat the leaf.",
+    "with_what": "Tea",
+    "when_eaten": "Songkran week, temple days",
+    "sharing_etiquette_en": "Many households make trays to offer at the temple and share with neighbours; accept one when offered."
+   },
+   "food_safety_en": "Glutinous dough is very sticky - small bites for children and the elderly (choking risk).",
+   "common_mistakes_foreigners_en": [
+    "Wet filling - it leaks.",
+    "Loose folding - the parcel opens in the steamer."
+   ],
+   "useful_phrases": [
+    {
+     "kham_mueang_th": "อันนี้กี่บาทเจ้า",
+     "roman": "an ni ki bat jao",
+     "central_th": "อันนี้กี่บาทคะ",
+     "en": "How much is this?",
+     "when": "Buying snacks and sweets at the market.",
+     "sources": [
+      "https://northspace.life/%E0%B8%A0%E0%B8%B2%E0%B8%A9%E0%B8%B2%E0%B9%80%E0%B8%AB%E0%B8%99%E0%B8%B7%E0%B8%AD/"
+     ]
+    },
+    {
+     "kham_mueang_th": "ลำขนาดเจ้า",
+     "roman": "lam khanat jao",
+     "central_th": "อร่อยมากค่ะ",
+     "en": "It's really delicious!",
+     "when": "Complimenting the cook - always welcome.",
+     "sources": [
+      "https://cookpad.com/th/recipes/16454331"
+     ]
+    }
+   ],
+   "cultural_notes_th": "ล้านนาโพสต์ระบุว่านิยมทำในช่วงสงกรานต์มาแต่โบราณ และในงานบุญต่าง ๆ เชียงใหม่นิวส์ให้ความหมายของ 'จ็อก' ว่าการปั้นเป็นรูปแหลมรวบยอด",
+   "cultural_notes_en": "Lanna Post: made since old times for Songkran and merit-making. Chiang Mai News glosses 'jok' as shaping into a gathered, pointed form.",
+   "sources": [
+    "https://www.lannapost.net/2021/09/blog-post_15.html",
+    "https://www.chiangmainews.co.th/page/archives/587453/",
+    "https://www.aroimak.co/khanom-thian/"
+   ],
+   "confidence": "medium"
+  },
+  {
+   "id": "khao_taen_lampang",
+   "name_th": "ข้าวแต๋น (ข้าวแต๋นน้ำแตงโม)",
+   "name_kham_mueang_th": "เข้าแต๋น",
+   "name_roman": "khao taen",
+   "name_en": "Khao taen - Lampang crispy sticky-rice crackers with watermelon juice and cane-sugar drizzle",
+   "pronunciation": {
+    "syllables": [
+     {
+      "th": "เข้า",
+      "roman": "khao",
+      "tone": "44ʔ",
+      "derived": true
+     },
+     {
+      "th": "แต๋น",
+      "roman": "taen",
+      "tone": "24",
+      "derived": true
+     }
+    ],
+    "tip_en": "The ๋ on แต๋น signals the Northern rising tone. Tones derived - see meta.tone_method_note; low confidence."
+   },
+   "origin_province": [
+    "ลำปาง Lampang (GI registered 17 June 2013)"
+   ],
+   "season": "Hot, dry season is best for sun-drying; sold all year",
+   "occasion": "Once for housewarmings, weddings, Songkran; now a souvenir",
+   "serves": "about 30 crackers",
+   "description_th": "ข้าวเหนียวนึ่งผสมน้ำแตงโมและงาดำ อัดเป็นแผ่นกลม ตากแดด 2 วัน แล้วทอดจนพองกรอบ ราดน้ำอ้อยเคี่ยว ข้าวแต๋นลำปางได้ขึ้นทะเบียนสิ่งบ่งชี้ทางภูมิศาสตร์ (GI) อากาศร้อนแห้งของลำปางช่วยให้ตากแห้งดีและพองตัวสม่ำเสมอ",
+   "description_en": "Steamed sticky rice mixed with watermelon juice and black sesame, pressed into discs, sun-dried two days, deep-fried until puffed and crisp, then drizzled with boiled cane sugar (nam oi). Lampang's version is a registered Geographical Indication; the province's hot, dry climate helps drying and even puffing.",
+   "ingredients": [
+    {
+     "name_th": "ข้าวเหนียว (กข6 หรือข้าวก่ำ)",
+     "name_kham_mueang_th": "เข้าเหนียว / เข้านึ่ง",
+     "roman": "khao niao",
+     "name_en": "glutinous rice (RD6 white, or black 'khao kam')",
+     "qty_metric": "1 kg",
+     "role": "base",
+     "where_to_buy_th": "ตลาดต้นลำไย ฝั่งตรงข้ามกาดหลวง / กาดเช้าใกล้บ้าน",
+     "where_to_buy_en": "Ton Lamyai market (across the road from Warorot) or any neighbourhood morning market (kat chao)",
+     "how_to_choose_en": "Long-grain Northern sticky rice; big grains puff best",
+     "substitute_abroad_en": "Thai sweet rice from Asian grocers",
+     "pronunciation_roman": "khao niao"
+    },
+    {
+     "name_th": "น้ำแตงโม (คั้น กรอง)",
+     "name_kham_mueang_th": "",
+     "roman": "nam taeng mo",
+     "name_en": "watermelon juice, strained",
+     "qty_metric": "300 ml",
+     "role": "sweetness/aroma",
+     "where_to_buy_th": "ตลาดต้นลำไย ฝั่งตรงข้ามกาดหลวง / กาดเช้าใกล้บ้าน",
+     "where_to_buy_en": "Ton Lamyai market (across the road from Warorot) or any neighbourhood morning market (kat chao)",
+     "how_to_choose_en": "",
+     "substitute_abroad_en": "",
+     "pronunciation_roman": "nam taeng mo"
+    },
+    {
+     "name_th": "งาดำ",
+     "name_kham_mueang_th": "",
+     "roman": "nga dam",
+     "name_en": "black sesame",
+     "qty_metric": "2 tbsp",
+     "role": "flavour",
+     "where_to_buy_th": "กาดหลวง (ตลาดวโรรส) ร้านของแห้ง/พริกแกง",
+     "where_to_buy_en": "Warorot (Kad Luang) dried-goods and curry-paste stalls, ground floor and the lanes around it",
+     "how_to_choose_en": "",
+     "substitute_abroad_en": "",
+     "pronunciation_roman": "nga dam"
+    },
+    {
+     "name_th": "เกลือ",
+     "name_kham_mueang_th": "",
+     "roman": "kluea",
+     "name_en": "salt",
+     "qty_metric": "1 tsp",
+     "role": "balance",
+     "where_to_buy_th": "ซูเปอร์มาร์เก็ต/ร้านสะดวกซื้อ หรือร้านโชห่วยในกาด",
+     "where_to_buy_en": "Supermarket (Rimping, Tops, Big C, Makro) or the grocery stall in any market",
+     "how_to_choose_en": "",
+     "substitute_abroad_en": "",
+     "pronunciation_roman": "kluea"
+    },
+    {
+     "name_th": "น้ำอ้อย (น้ำตาลอ้อยก้อน)",
+     "name_kham_mueang_th": "น้ำอ้อย",
+     "roman": "nam oi",
+     "name_en": "Northern cane sugar blocks",
+     "qty_metric": "300 g + 100 ml water",
+     "role": "drizzle",
+     "where_to_buy_th": "กาดหลวง (ตลาดวโรรส) ร้านของแห้ง/พริกแกง",
+     "where_to_buy_en": "Warorot (Kad Luang) dried-goods and curry-paste stalls, ground floor and the lanes around it",
+     "how_to_choose_en": "",
+     "substitute_abroad_en": "Jaggery or light muscovado",
+     "pronunciation_roman": "nam oi"
+    },
+    {
+     "name_th": "น้ำมันปาล์ม",
+     "name_kham_mueang_th": "",
+     "roman": "nam man pam",
+     "name_en": "palm oil for deep frying",
+     "qty_metric": "1 litre",
+     "role": "frying",
+     "where_to_buy_th": "ซูเปอร์มาร์เก็ต/ร้านสะดวกซื้อ หรือร้านโชห่วยในกาด",
+     "where_to_buy_en": "Supermarket (Rimping, Tops, Big C, Makro) or the grocery stall in any market",
+     "how_to_choose_en": "",
+     "substitute_abroad_en": "",
+     "pronunciation_roman": "nam man pam"
+    }
+   ],
+   "equipment": [
+    {
+     "name_th": "หวด/ลังถึง",
+     "kham_mueang_th": "",
+     "name_en": "sticky-rice steamer",
+     "substitute_en": "Muslin-lined steamer"
+    },
+    {
+     "name_th": "พิมพ์วงกลม",
+     "kham_mueang_th": "",
+     "name_en": "round mould 6-8 cm",
+     "substitute_en": "Cookie cutter"
+    },
+    {
+     "name_th": "แผงไม้ไผ่/ตะแกรง",
+     "kham_mueang_th": "",
+     "name_en": "bamboo racks or mesh for sun-drying",
+     "substitute_en": "Low oven 60-70 C"
+    },
+    {
+     "name_th": "กระทะ",
+     "kham_mueang_th": "",
+     "name_en": "wok",
+     "substitute_en": ""
+    }
+   ],
+   "prep_ahead_en": "Soak rice overnight. Need two hot sunny days for drying.",
+   "steps": [
+    {
+     "n": 1,
+     "th": "คั้นน้ำแตงโม กรอง ผสมงาดำ เกลือ",
+     "en": "Juice and strain watermelon; add sesame and salt.",
+     "time_min": 10,
+     "sensory_cue_en": "Pink, lightly sweet liquid.",
+     "tip_en": ""
+    },
+    {
+     "n": 2,
+     "th": "นึ่งข้าวเหนียวที่แช่ไว้จนสุก",
+     "en": "Steam the soaked rice until cooked.",
+     "time_min": 30,
+     "sensory_cue_en": "Grains translucent, chewy.",
+     "tip_en": ""
+    },
+    {
+     "n": 3,
+     "th": "คลุกข้าวร้อน ๆ กับน้ำแตงโม ปิดให้ข้าวดูดซึม",
+     "en": "Mix the hot rice with the watermelon mixture and cover to absorb.",
+     "time_min": 10,
+     "sensory_cue_en": "Rice glossy, lightly pink.",
+     "tip_en": ""
+    },
+    {
+     "n": 4,
+     "th": "อัดพิมพ์เป็นแผ่นกลมบาง ตากแดด 2 วัน",
+     "en": "Press into thin discs; sun-dry 2 days.",
+     "time_min": 2880,
+     "sensory_cue_en": "Bone-dry, hard, opaque discs.",
+     "tip_en": "Any moisture left = hard, not puffy, crackers."
+    },
+    {
+     "n": 5,
+     "th": "ทอดในน้ำมันร้อนจนพองกรอบ",
+     "en": "Deep-fry in hot oil until puffed.",
+     "time_min": 1,
+     "sensory_cue_en": "Puffs within seconds, turns creamy white.",
+     "tip_en": "Oil must be hot (~180 C); fry one at a time."
+    },
+    {
+     "n": 6,
+     "th": "เคี่ยวน้ำอ้อยจนเหนียว ราดเป็นเส้นบนข้าวแต๋น",
+     "en": "Boil cane sugar with water to a thick syrup and drizzle in lines over the crackers.",
+     "time_min": 10,
+     "sensory_cue_en": "Syrup threads and sets shiny.",
+     "tip_en": ""
+    }
+   ],
+   "taste_profile": {
+    "sour": 0,
+    "salty": 1,
+    "spicy": 0,
+    "sweet": 4,
+    "bitter": 0,
+    "umami": 0,
+    "rating_note": "editorial estimate",
+    "texture_en": "Light, airy crunch that shatters; brittle caramel lines.",
+    "description_th": "หอม กรอบ หวานอร่อย (ตามคำอธิบาย GI)",
+    "description_en": "'Fragrant, crisp, sweet' - the GI description.",
+    "kham_mueang_taste_words": [
+     {
+      "th": "หวาน",
+      "roman": "wan",
+      "en": "sweet",
+      "sources": []
+     },
+     {
+      "th": "ลำ",
+      "roman": "lam",
+      "en": "delicious",
+      "sources": [
+       "https://www.trueplookpanya.com/learning/detail/25566",
+       "https://www.chiangrai108.com/artsculture/10392/"
+      ]
+     },
+     {
+      "th": "ลำขนาด",
+      "roman": "lam khanat",
+      "en": "super tasty",
+      "sources": [
+       "https://cookpad.com/th/recipes/16454331"
+      ]
+     }
+    ]
+   },
+   "how_to_eat": {
+    "th": "กินเป็นของว่างหรือของฝาก",
+    "en": "Snack with tea; classic Lampang souvenir.",
+    "with_what": "Tea",
+    "when_eaten": "Any time",
+    "sharing_etiquette_en": "Bring a bag as a gift (ของฝาก) when visiting."
+   },
+   "food_safety_en": "Deep-frying hazard. Store airtight; they go stale in humid air.",
+   "common_mistakes_foreigners_en": [
+    "Frying before fully dry.",
+    "Oil not hot enough - greasy, flat crackers."
+   ],
+   "useful_phrases": [
+    {
+     "kham_mueang_th": "อันนี้กี่บาทเจ้า",
+     "roman": "an ni ki bat jao",
+     "central_th": "อันนี้กี่บาทคะ",
+     "en": "How much is this?",
+     "when": "Buying snacks and sweets at the market.",
+     "sources": [
+      "https://northspace.life/%E0%B8%A0%E0%B8%B2%E0%B8%A9%E0%B8%B2%E0%B9%80%E0%B8%AB%E0%B8%99%E0%B8%B7%E0%B8%AD/"
+     ]
+    }
+   ],
+   "cultural_notes_th": "กรมทรัพย์สินทางปัญญาขึ้นทะเบียน GI 'ข้าวแต๋นลำปาง' เมื่อ 17 มิ.ย. 2556 เดิมเป็นขนมในงานขึ้นบ้านใหม่ งานแต่ง สงกรานต์",
+   "cultural_notes_en": "GI registered 17 June 2013; originally a ceremonial sweet for housewarmings, weddings and Songkran.",
+   "sources": [
+    "https://www.agrinewsthai.com/did-you-know/161361",
+    "https://www.matichon.co.th/weekly/column/article_710513"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "khao_tom_hua_ngok",
+   "name_th": "ข้าวต้มหัวหงอก",
+   "name_kham_mueang_th": "เข้าต้มหัวหงอก",
+   "name_roman": "khao tom hua ngok",
+   "name_en": "Khao tom hua ngok - 'grey-haired' sticky rice rolls coated in grated coconut",
+   "pronunciation": {
+    "syllables": [
+     {
+      "th": "เข้า",
+      "roman": "khao",
+      "tone": "44ʔ",
+      "derived": true
+     },
+     {
+      "th": "ต้ม",
+      "roman": "tom",
+      "tone": "44ʔ",
+      "derived": true
+     },
+     {
+      "th": "หัว",
+      "roman": "hua",
+      "tone": "24",
+      "derived": true
+     },
+     {
+      "th": "หงอก",
+      "roman": "ngok",
+      "tone": "21",
+      "derived": true
+     }
+    ],
+    "tip_en": "'Hua ngok' = grey-haired head - the white coconut coating. Tones derived - see meta.tone_method_note; low confidence."
+   },
+   "origin_province": [
+    "ล้านนา Lanna (described as an ancient Lanna sweet)"
+   ],
+   "season": "All year",
+   "occasion": "Snack; temple offerings",
+   "serves": "about 10 pieces",
+   "description_th": "ข้าวเหนียวห่อใบตอง (บางสูตรใส่กล้วยน้ำว้าไส้กลาง) ต้มจนสุก แกะแล้วคลุกมะพร้าวขูดผสมน้ำตาลและเกลือ จนขาวเหมือนผมหงอก",
+   "description_en": "Sticky rice wrapped in banana leaf (some recipes put banana in the middle), boiled until cooked, then unwrapped and rolled in grated coconut mixed with sugar and salt - white like grey hair.",
+   "ingredients": [
+    {
+     "name_th": "ข้าวเหนียวแช่",
+     "name_kham_mueang_th": "เข้าเหนียว",
+     "roman": "khao niao",
+     "name_en": "glutinous rice, soaked",
+     "qty_metric": "300 g",
+     "role": "base",
+     "where_to_buy_th": "ตลาดต้นลำไย ฝั่งตรงข้ามกาดหลวง / กาดเช้าใกล้บ้าน",
+     "where_to_buy_en": "Ton Lamyai market (across the road from Warorot) or any neighbourhood morning market (kat chao)",
+     "how_to_choose_en": "",
+     "substitute_abroad_en": "",
+     "pronunciation_roman": "khao niao"
+    },
+    {
+     "name_th": "กล้วยน้ำว้า (ถ้าชอบ)",
+     "name_kham_mueang_th": "",
+     "roman": "kluai nam wa",
+     "name_en": "namwa bananas (optional)",
+     "qty_metric": "3-4",
+     "role": "filling",
+     "where_to_buy_th": "ตลาดต้นลำไย ฝั่งตรงข้ามกาดหลวง / กาดเช้าใกล้บ้าน",
+     "where_to_buy_en": "Ton Lamyai market (across the road from Warorot) or any neighbourhood morning market (kat chao)",
+     "how_to_choose_en": "",
+     "substitute_abroad_en": "Small ripe bananas / plantain",
+     "pronunciation_roman": "kluai nam wa"
+    },
+    {
+     "name_th": "มะพร้าวขูด (ขาว)",
+     "name_kham_mueang_th": "",
+     "roman": "maphrao khut",
+     "name_en": "grated white coconut",
+     "qty_metric": "250 g",
+     "role": "coating",
+     "where_to_buy_th": "ตลาดต้นลำไย ฝั่งตรงข้ามกาดหลวง / กาดเช้าใกล้บ้าน",
+     "where_to_buy_en": "Ton Lamyai market (across the road from Warorot) or any neighbourhood morning market (kat chao)",
+     "how_to_choose_en": "",
+     "substitute_abroad_en": "",
+     "pronunciation_roman": "maphrao khut"
+    },
+    {
+     "name_th": "น้ำตาลทราย",
+     "name_kham_mueang_th": "",
+     "roman": "namtan",
+     "name_en": "sugar",
+     "qty_metric": "2 tbsp",
+     "role": "coating",
+     "where_to_buy_th": "ซูเปอร์มาร์เก็ต/ร้านสะดวกซื้อ หรือร้านโชห่วยในกาด",
+     "where_to_buy_en": "Supermarket (Rimping, Tops, Big C, Makro) or the grocery stall in any market",
+     "how_to_choose_en": "",
+     "substitute_abroad_en": "",
+     "pronunciation_roman": "namtan"
+    },
+    {
+     "name_th": "เกลือ",
+     "name_kham_mueang_th": "",
+     "roman": "kluea",
+     "name_en": "salt",
+     "qty_metric": "1/2 tsp",
+     "role": "coating",
+     "where_to_buy_th": "ซูเปอร์มาร์เก็ต/ร้านสะดวกซื้อ หรือร้านโชห่วยในกาด",
+     "where_to_buy_en": "Supermarket (Rimping, Tops, Big C, Makro) or the grocery stall in any market",
+     "how_to_choose_en": "",
+     "substitute_abroad_en": "",
+     "pronunciation_roman": "kluea"
+    },
+    {
+     "name_th": "ใบตอง เชือก",
+     "name_kham_mueang_th": "",
+     "roman": "bai tong",
+     "name_en": "banana leaves, string",
+     "qty_metric": "10 pieces",
+     "role": "wrapper",
+     "where_to_buy_th": "ตลาดต้นลำไย ฝั่งตรงข้ามกาดหลวง / กาดเช้าใกล้บ้าน",
+     "where_to_buy_en": "Ton Lamyai market (across the road from Warorot) or any neighbourhood morning market (kat chao)",
+     "how_to_choose_en": "",
+     "substitute_abroad_en": "",
+     "pronunciation_roman": "bai tong"
+    }
+   ],
+   "equipment": [
+    {
+     "name_th": "หม้อต้ม",
+     "kham_mueang_th": "",
+     "name_en": "deep pot",
+     "substitute_en": ""
+    }
+   ],
+   "prep_ahead_en": "Soak rice 4 h or overnight.",
+   "steps": [
+    {
+     "n": 1,
+     "th": "วางข้าวเหนียวบนใบตอง ใส่กล้วย ปิดด้วยข้าว ห่อ มัด",
+     "en": "Lay rice on a leaf, add banana, cover with more rice, wrap and tie.",
+     "time_min": 20,
+     "sensory_cue_en": "Firm log-shaped parcels.",
+     "tip_en": ""
+    },
+    {
+     "n": 2,
+     "th": "ต้มประมาณ 1 ชั่วโมงครึ่ง",
+     "en": "Boil about 1.5 hours, topping up water to keep parcels covered.",
+     "time_min": 90,
+     "sensory_cue_en": "Rice fully translucent and fused when a test parcel is opened.",
+     "tip_en": ""
+    },
+    {
+     "n": 3,
+     "th": "ผสมมะพร้าว น้ำตาล เกลือ",
+     "en": "Mix coconut with sugar and salt.",
+     "time_min": 3,
+     "sensory_cue_en": "Snow-white, lightly salty-sweet.",
+     "tip_en": ""
+    },
+    {
+     "n": 4,
+     "th": "แกะห่อ คลุกมะพร้าว หั่นเสิร์ฟ",
+     "en": "Unwrap, roll in coconut, slice.",
+     "time_min": 5,
+     "sensory_cue_en": "Fully 'grey-haired' coating.",
+     "tip_en": ""
+    }
+   ],
+   "taste_profile": {
+    "sour": 0,
+    "salty": 1,
+    "spicy": 0,
+    "sweet": 2,
+    "bitter": 0,
+    "umami": 0,
+    "rating_note": "editorial estimate",
+    "texture_en": "Dense chewy rice, soft banana, fluffy coconut.",
+    "description_th": "หวานน้อย เค็มนิด หอมมะพร้าว",
+    "description_en": "Mildly sweet, a touch salty, coconutty.",
+    "kham_mueang_taste_words": [
+     {
+      "th": "หวาน",
+      "roman": "wan",
+      "en": "sweet",
+      "sources": []
+     },
+     {
+      "th": "ลำ",
+      "roman": "lam",
+      "en": "delicious",
+      "sources": [
+       "https://www.trueplookpanya.com/learning/detail/25566",
+       "https://www.chiangrai108.com/artsculture/10392/"
+      ]
+     }
+    ]
+   },
+   "how_to_eat": {
+    "th": "กินเป็นของว่าง",
+    "en": "Snack, by hand or fork.",
+    "with_what": "Tea",
+    "when_eaten": "Morning/afternoon",
+    "sharing_etiquette_en": "Shared plate."
+   },
+   "food_safety_en": "Fresh coconut spoils within hours in heat - coat just before serving.",
+   "common_mistakes_foreigners_en": [
+    "Under-boiling - hard centre.",
+    "Coating hours ahead - coconut sours."
+   ],
+   "useful_phrases": [
+    {
+     "kham_mueang_th": "อันนี้กี่บาทเจ้า",
+     "roman": "an ni ki bat jao",
+     "central_th": "อันนี้กี่บาทคะ",
+     "en": "How much is this?",
+     "when": "Buying snacks and sweets at the market.",
+     "sources": [
+      "https://northspace.life/%E0%B8%A0%E0%B8%B2%E0%B8%A9%E0%B8%B2%E0%B9%80%E0%B8%AB%E0%B8%99%E0%B8%B7%E0%B8%AD/"
+     ]
+    }
+   ],
+   "cultural_notes_th": "MThai เรียกว่าขนมไทยโบราณของชาวล้านนา",
+   "cultural_notes_en": "MThai calls it an ancient Lanna sweet; the recipe is simple but the name is a well-loved joke about grey hair.",
+   "sources": [
+    "https://mthai.com/travel/45321.html"
+   ],
+   "confidence": "medium",
+   "needs_expert_review": [
+    "Only one source reached; Lanna attribution and banana filling should be confirmed"
+   ]
+  },
+  {
+   "id": "khanom_sila_on",
+   "name_th": "ขนมศิลาอ่อน",
+   "name_kham_mueang_th": "ขนมสะละอ่อน? (ล้านนาโพสต์เขียน ศิลาอ่อน/สะละอ่อน)",
+   "name_roman": "khanom sila on",
+   "name_en": "Khanom sila on - 'soft stone' pandan-coconut rice pudding squares",
+   "pronunciation": {
+    "syllables": [
+     {
+      "th": "ศิ",
+      "roman": "si",
+      "tone": "21",
+      "derived": true
+     },
+     {
+      "th": "ลา",
+      "roman": "la",
+      "tone": "33",
+      "derived": true
+     },
+     {
+      "th": "อ่อน",
+      "roman": "on",
+      "tone": "21",
+      "derived": true
+     }
+    ],
+    "tip_en": "'Sila on' = soft stone. Lanna Post also writes 'สะละอ่อน' (sa-la-on, a Northern word for young man/woman) - whether that is a Northern name for this sweet is unconfirmed. Tones derived - see meta.tone_method_note; low confidence."
+   },
+   "origin_province": [
+    "ไม่ชัดเจน Unclear - listed among old Lanna sweets by Lanna Post; recipe source (Krua Khun Toi) does not name a region"
+   ],
+   "season": "All year",
+   "occasion": "Snack",
+   "serves": "a 20 cm tray",
+   "description_th": "ขนมกวนจากแป้งข้าวเจ้า (โม่ข้าวกับน้ำปูนใส) กะทิ น้ำใบเตย น้ำตาลทราย น้ำตาลมะพร้าว และแป้งท้าว กวนนานจนเนียนเหนียว เทพิมพ์ ทิ้งให้เย็นแล้วตัด ล้านนาโพสต์ระบุว่าโรยหน้าด้วยถั่ว",
+   "description_en": "A stirred pudding of rice ground with limewater, coconut cream, pandan juice, white and coconut sugar and arrowroot/yam starch, cooked a long time until smooth and chewy, set in a tray and cut. Lanna Post notes it is topped with peanuts.",
+   "ingredients": [
+    {
+     "name_th": "ข้าวสารเจ้า (โม่กับน้ำปูนใส)",
+     "name_kham_mueang_th": "",
+     "roman": "khao san",
+     "name_en": "jasmine rice, ground wet with limewater (or rice flour)",
+     "qty_metric": "300 g",
+     "role": "base",
+     "where_to_buy_th": "ซูเปอร์มาร์เก็ต/ร้านสะดวกซื้อ หรือร้านโชห่วยในกาด",
+     "where_to_buy_en": "Supermarket (Rimping, Tops, Big C, Makro) or the grocery stall in any market",
+     "how_to_choose_en": "",
+     "substitute_abroad_en": "",
+     "pronunciation_roman": "khao san"
+    },
+    {
+     "name_th": "น้ำปูนใส",
+     "name_kham_mueang_th": "",
+     "roman": "nam pun sai",
+     "name_en": "food-grade limewater (total)",
+     "qty_metric": "about 5 litres in 3 parts",
+     "role": "texture",
+     "where_to_buy_th": "กาดหลวง (ตลาดวโรรส) ร้านของแห้ง/พริกแกง",
+     "where_to_buy_en": "Warorot (Kad Luang) dried-goods and curry-paste stalls, ground floor and the lanes around it",
+     "how_to_choose_en": "",
+     "substitute_abroad_en": "",
+     "pronunciation_roman": "nam pun sai"
+    },
+    {
+     "name_th": "กะทิ",
+     "name_kham_mueang_th": "",
+     "roman": "kathi",
+     "name_en": "coconut milk",
+     "qty_metric": "700 g",
+     "role": "richness",
+     "where_to_buy_th": "ตลาดต้นลำไย ฝั่งตรงข้ามกาดหลวง / กาดเช้าใกล้บ้าน",
+     "where_to_buy_en": "Ton Lamyai market (across the road from Warorot) or any neighbourhood morning market (kat chao)",
+     "how_to_choose_en": "",
+     "substitute_abroad_en": "",
+     "pronunciation_roman": "kathi"
+    },
+    {
+     "name_th": "น้ำใบเตยเข้มข้น",
+     "name_kham_mueang_th": "",
+     "roman": "nam bai toei",
+     "name_en": "concentrated pandan juice",
+     "qty_metric": "500 g",
+     "role": "colour/aroma",
+     "where_to_buy_th": "ตลาดต้นลำไย ฝั่งตรงข้ามกาดหลวง / กาดเช้าใกล้บ้าน",
+     "where_to_buy_en": "Ton Lamyai market (across the road from Warorot) or any neighbourhood morning market (kat chao)",
+     "how_to_choose_en": "",
+     "substitute_abroad_en": "",
+     "pronunciation_roman": "nam bai toei"
+    },
+    {
+     "name_th": "น้ำตาลทราย",
+     "name_kham_mueang_th": "",
+     "roman": "namtan sai",
+     "name_en": "white sugar",
+     "qty_metric": "500 g",
+     "role": "sweet",
+     "where_to_buy_th": "ซูเปอร์มาร์เก็ต/ร้านสะดวกซื้อ หรือร้านโชห่วยในกาด",
+     "where_to_buy_en": "Supermarket (Rimping, Tops, Big C, Makro) or the grocery stall in any market",
+     "how_to_choose_en": "",
+     "substitute_abroad_en": "",
+     "pronunciation_roman": "namtan sai"
+    },
+    {
+     "name_th": "น้ำตาลมะพร้าว",
+     "name_kham_mueang_th": "",
+     "roman": "namtan maphrao",
+     "name_en": "coconut sugar",
+     "qty_metric": "200 g",
+     "role": "sweet",
+     "where_to_buy_th": "กาดหลวง (ตลาดวโรรส) ร้านของแห้ง/พริกแกง",
+     "where_to_buy_en": "Warorot (Kad Luang) dried-goods and curry-paste stalls, ground floor and the lanes around it",
+     "how_to_choose_en": "",
+     "substitute_abroad_en": "",
+     "pronunciation_roman": "namtan maphrao"
+    },
+    {
+     "name_th": "แป้งท้าว",
+     "name_kham_mueang_th": "",
+     "roman": "paeng thao",
+     "name_en": "arrowroot/yam starch",
+     "qty_metric": "30 g",
+     "role": "chew",
+     "where_to_buy_th": "ซูเปอร์มาร์เก็ต/ร้านสะดวกซื้อ หรือร้านโชห่วยในกาด",
+     "where_to_buy_en": "Supermarket (Rimping, Tops, Big C, Makro) or the grocery stall in any market",
+     "how_to_choose_en": "",
+     "substitute_abroad_en": "",
+     "pronunciation_roman": "paeng thao"
+    },
+    {
+     "name_th": "ถั่วลิสงคั่ว",
+     "name_kham_mueang_th": "",
+     "roman": "thua lisong",
+     "name_en": "roasted peanuts (topping, per Lanna Post)",
+     "qty_metric": "handful",
+     "role": "topping",
+     "where_to_buy_th": "ตลาดต้นลำไย ฝั่งตรงข้ามกาดหลวง / กาดเช้าใกล้บ้าน",
+     "where_to_buy_en": "Ton Lamyai market (across the road from Warorot) or any neighbourhood morning market (kat chao)",
+     "how_to_choose_en": "",
+     "substitute_abroad_en": "",
+     "pronunciation_roman": "thua lisong"
+    }
+   ],
+   "equipment": [
+    {
+     "name_th": "กระทะทองเหลือง",
+     "kham_mueang_th": "",
+     "name_en": "brass or heavy pan",
+     "substitute_en": ""
+    },
+    {
+     "name_th": "ไม้พาย",
+     "kham_mueang_th": "",
+     "name_en": "wooden paddle",
+     "substitute_en": ""
+    },
+    {
+     "name_th": "ถาด",
+     "kham_mueang_th": "",
+     "name_en": "tray",
+     "substitute_en": ""
+    }
+   ],
+   "prep_ahead_en": "Soak rice. Make pandan juice.",
+   "steps": [
+    {
+     "n": 1,
+     "th": "โม่ข้าวกับน้ำปูนใส กรอง",
+     "en": "Grind soaked rice with limewater (part 1), strain.",
+     "time_min": 20,
+     "sensory_cue_en": "Smooth milky liquid.",
+     "tip_en": ""
+    },
+    {
+     "n": 2,
+     "th": "ละลายแป้งท้าวกับกะทิและน้ำปูนใสส่วนที่ 2",
+     "en": "Mix starch with coconut milk and limewater (part 2).",
+     "time_min": 5,
+     "sensory_cue_en": "",
+     "tip_en": ""
+    },
+    {
+     "n": 3,
+     "th": "ผสมน้ำใบเตยกับน้ำปูนใสส่วนที่ 3",
+     "en": "Mix pandan juice with limewater (part 3).",
+     "time_min": 3,
+     "sensory_cue_en": "Bright green.",
+     "tip_en": ""
+    },
+    {
+     "n": 4,
+     "th": "รวมทุกส่วนในกระทะ ใส่น้ำตาล กวนไฟกลางจนเนียนเหนียว",
+     "en": "Combine all in the pan with the sugars; stir over medium heat until smooth and chewy (the commercial recipe stirs 2 hours).",
+     "time_min": 90,
+     "sensory_cue_en": "Thick, glossy, pulls from the pan.",
+     "tip_en": ""
+    },
+    {
+     "n": 5,
+     "th": "เทใส่พิมพ์ พักให้เย็น ตัด โรยถั่ว",
+     "en": "Pour into tray, cool, cut, top with peanuts.",
+     "time_min": 60,
+     "sensory_cue_en": "Firm, sliceable, smooth.",
+     "tip_en": ""
+    }
+   ],
+   "taste_profile": {
+    "sour": 0,
+    "salty": 0,
+    "spicy": 0,
+    "sweet": 4,
+    "bitter": 0,
+    "umami": 0,
+    "rating_note": "editorial estimate",
+    "texture_en": "Smooth, soft-chewy.",
+    "description_th": "หวาน หอมใบเตยและกะทิ",
+    "description_en": "Sweet, pandan and coconut.",
+    "kham_mueang_taste_words": [
+     {
+      "th": "หวาน",
+      "roman": "wan",
+      "en": "sweet",
+      "sources": []
+     },
+     {
+      "th": "ลำ",
+      "roman": "lam",
+      "en": "delicious",
+      "sources": [
+       "https://www.trueplookpanya.com/learning/detail/25566",
+       "https://www.chiangrai108.com/artsculture/10392/"
+      ]
+     },
+     {
+      "th": "ลำขนาด",
+      "roman": "lam khanat",
+      "en": "super tasty",
+      "sources": [
+       "https://cookpad.com/th/recipes/16454331"
+      ]
+     }
+    ]
+   },
+   "how_to_eat": {
+    "th": "กินเป็นของหวาน",
+    "en": "Dessert with tea.",
+    "with_what": "Tea",
+    "when_eaten": "Any time",
+    "sharing_etiquette_en": "Shared plate."
+   },
+   "food_safety_en": "Food-grade lime only.",
+   "common_mistakes_foreigners_en": [
+    "Giving up stirring too early - stays pasty."
+   ],
+   "useful_phrases": [
+    {
+     "kham_mueang_th": "อันนี้กี่บาทเจ้า",
+     "roman": "an ni ki bat jao",
+     "central_th": "อันนี้กี่บาทคะ",
+     "en": "How much is this?",
+     "when": "Buying snacks and sweets at the market.",
+     "sources": [
+      "https://northspace.life/%E0%B8%A0%E0%B8%B2%E0%B8%A9%E0%B8%B2%E0%B9%80%E0%B8%AB%E0%B8%99%E0%B8%B7%E0%B8%AD/"
+     ]
+    }
+   ],
+   "cultural_notes_th": "ความเป็นขนมล้านนายังไม่ยืนยัน มีแหล่งเดียวคือล้านนาโพสต์",
+   "cultural_notes_en": "Northern identity is weakly sourced (one Lanna Post list); treat as a Thai sweet also found in the North.",
+   "sources": [
+    "https://www.kruakhuntoi.com/tips/%E0%B8%82%E0%B8%99%E0%B8%A1%E0%B8%A8%E0%B8%B4%E0%B8%A5%E0%B8%B2%E0%B8%AD%E0%B9%88%E0%B8%AD%E0%B8%99/",
+    "https://www.lannapost.net/2021/09/blog-post_15.html"
+   ],
+   "confidence": "low",
+   "needs_expert_review": [
+    "Is this a Lanna sweet?",
+    "Northern name สะละอ่อน?",
+    "Quantities scaled 1/10 from a commercial recipe"
+   ]
+  },
+  {
+   "id": "khanom_kluea",
+   "name_th": "ขนมเกลือ",
+   "name_kham_mueang_th": "ข้าวหนมเกลือ",
+   "name_roman": "khanom kluea (Northern: khao nom kluea)",
+   "name_en": "Khanom kluea - salty steamed rice-flour parcels",
+   "pronunciation": {
+    "syllables": [
+     {
+      "th": "เข้า",
+      "roman": "khao",
+      "tone": "44ʔ",
+      "derived": true
+     },
+     {
+      "th": "หนม",
+      "roman": "nom",
+      "tone": "24",
+      "derived": true
+     },
+     {
+      "th": "เกลือ",
+      "roman": "kluea",
+      "tone": "24",
+      "derived": true
+     }
+    ],
+    "tip_en": "Tones derived - see meta.tone_method_note; low confidence."
+   },
+   "origin_province": [
+    "ล้านนา Lanna"
+   ],
+   "season": "All year",
+   "occasion": "Everyday; Pi Mai Mueang",
+   "serves": "10 parcels",
+   "description_th": "แป้งข้าวเจ้า เกลือ น้ำ (อาจใส่กะทิ) กวนจนข้น ห่อใบตองแบน นึ่ง 20-30 นาที สีขาว รสเค็ม อาจเติมน้ำตาลหรืองาดำให้หวาน มีคำกล่าว 'ข้าวหนมเกลือ เบือบ่าว' ว่าสาวที่ไม่ชอบหนุ่มคนไหนจะเอาขนมเกลือที่ไม่หวานให้กิน",
+   "description_en": "Rice flour, salt and water (sometimes coconut milk) cooked until thick, wrapped flat in banana leaf and steamed 20-30 minutes; white and salty, sometimes sweetened with sugar or black sesame. A Lanna saying, 'khao nom kluea buea bao', jokes that a young woman served the unsweetened salty version to a suitor she didn't fancy.",
+   "ingredients": [
+    {
+     "name_th": "แป้งข้าวเจ้า",
+     "name_kham_mueang_th": "",
+     "roman": "paeng khao jao",
+     "name_en": "rice flour",
+     "qty_metric": "200 g",
+     "role": "base",
+     "where_to_buy_th": "ซูเปอร์มาร์เก็ต/ร้านสะดวกซื้อ หรือร้านโชห่วยในกาด",
+     "where_to_buy_en": "Supermarket (Rimping, Tops, Big C, Makro) or the grocery stall in any market",
+     "how_to_choose_en": "",
+     "substitute_abroad_en": "",
+     "pronunciation_roman": "paeng khao jao"
+    },
+    {
+     "name_th": "เกลือ",
+     "name_kham_mueang_th": "",
+     "roman": "kluea",
+     "name_en": "salt",
+     "qty_metric": "1 tsp",
+     "role": "flavour",
+     "where_to_buy_th": "ซูเปอร์มาร์เก็ต/ร้านสะดวกซื้อ หรือร้านโชห่วยในกาด",
+     "where_to_buy_en": "Supermarket (Rimping, Tops, Big C, Makro) or the grocery stall in any market",
+     "how_to_choose_en": "",
+     "substitute_abroad_en": "",
+     "pronunciation_roman": "kluea"
+    },
+    {
+     "name_th": "น้ำ / กะทิ",
+     "name_kham_mueang_th": "",
+     "roman": "nam / kathi",
+     "name_en": "water or thin coconut milk",
+     "qty_metric": "600 ml",
+     "role": "liquid",
+     "where_to_buy_th": "ตลาดต้นลำไย ฝั่งตรงข้ามกาดหลวง / กาดเช้าใกล้บ้าน",
+     "where_to_buy_en": "Ton Lamyai market (across the road from Warorot) or any neighbourhood morning market (kat chao)",
+     "how_to_choose_en": "",
+     "substitute_abroad_en": "",
+     "pronunciation_roman": "nam / kathi"
+    },
+    {
+     "name_th": "ใบตอง",
+     "name_kham_mueang_th": "",
+     "roman": "bai tong",
+     "name_en": "banana leaves",
+     "qty_metric": "10 pieces",
+     "role": "wrapper",
+     "where_to_buy_th": "ตลาดต้นลำไย ฝั่งตรงข้ามกาดหลวง / กาดเช้าใกล้บ้าน",
+     "where_to_buy_en": "Ton Lamyai market (across the road from Warorot) or any neighbourhood morning market (kat chao)",
+     "how_to_choose_en": "",
+     "substitute_abroad_en": "",
+     "pronunciation_roman": "bai tong"
+    }
+   ],
+   "equipment": [
+    {
+     "name_th": "หม้อ",
+     "kham_mueang_th": "",
+     "name_en": "pot",
+     "substitute_en": ""
+    },
+    {
+     "name_th": "ลังถึง",
+     "kham_mueang_th": "",
+     "name_en": "steamer",
+     "substitute_en": ""
+    }
+   ],
+   "prep_ahead_en": "Wipe and soften leaves.",
+   "steps": [
+    {
+     "n": 1,
+     "th": "ผสมแป้ง เกลือ น้ำ กวนไฟกลางจนข้น",
+     "en": "Mix flour, salt and liquid; stir over medium heat until thick.",
+     "time_min": 10,
+     "sensory_cue_en": "Thick paste that holds a ridge.",
+     "tip_en": ""
+    },
+    {
+     "n": 2,
+     "th": "พักให้อุ่น ตักห่อใบตองแบน ๆ",
+     "en": "Cool slightly; spoon onto leaves and fold flat.",
+     "time_min": 10,
+     "sensory_cue_en": "",
+     "tip_en": ""
+    },
+    {
+     "n": 3,
+     "th": "นึ่ง 20-30 นาที",
+     "en": "Steam 20-30 minutes.",
+     "time_min": 25,
+     "sensory_cue_en": "Firm, white, smooth.",
+     "tip_en": ""
+    }
+   ],
+   "taste_profile": {
+    "sour": 0,
+    "salty": 3,
+    "spicy": 0,
+    "sweet": 0,
+    "bitter": 0,
+    "umami": 1,
+    "rating_note": "editorial estimate",
+    "texture_en": "Soft, smooth, slightly bouncy.",
+    "description_th": "เค็ม ๆ มัน ๆ",
+    "description_en": "Plainly salty, mild.",
+    "kham_mueang_taste_words": [
+     {
+      "th": "เก็ม",
+      "roman": "kem",
+      "en": "salty (Northern unaspirated k)",
+      "sources": [
+       "https://www.gotoknow.org/posts/551347"
+      ]
+     },
+     {
+      "th": "จ๋าง",
+      "roman": "jang",
+      "en": "bland",
+      "sources": [
+       "https://www.trueplookpanya.com/learning/detail/25566"
+      ]
+     }
+    ]
+   },
+   "how_to_eat": {
+    "th": "แกะใบตองกิน",
+    "en": "Unwrap and eat.",
+    "with_what": "Tea",
+    "when_eaten": "Snack",
+    "sharing_etiquette_en": "Shared."
+   },
+   "food_safety_en": "Low risk.",
+   "common_mistakes_foreigners_en": [
+    "Expecting a sweet - the default is salty."
+   ],
+   "useful_phrases": [
+    {
+     "kham_mueang_th": "อันนี้กี่บาทเจ้า",
+     "roman": "an ni ki bat jao",
+     "central_th": "อันนี้กี่บาทคะ",
+     "en": "How much is this?",
+     "when": "Buying snacks and sweets at the market.",
+     "sources": [
+      "https://northspace.life/%E0%B8%A0%E0%B8%B2%E0%B8%A9%E0%B8%B2%E0%B9%80%E0%B8%AB%E0%B8%99%E0%B8%B7%E0%B8%AD/"
+     ]
+    }
+   ],
+   "cultural_notes_th": "มีขนมใกล้เคียงชื่อ 'ขนมตายลืม' เนื้อนุ่มกว่า ทำให้เด็ก คนป่วย ผู้สูงอายุ",
+   "cultural_notes_en": "A softer relative, 'khanom tai luem', is made for children, the sick and the elderly (Chiang Mai News).",
+   "sources": [
+    "https://www.chiangmainews.co.th/page/archives/587453/",
+    "https://www.lannapost.net/2021/09/blog-post_15.html"
+   ],
+   "confidence": "medium",
+   "needs_expert_review": [
+    "Exact Kham Mueang wording and meaning of 'เบือบ่าว'"
+   ]
+  },
+  {
+   "id": "khao_lam_lanna",
+   "name_th": "ข้าวหลาม",
+   "name_kham_mueang_th": "เข้าหลาม",
+   "name_roman": "khao lam",
+   "name_en": "Khao lam - sticky rice with coconut and black beans roasted in bamboo",
+   "pronunciation": {
+    "syllables": [
+     {
+      "th": "เข้า",
+      "roman": "khao",
+      "tone": "44ʔ",
+      "derived": true
+     },
+     {
+      "th": "หลาม",
+      "roman": "lam",
+      "tone": "24",
+      "derived": true
+     }
+    ],
+    "tip_en": "Not the same word as 'lam' (ลำ, delicious). Tones derived - see meta.tone_method_note; low confidence."
+   },
+   "origin_province": [
+    "ทั่วภาคเหนือ across the North (and all Thailand)"
+   ],
+   "season": "Cool season; ritually on the full moon of the 4th Northern month (เดือนสี่เป็ง, around January)",
+   "occasion": "ตานข้าวใหม่ / ตานข้าวจี่ข้าวหลาม - new-rice merit-making",
+   "serves": "6-8 tubes",
+   "description_th": "ข้าวเหนียวผสมกะทิ น้ำตาล เกลือ (และถั่วดำ) กรอกใส่กระบอกไม้ไผ่ ('ไผ่ข้าวหลาม' หรือ 'ไม้ป้าง' อายุ 1-2 ปี เยื่อด้านในบาง) อุดปากด้วยใบตอง/กาบมะพร้าว เผาไฟอ่อนประมาณ 1 ชั่วโมง หมุนตลอด ในล้านนาชาวบ้านนำข้าวใหม่มาทำข้าวหลาม ข้าวจี่ ถวายพระในวันเพ็ญเดือนสี่เหนือ (ประมาณมกราคม) เรียก 'ตานข้าวใหม่' พร้อมก่อ 'หลัว' (ฟืน) หิงไฟพระเจ้า",
+   "description_en": "Sticky rice with coconut milk, sugar, salt (and black beans) packed into bamboo tubes ('phai khao lam' / 'mai pang' bamboo, 1-2 years old, with a thin inner membrane), plugged with banana leaf or coconut husk and roasted over a low fire about an hour, turning constantly. In Lanna, villagers make khao lam and khao ji (grilled sticky rice) from the new harvest and offer them to monks on the full moon of the 4th Northern month (around January) - 'tan khao mai' - and build a pile of firewood ('lua') to light as a fire offering to the Buddha ('hing fai phra jao').",
+   "ingredients": [
+    {
+     "name_th": "ข้าวเหนียว (ข้าวใหม่ยิ่งดี)",
+     "name_kham_mueang_th": "เข้าเหนียว / เข้าใหม่",
+     "roman": "khao niao",
+     "name_en": "glutinous rice (new-season rice is prized)",
+     "qty_metric": "1 kg",
+     "role": "base",
+     "where_to_buy_th": "ตลาดต้นลำไย ฝั่งตรงข้ามกาดหลวง / กาดเช้าใกล้บ้าน",
+     "where_to_buy_en": "Ton Lamyai market (across the road from Warorot) or any neighbourhood morning market (kat chao)",
+     "how_to_choose_en": "New-crop rice: white, translucent, germ attached, fragrant (Matichon)",
+     "substitute_abroad_en": "",
+     "pronunciation_roman": "khao niao"
+    },
+    {
+     "name_th": "กะทิ",
+     "name_kham_mueang_th": "",
+     "roman": "kathi",
+     "name_en": "coconut milk",
+     "qty_metric": "400 ml",
+     "role": "liquid/richness",
+     "where_to_buy_th": "ตลาดต้นลำไย ฝั่งตรงข้ามกาดหลวง / กาดเช้าใกล้บ้าน",
+     "where_to_buy_en": "Ton Lamyai market (across the road from Warorot) or any neighbourhood morning market (kat chao)",
+     "how_to_choose_en": "",
+     "substitute_abroad_en": "",
+     "pronunciation_roman": "kathi"
+    },
+    {
+     "name_th": "น้ำตาลทราย",
+     "name_kham_mueang_th": "",
+     "roman": "namtan",
+     "name_en": "sugar",
+     "qty_metric": "50 g",
+     "role": "sweet",
+     "where_to_buy_th": "ซูเปอร์มาร์เก็ต/ร้านสะดวกซื้อ หรือร้านโชห่วยในกาด",
+     "where_to_buy_en": "Supermarket (Rimping, Tops, Big C, Makro) or the grocery stall in any market",
+     "how_to_choose_en": "",
+     "substitute_abroad_en": "",
+     "pronunciation_roman": "namtan"
+    },
+    {
+     "name_th": "เกลือ",
+     "name_kham_mueang_th": "",
+     "roman": "kluea",
+     "name_en": "salt",
+     "qty_metric": "1 1/2 tsp (should taste slightly salty)",
+     "role": "balance",
+     "where_to_buy_th": "ซูเปอร์มาร์เก็ต/ร้านสะดวกซื้อ หรือร้านโชห่วยในกาด",
+     "where_to_buy_en": "Supermarket (Rimping, Tops, Big C, Makro) or the grocery stall in any market",
+     "how_to_choose_en": "",
+     "substitute_abroad_en": "",
+     "pronunciation_roman": "kluea"
+    },
+    {
+     "name_th": "ถั่วดำต้มสุก",
+     "name_kham_mueang_th": "",
+     "roman": "thua dam",
+     "name_en": "black beans, cooked",
+     "qty_metric": "50 g",
+     "role": "texture",
+     "where_to_buy_th": "กาดหลวง (ตลาดวโรรส) ร้านของแห้ง/พริกแกง",
+     "where_to_buy_en": "Warorot (Kad Luang) dried-goods and curry-paste stalls, ground floor and the lanes around it",
+     "how_to_choose_en": "",
+     "substitute_abroad_en": "",
+     "pronunciation_roman": "thua dam"
+    },
+    {
+     "name_th": "กระบอกไผ่ข้าวหลาม",
+     "name_kham_mueang_th": "",
+     "roman": "krabok phai",
+     "name_en": "khao-lam bamboo tubes, one end closed at a node",
+     "qty_metric": "6-8 tubes ~30 cm",
+     "role": "vessel",
+     "where_to_buy_th": "ตลาดต้นลำไย ฝั่งตรงข้ามกาดหลวง / กาดเช้าใกล้บ้าน",
+     "where_to_buy_en": "Ton Lamyai market (across the road from Warorot) or any neighbourhood morning market (kat chao)",
+     "how_to_choose_en": "Green, 1-2 years old, thin inner skin",
+     "substitute_abroad_en": "Oven: foil-wrapped ramekins at 180 C - no bamboo aroma",
+     "pronunciation_roman": "krabok phai"
+    },
+    {
+     "name_th": "ใบตอง / กาบมะพร้าว",
+     "name_kham_mueang_th": "",
+     "roman": "bai tong",
+     "name_en": "banana leaf or coconut husk for plugs",
+     "qty_metric": "a few",
+     "role": "plug",
+     "where_to_buy_th": "ตลาดต้นลำไย ฝั่งตรงข้ามกาดหลวง / กาดเช้าใกล้บ้าน",
+     "where_to_buy_en": "Ton Lamyai market (across the road from Warorot) or any neighbourhood morning market (kat chao)",
+     "how_to_choose_en": "",
+     "substitute_abroad_en": "",
+     "pronunciation_roman": "bai tong"
+    }
+   ],
+   "equipment": [
+    {
+     "name_th": "เตาถ่าน/กองไฟ",
+     "kham_mueang_th": "",
+     "name_en": "charcoal or wood fire, low heat",
+     "substitute_en": ""
+    },
+    {
+     "name_th": "มีดพร้า",
+     "kham_mueang_th": "",
+     "name_en": "machete to split the bamboo",
+     "substitute_en": "Heavy knife"
+    }
+   ],
+   "prep_ahead_en": "Soak rice 3-4 h (aroimak) - GotoKnow soaks briefly then stands filled tubes overnight. Cook beans.",
+   "steps": [
+    {
+     "n": 1,
+     "th": "ผสมข้าวกับถั่วดำ ผสมกะทิกับน้ำตาลเกลือ",
+     "en": "Mix rice with beans; season coconut milk with sugar and salt (slightly salty).",
+     "time_min": 10,
+     "sensory_cue_en": "Coconut milk tastes sweet-salty.",
+     "tip_en": ""
+    },
+    {
+     "n": 2,
+     "th": "กรอกข้าวใส่กระบอกไม่แน่นเกิน เทกะทิให้ท่วม เหลือที่ว่าง 1/4",
+     "en": "Fill tubes loosely, pour coconut milk to cover, leave a quarter empty.",
+     "time_min": 10,
+     "sensory_cue_en": "",
+     "tip_en": ""
+    },
+    {
+     "n": 3,
+     "th": "อุดปากกระบอกด้วยใบตองม้วน",
+     "en": "Plug with rolled banana leaf.",
+     "time_min": 5,
+     "sensory_cue_en": "Snug plug.",
+     "tip_en": ""
+    },
+    {
+     "n": 4,
+     "th": "เผาไฟอ่อน หมุนกระบอกทุก 10-15 นาที ประมาณ 45-60 นาที",
+     "en": "Roast leaning over low embers about 45-60 minutes, turning every 10-15 minutes.",
+     "time_min": 60,
+     "sensory_cue_en": "Coconut milk bubbles at the mouth; outer bamboo chars evenly; sweet toasty smell.",
+     "tip_en": "If it boils over, remove plug and top up."
+    },
+    {
+     "n": 5,
+     "th": "ทดสอบด้วยไม้จิ้ม ปอกเปลือกไผ่ส่วนที่ไหม้ออก",
+     "en": "Test with a skewer (comes out clean); shave off the charred outer bamboo.",
+     "time_min": 10,
+     "sensory_cue_en": "Rice set in a cylinder wrapped in thin white membrane.",
+     "tip_en": ""
+    }
+   ],
+   "taste_profile": {
+    "sour": 0,
+    "salty": 2,
+    "spicy": 0,
+    "sweet": 3,
+    "bitter": 0,
+    "umami": 0,
+    "rating_note": "editorial estimate",
+    "texture_en": "Dense, chewy, creamy; smoky bamboo aroma.",
+    "description_th": "หวานมันเค็มนิด ๆ หอมไผ่",
+    "description_en": "Sweet-salty, creamy, smoky.",
+    "kham_mueang_taste_words": [
+     {
+      "th": "หวาน",
+      "roman": "wan",
+      "en": "sweet",
+      "sources": []
+     },
+     {
+      "th": "ลำ",
+      "roman": "lam",
+      "en": "delicious",
+      "sources": [
+       "https://www.trueplookpanya.com/learning/detail/25566",
+       "https://www.chiangrai108.com/artsculture/10392/"
+      ]
+     },
+     {
+      "th": "ลำขนาด",
+      "roman": "lam khanat",
+      "en": "super tasty",
+      "sources": [
+       "https://cookpad.com/th/recipes/16454331"
+      ]
+     }
+    ]
+   },
+   "how_to_eat": {
+    "th": "ผ่า/ฉีกเปลือกไผ่ออกทีละซีก กินเนื้อข้าวที่ห่อด้วยเยื่อไผ่",
+    "en": "Split or peel the bamboo strip by strip and eat the rice cylinder in its thin membrane.",
+    "with_what": "Nothing - or hot tea",
+    "when_eaten": "Cool-season mornings; tan khao mai day",
+    "sharing_etiquette_en": "At tan khao mai, the first portions go to the monks and to the dead (merit dedicated to ancestors) before people eat."
+   },
+   "food_safety_en": "Bamboo can split and spit hot coconut milk - roast at an angle, keep face away; let cool before peeling.",
+   "common_mistakes_foreigners_en": [
+    "Packing rice too tight - uncooked core.",
+    "High heat - burnt outside, raw inside."
+   ],
+   "useful_phrases": [
+    {
+     "kham_mueang_th": "อันนี้กี่บาทเจ้า",
+     "roman": "an ni ki bat jao",
+     "central_th": "อันนี้กี่บาทคะ",
+     "en": "How much is this?",
+     "when": "Buying snacks and sweets at the market.",
+     "sources": [
+      "https://northspace.life/%E0%B8%A0%E0%B8%B2%E0%B8%A9%E0%B8%B2%E0%B9%80%E0%B8%AB%E0%B8%99%E0%B8%B7%E0%B8%AD/"
+     ]
+    },
+    {
+     "kham_mueang_th": "ลำขนาดเจ้า",
+     "roman": "lam khanat jao",
+     "central_th": "อร่อยมากค่ะ",
+     "en": "It's really delicious!",
+     "when": "Complimenting the cook - always welcome.",
+     "sources": [
+      "https://cookpad.com/th/recipes/16454331"
+     ]
+    }
+   ],
+   "cultural_notes_th": "เพ็ญเดือนสี่เหนือ (ตรงกับเดือนยี่ภาคกลาง) ชาวลำปางนำข้าวเปลือก ข้าวสารใหม่ ข้าวหลาม ข้าวจี่ ถวายพระ อุทิศส่วนกุศลแก่ญาติผู้ล่วงลับและเทวดา และก่อหลัวเป็นรูปเจดีย์จุดไฟรุ่งเช้า (หิงไฟพระเจ้า) หมายถึงการเผากิเลส",
+   "cultural_notes_en": "On the full moon of the 4th Northern month (= 2nd Central month; 13 Jan 2025 per the Lampang report), people offer new unhusked and milled rice, khao lam and khao ji to monks, dedicating merit to deceased relatives and deities, and light a stupa-shaped pile of firewood at dawn to 'warm the Buddha', read as burning away defilements. Northern months run about two ahead of Central Thai months.",
+   "sources": [
+    "https://www.aroimak.co/khao-lam/",
+    "https://www.gotoknow.org/posts/288622",
+    "https://today.line.me/th/v3/article/GgWNP5Q",
+    "https://www.matichon.co.th/weekly/column/article_77100",
+    "https://guide.michelin.com/th/th/article/features/10-northern-thai-dishes-you-should-know"
+   ],
+   "confidence": "medium"
+  },
+  {
+   "id": "miang_fermented_tea",
+   "name_th": "เมี่ยง (ชาหมัก)",
+   "name_kham_mueang_th": "เหมี้ยง",
+   "name_roman": "miang (Northern: miang, written hmiang)",
+   "name_en": "Miang - Lanna fermented tea leaves for chewing ('om miang')",
+   "pronunciation": {
+    "syllables": [
+     {
+      "th": "เหมี้ยง",
+      "roman": "miang",
+      "tone": "44ʔ",
+      "derived": true
+     }
+    ],
+    "tip_en": "Northern spelling เหมี้ยง (Matichon Academy, Matichon Weekly). The ห is silent: it just marks the tone. 'Om miang' (อมเหมี้ยง) = to hold/suck miang in the cheek. Tones derived - see meta.tone_method_note; low confidence."
+   },
+   "origin_province": [
+    "เชียงใหม่ (แม่กำปอง ฯลฯ) Chiang Mai",
+    "ลำปาง Lampang",
+    "แพร่ Phrae",
+    "น่าน Nan",
+    "เชียงราย Chiang Rai - highland 'ป่าเมี่ยง' villages"
+   ],
+   "season": "Picked 4 times a year: early (Apr-Jun, tough, astringent), mid (Jun-Aug), 'miang choi' (Aug-Oct, best), 'miang moei' (Nov-, small leaves)",
+   "occasion": "After meals; welcoming guests; merit-making, ordinations, funerals, housewarmings",
+   "serves": "a handful of quids",
+   "description_th": "สำหรับคนล้านนา 'เมี่ยง' หมายถึงใบชา (ชาอัสสัม Camellia sinensis var. assamica หรือ 'ชาป่า') ที่นำใบกึ่งอ่อนกึ่งแก่มามัดเป็นกำ นึ่ง 30 นาที-1 ชั่วโมงจนเหลืองนิ่ม แล้วหมักในบ่อ/ถัง 15 วันถึง 8 เดือน หมักสั้นได้ 'เมี่ยงฝาด' (คนเฒ่าชอบ) หมักนานได้ 'เมี่ยงส้ม' ผสมกันเป็น 'เมี่ยงส้มฝาด' วิธีกินแบบดั้งเดิม: คลี่ใบเมี่ยง 2-3 ใบ วางเกลือเม็ดตรงกลาง ม้วนแล้วอมเคี้ยวช้า ๆ บางคนใส่ขิงดอง แบบ 'เมี่ยงหวาน' ใส่มะพร้าวคั่ว น้ำตาล ถั่วลิสงคั่ว จารึกวัดพระธาตุหริภุญชัย พ.ศ. 2034 กล่าวถึง 'ค่าหมากเหมี้ยง' แสดงว่าเป็นธรรมเนียมเก่าแก่",
+   "description_en": "For Lanna people 'miang' means tea - Assam tea (Camellia sinensis var. assamica, 'wild tea') - not the Central Thai leaf-wrap snack. Half-mature leaves are tied in bundles, steamed 30-60 minutes until yellow and soft, and fermented in pits or tanks for 15 days to 8 months. Short fermentation gives astringent 'miang fat' (preferred by elders), long gives sour 'miang som', or a mix 'miang som fat'. Traditional way: open 2-3 leaves, put coarse salt in the middle, roll, and chew slowly held in the cheek; some add pickled ginger. 'Miang wan' adds toasted coconut, sugar and roasted peanut. A 1491 CE (BE 2034) inscription at Wat Phra That Hariphunchai mentions money for 'mak miang' (betel and miang) offerings.",
+   "ingredients": [
+    {
+     "name_th": "เมี่ยงหมัก (เมี่ยงส้ม/เมี่ยงฝาด)",
+     "name_kham_mueang_th": "เหมี้ยง",
+     "roman": "miang",
+     "name_en": "fermented tea leaves (sour or astringent)",
+     "qty_metric": "1 bundle (แหนบ)",
+     "role": "base",
+     "where_to_buy_th": "กาดหลวง (ตลาดวโรรส) ร้านของแห้ง/พริกแกง",
+     "where_to_buy_en": "Warorot (Kad Luang) dried-goods and curry-paste stalls, ground floor and the lanes around it",
+     "how_to_choose_en": "Moist, olive-brown, sour-clean smell; ask for 'miang som' if you're new",
+     "substitute_abroad_en": "Burmese laphet (fermented tea) is the closest equivalent",
+     "pronunciation_roman": "miang"
+    },
+    {
+     "name_th": "เกลือเม็ด",
+     "name_kham_mueang_th": "",
+     "roman": "kluea met",
+     "name_en": "coarse sea salt",
+     "qty_metric": "a pinch per quid",
+     "role": "classic filling",
+     "where_to_buy_th": "ซูเปอร์มาร์เก็ต/ร้านสะดวกซื้อ หรือร้านโชห่วยในกาด",
+     "where_to_buy_en": "Supermarket (Rimping, Tops, Big C, Makro) or the grocery stall in any market",
+     "how_to_choose_en": "",
+     "substitute_abroad_en": "",
+     "pronunciation_roman": "kluea met"
+    },
+    {
+     "name_th": "ขิงดอง",
+     "name_kham_mueang_th": "",
+     "roman": "khing dong",
+     "name_en": "pickled ginger",
+     "qty_metric": "a sliver",
+     "role": "optional",
+     "where_to_buy_th": "ตลาดต้นลำไย ฝั่งตรงข้ามกาดหลวง / กาดเช้าใกล้บ้าน",
+     "where_to_buy_en": "Ton Lamyai market (across the road from Warorot) or any neighbourhood morning market (kat chao)",
+     "how_to_choose_en": "",
+     "substitute_abroad_en": "",
+     "pronunciation_roman": "khing dong"
+    },
+    {
+     "name_th": "มะพร้าวคั่ว น้ำตาล ถั่วลิสงคั่ว",
+     "name_kham_mueang_th": "",
+     "roman": "maphrao khua",
+     "name_en": "toasted coconut, sugar, roasted peanuts (miang wan)",
+     "qty_metric": "a spoonful",
+     "role": "sweet version",
+     "where_to_buy_th": "ตลาดต้นลำไย ฝั่งตรงข้ามกาดหลวง / กาดเช้าใกล้บ้าน",
+     "where_to_buy_en": "Ton Lamyai market (across the road from Warorot) or any neighbourhood morning market (kat chao)",
+     "how_to_choose_en": "",
+     "substitute_abroad_en": "",
+     "pronunciation_roman": "maphrao khua"
+    }
+   ],
+   "equipment": [
+    {
+     "name_th": "ขันหรือพานเมี่ยง",
+     "kham_mueang_th": "",
+     "name_en": "a small tray/bowl to offer miang to guests",
+     "substitute_en": ""
+    }
+   ],
+   "prep_ahead_en": "None if buying ready-fermented miang. Making it takes months.",
+   "steps": [
+    {
+     "n": 1,
+     "th": "คลี่ใบเมี่ยงออก 2-3 ใบซ้อนกัน",
+     "en": "Peel off and stack 2-3 fermented leaves.",
+     "time_min": 0.5,
+     "sensory_cue_en": "Leaves damp, supple, sour-smelling.",
+     "tip_en": ""
+    },
+    {
+     "n": 2,
+     "th": "วางเกลือเม็ด (และขิงดอง) ตรงกลาง",
+     "en": "Put a few salt crystals (and ginger) in the middle.",
+     "time_min": 0.5,
+     "sensory_cue_en": "",
+     "tip_en": ""
+    },
+    {
+     "n": 3,
+     "th": "ม้วนเป็นคำเล็ก ๆ",
+     "en": "Roll into a small quid.",
+     "time_min": 0.5,
+     "sensory_cue_en": "Thumb-sized.",
+     "tip_en": ""
+    },
+    {
+     "n": 4,
+     "th": "อมไว้ข้างแก้ม เคี้ยวช้า ๆ",
+     "en": "Tuck in the cheek and chew slowly, sucking the juice.",
+     "time_min": 10,
+     "sensory_cue_en": "Sour, salty, astringent rush; mouth feels clean; mild caffeine buzz.",
+     "tip_en": ""
+    }
+   ],
+   "taste_profile": {
+    "sour": 4,
+    "salty": 3,
+    "spicy": 0,
+    "sweet": 0,
+    "bitter": 2,
+    "umami": 1,
+    "rating_note": "editorial estimate",
+    "texture_en": "Leathery, fibrous leaf.",
+    "description_th": "เปรี้ยว ฝาด เค็ม ชุ่มคอ",
+    "description_en": "Sour, astringent and salty; refreshing and mildly stimulating.",
+    "kham_mueang_taste_words": [
+     {
+      "th": "ส้ม",
+      "roman": "som",
+      "en": "sour",
+      "sources": [
+       "https://www.trueplookpanya.com/learning/detail/25566"
+      ]
+     },
+     {
+      "th": "ฝาด",
+      "roman": "fat",
+      "en": "astringent",
+      "sources": [
+       "https://www.trueplookpanya.com/learning/detail/25566"
+      ]
+     },
+     {
+      "th": "เก็ม",
+      "roman": "kem",
+      "en": "salty (Northern unaspirated k)",
+      "sources": [
+       "https://www.gotoknow.org/posts/551347"
+      ]
+     }
+    ]
+   },
+   "how_to_eat": {
+    "th": "หลังอาหารหรือยามว่าง ใช้ต้อนรับแขก คนเฒ่าอมเมี่ยงกับบุหรี่ขี้โยช่วงบ่าย",
+    "en": "After a meal or while chatting; offered to visitors from the welcome tray. Elders traditionally paired miang with a hand-rolled Northern cigarette in the afternoon.",
+    "with_what": "Salt, pickled ginger; nothing else needed",
+    "when_eaten": "After meals, afternoon, at ceremonies",
+    "sharing_etiquette_en": "Hosts pass the miang around; take one, roll your own. At weddings and funerals there are people whose job is serving miang."
+   },
+   "food_safety_en": "Contains caffeine. Buy from established vendors; fermented product should smell sour-clean, not putrid.",
+   "common_mistakes_foreigners_en": [
+    "Swallowing it like a snack - it's chewed slowly (modern soft versions can be swallowed).",
+    "Confusing Northern miang with Central 'miang kham' (betel-leaf wraps).",
+    "Drinking it as tea - fermented miang is chewed, not brewed."
+   ],
+   "useful_phrases": [
+    {
+     "kham_mueang_th": "อมเหมี้ยงก่อ",
+     "roman": "om miang ko",
+     "central_th": "อมเมี่ยงไหม",
+     "en": "Would you like some miang?",
+     "when": "Host offering to a guest",
+     "sources": [],
+     "confidence": "low"
+    },
+    {
+     "kham_mueang_th": "อันนี้กี่บาทเจ้า",
+     "roman": "an ni ki bat jao",
+     "central_th": "อันนี้กี่บาทคะ",
+     "en": "How much is this?",
+     "when": "Buying snacks and sweets at the market.",
+     "sources": [
+      "https://northspace.life/%E0%B8%A0%E0%B8%B2%E0%B8%A9%E0%B8%B2%E0%B9%80%E0%B8%AB%E0%B8%99%E0%B8%B7%E0%B8%AD/"
+     ]
+    }
+   ],
+   "cultural_notes_th": "ครัว.co: 'สำรับต้อนรับแขกที่มาเยี่ยมบ้านของชาวล้านนาจะประกอบด้วย...เมี่ยงหมัก' หมู่บ้านที่ปลูกเมี่ยงเรียก 'บ้านป่าเมี่ยง' ชาวบ้านเก็บใบด้วย 'เล็บเก็บเมี่ยง' เก็บเพียง 2 ใน 3 ของใบ ปัจจุบันคนรุ่นใหม่รู้จักน้อยลง สวพส. (HRDI) ระบุว่าชาเมี่ยงยังใช้ในพิธีกรรม งานศพ งานแต่ง ขึ้นบ้านใหม่",
+   "cultural_notes_en": "Krua.co: a Lanna welcome tray for visitors includes fermented miang. Tea-growing villages are called 'ban pa miang' (miang-forest villages); pickers use a finger blade ('lep kep miang') and take only two-thirds of each leaf. HRDI notes miang is still used in funerals, weddings, housewarmings and rituals, and supports forest-intercropped highland livelihoods. Younger people know it less.",
+   "sources": [
+    "https://krua.co/food_story/mieang-som-mieang-whan-lanna-refreshment/",
+    "https://www.khaosod.co.th/technologychaoban/how-to/tips/article_21570",
+    "https://www.matichon.co.th/weekly/column/article_172905",
+    "https://www.matichonacademy.com/tour-story/%E0%B9%80%E0%B8%AB%E0%B8%A1%E0%B8%B5%E0%B9%89%E0%B8%A2%E0%B8%87-%E0%B8%AB%E0%B8%A3%E0%B8%B7%E0%B8%AD-%E0%B9%80%E0%B8%A1%E0%B8%B5%E0%B9%88%E0%B8%A2%E0%B8%87-%E0%B8%84%E0%B8%B7%E0%B8%AD",
+    "https://hkm.hrdi.or.th/Knowledge/detail/657"
+   ],
+   "confidence": "high",
+   "needs_expert_review": [
+    "Tone of เหมี้ยง (derived 44ʔ)",
+    "Phrase อมเหมี้ยงก่อ is constructed, not sourced"
+   ]
+  },
+  {
+   "id": "nam_oi_nga_tam_oi",
+   "name_th": "น้ำอ้อย (น้ำตาลอ้อยก้อน) และงาตำอ้อย",
+   "name_kham_mueang_th": "น้ำอ้อย / งาตำอ้อย / เข้าบ่ายงาตำอ้อย",
+   "name_roman": "nam oi; nga tam oi",
+   "name_en": "Nam oi (Northern solid cane sugar) and nga tam oi (sesame pounded with cane sugar)",
+   "pronunciation": {
+    "syllables": [
+     {
+      "th": "น้ำ",
+      "roman": "nam",
+      "tone": "45",
+      "derived": true
+     },
+     {
+      "th": "อ้อย",
+      "roman": "oi",
+      "tone": "44ʔ",
+      "derived": true
+     }
+    ],
+    "tip_en": "WARNING for translators: in Central Thai น้ำอ้อย means sugarcane JUICE; in Lanna it usually means SOLID cane sugar made by boiling juice and setting it in blocks (Matichon Weekly). Tones derived - see meta.tone_method_note; low confidence."
+   },
+   "origin_province": [
+    "ทั่วล้านนา across Lanna"
+   ],
+   "season": "Cane-boiling after harvest; nga tam oi is a cool-season treat",
+   "occasion": "Cooking staple; winter snack",
+   "serves": "4 (nga tam oi)",
+   "description_th": "ในล้านนา 'น้ำอ้อย' คือน้ำอ้อยสดที่นำมาเคี่ยวแล้วทำเป็นก้อน ใช้ในแกงฮังเล ผักกาดดอง ตำ ยำ และขนม เช่น ข้าวแต๋น ขนมจ๊อก 'งาตำอ้อย' คืองาคั่วตำกับน้ำอ้อย ห่อในข้าวเหนียวเป็น 'ข้าวบ่ายงาตำอ้อย' กินอุ่นท้องหน้าหนาว",
+   "description_en": "In Lanna 'nam oi' is fresh cane juice boiled down and set into blocks - used in hang lay curry, pickled mustard greens, pounded salads and sweets such as khao taen and khanom jok. 'Nga tam oi' is toasted sesame pounded with nam oi, pressed into a ball of sticky rice ('khao bai nga tam oi') - a warming cool-season snack.",
+   "ingredients": [
+    {
+     "name_th": "น้ำอ้อยก้อน",
+     "name_kham_mueang_th": "น้ำอ้อย",
+     "roman": "nam oi",
+     "name_en": "Northern cane sugar block",
+     "qty_metric": "100 g",
+     "role": "sweet",
+     "where_to_buy_th": "กาดหลวง (ตลาดวโรรส) ร้านของแห้ง/พริกแกง",
+     "where_to_buy_en": "Warorot (Kad Luang) dried-goods and curry-paste stalls, ground floor and the lanes around it",
+     "how_to_choose_en": "Golden-brown, fragrant blocks or cakes; some are mixed with coconut",
+     "substitute_abroad_en": "Jaggery, panela, rapadura",
+     "pronunciation_roman": "nam oi"
+    },
+    {
+     "name_th": "งาดำหรืองาขาวคั่ว",
+     "name_kham_mueang_th": "งา",
+     "roman": "nga",
+     "name_en": "toasted black or white sesame",
+     "qty_metric": "100 g",
+     "role": "base",
+     "where_to_buy_th": "กาดหลวง (ตลาดวโรรส) ร้านของแห้ง/พริกแกง",
+     "where_to_buy_en": "Warorot (Kad Luang) dried-goods and curry-paste stalls, ground floor and the lanes around it",
+     "how_to_choose_en": "",
+     "substitute_abroad_en": "",
+     "pronunciation_roman": "nga"
+    },
+    {
+     "name_th": "เกลือ",
+     "name_kham_mueang_th": "",
+     "roman": "kluea",
+     "name_en": "salt",
+     "qty_metric": "pinch",
+     "role": "balance",
+     "where_to_buy_th": "ซูเปอร์มาร์เก็ต/ร้านสะดวกซื้อ หรือร้านโชห่วยในกาด",
+     "where_to_buy_en": "Supermarket (Rimping, Tops, Big C, Makro) or the grocery stall in any market",
+     "how_to_choose_en": "",
+     "substitute_abroad_en": "",
+     "pronunciation_roman": "kluea"
+    },
+    {
+     "name_th": "ข้าวเหนียวนึ่งร้อน",
+     "name_kham_mueang_th": "เข้านึ่ง",
+     "roman": "khao nueng",
+     "name_en": "hot steamed sticky rice",
+     "qty_metric": "300 g",
+     "role": "wrapper",
+     "where_to_buy_th": "ตลาดต้นลำไย ฝั่งตรงข้ามกาดหลวง / กาดเช้าใกล้บ้าน",
+     "where_to_buy_en": "Ton Lamyai market (across the road from Warorot) or any neighbourhood morning market (kat chao)",
+     "how_to_choose_en": "",
+     "substitute_abroad_en": "",
+     "pronunciation_roman": "khao nueng"
+    }
+   ],
+   "equipment": [
+    {
+     "name_th": "ครก",
+     "kham_mueang_th": "",
+     "name_en": "mortar",
+     "substitute_en": ""
+    },
+    {
+     "name_th": "กระทะ",
+     "kham_mueang_th": "",
+     "name_en": "dry pan for toasting",
+     "substitute_en": ""
+    }
+   ],
+   "prep_ahead_en": "Steam sticky rice.",
+   "steps": [
+    {
+     "n": 1,
+     "th": "คั่วงาไฟอ่อนจนหอม",
+     "en": "Dry-toast sesame on low heat.",
+     "time_min": 5,
+     "sensory_cue_en": "Seeds pop and smell nutty.",
+     "tip_en": "Burns fast - keep moving."
+    },
+    {
+     "n": 2,
+     "th": "ตำงากับน้ำอ้อยและเกลือจนเป็นเนื้อเดียว",
+     "en": "Pound sesame with chopped nam oi and salt to a sticky paste.",
+     "time_min": 10,
+     "sensory_cue_en": "Oily, clumping paste.",
+     "tip_en": ""
+    },
+    {
+     "n": 3,
+     "th": "ปั้นข้าวเหนียวร้อนห่อไส้งาตำอ้อย",
+     "en": "Flatten a handful of hot sticky rice, fill with the paste, close into a ball.",
+     "time_min": 5,
+     "sensory_cue_en": "",
+     "tip_en": ""
+    }
+   ],
+   "taste_profile": {
+    "sour": 0,
+    "salty": 1,
+    "spicy": 0,
+    "sweet": 4,
+    "bitter": 1,
+    "umami": 1,
+    "rating_note": "editorial estimate",
+    "texture_en": "Sticky, gritty-oily sesame paste inside chewy rice.",
+    "description_th": "หวานหอมงา",
+    "description_en": "Sweet, toasty sesame.",
+    "kham_mueang_taste_words": [
+     {
+      "th": "หวาน",
+      "roman": "wan",
+      "en": "sweet",
+      "sources": []
+     },
+     {
+      "th": "ลำ",
+      "roman": "lam",
+      "en": "delicious",
+      "sources": [
+       "https://www.trueplookpanya.com/learning/detail/25566",
+       "https://www.chiangrai108.com/artsculture/10392/"
+      ]
+     },
+     {
+      "th": "ลำขนาด",
+      "roman": "lam khanat",
+      "en": "super tasty",
+      "sources": [
+       "https://cookpad.com/th/recipes/16454331"
+      ]
+     }
+    ]
+   },
+   "how_to_eat": {
+    "th": "กินอุ่น ๆ ตอนเช้าหน้าหนาว",
+    "en": "Eat warm on cool mornings.",
+    "with_what": "Hot tea",
+    "when_eaten": "Cool season",
+    "sharing_etiquette_en": "Made at home and shared."
+   },
+   "food_safety_en": "Sesame is a common allergen.",
+   "common_mistakes_foreigners_en": [
+    "Ordering 'nam oi' expecting cane juice - ask for 'น้ำอ้อยคั้น' (fresh-pressed cane juice) if that's what you want."
+   ],
+   "useful_phrases": [
+    {
+     "kham_mueang_th": "น้ำอ้อยคั้นมีก่อเจ้า",
+     "roman": "nam oi khan mi ko jao",
+     "central_th": "มีน้ำอ้อยคั้นไหมคะ",
+     "en": "Do you have fresh cane juice?",
+     "when": "At a drinks stall, to avoid the solid-sugar meaning",
+     "sources": [],
+     "confidence": "low"
+    },
+    {
+     "kham_mueang_th": "อันนี้กี่บาทเจ้า",
+     "roman": "an ni ki bat jao",
+     "central_th": "อันนี้กี่บาทคะ",
+     "en": "How much is this?",
+     "when": "Buying snacks and sweets at the market.",
+     "sources": [
+      "https://northspace.life/%E0%B8%A0%E0%B8%B2%E0%B8%A9%E0%B8%B2%E0%B9%80%E0%B8%AB%E0%B8%99%E0%B8%B7%E0%B8%AD/"
+     ]
+    }
+   ],
+   "cultural_notes_th": "มติชนสุดสัปดาห์: 'ในล้านนาเราจะใช้น้ำอ้อยสดมาเคี่ยวแล้วทำเป็นก้อน เรียกว่า น้ำอ้อย' ส่วน 'อ้อยแดง' ใช้ในยาและพิธีกรรม",
+   "cultural_notes_en": "Matichon Weekly: 'In Lanna we boil fresh cane juice and make it into blocks, and call that nam oi.' Red sugarcane (oi daeng) is used in medicine and rituals.",
+   "sources": [
+    "https://www.matichon.co.th/weekly/column/article_710513",
+    "https://www.agrinewsthai.com/did-you-know/161361"
+   ],
+   "confidence": "high",
+   "needs_expert_review": [
+    "Proportions for nga tam oi are a home ratio, not sourced"
+   ]
+  },
+  {
+   "id": "cha_miang_assam_tea",
+   "name_th": "ชาเมี่ยง / ชาอัสสัม (ชงดื่ม)",
+   "name_kham_mueang_th": "น้ำเหมี้ยง? (ยังไม่ยืนยัน) / ชา",
+   "name_roman": "cha miang",
+   "name_en": "Cha miang - brewed Northern Assam ('wild') tea",
+   "pronunciation": {
+    "syllables": [
+     {
+      "th": "ชา",
+      "roman": "cha",
+      "tone": "33",
+      "derived": true
+     },
+     {
+      "th": "เมี่ยง",
+      "roman": "miang",
+      "tone": "42",
+      "derived": true
+     }
+    ],
+    "tip_en": "Central spelling given; see miang entry for Northern เหมี้ยง. Tones derived - see meta.tone_method_note; low confidence."
+   },
+   "origin_province": [
+    "เชียงใหม่ Chiang Mai",
+    "เชียงราย Chiang Rai",
+    "น่าน Nan",
+    "แพร่ Phrae - highland tea villages"
+   ],
+   "season": "All year",
+   "occasion": "Everyday; homestays in tea villages",
+   "serves": "2",
+   "description_th": "สวพส. (สถาบันวิจัยและพัฒนาพื้นที่สูง) ระบุว่าชาอัสสัม หรือ ชาป่า ชาพื้นเมือง ชาเมี่ยง ปลูกมากบนพื้นที่สูงภาคเหนือ มีสารโพลีฟีนอลและฟลาโวนอยด์ ปัจจุบันนอกจากหมักเป็นเมี่ยงแล้ว ยังแปรรูปเป็นชาชงดื่ม",
+   "description_en": "HRDI (Highland Research and Development Institute) describes Assam tea - locally 'wild tea', 'native tea' or 'cha miang' - as widely grown in Northern highlands and rich in polyphenols and flavonoids. Besides fermenting for chewing, it is increasingly processed as brewing tea. Traditional Lanna use of miang was chewing, not drinking (Matichon Academy).",
+   "ingredients": [
+    {
+     "name_th": "ใบชาอัสสัมแห้ง",
+     "name_kham_mueang_th": "",
+     "roman": "bai cha",
+     "name_en": "dried Assam/wild tea leaves",
+     "qty_metric": "2 tsp (4 g)",
+     "role": "base",
+     "where_to_buy_th": "กาดหลวง (ตลาดวโรรส) ร้านของแห้ง/พริกแกง",
+     "where_to_buy_en": "Warorot (Kad Luang) dried-goods and curry-paste stalls, ground floor and the lanes around it",
+     "how_to_choose_en": "Buy from hill-village producers or Warorot tea stalls",
+     "substitute_abroad_en": "",
+     "pronunciation_roman": "bai cha"
+    },
+    {
+     "name_th": "น้ำร้อน",
+     "name_kham_mueang_th": "",
+     "roman": "nam ron",
+     "name_en": "hot water ~90-95 C",
+     "qty_metric": "400 ml",
+     "role": "brew",
+     "where_to_buy_th": "ตลาดต้นลำไย ฝั่งตรงข้ามกาดหลวง / กาดเช้าใกล้บ้าน",
+     "where_to_buy_en": "Ton Lamyai market (across the road from Warorot) or any neighbourhood morning market (kat chao)",
+     "how_to_choose_en": "",
+     "substitute_abroad_en": "",
+     "pronunciation_roman": "nam ron"
+    }
+   ],
+   "equipment": [
+    {
+     "name_th": "กาน้ำชา",
+     "kham_mueang_th": "",
+     "name_en": "teapot",
+     "substitute_en": ""
+    }
+   ],
+   "prep_ahead_en": "None.",
+   "steps": [
+    {
+     "n": 1,
+     "th": "ลวกกา ใส่ใบชา เทน้ำร้อน",
+     "en": "Warm the pot, add leaves, pour hot water.",
+     "time_min": 1,
+     "sensory_cue_en": "",
+     "tip_en": ""
+    },
+    {
+     "n": 2,
+     "th": "แช่ 2-3 นาที รินดื่ม",
+     "en": "Steep 2-3 minutes; pour.",
+     "time_min": 3,
+     "sensory_cue_en": "Amber liquor, brisk and slightly smoky.",
+     "tip_en": ""
+    }
+   ],
+   "taste_profile": {
+    "sour": 0,
+    "salty": 0,
+    "spicy": 0,
+    "sweet": 0,
+    "bitter": 2,
+    "umami": 1,
+    "rating_note": "editorial estimate",
+    "texture_en": "Light-bodied, astringent finish.",
+    "description_th": "ฝาดนิด ๆ หอม",
+    "description_en": "Brisk, lightly astringent.",
+    "kham_mueang_taste_words": [
+     {
+      "th": "ฝาด",
+      "roman": "fat",
+      "en": "astringent",
+      "sources": [
+       "https://www.trueplookpanya.com/learning/detail/25566"
+      ]
+     },
+     {
+      "th": "ขม",
+      "roman": "khom",
+      "en": "bitter",
+      "sources": []
+     }
+    ]
+   },
+   "how_to_eat": {
+    "th": "ดื่มร้อน ๆ ไม่ใส่นม",
+    "en": "Drink hot, plain.",
+    "with_what": "Sweets like khanom pat",
+    "when_eaten": "Any time",
+    "sharing_etiquette_en": "Hosts refill cups; leave a little if you've had enough."
+   },
+   "food_safety_en": "Caffeine.",
+   "common_mistakes_foreigners_en": [
+    "Assuming it's the orange Thai milk tea (cha yen) - a different product."
+   ],
+   "useful_phrases": [
+    {
+     "kham_mueang_th": "ปอแล้วเจ้า",
+     "roman": "po laeo jao",
+     "central_th": "พอแล้วค่ะ",
+     "en": "That's enough, thank you",
+     "when": "When a host keeps refilling your bowl.",
+     "sources": [
+      "https://northspace.life/%E0%B8%A0%E0%B8%B2%E0%B8%A9%E0%B8%B2%E0%B9%80%E0%B8%AB%E0%B8%99%E0%B8%B7%E0%B8%AD/"
+     ]
+    }
+   ],
+   "cultural_notes_th": "หมู่บ้านชาอย่างแม่กำปอง (เชียงใหม่) เป็นแหล่งท่องเที่ยวชุมชน (ยังไม่ได้เปิดแหล่งยืนยันในรอบนี้)",
+   "cultural_notes_en": "Tea villages such as Mae Kampong (Chiang Mai) are community-tourism destinations (not verified with an opened source this round).",
+   "sources": [
+    "https://hkm.hrdi.or.th/Knowledge/detail/657",
+    "https://www.matichonacademy.com/tour-story/%E0%B9%80%E0%B8%AB%E0%B8%A1%E0%B8%B5%E0%B9%89%E0%B8%A2%E0%B8%87-%E0%B8%AB%E0%B8%A3%E0%B8%B7%E0%B8%AD-%E0%B9%80%E0%B8%A1%E0%B8%B5%E0%B9%88%E0%B8%A2%E0%B8%87-%E0%B8%84%E0%B8%B7%E0%B8%AD"
+   ],
+   "confidence": "low",
+   "needs_expert_review": [
+    "Kham Mueang name for brewed tea",
+    "Brewing parameters are generic"
+   ]
+  }
+ ]
+}

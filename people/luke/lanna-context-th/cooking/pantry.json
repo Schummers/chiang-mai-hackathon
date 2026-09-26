@@ -1,0 +1,1722 @@
+[
+ {
+  "name_th": "ถั่วเน่าแข็บ (ถั่วเน่าแผ่น)",
+  "kham_mueang_th": "ถั่วเน่าแข็บ",
+  "roman": "thua nao khaep",
+  "name_en": "Dried fermented soybean discs",
+  "what_it_is_en": "Soybeans boiled, fermented 2-3 days with naturally present Bacillus bacteria (in banana-leaf-lined baskets or cloth sacks), ground with salt, pressed into thin rounds and sun-dried on bamboo racks. Keeps for about a year. Associated with Tai Yai (Shan), Tai Lue and Lanna cooking.",
+  "flavour_en": "Mildly salty, deep umami, fermented aroma that softens when toasted.",
+  "used_in": [
+   "น้ำพริกอ่อง (some recipes)",
+   "น้ำพริกถั่วเน่า",
+   "แกงฮังเล",
+   "จอผักกาด",
+   "น้ำเงี้ยว",
+   "general seasoning like shrimp paste"
+  ],
+  "where_to_buy_en": "Warorot Market (Kad Luang / กาดหลวง): northern food and dry-goods stalls, incl. vendors selling packaged take-home northern items; also at any neighbourhood morning market (กาดเช้า / กาดหมั้ว) or evening market (กาดแลง) (dry-goods / northern ingredient stalls).",
+  "substitute_abroad_en": "Japanese natto (dried/toasted) or a little Korean doenjang/miso for umami; not identical.",
+  "pronunciation": {
+   "syllables": [
+    {
+     "th": "ถั่ว",
+     "roman": "thua",
+     "tone": "21"
+    },
+    {
+     "th": "เน่า",
+     "roman": "nao",
+     "tone": "42"
+    },
+    {
+     "th": "แข็บ",
+     "roman": "khaep",
+     "tone": "24"
+    }
+   ],
+   "tone_source": "derived",
+   "confidence": "low",
+   "tip_en": "Before use, toast the disc over a low flame/charcoal until it lightens and turns crisp-crumbly (reduces the fermented smell), then pound. Tones are Chiang Mai Northern Thai values (24 low-rising, 21 low-falling, 44ʔ high-level glottal, 33 mid, 42 high-falling, 45 high-rising) DERIVED by applying the Chiang Mai tone-box correspondences (Wikipedia 'Northern Thai language') to the etymological Thai spelling. Not checked against a native-speaker recording; treat as a guide."
+  },
+  "sources": [
+   "https://krua.co/food_story/tuanao/",
+   "https://krua.co/food_story/jor-pakkad",
+   "https://www.chiangmainews.co.th/page/archives/483972/"
+  ],
+  "confidence": "high",
+  "notes_th": "ก่อนใช้ นำถั่วเน่าแข็บมาอังไฟให้สุก สีอ่อนลง กรอบร่วน (ครัว.co)"
+ },
+ {
+  "name_th": "ถั่วเน่าเมอะ",
+  "kham_mueang_th": "ถั่วเน่าเมอะ",
+  "roman": "thua nao moe",
+  "name_en": "Fermented soybean paste (wet)",
+  "what_it_is_en": "Ground fermented soybeans mixed with salt, shallot, garlic and dried chilli, wrapped in banana leaf and steamed or grilled.",
+  "flavour_en": "Salty-umami, pungent, soft paste.",
+  "used_in": [
+   "eaten as a relish with sticky rice",
+   "seasoning in curries and chilli dips"
+  ],
+  "where_to_buy_en": "Warorot Market (Kad Luang / กาดหลวง): northern food and dry-goods stalls, incl. vendors selling packaged take-home northern items; any neighbourhood morning market (กาดเช้า / กาดหมั้ว) or evening market (กาดแลง) (sold in banana-leaf packets).",
+  "substitute_abroad_en": "Miso mixed with a little chilli and garlic (approximation).",
+  "pronunciation": {
+   "syllables": [
+    {
+     "th": "ถั่ว",
+     "roman": "thua",
+     "tone": "21"
+    },
+    {
+     "th": "เน่า",
+     "roman": "nao",
+     "tone": "42"
+    },
+    {
+     "th": "เมอะ",
+     "roman": "moe",
+     "tone": "45"
+    }
+   ],
+   "tone_source": "derived",
+   "confidence": "low",
+   "tip_en": "Tones are Chiang Mai Northern Thai values (24 low-rising, 21 low-falling, 44ʔ high-level glottal, 33 mid, 42 high-falling, 45 high-rising) DERIVED by applying the Chiang Mai tone-box correspondences (Wikipedia 'Northern Thai language') to the etymological Thai spelling. Not checked against a native-speaker recording; treat as a guide."
+  },
+  "sources": [
+   "https://krua.co/food_story/tuanao/"
+  ],
+  "confidence": "high"
+ },
+ {
+  "name_th": "ถั่วเน่าซา",
+  "kham_mueang_th": "ถั่วเน่าซา",
+  "roman": "thua nao sa",
+  "name_en": "Freshly fermented whole soybeans",
+  "what_it_is_en": "The first stage after 2-3 days' fermentation: beans with fluffy white mould and a fermented smell; the base for the paste and discs.",
+  "flavour_en": "Strong fermented aroma, soft beans, mildly salty only after seasoning.",
+  "used_in": [
+   "คั่วถั่วเน่าซา (Tai Yai style stir-fry with galangal, lemongrass, chilli, turmeric, tomato)"
+  ],
+  "where_to_buy_en": "any neighbourhood morning market (กาดเช้า / กาดหมั้ว) or evening market (กาดแลง) (less common; ask northern-ingredient vendors).",
+  "substitute_abroad_en": "Fresh natto.",
+  "pronunciation": {
+   "syllables": [
+    {
+     "th": "ถั่ว",
+     "roman": "thua",
+     "tone": "21"
+    },
+    {
+     "th": "เน่า",
+     "roman": "nao",
+     "tone": "42"
+    },
+    {
+     "th": "ซา",
+     "roman": "sa",
+     "tone": "33"
+    }
+   ],
+   "tone_source": "derived",
+   "confidence": "low",
+   "tip_en": "Tones are Chiang Mai Northern Thai values (24 low-rising, 21 low-falling, 44ʔ high-level glottal, 33 mid, 42 high-falling, 45 high-rising) DERIVED by applying the Chiang Mai tone-box correspondences (Wikipedia 'Northern Thai language') to the etymological Thai spelling. Not checked against a native-speaker recording; treat as a guide."
+  },
+  "sources": [
+   "https://krua.co/food_story/tuanao/"
+  ],
+  "confidence": "high"
+ },
+ {
+  "name_th": "น้ำปู / น้ำปู๋",
+  "kham_mueang_th": "น้ำปู๋",
+  "roman": "nam pu",
+  "name_en": "Northern field-crab paste ('crab extract')",
+  "what_it_is_en": "Rice-field crabs pounded with herbs (lemongrass leaves, turmeric leaves; some places add guava or hog-plum leaves), squeezed and strained, rested overnight, then simmered on low heat for a long time (a day or more) until thick and black. Made once a year in the rainy season, around September-October. Famous in Chiang Rai, Lampang and Nan.",
+  "flavour_en": "Very intense, earthy, salty-umami, slightly herbal; black and sticky.",
+  "used_in": [
+   "น้ำพริกน้ำปู๋",
+   "ยำหน่อไม้",
+   "แกงหน่อไม้",
+   "ตำส้มโอ",
+   "ตำกระท้อน",
+   "ตำแตง"
+  ],
+  "where_to_buy_en": "Warorot Market (Kad Luang / กาดหลวง): northern food and dry-goods stalls, incl. vendors selling packaged take-home northern items (northern condiment stalls; sold in small jars). Seasonal fresh batches appear after October.",
+  "substitute_abroad_en": "No real substitute. A very small amount of Thai shrimp paste (kapi) plus a drop of dark soy gives a distant idea.",
+  "pronunciation": {
+   "syllables": [
+    {
+     "th": "น้ำ",
+     "roman": "nam",
+     "tone": "45"
+    },
+    {
+     "th": "ปู๋",
+     "roman": "pu",
+     "tone": "24"
+    }
+   ],
+   "tone_source": "derived",
+   "confidence": "low",
+   "tip_en": "Northerners write ปู๋ with the ๋ mark because the Chiang Mai tone on ปู sounds rising to Central Thai ears. Tones are Chiang Mai Northern Thai values (24 low-rising, 21 low-falling, 44ʔ high-level glottal, 33 mid, 42 high-falling, 45 high-rising) DERIVED by applying the Chiang Mai tone-box correspondences (Wikipedia 'Northern Thai language') to the etymological Thai spelling. Not checked against a native-speaker recording; treat as a guide."
+  },
+  "sources": [
+   "https://www.maenoicurry.com/en/article/20/%E0%B8%99%E0%B9%89%E0%B8%B3%E0%B8%9B%E0%B8%B9%E0%B8%84%E0%B8%B7%E0%B8%AD%E0%B8%AD%E0%B8%B0%E0%B9%84%E0%B8%A3",
+   "https://www.namnuntawan.com/index.php?route=information/information&information_id=29",
+   "https://lannainfo.library.cmu.ac.th/en_lannafood/detail_lannafood.php?id_food=163",
+   "https://www.wongnai.com/food-tips/top-35-must-try-northern-thai-dishes"
+  ],
+  "confidence": "high",
+  "notes_th": "น้ำปูนิยมทำกันในฤดูฝน ช่วงเดือนกันยายน-ตุลาคม ปีหนึ่งทำครั้งเดียว (แม่น้อย)",
+  "needs_expert_review": "Recipe proportions (3 kg crabs : 6 lemongrass : 2 cups turmeric leaves : 2 Tbsp salt) come from a commercial curry-paste maker's article; confirm with a Nan/Chiang Rai maker."
+ },
+ {
+  "name_th": "ปลาร้า (ปลาฮ้า)",
+  "kham_mueang_th": "ปลาฮ้า / ฮ้า",
+  "roman": "pla ha",
+  "name_en": "Fermented fish (northern style)",
+  "what_it_is_en": "Salt-fermented fish. Central Thai call it ปลาร้า, Isan ปลาแดก, and in the northern kitchen it is ปลาฮ้า (Northern h for Central r). Some vendors season nam phrik num with it.",
+  "flavour_en": "Funky, very salty, umami.",
+  "used_in": [
+   "น้ำพริกหนุ่ม (some versions)",
+   "น้ำพริกอ่อง (some versions)",
+   "แกง, ส้า"
+  ],
+  "where_to_buy_en": "Warorot Market (Kad Luang / กาดหลวง): northern food and dry-goods stalls, incl. vendors selling packaged take-home northern items; any neighbourhood morning market (กาดเช้า / กาดหมั้ว) or evening market (กาดแลง). Ask for cooked/boiled (ต้มสุก) fermented fish sauce if eating uncooked.",
+  "substitute_abroad_en": "Bottled cooked pla ra sauce from Asian groceries; or extra fish sauce + anchovy paste.",
+  "pronunciation": {
+   "syllables": [
+    {
+     "th": "ปลา",
+     "roman": "pa",
+     "tone": "24"
+    },
+    {
+     "th": "ฮ้า",
+     "roman": "ha",
+     "tone": "45"
+    }
+   ],
+   "tone_source": "derived",
+   "confidence": "low",
+   "tip_en": "Northern often drops the l in pl-clusters; forms 'pla' and 'pa' both heard. Tones are Chiang Mai Northern Thai values (24 low-rising, 21 low-falling, 44ʔ high-level glottal, 33 mid, 42 high-falling, 45 high-rising) DERIVED by applying the Chiang Mai tone-box correspondences (Wikipedia 'Northern Thai language') to the etymological Thai spelling. Not checked against a native-speaker recording; treat as a guide."
+  },
+  "sources": [
+   "https://krua.co/food_story/pla-ra",
+   "https://www.wongnai.com/food-tips/green-chili-dip-nam-prick-noom-chiangmai",
+   "https://vanusnun.com/en/blogs/articles/tomatothaichilipaste"
+  ],
+  "confidence": "medium",
+  "needs_expert_review": "Krua.co only names ปลาฮ้า for the North; exact local production differences from Isan pla daek were not documented in sources opened."
+ },
+ {
+  "name_th": "กะปิ",
+  "kham_mueang_th": "กะปิ",
+  "roman": "kapi",
+  "name_en": "Shrimp paste",
+  "what_it_is_en": "Fermented shrimp paste, used in the CMU Lanna Food nam phrik ong paste and in northern curry pastes; some nam phrik num versions add a little roasted in banana leaf.",
+  "flavour_en": "Salty, pungent, umami.",
+  "used_in": [
+   "น้ำพริกอ่อง",
+   "พริกแกงฮังเล",
+   "น้ำพริกหนุ่ม (variant)"
+  ],
+  "where_to_buy_en": "Warorot Market (Kad Luang / กาดหลวง): northern food and dry-goods stalls, incl. vendors selling packaged take-home northern items; any market or supermarket.",
+  "substitute_abroad_en": "Thai/Malaysian shrimp paste (belacan) from Asian groceries.",
+  "pronunciation": {
+   "syllables": [
+    {
+     "th": "กะ",
+     "roman": "ka",
+     "tone": "24"
+    },
+    {
+     "th": "ปิ",
+     "roman": "pi",
+     "tone": "24"
+    }
+   ],
+   "tone_source": "derived",
+   "confidence": "low",
+   "tip_en": "Tones are Chiang Mai Northern Thai values (24 low-rising, 21 low-falling, 44ʔ high-level glottal, 33 mid, 42 high-falling, 45 high-rising) DERIVED by applying the Chiang Mai tone-box correspondences (Wikipedia 'Northern Thai language') to the etymological Thai spelling. Not checked against a native-speaker recording; treat as a guide."
+  },
+  "sources": [
+   "https://lannainfo.library.cmu.ac.th/en_lannafood/detail_lannafood.php?id_food=174",
+   "https://krua.co/food_story/hang-lay-curry",
+   "https://guide.michelin.com/th/th/article/features/iconic-dishes-what-is-nam-phrik-num"
+  ],
+  "confidence": "high"
+ },
+ {
+  "name_th": "แคบหมู",
+  "kham_mueang_th": "แคบหมู",
+  "roman": "khaep mu",
+  "name_en": "Northern pork cracklings / puffed pork rind",
+  "what_it_is_en": "'แคบ' in Northern means animal skin/fat rendered until crisp. Types: ไร้มัน (skin only, no fat), ติดมัน (skin with a fat and meat layer), มันล้วน (all fat), plus แคบไขหมู and buffalo แคบควาย.",
+  "flavour_en": "Crunchy, porky, salty; ติดมัน is rich, ไร้มัน light and airy.",
+  "used_in": [
+   "eaten with น้ำพริกหนุ่ม and น้ำพริกอ่อง",
+   "ขนมจีนน้ำเงี้ยว topping",
+   "snack",
+   "added to curries"
+  ],
+  "where_to_buy_en": "Warorot Market (Kad Luang / กาดหลวง): northern food and dry-goods stalls, incl. vendors selling packaged take-home northern items: long-running pork-rind shops (Wongnai names Damrong, Je Hong, Sri Phan, Naem Boon Sri); also Ton Phayom market and souvenir shops.",
+  "substitute_abroad_en": "Chicharrón (Mexican) or UK pork scratchings; pick puffed, not hard, styles.",
+  "pronunciation": {
+   "syllables": [
+    {
+     "th": "แคบ",
+     "roman": "kaep",
+     "tone": "42"
+    },
+    {
+     "th": "หมู",
+     "roman": "mu",
+     "tone": "24"
+    }
+   ],
+   "tone_source": "derived",
+   "confidence": "low",
+   "tip_en": "Northern pronounces ค as an unaspirated k. CMU transliterates 'Khaep mu'. Tones are Chiang Mai Northern Thai values (24 low-rising, 21 low-falling, 44ʔ high-level glottal, 33 mid, 42 high-falling, 45 high-rising) DERIVED by applying the Chiang Mai tone-box correspondences (Wikipedia 'Northern Thai language') to the etymological Thai spelling. Not checked against a native-speaker recording; treat as a guide."
+  },
+  "sources": [
+   "https://www.reviewchiangmai.com/cab-moo-sai-oua/",
+   "https://www.wongnai.com/food-tips/pork-rinds-cm",
+   "https://lannainfo.library.cmu.ac.th/en_lannafood/detail_lannafood.php?id_food=194",
+   "https://www.chiangmaihomeguide.com/warorot-market-kad-luang/"
+  ],
+  "confidence": "high"
+ },
+ {
+  "name_th": "ไส้อั่ว",
+  "kham_mueang_th": "ไส้อั่ว",
+  "roman": "sai ua",
+  "name_en": "Northern herb sausage",
+  "what_it_is_en": "Pork stuffed into pork intestine with a herb paste and grilled. 'อั่ว' means to stuff/insert into the middle; it is traditionally paired with แคบหมู because both came from the same pig slaughter.",
+  "flavour_en": "Herbal (lemongrass, galangal, kaffir lime), mildly spicy, salty, smoky.",
+  "used_in": [
+   "eaten with sticky rice and น้ำพริกหนุ่ม",
+   "ขันโตก set"
+  ],
+  "where_to_buy_en": "Warorot Market (Kad Luang / กาดหลวง): northern food and dry-goods stalls, incl. vendors selling packaged take-home northern items (ready-grilled and vacuum-packed).",
+  "substitute_abroad_en": "No close substitute; a herby fresh pork sausage grilled over charcoal.",
+  "pronunciation": {
+   "syllables": [
+    {
+     "th": "ไส้",
+     "roman": "sai",
+     "tone": "44ʔ"
+    },
+    {
+     "th": "อั่ว",
+     "roman": "ua",
+     "tone": "21"
+    }
+   ],
+   "tone_source": "derived",
+   "confidence": "low",
+   "tip_en": "Tones are Chiang Mai Northern Thai values (24 low-rising, 21 low-falling, 44ʔ high-level glottal, 33 mid, 42 high-falling, 45 high-rising) DERIVED by applying the Chiang Mai tone-box correspondences (Wikipedia 'Northern Thai language') to the etymological Thai spelling. Not checked against a native-speaker recording; treat as a guide."
+  },
+  "sources": [
+   "https://www.reviewchiangmai.com/cab-moo-sai-oua/",
+   "https://www.wongnai.com/food-tips/top-35-must-try-northern-thai-dishes",
+   "https://www.chiangmaihomeguide.com/warorot-market-kad-luang/"
+  ],
+  "confidence": "high"
+ },
+ {
+  "name_th": "แหนม (จิ๊นส้ม)",
+  "kham_mueang_th": "จิ๊นส้ม",
+  "roman": "jin som",
+  "name_en": "Northern sour fermented pork",
+  "what_it_is_en": "Pork (with skin) fermented with rice, salt and garlic until sour. Central Thai แหนม; Northern จิ๊นส้ม ('sour meat'); จิ๊นส้มหมก is the version grilled in banana leaf.",
+  "flavour_en": "Sour, garlicky, salty.",
+  "used_in": [
+   "eaten with chillies/garlic",
+   "จิ๊นส้มหมก",
+   "ไข่ป่าม variants"
+  ],
+  "where_to_buy_en": "Warorot Market (Kad Luang / กาดหลวง): northern food and dry-goods stalls, incl. vendors selling packaged take-home northern items (Naem shops).",
+  "substitute_abroad_en": "Vietnamese nem chua.",
+  "pronunciation": {
+   "syllables": [
+    {
+     "th": "จิ๊น",
+     "roman": "jin",
+     "tone": "45"
+    },
+    {
+     "th": "ส้ม",
+     "roman": "som",
+     "tone": "44ʔ"
+    }
+   ],
+   "tone_source": "derived",
+   "confidence": "low",
+   "tip_en": "จิ๊น is the Northern form of ชิ้น 'meat' (ch→j). Tones are Chiang Mai Northern Thai values (24 low-rising, 21 low-falling, 44ʔ high-level glottal, 33 mid, 42 high-falling, 45 high-rising) DERIVED by applying the Chiang Mai tone-box correspondences (Wikipedia 'Northern Thai language') to the etymological Thai spelling. Not checked against a native-speaker recording; treat as a guide."
+  },
+  "sources": [
+   "https://www.wongnai.com/food-tips/top-35-must-try-northern-thai-dishes",
+   "https://www.fixconcern.com/order-food-in-northern-languages/"
+  ],
+  "confidence": "medium",
+  "needs_expert_review": "Uncooked fermented pork carries food-safety risks; confirm current guidance."
+ },
+ {
+  "name_th": "หมูสับติดมัน",
+  "kham_mueang_th": "จิ๊นหมูสับ",
+  "roman": "jin mu sap",
+  "name_en": "Fatty minced pork",
+  "what_it_is_en": "Minced pork with some fat, the base of nam phrik ong. Chiang Mai News recommends choosing mince with a little fat.",
+  "flavour_en": "Rich, sweetish.",
+  "used_in": [
+   "น้ำพริกอ่อง",
+   "ไส้อั่ว",
+   "ลาบคั่ว"
+  ],
+  "where_to_buy_en": "Ton Lamyai Market (กาดต้นลำไย), directly opposite Warorot: fresh vegetables, fruit, meat; meat section at Warorot Market (Kad Luang / กาดหลวง): northern food and dry-goods stalls, incl. vendors selling packaged take-home northern items; any market (ask the butcher to mince: สับหื้อแน่).",
+  "substitute_abroad_en": "Pork mince 15-20% fat.",
+  "pronunciation": {
+   "syllables": [],
+   "tone_source": "derived",
+   "confidence": "low",
+   "tip_en": "Kham Mueang จิ๊น = meat. Tones not derived for the whole phrase."
+  },
+  "sources": [
+   "https://www.chiangmainews.co.th/page/archives/483972/",
+   "https://www.wongnai.com/recipes/thai-northen-style-chilli-relish"
+  ],
+  "confidence": "medium",
+  "needs_expert_review": "The Kham Mueang phrase 'จิ๊นหมูสับ' is assembled from จิ๊น (meat) + Central หมูสับ; confirm what vendors actually say."
+ },
+ {
+  "name_th": "พริกหนุ่ม",
+  "kham_mueang_th": "พริกหนุ่ม",
+  "roman": "phrik num",
+  "name_en": "Northern long green chilli ('young chilli')",
+  "what_it_is_en": "Long, slender, pale yellow-green chilli used green for roasting. Michelin describes it as young unripe chilli; Baan Lae Suan says it is a specific mild variety rather than simply unripe chilli. Not very hot.",
+  "flavour_en": "Mild to medium heat, sweet-grassy, smoky when charred.",
+  "used_in": [
+   "น้ำพริกหนุ่ม",
+   "น้ำพริกน้ำปู๋ (some versions)"
+  ],
+  "where_to_buy_en": "Ton Lamyai Market (กาดต้นลำไย), directly opposite Warorot: fresh vegetables, fruit, meat; Muang Mai Market (กาดเมืองใหม่), by the Ping River: wholesale fresh vegetables/fruit from about 2 am, retail stalls through the day; any neighbourhood morning market (กาดเช้า / กาดหมั้ว) or evening market (กาดแลง).",
+  "substitute_abroad_en": "Anaheim, Hungarian wax, or long green (Turkish/Italian) peppers; mix in a jalapeño if too mild.",
+  "pronunciation": {
+   "syllables": [
+    {
+     "th": "พริก",
+     "roman": "phik",
+     "tone": "45"
+    },
+    {
+     "th": "หนุ่ม",
+     "roman": "num",
+     "tone": "21"
+    }
+   ],
+   "tone_source": "derived",
+   "confidence": "low",
+   "tip_en": "Northern speakers usually drop the r: 'phik'. หนุ่ม = young (man). Tones are Chiang Mai Northern Thai values (24 low-rising, 21 low-falling, 44ʔ high-level glottal, 33 mid, 42 high-falling, 45 high-rising) DERIVED by applying the Chiang Mai tone-box correspondences (Wikipedia 'Northern Thai language') to the etymological Thai spelling. Not checked against a native-speaker recording; treat as a guide."
+  },
+  "sources": [
+   "https://guide.michelin.com/th/th/article/features/iconic-dishes-what-is-nam-phrik-num",
+   "https://kindeeyuudee.baanlaesuan.com/easy-cooking/nam-prik-num/",
+   "https://www.the101.world/kab-khoa-kab-khaek-47/",
+   "https://lannainfo.library.cmu.ac.th/en_lannafood/detail_lannafood.php?id_food=172"
+  ],
+  "confidence": "high",
+  "needs_expert_review": "Sources disagree whether พริกหนุ่ม is a cultivar or just unripe chilli; seed sellers market 'พริกหนุ่มเขียว' as a variety."
+ },
+ {
+  "name_th": "พริกแห้ง (พริกแห้งเม็ดใหญ่ / พริกชี้ฟ้าแห้ง)",
+  "kham_mueang_th": "พริกแห้ง",
+  "roman": "phrik haeng",
+  "name_en": "Dried red chillies (large, spur type)",
+  "what_it_is_en": "Dried spur chillies, the base of larb spice mix (CMU uses ½ kg per batch) and of nam phrik ong (small dried bird chillies in CMU recipe).",
+  "flavour_en": "Hot, smoky when roasted, red colour.",
+  "used_in": [
+   "พริกลาบ",
+   "น้ำพริกอ่อง",
+   "พริกแกงฮังเล",
+   "น้ำพริกน้ำปู๋ (roasted)"
+  ],
+  "where_to_buy_en": "Warorot Market (Kad Luang / กาดหลวง): northern food and dry-goods stalls, incl. vendors selling packaged take-home northern items dry-goods stalls; any market.",
+  "substitute_abroad_en": "Dried guajillo/puya (milder) or dried Thai chillies from Asian groceries.",
+  "pronunciation": {
+   "syllables": [
+    {
+     "th": "พริก",
+     "roman": "phik",
+     "tone": "45"
+    },
+    {
+     "th": "แห้ง",
+     "roman": "haeng",
+     "tone": "44ʔ"
+    }
+   ],
+   "tone_source": "derived",
+   "confidence": "low",
+   "tip_en": "Tones are Chiang Mai Northern Thai values (24 low-rising, 21 low-falling, 44ʔ high-level glottal, 33 mid, 42 high-falling, 45 high-rising) DERIVED by applying the Chiang Mai tone-box correspondences (Wikipedia 'Northern Thai language') to the etymological Thai spelling. Not checked against a native-speaker recording; treat as a guide."
+  },
+  "sources": [
+   "https://lannainfo.library.cmu.ac.th/en_lannafood/detail_lannafood.php?id_food=182",
+   "https://lannainfo.library.cmu.ac.th/en_lannafood/detail_lannafood.php?id_food=174",
+   "https://krua.co/food_story/hang-lay-curry"
+  ],
+  "confidence": "high"
+ },
+ {
+  "name_th": "พริกขี้หนู / พริกจินดา",
+  "kham_mueang_th": "พริกขี้หนู",
+  "roman": "phrik khi nu",
+  "name_en": "Bird's-eye chilli",
+  "what_it_is_en": "Small hot chilli; CMU's nam phrik nam pu uses about 20 fresh bird chillies; the Cookpad version uses red จินดา chillies.",
+  "flavour_en": "Very hot, fruity.",
+  "used_in": [
+   "น้ำพริกน้ำปู๋",
+   "น้ำพริกอ่อง (dried)"
+  ],
+  "where_to_buy_en": "Ton Lamyai Market (กาดต้นลำไย), directly opposite Warorot: fresh vegetables, fruit, meat; any market.",
+  "substitute_abroad_en": "Thai bird chillies (fresh or frozen) or other small hot chillies.",
+  "pronunciation": {
+   "syllables": [],
+   "tone_source": "derived",
+   "confidence": "low",
+   "tip_en": "Tones not derived."
+  },
+  "sources": [
+   "https://lannainfo.library.cmu.ac.th/en_lannafood/detail_lannafood.php?id_food=163",
+   "https://cookpad.com/th/recipes/16454331"
+  ],
+  "confidence": "high"
+ },
+ {
+  "name_th": "มะแขว่น",
+  "kham_mueang_th": "มะแขว่น / มะแข่น / มะข่อง; แม่ฮ่องสอน: หมักข่วง",
+  "roman": "makhwaen",
+  "name_en": "Makhwaen (Zanthoxylum limonella), Lanna prickly-ash pepper",
+  "what_it_is_en": "Dried fruit of a thorny tree in the citrus family (Zanthoxylum limonella). Harvested roughly Oct-Dec and sun-dried in bunches. Signature spice of larb spice mix; the eastern Lanna style (Nan, Phrae, Chiang Rai, Phayao, Lampang) of larb mix emphasises it. Young leaves are also eaten raw with chilli dips.",
+  "flavour_en": "Strong citrus-pine aroma, mild heat and a tongue-tingling numbness Northerners call 'เด้าลิ้น'. Similar to Sichuan pepper.",
+  "used_in": [
+   "พริกลาบ",
+   "ลาบ",
+   "ยำจิ๊นไก่",
+   "แกงอ่อม",
+   "น้ำพริกมะแขว่น"
+  ],
+  "where_to_buy_en": "Warorot Market (Kad Luang / กาดหลวง): northern food and dry-goods stalls, incl. vendors selling packaged take-home northern items dry-goods / spice stalls (dried pods on stems); highland-produce stalls in season. Renowned sources: Ban Pong Yaeng (Mae Rim), Ngao (Lampang), Nan.",
+  "substitute_abroad_en": "Sichuan pepper or Nepali timur; use a bit less.",
+  "pronunciation": {
+   "syllables": [
+    {
+     "th": "มะ",
+     "roman": "ma",
+     "tone": "45"
+    },
+    {
+     "th": "แขว่น",
+     "roman": "khwaen",
+     "tone": "21"
+    }
+   ],
+   "tone_source": "derived",
+   "confidence": "low",
+   "tip_en": "Often shortened to 'ma-khwaen' or 'ma-khaen'. Toast briefly then grind. Tones are Chiang Mai Northern Thai values (24 low-rising, 21 low-falling, 44ʔ high-level glottal, 33 mid, 42 high-falling, 45 high-rising) DERIVED by applying the Chiang Mai tone-box correspondences (Wikipedia 'Northern Thai language') to the etymological Thai spelling. Not checked against a native-speaker recording; treat as a guide."
+  },
+  "sources": [
+   "https://hkm.hrdi.or.th/Knowledge/detail/705",
+   "https://lannernews.com/23102567-01/",
+   "https://krua.co/food_story/laab-herbal-powder-lanna/",
+   "https://lannainfo.library.cmu.ac.th/en_lannafood/detail_lannafood.php?id_food=182"
+  ],
+  "confidence": "high",
+  "notes_th": "รสเผ็ดชา คนเหนือเรียกอาการนี้ว่า 'เด้าลิ้น' (สวพส.)"
+ },
+ {
+  "name_th": "มะข่วง",
+  "kham_mueang_th": "มะข่วง",
+  "roman": "makhuang",
+  "name_en": "Makhuang (another Zanthoxylum, numbing pepper)",
+  "what_it_is_en": "A related numbing spice. It is used less than makhwaen: in bamboo-shoot salad with crab paste, bamboo-shoot curry, แกงอ่อม and แกงแค, and rarely in larb mix. Traded in Wang Chin (Phrae) and Li (Lamphun).",
+  "flavour_en": "Long-lasting tongue-tip numbness.",
+  "used_in": [
+   "ยำหน่อไม้",
+   "แกงหน่อไม้",
+   "แกงอ่อม",
+   "แกงแค"
+  ],
+  "where_to_buy_en": "Warorot Market (Kad Luang / กาดหลวง): northern food and dry-goods stalls, incl. vendors selling packaged take-home northern items spice stalls (seasonal); ask 'มีมะข่วงก่อ'.",
+  "substitute_abroad_en": "Sichuan pepper.",
+  "pronunciation": {
+   "syllables": [
+    {
+     "th": "มะ",
+     "roman": "ma",
+     "tone": "45"
+    },
+    {
+     "th": "ข่วง",
+     "roman": "khuang",
+     "tone": "21"
+    }
+   ],
+   "tone_source": "derived",
+   "confidence": "low",
+   "tip_en": "Tones are Chiang Mai Northern Thai values (24 low-rising, 21 low-falling, 44ʔ high-level glottal, 33 mid, 42 high-falling, 45 high-rising) DERIVED by applying the Chiang Mai tone-box correspondences (Wikipedia 'Northern Thai language') to the etymological Thai spelling. Not checked against a native-speaker recording; treat as a guide."
+  },
+  "sources": [
+   "https://lannernews.com/23102567-01/"
+  ],
+  "confidence": "medium",
+  "needs_expert_review": "Botanical identity of มะข่วง was not given in the source opened; confirm species."
+ },
+ {
+  "name_th": "ดีปลี",
+  "kham_mueang_th": "ดีปลี",
+  "roman": "dipli",
+  "name_en": "Long pepper (Piper retrofractum)",
+  "what_it_is_en": "Dried long pepper catkins; roasted and pounded into larb spice mix and curry pastes (CMU recipe: 20 pieces; Krua recipe: 7).",
+  "flavour_en": "Hot, slightly bitter, resinous aroma.",
+  "used_in": [
+   "พริกลาบ",
+   "curry pastes"
+  ],
+  "where_to_buy_en": "Warorot Market (Kad Luang / กาดหลวง): northern food and dry-goods stalls, incl. vendors selling packaged take-home northern items spice stalls; Thai herbal/spice shops.",
+  "substitute_abroad_en": "Indian long pepper (pippali); or black pepper plus a pinch of cinnamon.",
+  "pronunciation": {
+   "syllables": [
+    {
+     "th": "ดี",
+     "roman": "di",
+     "tone": "24"
+    },
+    {
+     "th": "ปลี",
+     "roman": "pli",
+     "tone": "24"
+    }
+   ],
+   "tone_source": "derived",
+   "confidence": "low",
+   "tip_en": "Tones are Chiang Mai Northern Thai values (24 low-rising, 21 low-falling, 44ʔ high-level glottal, 33 mid, 42 high-falling, 45 high-rising) DERIVED by applying the Chiang Mai tone-box correspondences (Wikipedia 'Northern Thai language') to the etymological Thai spelling. Not checked against a native-speaker recording; treat as a guide."
+  },
+  "sources": [
+   "https://www.maenoicurry.com/en/article/139/%E0%B8%94%E0%B8%B5%E0%B8%9B%E0%B8%A5%E0%B8%B5-long-peper",
+   "https://lannainfo.library.cmu.ac.th/en_lannafood/detail_lannafood.php?id_food=182",
+   "https://krua.co/food_story/laab-herbal-powder-lanna/"
+  ],
+  "confidence": "high"
+ },
+ {
+  "name_th": "มะแหลบ (เทียนตั๊กแตน)",
+  "kham_mueang_th": "มะแหลบ",
+  "roman": "malaep",
+  "name_en": "Malaep seed (a highland seed spice; Thai trade name เทียนตั๊กแตน)",
+  "what_it_is_en": "Seed spice grown only above about 600 m in northern mountains; ground seed goes into larb spice mix to cover the smell of meat, notably in frog larb. Also in the traditional Thai 'five tian' medicine group.",
+  "flavour_en": "Distinctive aroma, bitter and slightly hot.",
+  "used_in": [
+   "พริกลาบ",
+   "ยำจิ๊นกบ",
+   "ลาบ"
+  ],
+  "where_to_buy_en": "Warorot Market (Kad Luang / กาดหลวง): northern food and dry-goods stalls, incl. vendors selling packaged take-home northern items spice stalls (small bags); sometimes sold as part of a larb spice set.",
+  "substitute_abroad_en": "Omit, or use a pinch of dill/caraway seed for aroma (approximation).",
+  "pronunciation": {
+   "syllables": [
+    {
+     "th": "มะ",
+     "roman": "ma",
+     "tone": "45"
+    },
+    {
+     "th": "แหลบ",
+     "roman": "laep",
+     "tone": "21"
+    }
+   ],
+   "tone_source": "derived",
+   "confidence": "low",
+   "tip_en": "Tones are Chiang Mai Northern Thai values (24 low-rising, 21 low-falling, 44ʔ high-level glottal, 33 mid, 42 high-falling, 45 high-rising) DERIVED by applying the Chiang Mai tone-box correspondences (Wikipedia 'Northern Thai language') to the etymological Thai spelling. Not checked against a native-speaker recording; treat as a guide."
+  },
+  "sources": [
+   "https://www.maenoicurry.com/en/article/30/%E0%B8%A1%E0%B8%B0%E0%B9%81%E0%B8%AB%E0%B8%A5%E0%B8%9A-%E0%B8%AB%E0%B8%A3%E0%B8%B7%E0%B8%AD-%E0%B9%80%E0%B8%97%E0%B8%B5%E0%B8%A2%E0%B8%99%E0%B8%95%E0%B8%B1%E0%B9%8A%E0%B8%81%E0%B9%81%E0%B8%95%E0%B8%99",
+   "https://krua.co/food_story/laab-herbal-powder-lanna/",
+   "https://lannainfo.library.cmu.ac.th/en_lannafood/detail_lannafood.php?id_food=182"
+  ],
+  "confidence": "medium",
+  "needs_expert_review": "English identity of มะแหลบ is inconsistent across sources (a curry-paste maker describes the plant as a grass; CMU English page lists 'Seeds of Ma laep'; Krua's translated glossary is unreliable). Needs a botanist."
+ },
+ {
+  "name_th": "ลูกผักชี / เม็ดผักชี",
+  "kham_mueang_th": "ลูกผักชี (Northern: ผักชี = หอมป้อม)",
+  "roman": "luk phak chi",
+  "name_en": "Coriander seed",
+  "what_it_is_en": "Roasted and pounded into larb spice mix (1 Tbsp in Krua's recipe, 2 Tbsp in CMU's).",
+  "flavour_en": "Warm, citrusy.",
+  "used_in": [
+   "พริกลาบ",
+   "พริกแกง"
+  ],
+  "where_to_buy_en": "Warorot Market (Kad Luang / กาดหลวง): northern food and dry-goods stalls, incl. vendors selling packaged take-home northern items spice stalls; any market.",
+  "substitute_abroad_en": "Coriander seed (same).",
+  "pronunciation": {
+   "syllables": [],
+   "tone_source": "derived",
+   "confidence": "low",
+   "tip_en": "Tones not derived."
+  },
+  "sources": [
+   "https://krua.co/food_story/laab-herbal-powder-lanna/",
+   "https://lannainfo.library.cmu.ac.th/en_lannafood/detail_lannafood.php?id_food=182"
+  ],
+  "confidence": "high"
+ },
+ {
+  "name_th": "เครื่องเทศพริกลาบอื่นๆ (ยี่หร่า, โป๊ยกั๊ก, อบเชย, กานพลู, กระวาน, ลูกจันทน์/ดอกจันทน์, เปราะหอม, พริกไทยดำ)",
+  "kham_mueang_th": "",
+  "roman": "",
+  "name_en": "Other warm spices in Chiang Mai-style larb mix",
+  "what_it_is_en": "The Chiang Mai-Lamphun style of larb spice mix uses more than ten spices (a sign of wealth and old trade routes): cumin (ยี่หร่า), star anise (โป๊ยกั๊ก), cinnamon (อบเชย), clove (กานพลู), cardamom (กระวาน), nutmeg and mace (ลูกจันทน์/ดอกจันทน์), resurrection lily/aromatic ginger (เปราะหอม) and black pepper.",
+  "flavour_en": "Warm, aromatic, 'spice-cabinet' depth over the chilli.",
+  "used_in": [
+   "พริกลาบ",
+   "ผงฮังเล"
+  ],
+  "where_to_buy_en": "Warorot Market (Kad Luang / กาดหลวง): northern food and dry-goods stalls, incl. vendors selling packaged take-home northern items spice stalls.",
+  "substitute_abroad_en": "Same spices from any supermarket.",
+  "pronunciation": {
+   "syllables": [],
+   "tone_source": "derived",
+   "confidence": "low",
+   "tip_en": "Tones not derived."
+  },
+  "sources": [
+   "https://krua.co/food_story/laab-herbal-powder-lanna/",
+   "https://lannainfo.library.cmu.ac.th/en_lannafood/detail_lannafood.php?id_food=182"
+  ],
+  "confidence": "high"
+ },
+ {
+  "name_th": "พริกลาบ (น้ำพริกลาบ / น้ำพริกดำ)",
+  "kham_mueang_th": "พริกลาบ",
+  "roman": "phrik laap",
+  "name_en": "Northern larb spice mix",
+  "what_it_is_en": "Blackish powder/paste of roasted dried chillies and roasted spices (makhwaen, long pepper, coriander seed, cumin, malaep, star anise, cinnamon, clove, cardamom, nutmeg, mace, aromatic ginger, pepper, salt). Used for larb and yam dishes; about 4-5 Tbsp per 1 kg meat (CMU). Families keep their own recipe; the larb master is called สล่าลาบ.",
+  "flavour_en": "Smoky, hot, aromatic, numbing.",
+  "used_in": [
+   "ลาบ",
+   "ส้า",
+   "ยำจิ๊นไก่",
+   "ยำกบ",
+   "ยำเห็ดฟาง",
+   "ยำมะเขือขื่น"
+  ],
+  "where_to_buy_en": "Warorot Market (Kad Luang / กาดหลวง): northern food and dry-goods stalls, incl. vendors selling packaged take-home northern items: ready-mixed from spice stalls and northern food shops (ask which town's style: เชียงใหม่ or น่าน).",
+  "substitute_abroad_en": "Buy a packaged Thai 'larb mueang' spice mix online; Isan larb powder is NOT the same.",
+  "pronunciation": {
+   "syllables": [
+    {
+     "th": "พริก",
+     "roman": "phik",
+     "tone": "45"
+    },
+    {
+     "th": "ลาบ",
+     "roman": "laap",
+     "tone": "42"
+    }
+   ],
+   "tone_source": "derived",
+   "confidence": "low",
+   "tip_en": "Tones are Chiang Mai Northern Thai values (24 low-rising, 21 low-falling, 44ʔ high-level glottal, 33 mid, 42 high-falling, 45 high-rising) DERIVED by applying the Chiang Mai tone-box correspondences (Wikipedia 'Northern Thai language') to the etymological Thai spelling. Not checked against a native-speaker recording; treat as a guide."
+  },
+  "sources": [
+   "https://lannainfo.library.cmu.ac.th/en_lannafood/detail_lannafood.php?id_food=182",
+   "https://krua.co/food_story/laab-herbal-powder-lanna/"
+  ],
+  "confidence": "high"
+ },
+ {
+  "name_th": "ข่า",
+  "kham_mueang_th": "ข่า",
+  "roman": "kha",
+  "name_en": "Galangal",
+  "what_it_is_en": "Rhizome used in curry pastes, nam phrik ong (Chiang Mai News version), crab-paste making, Tai Yai soybean stir-fry.",
+  "flavour_en": "Peppery, piney, citrus.",
+  "used_in": [
+   "น้ำพริกอ่อง (some)",
+   "พริกแกงฮังเล (ข่าแว่น)",
+   "คั่วถั่วเน่าซา",
+   "ลาบ (roasted galangal in some styles)"
+  ],
+  "where_to_buy_en": "Ton Lamyai Market (กาดต้นลำไย), directly opposite Warorot: fresh vegetables, fruit, meat; any neighbourhood morning market (กาดเช้า / กาดหมั้ว) or evening market (กาดแลง).",
+  "substitute_abroad_en": "Fresh or frozen galangal; ginger is a weak substitute.",
+  "pronunciation": {
+   "syllables": [
+    {
+     "th": "ข่า",
+     "roman": "kha",
+     "tone": "21"
+    }
+   ],
+   "tone_source": "derived",
+   "confidence": "low",
+   "tip_en": "Tones are Chiang Mai Northern Thai values (24 low-rising, 21 low-falling, 44ʔ high-level glottal, 33 mid, 42 high-falling, 45 high-rising) DERIVED by applying the Chiang Mai tone-box correspondences (Wikipedia 'Northern Thai language') to the etymological Thai spelling. Not checked against a native-speaker recording; treat as a guide."
+  },
+  "sources": [
+   "https://www.chiangmainews.co.th/page/archives/483972/",
+   "https://krua.co/food_story/hang-lay-curry",
+   "https://krua.co/food_story/tuanao/"
+  ],
+  "confidence": "high"
+ },
+ {
+  "name_th": "ตะไคร้",
+  "kham_mueang_th": "ไคร้",
+  "roman": "takhrai",
+  "name_en": "Lemongrass",
+  "what_it_is_en": "Stalks and leaves; leaves are pounded with crabs to make nam pu; sliced stalk goes into CMU's nam phrik nam pu.",
+  "flavour_en": "Lemony, floral.",
+  "used_in": [
+   "น้ำปู๋",
+   "น้ำพริกน้ำปู๋",
+   "น้ำพริกอ่อง (some)",
+   "พริกแกงฮังเล"
+  ],
+  "where_to_buy_en": "Ton Lamyai Market (กาดต้นลำไย), directly opposite Warorot: fresh vegetables, fruit, meat; any neighbourhood morning market (กาดเช้า / กาดหมั้ว) or evening market (กาดแลง).",
+  "substitute_abroad_en": "Fresh lemongrass (Asian grocers).",
+  "pronunciation": {
+   "syllables": [
+    {
+     "th": "ตะ",
+     "roman": "ta",
+     "tone": "24"
+    },
+    {
+     "th": "ไคร้",
+     "roman": "khai",
+     "tone": "45"
+    }
+   ],
+   "tone_source": "derived",
+   "confidence": "low",
+   "tip_en": "Northern often shortens to 'ไคร้'. Tones are Chiang Mai Northern Thai values (24 low-rising, 21 low-falling, 44ʔ high-level glottal, 33 mid, 42 high-falling, 45 high-rising) DERIVED by applying the Chiang Mai tone-box correspondences (Wikipedia 'Northern Thai language') to the etymological Thai spelling. Not checked against a native-speaker recording; treat as a guide."
+  },
+  "sources": [
+   "https://www.maenoicurry.com/en/article/20/%E0%B8%99%E0%B9%89%E0%B8%B3%E0%B8%9B%E0%B8%B9%E0%B8%84%E0%B8%B7%E0%B8%AD%E0%B8%AD%E0%B8%B0%E0%B9%84%E0%B8%A3",
+   "https://lannainfo.library.cmu.ac.th/en_lannafood/detail_lannafood.php?id_food=163",
+   "https://www.chiangmainews.co.th/page/archives/483972/"
+  ],
+  "confidence": "medium",
+  "needs_expert_review": "Short form ไคร้ appears in the Southern word น้ำชุบไคร้; Northern everyday form should be confirmed."
+ },
+ {
+  "name_th": "ขมิ้น (ใบขมิ้น)",
+  "kham_mueang_th": "ขมิ้น",
+  "roman": "khamin",
+  "name_en": "Turmeric (rhizome and leaves)",
+  "what_it_is_en": "Turmeric leaves are pounded with crabs for nam pu; turmeric goes into hang le paste and Tai Yai dishes.",
+  "flavour_en": "Earthy, bitter-warm; leaves grassy.",
+  "used_in": [
+   "น้ำปู๋",
+   "พริกแกงฮังเล",
+   "คั่วถั่วเน่าซา"
+  ],
+  "where_to_buy_en": "Ton Lamyai Market (กาดต้นลำไย), directly opposite Warorot: fresh vegetables, fruit, meat; Muang Mai Market (กาดเมืองใหม่), by the Ping River: wholesale fresh vegetables/fruit from about 2 am, retail stalls through the day.",
+  "substitute_abroad_en": "Fresh turmeric; leaves are hard to find abroad.",
+  "pronunciation": {
+   "syllables": [
+    {
+     "th": "ขะ",
+     "roman": "kha",
+     "tone": "24"
+    },
+    {
+     "th": "มิ้น",
+     "roman": "min",
+     "tone": "45"
+    }
+   ],
+   "tone_source": "derived",
+   "confidence": "low",
+   "tip_en": "Tones are Chiang Mai Northern Thai values (24 low-rising, 21 low-falling, 44ʔ high-level glottal, 33 mid, 42 high-falling, 45 high-rising) DERIVED by applying the Chiang Mai tone-box correspondences (Wikipedia 'Northern Thai language') to the etymological Thai spelling. Not checked against a native-speaker recording; treat as a guide."
+  },
+  "sources": [
+   "https://www.maenoicurry.com/en/article/20/%E0%B8%99%E0%B9%89%E0%B8%B3%E0%B8%9B%E0%B8%B9%E0%B8%84%E0%B8%B7%E0%B8%AD%E0%B8%AD%E0%B8%B0%E0%B9%84%E0%B8%A3",
+   "https://www.namnuntawan.com/index.php?route=information/information&information_id=29",
+   "https://krua.co/food_story/hang-lay-curry"
+  ],
+  "confidence": "high"
+ },
+ {
+  "name_th": "ขิง",
+  "kham_mueang_th": "ขิง",
+  "roman": "khing",
+  "name_en": "Ginger",
+  "what_it_is_en": "Shredded fresh ginger is added at the end of hang le curry; some hang le pastes include it.",
+  "flavour_en": "Hot, fresh.",
+  "used_in": [
+   "แกงฮังเล"
+  ],
+  "where_to_buy_en": "Ton Lamyai Market (กาดต้นลำไย), directly opposite Warorot: fresh vegetables, fruit, meat; any market.",
+  "substitute_abroad_en": "Ginger (same).",
+  "pronunciation": {
+   "syllables": [
+    {
+     "th": "ขิง",
+     "roman": "khing",
+     "tone": "24"
+    }
+   ],
+   "tone_source": "derived",
+   "confidence": "low",
+   "tip_en": "Tones are Chiang Mai Northern Thai values (24 low-rising, 21 low-falling, 44ʔ high-level glottal, 33 mid, 42 high-falling, 45 high-rising) DERIVED by applying the Chiang Mai tone-box correspondences (Wikipedia 'Northern Thai language') to the etymological Thai spelling. Not checked against a native-speaker recording; treat as a guide."
+  },
+  "sources": [
+   "https://krua.co/food_story/hang-lay-curry"
+  ],
+  "confidence": "high"
+ },
+ {
+  "name_th": "กระเทียมไทย",
+  "kham_mueang_th": "",
+  "roman": "krathiam thai",
+  "name_en": "Thai garlic (small cloves)",
+  "what_it_is_en": "Small-cloved garlic, roasted whole for nam phrik num and nam phrik nam pu, pounded raw into nam phrik ong and larb spice.",
+  "flavour_en": "Pungent; sweet and mellow when roasted.",
+  "used_in": [
+   "น้ำพริกหนุ่ม",
+   "น้ำพริกอ่อง",
+   "น้ำพริกน้ำปู๋",
+   "พริกลาบ"
+  ],
+  "where_to_buy_en": "Ton Lamyai Market (กาดต้นลำไย), directly opposite Warorot: fresh vegetables, fruit, meat; Muang Mai Market (กาดเมืองใหม่), by the Ping River: wholesale fresh vegetables/fruit from about 2 am, retail stalls through the day; any market.",
+  "substitute_abroad_en": "Regular garlic; use fewer cloves.",
+  "pronunciation": {
+   "syllables": [],
+   "tone_source": "derived",
+   "confidence": "low",
+   "tip_en": "Kham Mueang word for garlic not confirmed in sources opened."
+  },
+  "sources": [
+   "https://www.wongnai.com/recipes/northern-thai-green-chilli-dip",
+   "https://lannainfo.library.cmu.ac.th/en_lannafood/detail_lannafood.php?id_food=172",
+   "https://www.wongnai.com/recipes/ugc/d3003d6dd98c43c28afadc2245a71dc7",
+   "https://krua.co/food_story/laab-herbal-powder-lanna/"
+  ],
+  "confidence": "high",
+  "needs_expert_review": "Northern vernacular name for garlic (often cited as หอมขาว / หอมเตียม) was not confirmed by an opened source."
+ },
+ {
+  "name_th": "หอมแดง",
+  "kham_mueang_th": "",
+  "roman": "hom daeng",
+  "name_en": "Shallot (Thai red shallot)",
+  "what_it_is_en": "Roasted for nam phrik num, pounded for ong and nam pu dips.",
+  "flavour_en": "Sweet-pungent; jammy when roasted.",
+  "used_in": [
+   "น้ำพริกหนุ่ม",
+   "น้ำพริกอ่อง",
+   "น้ำพริกน้ำปู๋"
+  ],
+  "where_to_buy_en": "Ton Lamyai Market (กาดต้นลำไย), directly opposite Warorot: fresh vegetables, fruit, meat; Muang Mai Market (กาดเมืองใหม่), by the Ping River: wholesale fresh vegetables/fruit from about 2 am, retail stalls through the day.",
+  "substitute_abroad_en": "Small shallots or Asian red shallots.",
+  "pronunciation": {
+   "syllables": [],
+   "tone_source": "derived",
+   "confidence": "low",
+   "tip_en": "Tones not derived."
+  },
+  "sources": [
+   "https://www.wongnai.com/recipes/northern-thai-green-chilli-dip",
+   "https://lannainfo.library.cmu.ac.th/en_lannafood/detail_lannafood.php?id_food=174",
+   "https://lannainfo.library.cmu.ac.th/en_lannafood/detail_lannafood.php?id_food=163"
+  ],
+  "confidence": "high"
+ },
+ {
+  "name_th": "ผักชี",
+  "kham_mueang_th": "หอมป้อม",
+  "roman": "hom pom",
+  "name_en": "Coriander (cilantro) leaf",
+  "what_it_is_en": "Northern name หอมป้อม. Chopped as garnish on nam phrik num and nam phrik ong.",
+  "flavour_en": "Fresh, citrusy.",
+  "used_in": [
+   "น้ำพริกหนุ่ม",
+   "น้ำพริกอ่อง",
+   "ลาบ"
+  ],
+  "where_to_buy_en": "Ton Lamyai Market (กาดต้นลำไย), directly opposite Warorot: fresh vegetables, fruit, meat; any market.",
+  "substitute_abroad_en": "Coriander (same).",
+  "pronunciation": {
+   "syllables": [
+    {
+     "th": "หอม",
+     "roman": "hom",
+     "tone": "24"
+    },
+    {
+     "th": "ป้อม",
+     "roman": "pom",
+     "tone": "44ʔ"
+    }
+   ],
+   "tone_source": "derived",
+   "confidence": "low",
+   "tip_en": "Tones are Chiang Mai Northern Thai values (24 low-rising, 21 low-falling, 44ʔ high-level glottal, 33 mid, 42 high-falling, 45 high-rising) DERIVED by applying the Chiang Mai tone-box correspondences (Wikipedia 'Northern Thai language') to the etymological Thai spelling. Not checked against a native-speaker recording; treat as a guide."
+  },
+  "sources": [
+   "https://www.reviewchiangmai.com/northern-language-vegetable-names/",
+   "https://lannainfo.library.cmu.ac.th/en_lannafood/detail_lannafood.php?id_food=172",
+   "https://lannainfo.library.cmu.ac.th/en_lannafood/detail_lannafood.php?id_food=174"
+  ],
+  "confidence": "high"
+ },
+ {
+  "name_th": "ผักชีฝรั่ง",
+  "kham_mueang_th": "หอมป้อมเป้อ",
+  "roman": "hom pom poe",
+  "name_en": "Sawtooth coriander / culantro",
+  "what_it_is_en": "Northern name given as หอมป้อมเป้อ. Served in the herb plate with larb.",
+  "flavour_en": "Strong coriander flavour.",
+  "used_in": [
+   "ลาบ",
+   "herb plates"
+  ],
+  "where_to_buy_en": "Ton Lamyai Market (กาดต้นลำไย), directly opposite Warorot: fresh vegetables, fruit, meat; any neighbourhood morning market (กาดเช้า / กาดหมั้ว) or evening market (กาดแลง).",
+  "substitute_abroad_en": "Culantro (Latin/Caribbean groceries).",
+  "pronunciation": {
+   "syllables": [],
+   "tone_source": "derived",
+   "confidence": "low",
+   "tip_en": "Tones not derived."
+  },
+  "sources": [
+   "https://www.reviewchiangmai.com/northern-language-vegetable-names/"
+  ],
+  "confidence": "medium"
+ },
+ {
+  "name_th": "สะระแหน่",
+  "kham_mueang_th": "หอมด่วน",
+  "roman": "hom duan",
+  "name_en": "Mint",
+  "what_it_is_en": "Northern name หอมด่วน; one of the herbs eaten with larb.",
+  "flavour_en": "Cool, fresh.",
+  "used_in": [
+   "ลาบ",
+   "ผักกับลาบ"
+  ],
+  "where_to_buy_en": "Ton Lamyai Market (กาดต้นลำไย), directly opposite Warorot: fresh vegetables, fruit, meat; any market.",
+  "substitute_abroad_en": "Spearmint.",
+  "pronunciation": {
+   "syllables": [
+    {
+     "th": "หอม",
+     "roman": "hom",
+     "tone": "24"
+    },
+    {
+     "th": "ด่วน",
+     "roman": "duan",
+     "tone": "21"
+    }
+   ],
+   "tone_source": "derived",
+   "confidence": "low",
+   "tip_en": "Tones are Chiang Mai Northern Thai values (24 low-rising, 21 low-falling, 44ʔ high-level glottal, 33 mid, 42 high-falling, 45 high-rising) DERIVED by applying the Chiang Mai tone-box correspondences (Wikipedia 'Northern Thai language') to the etymological Thai spelling. Not checked against a native-speaker recording; treat as a guide."
+  },
+  "sources": [
+   "https://www.reviewchiangmai.com/northern-language-vegetable-names/",
+   "https://chiangmaipress.com/2020/07/10/%E0%B8%A5%E0%B8%B2%E0%B8%9A-%E0%B8%A3%E0%B8%B2%E0%B8%8A%E0%B8%B2%E0%B8%AD%E0%B8%B2%E0%B8%AB%E0%B8%B2%E0%B8%A3%E0%B9%80%E0%B8%A1%E0%B8%B7%E0%B8%AD%E0%B8%87-%E0%B8%AD%E0%B8%A3%E0%B9%88%E0%B8%AD/"
+  ],
+  "confidence": "high"
+ },
+ {
+  "name_th": "ใบแมงลัก",
+  "kham_mueang_th": "กอมก้อ",
+  "roman": "kom ko",
+  "name_en": "Lemon basil (hairy basil)",
+  "what_it_is_en": "Northern name กอมก้อ.",
+  "flavour_en": "Lemony-peppery basil.",
+  "used_in": [
+   "แกงแค",
+   "soups",
+   "herb plates"
+  ],
+  "where_to_buy_en": "Ton Lamyai Market (กาดต้นลำไย), directly opposite Warorot: fresh vegetables, fruit, meat; any neighbourhood morning market (กาดเช้า / กาดหมั้ว) or evening market (กาดแลง).",
+  "substitute_abroad_en": "Lemon basil or Thai basil.",
+  "pronunciation": {
+   "syllables": [
+    {
+     "th": "กอม",
+     "roman": "kom",
+     "tone": "24"
+    },
+    {
+     "th": "ก้อ",
+     "roman": "ko",
+     "tone": "44ʔ"
+    }
+   ],
+   "tone_source": "derived",
+   "confidence": "low",
+   "tip_en": "Tones are Chiang Mai Northern Thai values (24 low-rising, 21 low-falling, 44ʔ high-level glottal, 33 mid, 42 high-falling, 45 high-rising) DERIVED by applying the Chiang Mai tone-box correspondences (Wikipedia 'Northern Thai language') to the etymological Thai spelling. Not checked against a native-speaker recording; treat as a guide."
+  },
+  "sources": [
+   "https://www.reviewchiangmai.com/northern-language-vegetable-names/"
+  ],
+  "confidence": "medium"
+ },
+ {
+  "name_th": "ผักไผ่ / ผักแพว",
+  "kham_mueang_th": "ผักไผ่",
+  "roman": "phak phai",
+  "name_en": "Vietnamese coriander (Persicaria odorata)",
+  "what_it_is_en": "Peppery herb eaten with larb.",
+  "flavour_en": "Peppery, warm, slightly soapy-citrus.",
+  "used_in": [
+   "ลาบ",
+   "ผักกับลาบ"
+  ],
+  "where_to_buy_en": "Ton Lamyai Market (กาดต้นลำไย), directly opposite Warorot: fresh vegetables, fruit, meat; any neighbourhood morning market (กาดเช้า / กาดหมั้ว) or evening market (กาดแลง).",
+  "substitute_abroad_en": "Vietnamese coriander (rau răm).",
+  "pronunciation": {
+   "syllables": [],
+   "tone_source": "derived",
+   "confidence": "low",
+   "tip_en": "Tones not derived."
+  },
+  "sources": [
+   "https://chiangmaigardens.com/%E0%B8%9C%E0%B8%B1%E0%B8%81%E0%B8%81%E0%B8%B1%E0%B8%9A%E0%B8%A5%E0%B8%B2%E0%B8%9A/",
+   "https://www.reviewchiangmai.com/northern-language-vegetable-names/"
+  ],
+  "confidence": "medium"
+ },
+ {
+  "name_th": "มะเขือเทศลูกเล็ก / มะเขือส้ม",
+  "kham_mueang_th": "บะเขือส้ม",
+  "roman": "ba khuea som",
+  "name_en": "Small sour tomato / cherry tomato",
+  "what_it_is_en": "Thumb-tip-sized local tomatoes growing in clusters, red-orange when ripe, sour to sour-sweet; the classic tomato for nam phrik ong (CMU and Wongnai recipes use cherry tomatoes). Kham Mueang for tomato: บะเขือส้ม ('sour eggplant').",
+  "flavour_en": "Sour, fruity.",
+  "used_in": [
+   "น้ำพริกอ่อง",
+   "ตำ",
+   "แกง"
+  ],
+  "where_to_buy_en": "Ton Lamyai Market (กาดต้นลำไย), directly opposite Warorot: fresh vegetables, fruit, meat; Muang Mai Market (กาดเมืองใหม่), by the Ping River: wholesale fresh vegetables/fruit from about 2 am, retail stalls through the day; any neighbourhood morning market (กาดเช้า / กาดหมั้ว) or evening market (กาดแลง).",
+  "substitute_abroad_en": "Cherry tomatoes; add a little lime/tamarind if they are very sweet.",
+  "pronunciation": {
+   "syllables": [
+    {
+     "th": "บะ",
+     "roman": "ba",
+     "tone": "24"
+    },
+    {
+     "th": "เขือ",
+     "roman": "khuea",
+     "tone": "24"
+    },
+    {
+     "th": "ส้ม",
+     "roman": "som",
+     "tone": "44ʔ"
+    }
+   ],
+   "tone_source": "derived",
+   "confidence": "low",
+   "tip_en": "Northern often replaces the prefix มะ with บะ/บ่า. Tones are Chiang Mai Northern Thai values (24 low-rising, 21 low-falling, 44ʔ high-level glottal, 33 mid, 42 high-falling, 45 high-rising) DERIVED by applying the Chiang Mai tone-box correspondences (Wikipedia 'Northern Thai language') to the etymological Thai spelling. Not checked against a native-speaker recording; treat as a guide."
+  },
+  "sources": [
+   "https://www.khaosod.co.th/technologychaoban/how-to/tips/article_170154",
+   "https://www.chiangrai108.com/artsculture/10392/",
+   "https://lannainfo.library.cmu.ac.th/en_lannafood/detail_lannafood.php?id_food=174",
+   "https://www.wongnai.com/recipes/thai-northen-style-chilli-relish",
+   "https://vanusnun.com/en/blogs/articles/tomatothaichilipaste"
+  ],
+  "confidence": "high"
+ },
+ {
+  "name_th": "แตงกวา",
+  "kham_mueang_th": "บะแต๋ง",
+  "roman": "ba taeng",
+  "name_en": "Cucumber",
+  "what_it_is_en": "Standard raw vegetable on the side of chilli dips and larb; 'cooling'.",
+  "flavour_en": "Crisp, watery, mildly sweet.",
+  "used_in": [
+   "ผักเคียงน้ำพริก",
+   "ผักกับลาบ",
+   "ตำแตง"
+  ],
+  "where_to_buy_en": "Ton Lamyai Market (กาดต้นลำไย), directly opposite Warorot: fresh vegetables, fruit, meat; any market.",
+  "substitute_abroad_en": "Small cucumbers.",
+  "pronunciation": {
+   "syllables": [
+    {
+     "th": "บะ",
+     "roman": "ba",
+     "tone": "24"
+    },
+    {
+     "th": "แต๋ง",
+     "roman": "taeng",
+     "tone": "24"
+    }
+   ],
+   "tone_source": "derived",
+   "confidence": "low",
+   "tip_en": "Northern writes แต๋ง with ๋ to show the rising Chiang Mai tone on แตง. Tones are Chiang Mai Northern Thai values (24 low-rising, 21 low-falling, 44ʔ high-level glottal, 33 mid, 42 high-falling, 45 high-rising) DERIVED by applying the Chiang Mai tone-box correspondences (Wikipedia 'Northern Thai language') to the etymological Thai spelling. Not checked against a native-speaker recording; treat as a guide."
+  },
+  "sources": [
+   "https://www.chiangrai108.com/artsculture/10392/",
+   "https://chiangmaigardens.com/%E0%B8%9C%E0%B8%B1%E0%B8%81%E0%B8%81%E0%B8%B1%E0%B8%9A%E0%B8%A5%E0%B8%B2%E0%B8%9A/"
+  ],
+  "confidence": "high"
+ },
+ {
+  "name_th": "ผักเชียงดา",
+  "kham_mueang_th": "ผักเซียงดา",
+  "roman": "phak siang da",
+  "name_en": "Chiang Da leaf (Gymnema inodorum)",
+  "what_it_is_en": "Climbing vine; young shoots eaten year-round, especially in the rainy season. Called the 'queen of northern local vegetables'.",
+  "flavour_en": "Slightly peppery, rich; slightly sweet when cooked.",
+  "used_in": [
+   "แกงแค",
+   "แกงผักเซียงดา (with dried fish)",
+   "blanched with น้ำพริก"
+  ],
+  "where_to_buy_en": "Ton Lamyai Market (กาดต้นลำไย), directly opposite Warorot: fresh vegetables, fruit, meat; Muang Mai Market (กาดเมืองใหม่), by the Ping River: wholesale fresh vegetables/fruit from about 2 am, retail stalls through the day; any neighbourhood morning market (กาดเช้า / กาดหมั้ว) or evening market (กาดแลง).",
+  "substitute_abroad_en": "Young spinach or pea shoots (texture only).",
+  "pronunciation": {
+   "syllables": [
+    {
+     "th": "ผัก",
+     "roman": "phak",
+     "tone": "24"
+    },
+    {
+     "th": "เซียง",
+     "roman": "siang",
+     "tone": "33"
+    },
+    {
+     "th": "ดา",
+     "roman": "da",
+     "tone": "24"
+    }
+   ],
+   "tone_source": "derived",
+   "confidence": "low",
+   "tip_en": "Northern pronounces ช as s here: เซียง. Tones are Chiang Mai Northern Thai values (24 low-rising, 21 low-falling, 44ʔ high-level glottal, 33 mid, 42 high-falling, 45 high-rising) DERIVED by applying the Chiang Mai tone-box correspondences (Wikipedia 'Northern Thai language') to the etymological Thai spelling. Not checked against a native-speaker recording; treat as a guide."
+  },
+  "sources": [
+   "https://www.scimath.org/article-biology/item/546-gymnema-inodurum-decne",
+   "https://gardenandfarm.baanlaesuan.com/317334/farming-101/localthai_edible",
+   "https://www.wongnai.com/food-tips/top-35-must-try-northern-thai-dishes"
+  ],
+  "confidence": "high"
+ },
+ {
+  "name_th": "ผักกาดจ้อน",
+  "kham_mueang_th": "ผักกาดจ้อน",
+  "roman": "phak kat jon",
+  "name_en": "Flowering mustard green (northern cool-season variety)",
+  "what_it_is_en": "Mustard green eaten at the flowering stage; cool-season favourite, cooked as จอผักกาด with tamarind and fermented soybean.",
+  "flavour_en": "Mildly bitter-peppery, tender.",
+  "used_in": [
+   "จอผักกาด"
+  ],
+  "where_to_buy_en": "Ton Lamyai Market (กาดต้นลำไย), directly opposite Warorot: fresh vegetables, fruit, meat; Muang Mai Market (กาดเมืองใหม่), by the Ping River: wholesale fresh vegetables/fruit from about 2 am, retail stalls through the day (cool season, roughly Nov-Feb).",
+  "substitute_abroad_en": "Choy sum / yu choy.",
+  "pronunciation": {
+   "syllables": [
+    {
+     "th": "ผัก",
+     "roman": "phak",
+     "tone": "24"
+    },
+    {
+     "th": "กาด",
+     "roman": "kat",
+     "tone": "21"
+    },
+    {
+     "th": "จ้อน",
+     "roman": "jon",
+     "tone": "44ʔ"
+    }
+   ],
+   "tone_source": "derived",
+   "confidence": "low",
+   "tip_en": "Tones are Chiang Mai Northern Thai values (24 low-rising, 21 low-falling, 44ʔ high-level glottal, 33 mid, 42 high-falling, 45 high-rising) DERIVED by applying the Chiang Mai tone-box correspondences (Wikipedia 'Northern Thai language') to the etymological Thai spelling. Not checked against a native-speaker recording; treat as a guide."
+  },
+  "sources": [
+   "https://krua.co/food_story/jor-pakkad",
+   "https://www.wongnai.com/food-tips/top-35-must-try-northern-thai-dishes"
+  ],
+  "confidence": "high"
+ },
+ {
+  "name_th": "ชะอม",
+  "kham_mueang_th": "ผักหละ",
+  "roman": "phak la",
+  "name_en": "Cha-om (acacia shoots)",
+  "what_it_is_en": "Northern name ผักหละ; cooked in แกงผักหละ and in omelettes.",
+  "flavour_en": "Strong, sulphurous aroma (like sulphur/garlic), nutty when cooked.",
+  "used_in": [
+   "แกงผักหละ",
+   "ไข่ทอด"
+  ],
+  "where_to_buy_en": "Ton Lamyai Market (กาดต้นลำไย), directly opposite Warorot: fresh vegetables, fruit, meat; any neighbourhood morning market (กาดเช้า / กาดหมั้ว) or evening market (กาดแลง).",
+  "substitute_abroad_en": "Frozen cha-om in Thai groceries.",
+  "pronunciation": {
+   "syllables": [],
+   "tone_source": "derived",
+   "confidence": "low",
+   "tip_en": "Tones not derived."
+  },
+  "sources": [
+   "https://www.wongnai.com/food-tips/top-35-must-try-northern-thai-dishes"
+  ],
+  "confidence": "medium"
+ },
+ {
+  "name_th": "ผักเฮือด",
+  "kham_mueang_th": "ผักเฮือด",
+  "roman": "phak hueat",
+  "name_en": "Young leaves of a fig tree (Ficus sp.)",
+  "what_it_is_en": "Young leaves of a Ficus tree (Wongnai glosses it as โพไทร), cooked in แก๋งผักเฮือด with pork.",
+  "flavour_en": "Tart-astringent, soft when cooked.",
+  "used_in": [
+   "แก๋งผักเฮือด"
+  ],
+  "where_to_buy_en": "any neighbourhood morning market (กาดเช้า / กาดหมั้ว) or evening market (กาดแลง) (seasonal, dry season when the leaves flush).",
+  "substitute_abroad_en": "No substitute.",
+  "pronunciation": {
+   "syllables": [],
+   "tone_source": "derived",
+   "confidence": "low",
+   "tip_en": "Tones not derived."
+  },
+  "sources": [
+   "https://www.wongnai.com/food-tips/top-35-must-try-northern-thai-dishes"
+  ],
+  "confidence": "low",
+  "needs_expert_review": "Species identity and season not confirmed by a botanical source."
+ },
+ {
+  "name_th": "ผักแปม",
+  "kham_mueang_th": "ผักแปม",
+  "roman": "phak paem",
+  "name_en": "Paem shoots (Toddalia asiatica)",
+  "what_it_is_en": "Thorny shrub; young shoots eaten raw with larb and chilli dips.",
+  "flavour_en": "Bitter-astringent, cuts the richness of blood/meat dishes.",
+  "used_in": [
+   "ผักกับลาบ",
+   "น้ำพริก"
+  ],
+  "where_to_buy_en": "any neighbourhood morning market (กาดเช้า / กาดหมั้ว) or evening market (กาดแลง); highland produce stalls.",
+  "substitute_abroad_en": "None; use bitter greens (e.g. frisée) for the function only.",
+  "pronunciation": {
+   "syllables": [],
+   "tone_source": "derived",
+   "confidence": "low",
+   "tip_en": "Tones not derived."
+  },
+  "sources": [
+   "https://hkm.hrdi.or.th/Knowledge/detail/572",
+   "https://gardenandfarm.baanlaesuan.com/317334/farming-101/localthai_edible",
+   "https://chiangmaipress.com/2020/07/10/%E0%B8%A5%E0%B8%B2%E0%B8%9A-%E0%B8%A3%E0%B8%B2%E0%B8%8A%E0%B8%B2%E0%B8%AD%E0%B8%B2%E0%B8%AB%E0%B8%B2%E0%B8%A3%E0%B9%80%E0%B8%A1%E0%B8%B7%E0%B8%AD%E0%B8%87-%E0%B8%AD%E0%B8%A3%E0%B9%88%E0%B8%AD/"
+  ],
+  "confidence": "medium"
+ },
+ {
+  "name_th": "ส้มป่อย (ยอด)",
+  "kham_mueang_th": "ส้มป่อย",
+  "roman": "som poi",
+  "name_en": "Som poi shoots (Acacia concinna)",
+  "what_it_is_en": "Young sour shoots eaten raw or used in northern dishes to add sourness instead of tamarind.",
+  "flavour_en": "Sour, slightly astringent.",
+  "used_in": [
+   "แกง",
+   "ผักเคียง"
+  ],
+  "where_to_buy_en": "any neighbourhood morning market (กาดเช้า / กาดหมั้ว) or evening market (กาดแลง).",
+  "substitute_abroad_en": "Tamarind or sorrel for sourness.",
+  "pronunciation": {
+   "syllables": [],
+   "tone_source": "derived",
+   "confidence": "low",
+   "tip_en": "Tones not derived."
+  },
+  "sources": [
+   "https://gardenandfarm.baanlaesuan.com/317334/farming-101/localthai_edible",
+   "https://www.wongnai.com/food-tips/thai-local-vegetables"
+  ],
+  "confidence": "medium",
+  "needs_expert_review": "Baan Lae Suan's English gloss says 'Ziziphus'; the usual scientific identity is Acacia concinna. Verify."
+ },
+ {
+  "name_th": "ผักขี้หูด",
+  "kham_mueang_th": "ผักขี้หูด",
+  "roman": "phak khi hut",
+  "name_en": "Rat-tail radish flowers/pods",
+  "what_it_is_en": "Blanched flower clusters dipped in chilli sauce; pods eaten raw or in northern curries (cool season).",
+  "flavour_en": "Mustardy, peppery.",
+  "used_in": [
+   "น้ำพริก",
+   "แกงแค"
+  ],
+  "where_to_buy_en": "Muang Mai Market (กาดเมืองใหม่), by the Ping River: wholesale fresh vegetables/fruit from about 2 am, retail stalls through the day; any neighbourhood morning market (กาดเช้า / กาดหมั้ว) or evening market (กาดแลง).",
+  "substitute_abroad_en": "Radish pods or young radish greens.",
+  "pronunciation": {
+   "syllables": [],
+   "tone_source": "derived",
+   "confidence": "low",
+   "tip_en": "Tones not derived."
+  },
+  "sources": [
+   "https://gardenandfarm.baanlaesuan.com/317334/farming-101/localthai_edible"
+  ],
+  "confidence": "medium"
+ },
+ {
+  "name_th": "ถั่วแปบ",
+  "kham_mueang_th": "ถั่วแปบ",
+  "roman": "thua paep",
+  "name_en": "Hyacinth-type bean (young pods/shoots)",
+  "what_it_is_en": "Young shoots and pods eaten cooked with chilli dip, larb, or in northern curries; not usually eaten raw.",
+  "flavour_en": "Beany, green.",
+  "used_in": [
+   "น้ำพริก (blanched)",
+   "แกงแค"
+  ],
+  "where_to_buy_en": "any neighbourhood morning market (กาดเช้า / กาดหมั้ว) or evening market (กาดแลง).",
+  "substitute_abroad_en": "Flat green beans / snow peas.",
+  "pronunciation": {
+   "syllables": [],
+   "tone_source": "derived",
+   "confidence": "low",
+   "tip_en": "Tones not derived."
+  },
+  "sources": [
+   "https://gardenandfarm.baanlaesuan.com/317334/farming-101/localthai_edible"
+  ],
+  "confidence": "low",
+  "needs_expert_review": "Baan Lae Suan glosses ถั่วแปบ as 'winged bean' (that is usually ถั่วพู); confirm species."
+ },
+ {
+  "name_th": "ผักแขยง",
+  "kham_mueang_th": "ผักแขยง",
+  "roman": "phak khayaeng",
+  "name_en": "Rice-paddy herb (Limnophila)",
+  "what_it_is_en": "Small fragrant herb eaten raw with salads, larb, dips; reduces gamey smells.",
+  "flavour_en": "Cumin-citrus aroma.",
+  "used_in": [
+   "ลาบ",
+   "น้ำพริก",
+   "ยำ"
+  ],
+  "where_to_buy_en": "any neighbourhood morning market (กาดเช้า / กาดหมั้ว) or evening market (กาดแลง).",
+  "substitute_abroad_en": "Rice-paddy herb (ngò om) from Vietnamese groceries.",
+  "pronunciation": {
+   "syllables": [],
+   "tone_source": "derived",
+   "confidence": "low",
+   "tip_en": "Tones not derived."
+  },
+  "sources": [
+   "https://gardenandfarm.baanlaesuan.com/317334/farming-101/localthai_edible"
+  ],
+  "confidence": "medium"
+ },
+ {
+  "name_th": "มะกอกป่า (ยอด)",
+  "kham_mueang_th": "มะกอก",
+  "roman": "makok",
+  "name_en": "Hog plum shoots (Spondias pinnata)",
+  "what_it_is_en": "Young sour shoots eaten raw with pork larb; leaves are sometimes pounded into nam pu.",
+  "flavour_en": "Sour, astringent.",
+  "used_in": [
+   "ผักกับลาบ",
+   "น้ำปู๋ (some areas)"
+  ],
+  "where_to_buy_en": "any neighbourhood morning market (กาดเช้า / กาดหมั้ว) or evening market (กาดแลง).",
+  "substitute_abroad_en": "Sorrel leaves (sourness only).",
+  "pronunciation": {
+   "syllables": [],
+   "tone_source": "derived",
+   "confidence": "low",
+   "tip_en": "Tones not derived."
+  },
+  "sources": [
+   "https://hkm.hrdi.or.th/Knowledge/detail/572",
+   "https://www.maenoicurry.com/en/article/20/%E0%B8%99%E0%B9%89%E0%B8%B3%E0%B8%9B%E0%B8%B9%E0%B8%84%E0%B8%B7%E0%B8%AD%E0%B8%AD%E0%B8%B0%E0%B9%84%E0%B8%A3"
+  ],
+  "confidence": "medium"
+ },
+ {
+  "name_th": "ตะไคร้ต้น",
+  "kham_mueang_th": "ตะไคร้ต้น",
+  "roman": "takhrai ton",
+  "name_en": "Litsea cubeba (mountain pepper)",
+  "what_it_is_en": "Fruits/leaves eaten raw with chilli dips, larb and bamboo-shoot salad.",
+  "flavour_en": "Intense lemongrass-citrus, peppery.",
+  "used_in": [
+   "น้ำพริก",
+   "ลาบ",
+   "ยำหน่อไม้"
+  ],
+  "where_to_buy_en": "Highland produce stalls at Muang Mai Market (กาดเมืองใหม่), by the Ping River: wholesale fresh vegetables/fruit from about 2 am, retail stalls through the day (seasonal).",
+  "substitute_abroad_en": "Litsea (may chang) berries; or lemon zest + pepper.",
+  "pronunciation": {
+   "syllables": [],
+   "tone_source": "derived",
+   "confidence": "low",
+   "tip_en": "Tones not derived."
+  },
+  "sources": [
+   "https://hkm.hrdi.or.th/Knowledge/detail/572"
+  ],
+  "confidence": "medium"
+ },
+ {
+  "name_th": "ผักพื้นบ้านสำหรับกินกับลาบ (ชุด)",
+  "kham_mueang_th": "ผักกับลาบ",
+  "roman": "phak kap laap",
+  "name_en": "Larb vegetable plate",
+  "what_it_is_en": "Northern larb is always eaten with a plate of raw leaves and herbs: cucumber, lettuce, Chinese cabbage, long beans, pennywort, winged bean, bitter gourd, Vietnamese coriander, dill, mint (หอมด่วน), ผักคาวตอง, young bael leaves, pea eggplant, ผักแปม and more. Each 'balances' spicy/rich meat.",
+  "flavour_en": "Mix of bitter, astringent, cooling, peppery.",
+  "used_in": [
+   "ลาบ",
+   "ส้า",
+   "หลู้"
+  ],
+  "where_to_buy_en": "Ton Lamyai Market (กาดต้นลำไย), directly opposite Warorot: fresh vegetables, fruit, meat / Muang Mai Market (กาดเมืองใหม่), by the Ping River: wholesale fresh vegetables/fruit from about 2 am, retail stalls through the day: ask for 'ผักกับลาบ' sets; larb shops serve them.",
+  "substitute_abroad_en": "Any mix of crisp raw leaves and soft herbs.",
+  "pronunciation": {
+   "syllables": [
+    {
+     "th": "ผัก",
+     "roman": "phak",
+     "tone": "24"
+    },
+    {
+     "th": "กับ",
+     "roman": "kap",
+     "tone": "24"
+    },
+    {
+     "th": "ลาบ",
+     "roman": "laap",
+     "tone": "42"
+    }
+   ],
+   "tone_source": "derived",
+   "confidence": "low",
+   "tip_en": "Tones are Chiang Mai Northern Thai values (24 low-rising, 21 low-falling, 44ʔ high-level glottal, 33 mid, 42 high-falling, 45 high-rising) DERIVED by applying the Chiang Mai tone-box correspondences (Wikipedia 'Northern Thai language') to the etymological Thai spelling. Not checked against a native-speaker recording; treat as a guide."
+  },
+  "sources": [
+   "https://chiangmaigardens.com/%E0%B8%9C%E0%B8%B1%E0%B8%81%E0%B8%81%E0%B8%B1%E0%B8%9A%E0%B8%A5%E0%B8%B2%E0%B8%9A/",
+   "https://chiangmaipress.com/2020/07/10/%E0%B8%A5%E0%B8%B2%E0%B8%9A-%E0%B8%A3%E0%B8%B2%E0%B8%8A%E0%B8%B2%E0%B8%AD%E0%B8%B2%E0%B8%AB%E0%B8%B2%E0%B8%A3%E0%B9%80%E0%B8%A1%E0%B8%B7%E0%B8%AD%E0%B8%87-%E0%B8%AD%E0%B8%A3%E0%B9%88%E0%B8%AD/",
+   "https://hkm.hrdi.or.th/Knowledge/detail/572"
+  ],
+  "confidence": "high"
+ },
+ {
+  "name_th": "ผงฮังเล",
+  "kham_mueang_th": "ผงฮังเล",
+  "roman": "phong hang le",
+  "name_en": "Hang le spice powder",
+  "what_it_is_en": "Roasted, finely ground blend of about ten dried spices incl. cardamom, clove, mace, star anise; each house has its own ratio. Name linked to Burmese 'hin' (curry).",
+  "flavour_en": "Warm, sweet-spicy (curry-powder-like).",
+  "used_in": [
+   "แกงฮังเล"
+  ],
+  "where_to_buy_en": "Warorot Market (Kad Luang / กาดหลวง): northern food and dry-goods stalls, incl. vendors selling packaged take-home northern items spice / curry-paste stalls (sold by weight).",
+  "substitute_abroad_en": "Garam masala with extra star anise (approximation).",
+  "pronunciation": {
+   "syllables": [],
+   "tone_source": "derived",
+   "confidence": "low",
+   "tip_en": "Tones not derived."
+  },
+  "sources": [
+   "https://krua.co/food_story/hang-lay-curry"
+  ],
+  "confidence": "high"
+ },
+ {
+  "name_th": "พริกแกงฮังเล",
+  "kham_mueang_th": "พริกแกงฮังเล",
+  "roman": "phrik kaeng hang le",
+  "name_en": "Hang le curry paste",
+  "what_it_is_en": "Dried chilli, lemongrass, garlic, shallot, shrimp paste, turmeric, galangal (ข่าแว่น), sometimes ginger.",
+  "flavour_en": "Savoury, mildly hot, fragrant.",
+  "used_in": [
+   "แกงฮังเล"
+  ],
+  "where_to_buy_en": "Warorot Market (Kad Luang / กาดหลวง): northern food and dry-goods stalls, incl. vendors selling packaged take-home northern items curry-paste stalls (fresh pastes by weight).",
+  "substitute_abroad_en": "Make it; or Thai red curry paste + turmeric (not the same).",
+  "pronunciation": {
+   "syllables": [],
+   "tone_source": "derived",
+   "confidence": "low",
+   "tip_en": "Tones not derived."
+  },
+  "sources": [
+   "https://krua.co/food_story/hang-lay-curry"
+  ],
+  "confidence": "high"
+ },
+ {
+  "name_th": "มะขามเปียก",
+  "kham_mueang_th": "",
+  "roman": "makham piak",
+  "name_en": "Tamarind pulp",
+  "what_it_is_en": "Sour agent in hang le curry and จอผักกาด.",
+  "flavour_en": "Sour-fruity.",
+  "used_in": [
+   "แกงฮังเล",
+   "จอผักกาด"
+  ],
+  "where_to_buy_en": "Any market / Warorot Market (Kad Luang / กาดหลวง): northern food and dry-goods stalls, incl. vendors selling packaged take-home northern items.",
+  "substitute_abroad_en": "Tamarind block or concentrate.",
+  "pronunciation": {
+   "syllables": [],
+   "tone_source": "derived",
+   "confidence": "low",
+   "tip_en": "Kham Mueang for tamarind (commonly บ่าขาม) not confirmed in sources opened."
+  },
+  "sources": [
+   "https://krua.co/food_story/hang-lay-curry",
+   "https://krua.co/food_story/jor-pakkad"
+  ],
+  "confidence": "high"
+ },
+ {
+  "name_th": "น้ำอ้อย",
+  "kham_mueang_th": "น้ำอ้อย",
+  "roman": "nam oi",
+  "name_en": "Cane sugar (block/jaggery)",
+  "what_it_is_en": "Sweetener in hang le curry.",
+  "flavour_en": "Caramel-molasses sweetness.",
+  "used_in": [
+   "แกงฮังเล"
+  ],
+  "where_to_buy_en": "Warorot Market (Kad Luang / กาดหลวง): northern food and dry-goods stalls, incl. vendors selling packaged take-home northern items dry-goods stalls.",
+  "substitute_abroad_en": "Jaggery / muscovado.",
+  "pronunciation": {
+   "syllables": [],
+   "tone_source": "derived",
+   "confidence": "low",
+   "tip_en": "Tones not derived."
+  },
+  "sources": [
+   "https://krua.co/food_story/hang-lay-curry"
+  ],
+  "confidence": "medium"
+ },
+ {
+  "name_th": "ข้าวเหนียว (ข้าวนึ่ง)",
+  "kham_mueang_th": "เข้านึ่ง / ข้าวนึ่ง",
+  "roman": "khao nueng",
+  "name_en": "Glutinous (sticky) rice",
+  "what_it_is_en": "The Lanna staple, eaten at every meal. Raw grain is soaked (หม่า) then steamed. Many Chiang Mai buyers look for named varieties on the sack such as สันป่าตอง (San Pa Tong) and เขี้ยวงู ('snake fang', long grain), and for new-crop rice (ข้าวใหม่) which needs less soaking.",
+  "flavour_en": "Chewy, sweetish, holds together to pinch into balls.",
+  "used_in": [
+   "every meal",
+   "น้ำพริก",
+   "ลาบ",
+   "ไส้อั่ว",
+   "ข้าวแคบ",
+   "ข้าวแต๋น"
+  ],
+  "where_to_buy_en": "Rice shops at Warorot Market (Kad Luang / กาดหลวง): northern food and dry-goods stalls, incl. vendors selling packaged take-home northern items and Ton Lamyai Market (กาดต้นลำไย), directly opposite Warorot: fresh vegetables, fruit, meat; supermarkets (5 kg sacks).",
+  "substitute_abroad_en": "Thai glutinous rice ('sweet rice') from Asian groceries; Japanese mochigome works but is shorter-grained.",
+  "pronunciation": {
+   "syllables": [
+    {
+     "th": "ข้าว",
+     "roman": "khao",
+     "tone": "44ʔ"
+    },
+    {
+     "th": "นึ่ง",
+     "roman": "nueng",
+     "tone": "42"
+    }
+   ],
+   "tone_source": "derived",
+   "confidence": "low",
+   "tip_en": "Northern pronounces ข้าว like 'เข้า' (short). CMU transliterates 'Khao nueng'. Tones are Chiang Mai Northern Thai values (24 low-rising, 21 low-falling, 44ʔ high-level glottal, 33 mid, 42 high-falling, 45 high-rising) DERIVED by applying the Chiang Mai tone-box correspondences (Wikipedia 'Northern Thai language') to the etymological Thai spelling. Not checked against a native-speaker recording; treat as a guide."
+  },
+  "sources": [
+   "https://lannainfo.library.cmu.ac.th/en_lannafood/detail_lannafood.php?id_food=185",
+   "https://guide.michelin.com/th/th/article/features/chiang-mai-a-gastronomy-journey-of-thailand-ep-1-kong-kin-kon-mueang",
+   "https://accl.cmu.ac.th/Knowledge/details/2548",
+   "https://www.wongnai.com/food-tips/how-long-to-soak-sticky-rice-in-water"
+  ],
+  "confidence": "medium",
+  "needs_expert_review": "Variety names สันป่าตอง / เขี้ยวงู were seen only in search snippets and retail listings (pages not opened); confirm characteristics with a rice source (e.g. Rice Department)."
+ },
+ {
+  "name_th": "ใบตอง",
+  "kham_mueang_th": "ใบตอง",
+  "roman": "bai tong",
+  "name_en": "Banana leaf",
+  "what_it_is_en": "Wrapper for ถั่วเน่าเมอะ, grilled/steamed parcels (แอ็บ, ห่อนึ่ง, จิ๊นส้มหมก) and for roasting shrimp paste.",
+  "flavour_en": "Adds a green, tea-like aroma when heated.",
+  "used_in": [
+   "แอ็บ",
+   "ห่อนึ่ง",
+   "จิ๊นส้มหมก",
+   "ถั่วเน่าเมอะ"
+  ],
+  "where_to_buy_en": "Ton Lamyai Market (กาดต้นลำไย), directly opposite Warorot: fresh vegetables, fruit, meat; any market (sold folded in bundles).",
+  "substitute_abroad_en": "Frozen banana leaves (Asian/Latin groceries) or foil.",
+  "pronunciation": {
+   "syllables": [],
+   "tone_source": "derived",
+   "confidence": "low",
+   "tip_en": "Tones not derived."
+  },
+  "sources": [
+   "https://krua.co/food_story/tuanao/",
+   "https://www.wongnai.com/food-tips/top-35-must-try-northern-thai-dishes",
+   "https://guide.michelin.com/th/th/article/features/iconic-dishes-what-is-nam-phrik-num"
+  ],
+  "confidence": "high"
+ },
+ {
+  "name_th": "ปลาแห้ง",
+  "kham_mueang_th": "ป๋าแห้ง",
+  "roman": "pla haeng",
+  "name_en": "Dried fish",
+  "what_it_is_en": "Two of the four famous Kad Luang nam phrik num makers add dried fish; also cooked with ผักเซียงดา.",
+  "flavour_en": "Salty, smoky, umami.",
+  "used_in": [
+   "น้ำพริกหนุ่ม (some)",
+   "แกงผักเซียงดา",
+   "น้ำพริกถั่วเน่า"
+  ],
+  "where_to_buy_en": "Warorot Market (Kad Luang / กาดหลวง): northern food and dry-goods stalls, incl. vendors selling packaged take-home northern items dried-fish stalls.",
+  "substitute_abroad_en": "Dried anchovy or smoked mackerel flakes.",
+  "pronunciation": {
+   "syllables": [],
+   "tone_source": "derived",
+   "confidence": "low",
+   "tip_en": "Northern writes ป๋า for ปลา (rising tone, dropped l). Tones not derived."
+  },
+  "sources": [
+   "https://www.wongnai.com/food-tips/green-chili-dip-nam-prick-noom-chiangmai",
+   "https://www.wongnai.com/food-tips/top-35-must-try-northern-thai-dishes",
+   "https://krua.co/food_story/tuanao/"
+  ],
+  "confidence": "medium",
+  "needs_expert_review": "Spelling ป๋า follows Wongnai's ป๋าบ้วง; confirm ป๋าแห้ง usage."
+ }
+]

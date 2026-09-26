@@ -1,0 +1,808 @@
+{
+ "meta": {
+  "topic": "Northern Thai (Lanna) eating customs",
+  "retrieved": "2026-09-26",
+  "tone_note": "Tones are Chiang Mai Northern Thai values (24 low-rising, 21 low-falling, 44ʔ high-level glottal, 33 mid, 42 high-falling, 45 high-rising) DERIVED by applying the Chiang Mai tone-box correspondences (Wikipedia 'Northern Thai language') to the etymological Thai spelling. Not checked against a native-speaker recording; treat as a guide."
+ },
+ "sections": [
+  {
+   "id": "meals",
+   "title_th": "มื้ออาหารของคนล้านนา",
+   "title_en": "The Lanna meal day",
+   "content_th": "คนล้านนากินข้าววันละ 3 มื้อหลัก คือ ข้าวงาย (มื้อเช้า) ข้าวตอน (มื้อกลางวัน) และข้าวแลง (มื้อเย็น) และมี 'ข้าวเถาะ' เพิ่มเมื่อต้องทำงานหนัก ข้าวเหนียวนึ่งเป็นอาหารหลักทุกมื้อ ตามแบบดั้งเดิมจะนึ่งข้าววันละครั้งในตอนเช้า แล้วเก็บในก่องข้าวไว้กินทั้งวัน",
+   "content_en": "Traditionally three main meals: ข้าวงาย khao ngai (morning), ข้าวตอน khao ton (midday) and ข้าวแลง khao laeng (evening), plus an extra ข้าวเถาะ on days of heavy work. Steamed sticky rice is the staple at every meal. Traditionally rice was steamed once a day, in the morning, and kept warm in a woven rice box for the rest of the day. Everyday Northern speech also uses ข้าวเจ๊า for breakfast (Central ข้าวเช้า).",
+   "key_terms": [
+    {
+     "kham_mueang_th": "ข้าวงาย",
+     "roman": "khao ngai",
+     "central_th": "ข้าวเช้า",
+     "en": "breakfast (traditional term)",
+     "confidence": "medium",
+     "sources": [
+      "https://accl.cmu.ac.th/Knowledge/details/2548"
+     ]
+    },
+    {
+     "kham_mueang_th": "ข้าวตอน",
+     "roman": "khao ton",
+     "central_th": "ข้าวกลางวัน",
+     "en": "lunch (traditional term)",
+     "confidence": "medium",
+     "sources": [
+      "https://accl.cmu.ac.th/Knowledge/details/2548"
+     ]
+    },
+    {
+     "kham_mueang_th": "ข้าวแลง",
+     "roman": "khao laeng",
+     "central_th": "ข้าวเย็น",
+     "en": "dinner",
+     "confidence": "high",
+     "sources": [
+      "https://accl.cmu.ac.th/Knowledge/details/2548",
+      "https://northspace.life/%E0%B8%A0%E0%B8%B2%E0%B8%A9%E0%B8%B2%E0%B9%80%E0%B8%AB%E0%B8%99%E0%B8%B7%E0%B8%AD/"
+     ]
+    },
+    {
+     "kham_mueang_th": "ข้าวเจ๊า",
+     "roman": "khao jao",
+     "central_th": "ข้าวเช้า",
+     "en": "breakfast (everyday)",
+     "confidence": "medium",
+     "sources": [
+      "https://northspace.life/%E0%B8%A0%E0%B8%B2%E0%B8%A9%E0%B8%B2%E0%B9%80%E0%B8%AB%E0%B8%99%E0%B8%B7%E0%B8%AD/"
+     ]
+    },
+    {
+     "kham_mueang_th": "กิ๋นข้าว / กิ๋นเข้า",
+     "roman": "kin khao",
+     "central_th": "กินข้าว",
+     "en": "to eat (a meal)",
+     "confidence": "high",
+     "pronunciation": {
+      "syllables": [
+       {
+        "th": "กิ๋น",
+        "roman": "kin",
+        "tone": "24"
+       },
+       {
+        "th": "ข้าว",
+        "roman": "khao",
+        "tone": "44ʔ"
+       }
+      ],
+      "tone_source": "derived",
+      "note": "Chiang Mai tones derived from tone-box rules; low confidence."
+     },
+     "sources": [
+      "https://www.trueplookpanya.com/learning/detail/25566",
+      "https://www.chiangrai108.com/artsculture/10392/"
+     ]
+    }
+   ],
+   "sources": [
+    "https://accl.cmu.ac.th/Knowledge/details/2548",
+    "https://www.matichon.co.th/weekly/column/article_439845",
+    "https://northspace.life/%E0%B8%A0%E0%B8%B2%E0%B8%A9%E0%B8%B2%E0%B9%80%E0%B8%AB%E0%B8%99%E0%B8%B7%E0%B8%AD/"
+   ],
+   "confidence": "high",
+   "needs_expert_review": "ข้าวเถาะ as an extra meal comes from a single CMU knowledge page; confirm meaning/time of day."
+  },
+  {
+   "id": "sticky_rice_steaming",
+   "title_th": "การหม่าข้าวและนึ่งข้าว",
+   "title_en": "Soaking and steaming sticky rice",
+   "content_th": "ข้าวเหนียวต้อง 'หม่า' คือแช่น้ำไว้ข้ามคืน แล้วนึ่งในตอนเช้า ภาชนะนึ่งของล้านนาเรียก 'ไหเข้า' (ไหนึ่งข้าว) ทำจากไม้สัก ไม้ซ้อ ไม้ขนุน หรือกระบอกไม้ไผ่ หรือไม้ไผ่สานคล้ายหวดของอีสาน ก้นไหมี 'ตาดไห' เป็นแผ่นไม้เจาะรูประมาณ 10 รู ให้ไอน้ำผ่าน ตั้งบนหม้อน้ำ แล้วใช้ผ้าชุบน้ำพันรอยต่อระหว่างไหกับหม้อกันไอรั่ว นึ่งจนสุก แล้วเทออกบนถาดไม้ พลิกกลับไล่ไอน้ำ ก่อนเก็บใส่ก่องข้าว เคล็ดลับจาก ศูนย์สนเทศภาคเหนือ มช.: ล้างข้าวจนน้ำใส ชุบน้ำหวดก่อนใส่ข้าว นึ่งประมาณ 20 นาที ข้าวสุกเมื่อเมล็ดนุ่มและไม่ติดมือ",
+   "content_en": "Sticky rice is soaked first (Kham Mueang หม่า, 'ma'), traditionally overnight, and steamed in the morning. The Lanna steaming vessel is the ไหเข้า hai khao (Central/Isan: หวด huat): carved from teak or other wood, made from a bamboo tube, or woven bamboo. A perforated board (ตาดไห, about 10 holes) sits in the base. The vessel sits on a pot of boiling water and the joint is sealed with a strip of wet cloth. After steaming, the rice is tipped onto a wooden tray and turned with a paddle to let steam escape (otherwise it goes soggy), then packed into a woven rice box. CMU's recipe: rinse until the water runs clear, dampen the basket, steam about 20 minutes; done when grains are tender and don't stick to the hand. A Wongnai test found that for NEW-crop rice a 1-hour soak gave the best texture and overnight soaking made grains fragile; older rice needs longer. Sizing folk custom: the head of household measured a new vessel with the thumb from base to rim, chanting 'อิ่ม-อยาก' (full-hungry), hoping to finish on 'อิ่ม'.",
+   "key_terms": [
+    {
+     "kham_mueang_th": "หม่า / หม่าข้าว",
+     "roman": "ma khao",
+     "central_th": "แช่ข้าว",
+     "en": "to soak (sticky rice) before steaming",
+     "confidence": "medium",
+     "sources": [
+      "https://accl.cmu.ac.th/Knowledge/details/2548"
+     ]
+    },
+    {
+     "kham_mueang_th": "นึ่งข้าว / นึ่งเข้า",
+     "roman": "nueng khao",
+     "central_th": "นึ่งข้าว",
+     "en": "to steam rice",
+     "confidence": "medium",
+     "pronunciation": {
+      "syllables": [
+       {
+        "th": "นึ่ง",
+        "roman": "nueng",
+        "tone": "42"
+       },
+       {
+        "th": "ข้าว",
+        "roman": "khao",
+        "tone": "44ʔ"
+       }
+      ],
+      "tone_source": "derived",
+      "note": "Chiang Mai tones derived from tone-box rules; low confidence."
+     },
+     "sources": [
+      "https://lannainfo.library.cmu.ac.th/en_lannafood/detail_lannafood.php?id_food=185"
+     ]
+    },
+    {
+     "kham_mueang_th": "ไหเข้า (ไหนึ่ง)",
+     "roman": "hai khao",
+     "central_th": "หวด",
+     "en": "sticky-rice steaming vessel",
+     "confidence": "high",
+     "sources": [
+      "https://www.matichon.co.th/weekly/column/article_439845"
+     ]
+    },
+    {
+     "kham_mueang_th": "ตาดไห",
+     "roman": "tat hai",
+     "central_th": "แผ่นรองก้นหวด",
+     "en": "perforated base board of the steamer",
+     "confidence": "medium",
+     "sources": [
+      "https://www.matichon.co.th/weekly/column/article_439845"
+     ]
+    },
+    {
+     "kham_mueang_th": "ก่องข้าว",
+     "roman": "kong khao",
+     "central_th": "กระติ๊บข้าว",
+     "en": "woven lidded sticky-rice box (household)",
+     "confidence": "high",
+     "sources": [
+      "https://www.blockdit.com/posts/6924195d8c42c444de906162",
+      "https://www.thammculture.com/thai-culture-through-the-lens-of-glutinous-rice/"
+     ]
+    },
+    {
+     "kham_mueang_th": "แอ๊บข้าว",
+     "roman": "aep khao",
+     "central_th": "กระติ๊บเล็ก",
+     "en": "small woven rice box carried to the fields; a large one is ก่องข้าวหลวง (70-80 cm)",
+     "confidence": "medium",
+     "sources": [
+      "https://www.blockdit.com/posts/6924195d8c42c444de906162"
+     ]
+    }
+   ],
+   "sources": [
+    "https://www.matichon.co.th/weekly/column/article_439845",
+    "https://lannainfo.library.cmu.ac.th/en_lannafood/detail_lannafood.php?id_food=185",
+    "https://accl.cmu.ac.th/Knowledge/details/2548",
+    "https://www.wongnai.com/food-tips/how-long-to-soak-sticky-rice-in-water",
+    "https://www.blockdit.com/posts/6924195d8c42c444de906162"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "hand_eating",
+   "title_th": "การปั้นข้าวเหนียวกินด้วยมือ",
+   "title_en": "Eating sticky rice with your hand",
+   "content_th": "คนล้านนาใช้มือปั้นข้าวเหนียวเป็นคำ ใช้คำข้าวจิ้มน้ำพริกหรือหยิบกับข้าวเข้าปาก บางบ้านทาน้ำมันที่ฝ่ามือเล็กน้อยกันข้าวติดมือ การปั้นข้าวจากก่องข้าวเดียวกันล้อมวงกิน สื่อถึงความเท่าเทียมและการแบ่งปัน ข้าวเหนียวยังใช้ในพิธีเรียกขวัญ",
+   "content_en": "Pull a small piece of rice from the shared basket with your right hand, squeeze it into a bite-sized ball with your fingers (don't knead it long), then use the ball to scoop or dip into chilli dip or pinch up a piece of meat or vegetable. Some people rub a little oil on the palm so rice doesn't stick. Eating from one shared rice basket around a circle is described as a symbol of equality and sharing. Sticky rice also features in soul-calling (เรียกขวัญ) ceremonies.",
+   "key_terms": [
+    {
+     "kham_mueang_th": "ปั้นข้าว",
+     "roman": "pan khao",
+     "central_th": "ปั้นข้าวเหนียว",
+     "en": "to press sticky rice into a ball by hand",
+     "confidence": "medium",
+     "sources": [
+      "https://www.thammculture.com/thai-culture-through-the-lens-of-glutinous-rice/"
+     ]
+    },
+    {
+     "kham_mueang_th": "จิ้ม",
+     "roman": "jim",
+     "central_th": "จิ้ม",
+     "en": "to dip",
+     "confidence": "high"
+    }
+   ],
+   "sources": [
+    "https://accl.cmu.ac.th/Knowledge/details/2548",
+    "https://www.thammculture.com/thai-culture-through-the-lens-of-glutinous-rice/"
+   ],
+   "confidence": "high",
+   "needs_expert_review": "Detailed Northern-specific 'bad manners' for hand-eating (e.g. rolling rice on the palm, putting a bitten ball back) came only from blocked Pantip threads; ask a local."
+  },
+  {
+   "id": "etiquette",
+   "title_th": "มารยาทบนสำรับ",
+   "title_en": "Table etiquette",
+   "content_th": "ครอบครัวล้อมวงกินข้าวด้วยกัน ผู้อาวุโส เช่น ปู่ ย่า เป็นผู้เริ่มกินก่อน ข้อห้ามแบบดั้งเดิม เช่น ไม่พูดเสียงดัง ไม่พูดเรื่องน่ารังเกียจ ไม่เคาะถ้วยชาม ไม่ 'ยอแคม' (ยกถ้วยซดน้ำแกง) ไม่ 'สกหม้อแกง' (แอบกินลับหลัง) หลังกินเสร็จคว่ำถ้วยน้ำพริก เก็บเศษอาหารให้หมู ดื่มน้ำ แล้วอมเหมี้ยงหรือสูบบุหรี่ขี้โย",
+   "content_en": "Family eats in a circle; elders (grandparents) start first, younger people follow (CMU). Traditional don'ts: talking loudly, talking about disgusting things, tapping bowls, 'ยอแคม' (lifting a bowl to slurp curry straight from it) and 'สกหม้อแกง' (sneaking food from the pot behind others' backs). After the meal, the chilli-dip bowl is turned over, scraps go to the pigs, and older people might chew fermented tea leaves (เหมี้ยง). For visitors today: wait for the host/elder to start, take small amounts from shared dishes, use the serving spoon (ช้อนกลาง) for curries, and don't take the last piece without offering it.",
+   "key_terms": [
+    {
+     "kham_mueang_th": "ยอแคม",
+     "roman": "yo khaem",
+     "central_th": "ยกถ้วยซด",
+     "en": "lifting a bowl to drink curry from its rim (traditionally impolite)",
+     "confidence": "medium",
+     "sources": [
+      "https://accl.cmu.ac.th/Knowledge/details/2548"
+     ]
+    },
+    {
+     "kham_mueang_th": "สกหม้อแกง",
+     "roman": "sok mo kaeng",
+     "central_th": "แอบกินจากหม้อ",
+     "en": "sneaking food from the pot (impolite)",
+     "confidence": "medium",
+     "sources": [
+      "https://accl.cmu.ac.th/Knowledge/details/2548"
+     ]
+    },
+    {
+     "kham_mueang_th": "เหมี้ยง",
+     "roman": "mieng",
+     "central_th": "เมี่ยง",
+     "en": "fermented tea leaves chewed after meals",
+     "confidence": "high",
+     "sources": [
+      "https://accl.cmu.ac.th/Knowledge/details/2548"
+     ]
+    }
+   ],
+   "sources": [
+    "https://accl.cmu.ac.th/Knowledge/details/2548",
+    "https://lannainfo.library.cmu.ac.th/en_lannafood/culture_lanna.php"
+   ],
+   "confidence": "high",
+   "needs_expert_review": "The modern-visitor tips (serving spoon, last piece) are general Thai practice, not from a Lanna-specific source."
+  },
+  {
+   "id": "khantok",
+   "title_th": "ขันโตก",
+   "title_en": "Khantok (raised food tray) and the khantok dinner",
+   "content_th": "ขันโตก หรือ โตก สะโตก คือภาชนะวางสำรับอาหารของคนล้านนา มีสามส่วน คือ ส่วนบน (ถาดกลม ผายออก เส้นผ่านศูนย์กลาง 30-100 ซม.) เอวขัน (ซี่ไม้ค้ำ ยกสูง 30-40 ซม.) และตีนขัน ขนาดมีขันโตกหลวง (60-120 ซม. สำหรับเจ้านาย วัด) ขันโตกฮาม (40-60 ซม.) และขันโตกหน้อย (25-37 ซม.) ทำด้วยไม้ ไม้ไผ่สาน หรือหวาย บ้านทั่วไปใช้ไม้สีธรรมชาติหรือลงรักดำ ของพระสงฆ์และเจ้านายลงรักแดง ผู้กินนั่งล้อมวงบนพื้น งานเลี้ยงขันโตกแบบปัจจุบันเริ่มฟื้นฟูในปี พ.ศ. 2496 โดยคุณไกรศรี นิมมานเหมินท์ เพื่อต้อนรับแขกคนสำคัญและชาวต่างชาติ",
+   "content_en": "ขันโตก / โตก is the Lanna pedestal tray for a meal set: a round tray (30-100+ cm), wooden ribs ('waist') raising it 30-40 cm, and a foot. Sizes: ขันโตกหลวง (royal/temple, 60-120 cm), ขันโตกฮาม (40-60 cm, large households), ขันโตกหน้อย (25-37 cm, individuals or newly-weds). Materials: wood, woven bamboo, rattan; black lacquer for ordinary homes, red lacquer for monks and nobility. Diners sit on the floor around it. The 'khantok dinner' as a hospitality event was revived in 1953 by Chiang Mai businessman Kraisri Nimmanhaeminda to welcome honoured guests and foreigners. Typical set: nam phrik num, nam phrik ong, sai ua, khaep mu, kaeng hang le, larb, fresh vegetables, with sticky rice; often with fawn leb dancing.",
+   "key_terms": [
+    {
+     "kham_mueang_th": "ขันโตก / โตก / สะโตก",
+     "roman": "khantok / tok",
+     "central_th": "โต๊ะอาหารเตี้ย / ถาดสำรับ",
+     "en": "raised round food tray",
+     "confidence": "high",
+     "sources": [
+      "https://www.matichon.co.th/weekly/column/article_48313"
+     ]
+    },
+    {
+     "kham_mueang_th": "ขันโตกหน้อย",
+     "roman": "khantok noi",
+     "central_th": "ขันโตกเล็ก",
+     "en": "small khantok",
+     "confidence": "medium",
+     "sources": [
+      "https://www.matichon.co.th/weekly/column/article_48313"
+     ]
+    }
+   ],
+   "sources": [
+    "https://www.matichon.co.th/weekly/column/article_48313",
+    "https://cooking.kapook.com/view87003.html",
+    "https://lannainfo.library.cmu.ac.th/en_lannafood/culture_lanna.php"
+   ],
+   "confidence": "high",
+   "needs_expert_review": "Revival date (1953 / พ.ศ. 2496) and host name come from Kapook; confirm spelling Kraisri Nimmanhaeminda."
+  },
+  {
+   "id": "side_vegetables",
+   "title_th": "ผักเคียง ผักกับลาบ",
+   "title_en": "Side vegetables (ผักเคียง / ผักกับลาบ)",
+   "content_th": "น้ำพริกเหนือกินกับผักสด ผักลวก หรือผักนึ่ง และแคบหมู ลาบกินกับ 'ผักกับลาบ' ซึ่งมีทั้งผักขม ฝาด เผ็ด หอม เพื่อตัดความเลี่ยนและช่วยย่อย ผักป่าเปลี่ยนตามฤดู: หน้าร้อน หัวปลี ใบมะขาม ยอดมะม่วง; หน้าฝน หน่อไม้ เห็ด ผักหวาน; ในนา ผักบุ้ง ผักแว่น",
+   "content_en": "Northern chilli dips are 'paste-like, suited for dipping' (CMU) and always come with a plate of raw, blanched or steamed vegetables and often pork cracklings. Larb has its own plate (ผักกับลาบ): bitter, astringent, peppery and cooling leaves (e.g. ผักแปม, มะกอก shoots, Vietnamese coriander, mint, pennywort, cucumber, long beans) to balance the meat. Wild vegetables change with the season: hot season banana flower, tamarind leaves, young mango leaves; rainy season bamboo shoots, mushrooms, ผักหวาน; paddy fields morning glory, water clover.",
+   "key_terms": [
+    {
+     "kham_mueang_th": "ผักกับลาบ",
+     "roman": "phak kap laap",
+     "central_th": "ผักแกล้มลาบ",
+     "en": "vegetable/herb plate eaten with larb",
+     "confidence": "high",
+     "sources": [
+      "https://chiangmaigardens.com/%E0%B8%9C%E0%B8%B1%E0%B8%81%E0%B8%81%E0%B8%B1%E0%B8%9A%E0%B8%A5%E0%B8%B2%E0%B8%9A/",
+      "https://chiangmaipress.com/2020/07/10/%E0%B8%A5%E0%B8%B2%E0%B8%9A-%E0%B8%A3%E0%B8%B2%E0%B8%8A%E0%B8%B2%E0%B8%AD%E0%B8%B2%E0%B8%AB%E0%B8%B2%E0%B8%A3%E0%B9%80%E0%B8%A1%E0%B8%B7%E0%B8%AD%E0%B8%87-%E0%B8%AD%E0%B8%A3%E0%B9%88%E0%B8%AD/"
+     ]
+    },
+    {
+     "kham_mueang_th": "ผักนึ่ง / ผักลวก",
+     "roman": "phak nueng / phak luak",
+     "central_th": "ผักนึ่ง/ผักลวก",
+     "en": "steamed / blanched vegetables served with dips",
+     "confidence": "medium"
+    }
+   ],
+   "sources": [
+    "https://lannainfo.library.cmu.ac.th/en_lannafood/culture_lanna.php",
+    "https://chiangmaigardens.com/%E0%B8%9C%E0%B8%B1%E0%B8%81%E0%B8%81%E0%B8%B1%E0%B8%9A%E0%B8%A5%E0%B8%B2%E0%B8%9A/",
+    "https://hkm.hrdi.or.th/Knowledge/detail/572",
+    "https://chiangmaipress.com/2020/07/10/%E0%B8%A5%E0%B8%B2%E0%B8%9A-%E0%B8%A3%E0%B8%B2%E0%B8%8A%E0%B8%B2%E0%B8%AD%E0%B8%B2%E0%B8%AB%E0%B8%B2%E0%B8%A3%E0%B9%80%E0%B8%A1%E0%B8%B7%E0%B8%AD%E0%B8%87-%E0%B8%AD%E0%B8%A3%E0%B9%88%E0%B8%AD/"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "taste_profile",
+   "title_th": "รสชาติอาหารเหนือ",
+   "title_en": "What northern food tastes like",
+   "content_th": "อาหารล้านนาโดยทั่วไปออกรสเค็มและเผ็ด ไม่ค่อยใช้กะทิ แกงใช้น้ำน้อย น้ำพริกข้นเกือบเป็นเนื้อเดียว เหมาะแก่การจิ้ม ความหวานน้อยกว่าอาหารภาคกลาง รสเผ็ดชาจากมะแขว่นเป็นเอกลักษณ์",
+   "content_en": "Lanna food 'inclines towards a little salty and spicy hot', rarely uses coconut milk, and curries use little liquid (CMU). Dips are thick, almost pastes. Sweetness is low compared with Central Thai food. The numbing 'เด้าลิ้น' sensation from makhwaen is a signature. Umami comes from fermented soybean, crab paste and fermented fish rather than coconut and sugar.",
+   "key_terms": [],
+   "sources": [
+    "https://lannainfo.library.cmu.ac.th/en_lannafood/culture_lanna.php",
+    "https://hkm.hrdi.or.th/Knowledge/detail/705",
+    "https://lannernews.com/23102567-01/"
+   ],
+   "confidence": "high"
+  },
+  {
+   "id": "laab_beliefs",
+   "title_th": "ลาบกับความเชื่อ",
+   "title_en": "Larb, luck and occasion",
+   "content_th": "คนล้านนาบางส่วนเชื่อว่ากินลาบแล้วจะมีโชคลาภ เพราะ 'ลาบ' พ้องเสียงกับ 'ลาภ' ลาบเป็นอาหารพิเศษทำในโอกาสสำคัญ การถูกเลี้ยงลาบถือเป็นเกียรติ ผู้ปรุงลาบฝีมือดีเรียก 'สล่าลาบ' แต่ละบ้านมีสูตรพริกลาบของตน",
+   "content_en": "Many Northerners associate larb with good fortune because ลาบ sounds like ลาภ ('luck, gain'). Larb is a special-occasion dish; being treated to larb is an honour. A skilled larb maker is a สล่าลาบ (sala laap, 'larb master'), and families keep their own spice-mix recipe. Beliefs vary by family and are not universal.",
+   "key_terms": [
+    {
+     "kham_mueang_th": "สล่าลาบ",
+     "roman": "sala laap",
+     "central_th": "ช่างทำลาบ",
+     "en": "larb master",
+     "confidence": "medium",
+     "sources": [
+      "https://krua.co/food_story/laab-herbal-powder-lanna/"
+     ]
+    }
+   ],
+   "sources": [
+    "https://chiangmaipress.com/2020/07/10/%E0%B8%A5%E0%B8%B2%E0%B8%9A-%E0%B8%A3%E0%B8%B2%E0%B8%8A%E0%B8%B2%E0%B8%AD%E0%B8%B2%E0%B8%AB%E0%B8%B2%E0%B8%A3%E0%B9%80%E0%B8%A1%E0%B8%B7%E0%B8%AD%E0%B8%87-%E0%B8%AD%E0%B8%A3%E0%B9%88%E0%B8%AD/",
+    "https://krua.co/food_story/laab-herbal-powder-lanna/"
+   ],
+   "confidence": "medium"
+  },
+  {
+   "id": "utensils",
+   "title_th": "ช้อนส้อมกับมือ",
+   "title_en": "Spoon, fork or hand?",
+   "content_th": "ข้าวเหนียวกินด้วยมือได้โดยตรง ต่างจากข้าวเจ้าที่ต้องใช้ช้อนส้อม ในบ้านคนเหนือ มักใช้มือกับข้าวเหนียว และใช้ช้อนกลางตักแกงใส่ถ้วยของตน ส่วนก๋วยเตี๋ยว ข้าวซอย ใช้ช้อนกับตะเกียบ",
+   "content_en": "Sticky rice is eaten by hand, unlike jasmine rice which is eaten with spoon and fork (spoon in the right hand, fork used only to push food onto the spoon). At a northern meal you typically use your hand for the sticky rice and dips, a shared serving spoon to move curry into your own bowl, and a spoon to sip curry. Noodle dishes such as khao soi are eaten with spoon and chopsticks.",
+   "key_terms": [],
+   "sources": [
+    "https://www.thammculture.com/thai-culture-through-the-lens-of-glutinous-rice/"
+   ],
+   "confidence": "medium",
+   "needs_expert_review": "Only the hand vs. utensil contrast is sourced (Thamm Culture); the spoon/fork/chopstick details are general Thai practice."
+  },
+  {
+   "id": "markets",
+   "title_th": "กาด ตลาดล้านนา",
+   "title_en": "Markets (กาด) and how to shop",
+   "content_th": "'กาด' คือตลาด มีหลายแบบ เช่น กาดก้อม (ตลาดเล็ก) กาดเช้า กาดแลง (ตลาดเย็น) กาดหลวง (ตลาดใหญ่ประจำเมือง คือตลาดวโรรส) กาดงัว (เดิมเป็นตลาดวัวควาย) กาดหมั้ว (ตลาดเช้าที่เดี๋ยวนี้เปิดทั้งวัน) ในเชียงใหม่ ตลาดวโรรสขายน้ำพริกหนุ่ม น้ำพริกอ่อง ไส้อั่ว แคบหมู ทั้งแบบแพ็กฝากกลับบ้าน ตลาดต้นลำไยฝั่งตรงข้ามขายผัก ผลไม้ เนื้อสัตว์ ส่วนกาดเมืองใหม่ริมน้ำปิงเป็นตลาดส่งผักผลไม้ ตั้งแต่ตีสองถึงรุ่งเช้า",
+   "content_en": "กาด (kat) = market. Kinds: กาดก้อม (small), กาดเช้า (morning), กาดแลง (evening), กาดหลวง (the city's big market; in Chiang Mai, Warorot), กาดงัว (originally cattle market), กาดหมั้ว (formerly morning-only, now all day). Shopping map for cooks: Warorot (Kad Luang) for ready nam phrik, sai ua, khaep mu and dry spices; Ton Lamyai opposite for fresh vegetables, fruit, meat; Kad Muang Mai by the Ping River for wholesale vegetables and fruit from about 2 am to daybreak.",
+   "key_terms": [
+    {
+     "kham_mueang_th": "กาด",
+     "roman": "kat",
+     "central_th": "ตลาด",
+     "en": "market",
+     "confidence": "high",
+     "pronunciation": {
+      "syllables": [
+       {
+        "th": "กาด",
+        "roman": "kat",
+        "tone": "21"
+       }
+      ],
+      "tone_source": "derived",
+      "note": "Chiang Mai tones derived from tone-box rules; low confidence."
+     },
+     "sources": [
+      "https://www.matichon.co.th/weekly/column/article_428377"
+     ]
+    },
+    {
+     "kham_mueang_th": "กาดหลวง",
+     "roman": "kat luang",
+     "central_th": "ตลาดใหญ่ (ตลาดวโรรส)",
+     "en": "big central market",
+     "confidence": "high",
+     "sources": [
+      "https://www.matichon.co.th/weekly/column/article_428377"
+     ]
+    },
+    {
+     "kham_mueang_th": "กาดแลง",
+     "roman": "kat laeng",
+     "central_th": "ตลาดเย็น",
+     "en": "evening market",
+     "confidence": "high",
+     "sources": [
+      "https://www.matichon.co.th/weekly/column/article_428377"
+     ]
+    },
+    {
+     "kham_mueang_th": "กาดก้อม",
+     "roman": "kat kom",
+     "central_th": "ตลาดเล็ก",
+     "en": "small market",
+     "confidence": "medium",
+     "sources": [
+      "https://www.matichon.co.th/weekly/column/article_428377"
+     ]
+    }
+   ],
+   "sources": [
+    "https://www.matichon.co.th/weekly/column/article_428377",
+    "https://www.chiangmaihomeguide.com/warorot-market-kad-luang/",
+    "https://www.reviewchiangmai.com/kad-muang-mai/"
+   ],
+   "confidence": "high"
+  }
+ ],
+ "taste_words": [
+  {
+   "kham_mueang_th": "ลำ",
+   "roman": "lam",
+   "central_th": "อร่อย",
+   "en": "delicious",
+   "confidence": "high",
+   "pronunciation": {
+    "syllables": [
+     {
+      "th": "ลำ",
+      "roman": "lam",
+      "tone": "33"
+     }
+    ],
+    "tone_source": "derived",
+    "note": "Chiang Mai tones derived from tone-box rules; low confidence."
+   },
+   "sources": [
+    "https://www.trueplookpanya.com/learning/detail/25566",
+    "https://www.chiangrai108.com/artsculture/10392/",
+    "https://northspace.life/%E0%B8%A0%E0%B8%B2%E0%B8%A9%E0%B8%B2%E0%B9%80%E0%B8%AB%E0%B8%99%E0%B8%B7%E0%B8%AD/"
+   ]
+  },
+  {
+   "kham_mueang_th": "จ๊าดลำ",
+   "roman": "jat lam",
+   "central_th": "อร่อยมาก",
+   "en": "really delicious",
+   "confidence": "high",
+   "sources": [
+    "https://www.trueplookpanya.com/learning/detail/25566",
+    "https://www.chiangrai108.com/artsculture/10392/"
+   ]
+  },
+  {
+   "kham_mueang_th": "ลำขนาด",
+   "roman": "lam khanat",
+   "central_th": "อร่อยมาก",
+   "en": "super tasty (ขนาด = very; very common compliment; add เจ้า/ครับ)",
+   "confidence": "medium",
+   "sources": [
+    "https://cookpad.com/th/recipes/16454331"
+   ]
+  },
+  {
+   "kham_mueang_th": "ลำแต้",
+   "roman": "lam tae",
+   "central_th": "อร่อยจริงๆ",
+   "en": "truly delicious",
+   "confidence": "medium",
+   "sources": [
+    "https://www.wongnai.com/recipes/northern-thai-green-chilli-dip"
+   ]
+  },
+  {
+   "kham_mueang_th": "กะลังลำ",
+   "roman": "kalang lam",
+   "central_th": "รสกำลังดี",
+   "en": "just right, well-seasoned",
+   "confidence": "medium",
+   "sources": [
+    "https://www.gotoknow.org/posts/551347"
+   ]
+  },
+  {
+   "kham_mueang_th": "เผ็ด",
+   "roman": "phet",
+   "central_th": "เผ็ด",
+   "en": "spicy-hot",
+   "confidence": "high",
+   "pronunciation": {
+    "syllables": [
+     {
+      "th": "เผ็ด",
+      "roman": "phet",
+      "tone": "24"
+     }
+    ],
+    "tone_source": "derived",
+    "note": "Chiang Mai tones derived from tone-box rules; low confidence."
+   }
+  },
+  {
+   "kham_mueang_th": "เด้าลิ้น",
+   "roman": "dao lin",
+   "central_th": "เผ็ดชาลิ้น",
+   "en": "tongue-numbing (makhwaen/Sichuan-pepper tingle)",
+   "confidence": "high",
+   "sources": [
+    "https://hkm.hrdi.or.th/Knowledge/detail/705",
+    "https://lannernews.com/23102567-01/"
+   ]
+  },
+  {
+   "kham_mueang_th": "ส้ม",
+   "roman": "som",
+   "central_th": "เปรี้ยว",
+   "en": "sour",
+   "confidence": "high",
+   "pronunciation": {
+    "syllables": [
+     {
+      "th": "ส้ม",
+      "roman": "som",
+      "tone": "44ʔ"
+     }
+    ],
+    "tone_source": "derived",
+    "note": "Chiang Mai tones derived from tone-box rules; low confidence."
+   },
+   "sources": [
+    "https://www.trueplookpanya.com/learning/detail/25566"
+   ]
+  },
+  {
+   "kham_mueang_th": "ส้มโจ๊ะโล๊ะ / ส้มปิส้มปี้",
+   "roman": "som jo lo / som pi som pi",
+   "central_th": "เปรี้ยวมาก",
+   "en": "very sour",
+   "confidence": "medium",
+   "sources": [
+    "https://www.trueplookpanya.com/learning/detail/25566",
+    "https://www.gotoknow.org/posts/551347"
+   ]
+  },
+  {
+   "kham_mueang_th": "ขม",
+   "roman": "khom",
+   "central_th": "ขม",
+   "en": "bitter",
+   "confidence": "high",
+   "pronunciation": {
+    "syllables": [
+     {
+      "th": "ขม",
+      "roman": "khom",
+      "tone": "24"
+     }
+    ],
+    "tone_source": "derived",
+    "note": "Chiang Mai tones derived from tone-box rules; low confidence."
+   }
+  },
+  {
+   "kham_mueang_th": "ขมแก๊ก / ขมปิขมปี๋",
+   "roman": "khom kaek / khom pi khom pi",
+   "central_th": "ขมมาก",
+   "en": "very bitter",
+   "confidence": "medium",
+   "sources": [
+    "https://www.trueplookpanya.com/learning/detail/25566",
+    "https://www.gotoknow.org/posts/551347"
+   ]
+  },
+  {
+   "kham_mueang_th": "เก็ม",
+   "roman": "kem",
+   "central_th": "เค็ม",
+   "en": "salty (Northern unaspirated k)",
+   "confidence": "medium",
+   "pronunciation": {
+    "syllables": [
+     {
+      "th": "เก็ม",
+      "roman": "kem",
+      "tone": "33"
+     }
+    ],
+    "tone_source": "derived",
+    "note": "Chiang Mai tones derived from tone-box rules; low confidence."
+   },
+   "sources": [
+    "https://www.gotoknow.org/posts/551347"
+   ]
+  },
+  {
+   "kham_mueang_th": "เก็มแต้เก็มว่า",
+   "roman": "kem tae kem wa",
+   "central_th": "เค็มเกินไป",
+   "en": "way too salty",
+   "confidence": "medium",
+   "sources": [
+    "https://www.gotoknow.org/posts/551347"
+   ]
+  },
+  {
+   "kham_mueang_th": "หวาน",
+   "roman": "wan",
+   "central_th": "หวาน",
+   "en": "sweet",
+   "confidence": "high",
+   "pronunciation": {
+    "syllables": [
+     {
+      "th": "หวาน",
+      "roman": "wan",
+      "tone": "24"
+     }
+    ],
+    "tone_source": "derived",
+    "note": "Chiang Mai tones derived from tone-box rules; low confidence."
+   }
+  },
+  {
+   "kham_mueang_th": "จ๋าง / จ๋างแจ้ดแผ้ด / จ๋างเจ๊อะเลอะ",
+   "roman": "jang / jang jaet phaet",
+   "central_th": "จืด / จืดชืด",
+   "en": "bland, tasteless",
+   "confidence": "medium",
+   "sources": [
+    "https://www.trueplookpanya.com/learning/detail/25566",
+    "https://www.gotoknow.org/posts/551347"
+   ]
+  },
+  {
+   "kham_mueang_th": "ฝาด",
+   "roman": "fat",
+   "central_th": "ฝาด",
+   "en": "astringent (unripe banana, young leaves)",
+   "confidence": "medium",
+   "sources": [
+    "https://www.trueplookpanya.com/learning/detail/25566"
+   ]
+  },
+  {
+   "kham_mueang_th": "เหม็นโอ๊ง",
+   "roman": "men ong",
+   "central_th": "เหม็นเน่า",
+   "en": "rotten smell (don't use about food someone serves you)",
+   "confidence": "medium",
+   "sources": [
+    "https://www.trueplookpanya.com/learning/detail/25566"
+   ]
+  },
+  {
+   "kham_mueang_th": "กั๊ดต๊อง / อิ่มแล้ว",
+   "roman": "kat tong",
+   "central_th": "อิ่มมาก",
+   "en": "stuffed full",
+   "confidence": "low",
+   "sources": [
+    "https://northspace.life/%E0%B8%A0%E0%B8%B2%E0%B8%A9%E0%B8%B2%E0%B9%80%E0%B8%AB%E0%B8%99%E0%B8%B7%E0%B8%AD/"
+   ]
+  }
+ ],
+ "useful_phrases": [
+  {
+   "kham_mueang_th": "อันนี้กี่บาทเจ้า",
+   "roman": "an ni ki bat jao",
+   "central_th": "อันนี้กี่บาทคะ/ครับ",
+   "en": "How much is this?",
+   "when": "at a stall; เจ้า is the polite Northern particle (widely used by women, and by anyone to be warm; men may use ครับ)",
+   "sources": [
+    "https://northspace.life/%E0%B8%A0%E0%B8%B2%E0%B8%A9%E0%B8%B2%E0%B9%80%E0%B8%AB%E0%B8%99%E0%B8%B7%E0%B8%AD/"
+   ],
+   "confidence": "medium"
+  },
+  {
+   "kham_mueang_th": "เต้าใดเจ้า",
+   "roman": "tao dai jao",
+   "central_th": "เท่าไรคะ",
+   "en": "How much?",
+   "when": "asking a price",
+   "sources": [],
+   "confidence": "low",
+   "needs_expert_review": "Common Kham Mueang form, but no opened source confirmed it."
+  },
+  {
+   "kham_mueang_th": "เอา...เจ้า",
+   "roman": "ao ... jao",
+   "central_th": "เอา...ค่ะ",
+   "en": "I'll take ...",
+   "when": "ordering/buying (e.g. เอาแก๋งอังเล)",
+   "sources": [
+    "https://www.fixconcern.com/order-food-in-northern-languages/"
+   ],
+   "confidence": "medium"
+  },
+  {
+   "kham_mueang_th": "บ่เอาเจ้า",
+   "roman": "bo ao jao",
+   "central_th": "ไม่เอาค่ะ",
+   "en": "No thanks / I don't want it",
+   "when": "declining",
+   "sources": [
+    "https://northspace.life/%E0%B8%A0%E0%B8%B2%E0%B8%A9%E0%B8%B2%E0%B9%80%E0%B8%AB%E0%B8%99%E0%B8%B7%E0%B8%AD/"
+   ],
+   "confidence": "high"
+  },
+  {
+   "kham_mueang_th": "ปอแล้วเจ้า",
+   "roman": "po laeo jao",
+   "central_th": "พอแล้วค่ะ",
+   "en": "That's enough",
+   "when": "when a vendor is filling a bag, or a host refills your plate",
+   "sources": [
+    "https://northspace.life/%E0%B8%A0%E0%B8%B2%E0%B8%A9%E0%B8%B2%E0%B9%80%E0%B8%AB%E0%B8%99%E0%B8%B7%E0%B8%AD/"
+   ],
+   "confidence": "high"
+  },
+  {
+   "kham_mueang_th": "ลำขนาดเจ้า",
+   "roman": "lam khanat jao",
+   "central_th": "อร่อยมากค่ะ",
+   "en": "It's really delicious!",
+   "when": "complimenting the cook",
+   "sources": [
+    "https://cookpad.com/th/recipes/16454331"
+   ],
+   "confidence": "medium"
+  },
+  {
+   "kham_mueang_th": "จะฮับอะหยังดีจ้าว",
+   "roman": "ja hap a yang di jao",
+   "central_th": "จะรับอะไรดีคะ",
+   "en": "What would you like? (what the vendor says)",
+   "when": "you will hear this",
+   "sources": [
+    "https://www.fixconcern.com/order-food-in-northern-languages/"
+   ],
+   "confidence": "medium"
+  },
+  {
+   "kham_mueang_th": "เก็บตังค์ตวยเจ้า",
+   "roman": "kep tang tuai jao",
+   "central_th": "เก็บเงินด้วยค่ะ",
+   "en": "The bill, please",
+   "when": "paying",
+   "sources": [
+    "https://www.fixconcern.com/order-food-in-northern-languages/"
+   ],
+   "confidence": "medium"
+  },
+  {
+   "kham_mueang_th": "บ่เผ็ดเน้อ",
+   "roman": "bo phet noe",
+   "central_th": "ไม่เผ็ดนะ",
+   "en": "Not spicy, OK?",
+   "when": "ordering",
+   "sources": [
+    "https://www.trueplookpanya.com/learning/detail/25566"
+   ],
+   "confidence": "low",
+   "needs_expert_review": "Assembled from บ่ (not) + เผ็ด + เน้อ (particle, TruePlookpanya); natural but not quoted as a phrase in a source."
+  },
+  {
+   "kham_mueang_th": "กิ๋นข้าวแล้วกา",
+   "roman": "kin khao laeo ka",
+   "central_th": "กินข้าวหรือยัง",
+   "en": "Have you eaten? (greeting)",
+   "when": "greeting",
+   "sources": [],
+   "confidence": "low",
+   "needs_expert_review": "Common greeting; exact particle (กา/ก่อ/ยัง) varies; unsourced."
+  }
+ ]
+}

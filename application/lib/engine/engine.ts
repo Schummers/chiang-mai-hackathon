@@ -20,13 +20,14 @@ export type ConversationState = {
 };
 
 export type EngineEvent =
-  | { type: "MIC_TAP"; speaker: Speaker; at: number }
+  | { type: "MIC_TAP"; speaker: Speaker; at: number; about?: string }
   | { type: "STOP"; speaker: Speaker }
   | { type: "TRANSCRIBED"; raw: string }
   | { type: "TRANSLATED"; id: string; result: TranslateResult }
   | { type: "FAILED"; speaker: Speaker; reason: ErrorReason; raw?: string }
   | { type: "PHOTO"; photo: Photo; at: number }
   | { type: "PHOTO_READ"; card: PhotoCard }
+  | { type: "ANSWERED"; id: string; answer: string }
   | { type: "RETRY"; at?: number }
   | { type: "CANCEL" }
   | { type: "DISMISS_ERROR" }
@@ -46,12 +47,14 @@ export function reduce(state: ConversationState, event: EngineEvent): Conversati
   switch (event.type) {
     case "MIC_TAP":
       if (phase.kind === "idle" || phase.kind === "error") {
-        return { ...state, phase: { kind: "listening", speaker: event.speaker, startedAt: event.at } };
+        const listening = { kind: "listening", speaker: event.speaker, startedAt: event.at } as const;
+        return { ...state, phase: event.about ? { ...listening, about: event.about } : listening };
       }
       return state;
     case "STOP":
       if (phase.kind === "listening" && phase.speaker === event.speaker) {
-        return { ...state, phase: { kind: "processing", speaker: event.speaker } };
+        const processing = { kind: "processing", speaker: event.speaker } as const;
+        return { ...state, phase: phase.about ? { ...processing, about: phase.about } : processing };
       }
       return state;
     case "TRANSCRIBED":
@@ -95,18 +98,34 @@ export function reduce(state: ConversationState, event: EngineEvent): Conversati
           },
         ],
       };
+    case "ANSWERED":
+      if (phase.kind !== "processing" || !phase.about) return state;
+      return {
+        ...state,
+        phase: { kind: "idle", nextTurn: "you" },
+        messages: [
+          ...state.messages,
+          { id: event.id, speaker: "you", translation: [], original: [phase.raw ?? ""], card: null, about: phase.about, answer: event.answer },
+        ],
+      };
     case "FAILED": {
       if (phase.kind === "idle") return state;
       const error = { kind: "error", speaker: event.speaker, reason: event.reason } as const;
       if (phase.kind === "reading") return { ...state, phase: { ...error, photo: phase.photo } };
-      return { ...state, phase: event.raw ? { ...error, raw: event.raw } : error };
+      const about = event.reason === "network" && "about" in phase && phase.about ? { about: phase.about } : {};
+      return { ...state, phase: event.raw ? { ...error, raw: event.raw, ...about } : { ...error, ...about } };
     }
     case "RETRY":
       if (phase.kind !== "error" || phase.reason !== "network") return state;
       if (phase.photo) return { ...state, phase: { kind: "reading", startedAt: event.at ?? 0, photo: phase.photo } };
       return {
         ...state,
-        phase: phase.raw ? { kind: "processing", speaker: phase.speaker, raw: phase.raw } : { kind: "processing", speaker: phase.speaker },
+        phase: {
+          kind: "processing",
+          speaker: phase.speaker,
+          ...(phase.raw && { raw: phase.raw }),
+          ...(phase.about && { about: phase.about }),
+        },
       };
     case "CANCEL":
       if (phase.kind === "listening") return { ...state, phase: { kind: "idle", nextTurn: phase.speaker } };
@@ -156,6 +175,13 @@ export class ConversationEngine {
     this.dispatch({ type: "MIC_TAP", speaker, at: this.now() });
   }
 
+  /** "Ask about this photo": exactly like tapping Speak, but the question goes to the app with that photo. */
+  askAboutPhoto(photoId: string) {
+    if (!this.images.has(photoId)) return;
+    if (this.state.phase.kind === "error") this.dropFailedPhoto();
+    this.dispatch({ type: "MIC_TAP", speaker: "you", at: this.now(), about: photoId });
+  }
+
   cancel() {
     this.dispatch({ type: "CANCEL" });
   }
@@ -174,6 +200,7 @@ export class ConversationEngine {
     this.turn++;
     this.photoUrls.forEach((url) => this.urls.revoke(url));
     this.photoUrls.clear();
+    this.images.clear();
     this.opts.service.reset?.();
     this.dispatch({ type: "NEW_CONVERSATION" });
   }
@@ -184,7 +211,7 @@ export class ConversationEngine {
     if (phase.kind !== "listening" || phase.speaker !== speaker) return;
     this.dispatch({ type: "STOP", speaker });
     this.lastAudio = audio;
-    await this.runTurn(++this.turn, speaker, audio);
+    await this.runTurn(++this.turn, speaker, audio, undefined, phase.about);
   }
 
   /** The Visitor took a photo: read it at once into a card, no question needed. */
@@ -195,6 +222,7 @@ export class ConversationEngine {
     const photo: Photo = { id: newId(), url: this.urls.create(image) };
     this.photoUrls.add(photo.url);
     this.lastImage = image;
+    this.images.set(photo.id, image);
     this.dispatch({ type: "PHOTO", photo, at: this.now() });
     await this.runRead(++this.turn, image);
   }
@@ -210,13 +238,15 @@ export class ConversationEngine {
     }
     if (!this.lastAudio) return;
     this.dispatch({ type: "RETRY" });
-    await this.runTurn(++this.turn, phase.speaker, this.lastAudio, phase.raw);
+    await this.runTurn(++this.turn, phase.speaker, this.lastAudio, phase.raw, phase.about);
   }
 
   private lastAudio?: Blob;
   private lastImage?: Blob;
   /** Every photo URL of this conversation, revoked when it restarts. */
   private photoUrls = new Set<string>();
+  /** Images of the photos in the thread, by message id, for "Ask about this photo". */
+  private images = new Map<string, Blob>();
   private readonly now = () => (this.opts.now ?? Date.now)();
 
   private get urls() {
@@ -244,7 +274,7 @@ export class ConversationEngine {
     });
   }
 
-  private async runTurn(turn: number, speaker: Speaker, audio: Blob, knownRaw?: string) {
+  private async runTurn(turn: number, speaker: Speaker, audio: Blob, knownRaw?: string, about?: string) {
     const conversation = this.state.conversationId;
     const stale = () => this.state.conversationId !== conversation || this.turn !== turn;
     const userLanguage = this.opts.getUserLanguage?.() ?? "en";
@@ -257,6 +287,8 @@ export class ConversationEngine {
         if (!raw) return this.fail(speaker, "empty");
         this.dispatch({ type: "TRANSCRIBED", raw });
       }
+
+      if (about) return await this.runAnswer(stale, about, raw, userLanguage);
 
       const result = await this.withTimeout(
         this.opts.service.translate({
@@ -274,6 +306,19 @@ export class ConversationEngine {
     } catch {
       if (!stale()) this.dispatch({ type: "FAILED", speaker, reason: "network", raw });
     }
+  }
+
+  /** The app answers a question about a photo: no translation, nothing for the vendor, nothing read aloud. */
+  private async runAnswer(stale: () => boolean, about: string, question: string, userLanguage: UserLanguage) {
+    const image = this.images.get(about);
+    const card = this.state.messages.find((m) => m.id === about)?.photo?.card;
+    const ask = this.opts.service.askPhoto;
+    if (!image || !card || !ask) throw new Error("askPhoto not possible");
+    const answer = await this.withTimeout(
+      ask.call(this.opts.service, image, { question, card, userLanguage, myInfo: this.opts.getMyInfo?.() ?? EMPTY_MY_INFO }),
+    );
+    if (stale()) return;
+    this.dispatch({ type: "ANSWERED", id: newId(), answer });
   }
 
   private async runRead(turn: number, image: Blob) {

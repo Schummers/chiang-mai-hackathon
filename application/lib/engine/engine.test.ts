@@ -4,7 +4,7 @@ import { createMockTurnService, KHAO_SOI_SCRIPT } from "./mockTurnService";
 import { createTurnService } from "./turnService";
 import { pickMove } from "@/lib/context/moves";
 import type { Mention } from "@/lib/context/cards";
-import type { Message, MoveCard, MyInfo, PhotoCard, ReadPhotoInput, Stage, TranslateInput, TranslateResult, TurnService } from "./types";
+import type { AskPhotoInput, Message, MoveCard, MyInfo, PhotoCard, ReadPhotoInput, Stage, TranslateInput, TranslateResult, TurnService } from "./types";
 
 /** What the model would report on each scripted Turn of the mock: the Moves in the script must match. */
 const MOCK_PICK: { stage: Stage; mention: Mention }[] = [
@@ -562,6 +562,119 @@ describe("photo turn", () => {
     await late;
     expect(engine.getState().messages).toEqual([]);
     expect(engine.getState().phase).toEqual({ kind: "idle", nextTurn: "you" });
+  });
+});
+
+// A service that reads a photo at once, then transcribes and answers questions when the test says so.
+function askService() {
+  const fake = controllableService();
+  const asks: { image: Blob; input: AskPhotoInput; resolve: (a: string) => void; reject: (e: Error) => void }[] = [];
+  const service: TurnService = {
+    ...fake.service,
+    readPhoto: async () => menuCard,
+    askPhoto: (image, input) => new Promise((resolve, reject) => asks.push({ image, input, resolve, reject })),
+  };
+  let n = 0;
+  const objectUrls = { create: () => `blob:photo-${++n}`, revoke: () => {} };
+  return { service, asks, transcribes: fake.transcribes, translates: fake.translates, objectUrls };
+}
+
+async function withReadPhoto(fake: ReturnType<typeof askService>, opts: Partial<ConstructorParameters<typeof ConversationEngine>[0]> = {}) {
+  const engine = new ConversationEngine({ service: fake.service, objectUrls: fake.objectUrls, getUserLanguage: () => "fr", ...opts });
+  await engine.photo(image);
+  return { engine, photoId: engine.getState().messages[0].id };
+}
+
+describe("ask about a photo", () => {
+  it("listens like Speak, then the app answers about that photo, with nothing for the vendor", async () => {
+    const fake = askService();
+    const onMessage = vi.fn();
+    const { engine, photoId } = await withReadPhoto(fake, { onMessage, now: () => 700 });
+
+    engine.askAboutPhoto(photoId);
+    expect(engine.getState().phase).toEqual({ kind: "listening", speaker: "you", startedAt: 700, about: photoId });
+
+    const done = engine.stop("you", audio);
+    expect(engine.getState().phase).toEqual({ kind: "processing", speaker: "you", about: photoId });
+    await flush();
+    expect(fake.transcribes[0].language).toBe("fr");
+    fake.transcribes[0].resolve("is it spicy?");
+    await flush();
+    expect(fake.asks[0].image).toBe(image);
+    expect(fake.asks[0].input).toMatchObject({ question: "is it spicy?", card: menuCard, userLanguage: "fr" });
+    expect(fake.translates).toHaveLength(0);
+
+    fake.asks[0].resolve("Only the Laab is hot.");
+    await done;
+    expect(engine.getState().phase).toEqual({ kind: "idle", nextTurn: "you" });
+    expect(engine.getState().messages[1]).toMatchObject({
+      speaker: "you",
+      translation: [],
+      original: ["is it spicy?"],
+      card: null,
+      about: photoId,
+      answer: "Only the Laab is hot.",
+    });
+    expect(onMessage).not.toHaveBeenCalled();
+  });
+
+  it("an empty recording gives the same hint as Speak", async () => {
+    const fake = askService();
+    const { engine, photoId } = await withReadPhoto(fake);
+    engine.askAboutPhoto(photoId);
+    const done = engine.stop("you", audio);
+    await flush();
+    fake.transcribes[0].resolve("  ");
+    await done;
+    expect(engine.getState().phase).toMatchObject({ kind: "error", speaker: "you", reason: "empty" });
+  });
+
+  it("a failed answer keeps the question: retry only asks again", async () => {
+    const fake = askService();
+    const { engine, photoId } = await withReadPhoto(fake);
+    engine.askAboutPhoto(photoId);
+    const first = engine.stop("you", audio);
+    await flush();
+    fake.transcribes[0].resolve("is it spicy?");
+    await flush();
+    fake.asks[0].reject(new Error("502"));
+    await first;
+    expect(engine.getState().phase).toEqual({ kind: "error", speaker: "you", reason: "network", raw: "is it spicy?", about: photoId });
+
+    const again = engine.retry();
+    expect(engine.getState().phase).toEqual({ kind: "processing", speaker: "you", raw: "is it spicy?", about: photoId });
+    await flush();
+    expect(fake.transcribes).toHaveLength(1);
+    fake.asks[1].resolve("Only the Laab is hot.");
+    await again;
+    expect(engine.getState().messages[1]).toMatchObject({ about: photoId, answer: "Only the Laab is hot." });
+  });
+
+  it("ignores a photo that is not in the thread, and asking while busy", async () => {
+    const fake = askService();
+    const { engine, photoId } = await withReadPhoto(fake);
+    engine.askAboutPhoto("nope");
+    expect(engine.getState().phase.kind).toBe("idle");
+    engine.micTap("vendor");
+    engine.askAboutPhoto(photoId);
+    expect(engine.getState().phase).toMatchObject({ kind: "listening", speaker: "vendor" });
+    expect(engine.getState().phase).not.toHaveProperty("about");
+  });
+
+  it("Speak after a photo is still a normal Turn for the vendor", async () => {
+    const fake = askService();
+    const { engine } = await withReadPhoto(fake);
+    await fullTurn(engine, fake as never, "you", reply());
+    expect(fake.translates).toHaveLength(1);
+    expect(engine.getState().messages[1]).not.toHaveProperty("about");
+  });
+});
+
+describe("mock photo answers", () => {
+  it("answers about the card, in a line", async () => {
+    const service = createMockTurnService({ askPhotoMs: 0 });
+    const answer = await service.askPhoto!(image, { question: "what is good here?", card: menuCard, userLanguage: "en", myInfo: { allergies: [], spice: null, diet: [] } });
+    expect(answer).toBeTruthy();
   });
 });
 

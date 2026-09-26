@@ -7,15 +7,16 @@ export type ErrorReason = "mic-denied" | "network" | "empty";
 
 export type Phase =
   | { kind: "idle"; nextTurn: Speaker }
-  | { kind: "listening"; speaker: Speaker; startedAt: number }
-  | { kind: "processing"; speaker: Speaker; raw?: string }
+  /** `about`: id of the photo message this recording asks about ("Ask about this photo"). Same Turn as Speak otherwise. */
+  | { kind: "listening"; speaker: Speaker; startedAt: number; about?: string }
+  | { kind: "processing"; speaker: Speaker; raw?: string; about?: string }
   /** A photo is being read. `photo` is shown full width in the thread meanwhile. */
   | { kind: "reading"; startedAt: number; photo: Photo }
   /**
    * `raw` is kept when transcription worked, so a retry only translates again.
    * `photo` is kept when a photo read failed, so a retry reads the same image again.
    */
-  | { kind: "error"; speaker: Speaker; reason: ErrorReason; raw?: string; photo?: Photo };
+  | { kind: "error"; speaker: Speaker; reason: ErrorReason; raw?: string; photo?: Photo; about?: string };
 
 /** A photo the Visitor took. `url` is a local object URL: the image is only ever sent to the read route. */
 export type Photo = { id: string; url: string };
@@ -84,6 +85,10 @@ export type Message = {
   move?: MoveCard | null;
   /** Photo Turns only: the image and the card read from it. `translation` is empty, `original` holds the card title. */
   photo?: { url: string; card: PhotoCard };
+  /** Question about a photo: id of that photo message. `original` holds the question, `translation` is empty. */
+  about?: string;
+  /** The app's answer to that question, in the Visitor's language. Never read aloud in Thai. */
+  answer?: string;
 };
 
 /**
@@ -158,12 +163,21 @@ export type TranslateResult = {
 
 export type ReadPhotoInput = { userLanguage: UserLanguage; myInfo: MyInfo };
 
+export type AskPhotoInput = ReadPhotoInput & {
+  /** What the Visitor asked, transcribed in their language. */
+  question: string;
+  /** The card already read from this photo. */
+  card: PhotoCard;
+};
+
 export interface TurnService {
   /** Audio to raw text. `language` is "th" for the vendor, the user language for you. */
   transcribe(audio: Blob, language: string): Promise<string>;
   translate(input: TranslateInput): Promise<TranslateResult>;
   /** Image to card, in the Visitor's language. Optional: without it a photo fails as a network error. */
   readPhoto?(image: Blob, input: ReadPhotoInput): Promise<PhotoCard>;
+  /** A question about a photo -> the app's answer, one or two lines in the Visitor's language. Optional like readPhoto. */
+  askPhoto?(image: Blob, input: AskPhotoInput): Promise<string>;
   /** Optional: called when the visitor starts a new conversation. */
   reset?(): void;
 }

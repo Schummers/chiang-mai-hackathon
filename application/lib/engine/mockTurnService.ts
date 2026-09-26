@@ -183,7 +183,15 @@ export const MOCK_PHOTO_CARDS: PhotoCard[] = [
   },
 ];
 
-export type MockOptions = { transcribeMs?: number; translateMs?: number; readPhotoMs?: number };
+/** Scripted answers to "Ask about this photo", one per card kind. */
+const MOCK_ANSWERS: Record<PhotoCard["kind"], string> = {
+  menu: "Khao Soi Gai is the local favourite and only a little spicy. Gaeng Hang Lay is often topped with peanuts: ask first.",
+  dish: "Mild: the heat is in the chili paste on the side, so you add as much as you like.",
+  produce: "Peel it with your thumb and eat the flesh, not the seed. A bag is usually 40 to 60 baht.",
+  sign: "Yes: take your shoes off at the steps and leave them with the others.",
+};
+
+export type MockOptions = { transcribeMs?: number; translateMs?: number; readPhotoMs?: number; askPhotoMs?: number };
 
 const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
 
@@ -193,7 +201,7 @@ function turnFor(speaker: Speaker, index: number): ScriptTurn {
 }
 
 /** Ignores the audio: returns the next scripted line for whoever is speaking. */
-export function createMockTurnService({ transcribeMs = 800, translateMs = 1500, readPhotoMs = 2000 }: MockOptions = {}): TurnService {
+export function createMockTurnService({ transcribeMs = 800, translateMs = 1500, readPhotoMs = 2000, askPhotoMs = 1500 }: MockOptions = {}): TurnService {
   // Turns each side has completed, so a failed turn replays the same line on retry.
   const done: Record<Speaker, number> = { you: 0, vendor: 0 };
   let photos = 0;
@@ -213,6 +221,10 @@ export function createMockTurnService({ transcribeMs = 800, translateMs = 1500, 
       await sleep(readPhotoMs);
       const n = photos++ % (MOCK_PHOTO_CARDS.length + 1);
       return n === 0 ? mockMenuCard(myInfo) : MOCK_PHOTO_CARDS[n - 1];
+    },
+    async askPhoto(_image, { card }) {
+      await sleep(askPhotoMs);
+      return MOCK_ANSWERS[card.kind];
     },
     reset() {
       done.you = 0;

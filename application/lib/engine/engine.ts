@@ -22,7 +22,8 @@ export type EngineEvent =
   | { type: "STOP"; speaker: Speaker }
   | { type: "TRANSCRIBED"; raw: string }
   | { type: "TRANSLATED"; id: string; result: TranslateResult }
-  | { type: "FAILED"; speaker: Speaker; reason: ErrorReason }
+  | { type: "FAILED"; speaker: Speaker; reason: ErrorReason; raw?: string }
+  | { type: "RETRY" }
   | { type: "CANCEL" }
   | { type: "DISMISS_ERROR" }
   | { type: "NEW_CONVERSATION" };
@@ -68,9 +69,17 @@ export function reduce(state: ConversationState, event: EngineEvent): Conversati
           },
         ],
       };
-    case "FAILED":
+    case "FAILED": {
       if (phase.kind === "idle") return state;
-      return { ...state, phase: { kind: "error", speaker: event.speaker, reason: event.reason } };
+      const error = { kind: "error", speaker: event.speaker, reason: event.reason } as const;
+      return { ...state, phase: event.raw ? { ...error, raw: event.raw } : error };
+    }
+    case "RETRY":
+      if (phase.kind !== "error" || phase.reason !== "network") return state;
+      return {
+        ...state,
+        phase: phase.raw ? { kind: "processing", speaker: phase.speaker, raw: phase.raw } : { kind: "processing", speaker: phase.speaker },
+      };
     case "CANCEL":
       if (phase.kind === "listening") return { ...state, phase: { kind: "idle", nextTurn: phase.speaker } };
       return state;
@@ -89,6 +98,8 @@ export type EngineOptions = {
   onDetectedInfo?: (info: Partial<MyInfo>) => void;
   /** A final message was added to the thread. */
   onMessage?: (message: Message) => void;
+  /** Each service call fails as a network error after this long (default 15 s). */
+  timeoutMs?: number;
   now?: () => number;
 };
 
@@ -136,30 +147,60 @@ export class ConversationEngine {
     const { phase } = this.state;
     if (phase.kind !== "listening" || phase.speaker !== speaker) return;
     this.dispatch({ type: "STOP", speaker });
+    this.lastAudio = audio;
+    await this.runTurn(speaker, audio);
+  }
 
+  /** After a network error: same turn again, from the raw text if transcription had worked. */
+  async retry(): Promise<void> {
+    const { phase } = this.state;
+    if (phase.kind !== "error" || phase.reason !== "network" || !this.lastAudio) return;
+    this.dispatch({ type: "RETRY" });
+    await this.runTurn(phase.speaker, this.lastAudio, phase.raw);
+  }
+
+  private lastAudio?: Blob;
+
+  private withTimeout<T>(promise: Promise<T>): Promise<T> {
+    const ms = this.opts.timeoutMs ?? 15000;
+    return new Promise<T>((resolve, reject) => {
+      const timer = setTimeout(() => reject(new Error("timeout")), ms);
+      promise.then(
+        (v) => (clearTimeout(timer), resolve(v)),
+        (e) => (clearTimeout(timer), reject(e)),
+      );
+    });
+  }
+
+  private async runTurn(speaker: Speaker, audio: Blob, knownRaw?: string) {
     const conversation = this.state.conversationId;
     const stale = () => this.state.conversationId !== conversation;
     const userLanguage = this.opts.getUserLanguage?.() ?? "en";
+    let raw = knownRaw;
 
     try {
-      const raw = (await this.opts.service.transcribe(audio, speaker === "vendor" ? "th" : userLanguage)).trim();
-      if (stale()) return;
-      if (!raw) return this.fail(speaker, "empty");
-      this.dispatch({ type: "TRANSCRIBED", raw });
+      if (raw === undefined) {
+        raw = (await this.withTimeout(this.opts.service.transcribe(audio, speaker === "vendor" ? "th" : userLanguage))).trim();
+        if (stale()) return;
+        if (!raw) return this.fail(speaker, "empty");
+        this.dispatch({ type: "TRANSCRIBED", raw });
+      }
 
-      const result = await this.opts.service.translate({
-        raw,
-        speaker,
-        userLanguage,
-        myInfo: this.opts.getMyInfo?.() ?? EMPTY_MY_INFO,
-        history: this.state.messages,
-      });
+      const result = await this.withTimeout(
+        this.opts.service.translate({
+          raw,
+          speaker,
+          userLanguage,
+          myInfo: this.opts.getMyInfo?.() ?? EMPTY_MY_INFO,
+          history: this.state.messages,
+        }),
+      );
       if (stale()) return;
       this.dispatch({ type: "TRANSLATED", id: newId(), result });
       this.opts.onMessage?.(this.state.messages[this.state.messages.length - 1]);
       if (result.detectedInfo) this.opts.onDetectedInfo?.(result.detectedInfo);
     } catch {
-      if (!stale()) this.fail(speaker, "network");
+      if (!stale()) this.dispatch({ type: "FAILED", speaker, reason: "network", raw });
     }
   }
 

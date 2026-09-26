@@ -9,7 +9,8 @@ export type Phase =
   | { kind: "idle"; nextTurn: Speaker }
   | { kind: "listening"; speaker: Speaker; startedAt: number }
   | { kind: "processing"; speaker: Speaker; raw?: string }
-  | { kind: "error"; speaker: Speaker; reason: ErrorReason };
+  /** `raw` is kept when transcription worked, so a retry only translates again. */
+  | { kind: "error"; speaker: Speaker; reason: ErrorReason; raw?: string };
 
 export type ContextCard = {
   /** Dish or ingredient name in Latin script, e.g. "Khao Soi". */

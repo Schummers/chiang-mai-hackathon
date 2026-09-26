@@ -53,7 +53,8 @@ button {
   outline-offset: 2px;
 }
 
-.th {
+.th,
+[lang="th"] {
   font-family: var(--f-th);
 }
 

@@ -8,12 +8,16 @@ import { Recorder } from "@/lib/recorder";
 import { speak, stopSpeech, unlockSpeech } from "@/lib/speech";
 import { useConversation } from "@/lib/useConversation";
 import { languageStore, useLanguage } from "@/lib/useLanguage";
+import { useOnline } from "@/lib/useOnline";
 import { myInfoStore, useMyInfo } from "@/lib/useMyInfo";
 import { ActionBar } from "./ActionBar";
 import { ChatThread } from "./ChatThread";
+import { OfflineBanner } from "./ErrorState";
 import { ListeningCard } from "./ListeningCard";
 import { MyInfoCard, MyInfoPage, Toast } from "./MyInfo";
 import s from "./Screen.module.css";
+
+const MIN_RECORDING_MS = 600;
 
 /** The one stable screen: top bar, chat, two-mic action bar. */
 export function Conversation() {
@@ -33,6 +37,7 @@ export function Conversation() {
   };
 
   const language = useLanguage();
+  const online = useOnline();
   const [playingId, setPlayingId] = useState<string | null>(null);
   const playingRef = useRef<string | null>(null);
 
@@ -66,6 +71,8 @@ export function Conversation() {
     const { phase } = engine.getState();
     if (phase.kind !== "listening" || phase.speaker !== speaker) return;
     const audio = await recorder.stop();
+    // A tap-tap by mistake: drop it with a hint instead of sending noise.
+    if (Date.now() - phase.startedAt < MIN_RECORDING_MS) return engine.fail(speaker, "empty");
     await engine.stop(speaker, audio);
   };
 
@@ -117,12 +124,15 @@ export function Conversation() {
           <Plus size={24} strokeWidth={2.1} />
         </button>
       </header>
+      {!online && <OfflineBanner />}
 
       <ChatThread
         state={state}
         live={live}
         playingId={playingId}
         onSpeak={toggleSpeech}
+        onRetry={() => void engine.retry()}
+        onDismissError={() => engine.dismissError()}
         intro={
           !infoCardClosed && (
             <MyInfoCard info={myInfo} onOpen={() => setInfoOpen(true)} onClose={() => setInfoCardClosed(true)} />
@@ -130,7 +140,7 @@ export function Conversation() {
         }
       />
 
-      <ActionBar state={state} onTap={onTap} language={language} onLanguage={languageStore.set} />
+      <ActionBar state={state} onTap={onTap} language={language} onLanguage={languageStore.set} offline={!online} />
 
       {infoOpen && <MyInfoPage info={myInfo} onChange={myInfoStore.set} onDone={() => setInfoOpen(false)} />}
       {toast && <Toast text={toast} />}

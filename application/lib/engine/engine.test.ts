@@ -1,4 +1,4 @@
-import { describe, expect, it, vi } from "vitest";
+import { afterEach, describe, expect, it, vi } from "vitest";
 import { ConversationEngine } from "./engine";
 import { createMockTurnService, KHAO_SOI_SCRIPT } from "./mockTurnService";
 import { createTurnService } from "./turnService";
@@ -35,6 +35,10 @@ async function fullTurn(engine: ConversationEngine, fake: ReturnType<typeof cont
   fake.translates.at(-1)!.resolve(result);
   await done;
 }
+
+afterEach(() => {
+  vi.useRealTimers();
+});
 
 describe("conversation engine", () => {
   it("opens on an empty conversation where it's your turn", () => {
@@ -167,7 +171,60 @@ describe("conversation engine", () => {
     await flush();
     fake.translates[0].reject(new Error("500"));
     await done;
-    expect(engine.getState().phase).toEqual({ kind: "error", speaker: "vendor", reason: "network" });
+    expect(engine.getState().phase).toMatchObject({ kind: "error", speaker: "vendor", reason: "network" });
+  });
+
+  it("keeps the turn after a failed transcription: retry sends the same audio again", async () => {
+    const fake = controllableService();
+    const engine = new ConversationEngine({ service: fake.service });
+    engine.micTap("you");
+    const first = engine.stop("you", audio);
+    await flush();
+    fake.transcribes[0].reject(new Error("offline"));
+    await first;
+
+    const retried = engine.retry();
+    expect(engine.getState().phase).toEqual({ kind: "processing", speaker: "you" });
+    await flush();
+    expect(fake.transcribes).toHaveLength(2);
+    fake.transcribes[1].resolve("what is this");
+    await flush();
+    fake.translates[0].resolve(reply());
+    await retried;
+    expect(engine.getState().messages).toHaveLength(1);
+  });
+
+  it("keeps the raw transcript after a failed translation: retry only translates again", async () => {
+    const fake = controllableService();
+    const engine = new ConversationEngine({ service: fake.service });
+    engine.micTap("vendor");
+    const first = engine.stop("vendor", audio);
+    await flush();
+    fake.transcribes[0].resolve("ข้าวซอย");
+    await flush();
+    fake.translates[0].reject(new Error("500"));
+    await first;
+    expect(engine.getState().phase).toEqual({ kind: "error", speaker: "vendor", reason: "network", raw: "ข้าวซอย" });
+
+    const retried = engine.retry();
+    expect(engine.getState().phase).toEqual({ kind: "processing", speaker: "vendor", raw: "ข้าวซอย" });
+    await flush();
+    expect(fake.transcribes).toHaveLength(1);
+    fake.translates[1].resolve(reply());
+    await retried;
+    expect(engine.getState().messages.map((m) => m.speaker)).toEqual(["vendor"]);
+  });
+
+  it("gives up on a service that takes too long", async () => {
+    vi.useFakeTimers();
+    const fake = controllableService();
+    const engine = new ConversationEngine({ service: fake.service, timeoutMs: 1000 });
+    engine.micTap("you");
+    const done = engine.stop("you", audio);
+    await vi.advanceTimersByTimeAsync(1001);
+    await done;
+    expect(engine.getState().phase).toEqual({ kind: "error", speaker: "you", reason: "network" });
+    vi.useRealTimers();
   });
 
   it("shows an empty-recording error when nothing was heard", async () => {

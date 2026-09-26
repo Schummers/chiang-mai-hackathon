@@ -1,0 +1,106 @@
+.card {
+  background: var(--white);
+  box-shadow: var(--sh-2), inset 0 0 0 2px var(--ink);
+  border-radius: var(--r);
+  padding: 10px 14px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.head {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 16px;
+  margin-right: -8px;
+}
+
+.head b {
+  flex: 1;
+}
+
+.close {
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+}
+
+.steps {
+  padding-left: 18px;
+  font-size: 14px;
+  line-height: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.hint {
+  font-size: 15px;
+  line-height: 21px;
+  color: var(--ink-2);
+  font-weight: 700;
+}
+
+.failed {
+  max-width: min(86%, 380px);
+  padding: 12px 14px;
+  border-radius: 18px;
+  box-shadow: inset 0 0 0 1.5px var(--line-2);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.you {
+  background: var(--you-wash);
+  border-bottom-right-radius: 6px;
+}
+
+.them {
+  background: var(--them-wash);
+  border-bottom-left-radius: 6px;
+}
+
+.raw {
+  font-style: italic;
+  font-size: 15px;
+  line-height: 22px;
+  color: var(--ink-2);
+}
+
+.line {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.retry {
+  align-self: flex-start;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  height: 44px;
+  padding: 0 16px;
+  border-radius: 12px;
+  background: var(--ink);
+  color: var(--white);
+  font-weight: 700;
+  font-size: 15px;
+}
+
+.banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 8px 14px;
+  background: var(--ink);
+  color: var(--white);
+  font-size: 14px;
+  font-weight: 700;
+}

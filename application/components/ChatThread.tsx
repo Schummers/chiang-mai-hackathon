@@ -4,6 +4,7 @@ import { useEffect, useRef } from "react";
 import type { ConversationState } from "@/lib/engine/engine";
 import type { Message } from "@/lib/engine/types";
 import { Bubble, Row } from "./Bubble";
+import { ErrorState } from "./ErrorState";
 import s from "./Chat.module.css";
 import screen from "./Screen.module.css";
 
@@ -15,9 +16,11 @@ type Props = {
   live?: React.ReactNode;
   playingId: string | null;
   onSpeak: (message: Message) => void;
+  onRetry: () => void;
+  onDismissError: () => void;
 };
 
-export function ChatThread({ state, intro, live, playingId, onSpeak }: Props) {
+export function ChatThread({ state, intro, live, playingId, onSpeak, onRetry, onDismissError }: Props) {
   const { phase, messages } = state;
   const ref = useRef<HTMLElement>(null);
   const empty = messages.length === 0 && phase.kind === "idle";
@@ -59,18 +62,7 @@ export function ChatThread({ state, intro, live, playingId, onSpeak }: Props) {
         </>
       )}
 
-      {phase.kind === "error" && <p className={s.note}>{errorText(phase.reason)}</p>}
+      {phase.kind === "error" && <ErrorState phase={phase} onRetry={onRetry} onDismiss={onDismissError} />}
     </section>
   );
-}
-
-function errorText(reason: "mic-denied" | "network" | "empty") {
-  switch (reason) {
-    case "mic-denied":
-      return "The microphone is blocked. Allow it in your browser settings, then tap the mic again.";
-    case "network":
-      return "Connection problem. Tap the mic to try again.";
-    case "empty":
-      return "We didn't hear anything. Tap the mic and speak a bit closer.";
-  }
 }

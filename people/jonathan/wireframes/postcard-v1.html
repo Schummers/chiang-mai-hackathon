@@ -1,0 +1,300 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Postcard v1</title>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:wght@400;500;700;800&family=Noto+Sans+Thai+Looped:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper:#FAF9F6; --white:#FFFFFF; --ink:#1E2238; --you:#2B3263; --you-wash:#ECEEF5; --them:#8A5A44; --them-wash:#F3ECE6;
+    --ink-2:rgb(30 34 56 / .70); --line:rgb(30 34 56 / .10); --line-2:rgb(30 34 56 / .18);
+    --f-lat:'Atkinson Hyperlegible Next', system-ui, sans-serif;
+    --f-th:'Noto Sans Thai Looped','Noto Sans Thai','Thonburi',sans-serif;
+    --sh-2:0 1px 2px rgb(30 34 56 / .06), 0 6px 16px -6px rgb(30 34 56 / .14);
+    --weave-bg:repeating-linear-gradient(45deg, var(--them) 0 6px, transparent 6px 12px), repeating-linear-gradient(-45deg, var(--you) 0 6px, transparent 6px 12px);
+    --weave-frame:repeating-linear-gradient(45deg, var(--them) 0 5px, var(--paper) 5px 7px, var(--you) 7px 12px, var(--paper) 12px 14px);
+    /* placeholder dish photo: a bowl seen from above, no people */
+    --photo:radial-gradient(circle at 50% 52%, #F0D9A8 0 14%, #D9A45A 15% 24%, #B8743A 25% 29%, #FFFFFF 30% 35%, rgb(0 0 0 / .25) 36% 38%, transparent 39%),
+            radial-gradient(circle at 78% 20%, #7FA36B 0 5%, transparent 6%),
+            radial-gradient(circle at 20% 80%, #C9C1B0 0 9%, transparent 10%),
+            linear-gradient(160deg, #6B4A36, #3A2A22);
+  }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--paper); color:var(--ink); font:15px/1.45 var(--f-lat); }
+  main { max-width:1180px; margin:0 auto; padding:24px 16px 64px; }
+  h1 { font-size:28px; margin:0 0 4px; font-weight:800; letter-spacing:-.02em; }
+  h2 { font-size:19px; margin:44px 0 6px; border-top:2px solid var(--ink); padding-top:14px; }
+  .lead { color:var(--ink-2); margin:0 0 14px; max-width:760px; }
+  .note { color:var(--ink-2); font-size:13px; max-width:760px; }
+  .th { font-family:var(--f-th); }
+  .reco { border-left:4px solid var(--you); padding:10px 14px; margin:14px 0; background:var(--white); box-shadow:var(--sh-2); border-radius:0 12px 12px 0; max-width:760px; }
+
+  .row { display:flex; flex-wrap:wrap; gap:22px; align-items:flex-start; }
+  .col { display:flex; flex-direction:column; gap:8px; }
+  .cap { font-size:11px; font-weight:800; letter-spacing:.09em; text-transform:uppercase; color:var(--ink-2); }
+  .pros { font-size:13px; color:var(--ink-2); max-width:300px; margin:0; padding-left:16px; }
+  .pros b { color:var(--ink); }
+
+  /* ---------- the Postcard: 9:16, shown at 270x480 ---------- */
+  .pc { width:270px; height:480px; position:relative; overflow:hidden; border-radius:14px; box-shadow:0 12px 30px -12px rgb(30 34 56 / .35), 0 0 0 1px var(--line); background:var(--paper); flex:none; }
+  .pc .weave { position:absolute; inset:0; background:var(--weave-bg); opacity:.05; pointer-events:none; }
+  .photo { background:var(--photo); position:relative; }
+  .photo::after { content:"dish photo"; position:absolute; left:8px; bottom:6px; font-size:9px; letter-spacing:.08em; text-transform:uppercase; color:rgb(255 255 255 / .6); }
+  .brand { display:flex; align-items:center; gap:6px; }
+  .brand b { font-family:var(--f-th); font-weight:700; font-size:14px; color:var(--you); line-height:1; }
+  .brand span { display:block; font-size:7px; font-weight:800; letter-spacing:.14em; text-transform:uppercase; color:var(--them); }
+  .label { font-size:10px; font-weight:800; letter-spacing:.1em; text-transform:uppercase; color:var(--ink-2); }
+  .meta { font-size:11px; color:var(--ink-2); line-height:1.35; }
+  .meta b { color:var(--ink); font-weight:800; }
+
+  /* A. Word card */
+  .a { padding:22px 20px 18px; display:flex; flex-direction:column; }
+  .a .word { font-family:var(--f-th); font-weight:700; font-size:44px; line-height:1.2; margin:10px 0 0; }
+  .a .rom { font-size:14px; color:var(--ink-2); margin-top:2px; }
+  .a .mean { font-size:20px; font-weight:800; margin-top:6px; }
+  .a .reply { margin-top:auto; background:var(--white); border-radius:14px 14px 14px 6px; padding:10px 12px; box-shadow:inset 3px 0 0 var(--them), 0 0 0 1.5px rgb(138 90 68 / .32), var(--sh-2); }
+  .a .reply .th { font-size:17px; font-weight:600; line-height:1.45; }
+  .a .reply small { display:block; font-size:12px; color:var(--ink-2); }
+  .a .foot { display:flex; justify-content:space-between; align-items:flex-end; margin-top:14px; padding-top:10px; border-top:1px solid var(--line); }
+  .a.ph { padding:0; }
+  .a.ph .photo { height:210px; margin:12px 12px 0; border-radius:10px; }
+  .a.ph .body { padding:12px 18px 16px; display:flex; flex-direction:column; flex:1; }
+  .a.ph .word { font-size:34px; margin-top:4px; }
+  .a.ph .mean { font-size:17px; margin-top:2px; }
+  .a.ph .reply { margin-top:10px; }
+  .a.ph .foot { margin-top:auto; }
+
+  /* B. Postcard with stamp */
+  .b { padding:8px; background:var(--weave-frame); }
+  .b .in { position:absolute; inset:8px; background:var(--white); border-radius:8px; padding:18px 16px 14px; display:flex; flex-direction:column; }
+  .b .stamp { position:absolute; top:14px; right:14px; width:58px; height:68px; background:var(--paper); border:2px dashed var(--line-2); border-radius:4px; display:grid; place-items:center; }
+  .b .postmark { position:absolute; top:78px; right:20px; width:78px; height:78px; border:2px solid rgb(43 50 99 / .45); border-radius:50%; display:grid; place-items:center; text-align:center; font-size:8px; font-weight:800; letter-spacing:.08em; color:rgb(43 50 99 / .7); transform:rotate(-14deg); line-height:1.25; background:transparent; }
+  .b .postmark::before, .b .postmark::after { content:""; position:absolute; left:-30px; right:-30px; height:0; border-top:2px solid rgb(43 50 99 / .3); }
+  .b .postmark::before { top:30px; } .b .postmark::after { top:44px; }
+  .b .greet { font-size:22px; font-weight:800; line-height:1.1; letter-spacing:-.02em; max-width:140px; }
+  .b .greet small { display:block; font-size:10px; font-weight:800; letter-spacing:.1em; text-transform:uppercase; color:var(--them); margin-bottom:4px; }
+  .b .wordbox { margin-top:auto; }
+  .b .word { font-family:var(--f-th); font-weight:700; font-size:36px; line-height:1.2; }
+  .b .rom { font-size:13px; color:var(--ink-2); }
+  .b .mean { font-size:17px; font-weight:800; }
+  .b .lines { margin-top:12px; }
+  .b .lines div { border-bottom:1px solid var(--line-2); padding:4px 0 2px; font-size:12px; color:var(--ink-2); }
+  .b .lines .th { font-size:16px; font-weight:600; color:var(--ink); }
+  .b .foot { display:flex; justify-content:space-between; align-items:flex-end; margin-top:10px; }
+  .b.ph .in { padding:0; overflow:hidden; }
+  .b.ph .photo { height:250px; }
+  .b.ph .stamp { top:222px; right:14px; background:var(--white); }
+  .b.ph .postmark { top:196px; right:60px; border-color:rgb(255 255 255 / .8); color:#fff; }
+  .b.ph .postmark::before, .b.ph .postmark::after { border-color:rgb(255 255 255 / .6); }
+  .b.ph .body { padding:12px 16px 14px; display:flex; flex-direction:column; flex:1; }
+  .b.ph .word { font-size:30px; }
+  .b.ph .lines { margin-top:6px; }
+
+  /* C. Two voices */
+  .c { padding:18px 16px 14px; display:flex; flex-direction:column; gap:12px; }
+  .bub { background:var(--white); padding:10px 12px 9px; width:calc(100% - 28px); box-shadow:var(--sh-2); }
+  .bub.you { align-self:flex-end; border-radius:18px 18px 6px 18px; box-shadow:inset -3px 0 0 var(--you), 0 0 0 1.5px rgb(43 50 99 / .28), var(--sh-2); }
+  .bub.them { align-self:flex-start; border-radius:18px 18px 18px 6px; box-shadow:inset 3px 0 0 var(--them), 0 0 0 1.5px rgb(138 90 68 / .32), var(--sh-2); }
+  .bub .tag { font-size:9px; font-weight:800; letter-spacing:.1em; text-transform:uppercase; color:var(--you); }
+  .bub.them .tag { color:var(--them); }
+  .bub .big { font-family:var(--f-th); font-weight:700; font-size:30px; line-height:1.25; }
+  .bub .mid { font-family:var(--f-th); font-weight:600; font-size:18px; line-height:1.45; }
+  .bub small { display:block; font-size:12px; color:var(--ink-2); }
+  .bub .mean { font-size:15px; font-weight:800; }
+  .c .top { display:flex; justify-content:space-between; align-items:center; }
+  .c .spacer { flex:1; }
+  .c .dish { align-self:center; font-size:12px; font-weight:700; background:var(--white); border-radius:999px; padding:5px 12px; box-shadow:0 0 0 1px var(--line); }
+  .c .dish .th { color:var(--ink-2); font-weight:500; }
+  .c.ph { padding:0; background:var(--photo); }
+  .c.ph .photo-lbl { position:absolute; left:10px; top:10px; font-size:9px; letter-spacing:.08em; text-transform:uppercase; color:rgb(255 255 255 / .6); }
+  .c.ph .stack { position:absolute; left:14px; right:14px; top:70px; display:flex; flex-direction:column; gap:10px; }
+  .c.ph .band { position:absolute; left:0; right:0; bottom:0; background:var(--white); padding:12px 16px 14px; display:flex; justify-content:space-between; align-items:flex-end; }
+  .c.ph .bub { box-shadow:inset -3px 0 0 var(--you), 0 8px 20px -6px rgb(0 0 0 / .45); }
+  .c.ph .bub.them { box-shadow:inset 3px 0 0 var(--them), 0 8px 20px -6px rgb(0 0 0 / .45); }
+
+  /* ---------- storyboard ---------- */
+  .sb { display:flex; flex-wrap:wrap; gap:14px; align-items:flex-start; }
+  .frame { width:190px; }
+  .scr { width:190px; height:338px; border-radius:20px; border:2px solid var(--ink); background:var(--paper); position:relative; overflow:hidden; padding:10px; font-size:11px; }
+  .scr .weave { position:absolute; inset:0; background:var(--weave-bg); opacity:.05; }
+  .scr .msg { background:var(--white); border-radius:12px; padding:6px 8px; margin-bottom:6px; width:80%; box-shadow:var(--sh-2); position:relative; }
+  .scr .msg.y { margin-left:auto; box-shadow:inset -3px 0 0 var(--you), var(--sh-2); }
+  .scr .msg.t { box-shadow:inset 3px 0 0 var(--them), var(--sh-2); }
+  .scr .move { background:var(--white); border-radius:12px; padding:8px; box-shadow:0 0 0 1.5px var(--you), var(--sh-2); position:relative; }
+  .scr .move .k { font-size:8px; font-weight:800; letter-spacing:.1em; text-transform:uppercase; color:var(--ink-2); }
+  .scr .move .th { font-size:15px; font-weight:700; }
+  .scr .btn { display:block; text-align:center; border-radius:10px; padding:7px; font-weight:800; font-size:11px; margin-top:6px; }
+  .scr .btn.solid { background:var(--you); color:#fff; }
+  .scr .btn.ghost { background:var(--white); color:var(--you); box-shadow:inset 0 0 0 1.5px var(--line-2); }
+  .scr .dock { position:absolute; left:8px; right:8px; bottom:8px; height:46px; background:var(--white); border-radius:16px; box-shadow:0 0 0 1px var(--line), 0 6px 14px -6px rgb(30 34 56 / .3); display:flex; justify-content:space-between; align-items:center; padding:0 6px; }
+  .scr .dock i { width:36px; height:36px; border-radius:11px; display:block; }
+  .scr .dock .t { background:var(--them); } .scr .dock .y { background:var(--you); }
+  .scr .dock .more { font-style:normal; width:auto; height:auto; font-size:16px; font-weight:800; color:var(--ink-2); }
+  .scr .menu { position:absolute; left:20px; right:20px; bottom:60px; background:var(--white); border-radius:12px; box-shadow:0 10px 24px -8px rgb(30 34 56 / .4), 0 0 0 1px var(--line); padding:4px; }
+  .scr .menu div { padding:7px 8px; border-radius:8px; font-weight:700; }
+  .scr .menu .hi { background:var(--you-wash); color:var(--you); }
+  .scr .sheet { position:absolute; left:0; right:0; bottom:0; background:var(--white); border-radius:18px 18px 0 0; padding:12px; box-shadow:0 -10px 30px -8px rgb(30 34 56 / .25); }
+  .scr .sheet h4 { margin:0 0 4px; font-size:13px; }
+  .scr .mini { width:110px; height:196px; margin:6px auto 0; border-radius:8px; box-shadow:0 0 0 1px var(--line), var(--sh-2); overflow:hidden; background:var(--paper); }
+  .scr .tap { position:absolute; width:26px; height:26px; border-radius:50%; border:2px solid var(--them); background:rgb(138 90 68 / .15); }
+  .frame p { margin:6px 2px 0; font-size:12px; color:var(--ink-2); }
+  .frame p b { color:var(--ink); }
+  .arrow { align-self:center; font-size:22px; color:var(--line-2); font-weight:800; }
+  @media (max-width:640px) { .arrow { display:none; } }
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute"><defs>
+  <pattern id="weave" width="12" height="12" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="12" height="12" fill="#fff"/><rect x="0" y="1" width="10" height="4" rx="1" fill="#8A5A44"/><rect x="1" y="7" width="4" height="10" rx="1" fill="#8A5A44"/></pattern>
+  <symbol id="mark" viewBox="0 0 64 64"><path d="M12 4h40a8 8 0 0 1 8 8v32a8 8 0 0 1-8 8H26l-12 10v-10h-2a8 8 0 0 1-8-8V12a8 8 0 0 1 8-8z" fill="url(#weave)" stroke="#2B3263" stroke-width="3.5" stroke-linejoin="round"/><path d="M32 10 L50 28 L32 46 L14 28 Z" fill="#fff"/><text x="32" y="36" text-anchor="middle" font-family="Noto Sans Thai Looped, Noto Sans Thai, Thonburi, sans-serif" font-weight="700" font-size="21" fill="#2B3263">อู้</text></symbol>
+</defs></svg>
+<main>
+  <h1>Postcard v1</h1>
+  <p class="lead">The image a Visitor saves to Photos at the end of an exchange. Three directions, each without and with the dish photo (ticket 06), shown at phone size, 9:16 so it also works as a story. Kratip tokens, two fonts, no new color.</p>
+  <p class="note">Scene: Warorot Market, Sunday 27 September 2026. The Visitor said the Echo <span class="th">ลำขนาดเจ้า</span> (lam kha-nat jao, "Very delicious!", Kham Mueang, <code>echo-lam</code>) over a khao soi. The Vendor answered <span class="th">ยินดีเจ้า กินอีกนะ</span> (built from the <code>likelyReplies</code> of <code>say-very-delicious</code>, to be checked by a Thai teammate). Photo = CSS placeholder, no people.</p>
+
+  <!-- ================= A ================= -->
+  <h2>A. The word</h2>
+  <p class="note">A flashcard you keep. The Thai word is the hero, the Vendor's reply is the proof it worked.</p>
+  <div class="row">
+    <div class="col"><span class="cap">Without photo</span>
+      <div class="pc a"><div class="weave"></div>
+        <div class="label">Today I learned</div>
+        <div class="word">ลำขนาดเจ้า</div>
+        <div class="rom">lam kha-nat jao · Kham Mueang</div>
+        <div class="mean">"Very delicious!"</div>
+        <div class="reply"><div class="label" style="color:var(--them);margin-bottom:2px">The vendor answered</div><div class="th">ยินดีเจ้า กินอีกนะ</div><small>Thank you, have some more</small></div>
+        <div class="foot"><div class="meta"><b>Khao soi</b> <span class="th">ข้าวซอย</span><br>Warorot Market · 27 Sept 2026</div><div class="brand"><svg width="22" height="22"><use href="#mark"/></svg></div></div>
+      </div>
+    </div>
+    <div class="col"><span class="cap">With photo</span>
+      <div class="pc a ph" style="display:flex;flex-direction:column"><div class="weave"></div>
+        <div class="photo"></div>
+        <div class="body">
+          <div class="label">Today I learned</div>
+          <div class="word">ลำขนาดเจ้า</div>
+          <div class="mean">"Very delicious!" <span style="font-weight:400;font-size:12px;color:var(--ink-2)">lam kha-nat jao</span></div>
+          <div class="reply"><div class="th" style="font-size:15px">ยินดีเจ้า กินอีกนะ</div><small>Thank you, have some more</small></div>
+          <div class="foot"><div class="meta"><b>Khao soi</b> · Warorot · 27 Sept</div><div class="brand"><svg width="20" height="20"><use href="#mark"/></svg></div></div>
+        </div>
+      </div>
+    </div>
+    <ul class="pros">
+      <li><b>For:</b> most readable, the learning is the point, closest to the app's cards.</li>
+      <li><b>For:</b> the photo sits in a frame, so any photo works, no contrast problem.</li>
+      <li><b>Against:</b> the least "wow" as a story, looks like a vocabulary app.</li>
+    </ul>
+  </div>
+
+  <!-- ================= B ================= -->
+  <h2>B. The postcard</h2>
+  <p class="note">A real postcard: woven frame, stamp with the logo, postmark with place and date, the reply written on the lines.</p>
+  <div class="row">
+    <div class="col"><span class="cap">Without photo</span>
+      <div class="pc b"><div class="in">
+        <div class="stamp"><svg width="34" height="34"><use href="#mark"/></svg></div>
+        <div class="postmark">WAROROT<br>27 · IX · 2026<br>CHIANG MAI</div>
+        <div class="greet"><small>Today I learned</small>To say it like they do.</div>
+        <div class="wordbox">
+          <div class="word">ลำขนาดเจ้า</div>
+          <div class="rom">lam kha-nat jao</div>
+          <div class="mean">"Very delicious!"</div>
+        </div>
+        <div class="lines">
+          <div><span class="label" style="color:var(--them)">The vendor answered</span></div>
+          <div class="th">ยินดีเจ้า กินอีกนะ</div>
+          <div>Thank you, have some more</div>
+        </div>
+        <div class="foot"><div class="meta"><b>Khao soi</b> <span class="th">ข้าวซอย</span></div><div class="brand"><div><b>อู้เมือง</b><span>U Mueang</span></div></div></div>
+      </div></div>
+    </div>
+    <div class="col"><span class="cap">With photo</span>
+      <div class="pc b ph"><div class="in" style="display:flex;flex-direction:column">
+        <div class="photo"></div>
+        <div class="stamp"><svg width="34" height="34"><use href="#mark"/></svg></div>
+        <div class="postmark">WAROROT<br>27 · IX · 2026<br>CHIANG MAI</div>
+        <div class="body">
+          <div class="label">Today I learned</div>
+          <div class="word">ลำขนาดเจ้า</div>
+          <div class="mean">"Very delicious!"</div>
+          <div class="lines"><div class="th">ยินดีเจ้า กินอีกนะ</div><div>Thank you, have some more · <b style="color:var(--ink)">Khao soi</b></div></div>
+        </div>
+      </div></div>
+    </div>
+    <ul class="pros">
+      <li><b>For:</b> instantly read as a souvenir, very "save to Photos", strong on stage.</li>
+      <li><b>For:</b> place and date carried by the postmark, not a text line.</li>
+      <li><b>Against:</b> the woven frame is reserved for context cards in DESIGN.md (defensible: the postcard belongs to both people). Most detail to build.</li>
+    </ul>
+  </div>
+
+  <!-- ================= C ================= -->
+  <h2>C. The two voices</h2>
+  <p class="note">The exchange itself: what you said (indigo), what they said back (clay). The app's own language, frozen as an image.</p>
+  <div class="row">
+    <div class="col"><span class="cap">Without photo</span>
+      <div class="pc c"><div class="weave"></div>
+        <div class="top"><div class="brand"><svg width="24" height="24"><use href="#mark"/></svg><div><b>อู้เมือง</b><span>U Mueang</span></div></div><div class="meta" style="text-align:right">Warorot Market<br>27 Sept 2026</div></div>
+        <div class="spacer"></div>
+        <div class="bub you"><div class="tag">Today I learned to say</div><div class="big">ลำขนาดเจ้า</div><div class="mean">"Very delicious!"</div><small>lam kha-nat jao · Kham Mueang</small></div>
+        <div class="bub them"><div class="tag">They answered</div><div class="mid">ยินดีเจ้า กินอีกนะ</div><small>Thank you, have some more</small></div>
+        <div class="spacer"></div>
+        <div class="dish">Khao soi <span class="th">ข้าวซอย</span></div>
+      </div>
+    </div>
+    <div class="col"><span class="cap">With photo</span>
+      <div class="pc c ph"><span class="photo-lbl">dish photo, full bleed</span>
+        <div class="stack">
+          <div class="bub you"><div class="tag">Today I learned to say</div><div class="big" style="font-size:26px">ลำขนาดเจ้า</div><div class="mean">"Very delicious!"</div></div>
+          <div class="bub them"><div class="tag">They answered</div><div class="mid" style="font-size:16px">ยินดีเจ้า กินอีกนะ</div><small>Thank you, have some more</small></div>
+        </div>
+        <div class="band"><div class="meta"><b>Khao soi</b> <span class="th">ข้าวซอย</span><br>Warorot Market · 27 Sept 2026</div><div class="brand"><svg width="22" height="22"><use href="#mark"/></svg><div><b>อู้เมือง</b><span>U Mueang</span></div></div></div>
+      </div>
+    </div>
+    <ul class="pros">
+      <li><b>For:</b> the only one that shows the pitch: I spoke, the vendor smiled back. Recognisable as our app at a glance.</li>
+      <li><b>For:</b> photo full bleed with a white band (exactly ticket 06), bubbles are white so they read on any photo.</li>
+      <li><b>Against:</b> can look like a chat screenshot if the bubbles are too small; the word must stay big.</li>
+    </ul>
+  </div>
+
+  <!-- ================= Storyboard ================= -->
+  <h2>Where it is triggered</h2>
+  <p class="note">Two entries, one flow. Main path: the "thank you" Say it card at Stage leave. Backup: the dock, any time.</p>
+  <div class="sb">
+    <div class="frame"><div class="scr"><div class="weave"></div>
+      <div class="msg t"><b class="th">ยินดีเจ้า</b><br>Thank you!</div>
+      <div class="move"><div class="k">Say it · Stage leave</div><div class="th">ยินดีจ๊าดนักเจ้า</div><div style="color:var(--ink-2)">Thank you very much</div><span class="btn solid">Play</span></div>
+      <div class="dock"><i class="t"></i><i class="more">···</i><i class="y"></i></div>
+    </div><p><b>1. Leave.</b> The Stage is leave, the "thank you" card shows. The Visitor plays it, then says it.</p></div>
+    <div class="arrow">→</div>
+    <div class="frame"><div class="scr"><div class="weave"></div>
+      <div class="msg y">ยินดีจ๊าดนักเจ้า</div>
+      <div class="move" style="box-shadow:0 0 0 1.5px var(--line-2),var(--sh-2)"><div class="k">Say it · done</div><div class="th">ยินดีจ๊าดนักเจ้า</div><span class="btn solid">Make my postcard</span><span class="btn ghost">Not now</span></div><span class="tap" style="left:120px;top:118px"></span>
+      <div class="dock"><i class="t"></i><i class="more">···</i><i class="y"></i></div>
+    </div><p><b>2. Offer.</b> Once played, the same card turns into "Make my postcard". Nothing pops up by itself.</p></div>
+    <div class="arrow">→</div>
+    <div class="frame"><div class="scr"><div class="weave"></div>
+      <div class="msg t" style="opacity:.4">...</div>
+      <div class="sheet"><h4>Add your dish?</h4><div style="color:var(--ink-2)">The photo stays on your phone.</div><div class="photo" style="height:120px;border-radius:10px;margin-top:8px"></div><span class="btn solid">Take a photo</span><span class="btn ghost">Skip</span></div>
+    </div><p><b>3. Photo (06).</b> Camera opens from the file input. Skip gives the plain Postcard.</p></div>
+    <div class="arrow">→</div>
+    <div class="frame"><div class="scr"><div class="weave"></div>
+      <div class="mini" style="background:var(--photo);position:relative"><div style="position:absolute;left:0;right:0;bottom:0;height:34px;background:#fff"></div><div style="position:absolute;left:8px;right:22px;top:40px;height:34px;background:#fff;border-radius:8px"></div><div style="position:absolute;left:22px;right:8px;top:82px;height:26px;background:#fff;border-radius:8px"></div></div>
+      <span class="btn solid" style="margin-top:12px">Save to Photos</span><span class="btn ghost">Done</span>
+    </div><p><b>4. Save.</b> Preview, then the share sheet ("Save image"). Download link where share is missing.</p></div>
+    <div class="frame" style="margin-left:14px"><div class="scr"><div class="weave"></div>
+      <div class="msg t">...</div><div class="msg y">...</div>
+      <div class="menu"><div>New conversation</div><div class="hi">Make my postcard</div><div>About you</div></div>
+      <span class="tap" style="left:82px;top:290px"></span>
+      <div class="dock"><i class="t"></i><i class="more">···</i><i class="y"></i></div>
+    </div><p><b>Backup: dock.</b> A "···" menu in the middle of the dock, at rest only. Goes straight to step 3. Greyed out before the Visitor has said a Move.</p></div>
+  </div>
+  <p class="note" style="margin-top:14px">Open question: DESIGN.md says the middle of the dock is empty at rest. A "···" there is the smallest change; the other option is a third header square next to <code>plus</code>.</p>
+
+  <h2>My recommendation</h2>
+  <div class="reco"><b>C, the two voices</b>, because it is the only direction where the image tells the pitch on its own ("I said it, they smiled back") and its photo version is exactly ticket 06; borrow B's postmark for place and date if you want more souvenir.</div>
+</main>
+</body>
+</html>

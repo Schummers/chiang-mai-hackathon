@@ -27,6 +27,7 @@ Picked once by `NEXT_PUBLIC_TURN_SERVICE` in [`turnService.ts`](../lib/engine/tu
 - `translation: string[]`: what the reader of the bubble reads. Thai for the Visitor's Turns, the Visitor's language for the Vendor's.
 - `original: string[]`: what was said, cleaned up, same items.
 - `card: ContextCard | null`: at most one per Turn.
+- `romanised?: string[]`: Visitor's Turns only, syllable phonetics of each Thai item (e.g. "a-ròi mâak kráp"), same Gemini call. Feeds the Say it yourself sheet; the mock returns it too. Carried onto `Message.romanised`.
 - `detectedInfo?: Partial<MyInfo>`: allergies, spice or diet the Visitor said aloud, to pre-tick My info.
 
 `ContextCard`: `kind` (`dish` | `word` | `moment`, missing = dish), `offGuide`, `name`, `nameThai`, `description`, `meat`, `spice` (0 to 3), `localDetail`, `warning`. A warning is a risk to check, never a guarantee.

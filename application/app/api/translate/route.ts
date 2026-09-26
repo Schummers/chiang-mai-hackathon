@@ -1,5 +1,6 @@
 import { cardFor, falseFriendCard, momentCard, type Mention } from "@/lib/context/cards";
 import { systemPrompt, TURN_SCHEMA, turnPrompt } from "@/lib/context/prompt";
+import { romanisedItems } from "@/lib/context/romanised";
 import type { MyInfo, TranslateInput, TranslateResult } from "@/lib/engine/types";
 import { generate, TURN_MODEL } from "@/lib/server/gemini";
 
@@ -8,6 +9,7 @@ export const maxDuration = 30;
 type ModelTurn = {
   original?: string[];
   translation?: string[];
+  romanised?: unknown;
   mention?: Mention;
   detectedInfo?: Partial<MyInfo>;
 };
@@ -61,6 +63,8 @@ export async function POST(req: Request) {
     original: original.length ? original : [raw],
     translation: translation.length ? translation : [raw],
     card,
+    // Undefined for the Vendor, dropped by JSON.
+    romanised: translation.length ? romanisedItems(turn.romanised, input.speaker) : undefined,
     ...(Object.keys(detectedInfo).length && { detectedInfo }),
   };
   return Response.json(result);

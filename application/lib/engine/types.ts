@@ -43,6 +43,8 @@ export type Message = {
   /** Small text: what was actually said. */
   original: string[];
   card: ContextCard | null;
+  /** Visitor's messages only: syllable phonetics of each Thai item, for Say it yourself. */
+  romanised?: string[];
 };
 
 export type Allergy = "peanuts" | "shellfish" | "gluten" | "other";
@@ -72,6 +74,8 @@ export type TranslateResult = {
   translation: string[];
   original: string[];
   card: ContextCard | null;
+  /** Visitor's Turns only: syllable phonetics of each Thai item, e.g. "a-ròi mâak kráp". */
+  romanised?: string[];
   /** Info the visitor said aloud ("I'm allergic to peanuts"), to pre-tick My info. */
   detectedInfo?: Partial<MyInfo>;
 };

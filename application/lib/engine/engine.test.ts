@@ -340,6 +340,9 @@ describe("mock turn service (Khao Soi scenario)", () => {
     const messages = engine.getState().messages;
     expect(messages.map((m) => m.speaker)).toEqual(["you", "vendor", "you", "vendor"]);
     expect(messages[0].translation).toHaveLength(3);
+    // Say it yourself works without the API: the mock carries phonetics for the Visitor's Thai.
+    expect(messages[0].romanised).toHaveLength(3);
+    expect(messages[1].romanised).toBeUndefined();
     expect(messages[1].translation).toEqual(["Chicken khao soi", "A little spicy", "No peanuts"]);
     expect(messages[1].card).toMatchObject({ name: "Khao Soi", nameThai: "ข้าวซอย" });
     expect(messages.filter((m) => m.card)).toHaveLength(1);

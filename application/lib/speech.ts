@@ -27,8 +27,8 @@ export function unlockSpeech() {
   s.speak(u);
 }
 
-/** Reads the text aloud. `onEnd` fires when it finishes, is stopped, or fails. */
-export function speak(text: string, language: string, onEnd: () => void) {
+/** Reads the text aloud. `onEnd` fires when it finishes, is stopped, or fails. `rate` slows it down (Say it yourself: 0.6). */
+export function speak(text: string, language: string, onEnd: () => void, rate?: number) {
   const s = synth();
   if (!s) return onEnd();
   s.cancel();
@@ -37,7 +37,7 @@ export function speak(text: string, language: string, onEnd: () => void) {
   u.lang = locale;
   const voice = pickVoice(locale);
   if (voice) u.voice = voice;
-  u.rate = language === "th" ? 0.9 : 1;
+  u.rate = rate ?? (language === "th" ? 0.9 : 1);
   let done = false;
   const finish = () => {
     if (done) return;

@@ -4,11 +4,11 @@
 
 **Blocked by:** None, can start immediately.
 
-**Status:** ready-for-agent
+**Status:** done
 
-- [ ] `/api/translate` returns, for each Visitor item, a `romanised` string: simple syllables a Western tourist can read, separated by spaces or hyphens (e.g. "a-ròi mâak kráp"). Same Gemini call, no extra request
-- [ ] Control on the Visitor bubble, right of Play, label "Say it yourself"
-- [ ] Sheet: Thai big, romanised under it, English meaning; buttons "Listen" and "Slowly" (`lib/speech.ts` with a lower rate, around 0.6)
-- [ ] Closes with a tap outside or a swipe down; does not interrupt a recording in progress
-- [ ] No pronunciation scoring (V2)
-- [ ] Unit test for the schema change; `npm test` and `npm run build` green
+- [x] `/api/translate` returns, for each Visitor item, a `romanised` string: simple syllables a Western tourist can read, separated by spaces or hyphens (e.g. "a-ròi mâak kráp"). Same Gemini call, no extra request
+- [x] Control on the Visitor bubble, right of Play, label "Say it yourself"
+- [x] Sheet: Thai big, romanised under it, English meaning; buttons "Listen" and "Slowly" (`lib/speech.ts` with a lower rate, around 0.6)
+- [x] Closes with a tap outside or a swipe down; does not interrupt a recording in progress
+- [x] No pronunciation scoring (V2)
+- [x] Unit test for the schema change; `npm test` and `npm run build` green

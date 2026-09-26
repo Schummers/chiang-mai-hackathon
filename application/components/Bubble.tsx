@@ -1,7 +1,9 @@
 import type { Message, Speaker } from "@/lib/engine/types";
 import { ContextCard } from "./ContextCard";
 import { PlayTool } from "./PlayTool";
+import { SayItTool } from "./SayItYourself";
 import s from "./Chat.module.css";
+import sayIt from "./SayItYourself.module.css";
 
 const THAI = /[฀-๿]/;
 
@@ -44,7 +46,14 @@ export function Bubble({ message, playing, onSpeak }: { message: Message; playin
           <Items items={message.translation} className={s.big} />
           <Items items={message.original} className={s.small} />
           {/* Your message was already read aloud once (Thai auto-play), so it offers "Play again". */}
-          <PlayTool playing={playing} again={yours} />
+          {yours ? (
+            <div className={sayIt.tools}>
+              <PlayTool playing={playing} again />
+              <SayItTool message={message} />
+            </div>
+          ) : (
+            <PlayTool playing={playing} again={false} />
+          )}
         </div>
       </Row>
       {message.card && <ContextCard card={message.card} vendorSaid={message.speaker === "vendor" ? message.translation : []} />}

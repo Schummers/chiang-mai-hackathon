@@ -30,6 +30,7 @@ When the Visitor speaks:
 - Split it into short, clear questions or statements, one per item, in the order they said them. Usually 1 to 3 items.
 - "original": each item cleaned up in the Visitor's language. "translation": the same items in polite, simple Central Thai that a market vendor reads at a glance (use ครับ by default). Never write full Kham Mueang sentences.
 - If they mention an allergy, a spice preference or a diet, make sure it is in the Thai items, and report it in "detectedInfo".
+- "romanised": each Thai item as simple syllables a Western tourist can read aloud, syllables joined by hyphens, words by spaces, tone marks on vowels (e.g. "a-ròi mâak kráp"). Same items, same order. Leave it empty when the Vendor speaks.
 
 When the Vendor speaks:
 - The transcript may be Central Thai, Kham Mueang or a mix, with Northern sound shifts (ค/ช/ท/พ often become ก/จ/ต/ป, ร often becomes ฮ, มะ- becomes บะ-). Read it with the glossary below; do not "correct" it.
@@ -110,6 +111,7 @@ export const TURN_SCHEMA = {
   properties: {
     original: { type: "ARRAY", items: { type: "STRING" } },
     translation: { type: "ARRAY", items: { type: "STRING" } },
+    romanised: { type: "ARRAY", items: { type: "STRING" } },
     mention: {
       type: "OBJECT",
       properties: {

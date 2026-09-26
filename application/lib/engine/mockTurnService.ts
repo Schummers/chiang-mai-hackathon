@@ -10,6 +10,7 @@ export const KHAO_SOI_SCRIPT: ScriptTurn[] = [
     result: {
       translation: ["จานนี้คืออะไรครับ", "เผ็ดไหมครับ", "ผมแพ้ถั่วลิสง มีถั่วลิสงไหมครับ"],
       original: ["What is this dish?", "Is it spicy?", "I'm allergic to peanuts: is there any in it?"],
+      romanised: ["jaan níi kuu à-rai kráp", "phèt mǎi kráp", "phǒm pháe thùa-lí-sǒng, mii thùa-lí-sǒng mǎi kráp"],
       card: null,
       detectedInfo: { allergies: ["peanuts"] },
     },
@@ -38,6 +39,7 @@ export const KHAO_SOI_SCRIPT: ScriptTurn[] = [
     result: {
       translation: ["ร้านนี้เปิดมานานแค่ไหนแล้วครับ"],
       original: ["How long have you had this stall?"],
+      romanised: ["ráan níi pòet maa naan kâe nǎi láew kráp"],
       card: null,
     },
   },

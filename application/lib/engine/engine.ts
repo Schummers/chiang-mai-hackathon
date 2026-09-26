@@ -66,6 +66,7 @@ export function reduce(state: ConversationState, event: EngineEvent): Conversati
             translation: event.result.translation,
             original: event.result.original,
             card: event.result.card,
+            ...(event.result.romanised?.length && { romanised: event.result.romanised }),
           },
         ],
       };

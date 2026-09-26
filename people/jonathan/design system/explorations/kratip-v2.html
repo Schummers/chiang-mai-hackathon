@@ -1,0 +1,380 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kratip Iterations</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:wght@400;500;700;800&family=Noto+Sans+Thai+Looped:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/lucide@0.460.0/dist/umd/lucide.min.js"></script>
+<style>
+  :root {
+    color-scheme: light;
+    --paper:#FAF9F6; --white:#FFFFFF; --ink:#1E2238;
+    --you:#2B3263; --you-wash:#ECEEF5; --them:#8A5A44; --them-wash:#F3ECE6;
+    --ink-2:rgb(30 34 56 / .70); --line:rgb(30 34 56 / .10); --line-2:rgb(30 34 56 / .18);
+    --f-lat:'Atkinson Hyperlegible Next', system-ui, sans-serif;
+    --f-th:'Noto Sans Thai Looped','Noto Sans Thai','Thonburi',sans-serif;
+    --sh-2:0 1px 2px rgb(30 34 56 / .06), 0 6px 16px -6px rgb(30 34 56 / .14);
+    --sh-dock:0 10px 30px -10px rgb(30 34 56 / .30), 0 0 0 1px var(--line);
+    --weave-bg: repeating-linear-gradient(45deg, var(--them) 0 6px, transparent 6px 12px), repeating-linear-gradient(-45deg, var(--you) 0 6px, transparent 6px 12px);
+    --weave-frame: repeating-linear-gradient(45deg, var(--them) 0 5px, var(--paper) 5px 7px, var(--you) 7px 12px, var(--paper) 12px 14px);
+  }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body { background:#EFEDE7; color:var(--ink); font:16px/1.5 var(--f-lat); padding:40px 16px 96px; }
+  .th { font-family:var(--f-th); }
+  svg.lucide { stroke-width:2.1; width:1em; height:1em; flex:none; }
+  .page { max-width:1240px; margin:0 auto; }
+  .eyebrow { font-size:12px; font-weight:800; letter-spacing:.09em; text-transform:uppercase; color:var(--ink-2); }
+  h1 { font-size:clamp(32px,5vw,52px); font-weight:800; letter-spacing:-.02em; line-height:1.02; margin-top:6px; }
+  .lede { color:var(--ink-2); max-width:70ch; margin-top:12px; font-size:17px; }
+  section { margin-top:56px; }
+  section > h2 { font-size:24px; font-weight:800; letter-spacing:-.01em; }
+  section > p { color:var(--ink-2); max-width:72ch; margin:4px 0 18px; font-size:15px; }
+  .row { display:flex; flex-wrap:wrap; gap:24px; align-items:flex-start; }
+  .spec { width:300px; max-width:100%; }
+  .spec.w { width:340px; }
+  .spec h3 { font-size:13px; font-weight:800; letter-spacing:.06em; text-transform:uppercase; color:var(--ink-2); margin-bottom:10px; }
+  .spec .note { font-size:13.5px; color:var(--ink-2); margin-top:10px; line-height:1.45; }
+  .spec .note b { color:var(--ink); }
+  .pick { display:inline-block; font-size:11px; font-weight:800; letter-spacing:.06em; text-transform:uppercase; background:var(--you); color:#fff; border-radius:6px; padding:2px 7px; margin-left:6px; vertical-align:middle; }
+
+  .ground { position:relative; background:var(--paper); border-radius:20px; padding:16px 14px; overflow:hidden; box-shadow:inset 0 0 0 1px var(--line); display:flex; flex-direction:column; gap:12px; }
+  .ground::before { content:""; position:absolute; inset:0; pointer-events:none; opacity:.05; background:var(--weave-bg); }
+  .ground > * { position:relative; }
+
+  /* ---------- MESSAGES ---------- */
+  .msg { max-width:92%; background:var(--white); border-radius:18px; padding:14px 16px 12px; }
+  .msg.me { align-self:flex-end; border-bottom-right-radius:6px; }
+  .msg.them { align-self:flex-start; border-bottom-left-radius:6px; }
+  .big { font-size:17px; font-weight:700; line-height:1.35; }
+  .big.th { font-size:19px; font-weight:600; line-height:1.45; }
+  .small { font-size:14px; line-height:1.45; color:var(--ink-2); margin-top:8px; padding-top:8px; border-top:1px solid var(--line); }
+  /* aligned lists: same indent for Thai and Latin, marker in identity color */
+  .msg ol { list-style:none; display:grid; grid-template-columns:14px 1fr; column-gap:6px; row-gap:2px; }
+  .msg ol li { display:contents; }
+  .msg ol li::before { content:"•"; font-weight:800; line-height:inherit; }
+  .me ol li::before { color:var(--you); } .them ol li::before { color:var(--them); }
+  .small ol li::before { color:var(--line-2); }
+  /* M1 spine + hairline */
+  .m1.me { box-shadow:inset -3px 0 0 var(--you), 0 0 0 1px var(--line), var(--sh-2); }
+  .m1.them { box-shadow:inset 3px 0 0 var(--them), 0 0 0 1px var(--line), var(--sh-2); }
+  /* M2 spine + tinted contour (1.5px, identity at 30%) */
+  .m2.me { box-shadow:inset -3px 0 0 var(--you), 0 0 0 1.5px rgb(43 50 99 / .28), var(--sh-2); }
+  .m2.them { box-shadow:inset 3px 0 0 var(--them), 0 0 0 1.5px rgb(138 90 68 / .32), var(--sh-2); }
+  /* M3 contour only, 2px identity, no spine */
+  .m3.me { box-shadow:0 0 0 2px var(--you), var(--sh-2); }
+  .m3.them { box-shadow:0 0 0 2px var(--them), var(--sh-2); }
+  /* M4 spine as a tab on the outer edge (bar outside the card) */
+  .m4 { position:relative; box-shadow:0 0 0 1px var(--line), var(--sh-2); }
+  .m4::after { content:""; position:absolute; top:12px; bottom:12px; width:4px; border-radius:2px; }
+  .m4.me::after { right:-8px; background:var(--you); } .m4.them::after { left:-8px; background:var(--them); }
+  .m4.me { margin-right:8px; } .m4.them { margin-left:8px; }
+
+  /* play tools */
+  .tools { display:flex; gap:8px; margin-top:10px; align-items:center; }
+  .tool { height:34px; padding:0 12px; border-radius:10px; display:inline-flex; gap:7px; align-items:center; font-size:13px; font-weight:700; }
+  .me .tool { color:var(--you); background:var(--you-wash); } .them .tool { color:var(--them); background:var(--them-wash); }
+  .tool.solid { color:#fff; } .me .tool.solid { background:var(--you); } .them .tool.solid { background:var(--them); }
+  .eq { display:inline-flex; gap:2px; align-items:flex-end; height:14px; }
+  .eq b { width:3px; border-radius:1px; background:currentColor; animation:eq .8s ease-in-out infinite; }
+  .eq b:nth-child(2){animation-delay:.2s} .eq b:nth-child(3){animation-delay:.4s}
+  @keyframes eq { 0%,100% { height:3px; } 50% { height:14px; } }
+  .corner { position:absolute; top:10px; width:30px; height:30px; border-radius:9px; display:grid; place-items:center; font-size:15px; }
+  .me .corner { left:10px; color:var(--you); background:var(--you-wash); } .them .corner { right:10px; color:var(--them); background:var(--them-wash); }
+  .msg.pad-corner.me { padding-left:48px; } .msg.pad-corner.them { padding-right:48px; }
+  .footline { display:flex; justify-content:space-between; align-items:center; margin-top:10px; padding-top:8px; border-top:1px solid var(--line); font-size:12px; font-weight:700; color:var(--ink-2); }
+  .footline span { display:inline-flex; gap:6px; align-items:center; }
+  .playing { position:relative; }
+  .playing::before { content:""; position:absolute; inset:-3px; border-radius:21px; border:2px solid; opacity:.5; animation:ring 1.4s ease-out infinite; }
+  .me.playing::before { border-color:var(--you); } .them.playing::before { border-color:var(--them); }
+  @keyframes ring { 0% { opacity:.6; transform:scale(1); } 100% { opacity:0; transform:scale(1.04); } }
+
+  /* ---------- CONTEXT CARDS ---------- */
+  .card { border-radius:16px; padding:3px; background:var(--weave-frame); }
+  .card > div { background:var(--white); border-radius:13px; padding:14px 16px; }
+  .card h3 { font-size:17px; font-weight:800; } .card h3 .th { font-weight:500; font-size:15px; color:var(--ink-2); }
+  .card p { font-size:14px; color:var(--ink-2); line-height:20px; margin-top:4px; }
+  .card .k { font-size:11px; font-weight:800; letter-spacing:.09em; text-transform:uppercase; color:var(--ink-2); display:flex; gap:6px; align-items:center; margin-bottom:6px; }
+  .facts { display:flex; flex-wrap:wrap; gap:6px 12px; font-size:13px; font-weight:700; margin-top:10px; }
+  .facts span { display:inline-flex; gap:5px; align-items:center; }
+  .heat { display:inline-flex; gap:2px; align-items:flex-end; }
+  .heat b { width:6px; height:11px; border-radius:2px; background:var(--line-2); }
+  .heat b.on { background:var(--ink); }
+  .strike { text-decoration:line-through; text-decoration-thickness:2px; text-decoration-color:var(--ink); }
+  .stamp { display:flex; gap:8px; align-items:center; background:var(--ink); color:#fff; font-size:13px; font-weight:800; padding:8px 16px; margin:-14px -16px 10px; border-radius:13px 13px 0 0; }
+  .flag { display:flex; gap:8px; align-items:center; background:var(--ink); color:#fff; font-size:13px; font-weight:800; padding:8px 12px; border-radius:10px; margin-top:10px; }
+  .ring2 { box-shadow:0 0 0 2px var(--ink); }
+  .card.c3 { background:var(--ink); padding:3px; }
+  .card.c3 > div { box-shadow:inset 0 0 0 3px transparent; }
+  .card.c3 .inner { border-radius:13px; padding:3px; background:var(--weave-frame); margin:-14px -16px; }
+  .card.c3 .inner > div { background:var(--white); border-radius:10px; padding:11px 13px; }
+
+  /* ---------- START ---------- */
+  .hello { padding:24px 4px 12px; }
+  .hello b { display:block; font-size:30px; line-height:1.08; font-weight:800; letter-spacing:-.02em; }
+  .hello span { display:block; color:var(--ink-2); font-size:15px; margin-top:8px; }
+  .hello.center { text-align:center; }
+  .hello .y { color:var(--you); } .hello .t { color:var(--them); }
+  .info { background:var(--white); border-radius:16px; padding:12px 14px; box-shadow:0 0 0 1px var(--line), var(--sh-2); }
+  .info .hdr { display:flex; justify-content:space-between; align-items:center; font-weight:800; font-size:15px; }
+  .info .hdr span { display:flex; gap:8px; align-items:center; }
+  .chips { display:flex; flex-wrap:wrap; gap:6px; margin-top:10px; }
+  .chip { border-radius:999px; padding:6px 12px; font-size:13px; font-weight:700; box-shadow:inset 0 0 0 1.5px var(--line-2); display:inline-flex; gap:5px; align-items:center; }
+  .chip.on { background:var(--you); color:#fff; box-shadow:none; }
+  .words { display:flex; flex-wrap:wrap; gap:8px; }
+  .words span { background:var(--white); border-radius:10px; padding:8px 12px; font-weight:700; font-size:14px; box-shadow:0 0 0 1px var(--line); }
+  .words span small { display:block; font-weight:400; font-size:12px; color:var(--ink-2); }
+
+  /* ---------- DOCK ---------- */
+  .dockwrap { height:118px; position:relative; }
+  .dock { position:absolute; left:0; right:0; bottom:8px; background:var(--white); border-radius:26px; box-shadow:var(--sh-dock); display:flex; align-items:center; justify-content:space-between; padding:0 8px; height:80px; }
+  .btn { display:inline-flex; flex-direction:column; align-items:center; justify-content:center; gap:2px; border-radius:18px; font-weight:800; }
+  .btn.t { background:var(--them-wash); color:var(--them); } .btn.y { background:var(--you); color:#fff; }
+  .btn.t.on { background:var(--them); color:#fff; } .btn.y.on { background:var(--ink); }
+  .btn.off { opacity:.35; }
+  .btn i.i { font-size:24px; display:grid; }
+  .btn span { font-size:11px; letter-spacing:.06em; text-transform:uppercase; }
+  .btn.t span { font-family:var(--f-th); font-size:13px; letter-spacing:0; text-transform:none; }
+  .sq { width:64px; height:64px; }
+  .wide { width:112px; height:60px; flex-direction:row; gap:8px; font-size:15px; }
+  .wide span { font-size:15px; letter-spacing:0; text-transform:none; }
+  .wide.t span { font-size:17px; }
+  .wide i.i { font-size:20px; }
+  .mid { flex:1; text-align:center; font-size:13px; font-weight:700; color:var(--ink-2); display:flex; gap:8px; justify-content:center; align-items:center; }
+  .wave { display:flex; gap:3px; align-items:center; height:22px; }
+  .wave b { width:4px; border-radius:2px; background:currentColor; animation:wave 1s ease-in-out infinite; }
+  .wave b:nth-child(2n){animation-delay:.15s} .wave b:nth-child(3n){animation-delay:.3s}
+  @keyframes wave { 0%,100% { height:5px; } 50% { height:20px; } }
+  .pulse { animation:pulse 1.6s ease-out infinite; }
+  .y.pulse { --pc:rgb(43 50 99 / .45); } .t.pulse { --pc:rgb(138 90 68 / .45); }
+  @keyframes pulse { 0% { box-shadow:0 0 0 0 var(--pc); } 100% { box-shadow:0 0 0 14px transparent; } }
+  .midlogo { opacity:.35; }
+  .handoff { display:inline-flex; gap:6px; align-items:center; color:var(--them); font-family:var(--f-th); font-size:15px; font-weight:700; }
+
+  .verdict { margin-top:64px; max-width:900px; border-top:2px solid var(--ink); padding-top:16px; }
+  .verdict h2 { font-size:24px; font-weight:800; }
+  .verdict table { width:100%; border-collapse:collapse; margin-top:12px; font-size:15px; }
+  .verdict th, .verdict td { text-align:left; padding:8px 10px 8px 0; border-bottom:1px solid var(--line); vertical-align:top; }
+  .verdict th { font-size:12px; letter-spacing:.08em; text-transform:uppercase; color:var(--ink-2); }
+  @media (prefers-reduced-motion: reduce) { * { animation:none !important; } }
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute"><defs>
+  <pattern id="weave" width="12" height="12" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="12" height="12" fill="#fff"/><rect x="0" y="1" width="10" height="4" rx="1" fill="#8A5A44"/><rect x="1" y="7" width="4" height="10" rx="1" fill="#8A5A44"/></pattern>
+  <symbol id="mark" viewBox="0 0 64 64"><path d="M12 4h40a8 8 0 0 1 8 8v32a8 8 0 0 1-8 8H26l-12 10v-10h-2a8 8 0 0 1-8-8V12a8 8 0 0 1 8-8z" fill="url(#weave)" stroke="#2B3263" stroke-width="3.5" stroke-linejoin="round"/><path d="M32 10 L50 28 L32 46 L14 28 Z" fill="#fff"/><text x="32" y="36" text-anchor="middle" font-family="Noto Sans Thai Looped, Noto Sans Thai, Thonburi, sans-serif" font-weight="700" font-size="21" fill="#2B3263">อู้</text></symbol>
+</defs></svg>
+
+<div class="page">
+<header>
+  <div class="eyebrow">อู้เมือง · Kratip · iteration 2</div>
+  <h1>More of everything, pick by pointing.</h1>
+  <p class="lede">What changed since v1: bullets aligned on one grid for both languages, more inner padding (14/16), speaker labels gone, same list format in both halves. Then several options per open question.</p>
+</header>
+
+<!-- ============ MESSAGES ============ -->
+<section>
+  <h2>1 · Message contour</h2>
+  <p>Four ways to say who speaks without a wash. All white, all with the aligned lists.</p>
+  <div class="row">
+    <div class="spec">
+      <h3>M1 · Spine + grey hairline</h3>
+      <div class="ground">
+        <div class="msg me m1"><div class="big th"><ol><li>จานนี้คืออะไรครับ</li><li>เผ็ดไหมครับ</li><li>ผมแพ้ถั่วลิสง มีถั่วลิสงไหมครับ</li></ol></div><div class="small"><ol><li>What is this dish?</li><li>Is it spicy?</li><li>I'm allergic to peanuts, any in it?</li></ol></div></div>
+        <div class="msg them m1"><div class="big"><ol><li>Chicken khao soi</li><li>A little spicy</li><li>No peanuts</li></ol></div><div class="small th"><ol><li>ข้าวซอยไก่ครับ</li><li>เผ็ดนิดหน่อย</li><li>ไม่มีถั่วลิสงครับ</li></ol></div></div>
+      </div>
+      <div class="note">v1. Quiet. The hairline is the same grey as My info.</div>
+    </div>
+    <div class="spec">
+      <h3>M2 · Spine + tinted contour <span class="pick">Pick</span></h3>
+      <div class="ground">
+        <div class="msg me m2"><div class="big th"><ol><li>จานนี้คืออะไรครับ</li><li>เผ็ดไหมครับ</li><li>ผมแพ้ถั่วลิสง มีถั่วลิสงไหมครับ</li></ol></div><div class="small"><ol><li>What is this dish?</li><li>Is it spicy?</li><li>I'm allergic to peanuts, any in it?</li></ol></div></div>
+        <div class="msg them m2"><div class="big"><ol><li>Chicken khao soi</li><li>A little spicy</li><li>No peanuts</li></ol></div><div class="small th"><ol><li>ข้าวซอยไก่ครับ</li><li>เผ็ดนิดหน่อย</li><li>ไม่มีถั่วลิสงครับ</li></ol></div></div>
+      </div>
+      <div class="note">Your ask: a light contour, a bit darker, all around. 1.5px of the speaker's color at 30%. Still reads as "white card", but it belongs to someone.</div>
+    </div>
+    <div class="spec">
+      <h3>M3 · Full 2px contour, no spine</h3>
+      <div class="ground">
+        <div class="msg me m3"><div class="big th"><ol><li>จานนี้คืออะไรครับ</li><li>เผ็ดไหมครับ</li></ol></div><div class="small"><ol><li>What is this dish?</li><li>Is it spicy?</li></ol></div></div>
+        <div class="msg them m3"><div class="big"><ol><li>Chicken khao soi</li><li>A little spicy</li></ol></div><div class="small th"><ol><li>ข้าวซอยไก่ครับ</li><li>เผ็ดนิดหน่อย</li></ol></div></div>
+      </div>
+      <div class="note">Loudest. Competes with the woven frame of the context card.</div>
+    </div>
+    <div class="spec">
+      <h3>M4 · Bar outside the card</h3>
+      <div class="ground">
+        <div class="msg me m4"><div class="big th"><ol><li>จานนี้คืออะไรครับ</li><li>เผ็ดไหมครับ</li></ol></div><div class="small"><ol><li>What is this dish?</li><li>Is it spicy?</li></ol></div></div>
+        <div class="msg them m4"><div class="big"><ol><li>Chicken khao soi</li><li>A little spicy</li></ol></div><div class="small th"><ol><li>ข้าวซอยไก่ครับ</li><li>เผ็ดนิดหน่อย</li></ol></div></div>
+      </div>
+      <div class="note">The card stays pure, the color is a margin mark, like a book. Elegant, less "chat".</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PLAY ============ -->
+<section>
+  <h2>2 · Play: where and how</h2>
+  <p>Rule you set: tapping the card plays it. So the button is a status as much as a control. Three placements, each shown idle and playing.</p>
+  <div class="row">
+    <div class="spec">
+      <h3>P1 · Bottom tool, solid when playing</h3>
+      <div class="ground">
+        <div class="msg me m2"><div class="big th"><ol><li>จานนี้คืออะไรครับ</li><li>เผ็ดไหมครับ</li></ol></div><div class="small"><ol><li>What is this dish?</li><li>Is it spicy?</li></ol></div><div class="tools"><span class="tool"><i data-lucide="volume-2"></i>Play again</span></div></div>
+        <div class="msg me m2 playing"><div class="big th"><ol><li>จานนี้คืออะไรครับ</li><li>เผ็ดไหมครับ</li></ol></div><div class="small"><ol><li>What is this dish?</li><li>Is it spicy?</li></ol></div><div class="tools"><span class="tool solid"><span class="eq"><b></b><b></b><b></b></span>Playing</span></div></div>
+      </div>
+      <div class="note">Idle: speaker icon. Playing: equalizer + solid, and a soft ring breathes around the card.</div>
+    </div>
+    <div class="spec">
+      <h3>P2 · Corner icon, inner side</h3>
+      <div class="ground">
+        <div class="msg me m2 pad-corner"><span class="corner"><i data-lucide="volume-2"></i></span><div class="big th"><ol><li>จานนี้คืออะไรครับ</li><li>เผ็ดไหมครับ</li></ol></div><div class="small"><ol><li>What is this dish?</li><li>Is it spicy?</li></ol></div></div>
+        <div class="msg them m2 pad-corner playing"><span class="corner"><span class="eq"><b></b><b></b><b></b></span></span><div class="big"><ol><li>Chicken khao soi</li><li>A little spicy</li></ol></div><div class="small th"><ol><li>ข้าวซอยไก่ครับ</li><li>เผ็ดนิดหน่อย</li></ol></div></div>
+      </div>
+      <div class="note">Lighter: no text, no extra row. Sits on the inner side like the 🔊 in v5, but inside the card.</div>
+    </div>
+    <div class="spec">
+      <h3>P3 · Foot line: status + hint</h3>
+      <div class="ground">
+        <div class="msg me m2"><div class="big th"><ol><li>จานนี้คืออะไรครับ</li><li>เผ็ดไหมครับ</li></ol></div><div class="small"><ol><li>What is this dish?</li><li>Is it spicy?</li></ol></div><div class="footline"><span><i data-lucide="volume-2"></i>Tap to play</span><span>0:04</span></div></div>
+        <div class="msg me m2 playing"><div class="big th"><ol><li>จานนี้คืออะไรครับ</li><li>เผ็ดไหมครับ</li></ol></div><div class="small"><ol><li>What is this dish?</li><li>Is it spicy?</li></ol></div><div class="footline"><span><span class="eq"><b></b><b></b><b></b></span>Playing…</span><span>0:02 / 0:04</span></div></div>
+      </div>
+      <div class="note">Teaches the tap. Duration tells the vendor how long to listen.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTEXT CARDS ============ -->
+<section>
+  <h2>3 · Context card, conflict kept in the weave</h2>
+  <p>You want the woven frame always. So the conflict has to live inside. Three ways.</p>
+  <div class="row">
+    <div class="spec">
+      <h3>C1 · Ink stamp on top <span class="pick">Pick</span></h3>
+      <div class="ground">
+        <div class="card"><div>
+          <div class="stamp"><i data-lucide="octagon-x"></i>Contains peanuts · you avoid peanuts</div>
+          <h3 class="strike">Nam prik ong <span class="th">น้ำพริกอ่อง</span></h3>
+          <p>Northern pork and tomato chili dip, often served with crispy pork skin.</p>
+          <div class="facts"><span><i data-lucide="drumstick"></i>Pork</span><span><span class="heat"><b class="on"></b><b class="on"></b><b></b></span>Medium</span></div>
+        </div></div>
+      </div>
+      <div class="note">Frame stays woven, the stamp is the darkest thing on screen. Name struck through.</div>
+    </div>
+    <div class="spec">
+      <h3>C2 · Flag at the bottom, ink ring</h3>
+      <div class="ground">
+        <div class="card"><div class="ring2" style="border-radius:13px">
+          <div class="k"><i data-lucide="soup"></i>What it is · based on your info</div>
+          <h3 class="strike">Nam prik ong <span class="th">น้ำพริกอ่อง</span></h3>
+          <p>Northern pork and tomato chili dip, often served with crispy pork skin.</p>
+          <div class="facts"><span><i data-lucide="drumstick"></i>Pork</span><span><span class="heat"><b class="on"></b><b class="on"></b><b></b></span>Medium</span></div>
+          <div class="flag"><i data-lucide="octagon-x"></i>Contains peanuts. You avoid peanuts.</div>
+        </div></div>
+      </div>
+      <div class="note">Same card as "fits you", plus one flag row and a 2px ink ring inside the weave. Less dramatic.</div>
+    </div>
+    <div class="spec">
+      <h3>C3 · Fits you, for reference</h3>
+      <div class="ground">
+        <div class="card"><div>
+          <div class="k"><i data-lucide="soup"></i>What it is · based on your info</div>
+          <h3>Khao soi <span class="th">ข้าวซอย</span></h3>
+          <p>Coconut curry noodle soup, crispy noodles on top. A Chiang Mai signature.</p>
+          <div class="facts"><span><i data-lucide="drumstick"></i>Chicken</span><span><span class="heat"><b class="on"></b><b></b><b></b></span>Mild</span><span><i data-lucide="check"></i>Vendor: no peanuts</span></div>
+        </div></div>
+      </div>
+      <div class="note">Padding now 14/16, label spacing 6. Unchanged otherwise.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ START ============ -->
+<section>
+  <h2>4 · Session start</h2>
+  <p>Title higher, bigger, near full width. Plus the wording question for "My info".</p>
+  <div class="row">
+    <div class="spec w">
+      <h3>S1 · Left, two colors</h3>
+      <div class="ground" style="min-height:380px">
+        <div class="hello"><b>Say what's on <span class="y">your</span> mind.<br>We'll say it in <span class="t">Thai</span>.</b><span>Rambling is fine. We clean it up.</span></div>
+        <div class="info"><div class="hdr"><span><i data-lucide="user-round"></i>About you</span><i data-lucide="x"></i></div><div class="chips"><span class="chip on"><i data-lucide="octagon-x"></i>Peanuts</span><span class="chip on"><i data-lucide="flame"></i>Mild</span><span class="chip">+ Add</span></div></div>
+      </div>
+      <div class="note">Title at 30px, left-aligned, starts 24px under the header. "Your" in indigo, "Thai" in clay: the two voices in the first sentence.</div>
+    </div>
+    <div class="spec w">
+      <h3>S2 · Centered, mark above</h3>
+      <div class="ground" style="min-height:380px">
+        <div class="hello center"><svg width="56" height="56" style="margin-bottom:10px"><use href="#mark"/></svg><b>Say what's on your mind.</b><span>We'll turn it into clear Thai.</span></div>
+        <div class="info"><div class="hdr"><span><i data-lucide="sliders-horizontal"></i>Your needs</span><i data-lucide="x"></i></div><div class="chips"><span class="chip on"><i data-lucide="octagon-x"></i>Peanuts</span><span class="chip on"><i data-lucide="flame"></i>Mild</span><span class="chip">+ Add</span></div></div>
+      </div>
+      <div class="note">Logo as the hero, once, on the empty screen only. Header keeps the small mark.</div>
+    </div>
+    <div class="spec w">
+      <h3>Wording for "My info"</h3>
+      <div class="words">
+        <span>My info<small>Neutral. Sounds like a form.</small></span>
+        <span>About you<small>Warm. Matches "your mind".</small></span>
+        <span>Your needs<small>Says why it exists: allergies, spice.</small></span>
+        <span>Me<small>Shortest. Icon does the work.</small></span>
+        <span>What I avoid<small>Honest, but only covers allergies.</small></span>
+      </div>
+      <div class="note"><b>Pick: "About you"</b> in the card and behind the top-left icon. "Your needs" if you want the safety angle in the demo.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ DOCK ============ -->
+<section>
+  <h2>5 · Dock</h2>
+  <p>Verb inside the button, both buttons the same width. Then: what is the middle for?</p>
+  <div class="row">
+    <div class="spec">
+      <h3>K1 · Square 64, verb under the icon <span class="pick">Pick</span></h3>
+      <div class="ground"><div class="dockwrap"><div class="dock"><div class="btn t sq"><i class="i" data-lucide="mic"></i><span>พูด</span></div><div class="mid"></div><div class="btn y sq pulse"><i class="i" data-lucide="mic"></i><span>Speak</span></div></div></div></div>
+      <div class="note">One component, one shape. 64px square holds a 24px icon + 11px verb. Bar 80px. Idle: middle empty.</div>
+    </div>
+    <div class="spec">
+      <h3>K2 · Wide 112, icon + verb side by side</h3>
+      <div class="ground"><div class="dockwrap"><div class="dock"><div class="btn t wide"><i class="i" data-lucide="mic"></i><span>พูด</span></div><div class="mid"></div><div class="btn y wide pulse"><i class="i" data-lucide="mic"></i><span>Speak</span></div></div></div></div>
+      <div class="note">D1 fixed: both 112px. Verb at 15px, readable by the vendor at arm's length. Less room in the middle.</div>
+    </div>
+    <div class="spec">
+      <h3>K3 · Middle = state, vendor speaking</h3>
+      <div class="ground"><div class="dockwrap"><div class="dock"><div class="btn t sq on pulse"><i class="i" data-lucide="square"></i><span>หยุด</span></div><div class="mid" style="color:var(--them)"><span class="wave"><b></b><b></b><b></b><b></b><b></b></span><span class="th">0:04</span></div><div class="btn y sq off"><i class="i" data-lucide="mic"></i><span>Speak</span></div></div></div></div>
+      <div class="note">Tap = the button becomes Stop (solid, verb changes), the wave and timer live in the middle, the other side dims. The middle is the mirror of the Listening card.</div>
+    </div>
+    <div class="spec">
+      <h3>K4 · Middle = hand-off hint</h3>
+      <div class="ground"><div class="dockwrap"><div class="dock"><div class="btn t sq pulse"><i class="i" data-lucide="mic"></i><span>พูด</span></div><div class="mid"><span class="handoff"><i data-lucide="arrow-left"></i>ตาคุณ</span></div><div class="btn y sq"><i class="i" data-lucide="mic"></i><span>Speak</span></div></div></div></div>
+      <div class="note">After your Thai plays: an arrow and "your turn" in Thai point at the vendor's button. Disappears when they tap. Same for you, in English, after their reply.</div>
+    </div>
+    <div class="spec">
+      <h3>K5 · Middle = working</h3>
+      <div class="ground"><div class="dockwrap"><div class="dock"><div class="btn t sq off"><i class="i" data-lucide="mic"></i><span>พูด</span></div><div class="mid"><i data-lucide="languages"></i>Translating…</div><div class="btn y sq off"><i class="i" data-lucide="mic"></i><span>Speak</span></div></div></div></div>
+      <div class="note">Both dimmed, the middle says why. With K3 and K4 that's the full life of the middle: empty, listening, working, hand-off.</div>
+    </div>
+    <div class="spec">
+      <h3>K6 · Middle = the mark, idle</h3>
+      <div class="ground"><div class="dockwrap"><div class="dock"><div class="btn t sq"><i class="i" data-lucide="mic"></i><span>พูด</span></div><div class="mid midlogo"><svg width="28" height="28"><use href="#mark"/></svg></div><div class="btn y sq pulse"><i class="i" data-lucide="mic"></i><span>Speak</span></div></div></div></div>
+      <div class="note">If empty feels unfinished: the mark at 35%, replaced by state when there is one. Brand on every screen without shouting.</div>
+    </div>
+  </div>
+</section>
+
+<div class="verdict">
+  <h2>What I'd lock</h2>
+  <table>
+    <tr><th>Component</th><th>Pick</th><th>Why</th></tr>
+    <tr><td>Message</td><td><b>M2</b> + <b>P1</b></td><td>Tinted contour is your ask, exactly. Tap-to-play on the card, the bottom tool shows the state.</td></tr>
+    <tr><td>Context card</td><td><b>C1</b></td><td>Weave always, stamp only on conflict. One card to learn.</td></tr>
+    <tr><td>Start</td><td><b>S1</b>, "About you"</td><td>Two-color title says the whole product in one line.</td></tr>
+    <tr><td>Dock</td><td><b>K1</b> + K3/K4/K5 for the middle</td><td>One shape for both sides, the middle narrates: listening, translating, your turn. Empty when nothing to say.</td></tr>
+  </table>
+</div>
+</div>
+<script>lucide.createIcons();</script>
+</body>
+</html>

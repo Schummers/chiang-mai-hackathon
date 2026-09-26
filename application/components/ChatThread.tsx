@@ -47,8 +47,10 @@ export function ChatThread({ state, intro, live, playingId, onSpeak }: Props) {
       {phase.kind === "processing" && (
         <>
           <Row speaker={phase.speaker}>
-            <div className={`${s.bubble} ${s.enter}`}>
-              <p className={s.raw}>{phase.raw ?? "…"}</p>
+            <div className={s.proc}>
+              <div>
+                <p className={s.raw}>{phase.raw ?? (phase.speaker === "you" ? "Transcribing…" : "กำลังถอดเสียง…")}</p>
+              </div>
             </div>
           </Row>
           <p className={s.status} style={{ alignSelf: phase.speaker === "you" ? "flex-end" : "flex-start" }}>

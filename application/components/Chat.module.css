@@ -69,13 +69,14 @@
 }
 
 .enter {
-  animation: enter 0.35s ease-out both;
+  animation: enter 0.3s ease-out both;
 }
 
+/* Short fade from the raw bubble to the final one, no layout jump. */
 @keyframes enter {
   from {
     opacity: 0;
-    transform: translateY(8px);
+    transform: scale(0.98);
   }
   to {
     opacity: 1;
@@ -156,5 +157,58 @@
   }
   50% {
     height: 16px;
+  }
+}
+
+/* Processing: a light running around the raw transcript (wireframe v5, screen 3). */
+.proc {
+  position: relative;
+  overflow: hidden;
+  max-width: min(86%, 380px);
+  padding: 2.5px;
+  border-radius: 18px;
+  --accent: var(--you);
+  --wash: var(--you-wash);
+}
+
+.them .proc {
+  --accent: var(--them);
+  --wash: var(--them-wash);
+}
+
+.you .proc {
+  border-bottom-right-radius: 6px;
+}
+
+.them .proc {
+  border-bottom-left-radius: 6px;
+}
+
+.proc::before {
+  content: "";
+  position: absolute;
+  inset: -80%;
+  background: conic-gradient(var(--accent) 0 22%, transparent 22% 100%);
+  animation: spin 1.4s linear infinite;
+}
+
+.proc > div {
+  position: relative;
+  background: var(--wash);
+  border-radius: 15.5px;
+  padding: 10px 12px;
+}
+
+.you .proc > div {
+  border-bottom-right-radius: 4px;
+}
+
+.them .proc > div {
+  border-bottom-left-radius: 4px;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
   }
 }

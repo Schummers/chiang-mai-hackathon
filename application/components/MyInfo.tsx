@@ -85,77 +85,82 @@ export function MyInfoPage({
   return (
     <div className={s.overlay} role="dialog" aria-modal="true" aria-labelledby="my-info-title">
       <div className={s.sheet}>
-        <header className={s.sheetHead}>
-          <h2 id="my-info-title">About you</h2>
-          <button className={s.close} onClick={onDone} aria-label="Close">
-            <X size={22} strokeWidth={2.1} />
+        {/* The sections scroll if the phone is short; Done stays pinned at the bottom, always visible. */}
+        <div className={s.body}>
+          <header className={s.sheetHead}>
+            <h2 id="my-info-title">About you</h2>
+            <button className={s.close} onClick={onDone} aria-label="Close">
+              <X size={22} strokeWidth={2.1} />
+            </button>
+          </header>
+          <p className={s.lede}>Sent with every message, so the Thai mentions it for you.</p>
+
+          <section className={s.group}>
+            <h3>Your language</h3>
+            <div className={s.chips}>
+              {LANGUAGES.map((l) => (
+                <Chip key={l.code} label={l.name} on={l.code === language} onClick={() => onLanguage(l.code)} />
+              ))}
+            </div>
+          </section>
+
+          <section className={s.group}>
+            <h3>You speak as</h3>
+            <div className={s.chips}>
+              {PARTICLES.map((p) => (
+                <Chip key={p.value} label={p.label} on={particleOf(info) === p.value} onClick={() => onChange({ ...info, particle: p.value })} />
+              ))}
+            </div>
+          </section>
+
+          <section className={s.group}>
+            <h3>Allergies</h3>
+            <div className={s.chips}>
+              {ALLERGIES.map((a) => (
+                <Chip
+                  key={a.value}
+                  label={a.label}
+                  on={info.allergies.includes(a.value)}
+                  onClick={() => onChange({ ...info, allergies: toggle(info.allergies, a.value) })}
+                />
+              ))}
+            </div>
+          </section>
+
+          <section className={s.group}>
+            <h3>Spice</h3>
+            <div className={s.chips}>
+              {SPICES.map((sp) => (
+                <Chip
+                  key={sp.value}
+                  label={sp.label}
+                  on={info.spice === sp.value}
+                  onClick={() => onChange({ ...info, spice: info.spice === sp.value ? null : sp.value })}
+                />
+              ))}
+            </div>
+          </section>
+
+          <section className={s.group}>
+            <h3>Diet</h3>
+            <div className={s.chips}>
+              {DIETS.map((d) => (
+                <Chip
+                  key={d.value}
+                  label={d.label}
+                  on={info.diet.includes(d.value)}
+                  onClick={() => onChange({ ...info, diet: toggle(info.diet, d.value) })}
+                />
+              ))}
+            </div>
+          </section>
+        </div>
+
+        <div className={s.footer}>
+          <button className={s.done} onClick={onDone}>
+            Done
           </button>
-        </header>
-        <p className={s.lede}>Saved on this phone only, no account. Sent with every message, so the Thai mentions it for you.</p>
-
-        <section className={s.group}>
-          <h3>Your language</h3>
-          <div className={s.chips}>
-            {LANGUAGES.map((l) => (
-              <Chip key={l.code} label={l.name} on={l.code === language} onClick={() => onLanguage(l.code)} />
-            ))}
-          </div>
-        </section>
-
-        <section className={s.group}>
-          <h3>You speak as</h3>
-          <div className={s.chips}>
-            {PARTICLES.map((p) => (
-              <Chip key={p.value} label={p.label} on={particleOf(info) === p.value} onClick={() => onChange({ ...info, particle: p.value })} />
-            ))}
-          </div>
-        </section>
-
-        <section className={s.group}>
-          <h3>Allergies</h3>
-          <div className={s.chips}>
-            {ALLERGIES.map((a) => (
-              <Chip
-                key={a.value}
-                label={a.label}
-                on={info.allergies.includes(a.value)}
-                onClick={() => onChange({ ...info, allergies: toggle(info.allergies, a.value) })}
-              />
-            ))}
-          </div>
-        </section>
-
-        <section className={s.group}>
-          <h3>Spice</h3>
-          <div className={s.chips}>
-            {SPICES.map((sp) => (
-              <Chip
-                key={sp.value}
-                label={sp.label}
-                on={info.spice === sp.value}
-                onClick={() => onChange({ ...info, spice: info.spice === sp.value ? null : sp.value })}
-              />
-            ))}
-          </div>
-        </section>
-
-        <section className={s.group}>
-          <h3>Diet</h3>
-          <div className={s.chips}>
-            {DIETS.map((d) => (
-              <Chip
-                key={d.value}
-                label={d.label}
-                on={info.diet.includes(d.value)}
-                onClick={() => onChange({ ...info, diet: toggle(info.diet, d.value) })}
-              />
-            ))}
-          </div>
-        </section>
-
-        <button className={s.done} onClick={onDone}>
-          Done
-        </button>
+        </div>
       </div>
     </div>
   );

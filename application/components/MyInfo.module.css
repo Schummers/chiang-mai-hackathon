@@ -121,15 +121,33 @@ label.chip {
   width: 100%;
   max-width: 520px;
   max-height: calc(100dvh - 24px);
-  overflow-y: auto;
   background: var(--white);
   border-radius: 22px 22px 0 0;
   box-shadow: var(--sh-3);
-  padding: 8px 16px calc(env(safe-area-inset-bottom) + 16px);
   display: flex;
   flex-direction: column;
-  gap: 18px;
+  overflow: hidden;
   animation: rise 0.25s ease-out both;
+}
+
+/* Everything but Done: scrolls on its own when the phone is too short. */
+.body {
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow-y: auto;
+  padding: 8px 16px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Done, pinned under the scrolling part, never below the fold. */
+.footer {
+  flex: none;
+  display: flex;
+  flex-direction: column;
+  padding: 12px 16px calc(env(safe-area-inset-bottom) + 16px);
+  box-shadow: 0 -1px 0 var(--line);
 }
 
 .sheetHead {
@@ -148,7 +166,7 @@ label.chip {
   font-size: 14px;
   line-height: 20px;
   color: var(--ink-2);
-  margin-top: -10px;
+  margin-top: -8px;
 }
 
 .group h3 {
@@ -162,7 +180,6 @@ label.chip {
 }
 
 .done {
-  flex: none; /* the sheet scrolls; without this the flex column squashes Done */
   height: 48px;
   border-radius: 12px;
   background: var(--you);

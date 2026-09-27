@@ -1,9 +1,9 @@
 "use client";
 
-import { Check, ChevronDown, Flame, Languages, OctagonX, Plus, UserRound, X } from "lucide-react";
+import { Check, ChevronDown, Flame, Languages, NotebookPen, OctagonX, Plus, UserRound, X } from "lucide-react";
 import type { MyInfo, UserLanguage } from "@/lib/engine/types";
 import { findLanguage, LANGUAGES } from "@/lib/language";
-import { ALLERGIES, DIETS, PARTICLES, particleOf, SPICES } from "@/lib/myInfo";
+import { ALLERGIES, DIETS, NOTES_MAX, PARTICLES, particleOf, SPICES } from "@/lib/myInfo";
 import s from "./MyInfo.module.css";
 
 type LanguageProps = { language: UserLanguage; onLanguage: (code: UserLanguage) => void };
@@ -36,6 +36,7 @@ export function MyInfoCard({
     ...ALLERGIES.filter((a) => info.allergies.includes(a.value)).map((a) => ({ label: a.label, Icon: OctagonX })),
     ...SPICES.filter((sp) => sp.value === info.spice).map((sp) => ({ label: sp.label, Icon: Flame })),
     ...DIETS.filter((d) => info.diet.includes(d.value)).map((d) => ({ label: d.label, Icon: Check })),
+    ...(info.notes?.trim() ? [{ label: "Your notes", Icon: NotebookPen }] : []),
   ];
   return (
     <div className={s.card}>
@@ -153,6 +154,21 @@ export function MyInfoPage({
                 />
               ))}
             </div>
+          </section>
+
+          <section className={s.group}>
+            <h3>
+              <label htmlFor="my-info-notes">Anything else</label>
+            </h3>
+            <textarea
+              id="my-info-notes"
+              className={s.notes}
+              rows={4}
+              maxLength={NOTES_MAX}
+              value={info.notes ?? ""}
+              placeholder="Another allergy (cashews, egg…), what you're looking for, or if you're the vendor: today's specials."
+              onChange={(e) => onChange({ ...info, notes: e.target.value })}
+            />
           </section>
         </div>
 

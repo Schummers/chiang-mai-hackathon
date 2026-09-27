@@ -1,5 +1,6 @@
 import type { Message, Speaker } from "@/lib/engine/types";
 import { ContextCard } from "./ContextCard";
+import { InfoCard } from "./InfoCard";
 import { MoveCard } from "./MoveCard";
 import { PlayTool } from "./PlayTool";
 import { SayItTool } from "./SayItYourself";
@@ -33,12 +34,18 @@ export function Bubble({
   onSpeak,
   latest = true,
   recording = false,
+  onSuggest,
+  busy = false,
 }: {
   message: Message;
   playing: boolean;
   onSpeak: () => void;
   latest?: boolean;
   recording?: boolean;
+  /** Sends a context card's suggestion as your next message. */
+  onSuggest?: (text: string) => void;
+  /** A Turn is in progress: suggestions wait. */
+  busy?: boolean;
 }) {
   const yours = message.speaker === "you";
   return (
@@ -70,6 +77,7 @@ export function Bubble({
         </div>
       </Row>
       {message.card && <ContextCard card={message.card} vendorSaid={message.speaker === "vendor" ? message.translation : []} />}
+      {message.cards?.map((card, i) => <InfoCard key={i} card={card} onSuggest={onSuggest} busy={busy} />)}
       {/* The Allergy Flag wins: a Turn shows the flag or a Move, never both. */}
       {!message.card && message.move && <MoveCard card={message.move} collapsed={!latest} />}
     </>

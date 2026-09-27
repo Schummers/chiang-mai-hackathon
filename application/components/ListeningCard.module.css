@@ -8,6 +8,7 @@
   color: var(--accent);
   font-weight: 700;
   font-size: 15px;
+  max-width: calc(100% - 70px);
   animation: enter 0.3s ease-out both;
 }
 
@@ -86,4 +87,14 @@
   flex-direction: column;
   align-items: stretch;
   gap: 0;
+}
+
+/* Live transcript under the wave, like the raw text of a processing card. */
+.interim {
+  margin-top: 8px;
+  color: var(--ink-2);
+  font-style: italic;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 22px;
 }

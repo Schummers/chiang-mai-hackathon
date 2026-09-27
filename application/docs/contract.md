@@ -25,9 +25,14 @@ Picked once by `NEXT_PUBLIC_TURN_SERVICE` in [`turnService.ts`](../lib/engine/tu
 | `POST /api/transcribe` | FormData: `audio` (webm or mp4 blob, max 4 MB), `language` | `{ raw: string }`. Missing or empty audio returns `{ raw: "" }` with 200, same as no speech. The engine also drops sound tags (`<noise>`, `[Music]`, `(silence)`…) and treats what is left empty as no speech | 413 too large, 502 provider failed **or `GEMINI_API_KEY` missing** |
 | `POST /api/photo` | FormData: `image` (JPEG, the UI downscales to 1280px, max 4 MB), `language`, `myInfo` (JSON) | JSON `PhotoCard`. A malformed or empty model answer still returns 200 with a Sign card "Couldn't read this photo" | 400 no image, 413 too large, 502 provider failed **or `GEMINI_API_KEY` missing** |
 | `POST /api/photo/ask` | FormData: `image`, `question`, `card` (the `PhotoCard` JSON), `language`, `myInfo` (JSON) | `{ answer: string }`, one or two lines in the Visitor's language | 400 no image, no question or bad card, 413 too large, 502 provider failed, key missing or empty answer |
-| `POST /api/translate` | JSON `TranslateInput` (`raw` cut to 2000 chars) | JSON `TranslateResult` | 400 empty raw, 502 provider failed or key missing, 500 on a malformed JSON body |
+| `POST /api/translate` | JSON `TranslateInput` (`raw` cut to 2000 chars) | JSON `TranslateResult` | 400 empty raw, 502 provider failed or `ANTHROPIC_API_KEY` missing, 500 on a malformed JSON body |
+| `POST /api/places` | JSON `{ lat, lng, accuracy }` | JSON `NearbyPlaces` | 400 bad position, 502 Google failed or `GOOGLE_MAPS_API_KEY` missing |
 
-`TranslateInput`: `{ raw, speaker: "you" | "vendor", userLanguage, myInfo, history: Message[] }`. The route keeps the last 6 Turns of history for the prompt.
+`TranslateInput`: `{ raw, speaker: "you" | "vendor", userLanguage, myInfo, history: Message[], context?, options? }`. The route keeps the last 8 Turns of history for the prompt, with the context cards shown under them.
+
+- `context: TurnContext`: `notes?` (the Visitor's free text, max 1000 chars), `places?: NearbyPlaces`, `device?: { now: ISO string, timeZone: IANA }`. Each part is only sent when its switch is on in Settings. The notes travel here, not in `myInfo`.
+- `NearbyPlaces`: `{ accuracyM, food: NearbyPlace[], markets: NearbyPlace[] }`, each list nearest first. `NearbyPlace`: `name`, `type?`, `distanceM`, `rating?`, `ratingCount?`, `price?`, `summary?`, `openNow?`.
+- `options: TranslateOptions`: `cards?`, `moves?`, `pack?` (all default true). `cards: false` drops cards from the prompt and the schema, `moves: false` returns `move: null`, `pack: false` leaves the Context Pack out of the prompt.
 
 `TranslateResult`:
 - `translation: string[]`: what the reader of the bubble reads. Thai for the Visitor's Turns, the Visitor's language for the Vendor's.
@@ -36,12 +41,18 @@ Picked once by `NEXT_PUBLIC_TURN_SERVICE` in [`turnService.ts`](../lib/engine/tu
 - `romanised?: string[]`: Visitor's Turns only, syllable phonetics of each Thai item (e.g. "a-ròi mâak kráp"), same Gemini call. Feeds the Say it yourself sheet; the mock returns it too. Carried onto `Message.romanised`.
 - `detectedInfo?: Partial<MyInfo>`: allergies, spice or diet the Visitor said aloud, to pre-tick My info.
 - `stage?: Stage`: where the conversation is (`start`, `explore`, `decide`, `receive`, `pay`, `leave`, `vendor-used-northern-word`). Given by the model; the first Turn is always `start`.
-- `card` is only sent when it carries an allergy or diet warning (the Allergy Flag); informative cards are retired.
+- `card` is only sent when it carries an allergy or diet warning (the Allergy Flag), built from the pack.
+- `cards?: InfoCard[]`: context cards written by the model, at most 2: `heading`, `headingThai?`, `body` (two sentences), `suggestion?` (a follow-up in the Visitor's language). Carried onto `Message.cards`. A risk from My info or the notes comes first.
 - `move?: MoveCard | null`: at most one Move, picked by `pickMove` in [`lib/context/moves.ts`](../lib/context/moves.ts) and filled from the Context Pack, never written by the model. Null when the card carries an allergy or diet flag. The engine keeps it on the `Message`, so a Move is never offered twice in a conversation.
 
 `MoveCard`: `id`, `type` (`say` | `ask` | `echo`), `stage`, `english` (Echo: only the reply), `centralThai`, `khamMueang` (null when the Move has none), `romanised: { central, khamMueang }`, `tone?: "playful"`, `heard?` (Echo: the Northern word the Vendor said), `heardMeaning?` (Echo: what it means, e.g. "20"). The particle variant is already picked.
 
 `ContextCard`: `kind` (`dish` | `word` | `moment`, missing = dish), `offGuide`, `name`, `nameThai`, `description`, `meat`, `spice` (0 to 3), `localDetail`, `warning`. A warning is a risk to check, never a guarantee.
+
+## Browser transcript and text Turns
+
+- `engine.stopWithTranscript(speaker, text)`: like `stop(speaker, audio)` when the browser already transcribed (Web Speech API). Goes straight to `processing` with `raw`; an empty text is the `empty` error. Retry translates the same text again.
+- `engine.say(speaker, text)`: a Turn from text, from `idle` or `error` (the "Ask …" suggestion on a context card). Same result as a spoken Turn, `onMessage` included, so your Thai is read aloud.
 
 ## Photo Turn
 
@@ -60,13 +71,14 @@ Menu `items[].note` is a short pill label ("Mild ok", "Local"), not a sentence. 
 
 `PhotoCard`: `kind` (`menu` | `dish` | `produce` | `sign`), `title`, `titleThai?`, `description`, `items?` (menu only: `name`, `nameThai?`, `note?`, `warning?` from My info), and the `ContextCard` fields that fit: `meat?`, `spice?`, `localDetail?`, `warning?`.
 
-`MyInfo`: `allergies` (peanuts, shellfish, gluten, other), `spice` (none, mild, thai-hot), `diet` (no-pork, vegetarian, halal), `particle?` (`m` | `f`, the particle used in Moves, missing = `m`; `particleOf` normalises it and still reads the old key `speaker`).
+`MyInfo`: `allergies` (peanuts, shellfish, gluten, other), `spice` (none, mild, thai-hot), `diet` (no-pork, vegetarian, halal), `notes?` (free text, saved on the phone, sent as `context.notes`), `particle?` (`m` | `f`, the particle used in Moves, missing = `m`; `particleOf` normalises it and still reads the old key `speaker`).
 
 ## Timeouts and limits
 
 | Where | Value |
 |---|---|
 | Engine, per service call (photo read included) | 15 s, then an error bubble with Retry (the Turn is kept) (`lib/engine/engine.ts`) |
+| Claude request (`/api/translate`) | 13 s total budget: `claude-sonnet-5` gets 9 s, then one fallback to `claude-haiku-4-5` on 429, 5xx or timeout. Measured ~5 to 7 s per Turn (output-bound, ~350 to 450 tokens; system prompt cached) |
 | Gemini request | 13 s total budget, fallback included. Main model gets 8 s, then one fallback to flash-lite on 429, 503 or timeout, with the time left (`lib/server/gemini.ts`) |
 | Vercel function | `maxDuration = 30` (all three routes) |
 | Photo read | same Gemini budget (13 s, main model 8 s then flash-lite). Measured locally on a menu image: ~2.3 s on `gemini-3.6-flash`, with rare stalls over 10 s on both models |
@@ -77,7 +89,10 @@ Menu `items[].note` is a short pill label ("Mild ok", "Local"), not a sentence. 
 | Var | Where | Purpose |
 |---|---|---|
 | `NEXT_PUBLIC_TURN_SERVICE` | client | `mock` or `api` |
-| `GEMINI_API_KEY` | server only | Gemini key. `.env.local` and Vercel, never committed |
+| `ANTHROPIC_API_KEY` | server only | Claude key for `/api/translate`. `.env.local` and Vercel, never committed |
+| `ANTHROPIC_MODEL`, `ANTHROPIC_FALLBACK_MODEL` | server, optional | default `claude-sonnet-5`, `claude-haiku-4-5-20251001` |
+| `GOOGLE_MAPS_API_KEY` | server only | Places API (New) for `/api/places` |
+| `GEMINI_API_KEY` | server only | Gemini key for photos and the transcription fallback. `.env.local` and Vercel, never committed |
 | `GEMINI_TRANSCRIBE_MODEL` | server, optional | default `gemini-3.5-flash-lite` |
 | `GEMINI_TURN_MODEL` | server, optional | default `gemini-3.6-flash` |
 

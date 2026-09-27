@@ -55,3 +55,6 @@ export function createTurnService(config: string | undefined): TurnService & { k
 
 /** The one place that reads NEXT_PUBLIC_TURN_SERVICE: the UI never looks at the environment. */
 export const createTurnServiceFromEnv = () => createTurnService(process.env.NEXT_PUBLIC_TURN_SERVICE);
+
+/** The mock replays a script from any audio, so browser speech-to-text only makes sense with the real back-end. */
+export const turnServiceKind = (): TurnServiceKind => (process.env.NEXT_PUBLIC_TURN_SERVICE === "api" ? "api" : "mock");

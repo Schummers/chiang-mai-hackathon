@@ -71,6 +71,17 @@ export type ContextCard = {
   warning?: string;
 };
 
+/** Written by the model under a Turn, for the Visitor only: something said that deserves a word of explanation. */
+export type InfoCard = {
+  /** In the Visitor's language (Latin script for Thai names), e.g. "Khao Soi". */
+  heading: string;
+  headingThai?: string;
+  /** Two short sentences in the Visitor's language. */
+  body: string;
+  /** A follow-up the Visitor can send to the Vendor with one tap, in the Visitor's language. */
+  suggestion?: string;
+};
+
 export type Message = {
   id: string;
   speaker: Speaker;
@@ -79,6 +90,8 @@ export type Message = {
   /** Small text: what was actually said. */
   original: string[];
   card: ContextCard | null;
+  /** Context cards the model wrote for this Turn. */
+  cards?: InfoCard[];
   /** Visitor's messages only: syllable phonetics of each Thai item, for Say it yourself. */
   romanised?: string[];
   /** The Move offered under this Turn, if any. Kept so a Move is never offered twice. */
@@ -132,6 +145,8 @@ export type MyInfo = {
   diet: Diet[];
   /** Particle the Visitor speaks with in Moves. Missing means "m". */
   particle?: Particle;
+  /** Free text: an unlisted allergy, what they are after, or a vendor's specials of the day. */
+  notes?: string;
 };
 
 export const EMPTY_MY_INFO: MyInfo = { allergies: [], spice: null, diet: [] };
@@ -139,12 +154,54 @@ export const EMPTY_MY_INFO: MyInfo = { allergies: [], spice: null, diet: [] };
 /** BCP 47 code of the visitor's language, e.g. "en", "fr". Thai is always the other side. */
 export type UserLanguage = string;
 
+/** A food place near the phone, from Google Maps. */
+export type NearbyPlace = {
+  name: string;
+  /** Google's label for the main type, e.g. "Noodle shop". */
+  type?: string;
+  distanceM: number;
+  rating?: number;
+  ratingCount?: number;
+  /** "inexpensive", "moderate"… */
+  price?: string;
+  summary?: string;
+  openNow?: boolean;
+};
+
+export type NearbyPlaces = {
+  /** GPS accuracy radius in metres. */
+  accuracyM: number;
+  /** Restaurants, cafes, stalls close to the phone, nearest first. */
+  food: NearbyPlace[];
+  /** Markets and food courts in a wider radius, nearest first: the phone may be inside one. */
+  markets: NearbyPlace[];
+};
+
+/** What the phone knows around the Turn. Each part is left out when its feature is off in Settings. */
+export type TurnContext = {
+  notes?: string;
+  places?: NearbyPlaces;
+  /** `now` is an ISO timestamp, `timeZone` an IANA name, both from the browser. */
+  device?: { now: string; timeZone: string };
+};
+
+export type TranslateOptions = {
+  /** Let the model write context cards. Default on. */
+  cards?: boolean;
+  /** Offer a Move card. Default on. */
+  moves?: boolean;
+  /** Put the Northern Thai Context Pack in the prompt. Default on. */
+  pack?: boolean;
+};
+
 export type TranslateInput = {
   raw: string;
   speaker: Speaker;
   userLanguage: UserLanguage;
   myInfo: MyInfo;
   history: Message[];
+  context?: TurnContext;
+  options?: TranslateOptions;
 };
 
 export type TranslateResult = {
@@ -159,6 +216,8 @@ export type TranslateResult = {
   stage?: Stage;
   /** At most one Move for this Turn, picked and filled by code, never written by the model. */
   move?: MoveCard | null;
+  /** Context cards written by the model, at most 2. */
+  cards?: InfoCard[];
 };
 
 export type ReadPhotoInput = { userLanguage: UserLanguage; myInfo: MyInfo };

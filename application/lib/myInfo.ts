@@ -36,6 +36,8 @@ export function particleOf(info: (Partial<MyInfo> & { speaker?: unknown }) | nul
   return (info?.particle ?? info?.speaker) === "f" ? "f" : "m";
 }
 
+export const NOTES_MAX = 1000;
+
 /** Stored on the phone only. Any storage problem means "no info", never a crash. */
 export function loadMyInfo(storage = browserStorage()): MyInfo {
   try {
@@ -47,6 +49,7 @@ export function loadMyInfo(storage = browserStorage()): MyInfo {
       spice: parsed.spice ?? null,
       diet: Array.isArray(parsed.diet) ? parsed.diet : [],
       ...(particleOf(parsed) === "f" && { particle: "f" as const }),
+      ...(typeof parsed.notes === "string" && parsed.notes && { notes: parsed.notes.slice(0, NOTES_MAX) }),
     };
   } catch {
     return EMPTY_MY_INFO;
@@ -70,6 +73,7 @@ export function mergeMyInfo(current: MyInfo, detected: Partial<MyInfo>): { info:
     spice: detected.spice ?? current.spice,
     diet: union(current.diet, detected.diet),
     ...(current.particle && { particle: current.particle }),
+    ...(current.notes && { notes: current.notes }),
   };
   return { info, changed: JSON.stringify(info) !== JSON.stringify(current) };
 }

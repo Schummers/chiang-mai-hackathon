@@ -15,12 +15,17 @@ type Props = {
   label: string;
   /** Photo URL when this recording asks about a photo. */
   about?: string;
+  /** What the browser has heard so far. */
+  interim?: string;
 };
 
-export function ListeningCard({ speaker, startedAt, getLevel, label, about }: Props) {
+export function ListeningCard({ speaker, startedAt, getLevel, label, about, interim }: Props) {
   return (
     <Row speaker={speaker}>
-      <div className={`${s.card} ${speaker === "you" ? s.you : s.them} ${about ? s.stack : ""}`} lang={speaker === "vendor" ? "th" : undefined}>
+      <div
+        className={`${s.card} ${speaker === "you" ? s.you : s.them} ${about || interim ? s.stack : ""}`}
+        lang={speaker === "vendor" ? "th" : undefined}
+      >
         {about && <AboutLine url={about} />}
         <span className={s.line}>
           <span className={s.dot}>
@@ -29,6 +34,7 @@ export function ListeningCard({ speaker, startedAt, getLevel, label, about }: Pr
           <span className={s.label}>{label}</span>
           <Wave startedAt={startedAt} getLevel={getLevel} className={s.wave} timeClassName={s.time} />
         </span>
+        {interim && <p className={s.interim}>{interim}</p>}
       </div>
     </Row>
   );

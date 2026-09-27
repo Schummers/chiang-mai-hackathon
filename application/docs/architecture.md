@@ -5,23 +5,36 @@ Next.js 16 (App Router) + React 19 + TypeScript, deployed on Vercel (project `u-
 ## One Turn, end to end
 
 ```
+App load
+  -> lib/location.ts: asks for location if never granted (quiet when denied), watches the position
+     -> POST /api/places -> Google Places (New): food places ~75 m + markets ~400 m, nearest first (lib/server/places.ts)
+
 Dock (mic tap)
   -> ConversationEngine (lib/engine/engine.ts)      state machine: idle -> listening -> processing -> idle | error
-     -> recorder.ts                                  MediaRecorder + auto-stop on silence
-     -> TurnService.transcribe(audio, language)      mock or api (lib/engine/turnService.ts)
-          api: POST /api/transcribe -> Gemini (lib/server/gemini.ts)
-     -> TurnService.translate(TranslateInput)
+     api mode + browser has SpeechRecognition:
+       -> lib/speechInput.ts                         Chrome Web Speech API (th-TH for the Vendor), live interim text,
+                                                     same auto-stop timings -> engine.stopWithTranscript(speaker, text)
+     otherwise (mock, Firefox, recogniser with no service):
+       -> recorder.ts + TurnService.transcribe       api: POST /api/transcribe -> Gemini (lib/server/gemini.ts)
+     -> TurnService.translate(TranslateInput + context + options from Settings)
           api: POST /api/translate
-               -> systemPrompt + turnPrompt (lib/context/prompt.ts)
-               -> Gemini, JSON schema TURN_SCHEMA
-               -> model returns items, "romanised" (phonetics of the Visitor's Thai), a "mention" and a "stage"
+               -> systemPrompt (rules + Context Pack, cached) + turnPrompt (lib/context/prompt.ts)
+                  turnPrompt starts with context blocks, each saying what it is and how to use it:
+                  <visitor_notes>, <nearby_places> (ranked by distance), <local_time>
+               -> Claude (lib/server/anthropic.ts), forced tool call `submit_turn`, schema TURN_SCHEMA
+               -> model returns items, "romanised" (phonetics of the Visitor's Thai), "cards", a "mention" and a "stage"
+               -> infoCards() keeps at most 2 context cards (heading, 2 sentences, suggestion) (lib/context/infoCards.ts)
                -> romanisedItems() keeps the phonetics for the Visitor only (lib/context/romanised.ts), for Say it yourself
                -> flagCard(mention) builds the Allergy Flag card from the pack, only when it flags (lib/context/cards.ts)
                -> stageFor(stage) fixes the Stage (first Turn = start, unknown = explore)
                -> pickMove(stage, mention) picks at most one Move, none when the Allergy Flag shows (lib/context/moves.ts):
                   Echo when the Vendor said a trigger as a whole word, else a Move of that Stage
   <- Message added to the thread, Thai played aloud (lib/speech.ts), the other mic pulses
+  <- Context cards under it (components/InfoCard.tsx). "Ask …" on a card -> engine.say("you", suggestion):
+     a normal Visitor Turn from text, translated and read aloud in Thai
 ```
+
+Settings (`components/Settings.tsx`, `lib/settings.ts`) switch each context source (notes, nearby places, date and time, Northern Thai guide) and each thread feature (context cards, Moves) on or off. The client leaves a switched-off source out of the request; `options` tells the route which prompt parts and outputs to use.
 
 ### Photo Turn
 
@@ -61,7 +74,8 @@ Key idea: **the model only says what it recognised** (`mention`: a dish id, a wo
 | `app/api/transcribe/route.ts` | Audio -> raw text via Gemini flash-lite. Removes the spaces flash-lite puts between Thai words. |
 | `app/api/photo/route.ts` | Image -> `PhotoCard` via Gemini. The image is sent to Gemini only: never stored, never logged. |
 | `app/api/photo/ask/route.ts` | Question about a photo -> `{ answer }` via Gemini, same limits as `/api/photo`. |
-| `app/api/translate/route.ts` | Raw text + context -> `TranslateResult`: the Allergy Flag card when there is one, else a Move. Date is Chiang Mai time (UTC+7). |
+| `app/api/translate/route.ts` | Raw text + context -> `TranslateResult` on Claude: context cards, the Allergy Flag card when there is one, else a Move. Month from the phone's time, else Chiang Mai time (UTC+7). |
+| `app/api/places/route.ts` | Lat/lng -> `NearbyPlaces` via Google Places (New). The position is never stored or logged. |
 | `app/globals.css` | Design tokens (Kratip). |
 | `components/Conversation.tsx` | The one screen: wires engine, My info, language, thread and dock. |
 | `components/ChatThread.tsx`, `Bubble.tsx` | Messages: translation big, original small, bullets when several items, tap the card to play. |
@@ -71,7 +85,9 @@ Key idea: **the model only says what it recognised** (`mention`: a dish id, a wo
 | `components/Overlay.tsx` | Full-screen layer in a portal (Show the vendor, Say it yourself sheet): tap or Escape closes, events never reach the card underneath. |
 | `components/Dock.tsx` | Bottom bar with the two mics (Vendor left, Visitor right); the middle narrates the state, or shows the Photo button at rest. |
 | `components/ListeningCard.tsx`, `Wave.tsx` | Live recording card and wave. |
-| `components/MyInfo.tsx` | Compact My info card and page (allergies, spice, diet). |
+| `components/MyInfo.tsx` | Compact My info card and page (allergies, spice, diet, free-text notes). |
+| `components/InfoCard.tsx` | Context card written by the model: heading, two sentences, "Ask …" suggestion button. |
+| `components/Settings.tsx` | Feature switches and the location status (what was found, or why not). |
 | `components/ErrorState.tsx` | Retry, mic denied, too short, offline. Vendor-side texts in Thai. |
 | `components/PhotoCard.tsx` | Woven card that answers a photo: menu, dish (reuses `ContextCard`), fruit / ingredient, sign. "Ask about this photo" at the bottom. |
 | `components/PhotoAsk.tsx` | "About this photo" line, your question card, the woven answer card, "Looking at the photo…". |
@@ -79,7 +95,12 @@ Key idea: **the model only says what it recognised** (`mention`: a dish id, a wo
 | `components/PlayTool.tsx` | Play icon at the bottom of a message. |
 | `components/Logo.tsx` | Header logo (placeholder mark). |
 | `lib/engine/` | `types.ts` (contract, photo types included), `engine.ts` (state machine, voice and photo Turns), `turnService.ts` (mock or api picker), `mockTurnService.ts`. |
-| `lib/server/gemini.ts` | Gemini REST client, model names, fallback on 429/503. Server only. |
+| `lib/server/anthropic.ts` | Claude REST client: forced tool call, cached system prompt, one fallback model on 429/5xx/timeout. Server only. |
+| `lib/server/places.ts` | Google Places nearby search, distance ranking, market detection by name. Server only. |
+| `lib/server/gemini.ts` | Gemini REST client (photos, transcription fallback), model names, fallback on 429/503. Server only. |
+| `lib/speechInput.ts` | Browser speech-to-text (Web Speech API) with interim text and auto-stop. |
+| `lib/location.ts` | Geolocation permission, position watch, nearby places store. |
+| `lib/settings.ts`, `useSettings.ts` | Feature switches, saved on the phone. |
 | `lib/context/` | Context Pack (`pack.json`, `pack.ts`), hand-written `overlay.ts`, `cards.ts`, `prompt.ts`, `photo.ts` (photo prompt, schema, validation). |
 | `lib/context/moves.ts`, `moves.json` | Moves data (copied from `people/jonathan/moves/moves.json`), `stageFor`, `pickMove` (Echo on whole-word triggers via `Intl.Segmenter`). See [moves.md](moves.md). |
 | `lib/context/romanised.ts` | Cleans the model's phonetics for Say it yourself (Visitor only). |

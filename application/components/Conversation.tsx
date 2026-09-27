@@ -1,29 +1,61 @@
 "use client";
 
-import { Plus, UserRound } from "lucide-react";
-import { useCallback, useRef, useState } from "react";
-import type { Message, MyInfo, Speaker } from "@/lib/engine/types";
+import { Plus, SlidersHorizontal, UserRound } from "lucide-react";
+import { useCallback, useEffect, useRef, useState } from "react";
+import { turnServiceKind } from "@/lib/engine/turnService";
+import type { Message, MyInfo, Speaker, TranslateInput } from "@/lib/engine/types";
+import { currentPlaces, refreshLocation, startLocation, stopLocation } from "@/lib/location";
 import { mergeMyInfo } from "@/lib/myInfo";
 import { downscale } from "@/lib/photo";
 import { Recorder } from "@/lib/recorder";
-import { speak, stopSpeech, unlockSpeech } from "@/lib/speech";
+import { speak, stopSpeech, toLocale, unlockSpeech } from "@/lib/speech";
+import { SpeechInput, speechInputSupported } from "@/lib/speechInput";
 import { useConversation } from "@/lib/useConversation";
 import { languageStore, useLanguage } from "@/lib/useLanguage";
 import { useOnline } from "@/lib/useOnline";
 import { myInfoStore, useMyInfo } from "@/lib/useMyInfo";
+import { settingsStore, useSettings } from "@/lib/useSettings";
 import { ChatThread } from "./ChatThread";
 import { Dock } from "./Dock";
 import { OfflineBanner } from "./ErrorState";
 import { ListeningCard } from "./ListeningCard";
 import { Logo } from "./Logo";
 import { MyInfoCard, MyInfoPage, Toast } from "./MyInfo";
+import { Settings } from "./Settings";
 import s from "./Screen.module.css";
 
 const MIN_RECORDING_MS = 600;
 
+/** Browser speech-to-text with the real back-end; the recorder + /api/transcribe otherwise (mock, Firefox, broken recogniser). */
+const browserSpeech = (dictation: SpeechInput) => turnServiceKind() === "api" && speechInputSupported() && !dictation.broken;
+
+/** Notes are only sent through the context, when their switch is on. */
+const myInfoForTurn = (): MyInfo => {
+  const info = { ...myInfoStore.get() };
+  delete info.notes;
+  return info;
+};
+
+/** What the phone adds to each translation, per the Settings switches. */
+function turnContext(): Pick<TranslateInput, "context" | "options"> {
+  const on = settingsStore.get();
+  const notes = myInfoStore.get().notes?.trim();
+  const places = on.location ? currentPlaces() : undefined;
+  return {
+    context: {
+      ...(on.notes && notes && { notes }),
+      ...(places && { places }),
+      ...(on.time && { device: { now: new Date().toISOString(), timeZone: Intl.DateTimeFormat().resolvedOptions().timeZone } }),
+    },
+    options: { cards: on.cards, moves: on.moves, pack: on.pack },
+  };
+}
+
 /** The one stable screen: top bar, chat, two-mic action bar. */
 export function Conversation() {
   const myInfo = useMyInfo();
+  const settings = useSettings();
+  const [settingsOpen, setSettingsOpen] = useState(false);
   const [infoOpen, setInfoOpen] = useState(false);
   const [infoCardClosed, setInfoCardClosed] = useState(false);
   const [toast, setToast] = useState<string | null>(null);
@@ -60,18 +92,34 @@ export function Conversation() {
   };
 
   const { engine, state } = useConversation({
-    getMyInfo: myInfoStore.get,
+    getMyInfo: myInfoForTurn,
     getUserLanguage: languageStore.get,
+    getContext: turnContext,
     onDetectedInfo,
     // Auto-play your Thai message so you only have to turn the phone.
     onMessage: (m) => m.speaker === "you" && toggleSpeech(m),
   });
   const [recorder] = useState(() => new Recorder());
-  const getLevel = useCallback(() => recorder.level, [recorder]);
+  const [dictation] = useState(() => new SpeechInput());
+  const [interim, setInterim] = useState("");
+  /** Which input the current recording uses. */
+  const input = useRef<"speech" | "recorder">("recorder");
+  const getLevel = useCallback(() => (input.current === "speech" ? dictation.level : recorder.level), [dictation, recorder]);
+
+  // Location on app load (asks for permission if it was never given), and off when its switch is.
+  useEffect(() => {
+    if (settings.location) void startLocation();
+    else stopLocation();
+  }, [settings.location]);
 
   const finish = async (speaker: Speaker) => {
     const { phase } = engine.getState();
     if (phase.kind !== "listening" || phase.speaker !== speaker) return;
+    if (input.current === "speech") {
+      const text = await dictation.stop();
+      setInterim("");
+      return engine.stopWithTranscript(speaker, text);
+    }
     const audio = await recorder.stop();
     // Stopped before the mic was even granted: nothing to send, give the turn back quietly.
     if (audio.size === 0) return engine.cancel();
@@ -97,6 +145,18 @@ export function Conversation() {
     else engine.micTap(speaker);
     const now = engine.getState().phase;
     if (now.kind !== "listening" || now.speaker !== speaker) return;
+    if (browserSpeech(dictation)) {
+      input.current = "speech";
+      setInterim("");
+      const lang = speaker === "vendor" ? "th-TH" : toLocale(languageStore.get());
+      dictation.start({ lang, onInterim: setInterim, onAutoStop: () => void finish(speaker) }).catch(() => {
+        dictation.cancel();
+        setInterim("");
+        engine.fail(speaker, "mic-denied");
+      });
+      return;
+    }
+    input.current = "recorder";
     recorder.start({ onAutoStop: () => void finish(speaker) }).catch(() => {
       recorder.cancel();
       engine.fail(speaker, "mic-denied");
@@ -104,6 +164,14 @@ export function Conversation() {
   };
 
   const onTap = (speaker: Speaker) => listen(speaker);
+
+  /** A context card's suggestion: sent as your message, translated and read aloud in Thai. */
+  const onSuggest = (text: string) => {
+    stopSpeech();
+    unlockSpeech(); // inside the tap, for iOS
+    setInfoCardClosed(true);
+    void engine.say("you", text);
+  };
 
   const onPhoto = async (file: File) => {
     stopSpeech();
@@ -113,9 +181,13 @@ export function Conversation() {
 
   const newConversation = () => {
     recorder.cancel();
+    dictation.cancel();
+    setInterim("");
     stopSpeech();
     engine.newConversation();
     setInfoCardClosed(false);
+    // A new conversation is often a new stall: look around again.
+    if (settingsStore.get().location) refreshLocation();
   };
 
   const { phase } = state;
@@ -131,6 +203,7 @@ export function Conversation() {
         about={phase.about ? state.messages.find((m) => m.id === phase.about)?.photo?.url : undefined}
         getLevel={getLevel}
         label={phase.speaker === "vendor" ? "กำลังฟัง" : "Listening"}
+        interim={interim}
       />
     ) : null;
 
@@ -142,6 +215,9 @@ export function Conversation() {
         <div className={s.actions}>
           <button className={s.iconBtn} aria-label="About you" onClick={openAboutYou}>
             <UserRound size={20} strokeWidth={2.1} />
+          </button>
+          <button className={s.iconBtn} aria-label="Settings" onClick={() => setSettingsOpen(true)}>
+            <SlidersHorizontal size={20} strokeWidth={2.1} />
           </button>
           <button className={s.iconBtn} aria-label="New conversation" onClick={newConversation}>
             <Plus size={20} strokeWidth={2.1} />
@@ -159,6 +235,7 @@ export function Conversation() {
         onRetry={() => void engine.retry()}
         onDismissError={() => engine.dismissError()}
         onAsk={(photoId) => listen("you", photoId)}
+        onSuggest={onSuggest}
         intro={
           !infoCardClosed && (
             <MyInfoCard
@@ -183,6 +260,7 @@ export function Conversation() {
           onLanguage={languageStore.set}
         />
       )}
+      {settingsOpen && <Settings values={settings} onChange={settingsStore.set} onDone={() => setSettingsOpen(false)} />}
       {toast && <Toast text={toast} />}
     </main>
   );

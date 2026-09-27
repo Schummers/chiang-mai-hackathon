@@ -1,0 +1,108 @@
+.list {
+  display: flex;
+  flex-direction: column;
+  border-radius: 14px;
+  box-shadow: inset 0 0 0 1.5px var(--line-2);
+}
+
+.list > * + * {
+  border-top: 1px solid var(--line);
+}
+
+/* One row per switch, the whole row is the tap target. */
+.row {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 56px;
+  padding: 10px 14px;
+  text-align: left;
+}
+
+.text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.text b {
+  font-size: 15px;
+  line-height: 20px;
+  font-weight: 800;
+}
+
+.text span {
+  font-size: 13px;
+  line-height: 18px;
+  color: var(--ink-2);
+}
+
+.track {
+  flex: none;
+  position: relative;
+  width: 44px;
+  height: 26px;
+  border-radius: 13px;
+  background: var(--line-2);
+  transition: background 0.15s ease-out;
+}
+
+.track.on {
+  background: var(--you);
+}
+
+.thumb {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--white);
+  box-shadow: 0 1px 2px rgb(30 34 56 / 0.25);
+  transition: transform 0.15s ease-out;
+}
+
+.on .thumb {
+  transform: translateX(18px);
+}
+
+/* Location under its switch: what the app found, or why it could not. */
+.status {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 4px 8px;
+  margin: -2px 14px 12px;
+  padding: 8px 10px;
+  border-radius: 10px;
+  background: var(--you-wash);
+  font-size: 13px;
+  line-height: 18px;
+  color: var(--ink);
+}
+
+.status > svg {
+  flex: none;
+  margin-top: 1px;
+}
+
+.status > span {
+  flex: 1;
+  min-width: 0;
+}
+
+.accuracy {
+  color: var(--ink-2);
+}
+
+.retry {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  margin-left: auto;
+  font-size: 13px;
+  font-weight: 800;
+  color: var(--you);
+}

@@ -7,6 +7,7 @@ import {
   type Photo,
   type PhotoCard,
   type Speaker,
+  type TranslateInput,
   type TranslateResult,
   type TurnService,
   type UserLanguage,
@@ -21,7 +22,10 @@ export type ConversationState = {
 
 export type EngineEvent =
   | { type: "MIC_TAP"; speaker: Speaker; at: number; about?: string }
-  | { type: "STOP"; speaker: Speaker }
+  /** `raw`: the browser already transcribed it, no audio to send. */
+  | { type: "STOP"; speaker: Speaker; raw?: string }
+  /** A typed Turn (a suggestion from a context card): straight to translation, no recording. */
+  | { type: "TEXT"; speaker: Speaker; raw: string }
   | { type: "TRANSCRIBED"; raw: string }
   | { type: "TRANSLATED"; id: string; result: TranslateResult }
   | { type: "FAILED"; speaker: Speaker; reason: ErrorReason; raw?: string }
@@ -53,8 +57,18 @@ export function reduce(state: ConversationState, event: EngineEvent): Conversati
       return state;
     case "STOP":
       if (phase.kind === "listening" && phase.speaker === event.speaker) {
-        const processing = { kind: "processing", speaker: event.speaker } as const;
-        return { ...state, phase: phase.about ? { ...processing, about: phase.about } : processing };
+        const processing = {
+          kind: "processing",
+          speaker: event.speaker,
+          ...(event.raw && { raw: event.raw }),
+          ...(phase.about && { about: phase.about }),
+        } as const;
+        return { ...state, phase: processing };
+      }
+      return state;
+    case "TEXT":
+      if (phase.kind === "idle" || phase.kind === "error") {
+        return { ...state, phase: { kind: "processing", speaker: event.speaker, raw: event.raw } };
       }
       return state;
     case "TRANSCRIBED":
@@ -75,6 +89,7 @@ export function reduce(state: ConversationState, event: EngineEvent): Conversati
             card: event.result.card,
             ...(event.result.romanised?.length && { romanised: event.result.romanised }),
             ...(event.result.move && { move: event.result.move }),
+            ...(event.result.cards?.length && { cards: event.result.cards }),
           },
         ],
       };
@@ -142,6 +157,8 @@ export type EngineOptions = {
   service: TurnService;
   getMyInfo?: () => MyInfo;
   getUserLanguage?: () => UserLanguage;
+  /** Notes, places, time and feature switches, read at the start of each translation. */
+  getContext?: () => Pick<TranslateInput, "context" | "options">;
   onDetectedInfo?: (info: Partial<MyInfo>) => void;
   /** A final message was added to the thread. */
   onMessage?: (message: Message) => void;
@@ -214,6 +231,28 @@ export class ConversationEngine {
     await this.runTurn(++this.turn, speaker, audio, undefined, phase.about);
   }
 
+  /** Recording finished and the browser already has the text: skip transcription. */
+  async stopWithTranscript(speaker: Speaker, transcript: string): Promise<void> {
+    const { phase } = this.state;
+    if (phase.kind !== "listening" || phase.speaker !== speaker) return;
+    const raw = stripNonSpeech(transcript);
+    if (!raw) return this.fail(speaker, "empty");
+    this.lastAudio = undefined;
+    this.dispatch({ type: "STOP", speaker, raw });
+    await this.runTurn(++this.turn, speaker, undefined, raw, phase.about);
+  }
+
+  /** A Turn from text, e.g. the suggestion on a context card: translated and read aloud like a spoken one. */
+  async say(speaker: Speaker, text: string): Promise<void> {
+    const { phase } = this.state;
+    const raw = text.trim();
+    if (!raw || (phase.kind !== "idle" && phase.kind !== "error")) return;
+    this.dropFailedPhoto();
+    this.lastAudio = undefined;
+    this.dispatch({ type: "TEXT", speaker, raw });
+    await this.runTurn(++this.turn, speaker, undefined, raw);
+  }
+
   /** The Visitor took a photo: read it at once into a card, no question needed. */
   async photo(image: Blob): Promise<void> {
     const { phase } = this.state;
@@ -236,7 +275,7 @@ export class ConversationEngine {
       this.dispatch({ type: "RETRY", at: this.now() });
       return this.runRead(++this.turn, this.lastImage);
     }
-    if (!this.lastAudio) return;
+    if (!this.lastAudio && !phase.raw) return;
     this.dispatch({ type: "RETRY" });
     await this.runTurn(++this.turn, phase.speaker, this.lastAudio, phase.raw, phase.about);
   }
@@ -275,7 +314,7 @@ export class ConversationEngine {
     });
   }
 
-  private async runTurn(turn: number, speaker: Speaker, audio: Blob, knownRaw?: string, about?: string) {
+  private async runTurn(turn: number, speaker: Speaker, audio: Blob | undefined, knownRaw?: string, about?: string) {
     const conversation = this.state.conversationId;
     const stale = () => this.state.conversationId !== conversation || this.turn !== turn;
     const userLanguage = this.opts.getUserLanguage?.() ?? "en";
@@ -283,6 +322,7 @@ export class ConversationEngine {
 
     try {
       if (raw === undefined) {
+        if (!audio) throw new Error("nothing to transcribe");
         raw = stripNonSpeech(await this.withTimeout(this.opts.service.transcribe(audio, speaker === "vendor" ? "th" : userLanguage)));
         if (stale()) return;
         if (!raw) return this.fail(speaker, "empty");
@@ -299,6 +339,7 @@ export class ConversationEngine {
           myInfo: this.opts.getMyInfo?.() ?? EMPTY_MY_INFO,
           // Photos and questions about them were never said to the vendor: they stay out of the conversation.
           history: this.state.messages.filter((m) => !m.photo && !m.about),
+          ...this.opts.getContext?.(),
         }),
       );
       if (stale()) return;

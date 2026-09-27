@@ -26,6 +26,8 @@ type Props = {
   onDismissError: () => void;
   /** "Ask about this photo" on a photo card. */
   onAsk?: (photoId: string) => void;
+  /** The suggestion on a context card, sent as your next message. */
+  onSuggest?: (text: string) => void;
 };
 
 /** A question about a photo and the app's answer. The photo is always in the thread: it is only dropped with the conversation. */
@@ -39,8 +41,9 @@ function PhotoTurn({ message, photo }: { message: Message; photo?: Message["phot
   );
 }
 
-export function ChatThread({ state, intro, live, playingId, onSpeak, onRetry, onDismissError, onAsk }: Props) {
+export function ChatThread({ state, intro, live, playingId, onSpeak, onRetry, onDismissError, onAsk, onSuggest }: Props) {
   const { phase, messages } = state;
+  const busy = phase.kind !== "idle" && phase.kind !== "error";
   const ref = useRef<HTMLElement>(null);
   const empty = messages.length === 0 && phase.kind === "idle";
   const photoOf = (id?: string) => (id ? messages.find((m) => m.id === id)?.photo : undefined);
@@ -72,7 +75,16 @@ export function ChatThread({ state, intro, live, playingId, onSpeak, onRetry, on
         ) : m.about ? (
           <PhotoTurn key={m.id} message={m} photo={photoOf(m.about)} />
         ) : (
-          <Bubble key={m.id} message={m} playing={playingId === m.id} onSpeak={() => onSpeak(m)} latest={i === messages.length - 1} recording={phase.kind === "listening"} />
+          <Bubble
+            key={m.id}
+            message={m}
+            playing={playingId === m.id}
+            onSpeak={() => onSpeak(m)}
+            latest={i === messages.length - 1}
+            recording={phase.kind === "listening"}
+            onSuggest={onSuggest}
+            busy={busy}
+          />
         ),
       )}
 

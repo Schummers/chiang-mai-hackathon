@@ -1,19 +1,23 @@
 "use client";
 
-import { Check, ChevronDown, Flame, Languages, NotebookPen, OctagonX, Plus, UserRound, X } from "lucide-react";
-import type { MyInfo, UserLanguage } from "@/lib/engine/types";
-import { findLanguage, LANGUAGES } from "@/lib/language";
+import { ArrowLeftRight, Check, ChevronDown, Flame, NotebookPen, OctagonX, Plus, UserRound, X } from "lucide-react";
+import type { Languages, MyInfo } from "@/lib/engine/types";
+import { findLanguage, LANGUAGES, pickLanguage } from "@/lib/language";
 import { ALLERGIES, DIETS, NOTES_MAX, PARTICLES, particleOf, SPICES } from "@/lib/myInfo";
 import s from "./MyInfo.module.css";
 
-type LanguageProps = { language: UserLanguage; onLanguage: (code: UserLanguage) => void };
+type LanguageProps = { languages: Languages; onLanguages: (languages: Languages) => void };
 
-/** Your language, always first, always in the selected style. A native select over the chip: the phone's own list. */
-function LanguageChip({ language, onLanguage }: LanguageProps) {
+/** One side's language. A native select over the chip: the phone's own list. */
+function LanguageChip({ side, languages, onLanguages }: { side: keyof Languages } & LanguageProps) {
   return (
     <label className={`${s.chip} ${s.on} ${s.lang}`}>
-      <Languages size={16} strokeWidth={2.1} /> {findLanguage(language).name} <ChevronDown size={14} strokeWidth={2.4} />
-      <select value={language} onChange={(e) => onLanguage(e.target.value)} aria-label="Your language">
+      {findLanguage(languages[side]).name} <ChevronDown size={14} strokeWidth={2.4} />
+      <select
+        value={languages[side]}
+        onChange={(e) => onLanguages(pickLanguage(languages, side, e.target.value))}
+        aria-label={side === "me" ? "Your language" : "Their language"}
+      >
         {LANGUAGES.map((l) => (
           <option key={l.code} value={l.code}>
             {l.name}
@@ -24,14 +28,8 @@ function LanguageChip({ language, onLanguage }: LanguageProps) {
   );
 }
 
-/** About you card on a new conversation: your language, the selected needs, plus "+ Add". Thai is never a choice. */
-export function MyInfoCard({
-  info,
-  onOpen,
-  onClose,
-  language,
-  onLanguage,
-}: { info: MyInfo; onOpen: () => void; onClose: () => void } & LanguageProps) {
+/** About you card on a new conversation: both languages, the selected needs, plus "+ Add". */
+export function MyInfoCard({ info, onOpen, onClose, languages, onLanguages }: { info: MyInfo; onOpen: () => void; onClose: () => void } & LanguageProps) {
   const chips = [
     ...ALLERGIES.filter((a) => info.allergies.includes(a.value)).map((a) => ({ label: a.label, Icon: OctagonX })),
     ...SPICES.filter((sp) => sp.value === info.spice).map((sp) => ({ label: sp.label, Icon: Flame })),
@@ -49,7 +47,17 @@ export function MyInfoCard({
         </button>
       </div>
       <div className={s.chips}>
-        <LanguageChip language={language} onLanguage={onLanguage} />
+        <LanguageChip side="me" languages={languages} onLanguages={onLanguages} />
+        <button
+          className={s.swap}
+          onClick={() => onLanguages({ me: languages.them, them: languages.me })}
+          aria-label="Swap languages"
+        >
+          <ArrowLeftRight size={16} strokeWidth={2.1} />
+        </button>
+        <LanguageChip side="them" languages={languages} onLanguages={onLanguages} />
+      </div>
+      <div className={s.chips}>
         {chips.map(({ label, Icon }) => (
           <span key={label} className={`${s.chip} ${s.on}`}>
             <Icon size={16} strokeWidth={2.1} /> {label}
@@ -59,7 +67,7 @@ export function MyInfoCard({
           <Plus size={16} strokeWidth={2.1} /> Add
         </button>
       </div>
-      {chips.length === 0 && <p className={s.hint}>Allergies, spice, diet: we&apos;ll mention them in Thai for you.</p>}
+      {chips.length === 0 && <p className={s.hint}>Allergies, diet, notes or today&apos;s specials: the translator keeps them in mind.</p>}
     </div>
   );
 }
@@ -80,8 +88,8 @@ export function MyInfoPage({
   info,
   onChange,
   onDone,
-  language,
-  onLanguage,
+  languages,
+  onLanguages,
 }: { info: MyInfo; onChange: (i: MyInfo) => void; onDone: () => void } & LanguageProps) {
   return (
     <div className={s.overlay} role="dialog" aria-modal="true" aria-labelledby="my-info-title">
@@ -94,25 +102,29 @@ export function MyInfoPage({
               <X size={22} strokeWidth={2.1} />
             </button>
           </header>
-          <p className={s.lede}>Sent with every message, so the Thai mentions it for you.</p>
+          <p className={s.lede}>Sent with every message, so the translation takes it into account.</p>
 
-          <section className={s.group}>
-            <h3>Your language</h3>
-            <div className={s.chips}>
-              {LANGUAGES.map((l) => (
-                <Chip key={l.code} label={l.name} on={l.code === language} onClick={() => onLanguage(l.code)} />
-              ))}
-            </div>
-          </section>
+          {(["me", "them"] as const).map((side) => (
+            <section key={side} className={s.group}>
+              <h3>{side === "me" ? "Your language" : "Their language"}</h3>
+              <div className={s.chips}>
+                {LANGUAGES.map((l) => (
+                  <Chip key={l.code} label={l.name} on={l.code === languages[side]} onClick={() => onLanguages(pickLanguage(languages, side, l.code))} />
+                ))}
+              </div>
+            </section>
+          ))}
 
-          <section className={s.group}>
-            <h3>You speak as</h3>
-            <div className={s.chips}>
-              {PARTICLES.map((p) => (
-                <Chip key={p.value} label={p.label} on={particleOf(info) === p.value} onClick={() => onChange({ ...info, particle: p.value })} />
-              ))}
-            </div>
-          </section>
+          {languages.them === "th" && (
+            <section className={s.group}>
+              <h3>Your Thai ends with</h3>
+              <div className={s.chips}>
+                {PARTICLES.map((p) => (
+                  <Chip key={p.value} label={p.label} on={particleOf(info) === p.value} onClick={() => onChange({ ...info, particle: p.value })} />
+                ))}
+              </div>
+            </section>
+          )}
 
           <section className={s.group}>
             <h3>Allergies</h3>
@@ -166,7 +178,7 @@ export function MyInfoPage({
               rows={4}
               maxLength={NOTES_MAX}
               value={info.notes ?? ""}
-              placeholder="Another allergy (cashews, egg…), what you're looking for, or if you're the vendor: today's specials."
+              placeholder="Another allergy (cashews, egg…), what you're looking for, or if you run the shop: today's menu and specials."
               onChange={(e) => onChange({ ...info, notes: e.target.value })}
             />
           </section>
@@ -178,14 +190,6 @@ export function MyInfoPage({
           </button>
         </div>
       </div>
-    </div>
-  );
-}
-
-export function Toast({ text }: { text: string }) {
-  return (
-    <div className={s.toast} role="status">
-      <Check size={16} strokeWidth={2.4} /> {text}
     </div>
   );
 }

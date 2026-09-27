@@ -1,158 +1,63 @@
-// Contract between the UI and the turn service. See spec issue #1.
-// The back-end (#12) plugs in by implementing TurnService; nothing else changes.
+// Contract between the UI, the conversation engine and /api/translate.
 
-export type Speaker = "you" | "vendor";
+/** "me" owns the phone and set up the app (a visitor or a shopkeeper). "them" is the person across the counter. */
+export type Side = "me" | "them";
 
-export type ErrorReason = "mic-denied" | "network" | "empty";
+/** BCP 47 language code, e.g. "en", "th". */
+export type LanguageCode = string;
+
+export type Languages = { me: LanguageCode; them: LanguageCode };
+
+export type ErrorReason = "mic-denied" | "no-speech-api" | "network" | "empty";
 
 export type Phase =
-  | { kind: "idle"; nextTurn: Speaker }
-  /** `about`: id of the photo message this recording asks about ("Ask about this photo"). Same Turn as Speak otherwise. */
-  | { kind: "listening"; speaker: Speaker; startedAt: number; about?: string }
-  | { kind: "processing"; speaker: Speaker; raw?: string; about?: string }
-  /** A photo is being read. `photo` is shown full width in the thread meanwhile. */
-  | { kind: "reading"; startedAt: number; photo: Photo }
-  /**
-   * `raw` is kept when transcription worked, so a retry only translates again.
-   * `photo` is kept when a photo read failed, so a retry reads the same image again.
-   */
-  | { kind: "error"; speaker: Speaker; reason: ErrorReason; raw?: string; photo?: Photo; about?: string };
+  | { kind: "idle"; nextTurn: Side }
+  | { kind: "listening"; side: Side; startedAt: number }
+  /** `heard` is the raw speech-to-text (or a tapped suggestion), shown while the model corrects and translates it. */
+  | { kind: "processing"; side: Side; heard: string }
+  /** `heard` is kept when there was something to translate, so Retry only calls the model again. */
+  | { kind: "error"; side: Side; reason: ErrorReason; heard?: string };
 
-/** A photo the Visitor took. `url` is a local object URL: the image is only ever sent to the read route. */
-export type Photo = { id: string; url: string };
-
-/** What a photo shows. "produce" covers fruit and ingredients, "sign" anything else. */
-export type PhotoKind = "menu" | "dish" | "produce" | "sign";
-
-export type PhotoMenuItem = {
-  name: string;
-  nameThai?: string;
-  /** Short line: what it is, e.g. "Pork curry, mild". */
-  note?: string;
-  /** Risk based on My info (About you). A flag to double-check, never a guarantee. */
-  warning?: string;
-};
-
-/** The card filled from a photo. Same fields as ContextCard where they fit. */
-export type PhotoCard = {
-  kind: PhotoKind;
-  /** Latin script, in the Visitor's language, e.g. "Khao Soi" or "Noodle stall menu". */
-  title: string;
-  titleThai?: string;
-  description: string;
-  /** Menu only: the dishes read on it, most useful first. */
-  items?: PhotoMenuItem[];
-  meat?: string;
-  spice?: 0 | 1 | 2 | 3;
-  localDetail?: string;
-  warning?: string;
-};
-
-export type CardKind = "dish" | "word" | "moment";
-
+/** Written by the model under a Turn, in the owner's language, for the owner only. */
 export type ContextCard = {
-  /** What the card explains. Missing means "dish" (the mock and older cards). */
-  kind?: CardKind;
-  /** True when the model wrote it because the dish is not in the Context Pack. */
-  offGuide?: boolean;
-  /** Dish or ingredient name in Latin script, e.g. "Khao Soi". */
-  name: string;
-  /** Thai name, e.g. "ข้าวซอย". */
-  nameThai?: string;
-  /** One or two lines: what it actually is. */
-  description: string;
-  /** Main meat or protein, e.g. "Chicken". */
-  meat?: string;
-  /** 0 = not spicy, 1 = mild, 2 = medium, 3 = hot. */
-  spice?: 0 | 1 | 2 | 3;
-  /** One line anchoring it in Chiang Mai: when or how locals eat it. */
-  localDetail?: string;
-  /** Risk based on My info. A flag to double-check, never a guarantee. */
-  warning?: string;
-};
-
-/** Written by the model under a Turn, for the Visitor only: something said that deserves a word of explanation. */
-export type InfoCard = {
-  /** In the Visitor's language (Latin script for Thai names), e.g. "Khao Soi". */
   heading: string;
+  /** Thai spelling of the heading when it is a Thai term and the owner does not read Thai. */
   headingThai?: string;
-  /** Two short sentences in the Visitor's language. */
+  /** Exactly two short sentences. */
   body: string;
-  /** A follow-up the Visitor can send to the Vendor with one tap, in the Visitor's language. */
+  /** A follow-up the owner can send to the other person in one tap, in the owner's language. */
   suggestion?: string;
 };
 
 export type Message = {
   id: string;
-  speaker: Speaker;
-  /** Big text: what the reader of this bubble reads. Thai for your messages, your language for the vendor's. */
-  translation: string[];
-  /** Small text: what was actually said. */
-  original: string[];
-  card: ContextCard | null;
-  /** Context cards the model wrote for this Turn. */
-  cards?: InfoCard[];
-  /** Visitor's messages only: syllable phonetics of each Thai item, for Say it yourself. */
-  romanised?: string[];
-  /** The Move offered under this Turn, if any. Kept so a Move is never offered twice. */
-  move?: MoveCard | null;
-  /** Photo Turns only: the image and the card read from it. `translation` is empty, `original` holds the card title. */
-  photo?: { url: string; card: PhotoCard };
-  /** Question about a photo: id of that photo message. `original` holds the question, `translation` is empty. */
-  about?: string;
-  /** The app's answer to that question, in the Visitor's language. Never read aloud in Thai. */
-  answer?: string;
-};
-
-/**
- * Where the conversation is, detected by the model on each Turn. The one list of Stages: the type, the prompt prose
- * and the Gemini schema enum all derive from it.
- */
-export const STAGES = ["start", "explore", "decide", "receive", "pay", "leave", "vendor-used-northern-word"] as const;
-export type Stage = (typeof STAGES)[number];
-
-/** Polite particle variant of a Move: "m" ends with ครับ/คับ, "f" with ค่ะ/เจ้า. */
-export type Particle = "m" | "f";
-
-export type MoveType = "say" | "ask" | "echo";
-
-/** One Move, ready to show: the particle variant is picked and the Slot is filled. */
-export type MoveCard = {
-  id: string;
-  type: MoveType;
-  stage: Stage;
-  /** English meaning, Slot filled. */
-  english: string;
-  /** Central Thai, always there: the fallback for vendors who don't speak Kham Mueang. */
-  centralThai: string;
-  /** Kham Mueang when the Move has it. */
-  khamMueang: string | null;
-  romanised: { central: string; khamMueang: string | null };
-  tone?: "playful";
-  /** Echo only: the Northern word the Vendor said. */
-  heard?: string;
-  /** Echo only: what that word means, e.g. "20" for ซาว. From the Move's note, else the pack. */
-  heardMeaning?: string;
+  side: Side;
+  /** What speech-to-text produced, before correction. */
+  heard: string;
+  /** What the speaker most plausibly said, corrected, in the speaker's language. */
+  original: string;
+  /** `original` in the listener's language. */
+  translation: string;
+  cards: ContextCard[];
 };
 
 export type Allergy = "peanuts" | "shellfish" | "gluten" | "other";
 export type Spice = "none" | "mild" | "thai-hot";
 export type Diet = "no-pork" | "vegetarian" | "halal";
+/** Polite particle when the owner's words come out in Thai: "m" ครับ, "f" ค่ะ. */
+export type Particle = "m" | "f";
 
+/** The owner's saved profile. Everything but `notes` is picked from chips. */
 export type MyInfo = {
   allergies: Allergy[];
   spice: Spice | null;
   diet: Diet[];
-  /** Particle the Visitor speaks with in Moves. Missing means "m". */
   particle?: Particle;
-  /** Free text: an unlisted allergy, what they are after, or a vendor's specials of the day. */
+  /** Free text: an unlisted allergy, what they are after, or a shopkeeper's specials of the day. */
   notes?: string;
 };
 
 export const EMPTY_MY_INFO: MyInfo = { allergies: [], spice: null, diet: [] };
-
-/** BCP 47 code of the visitor's language, e.g. "en", "fr". Thai is always the other side. */
-export type UserLanguage = string;
 
 /** A food place near the phone, from Google Maps. */
 export type NearbyPlace = {
@@ -171,72 +76,48 @@ export type NearbyPlace = {
 export type NearbyPlaces = {
   /** GPS accuracy radius in metres. */
   accuracyM: number;
-  /** Restaurants, cafes, stalls close to the phone, nearest first. */
+  /** Food places close to the phone, nearest first. */
   food: NearbyPlace[];
   /** Markets and food courts in a wider radius, nearest first: the phone may be inside one. */
   markets: NearbyPlace[];
 };
 
-/** What the phone knows around the Turn. Each part is left out when its feature is off in Settings. */
+/** Optional context sent with a Turn. Each part is left out when its switch is off in Settings. */
 export type TurnContext = {
+  profile?: Omit<MyInfo, "notes">;
   notes?: string;
   places?: NearbyPlaces;
   /** `now` is an ISO timestamp, `timeZone` an IANA name, both from the browser. */
-  device?: { now: string; timeZone: string };
+  time?: { now: string; timeZone: string };
 };
 
 export type TranslateOptions = {
-  /** Let the model write context cards. Default on. */
-  cards?: boolean;
-  /** Offer a Move card. Default on. */
-  moves?: boolean;
-  /** Put the Northern Thai Context Pack in the prompt. Default on. */
-  pack?: boolean;
+  /** Let the model write context cards. */
+  cards: boolean;
+  /** Put the Northern Thai guide (Luke's Context Pack) in the system prompt. */
+  pack: boolean;
 };
 
+/** A past Turn as the model sees it. */
+export type HistoryTurn = Pick<Message, "side" | "original" | "translation"> & { cards?: Pick<ContextCard, "heading">[] };
+
 export type TranslateInput = {
-  raw: string;
-  speaker: Speaker;
-  userLanguage: UserLanguage;
-  myInfo: MyInfo;
-  history: Message[];
-  context?: TurnContext;
-  options?: TranslateOptions;
+  side: Side;
+  heard: string;
+  languages: Languages;
+  history: HistoryTurn[];
+  context: TurnContext;
+  options: TranslateOptions;
 };
 
 export type TranslateResult = {
-  translation: string[];
-  original: string[];
-  card: ContextCard | null;
-  /** Visitor's Turns only: syllable phonetics of each Thai item, e.g. "a-ròi mâak kráp". */
-  romanised?: string[];
-  /** Info the visitor said aloud ("I'm allergic to peanuts"), to pre-tick My info. */
-  detectedInfo?: Partial<MyInfo>;
-  /** Where the conversation is after this Turn (api mode). */
-  stage?: Stage;
-  /** At most one Move for this Turn, picked and filled by code, never written by the model. */
-  move?: MoveCard | null;
-  /** Context cards written by the model, at most 2. */
-  cards?: InfoCard[];
+  original: string;
+  translation: string;
+  cards: ContextCard[];
 };
 
-export type ReadPhotoInput = { userLanguage: UserLanguage; myInfo: MyInfo };
-
-export type AskPhotoInput = ReadPhotoInput & {
-  /** What the Visitor asked, transcribed in their language. */
-  question: string;
-  /** The card already read from this photo. */
-  card: PhotoCard;
-};
-
-export interface TurnService {
-  /** Audio to raw text. `language` is "th" for the vendor, the user language for you. */
-  transcribe(audio: Blob, language: string): Promise<string>;
-  translate(input: TranslateInput): Promise<TranslateResult>;
-  /** Image to card, in the Visitor's language. Optional: without it a photo fails as a network error. */
-  readPhoto?(image: Blob, input: ReadPhotoInput): Promise<PhotoCard>;
-  /** A question about a photo -> the app's answer, one or two lines in the Visitor's language. Optional like readPhoto. */
-  askPhoto?(image: Blob, input: AskPhotoInput): Promise<string>;
-  /** Optional: called when the visitor starts a new conversation. */
-  reset?(): void;
-}
+/** /api/translate streams one JSON event per line: `text` as soon as the translation is complete, then `done` or `error`. */
+export type TranslateEvent =
+  | { type: "text"; original: string; translation: string }
+  | { type: "done"; result: TranslateResult }
+  | { type: "error" };

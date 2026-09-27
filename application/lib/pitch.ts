@@ -4,7 +4,7 @@
  */
 export const HOME = {
   title: "Say it however it comes.",
-  subtitle: "We make it clear Thai, and teach you a few words to say yourself.",
+  subtitle: "Thai, Kham Mueang or English: we fix what the mic mishears, translate it, and explain what's on the menu.",
 };
 
 export const PITCH = `${HOME.title} ${HOME.subtitle}`;

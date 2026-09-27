@@ -67,6 +67,28 @@
   font-size: 15px;
 }
 
+/* What speech-to-text heard, when the model corrected it: shows the correction at work. */
+.heard {
+  display: flex;
+  gap: 6px;
+  margin-top: 6px;
+  font-size: 12px;
+  line-height: 1.4;
+  font-style: italic;
+  color: var(--ink-2);
+  opacity: 0.8;
+}
+
+.heard svg {
+  flex: none;
+  margin-top: 2px;
+}
+
+.heard.thai {
+  font-family: var(--f-th);
+  font-size: 13px;
+}
+
 /* Same list in both halves: one grid, so Thai and Latin markers sit on the same column. */
 .list {
   list-style: none;

@@ -1,56 +1,39 @@
-import type { Message, Speaker } from "@/lib/engine/types";
+import { Ear } from "lucide-react";
+import type { Message, Side } from "@/lib/engine/types";
 import { ContextCard } from "./ContextCard";
-import { InfoCard } from "./InfoCard";
-import { MoveCard } from "./MoveCard";
 import { PlayTool } from "./PlayTool";
-import { SayItTool } from "./SayItYourself";
 import s from "./Chat.module.css";
 
 const THAI = /[฀-๿]/;
+const thai = (text: string) => (THAI.test(text) ? s.thai : "");
 
-/** One item is a plain line, two or more become bullets on a shared grid, so Thai and Latin markers align. */
-export function Items({ items, className }: { items: string[]; className: string }) {
-  const thai = items.some((t) => THAI.test(t));
-  const cls = `${className} ${thai ? s.thai : ""}`;
-  if (items.length < 2) return <p className={cls}>{items[0]}</p>;
-  return (
-    <ul className={`${cls} ${s.list}`}>
-      {items.map((item, i) => (
-        <li key={i}>{item}</li>
-      ))}
-    </ul>
-  );
+/** Loose comparison, so a correction that only changed spacing or punctuation doesn't show as one. */
+const squash = (text: string) => text.toLowerCase().replace(/[\s.,!?'"“”‘’…]/g, "");
+
+export function Row({ side, children }: { side: Side; children: React.ReactNode }) {
+  return <div className={`${s.row} ${side === "me" ? s.you : s.them}`}>{children}</div>;
 }
 
-export function Row({ speaker, children }: { speaker: Speaker; children: React.ReactNode }) {
-  return <div className={`${s.row} ${speaker === "you" ? s.you : s.them}`}>{children}</div>;
-}
-
-/** L1 voice card. Big = translation (what the reader of this card reads), small = original. Tap anywhere to play. */
-/** `latest`: the last Turn of the thread; an older Turn's Move card collapses to one line. `recording`: a mic is listening. */
+/** L1 voice card. Big = translation (what the listener reads), small = what was said, corrected. Tap anywhere to play. */
 export function Bubble({
   message,
   playing,
   onSpeak,
-  latest = true,
-  recording = false,
   onSuggest,
   busy = false,
 }: {
   message: Message;
   playing: boolean;
   onSpeak: () => void;
-  latest?: boolean;
-  recording?: boolean;
-  /** Sends a context card's suggestion as your next message. */
+  /** Sends a context card's suggestion as the owner's next message. */
   onSuggest?: (text: string) => void;
   /** A Turn is in progress: suggestions wait. */
   busy?: boolean;
 }) {
-  const yours = message.speaker === "you";
+  const corrected = squash(message.heard) !== squash(message.original);
   return (
     <>
-      <Row speaker={message.speaker}>
+      <Row side={message.side}>
         <div
           className={`${s.bubble} ${s.enter} ${playing ? s.playing : ""}`}
           role="button"
@@ -63,23 +46,20 @@ export function Bubble({
             onSpeak();
           }}
         >
-          <Items items={message.translation} className={s.big} />
-          <Items items={message.original} className={s.small} />
-          {/* Your message was already read aloud once (Thai auto-play), so it offers "Play again". */}
-          {yours ? (
-            <div className={s.tools}>
-              <PlayTool playing={playing} again />
-              <SayItTool message={message} recording={recording} />
-            </div>
-          ) : (
-            <PlayTool playing={playing} again={false} />
+          <p className={`${s.big} ${thai(message.translation)}`}>{message.translation}</p>
+          <p className={`${s.small} ${thai(message.original)}`}>{message.original}</p>
+          {corrected && (
+            <p className={`${s.heard} ${thai(message.heard)}`} title="What the microphone heard, before correction">
+              <Ear size={12} strokeWidth={2.1} aria-label="Heard" /> {message.heard}
+            </p>
           )}
+          {/* The owner's message was already read aloud once, for the other person. */}
+          <PlayTool playing={playing} again={message.side === "me"} />
         </div>
       </Row>
-      {message.card && <ContextCard card={message.card} vendorSaid={message.speaker === "vendor" ? message.translation : []} />}
-      {message.cards?.map((card, i) => <InfoCard key={i} card={card} onSuggest={onSuggest} busy={busy} />)}
-      {/* The Allergy Flag wins: a Turn shows the flag or a Move, never both. */}
-      {!message.card && message.move && <MoveCard card={message.move} collapsed={!latest} />}
+      {message.cards.map((card, i) => (
+        <ContextCard key={i} card={card} onSuggest={onSuggest} busy={busy} />
+      ))}
     </>
   );
 }

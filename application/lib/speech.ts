@@ -2,9 +2,9 @@
 
 // Browser text-to-speech. Free, Thai voice built into iOS; on Android it depends on the phone.
 
-const LOCALES: Record<string, string> = { th: "th-TH", en: "en-US", fr: "fr-FR", de: "de-DE", es: "es-ES", it: "it-IT", zh: "zh-CN" };
+import { findLanguage } from "./language";
 
-export const toLocale = (language: string) => LOCALES[language] ?? language;
+const toLocale = (language: string) => findLanguage(language).locale;
 
 const synth = () => (typeof window !== "undefined" && "speechSynthesis" in window ? window.speechSynthesis : undefined);
 

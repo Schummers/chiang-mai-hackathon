@@ -15,11 +15,6 @@
   flex-direction: column;
 }
 
-/* Conflict with About you: a 2px ink ring inside the weave. Never red, name never struck through. */
-.card.conflict {
-  box-shadow: inset 0 0 0 2px var(--ink);
-}
-
 .kicker {
   display: flex;
   align-items: center;
@@ -53,70 +48,31 @@
   color: var(--ink-2);
 }
 
-.facts {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 6px 12px;
+/* Suggested follow-up: the Play tool's shape, in the owner's voice, wrapping when the line is long. */
+.suggest {
+  --accent: var(--you);
+  --wash: var(--you-wash);
+  align-self: flex-start;
+  height: auto;
+  min-height: 34px;
   margin-top: 10px;
-  font-size: 13px;
+  padding: 7px 12px;
   line-height: 18px;
-  font-weight: 700;
+  text-align: left;
 }
 
-.facts > span {
-  display: inline-flex;
-  align-items: center;
-  gap: 5px;
+.suggest svg {
+  flex: none;
 }
 
-/* Heat meter: 3 bars 6x11, on = ink, off = line-2. */
-.heat {
-  display: inline-flex;
-  gap: 2px;
-  align-items: flex-end;
-}
-
-.heat b {
-  width: 6px;
-  height: 11px;
-  border-radius: 2px;
-  background: var(--line-2);
-}
-
-.heat b.on {
-  background: var(--ink);
-}
-
-.local {
-  display: flex;
-  gap: 6px;
-  margin-top: 8px;
-  font-size: 13px;
-  line-height: 18px;
+.suggest:disabled {
   color: var(--ink-2);
+  background: var(--line);
+  cursor: default;
 }
 
-.local svg {
-  flex: none;
-  margin-top: 2px;
-}
-
-.flag {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  margin-top: 10px;
-  padding: 8px 12px;
-  border-radius: 10px;
-  background: var(--ink);
-  color: var(--white);
-  font-size: 13px;
-  line-height: 18px;
+.label {
   font-weight: 800;
-}
-
-.flag svg {
-  flex: none;
 }
 
 @keyframes slide {

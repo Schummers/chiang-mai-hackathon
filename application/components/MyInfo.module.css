@@ -91,6 +91,19 @@ label.chip {
   cursor: pointer;
 }
 
+.swap {
+  width: 36px;
+  height: 36px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  color: var(--ink-2);
+}
+
+.swap:active {
+  background: var(--line);
+}
+
 .chip.add {
   position: relative;
   min-height: 36px;
@@ -211,25 +224,6 @@ label.chip {
   color: var(--white);
   font-weight: 700;
   font-size: 16px;
-}
-
-.toast {
-  position: fixed;
-  left: 50%;
-  top: calc(env(safe-area-inset-top) + 72px);
-  transform: translateX(-50%);
-  z-index: 30;
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  padding: 10px 16px;
-  border-radius: 12px;
-  background: var(--ink);
-  color: var(--white);
-  font-weight: 700;
-  font-size: 14px;
-  box-shadow: var(--sh-2);
-  animation: fade 0.2s ease-out both;
 }
 
 @keyframes fade {

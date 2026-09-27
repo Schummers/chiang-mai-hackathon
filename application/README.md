@@ -9,5 +9,6 @@ npm test         # Vitest
 npm run build    # must pass before any push
 ```
 
-- The UI only talks to the conversation engine (`lib/engine/`). The turn service behind it is picked by `NEXT_PUBLIC_TURN_SERVICE` (`mock` by default, `api` for the real back-end).
+- Product brief: [`context.md`](context.md). How it works: [`docs/architecture.md`](docs/architecture.md).
+- The UI only talks to the conversation engine (`lib/engine/`), which calls `/api/translate` (Claude) and `/api/places` (Google Maps).
 - Keys in `.env.local` only (gitignored), and in Vercel env vars. See `.env.example`.

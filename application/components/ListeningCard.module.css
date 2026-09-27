@@ -75,7 +75,7 @@
   }
 }
 
-/* The row itself, and on a photo question the "About this photo" line above it. */
+/* The row itself, and the live transcript under it. */
 .line {
   display: flex;
   flex: 1;

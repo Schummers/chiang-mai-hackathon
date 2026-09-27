@@ -153,37 +153,3 @@
     opacity: 0;
   }
 }
-
-/* At rest only: the photo button (variant 3), indigo on --you-wash, no stroke. */
-.photo {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  height: 44px;
-  padding: 0 14px;
-  border-radius: 12px;
-  background: var(--you-wash);
-  color: var(--you);
-  font-size: 14px;
-  font-weight: 700;
-  cursor: pointer;
-  animation: fade 0.2s ease-out both;
-  transition: transform 0.1s;
-}
-
-.photo:active {
-  transform: scale(0.96);
-}
-
-.photo:focus-within {
-  outline: 3px solid var(--you);
-  outline-offset: 2px;
-}
-
-.file {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  opacity: 0;
-  pointer-events: none;
-}

@@ -1,12 +1,13 @@
 const API = "https://api.anthropic.com/v1/messages";
 
 export const TURN_MODEL = process.env.ANTHROPIC_MODEL ?? "claude-sonnet-5";
-/** Used once when the main model is overloaded (529), rate limited (429) or too slow. */
+/** Used once when the main model is overloaded (529), rate limited (429) or fails before streaming anything. */
 export const FALLBACK_MODEL = process.env.ANTHROPIC_FALLBACK_MODEL ?? "claude-haiku-4-5-20251001";
 
-/** Whole request, fallback included. Under the engine's 15 s per call (lib/engine/engine.ts), so an answer can still land. */
-const BUDGET_MS = 13_000;
-const PRIMARY_MS = 9_000;
+/** No first byte after this long: give up on this model. */
+const FIRST_BYTE_MS = 6_000;
+/** Whole stream, first byte included. */
+const TOTAL_MS = 20_000;
 
 export class AnthropicError extends Error {
   constructor(
@@ -17,7 +18,7 @@ export class AnthropicError extends Error {
   }
 }
 
-export type Tool = { name: string; description: string; input_schema: object };
+export type Tool = { name: string; description: string; strict?: boolean; input_schema: object };
 
 type Options = {
   /** Stable prompt, cached by Anthropic across Turns. */
@@ -25,43 +26,90 @@ type Options = {
   /** The one tool the model must call: its input is the structured answer. */
   tool: Tool;
   maxTokens?: number;
+  /** Called with the tool input JSON accumulated so far, on every streamed chunk. */
+  onPartial?: (json: string) => void;
 };
 
-async function call(model: string, user: string, { system, tool, maxTokens = 1500 }: Options, timeoutMs: number): Promise<unknown> {
+type StreamEvent =
+  | { type: "message_start"; message: { usage: object } }
+  | { type: "content_block_delta"; delta: { type: string; partial_json?: string } }
+  | { type: "message_delta"; usage: object }
+  | { type: "error"; error: { type: string; message: string } }
+  | { type: string };
+
+async function stream(model: string, user: string, { system, tool, maxTokens = 1200, onPartial }: Options): Promise<unknown> {
   const key = process.env.ANTHROPIC_API_KEY;
   if (!key) throw new AnthropicError(500, "ANTHROPIC_API_KEY is not set");
-  const res = await fetch(API, {
-    method: "POST",
-    headers: { "content-type": "application/json", "x-api-key": key, "anthropic-version": "2023-06-01" },
-    signal: AbortSignal.timeout(timeoutMs),
-    body: JSON.stringify({
-      model,
-      max_tokens: maxTokens,
-      system: [{ type: "text", text: system, cache_control: { type: "ephemeral" } }],
-      tools: [tool],
-      tool_choice: { type: "tool", name: tool.name },
-      messages: [{ role: "user", content: user }],
-    }),
-  });
-  if (!res.ok) throw new AnthropicError(res.status, `${model} ${res.status}: ${(await res.text()).slice(0, 300)}`);
-  const json = (await res.json()) as { content?: { type: string; name?: string; input?: unknown }[] };
-  const use = json.content?.find((c) => c.type === "tool_use" && c.name === tool.name);
-  if (!use) throw new AnthropicError(502, `${model}: no ${tool.name} call`);
-  return use.input;
+  const abort = new AbortController();
+  const firstByte = setTimeout(() => abort.abort(new DOMException("first byte", "TimeoutError")), FIRST_BYTE_MS);
+  const total = setTimeout(() => abort.abort(new DOMException("total", "TimeoutError")), TOTAL_MS);
+  let json = "";
+  try {
+    const res = await fetch(API, {
+      method: "POST",
+      headers: { "content-type": "application/json", "x-api-key": key, "anthropic-version": "2023-06-01" },
+      signal: abort.signal,
+      body: JSON.stringify({
+        model,
+        max_tokens: maxTokens,
+        stream: true,
+        system: [{ type: "text", text: system, cache_control: { type: "ephemeral" } }],
+        tools: [tool],
+        tool_choice: { type: "tool", name: tool.name },
+        messages: [{ role: "user", content: user }],
+      }),
+    });
+    if (!res.ok || !res.body) throw new AnthropicError(res.status, `${model} ${res.status}: ${(await res.text()).slice(0, 300)}`);
+    clearTimeout(firstByte);
+
+    const reader = res.body.pipeThrough(new TextDecoderStream()).getReader();
+    let buffer = "";
+    const usage: Record<string, unknown> = {};
+    for (;;) {
+      const { value, done } = await reader.read();
+      if (done) break;
+      buffer += value;
+      const lines = buffer.split("\n");
+      buffer = lines.pop() ?? "";
+      for (const line of lines) {
+        if (!line.startsWith("data: ")) continue;
+        const event = JSON.parse(line.slice(6)) as StreamEvent;
+        if (event.type === "error" && "error" in event) throw new AnthropicError(529, `${model}: ${event.error.message}`);
+        if (event.type === "message_start" && "message" in event) Object.assign(usage, event.message.usage);
+        if (event.type === "message_delta" && "usage" in event) Object.assign(usage, event.usage);
+        if (event.type === "content_block_delta" && "delta" in event && event.delta.partial_json) {
+          json += event.delta.partial_json;
+          onPartial?.(json);
+        }
+      }
+    }
+    console.info("anthropic", model, JSON.stringify(usage));
+    if (!json) throw new AnthropicError(502, `${model}: no ${tool.name} input`);
+    return JSON.parse(json);
+  } catch (e) {
+    // Anything already streamed can't be taken back: don't let the caller retry on another model.
+    if (json) throw Object.assign(e instanceof Error ? e : new Error(String(e)), { streamed: true });
+    throw e;
+  } finally {
+    clearTimeout(firstByte);
+    clearTimeout(total);
+  }
 }
 
 const retryable = (e: unknown) =>
-  (e instanceof AnthropicError && (e.status === 529 || e.status === 429 || e.status >= 500)) ||
-  (e instanceof Error && e.name === "TimeoutError");
+  !(e as { streamed?: boolean }).streamed &&
+  ((e instanceof AnthropicError && (e.status === 529 || e.status === 429 || e.status >= 500)) ||
+    (e instanceof Error && e.name === "TimeoutError"));
 
-/** Calls the main model, then the fallback once if it fails or is too slow, all within one budget. */
-export async function callTool(user: string, opts: Options): Promise<unknown> {
-  const deadline = Date.now() + BUDGET_MS;
+/** Streams the main model's forced tool call, falling back once to the other model if it fails before any output. */
+export async function streamTool(user: string, opts: Options): Promise<unknown> {
   try {
-    return await call(TURN_MODEL, user, opts, TURN_MODEL === FALLBACK_MODEL ? BUDGET_MS : PRIMARY_MS);
+    return await stream(TURN_MODEL, user, opts);
   } catch (e) {
-    const left = deadline - Date.now();
-    if (TURN_MODEL !== FALLBACK_MODEL && retryable(e) && left > 500) return call(FALLBACK_MODEL, user, opts, left);
+    if (TURN_MODEL !== FALLBACK_MODEL && retryable(e)) {
+      console.warn("anthropic fallback", e instanceof Error ? e.message : e);
+      return await stream(FALLBACK_MODEL, user, opts);
+    }
     throw e;
   }
 }

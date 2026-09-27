@@ -3,7 +3,12 @@
 // Speech-to-text in the browser (Chrome's Web Speech API; Safari has it too, through Siri). No audio leaves
 // through our server: the browser sends it to its own recogniser and hands back text.
 
-import { MAX_MS, NO_VOICE_MS, SILENCE_MS } from "./recorder";
+/** Auto-stop after this much quiet once words were heard. */
+const SILENCE_MS = 1800;
+/** Give up when nothing was heard at all. */
+const NO_VOICE_MS = 8000;
+/** Hard cap on one Turn. */
+const MAX_MS = 60_000;
 
 type Recognition = {
   lang: string;

@@ -1,88 +1,30 @@
 "use client";
 
-import { Check, Drumstick, MapPin, OctagonX, Soup } from "lucide-react";
-import { cardFlags } from "@/lib/cardFlag";
+import { Lightbulb, MessageSquareReply } from "lucide-react";
 import type { ContextCard as Card } from "@/lib/engine/types";
-import { useMyInfo } from "@/lib/useMyInfo";
+import chat from "./Chat.module.css";
 import s from "./ContextCard.module.css";
 
-const SPICE_LABELS = ["Not spicy", "Mild", "Medium", "Hot"];
-
-/** Only the Allergy Flag reaches the thread (`flagCard`), always a dish: Word and Moment cards are retired. */
-function Label({ card }: { card: Card }) {
-  return (
-    <>
-      <Soup size={14} strokeWidth={2.1} /> {card.offGuide ? "Dish · not in our guide" : "Special dish"}
-    </>
-  );
-}
-
-/** L2w context card (C2): the only thing framed by the weave, it belongs to both voices. `vendorSaid` is the reply it came with. */
-export function ContextCard({
-  card,
-  vendorSaid = [],
-  kicker,
-  children,
-}: {
-  card: Card;
-  vendorSaid?: string[];
-  /** Replaces the default label, e.g. "Dish" on a photo card. */
-  kicker?: React.ReactNode;
-  /** Tools at the bottom of the card, e.g. "Ask about this photo". */
-  children?: React.ReactNode;
-}) {
-  const myInfo = useMyInfo();
-  const { flag, vendorNo } = cardFlags(card, myInfo, vendorSaid);
-  const facts = card.meat || card.spice !== undefined || vendorNo.length > 0;
-
+/** Written by the model under a Turn: a heading, two sentences, and a follow-up the owner sends in one tap. */
+export function ContextCard({ card, onSuggest, busy }: { card: Card; onSuggest?: (text: string) => void; busy?: boolean }) {
   return (
     <article className={s.frame}>
-      <div className={`${s.card} ${flag ? s.conflict : ""}`}>
+      <div className={s.card}>
         <p className={s.kicker}>
-          {kicker ?? <Label card={card} />}
+          <Lightbulb size={14} strokeWidth={2.1} aria-hidden /> Context
         </p>
         <h3 className={s.name}>
-          {card.name} {card.nameThai && <span className={s.thai}>{card.nameThai}</span>}
+          {card.heading} {card.headingThai && <span className={s.thai}>{card.headingThai}</span>}
         </h3>
-        <p className={s.desc}>{card.description}</p>
-
-        {facts && (
-          <div className={s.facts}>
-            {card.meat && (
-              <span>
-                <Drumstick size={16} strokeWidth={2.1} /> {card.meat}
-              </span>
-            )}
-            {card.spice !== undefined && (
-              <span>
-                <span className={s.heat} aria-hidden>
-                  {[1, 2, 3].map((n) => (
-                    <b key={n} className={n <= (card.spice ?? 0) ? s.on : ""} />
-                  ))}
-                </span>
-                {SPICE_LABELS[card.spice]}
-              </span>
-            )}
-            {vendorNo.map((a) => (
-              <span key={a}>
-                <Check size={16} strokeWidth={2.4} /> Vendor: no {a}
-              </span>
-            ))}
-          </div>
+        <p className={s.desc}>{card.body}</p>
+        {card.suggestion && onSuggest && (
+          <button type="button" className={`${chat.tool} ${s.suggest}`} disabled={busy} onClick={() => onSuggest(card.suggestion!)}>
+            <MessageSquareReply size={16} strokeWidth={2.1} aria-hidden />
+            <span>
+              <span className={s.label}>Suggested:</span> “{card.suggestion}”
+            </span>
+          </button>
         )}
-
-        {card.localDetail && (
-          <p className={s.local}>
-            <MapPin size={14} strokeWidth={2.1} /> {card.localDetail}
-          </p>
-        )}
-
-        {flag && (
-          <p className={s.flag} role="note">
-            <OctagonX size={18} strokeWidth={2.1} /> {flag}
-          </p>
-        )}
-        {children}
       </div>
     </article>
   );

@@ -22,38 +22,40 @@ export const DIETS: { value: Diet; label: string }[] = [
   { value: "halal", label: "Halal" },
 ];
 
-/** How the Visitor ends a polite sentence in Moves: ครับ/คับ or ค่ะ/เจ้า. */
 export const PARTICLES: { value: Particle; label: string }[] = [
   { value: "m", label: "Man (khrap)" },
   { value: "f", label: "Woman (kha)" },
 ];
 
-/**
- * The one place a particle is normalised: anything but "f" is "m". Also reads `speaker`, the key's old name
- * (before 2026-09-27), from phones that saved My info then and clients that still send it.
- */
-export function particleOf(info: (Partial<MyInfo> & { speaker?: unknown }) | null | undefined): Particle {
-  return (info?.particle ?? info?.speaker) === "f" ? "f" : "m";
-}
+export const particleOf = (info: Partial<MyInfo> | null | undefined): Particle => (info?.particle === "f" ? "f" : "m");
 
 export const NOTES_MAX = 1000;
+
+const pick = <T extends string>(values: unknown, allowed: { value: T }[]): T[] =>
+  Array.isArray(values) ? values.filter((v): v is T => allowed.some((a) => a.value === v)) : [];
 
 /** Stored on the phone only. Any storage problem means "no info", never a crash. */
 export function loadMyInfo(storage = browserStorage()): MyInfo {
   try {
     const raw = storage?.getItem(KEY);
     if (!raw) return EMPTY_MY_INFO;
-    const parsed = JSON.parse(raw) as Partial<MyInfo> & { speaker?: unknown };
-    return {
-      allergies: Array.isArray(parsed.allergies) ? parsed.allergies : [],
-      spice: parsed.spice ?? null,
-      diet: Array.isArray(parsed.diet) ? parsed.diet : [],
-      ...(particleOf(parsed) === "f" && { particle: "f" as const }),
-      ...(typeof parsed.notes === "string" && parsed.notes && { notes: parsed.notes.slice(0, NOTES_MAX) }),
-    };
+    return sanitizeMyInfo(JSON.parse(raw));
   } catch {
     return EMPTY_MY_INFO;
   }
+}
+
+/** Keeps only known values; used on load and on the server for whatever the client sent. */
+export function sanitizeMyInfo(value: unknown): MyInfo {
+  const v = (value ?? {}) as Partial<Record<keyof MyInfo, unknown>>;
+  const spice = SPICES.find((s) => s.value === v.spice)?.value ?? null;
+  return {
+    allergies: pick(v.allergies, ALLERGIES),
+    spice,
+    diet: pick(v.diet, DIETS),
+    ...(v.particle === "f" && { particle: "f" as const }),
+    ...(typeof v.notes === "string" && v.notes.trim() && { notes: v.notes.slice(0, NOTES_MAX) }),
+  };
 }
 
 export function saveMyInfo(info: MyInfo, storage = browserStorage()) {
@@ -62,26 +64,4 @@ export function saveMyInfo(info: MyInfo, storage = browserStorage()) {
   } catch {
     // Private mode or blocked storage: keep it for this session only.
   }
-}
-
-const union = <T,>(a: T[], b: T[] = []) => [...a, ...b.filter((x) => !a.includes(x))];
-
-/** Adds info detected in speech ("I'm allergic to peanuts") to what the visitor already set. */
-export function mergeMyInfo(current: MyInfo, detected: Partial<MyInfo>): { info: MyInfo; changed: boolean } {
-  const info: MyInfo = {
-    allergies: union(current.allergies, detected.allergies),
-    spice: detected.spice ?? current.spice,
-    diet: union(current.diet, detected.diet),
-    ...(current.particle && { particle: current.particle }),
-    ...(current.notes && { notes: current.notes }),
-  };
-  return { info, changed: JSON.stringify(info) !== JSON.stringify(current) };
-}
-
-export function chipLabels(info: MyInfo): string[] {
-  return [
-    ...ALLERGIES.filter((a) => info.allergies.includes(a.value)).map((a) => a.label),
-    ...SPICES.filter((s) => s.value === info.spice).map((s) => s.label),
-    ...DIETS.filter((d) => info.diet.includes(d.value)).map((d) => d.label),
-  ];
 }

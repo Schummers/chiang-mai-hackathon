@@ -1,56 +1,47 @@
 "use client";
 
-import { ArrowLeft, ArrowRight, Camera, Languages, Mic, ScanSearch, Square } from "lucide-react";
+import { ArrowLeft, ArrowRight, Languages as LanguagesIcon, Mic, Square } from "lucide-react";
 import type { ConversationState } from "@/lib/engine/engine";
-import type { Speaker, UserLanguage } from "@/lib/engine/types";
+import type { Languages, Side } from "@/lib/engine/types";
 import { findLanguage } from "@/lib/language";
-import { LookingStatus } from "./PhotoAsk";
 import { Wave } from "./Wave";
 import d from "./Dock.module.css";
 
 type Props = {
   state: ConversationState;
-  onTap: (speaker: Speaker) => void;
-  /** Drives your verb only; the picker lives in About you. */
-  language: UserLanguage;
-  /** Message being read aloud: the hand-off hint waits for your Thai to finish playing. */
+  onTap: (side: Side) => void;
+  languages: Languages;
+  /** Message being read aloud: the hand-off hint waits for the owner's message to finish playing. */
   playingId: string | null;
   getLevel: () => number;
   /** Offline: both mics are disabled. */
   offline?: boolean;
-  /** The Visitor picked a photo with the phone's camera. Cancelling the camera never calls it. */
-  onPhoto?: (file: File) => void;
 };
 
-/** K1 floating dock: vendor square left, yours right, the middle narrates the state (K3 / K4 / K5). */
-export function Dock({ state, onTap, language, playingId, getLevel, offline = false, onPhoto }: Props) {
+/** K1 floating dock: the other person's mic left, the owner's right, the middle narrates the state. */
+export function Dock({ state, onTap, languages, playingId, getLevel, offline = false }: Props) {
   const { phase, messages } = state;
-  const { verb: yourVerb, stop: yourStop } = findLanguage(language);
   const last = messages[messages.length - 1];
+  const handoff = phase.kind === "idle" && last && !(last.side === "me" && playingId === last.id) ? phase.nextTurn : null;
 
-  // Hand-off: after your Thai has played (or right away if audio is blocked), and after the vendor's reply.
-  // Not after a photo or a question about it: nothing was said to the vendor.
-  const handoff =
-    phase.kind === "idle" && last && !last.photo && !last.about && !(last.speaker === "you" && playingId === last.id) ? phase.nextTurn : null;
-
-  const mic = (speaker: Speaker) => {
-    const recording = phase.kind === "listening" && phase.speaker === speaker;
-    const disabled = offline || phase.kind === "processing" || phase.kind === "reading" || (phase.kind === "listening" && !recording);
+  const mic = (side: Side) => {
+    const language = findLanguage(languages[side]);
+    const recording = phase.kind === "listening" && phase.side === side;
+    const disabled = offline || phase.kind === "processing" || (phase.kind === "listening" && !recording);
     // Whose turn it is: after a message, and after "didn't catch that" for the one who has to speak again.
     const pulse =
-      (phase.kind === "idle" && phase.nextTurn === speaker && messages.length > 0) ||
-      (phase.kind === "error" && phase.reason === "empty" && phase.speaker === speaker);
-    const vendor = speaker === "vendor";
+      (phase.kind === "idle" && phase.nextTurn === side && messages.length > 0) ||
+      (phase.kind === "error" && phase.reason === "empty" && phase.side === side);
     return (
       <button
-        className={`${d.mic} ${vendor ? d.them : d.you} ${recording ? d.stop : ""} ${pulse ? d.pulse : ""}`}
+        className={`${d.mic} ${side === "me" ? d.you : d.them} ${recording ? d.stop : ""} ${pulse ? d.pulse : ""}`}
         disabled={disabled}
-        onClick={() => onTap(speaker)}
+        onClick={() => onTap(side)}
         aria-pressed={recording}
-        lang={vendor ? "th" : language}
+        lang={language.code}
       >
         {recording ? <Square size={22} strokeWidth={2.1} fill="currentColor" /> : <Mic size={24} strokeWidth={2.1} />}
-        <span className={d.verb}>{recording ? (vendor ? "หยุด" : yourStop) : vendor ? "พูด" : yourVerb}</span>
+        <span className={d.verb}>{recording ? language.stop : language.verb}</span>
       </button>
     );
   };
@@ -58,56 +49,33 @@ export function Dock({ state, onTap, language, playingId, getLevel, offline = fa
   let middle: React.ReactNode = null;
   if (phase.kind === "listening") {
     middle = (
-      <span className={`${d.state} ${phase.speaker === "vendor" ? d.themText : d.youText}`}>
+      <span className={`${d.state} ${phase.side === "them" ? d.themText : d.youText}`}>
         <Wave startedAt={phase.startedAt} getLevel={getLevel} bars={7} className={d.wave} timeClassName={d.time} />
       </span>
     );
   } else if (phase.kind === "processing") {
-    middle = <span className={d.state}>{phase.about ? <LookingStatus /> : <><Languages size={18} strokeWidth={2.1} /> Translating…</>}</span>;
-  } else if (phase.kind === "reading") {
     middle = (
-      <span className={d.state}>
-        <ScanSearch size={18} strokeWidth={2.1} /> Reading the photo…
+      <span className={d.state} lang={languages[phase.side]}>
+        <LanguagesIcon size={18} strokeWidth={2.1} /> {findLanguage(languages[phase.side]).translating}
       </span>
     );
-  } else if (handoff === "vendor") {
+  } else if (handoff) {
+    const language = findLanguage(languages[handoff]);
     middle = (
-      <span className={`${d.state} ${d.themText} ${d.handoff}`} lang="th">
-        <ArrowLeft size={18} strokeWidth={2.4} /> ตาคุณ
-      </span>
-    );
-  } else if (handoff === "you") {
-    middle = (
-      <span className={`${d.state} ${d.youText} ${d.handoff}`}>
-        Your turn <ArrowRight size={18} strokeWidth={2.4} />
+      <span className={`${d.state} ${handoff === "them" ? d.themText : d.youText} ${d.handoff}`} lang={language.code}>
+        {handoff === "them" && <ArrowLeft size={18} strokeWidth={2.4} />} {language.turn}{" "}
+        {handoff === "me" && <ArrowRight size={18} strokeWidth={2.4} />}
       </span>
     );
   }
 
   return (
     <footer className={d.dock}>
-      {mic("vendor")}
+      {mic("them")}
       <div className={d.middle} aria-live="polite">
-        {middle ??
-          (phase.kind === "idle" && onPhoto && !offline && (
-            // A label, not a button + click(): opens the camera reliably on iOS.
-            <label className={d.photo}>
-              <Camera size={20} strokeWidth={2.1} /> Photo
-              <input
-                type="file"
-                accept="image/*"
-                capture="environment"
-                className={d.file}
-                onChange={(e) => {
-                  const file = e.target.files?.[0];
-                  e.target.value = ""; // the same photo can be picked again
-                  if (file) onPhoto(file);
-                }}
-              />
-            </label>
-          ))}
+        {middle}
       </div>
-      {mic("you")}
+      {mic("me")}
     </footer>
   );
 }

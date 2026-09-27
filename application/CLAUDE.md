@@ -16,7 +16,7 @@ npm run build    # must pass before any push
 ## Rules
 
 - The UI only talks to the conversation engine (`lib/engine/`). Never call a provider from a component.
-- The back-end plugs in by implementing `TurnService` (`lib/engine/types.ts`); the mock stays for demos and tests.
+- The product brief is [`context.md`](context.md); the contract is `lib/engine/types.ts`.
 - Visuals from `people/jonathan/design system/DESIGN.md`, flow from `people/jonathan/wireframes/v5.html` (the flow wins when they disagree).
 - Keep each feature in its own component file under `components/`; touch `app/page.tsx` as little as possible.
 - Mobile first. The mic needs HTTPS: test on the Vercel URL, not on a LAN IP.

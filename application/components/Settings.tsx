@@ -6,8 +6,8 @@ import { SETTING_ROWS, type Settings as Values } from "@/lib/settings";
 import sheet from "./MyInfo.module.css";
 import s from "./Settings.module.css";
 
-const CONTEXT_KEYS: (keyof Values)[] = ["notes", "location", "time", "pack"];
-const THREAD_KEYS: (keyof Values)[] = ["cards", "moves"];
+const CONTEXT_KEYS: (keyof Values)[] = ["profile", "location", "time", "pack"];
+const THREAD_KEYS: (keyof Values)[] = ["cards"];
 
 function Switch({ id, on, onChange }: { id: keyof Values; on: boolean; onChange: (on: boolean) => void }) {
   const row = SETTING_ROWS.find((r) => r.key === id)!;
@@ -90,7 +90,7 @@ export function Settings({ values, onChange, onDone }: { values: Values; onChang
               <X size={22} strokeWidth={2.1} />
             </button>
           </header>
-          <p className={sheet.lede}>Choose what the translator knows. It is sent with each message, never stored.</p>
+          <p className={sheet.lede}>Choose what the translator knows. It is sent with each message and never stored on our side.</p>
 
           <section className={sheet.group}>
             <h3>Sent with each message</h3>

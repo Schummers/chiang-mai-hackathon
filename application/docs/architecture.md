@@ -1,132 +1,99 @@
 # Architecture
 
-Next.js 16 (App Router) + React 19 + TypeScript, deployed on Vercel (project `u-mueang`, root directory `application`). No database: everything the Visitor saves lives on the phone (localStorage).
+Next.js 16 (App Router) + React 19 + TypeScript, deployed on Vercel (project `u-mueang`, root directory `application`). No database: everything the owner saves lives on the phone (localStorage). Product brief: [`../context.md`](../context.md).
+
+## People
+
+- **me / the owner**: set the app up. Their mic is on the right, their language is "Your language". They can be a visitor or a shopkeeper.
+- **them / the other person**: across the counter. Their mic is on the left.
+
+Any language pair from `lib/language.ts` works. Thai can be on either side.
 
 ## One Turn, end to end
 
 ```
-App load
-  -> lib/location.ts: asks for location if never granted (quiet when denied), watches the position
-     -> POST /api/places -> Google Places (New): food places ~75 m + markets ~400 m, nearest first (lib/server/places.ts)
-
-Dock (mic tap)
-  -> ConversationEngine (lib/engine/engine.ts)      state machine: idle -> listening -> processing -> idle | error
-     api mode + browser has SpeechRecognition:
-       -> lib/speechInput.ts                         Chrome Web Speech API (th-TH for the Vendor), live interim text,
-                                                     same auto-stop timings -> engine.stopWithTranscript(speaker, text)
-     otherwise (mock, Firefox, recogniser with no service):
-       -> recorder.ts + TurnService.transcribe       api: POST /api/transcribe -> Gemini (lib/server/gemini.ts)
-     -> TurnService.translate(TranslateInput + context + options from Settings)
-          api: POST /api/translate
-               -> systemPrompt (rules + Context Pack, cached) + turnPrompt (lib/context/prompt.ts)
-                  turnPrompt starts with context blocks, each saying what it is and how to use it:
-                  <visitor_notes>, <nearby_places> (ranked by distance), <local_time>
-               -> Claude (lib/server/anthropic.ts), forced tool call `submit_turn`, schema TURN_SCHEMA
-               -> model returns items, "romanised" (phonetics of the Visitor's Thai), "cards", a "mention" and a "stage"
-               -> infoCards() keeps at most 2 context cards (heading, 2 sentences, suggestion) (lib/context/infoCards.ts)
-               -> romanisedItems() keeps the phonetics for the Visitor only (lib/context/romanised.ts), for Say it yourself
-               -> flagCard(mention) builds the Allergy Flag card from the pack, only when it flags (lib/context/cards.ts)
-               -> stageFor(stage) fixes the Stage (first Turn = start, unknown = explore)
-               -> pickMove(stage, mention) picks at most one Move, none when the Allergy Flag shows (lib/context/moves.ts):
-                  Echo when the Vendor said a trigger as a whole word, else a Move of that Stage
-  <- Message added to the thread, Thai played aloud (lib/speech.ts), the other mic pulses
-  <- Context cards under it (components/InfoCard.tsx). "Ask …" on a card -> engine.say("you", suggestion):
-     a normal Visitor Turn from text, translated and read aloud in Thai
+Dock (mic tap, side = me | them)
+  -> SpeechInput (lib/speechInput.ts)            Web Speech API, locale of that side's language, live interim text,
+                                                 auto-stop after 1.8 s of quiet
+  -> ConversationEngine.heard(side, text)        idle -> listening -> processing (lib/engine/engine.ts)
+  -> POST /api/translate (NDJSON stream)
+       systemPrompt(options)                     static rules + the Northern Thai guide, cached by Anthropic
+       turnPrompt(...)                           tagged context blocks + conversation + transcript (lib/server/prompt.ts)
+       streamTool -> Claude, strict submit_turn  { original, translation, cards } (lib/server/anthropic.ts)
+       -> {"type":"text"} as soon as "translation" is complete
+       -> {"type":"done"} with the cards
+  <- "text": message added, turn passes, the owner's message is read aloud in the other person's language
+  <- "done": cards attach under that message (even if the next Turn already started)
 ```
 
-Settings (`components/Settings.tsx`, `lib/settings.ts`) switch each context source (notes, nearby places, date and time, Northern Thai guide) and each thread feature (context cards, Moves) on or off. The client leaves a switched-off source out of the request; `options` tells the route which prompt parts and outputs to use.
+A context card's suggestion goes through `engine.say("me", text)`: it follows the same path without the mic.
 
-### Photo Turn
+### The model's job
 
-```
-Dock photo button (<input capture>, phone camera)
-  -> downscale to 1280px JPEG 0.8 (lib/photo.ts)
-  -> ConversationEngine.photo(image)                 idle | error -> reading -> idle | error
-     -> URL.createObjectURL(image)                   local only, revoked on new conversation
-     -> TurnService.readPhoto(image, { userLanguage, myInfo })
-          mock: menu card (peanut flag from My info), then dish, fruit, sign in turn
-          api: POST /api/photo -> Gemini vision, JSON schema PHOTO_SCHEMA (lib/context/photo.ts)
-               -> toPhotoCard: validated, dishes anchored in the Context Pack (allergen flags from the overlay)
-  <- photo message (image + PhotoCard) added to the thread
+1. **Correct** the transcript into what was most plausibly said. Thai goes through a Central Thai recognizer that does not know Kham Mueang. The prompt lists Northern sound shifts and common mishearings, and the guide gives local vocabulary.
+2. **Translate** the corrected utterance into the listener's language, in the speaker's voice.
+3. Optionally write up to 2 **context cards** for the owner, in the owner's language: a heading, 2 sentences and a suggested follow-up. Allergy or diet risks are also raised as cards.
 
-"Ask about this photo" (on the photo card)
-  -> ConversationEngine.askAboutPhoto(id)            same states as Speak, with `about`
-     -> TurnService.transcribe(audio, visitor language)
-     -> TurnService.askPhoto(image, { question, card, userLanguage, myInfo })
-          api: POST /api/photo/ask -> Gemini with the image, the card and the question
-  <- question card (your side, "About this photo") + woven answer card. Nothing for the vendor, nothing read aloud.
-```
+The bubble shows the translation (big), the corrected original (small) and, when correction changed it, what the mic heard (tiny, with an ear icon).
 
-Key idea: **the model only says what it recognised** (`mention`: a dish id, a word, a produce id). The card content itself (meat, spice, allergy flag, local detail) is built deterministically from the Context Pack and the overlay, so it cannot be hallucinated. See [context-pack.md](context-pack.md).
+### Context blocks (user message, each introduced by what it is)
+
+| Block | Source | Switch |
+|---|---|---|
+| `<owner_profile>` | About you chips (allergies, spice, diet) | About you |
+| `<owner_notes>` | About you free text | About you |
+| `<nearby_places>` | `lib/location.ts` -> `POST /api/places` -> Google Places searchNearby: food within 75-250 m (grows with GPS accuracy), markets within 400 m filtered by name; nearest first | Nearby places |
+| `<local_time>` | Browser clock and time zone, plus season and festivals from the pack | Date and time |
+| `<conversation>` | Last 10 Turns (corrected original, translation, card headings) | always |
+| `<turn>` | Who speaks, which languages, the owner's particle, the raw transcript | always |
+
+The owner's particle (ครับ or ค่ะ) is sent even with About you off. It controls how the owner's Thai sounds; it isn't context.
+
+## Latency (measured 2026-09-27, Sonnet 5, cached system prompt)
+
+- Translation on screen after about 2.1–3.3 s; cards after about 4.2–5.7 s.
+- Output tokens are the bottleneck (~300 per Turn).
+- The Northern Thai guide costs about 0.5 s even when cached.
+- Haiku 4.5 isn't faster here, and its first strict call is slow (~15 s).
 
 ## Rules that keep it working
 
 - The UI talks only to the engine. Never call `fetch` or a provider from a component.
-- The engine is a pure reducer (`reduce`) plus a class that runs side effects. Late answers from an old conversation are dropped via `conversationId`.
-- The mock (`mockTurnService.ts`, a scripted Khao Soi exchange) stays: it runs the demo backup and the tests.
+- The engine is a pure reducer (`reduce`) plus a class that runs side effects. Late answers from an old conversation are dropped via `conversationId`; an old Turn's cards still land in the current conversation.
 - Provider keys are read only in `lib/server/` and `app/api/`, never in client code.
+- The tool is `strict`. Without it, the model sometimes nested the whole answer as a string inside `cards`.
 
 ## Folder map
 
 | Path | Role |
 |---|---|
-| `app/page.tsx` | Renders `<Conversation />`, nothing else. Touch it as little as possible. |
-| `app/api/transcribe/route.ts` | Audio -> raw text via Gemini flash-lite. Removes the spaces flash-lite puts between Thai words. |
-| `app/api/photo/route.ts` | Image -> `PhotoCard` via Gemini. The image is sent to Gemini only: never stored, never logged. |
-| `app/api/photo/ask/route.ts` | Question about a photo -> `{ answer }` via Gemini, same limits as `/api/photo`. |
-| `app/api/translate/route.ts` | Raw text + context -> `TranslateResult` on Claude: context cards, the Allergy Flag card when there is one, else a Move. Month from the phone's time, else Chiang Mai time (UTC+7). |
-| `app/api/places/route.ts` | Lat/lng -> `NearbyPlaces` via Google Places (New). The position is never stored or logged. |
-| `app/globals.css` | Design tokens (Kratip). |
-| `components/Conversation.tsx` | The one screen: wires engine, My info, language, thread and dock. |
-| `components/ChatThread.tsx`, `Bubble.tsx` | Messages: translation big, original small, bullets when several items, tap the card to play. |
-| `components/ContextCard.tsx` | Allergy Flag card (dish card with spice meter and flag row). |
-| `components/SayItYourself.tsx` | "Say it yourself" on a Visitor bubble: one row per Thai item (`lib/sayIt.ts`), listen, slowly; the voice is off while a mic is listening. |
-| `components/MoveCard.tsx` | Move card (Say it / Ask / Echo): tap to hear the Thai, "Show the vendor" full screen, collapses after the next Turn. Lines from `lib/moveCard.ts`. |
-| `components/Overlay.tsx` | Full-screen layer in a portal (Show the vendor, Say it yourself sheet): tap or Escape closes, events never reach the card underneath. |
-| `components/Dock.tsx` | Bottom bar with the two mics (Vendor left, Visitor right); the middle narrates the state, or shows the Photo button at rest. |
-| `components/ListeningCard.tsx`, `Wave.tsx` | Live recording card and wave. |
-| `components/MyInfo.tsx` | Compact My info card and page (allergies, spice, diet, free-text notes). |
-| `components/InfoCard.tsx` | Context card written by the model: heading, two sentences, "Ask …" suggestion button. |
-| `components/Settings.tsx` | Feature switches and the location status (what was found, or why not). |
-| `components/ErrorState.tsx` | Retry, mic denied, too short, offline. Vendor-side texts in Thai. |
-| `components/PhotoCard.tsx` | Woven card that answers a photo: menu, dish (reuses `ContextCard`), fruit / ingredient, sign. "Ask about this photo" at the bottom. |
-| `components/PhotoAsk.tsx` | "About this photo" line, your question card, the woven answer card, "Looking at the photo…". |
-| `components/PhotoShot.tsx` | Your photo in the thread: full while reading, 70px strip once read. |
-| `components/PlayTool.tsx` | Play icon at the bottom of a message. |
-| `components/Logo.tsx` | Header logo (placeholder mark). |
-| `lib/engine/` | `types.ts` (contract, photo types included), `engine.ts` (state machine, voice and photo Turns), `turnService.ts` (mock or api picker), `mockTurnService.ts`. |
-| `lib/server/anthropic.ts` | Claude REST client: forced tool call, cached system prompt, one fallback model on 429/5xx/timeout. Server only. |
-| `lib/server/places.ts` | Google Places nearby search, distance ranking, market detection by name. Server only. |
-| `lib/server/gemini.ts` | Gemini REST client (photos, transcription fallback), model names, fallback on 429/503. Server only. |
-| `lib/speechInput.ts` | Browser speech-to-text (Web Speech API) with interim text and auto-stop. |
-| `lib/location.ts` | Geolocation permission, position watch, nearby places store. |
-| `lib/settings.ts`, `useSettings.ts` | Feature switches, saved on the phone. |
-| `lib/context/` | Context Pack (`pack.json`, `pack.ts`), hand-written `overlay.ts`, `cards.ts`, `prompt.ts`, `photo.ts` (photo prompt, schema, validation). |
-| `lib/context/moves.ts`, `moves.json` | Moves data (copied from `people/jonathan/moves/moves.json`), `stageFor`, `pickMove` (Echo on whole-word triggers via `Intl.Segmenter`). See [moves.md](moves.md). |
-| `lib/context/romanised.ts` | Cleans the model's phonetics for Say it yourself (Visitor only). |
-| `lib/moveCard.ts` | `moveLines()`: the lines a Move card shows (big, small, romanised, English, Echo "ซาว = 20"). |
-| `lib/recorder.ts` | Mic capture, silence detection. |
-| `lib/cardFlag.ts` | Deterministic allergy keyword check on a card ("May contain peanuts"), and allergens the Vendor ruled out. |
-| `lib/pitch.ts` | The home screen's title and subtitle, also the page description and shared-link text. |
-| `lib/photo.ts` | Downscale a camera photo before the read. |
-| `lib/photoCard.ts` | Menu rows (About you conflicts first, 5 max) and the "Couldn't read this photo" fallback. |
-| `lib/useOnline.ts` | Online/offline status for the offline banner. |
-| `lib/speech.ts` | Browser text-to-speech (free, Thai voice built into iOS). |
-| `lib/sayIt.ts` | `sayItRows()`: Thai, phonetics and meaning per item, aligned by index; a missing phonetic gives no line, never a merge. |
-| `lib/usePlayToggle.ts` | Play / stop toggle on the browser voice, shared by the Move card and Say it yourself. |
-| `lib/language.ts`, `useLanguage.ts` | Visitor language list and saved choice. |
-| `lib/myInfo.ts`, `useMyInfo.ts` | My info model and saved value. |
-| `lib/storage.ts`, `phoneStore.ts` | Safe localStorage and a tiny shared store. |
-| `lib/useConversation.ts` | One engine per screen, exposed to React. |
-| `scripts/build-pack.mjs` | Regenerates `lib/context/pack.json` from Luke's data. |
-| `scripts/build-moves.mjs` | Regenerates `lib/context/moves.json` from `people/jonathan/moves/moves.json`. |
+| `app/api/translate/route.ts` | Validates input, builds prompts, streams Claude's answer as NDJSON (`text`, then `done` or `error`). |
+| `app/api/places/route.ts` | `{ lat, lng, accuracy }` -> `NearbyPlaces` via `lib/server/places.ts`. The position goes to Google only. |
+| `components/Conversation.tsx` | The one screen: wires engine, speech input, location, languages, settings, thread and dock. |
+| `components/ChatThread.tsx`, `Bubble.tsx` | Messages: translation big, corrected original small, "heard" line, play on tap, cards under. |
+| `components/ContextCard.tsx` | Model-written card with the "Suggested: …" button. |
+| `components/Dock.tsx` | The other person's mic left, the owner's right; the middle narrates the state in the speaker's language. |
+| `components/MyInfo.tsx` | About you card and page: both languages, particle, allergies, spice, diet, notes. |
+| `components/Settings.tsx` | Feature switches and location status. |
+| `components/ListeningCard.tsx`, `Wave.tsx`, `ErrorState.tsx`, `PlayTool.tsx`, `Logo.tsx` | Recording card, wave, errors (mic blocked, no speech recognition, network, empty), play tool, logo. |
+| `lib/engine/` | `types.ts` (contract), `engine.ts` (state machine, streaming client). |
+| `lib/server/prompt.ts` | System prompt, turn prompt, strict tool schema, partial-JSON field reader. |
+| `lib/server/anthropic.ts` | Streaming Messages API client; falls back to Haiku once if Sonnet fails before streaming anything. |
+| `lib/server/places.ts` | Google Places (New) searchNearby, ranking, market detection. |
+| `lib/context/pack.json`, `pack.ts` | Luke's Context Pack (generated by `scripts/build-pack.mjs`). |
+| `lib/language.ts`, `useLanguage.ts` | Languages (with per-language UI strings and locales), `{ me, them }` store. |
+| `lib/myInfo.ts`, `useMyInfo.ts` | Owner profile model, sanitizer, store. |
+| `lib/settings.ts`, `useSettings.ts` | Feature switches. |
+| `lib/location.ts` | Permission check, watchPosition, places refresh after moving 40 m (at most every 30 s). |
+| `lib/speechInput.ts`, `speech.ts` | Speech-to-text and text-to-speech in the browser. |
 
 ## Commands
 
 ```bash
-npm run dev      # http://localhost:3000 (mic on a phone needs HTTPS: use the Vercel URL)
-npm test         # Vitest: engine, cards, card flags, My info, language
+npm run dev      # http://localhost:3000 (mic and location on a phone need HTTPS: use the Vercel URL)
+npm test         # Vitest: engine, prompt, languages
 npm run build    # must pass before any push
 node scripts/build-pack.mjs   # after Luke changes his data
-node scripts/build-moves.mjs  # after people/jonathan/moves/moves.json changes
 ```
+
+Vitest 5 needs Node 22 or later.

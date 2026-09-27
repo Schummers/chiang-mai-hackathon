@@ -1,85 +1,96 @@
-import { flagCard, type Mention } from "@/lib/context/cards";
-import { infoCards } from "@/lib/context/infoCards";
-import { pickMove, stageFor } from "@/lib/context/moves";
-import { localTime, systemPrompt, turnPrompt, turnTool } from "@/lib/context/prompt";
-import { romanisedItems } from "@/lib/context/romanised";
-import type { MyInfo, TranslateInput, TranslateResult } from "@/lib/engine/types";
-import { NOTES_MAX, particleOf } from "@/lib/myInfo";
-import { callTool } from "@/lib/server/anthropic";
+import type { ContextCard, HistoryTurn, Languages, TranslateEvent, TranslateInput, TranslateResult, TurnContext } from "@/lib/engine/types";
+import { LANGUAGES } from "@/lib/language";
+import { NOTES_MAX, particleOf, sanitizeMyInfo } from "@/lib/myInfo";
+import { streamTool } from "@/lib/server/anthropic";
+import { completedString, systemPrompt, turnPrompt, turnTool } from "@/lib/server/prompt";
 
 export const maxDuration = 30;
 
-type ModelTurn = {
-  original?: string[];
-  translation?: string[];
-  romanised?: unknown;
-  cards?: unknown;
-  mention?: Mention;
-  stage?: string;
-  detectedInfo?: Partial<MyInfo>;
-};
+const str = (v: unknown, max: number) => (typeof v === "string" ? v.trim().slice(0, max) : "");
+const lang = (v: unknown, fallback: string) => (LANGUAGES.some((l) => l.code === v) ? (v as string) : fallback);
 
-/** Month in Chiang Mai (UTC+7), when the phone did not send its time. */
-function chiangMaiMonth(): number {
-  return new Date(Date.now() + 7 * 3600_000).getUTCMonth() + 1;
+/** The model's cards, kept only when they have a heading and a body; at most 2. */
+function cardsOf(value: unknown, ownerReadsThai: boolean): ContextCard[] {
+  if (!Array.isArray(value)) return [];
+  return value
+    .map((c: Record<string, unknown> | null) => ({
+      heading: str(c?.heading, 60),
+      headingThai: str(c?.headingThai, 60),
+      body: str(c?.body, 320),
+      suggestion: str(c?.suggestion, 140),
+    }))
+    .filter((c) => c.heading && c.body)
+    .slice(0, 2)
+    .map(({ heading, headingThai, body, suggestion }) => ({
+      heading,
+      body,
+      ...(headingThai && !ownerReadsThai && headingThai !== heading && { headingThai }),
+      ...(suggestion && { suggestion }),
+    }));
+}
+
+function historyOf(value: unknown): HistoryTurn[] {
+  if (!Array.isArray(value)) return [];
+  return value.slice(-10).map((t: Record<string, unknown>) => ({
+    side: t?.side === "them" ? "them" : "me",
+    original: str(t?.original, 500),
+    translation: str(t?.translation, 500),
+    cards: Array.isArray(t?.cards) ? t.cards.map((c: { heading?: unknown }) => ({ heading: str(c?.heading, 60) })) : [],
+  }));
 }
 
 /** POST TranslateInput -> TranslateResult */
 export async function POST(req: Request) {
-  const input = (await req.json()) as TranslateInput;
-  const raw = String(input.raw ?? "").slice(0, 2000);
-  if (!raw.trim()) return Response.json({ error: "empty" }, { status: 400 });
-  const myInfo: MyInfo = {
-    allergies: input.myInfo?.allergies ?? [],
-    spice: input.myInfo?.spice ?? null,
-    diet: input.myInfo?.diet ?? [],
-    particle: particleOf(input.myInfo),
-  };
-  const history = Array.isArray(input.history) ? input.history : [];
-  const options = { cards: input.options?.cards !== false, moves: input.options?.moves !== false, pack: input.options?.pack !== false };
-  const context = input.context ?? {};
-  if (context.notes) context.notes = String(context.notes).slice(0, NOTES_MAX);
-  const device = context.device && localTime(context.device.now, context.device.timeZone);
-  const month = device?.month ?? chiangMaiMonth();
+  const input = (await req.json().catch(() => ({}))) as Partial<TranslateInput>;
+  const heard = str(input.heard, 2000);
+  if (!heard) return Response.json({ error: "empty" }, { status: 400 });
 
-  let turn: ModelTurn;
-  try {
-    turn = (await callTool(turnPrompt(raw, input.speaker, input.userLanguage, myInfo, history, context), {
-      system: systemPrompt(month, options),
-      tool: turnTool(options.cards),
-    })) as ModelTurn;
-  } catch (e) {
-    console.error("translate", e);
-    return Response.json({ error: "translation failed" }, { status: 502 });
-  }
+  const side = input.side === "them" ? "them" : "me";
+  const me = lang(input.languages?.me, "en");
+  const languages: Languages = { me, them: lang(input.languages?.them, me === "th" ? "en" : "th") };
+  const options = { cards: input.options?.cards !== false, pack: input.options?.pack !== false };
 
-  const original = turn.original?.filter(Boolean) ?? [];
-  const translation = turn.translation?.filter(Boolean) ?? [];
-  const mention: Mention = turn.mention ?? { kind: "none" };
-  const card = flagCard(mention, myInfo);
-  const cards = options.cards ? infoCards(turn.cards) : [];
-
-  // The model gives the Stage, code picks the Move. An allergy or diet flag on the card wins over any Move.
-  const stage = stageFor(turn.stage, history);
-  const move = options.moves ? pickMove(stage, mention, history, { raw, speaker: input.speaker, particle: myInfo.particle, card }) : null;
-
-  const detected = turn.detectedInfo ?? {};
-  const detectedInfo: Partial<MyInfo> = {
-    ...(detected.allergies?.length && { allergies: detected.allergies }),
-    ...(detected.spice && { spice: detected.spice }),
-    ...(detected.diet?.length && { diet: detected.diet }),
+  const raw = input.context ?? {};
+  const profile = raw.profile ? sanitizeMyInfo(raw.profile) : undefined;
+  const context: TurnContext = {
+    ...(profile && { profile }),
+    ...(raw.notes && { notes: str(raw.notes, NOTES_MAX) }),
+    ...(raw.places && { places: raw.places }),
+    ...(raw.time && { time: raw.time }),
   };
 
-  const result: TranslateResult = {
-    original: original.length ? original : [raw],
-    translation: translation.length ? translation : [raw],
-    card,
-    // Undefined for the Vendor, dropped by JSON.
-    romanised: translation.length ? romanisedItems(turn.romanised, input.speaker) : undefined,
-    stage,
-    move,
-    ...(cards.length && { cards }),
-    ...(Object.keys(detectedInfo).length && { detectedInfo }),
-  };
-  return Response.json(result);
+  const user = turnPrompt({ side, heard, languages, history: historyOf(input.history), context, options, particle: particleOf(profile) });
+  const ownerReadsThai = languages.me === "th";
+
+  const body = new ReadableStream<Uint8Array>({
+    async start(controller) {
+      const encoder = new TextEncoder();
+      const send = (event: TranslateEvent) => controller.enqueue(encoder.encode(`${JSON.stringify(event)}\n`));
+      let sentText = false;
+      try {
+        const out = (await streamTool(user, {
+          system: systemPrompt(options),
+          tool: turnTool(options.cards),
+          onPartial: (json) => {
+            if (sentText) return;
+            const translation = completedString(json, "translation");
+            if (!translation?.trim()) return;
+            sentText = true;
+            send({ type: "text", original: completedString(json, "original")?.trim() || heard, translation: translation.trim() });
+          },
+        })) as { original?: unknown; translation?: unknown; cards?: unknown };
+        const result: TranslateResult = {
+          original: str(out.original, 2000) || heard,
+          translation: str(out.translation, 2000),
+          cards: options.cards ? cardsOf(out.cards, ownerReadsThai) : [],
+        };
+        send(result.translation ? { type: "done", result } : { type: "error" });
+      } catch (e) {
+        console.error("translate", e instanceof Error ? e.message : e);
+        send({ type: "error" });
+      }
+      controller.close();
+    },
+  });
+  return new Response(body, { headers: { "content-type": "application/x-ndjson; charset=utf-8", "cache-control": "no-store" } });
 }

@@ -1,31 +1,25 @@
 import { describe, expect, it } from "vitest";
-import { findLanguage, loadLanguage, LANGUAGES, saveLanguage } from "./language";
+import { loadLanguages, pickLanguage } from "./language";
 
-function fakeStorage(): Storage {
-  const data = new Map<string, string>();
-  return { getItem: (k: string) => data.get(k) ?? null, setItem: (k: string, v: string) => void data.set(k, v) } as Storage;
-}
-
-describe("visitor language", () => {
-  it("defaults to English", () => {
-    expect(loadLanguage(fakeStorage())).toBe("en");
+describe("pickLanguage", () => {
+  it("swaps when a side picks the other side's language", () => {
+    expect(pickLanguage({ me: "en", them: "th" }, "me", "th")).toEqual({ me: "th", them: "en" });
   });
 
-  it("is remembered on the phone", () => {
-    const storage = fakeStorage();
-    saveLanguage("fr", storage);
-    expect(loadLanguage(storage)).toBe("fr");
+  it("just sets it otherwise", () => {
+    expect(pickLanguage({ me: "en", them: "th" }, "me", "fr")).toEqual({ me: "fr", them: "th" });
+  });
+});
+
+describe("loadLanguages", () => {
+  const storage = (value: string | null) => ({ getItem: () => value }) as unknown as Storage;
+
+  it("falls back to English and Thai on junk", () => {
+    expect(loadLanguages(storage("{bad"))).toEqual({ me: "en", them: "th" });
+    expect(loadLanguages(storage(JSON.stringify({ me: "th", them: "th" })))).toEqual({ me: "en", them: "th" });
   });
 
-  it("ignores an unknown stored value", () => {
-    const storage = fakeStorage();
-    storage.setItem("u-mueang:language", "xx");
-    expect(loadLanguage(storage)).toBe("en");
-  });
-
-  it("gives the mic verb in each language", () => {
-    expect(findLanguage("fr").verb).toBe("Parler");
-    expect(findLanguage("de").verb).toBe("Sprechen");
-    expect(LANGUAGES.every((l) => l.verb && l.stop && l.name)).toBe(true);
+  it("allows a Thai owner", () => {
+    expect(loadLanguages(storage(JSON.stringify({ me: "th", them: "en" })))).toEqual({ me: "th", them: "en" });
   });
 });

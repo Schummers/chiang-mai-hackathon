@@ -1,17 +1,4 @@
-import {
-  EMPTY_MY_INFO,
-  type ErrorReason,
-  type Message,
-  type MyInfo,
-  type Phase,
-  type Photo,
-  type PhotoCard,
-  type Speaker,
-  type TranslateInput,
-  type TranslateResult,
-  type TurnService,
-  type UserLanguage,
-} from "./types";
+import type { ErrorReason, HistoryTurn, Message, Phase, Side, TranslateEvent, TranslateInput, TranslateResult } from "./types";
 
 export type ConversationState = {
   phase: Phase;
@@ -21,161 +8,104 @@ export type ConversationState = {
 };
 
 export type EngineEvent =
-  | { type: "MIC_TAP"; speaker: Speaker; at: number; about?: string }
-  /** `raw`: the browser already transcribed it, no audio to send. */
-  | { type: "STOP"; speaker: Speaker; raw?: string }
-  /** A typed Turn (a suggestion from a context card): straight to translation, no recording. */
-  | { type: "TEXT"; speaker: Speaker; raw: string }
-  | { type: "TRANSCRIBED"; raw: string }
+  | { type: "MIC_TAP"; side: Side; at: number }
+  /** Speech-to-text finished, or a suggestion was tapped: `heard` goes to the model. */
+  | { type: "HEARD"; side: Side; heard: string }
+  /** The translation is ready: the message joins the thread and the turn passes, cards may follow. */
   | { type: "TRANSLATED"; id: string; result: TranslateResult }
-  | { type: "FAILED"; speaker: Speaker; reason: ErrorReason; raw?: string }
-  | { type: "PHOTO"; photo: Photo; at: number }
-  | { type: "PHOTO_READ"; card: PhotoCard }
-  | { type: "ANSWERED"; id: string; answer: string }
-  | { type: "RETRY"; at?: number }
+  /** The full answer for a message already in the thread (its cards). */
+  | { type: "COMPLETED"; id: string; result: TranslateResult }
+  | { type: "FAILED"; side: Side; reason: ErrorReason; heard?: string }
+  | { type: "RETRY" }
   | { type: "CANCEL" }
   | { type: "DISMISS_ERROR" }
   | { type: "NEW_CONVERSATION" };
 
-export const other = (speaker: Speaker): Speaker => (speaker === "you" ? "vendor" : "you");
+export const other = (side: Side): Side => (side === "me" ? "them" : "me");
 
 export const initialState = (conversationId = 0): ConversationState => ({
-  phase: { kind: "idle", nextTurn: "you" },
+  phase: { kind: "idle", nextTurn: "me" },
   messages: [],
   conversationId,
 });
+
+const canStart = (phase: Phase) => phase.kind === "idle" || phase.kind === "error";
 
 /** Pure transition function. Events that make no sense in the current phase are ignored. */
 export function reduce(state: ConversationState, event: EngineEvent): ConversationState {
   const { phase } = state;
   switch (event.type) {
     case "MIC_TAP":
-      if (phase.kind === "idle" || phase.kind === "error") {
-        const listening = { kind: "listening", speaker: event.speaker, startedAt: event.at } as const;
-        return { ...state, phase: event.about ? { ...listening, about: event.about } : listening };
+      return canStart(phase) ? { ...state, phase: { kind: "listening", side: event.side, startedAt: event.at } } : state;
+    case "HEARD":
+      if ((phase.kind === "listening" && phase.side === event.side) || canStart(phase)) {
+        return { ...state, phase: { kind: "processing", side: event.side, heard: event.heard } };
       }
-      return state;
-    case "STOP":
-      if (phase.kind === "listening" && phase.speaker === event.speaker) {
-        const processing = {
-          kind: "processing",
-          speaker: event.speaker,
-          ...(event.raw && { raw: event.raw }),
-          ...(phase.about && { about: phase.about }),
-        } as const;
-        return { ...state, phase: processing };
-      }
-      return state;
-    case "TEXT":
-      if (phase.kind === "idle" || phase.kind === "error") {
-        return { ...state, phase: { kind: "processing", speaker: event.speaker, raw: event.raw } };
-      }
-      return state;
-    case "TRANSCRIBED":
-      if (phase.kind === "processing") return { ...state, phase: { ...phase, raw: event.raw } };
       return state;
     case "TRANSLATED":
       if (phase.kind !== "processing") return state;
       return {
         ...state,
-        phase: { kind: "idle", nextTurn: other(phase.speaker) },
-        messages: [
-          ...state.messages,
-          {
-            id: event.id,
-            speaker: phase.speaker,
-            translation: event.result.translation,
-            original: event.result.original,
-            card: event.result.card,
-            ...(event.result.romanised?.length && { romanised: event.result.romanised }),
-            ...(event.result.move && { move: event.result.move }),
-            ...(event.result.cards?.length && { cards: event.result.cards }),
-          },
-        ],
+        phase: { kind: "idle", nextTurn: other(phase.side) },
+        messages: [...state.messages, { id: event.id, side: phase.side, heard: phase.heard, ...event.result }],
       };
-    case "PHOTO":
-      if (phase.kind !== "idle" && phase.kind !== "error") return state;
-      return { ...state, phase: { kind: "reading", startedAt: event.at, photo: event.photo } };
-    case "PHOTO_READ":
-      if (phase.kind !== "reading") return state;
-      return {
-        ...state,
-        phase: { kind: "idle", nextTurn: "you" },
-        messages: [
-          ...state.messages,
-          {
-            id: phase.photo.id,
-            speaker: "you",
-            translation: [],
-            original: [event.card.title],
-            card: null,
-            photo: { url: phase.photo.url, card: event.card },
-          },
-        ],
-      };
-    case "ANSWERED":
-      if (phase.kind !== "processing" || !phase.about) return state;
-      return {
-        ...state,
-        phase: { kind: "idle", nextTurn: "you" },
-        messages: [
-          ...state.messages,
-          { id: event.id, speaker: "you", translation: [], original: [phase.raw ?? ""], card: null, about: phase.about, answer: event.answer },
-        ],
-      };
-    case "FAILED": {
+    case "COMPLETED":
+      if (!state.messages.some((m) => m.id === event.id)) return state;
+      return { ...state, messages: state.messages.map((m) => (m.id === event.id ? { ...m, ...event.result } : m)) };
+    case "FAILED":
       if (phase.kind === "idle") return state;
-      const error = { kind: "error", speaker: event.speaker, reason: event.reason } as const;
-      if (phase.kind === "reading") return { ...state, phase: { ...error, photo: phase.photo } };
-      const about = event.reason === "network" && "about" in phase && phase.about ? { about: phase.about } : {};
-      return { ...state, phase: event.raw ? { ...error, raw: event.raw, ...about } : { ...error, ...about } };
-    }
+      return { ...state, phase: { kind: "error", side: event.side, reason: event.reason, ...(event.heard && { heard: event.heard }) } };
     case "RETRY":
-      if (phase.kind !== "error" || phase.reason !== "network") return state;
-      if (phase.photo) return { ...state, phase: { kind: "reading", startedAt: event.at ?? 0, photo: phase.photo } };
-      return {
-        ...state,
-        phase: {
-          kind: "processing",
-          speaker: phase.speaker,
-          ...(phase.raw && { raw: phase.raw }),
-          ...(phase.about && { about: phase.about }),
-        },
-      };
+      if (phase.kind !== "error" || !phase.heard) return state;
+      return { ...state, phase: { kind: "processing", side: phase.side, heard: phase.heard } };
     case "CANCEL":
-      if (phase.kind === "listening") return { ...state, phase: { kind: "idle", nextTurn: phase.speaker } };
-      return state;
+      return phase.kind === "listening" ? { ...state, phase: { kind: "idle", nextTurn: phase.side } } : state;
     case "DISMISS_ERROR":
-      if (phase.kind === "error") return { ...state, phase: { kind: "idle", nextTurn: phase.speaker } };
-      return state;
+      return phase.kind === "error" ? { ...state, phase: { kind: "idle", nextTurn: phase.side } } : state;
     case "NEW_CONVERSATION":
       return initialState(state.conversationId + 1);
   }
 }
 
+export type TranslatedText = Pick<TranslateResult, "original" | "translation">;
+
 export type EngineOptions = {
-  service: TurnService;
-  getMyInfo?: () => MyInfo;
-  getUserLanguage?: () => UserLanguage;
-  /** Notes, places, time and feature switches, read at the start of each translation. */
-  getContext?: () => Pick<TranslateInput, "context" | "options">;
-  onDetectedInfo?: (info: Partial<MyInfo>) => void;
-  /** A final message was added to the thread. */
+  /** Resolves with the full answer; calls `onText` as soon as the translation is ready, if it streams. */
+  translate: (input: TranslateInput, onText: (text: TranslatedText) => void) => Promise<TranslateResult>;
+  /** Languages, context and switches, read at the start of each translation. */
+  getInput: () => Omit<TranslateInput, "side" | "heard" | "history">;
+  /** A message was added to the thread. */
   onMessage?: (message: Message) => void;
-  /** Object URLs for photos. Defaults to the browser's URL.createObjectURL / revokeObjectURL. */
-  objectUrls?: { create(image: Blob): string; revoke(url: string): void };
-  /** Each service call fails as a network error after this long (default 15 s). */
+  /** A translation fails as a network error after this long. */
   timeoutMs?: number;
   now?: () => number;
 };
 
+/** The model sees the last few Turns; older ones rarely help and cost latency. */
+const HISTORY_TURNS = 10;
+
 let idCounter = 0;
 const newId = () => `m${Date.now().toString(36)}${(idCounter++).toString(36)}`;
 
-/** The conversation store. The UI sends taps and audio in, and renders `getState()`. */
+/** Speech-to-text tags for sounds, not words (`<noise>`, `[Music]`): never translate them. */
+const NON_SPEECH = /[<[(]\s*(noise|music|silence|inaudible|blank_audio|laughter|applause|sound)[^>\])]*[>\])]/gi;
+export const stripNonSpeech = (raw: string) => raw.replace(NON_SPEECH, "").trim();
+
+export function toHistory(messages: Message[]): HistoryTurn[] {
+  return messages.slice(-HISTORY_TURNS).map((m) => ({
+    side: m.side,
+    original: m.original,
+    translation: m.translation,
+    ...(m.cards.length && { cards: m.cards.map((c) => ({ heading: c.heading })) }),
+  }));
+}
+
+/** The conversation store. The UI sends taps and transcripts in, and renders `getState()`. */
 export class ConversationEngine {
   private state: ConversationState = initialState();
   private listeners = new Set<() => void>();
+  /** Bumped whenever a turn starts, fails or the conversation restarts: an answer for an older turn is dropped. */
+  private turn = 0;
 
   constructor(private readonly opts: EngineOptions) {}
 
@@ -186,125 +116,80 @@ export class ConversationEngine {
     return () => this.listeners.delete(listener);
   };
 
-  /** Starts recording for this speaker if nobody is busy. Stopping is `stop()`, once the audio is ready. */
-  micTap(speaker: Speaker) {
-    if (this.state.phase.kind === "error") this.dropFailedPhoto();
-    this.dispatch({ type: "MIC_TAP", speaker, at: this.now() });
-  }
-
-  /** "Ask about this photo": exactly like tapping Speak, but the question goes to the app with that photo. */
-  askAboutPhoto(photoId: string) {
-    if (!this.images.has(photoId)) return;
-    if (this.state.phase.kind === "error") this.dropFailedPhoto();
-    this.dispatch({ type: "MIC_TAP", speaker: "you", at: this.now(), about: photoId });
+  micTap(side: Side) {
+    this.dispatch({ type: "MIC_TAP", side, at: (this.opts.now ?? Date.now)() });
   }
 
   cancel() {
     this.dispatch({ type: "CANCEL" });
   }
 
-  fail(speaker: Speaker, reason: ErrorReason) {
+  fail(side: Side, reason: ErrorReason) {
     this.turn++;
-    this.dispatch({ type: "FAILED", speaker, reason });
+    this.dispatch({ type: "FAILED", side, reason });
   }
 
   dismissError() {
-    this.dropFailedPhoto();
     this.dispatch({ type: "DISMISS_ERROR" });
   }
 
   newConversation() {
     this.turn++;
-    this.photoUrls.forEach((url) => this.urls.revoke(url));
-    this.photoUrls.clear();
-    this.images.clear();
-    this.opts.service.reset?.();
     this.dispatch({ type: "NEW_CONVERSATION" });
   }
 
-  /** Recording finished: transcribe, show the raw text, then translate into the final message. */
-  async stop(speaker: Speaker, audio: Blob): Promise<void> {
+  /** Listening ended with this transcript. */
+  async heard(side: Side, transcript: string): Promise<void> {
     const { phase } = this.state;
-    if (phase.kind !== "listening" || phase.speaker !== speaker) return;
-    this.dispatch({ type: "STOP", speaker });
-    this.lastAudio = audio;
-    await this.runTurn(++this.turn, speaker, audio, undefined, phase.about);
+    if (phase.kind !== "listening" || phase.side !== side) return;
+    const heard = stripNonSpeech(transcript);
+    if (!heard) return this.fail(side, "empty");
+    this.dispatch({ type: "HEARD", side, heard });
+    await this.run(++this.turn);
   }
 
-  /** Recording finished and the browser already has the text: skip transcription. */
-  async stopWithTranscript(speaker: Speaker, transcript: string): Promise<void> {
-    const { phase } = this.state;
-    if (phase.kind !== "listening" || phase.speaker !== speaker) return;
-    const raw = stripNonSpeech(transcript);
-    if (!raw) return this.fail(speaker, "empty");
-    this.lastAudio = undefined;
-    this.dispatch({ type: "STOP", speaker, raw });
-    await this.runTurn(++this.turn, speaker, undefined, raw, phase.about);
+  /** A Turn from text (a context card's suggestion): corrected and translated like a spoken one. */
+  async say(side: Side, text: string): Promise<void> {
+    const heard = text.trim();
+    if (!heard || !canStart(this.state.phase)) return;
+    this.dispatch({ type: "HEARD", side, heard });
+    await this.run(++this.turn);
   }
 
-  /** A Turn from text, e.g. the suggestion on a context card: translated and read aloud like a spoken one. */
-  async say(speaker: Speaker, text: string): Promise<void> {
-    const { phase } = this.state;
-    const raw = text.trim();
-    if (!raw || (phase.kind !== "idle" && phase.kind !== "error")) return;
-    this.dropFailedPhoto();
-    this.lastAudio = undefined;
-    this.dispatch({ type: "TEXT", speaker, raw });
-    await this.runTurn(++this.turn, speaker, undefined, raw);
-  }
-
-  /** The Visitor took a photo: read it at once into a card, no question needed. */
-  async photo(image: Blob): Promise<void> {
-    const { phase } = this.state;
-    if (phase.kind !== "idle" && phase.kind !== "error") return;
-    this.dropFailedPhoto();
-    const photo: Photo = { id: newId(), url: this.urls.create(image) };
-    this.photoUrls.add(photo.url);
-    this.lastImage = image;
-    this.images.set(photo.id, image);
-    this.dispatch({ type: "PHOTO", photo, at: this.now() });
-    await this.runRead(++this.turn, image);
-  }
-
-  /** After a network error: same turn again, from the raw text if transcription had worked, or the same photo. */
   async retry(): Promise<void> {
     const { phase } = this.state;
-    if (phase.kind !== "error" || phase.reason !== "network") return;
-    if (phase.photo) {
-      if (!this.lastImage) return;
-      this.dispatch({ type: "RETRY", at: this.now() });
-      return this.runRead(++this.turn, this.lastImage);
-    }
-    if (!this.lastAudio && !phase.raw) return;
+    if (phase.kind !== "error" || !phase.heard) return;
     this.dispatch({ type: "RETRY" });
-    await this.runTurn(++this.turn, phase.speaker, this.lastAudio, phase.raw, phase.about);
+    await this.run(++this.turn);
   }
 
-  private lastAudio?: Blob;
-  private lastImage?: Blob;
-  /** Every photo URL of this conversation, revoked when it restarts. */
-  private photoUrls = new Set<string>();
-  /** Images of the photos in the thread, by message id, for "Ask about this photo". */
-  private images = new Map<string, Blob>();
-  private readonly now = () => (this.opts.now ?? Date.now)();
-
-  private get urls() {
-    return this.opts.objectUrls ?? { create: (image: Blob) => URL.createObjectURL(image), revoke: (url: string) => URL.revokeObjectURL(url) };
+  private async run(turn: number) {
+    const { phase, conversationId, messages } = this.state;
+    if (phase.kind !== "processing") return;
+    const stale = () => this.state.conversationId !== conversationId || this.turn !== turn;
+    const id = newId();
+    let shown = false;
+    const show = (result: TranslateResult) => {
+      if (shown || stale()) return;
+      shown = true;
+      this.dispatch({ type: "TRANSLATED", id, result });
+      this.opts.onMessage?.(this.state.messages[this.state.messages.length - 1]);
+    };
+    try {
+      const input = { side: phase.side, heard: phase.heard, history: toHistory(messages), ...this.opts.getInput() };
+      const result = await this.withTimeout(this.opts.translate(input, (text) => show({ ...text, cards: [] })));
+      // Once shown, the message belongs to the thread: its cards still land after the next turn has started.
+      if (shown) {
+        if (this.state.conversationId === conversationId) this.dispatch({ type: "COMPLETED", id, result });
+      } else show(result);
+    } catch {
+      // Cards that never arrive are not an error: the translation is already there.
+      if (!shown && !stale()) this.dispatch({ type: "FAILED", side: phase.side, reason: "network", heard: phase.heard });
+    }
   }
-
-  /** A photo whose read failed and that the Visitor gave up on: it never reaches the thread. */
-  private dropFailedPhoto() {
-    const { phase } = this.state;
-    if (phase.kind !== "error" || !phase.photo) return;
-    this.urls.revoke(phase.photo.url);
-    this.photoUrls.delete(phase.photo.url);
-    this.images.delete(phase.photo.id);
-  }
-  /** Bumped whenever a turn starts, fails or the conversation restarts: an answer for an older turn is dropped. */
-  private turn = 0;
 
   private withTimeout<T>(promise: Promise<T>): Promise<T> {
-    const ms = this.opts.timeoutMs ?? 15000;
+    const ms = this.opts.timeoutMs ?? 20_000;
     return new Promise<T>((resolve, reject) => {
       const timer = setTimeout(() => reject(new Error("timeout")), ms);
       promise.then(
@@ -312,75 +197,6 @@ export class ConversationEngine {
         (e) => (clearTimeout(timer), reject(e)),
       );
     });
-  }
-
-  private async runTurn(turn: number, speaker: Speaker, audio: Blob | undefined, knownRaw?: string, about?: string) {
-    const conversation = this.state.conversationId;
-    const stale = () => this.state.conversationId !== conversation || this.turn !== turn;
-    const userLanguage = this.opts.getUserLanguage?.() ?? "en";
-    let raw = knownRaw;
-
-    try {
-      if (raw === undefined) {
-        if (!audio) throw new Error("nothing to transcribe");
-        raw = stripNonSpeech(await this.withTimeout(this.opts.service.transcribe(audio, speaker === "vendor" ? "th" : userLanguage)));
-        if (stale()) return;
-        if (!raw) return this.fail(speaker, "empty");
-        this.dispatch({ type: "TRANSCRIBED", raw });
-      }
-
-      if (about) return await this.runAnswer(stale, about, raw, userLanguage);
-
-      const result = await this.withTimeout(
-        this.opts.service.translate({
-          raw,
-          speaker,
-          userLanguage,
-          myInfo: this.opts.getMyInfo?.() ?? EMPTY_MY_INFO,
-          // Photos and questions about them were never said to the vendor: they stay out of the conversation.
-          history: this.state.messages.filter((m) => !m.photo && !m.about),
-          ...this.opts.getContext?.(),
-        }),
-      );
-      if (stale()) return;
-      this.dispatch({ type: "TRANSLATED", id: newId(), result });
-      this.opts.onMessage?.(this.state.messages[this.state.messages.length - 1]);
-      if (result.detectedInfo) this.opts.onDetectedInfo?.(result.detectedInfo);
-    } catch {
-      if (!stale()) this.dispatch({ type: "FAILED", speaker, reason: "network", raw });
-    }
-  }
-
-  /** The app answers a question about a photo: no translation, nothing for the vendor, nothing read aloud. */
-  private async runAnswer(stale: () => boolean, about: string, question: string, userLanguage: UserLanguage) {
-    const image = this.images.get(about);
-    const card = this.state.messages.find((m) => m.id === about)?.photo?.card;
-    const ask = this.opts.service.askPhoto;
-    if (!image || !card || !ask) throw new Error("askPhoto not possible");
-    const answer = await this.withTimeout(
-      ask.call(this.opts.service, image, { question, card, userLanguage, myInfo: this.opts.getMyInfo?.() ?? EMPTY_MY_INFO }),
-    );
-    if (stale()) return;
-    this.dispatch({ type: "ANSWERED", id: newId(), answer });
-  }
-
-  private async runRead(turn: number, image: Blob) {
-    const conversation = this.state.conversationId;
-    const stale = () => this.state.conversationId !== conversation || this.turn !== turn;
-    try {
-      const read = this.opts.service.readPhoto;
-      if (!read) throw new Error("readPhoto not supported");
-      const card = await this.withTimeout(
-        read.call(this.opts.service, image, {
-          userLanguage: this.opts.getUserLanguage?.() ?? "en",
-          myInfo: this.opts.getMyInfo?.() ?? EMPTY_MY_INFO,
-        }),
-      );
-      if (stale()) return;
-      this.dispatch({ type: "PHOTO_READ", card });
-    } catch {
-      if (!stale()) this.dispatch({ type: "FAILED", speaker: "you", reason: "network" });
-    }
   }
 
   private dispatch(event: EngineEvent) {
@@ -391,9 +207,29 @@ export class ConversationEngine {
   }
 }
 
-/** Speech-to-text tags for sounds, not words (`<noise>`, `[Music]`, `(silence)`): never translate them. */
-const NON_SPEECH = /[<[(]\s*(noise|music|silence|inaudible|blank_audio|laughter|applause|sound)[^>\])]*[>\])]/gi;
-
-export function stripNonSpeech(raw: string) {
-  return raw.replace(NON_SPEECH, "").trim();
+/** Client for POST /api/translate, which streams newline-delimited TranslateEvents. */
+export async function translateViaApi(input: TranslateInput, onText: (text: TranslatedText) => void): Promise<TranslateResult> {
+  const res = await fetch("/api/translate", {
+    method: "POST",
+    headers: { "content-type": "application/json" },
+    body: JSON.stringify(input),
+  });
+  if (!res.ok || !res.body) throw new Error(`translate ${res.status}`);
+  const reader = res.body.pipeThrough(new TextDecoderStream()).getReader();
+  let buffer = "";
+  for (;;) {
+    const { value, done } = await reader.read();
+    if (done) break;
+    buffer += value;
+    const lines = buffer.split("\n");
+    buffer = lines.pop() ?? "";
+    for (const line of lines) {
+      if (!line.trim()) continue;
+      const event = JSON.parse(line) as TranslateEvent;
+      if (event.type === "text") onText(event);
+      else if (event.type === "done") return event.result;
+      else throw new Error("translate failed");
+    }
+  }
+  throw new Error("translate ended early");
 }
